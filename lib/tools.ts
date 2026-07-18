@@ -184,6 +184,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'unlock-pdf',
+    name: 'Unlock PDF',
+    category: 'Security',
+    description: 'Remove a known password from a PDF — in your browser.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
