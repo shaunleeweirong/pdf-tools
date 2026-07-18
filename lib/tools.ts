@@ -128,6 +128,22 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'fill-form',
+    name: 'Fill PDF Form',
+    category: 'Forms & sign',
+    description: 'Detect form fields and fill them in.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
+  {
+    slug: 'sign-pdf',
+    name: 'Sign PDF',
+    category: 'Forms & sign',
+    description: 'Draw a signature and place it on the first page.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
