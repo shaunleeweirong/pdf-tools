@@ -64,6 +64,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'watermark-pdf',
+    name: 'Watermark PDF',
+    category: 'Page tools',
+    description: 'Stamp text across every page of a PDF.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
