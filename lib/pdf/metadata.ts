@@ -22,6 +22,6 @@ export async function writeMetadata(buffer: Uint8Array, meta: PdfMeta): Promise<
   doc.setTitle(meta.title)
   doc.setAuthor(meta.author)
   doc.setSubject(meta.subject)
-  doc.setKeywords(meta.keywords.split(',').map((k) => k.trim()).filter(Boolean))
+  doc.setKeywords(meta.keywords.split(/[,\s]+/).filter(Boolean))
   return doc.save()
 }
