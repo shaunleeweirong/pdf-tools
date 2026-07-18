@@ -18,7 +18,7 @@ export default function RotatePdfPage() {
       renderOptions={() => (
         <div className="space-y-2">
           <Label>Rotation</Label>
-          <Select value={deg} onValueChange={setDeg}>
+          <Select value={deg} onValueChange={(v) => v !== null && setDeg(v)}>
             <SelectTrigger><SelectValue /></SelectTrigger>
             <SelectContent>
               <SelectItem value="90">90° clockwise</SelectItem>
