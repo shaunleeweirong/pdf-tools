@@ -44,12 +44,15 @@ async function load(): Promise<any> {
 export async function protect(input: Uint8Array, password: string): Promise<Uint8Array> {
   const mod = await load()
   mod.FS.writeFile('in.pdf', input)
-  const exit = mod.callMain(['--encrypt', password, password, '256', '--', 'in.pdf', 'out.pdf'])
-  if (exit !== 0) throw new Error(`qpdf encrypt failed with exit code ${exit}`)
-  const out = mod.FS.readFile('out.pdf') as Uint8Array
-  mod.FS.unlink('in.pdf')
-  mod.FS.unlink('out.pdf')
-  return out
+  try {
+    const exit = mod.callMain(['--encrypt', password, password, '256', '--', 'in.pdf', 'out.pdf'])
+    if (exit !== 0) throw new Error(`qpdf encrypt failed with exit code ${exit}`)
+    const out = mod.FS.readFile('out.pdf') as Uint8Array
+    return out
+  } finally {
+    try { mod.FS.unlink('in.pdf') } catch { /* ignore */ }
+    try { mod.FS.unlink('out.pdf') } catch { /* ignore */ }
+  }
 }
 
 /**
@@ -60,10 +63,13 @@ export async function protect(input: Uint8Array, password: string): Promise<Uint
 export async function unlock(input: Uint8Array, password: string): Promise<Uint8Array> {
   const mod = await load()
   mod.FS.writeFile('in.pdf', input)
-  const exit = mod.callMain([`--password=${password}`, '--decrypt', 'in.pdf', 'out.pdf'])
-  if (exit !== 0) throw new Error(`qpdf decrypt failed (wrong password?) exit code ${exit}`)
-  const out = mod.FS.readFile('out.pdf') as Uint8Array
-  mod.FS.unlink('in.pdf')
-  mod.FS.unlink('out.pdf')
-  return out
+  try {
+    const exit = mod.callMain([`--password=${password}`, '--decrypt', 'in.pdf', 'out.pdf'])
+    if (exit !== 0) throw new Error(`qpdf decrypt failed (wrong password?) exit code ${exit}`)
+    const out = mod.FS.readFile('out.pdf') as Uint8Array
+    return out
+  } finally {
+    try { mod.FS.unlink('in.pdf') } catch { /* ignore */ }
+    try { mod.FS.unlink('out.pdf') } catch { /* ignore */ }
+  }
 }

@@ -7,7 +7,7 @@
  *
  * In a real browser, the wasm file is served from /qpdf.wasm (Next.js public/).
  */
-import { describe, it, expect, beforeAll } from 'vitest'
+import { describe, it, expect, beforeAll, afterAll } from 'vitest'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { readFixture } from './helpers'
@@ -28,6 +28,10 @@ beforeAll(() => {
     }
     return _origFetch(url, opts)
   }
+})
+
+afterAll(() => {
+  globalThis.fetch = _origFetch
 })
 
 describe('qpdf-wasm spike — protect / unlock round-trip', () => {
