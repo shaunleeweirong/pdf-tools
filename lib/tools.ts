@@ -144,6 +144,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'extract-images',
+    name: 'Extract Images',
+    category: 'Edit',
+    description: 'Export each page of a PDF as a high-resolution image.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
