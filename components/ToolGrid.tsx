@@ -2,6 +2,7 @@
 import { useMemo, useState } from 'react'
 import { TOOLS, type ToolCategory } from '@/lib/tools'
 import { ToolCard } from './ToolCard'
+import { Reveal } from './Reveal'
 import { Input } from '@/components/ui/input'
 
 const CATEGORY_ORDER: ToolCategory[] = [
@@ -37,17 +38,19 @@ export function ToolGrid() {
         const items = filtered.filter((t) => t.category === cat)
         if (items.length === 0) return null
         return (
-          <section key={cat} className="mb-12">
-            <h2 className="mb-4 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground">
-              <span className="inline-block size-1.5 bg-brand" aria-hidden />
-              {cat}
-            </h2>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {items.map((t) => (
-                <ToolCard key={t.slug} tool={t} />
-              ))}
-            </div>
-          </section>
+          <Reveal key={cat}>
+            <section className="mb-12">
+              <h2 className="mb-4 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                <span className="inline-block size-1.5 bg-brand" aria-hidden />
+                {cat}
+              </h2>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {items.map((t) => (
+                  <ToolCard key={t.slug} tool={t} />
+                ))}
+              </div>
+            </section>
+          </Reveal>
         )
       })}
     </div>
