@@ -1,0 +1,53 @@
+'use client'
+import { useRef } from 'react'
+import { Button } from '@/components/ui/button'
+
+export function SignaturePad({ onChange }: { onChange: (pngBytes: Uint8Array | null) => void }) {
+  const ref = useRef<HTMLCanvasElement>(null)
+  const drawing = useRef(false)
+
+  function pos(e: React.PointerEvent) {
+    const rect = ref.current!.getBoundingClientRect()
+    return { x: e.clientX - rect.left, y: e.clientY - rect.top }
+  }
+  function down(e: React.PointerEvent) {
+    drawing.current = true
+    const ctx = ref.current!.getContext('2d')!
+    const { x, y } = pos(e)
+    ctx.beginPath()
+    ctx.moveTo(x, y)
+  }
+  function move(e: React.PointerEvent) {
+    if (!drawing.current) return
+    const ctx = ref.current!.getContext('2d')!
+    const { x, y } = pos(e)
+    ctx.lineTo(x, y)
+    ctx.lineWidth = 2
+    ctx.stroke()
+  }
+  async function up() {
+    drawing.current = false
+    const blob: Blob | null = await new Promise((r) => ref.current!.toBlob((b) => r(b), 'image/png'))
+    if (blob) onChange(new Uint8Array(await blob.arrayBuffer()))
+  }
+  function clear() {
+    const c = ref.current!
+    c.getContext('2d')!.clearRect(0, 0, c.width, c.height)
+    onChange(null)
+  }
+  return (
+    <div className="space-y-2">
+      <canvas
+        ref={ref}
+        width={400}
+        height={150}
+        className="rounded border bg-white touch-none"
+        onPointerDown={down}
+        onPointerMove={move}
+        onPointerUp={up}
+        onPointerLeave={up}
+      />
+      <Button type="button" variant="outline" size="sm" onClick={clear}>Clear</Button>
+    </div>
+  )
+}
