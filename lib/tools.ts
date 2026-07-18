@@ -176,6 +176,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'protect-pdf',
+    name: 'Protect PDF',
+    category: 'Security',
+    description: 'Add a password and encrypt a PDF — in your browser.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
