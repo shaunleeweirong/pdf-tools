@@ -165,8 +165,8 @@
 /* Scroll reveal (driven by IntersectionObserver adding .is-visible) */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 600ms ease, transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  transform: translateY(28px) scale(0.98);
+  transition: opacity 700ms ease, transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .reveal.is-visible { opacity: 1; transform: none; }
 
@@ -174,8 +174,8 @@
 .paper-stage { position: relative; width: 300px; height: 340px; perspective: 1200px; }
 .paper-float { position: absolute; inset: 0; transform-style: preserve-3d; animation: paper-float 7s ease-in-out infinite; }
 @keyframes paper-float {
-  0%, 100% { transform: translateY(-6px); }
-  50% { transform: translateY(6px); }
+  0%, 100% { transform: translateY(-11px) rotate(-0.6deg); }
+  50% { transform: translateY(11px) rotate(0.6deg); }
 }
 .paper-tilt {
   position: absolute; inset: 0;
@@ -192,12 +192,79 @@
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.75);
 }
-.paper-3 { transform: translate3d(-40px, 22px, -60px) rotate(-10deg); background: #d4d4d4; }
-.paper-2 { transform: translate3d(-14px, 10px, -30px) rotate(-4deg); background: #e8e8e8; }
-.paper-1 { transform: translate3d(18px, -4px, 0) rotate(5deg); padding: 22px; }
+.paper-3 { transform: translate3d(-40px, 22px, -60px) rotate(-10deg); background: #d4d4d4; animation: deal-3 800ms cubic-bezier(0.2, 0.7, 0.2, 1) 300ms both; }
+.paper-2 { transform: translate3d(-14px, 10px, -30px) rotate(-4deg); background: #e8e8e8; animation: deal-2 800ms cubic-bezier(0.2, 0.7, 0.2, 1) 440ms both; }
+.paper-1 { transform: translate3d(18px, -4px, 0) rotate(5deg); padding: 22px; animation: deal-1 800ms cubic-bezier(0.2, 0.7, 0.2, 1) 580ms both; }
+
+/* "Deal out" entrance — pages fan from a collapsed stack into place on load */
+@keyframes deal-3 {
+  from { opacity: 0; transform: translate3d(0, 64px, -140px) rotate(3deg) scale(0.82); }
+  to { opacity: 1; transform: translate3d(-40px, 22px, -60px) rotate(-10deg); }
+}
+@keyframes deal-2 {
+  from { opacity: 0; transform: translate3d(0, 64px, -140px) rotate(3deg) scale(0.82); }
+  to { opacity: 1; transform: translate3d(-14px, 10px, -30px) rotate(-4deg); }
+}
+@keyframes deal-1 {
+  from { opacity: 0; transform: translate3d(0, 64px, -140px) rotate(3deg) scale(0.82); }
+  to { opacity: 1; transform: translate3d(18px, -4px, 0) rotate(5deg); }
+}
 .paper-badge { width: 22px; height: 22px; border-radius: 4px; background: #0044ff; }
 .paper-bar { height: 8px; border-radius: 4px; background: #d0d0d0; }
 .paper-bar.brand { background: rgba(0, 68, 255, 0.28); }
+
+/* ---------- Soft-UI (dark, neumorphic-influenced) ---------- */
+
+/* Raised surface: subtle top highlight + deep drop shadow. */
+.soft-raised {
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 18px 36px -20px rgba(0, 0, 0, 0.9);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease,
+    background 200ms ease;
+}
+.soft-raised:hover {
+  transform: translateY(-4px);
+  background: #191919;
+  border-color: rgba(0, 68, 255, 0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 26px 52px -18px rgba(0, 68, 255, 0.35);
+}
+.soft-raised:focus-visible {
+  outline: none;
+  border-color: #0044ff;
+}
+
+/* Recessed well: inner shadow so it reads as "drop / type here". */
+.soft-inset {
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.85),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+}
+.soft-inset:focus,
+.soft-inset:focus-visible,
+.soft-inset:focus-within {
+  outline: none;
+  border-color: rgba(0, 68, 255, 0.7);
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.85),
+    0 0 0 3px rgba(0, 68, 255, 0.3);
+}
+
+/* Faint dotted grid behind the hero, masked to fade out. */
+.hero-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 0%, #000 30%, transparent 74%);
+  mask-image: radial-gradient(ellipse 62% 62% at 50% 0%, #000 30%, transparent 74%);
+}
 
 @media (pointer: coarse) {
   .paper-tilt { transform: none !important; }
@@ -205,7 +272,11 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-in,
   .hero-glow,
-  .paper-float { animation: none; }
-  .paper-tilt { transition: none; }
+  .paper-float,
+  .paper-1,
+  .paper-2,
+  .paper-3 { animation: none; }
+  .paper-tilt,
+  .soft-raised { transition: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }

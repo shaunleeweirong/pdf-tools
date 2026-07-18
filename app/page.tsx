@@ -6,6 +6,10 @@ export default function Home() {
     <main className="relative mx-auto max-w-6xl px-4 py-16 sm:py-24">
       <div
         aria-hidden
+        className="hero-grid pointer-events-none absolute inset-x-0 top-0 -z-20 h-[520px]"
+      />
+      <div
+        aria-hidden
         className="hero-glow pointer-events-none absolute inset-x-0 top-0 -z-10 h-[440px]"
       />
       <section className="mb-16 grid items-center gap-12 lg:mb-20 lg:grid-cols-[1.1fr_0.9fr]">

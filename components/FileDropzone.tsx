@@ -18,10 +18,10 @@ export function FileDropzone({
   return (
     <div
       {...getRootProps()}
-      className={`flex h-56 cursor-pointer items-center justify-center rounded-xl border-2 border-dashed p-8 text-center transition-colors ${
+      className={`flex h-56 cursor-pointer items-center justify-center rounded-xl p-8 text-center transition-colors ${
         isDragActive
-          ? 'border-brand bg-brand/10 text-foreground'
-          : 'border-white/15 hover:border-white/30 hover:bg-white/[0.02]'
+          ? 'border-2 border-brand bg-brand/10 text-foreground'
+          : 'soft-inset'
       }`}
     >
       <input {...getInputProps()} />

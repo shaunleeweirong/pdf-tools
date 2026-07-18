@@ -5,7 +5,7 @@ export function ToolCard({ tool }: { tool: Tool }) {
   return (
     <Link
       href={`/${tool.slug}`}
-      className="group block h-full rounded-lg border border-white/10 bg-card p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand/60 hover:bg-[#191919] hover:shadow-[0_10px_30px_-12px_rgba(0,68,255,0.35)] focus-visible:border-brand focus-visible:outline-none"
+      className="soft-raised group block h-full rounded-lg p-5 focus-visible:outline-none"
     >
       <div className="flex items-start justify-between gap-2">
         <h3 className="font-medium tracking-tight text-foreground">{tool.name}</h3>

@@ -32,7 +32,7 @@ export function ToolGrid() {
         placeholder="Search tools…"
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        className="mx-auto mb-12 h-11 max-w-md"
+        className="soft-inset mx-auto mb-12 h-11 max-w-md"
       />
       {CATEGORY_ORDER.map((cat) => {
         const items = filtered.filter((t) => t.category === cat)
