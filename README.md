@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# pdf-tool
 
-## Getting Started
+Free, private PDF tools that run entirely in your browser. **Your files never leave your device** — there is no backend, no upload, no server processing.
 
-First, run the development server:
+Built with Next.js 16, pdf-lib, pdf.js, and qpdf-wasm.
+
+## Privacy
+
+All processing happens locally using WebAssembly and the browser's native APIs. Files are never uploaded to any server.
+
+## Tools (22)
+
+| Category | Tools |
+|---|---|
+| **Organize** | Merge PDF, Split PDF, Rotate PDF, Delete Pages, Extract Pages, Organize PDF, Compress PDF |
+| **Page tools** | Watermark PDF, Add Page Numbers, Crop PDF, Pages Per Sheet, Flatten PDF |
+| **Edit** | Edit Metadata, Extract Images, Compare PDF, Edit PDF |
+| **Convert** | Images to PDF, PDF to JPG |
+| **Forms & sign** | Fill PDF Form, Sign PDF |
+| **Security** | Protect PDF, Unlock PDF |
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev       # start dev server at http://localhost:3000
+npm test          # run unit tests (Vitest, 29 tests)
+npm run build     # production build (must exit 0)
+npx tsc --noEmit  # type check
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Production build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+# Outputs a fully static site — all 24 routes prerender as static HTML.
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+This project outputs a standard Next.js static/server build and can be deployed to any Node.js host or CDN.
 
-To learn more about Next.js, take a look at the following resources:
+**Vercel (recommended):**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Preview deployment
+npx vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Production deployment
+npx vercel --prod
+```
 
-## Deploy on Vercel
+Or connect the repository in the [Vercel dashboard](https://vercel.com/new) — no additional configuration required. The `public/qpdf.wasm` file is served as a static asset automatically.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Other hosts:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+# Serve the .next/ output with `next start`, or export to static HTML:
+npx next export   # if all pages are static (they are in this project)
+```
+
+## Phase 2 roadmap
+
+See [`docs/superpowers/specs/`](./docs/superpowers/specs/) for planned features including OCR, advanced compression, batch processing, and additional format conversions.
+
+## Tech stack
+
+- [Next.js 16](https://nextjs.org/) with Turbopack
+- [pdf-lib](https://pdf-lib.js.org/) — PDF creation and manipulation
+- [pdf.js (pdfjs-dist)](https://mozilla.github.io/pdf.js/) — PDF rendering and rasterization
+- [@jspawn/qpdf-wasm](https://github.com/jsscheller/qpdf-wasm) — encrypt/decrypt PDFs via qpdf compiled to WebAssembly
+- [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
+- [Vitest](https://vitest.dev/) for unit tests
