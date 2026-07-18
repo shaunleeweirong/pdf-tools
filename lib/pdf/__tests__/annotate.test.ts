@@ -12,4 +12,23 @@ describe('applyAnnotations', () => {
     expect((await PDFDocument.load(out)).getPageCount()).toBe(1)
     expect(out.length).toBeGreaterThan(0)
   })
+
+  it('applies a replace (cover + retype) annotation without changing page count', async () => {
+    // multi-5p.pdf renders "Page N" text on each page; cover page 1's run and retype.
+    const out = await applyAnnotations(readFixture('multi-5p.pdf'), [
+      {
+        type: 'replace',
+        page: 0,
+        x: 50,
+        y: 350,
+        width: 60,
+        size: 24,
+        text: 'Edited 1',
+        bg: { r: 1, g: 1, b: 1 },
+      },
+    ])
+    const doc = await PDFDocument.load(out)
+    expect(doc.getPageCount()).toBe(5)
+    expect(out.length).toBeGreaterThan(0)
+  })
 })

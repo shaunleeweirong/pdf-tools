@@ -164,7 +164,7 @@ export const TOOLS: Tool[] = [
     slug: 'edit-pdf',
     name: 'Edit PDF',
     category: 'Edit',
-    description: 'Add text and boxes onto a PDF page.',
+    description: 'Edit existing text, or add text and boxes, on any page — in your browser.',
     accept: ['application/pdf'],
     multiple: false,
   },
