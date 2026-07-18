@@ -96,6 +96,38 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'flatten-pdf',
+    name: 'Flatten PDF',
+    category: 'Page tools',
+    description: 'Make form fields and annotations non-editable.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
+  {
+    slug: 'edit-metadata',
+    name: 'Edit Metadata',
+    category: 'Edit',
+    description: 'View and change a PDF’s title, author, subject and keywords.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
+  {
+    slug: 'jpg-to-pdf',
+    name: 'Images to PDF',
+    category: 'Convert',
+    description: 'Turn JPG and PNG images into a PDF, one image per page.',
+    accept: ['image/jpeg', 'image/png'],
+    multiple: true,
+  },
+  {
+    slug: 'pdf-to-jpg',
+    name: 'PDF to JPG',
+    category: 'Convert',
+    description: 'Convert each page of a PDF into a JPG image.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
