@@ -15,9 +15,11 @@ export async function fillForm(
 ): Promise<Uint8Array> {
   const doc = await PDFDocument.load(buffer)
   const form = doc.getForm()
+  const textFieldNames = new Set(
+    form.getFields().filter((f): f is PDFTextField => f instanceof PDFTextField).map((f) => f.getName()),
+  )
   for (const [name, value] of Object.entries(values)) {
-    const field = form.getTextField(name)
-    field.setText(value)
+    if (textFieldNames.has(name)) form.getTextField(name).setText(value)
   }
   return doc.save()
 }

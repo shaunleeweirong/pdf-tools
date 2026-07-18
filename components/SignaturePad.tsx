@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 export function SignaturePad({ onChange }: { onChange: (pngBytes: Uint8Array | null) => void }) {
   const ref = useRef<HTMLCanvasElement>(null)
   const drawing = useRef(false)
+  const dirty = useRef(false)
 
   function pos(e: React.PointerEvent) {
     const rect = ref.current!.getBoundingClientRect()
@@ -19,6 +20,7 @@ export function SignaturePad({ onChange }: { onChange: (pngBytes: Uint8Array | n
   }
   function move(e: React.PointerEvent) {
     if (!drawing.current) return
+    dirty.current = true
     const ctx = ref.current!.getContext('2d')!
     const { x, y } = pos(e)
     ctx.lineTo(x, y)
@@ -27,12 +29,17 @@ export function SignaturePad({ onChange }: { onChange: (pngBytes: Uint8Array | n
   }
   async function up() {
     drawing.current = false
+    if (!dirty.current) {
+      onChange(null)
+      return
+    }
     const blob: Blob | null = await new Promise((r) => ref.current!.toBlob((b) => r(b), 'image/png'))
     if (blob) onChange(new Uint8Array(await blob.arrayBuffer()))
   }
   function clear() {
     const c = ref.current!
     c.getContext('2d')!.clearRect(0, 0, c.width, c.height)
+    dirty.current = false
     onChange(null)
   }
   return (
