@@ -24,6 +24,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: true,
   },
+  {
+    slug: 'split-pdf',
+    name: 'Split PDF',
+    category: 'Organize',
+    description: 'Extract page ranges from a PDF into separate files.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
