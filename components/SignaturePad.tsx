@@ -8,8 +8,13 @@ export function SignaturePad({ onChange }: { onChange: (pngBytes: Uint8Array | n
   const dirty = useRef(false)
 
   function pos(e: React.PointerEvent) {
-    const rect = ref.current!.getBoundingClientRect()
-    return { x: e.clientX - rect.left, y: e.clientY - rect.top }
+    const c = ref.current!
+    const rect = c.getBoundingClientRect()
+    // Map CSS pixels → the canvas's internal resolution (it may be scaled down on mobile).
+    return {
+      x: (e.clientX - rect.left) * (c.width / rect.width),
+      y: (e.clientY - rect.top) * (c.height / rect.height),
+    }
   }
   function down(e: React.PointerEvent) {
     drawing.current = true
@@ -48,7 +53,7 @@ export function SignaturePad({ onChange }: { onChange: (pngBytes: Uint8Array | n
         ref={ref}
         width={400}
         height={150}
-        className="rounded border bg-white touch-none"
+        className="w-full max-w-[400px] rounded border bg-white touch-none"
         onPointerDown={down}
         onPointerMove={move}
         onPointerUp={up}

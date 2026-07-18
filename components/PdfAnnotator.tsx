@@ -29,7 +29,7 @@ interface TextBox {
   bgCss: string
 }
 
-const SCALE = 1.5
+const MAX_SCALE = 1.5
 
 export function PdfAnnotator({
   file,
@@ -39,12 +39,15 @@ export function PdfAnnotator({
   onChange: (a: Annotation[]) => void
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const wrapRef = useRef<HTMLDivElement>(null)
   const geomRef = useRef<Record<string, ReplaceGeom>>({}) // accumulates across pages
 
   const [numPages, setNumPages] = useState(0)
   const [pageIndex, setPageIndex] = useState(0)
   const [pageHeight, setPageHeight] = useState(0)
   const [canvasW, setCanvasW] = useState(0)
+  const [containerW, setContainerW] = useState(0)
+  const [scale, setScale] = useState(MAX_SCALE)
   const [mode, setMode] = useState<Mode>('edit')
   const [boxes, setBoxes] = useState<TextBox[]>([])
   const [noText, setNoText] = useState(false)
@@ -76,6 +79,16 @@ export function PdfAnnotator({
     onChange([...addAnnos, ...replaces])
   }, [edits, addAnnos, onChange])
 
+  // Track available width so the page renders to fit (keeps mobile from overflowing).
+  useEffect(() => {
+    const el = wrapRef.current
+    if (!el) return
+    setContainerW(el.clientWidth)
+    const ro = new ResizeObserver((entries) => setContainerW(entries[0].contentRect.width))
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+
   // Render the current page and extract its text runs.
   useEffect(() => {
     let cancelled = false
@@ -93,7 +106,11 @@ export function PdfAnnotator({
       }
       setNumPages(doc.numPages)
       const page = await doc.getPage(pageIndex + 1)
-      const viewport = page.getViewport({ scale: SCALE })
+      const vp1 = page.getViewport({ scale: 1 })
+      const renderScale =
+        containerW > 0 ? Math.max(0.4, Math.min(MAX_SCALE, containerW / vp1.width)) : MAX_SCALE
+      setScale(renderScale)
+      const viewport = page.getViewport({ scale: renderScale })
       const canvas = canvasRef.current!
       canvas.width = viewport.width
       canvas.height = viewport.height
@@ -119,7 +136,7 @@ export function PdfAnnotator({
         const fontPx = Math.hypot(m[2], m[3])
         const left = m[4]
         const top = m[5] - fontPx
-        const widthPx = item.width * SCALE
+        const widthPx = item.width * renderScale
 
         // PDF-space geometry (bottom-left origin) for saving.
         const x0 = item.transform[4]
@@ -151,7 +168,7 @@ export function PdfAnnotator({
     return () => {
       cancelled = true
     }
-  }, [file, pageIndex])
+  }, [file, pageIndex, containerW])
 
   const onCanvasClick = useCallback(
     (e: React.MouseEvent) => {
@@ -161,10 +178,10 @@ export function PdfAnnotator({
       const cy = e.clientY - rect.top
       setAddAnnos((prev) => [
         ...prev,
-        { type: 'text', page: pageIndex, x: cx / SCALE, y: (pageHeight - cy) / SCALE, text: addText, size: 14 },
+        { type: 'text', page: pageIndex, x: cx / scale, y: (pageHeight - cy) / scale, text: addText, size: 14 },
       ])
     },
-    [mode, pageIndex, pageHeight, addText],
+    [mode, pageIndex, pageHeight, addText, scale],
   )
 
   const editCount = Object.entries(edits).filter(([k, v]) => geomRef.current[k] && v !== geomRef.current[k].original).length
@@ -230,7 +247,7 @@ export function PdfAnnotator({
       )}
 
       {/* Page + overlay */}
-      <div className="max-w-full overflow-auto rounded border">
+      <div ref={wrapRef} className="w-full overflow-x-auto rounded border">
         <div className="relative" style={{ width: canvasW || undefined, height: pageHeight || undefined }}>
           <canvas
             ref={canvasRef}
