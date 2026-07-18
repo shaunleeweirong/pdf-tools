@@ -49,10 +49,11 @@ export function ToolLayout<O>({
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
-      <h1 className="text-3xl font-bold">{tool.name}</h1>
-      <p className="mt-2 text-muted-foreground">{tool.description}</p>
-      <p className="mt-1 text-xs text-muted-foreground">
-        🔒 Files are processed in your browser and never uploaded.
+      <h1 className="text-4xl font-semibold tracking-tight">{tool.name}</h1>
+      <p className="mt-3 text-muted-foreground">{tool.description}</p>
+      <p className="mt-2 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground">
+        <span className="inline-block size-1.5 bg-brand" aria-hidden />
+        Processed in your browser · never uploaded
       </p>
 
       <div className="mt-8 space-y-6">
@@ -78,7 +79,7 @@ export function ToolLayout<O>({
                 </Button>
               </>
             )}
-            {status === 'error' && <p className="text-sm text-red-600">{error}</p>}
+            {status === 'error' && <p className="text-sm text-destructive">{error}</p>}
           </>
         )}
       </div>
