@@ -40,6 +40,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'delete-pages',
+    name: 'Delete Pages',
+    category: 'Organize',
+    description: 'Remove one or more pages from a PDF.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
