@@ -48,6 +48,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'extract-pages',
+    name: 'Extract Pages',
+    category: 'Organize',
+    description: 'Pick specific pages and save them as a new PDF.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
