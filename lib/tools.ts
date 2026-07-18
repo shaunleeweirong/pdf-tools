@@ -160,6 +160,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: true,
   },
+  {
+    slug: 'compress-pdf',
+    name: 'Compress PDF',
+    category: 'Organize',
+    description: 'Reduce file size (light, in-browser). Best for image-heavy PDFs.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
