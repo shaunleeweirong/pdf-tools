@@ -56,6 +56,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'organize-pdf',
+    name: 'Organize PDF',
+    category: 'Organize',
+    description: 'Reorder or remove pages visually, then save.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
