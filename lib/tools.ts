@@ -88,6 +88,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'n-up-pdf',
+    name: 'Pages Per Sheet',
+    category: 'Page tools',
+    description: 'Place 2 or 4 pages onto each sheet (N-up).',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
