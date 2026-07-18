@@ -72,6 +72,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'add-page-numbers',
+    name: 'Add Page Numbers',
+    category: 'Page tools',
+    description: 'Insert page numbers into a PDF.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
