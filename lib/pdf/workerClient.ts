@@ -10,6 +10,11 @@ function getWorker(): Worker {
       pending.get(id)?.(rest)
       pending.delete(id)
     }
+    worker.onerror = (e) => {
+      for (const [, cb] of pending) cb({ ok: false, error: e.message || 'worker error' })
+      pending.clear()
+      worker = null
+    }
   }
   return worker
 }

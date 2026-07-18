@@ -23,6 +23,7 @@ export async function renderThumbnails(pdfBytes: Uint8Array, scale = 0.4): Promi
     canvas.height = viewport.height
     await page.render({ canvas, viewport }).promise
     out.push(canvas.toDataURL('image/png'))
+    page.cleanup()
   }
   await doc.cleanup()
   await loadingTask.destroy()
@@ -45,7 +46,10 @@ export async function renderPageToImageBlob(
   canvas.width = viewport.width
   canvas.height = viewport.height
   await page.render({ canvas, viewport }).promise
-  const blob: Blob = await new Promise((res) => canvas.toBlob((b) => res(b!), mime, quality))
+  page.cleanup()
+  const blob: Blob = await new Promise((resolve, reject) =>
+    canvas.toBlob((b) => (b ? resolve(b) : reject(new Error('canvas.toBlob returned null'))), mime, quality),
+  )
   await doc.cleanup()
   await loadingTask.destroy()
   return blob
