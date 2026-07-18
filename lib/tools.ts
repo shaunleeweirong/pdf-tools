@@ -161,6 +161,14 @@ export const TOOLS: Tool[] = [
     multiple: true,
   },
   {
+    slug: 'edit-pdf',
+    name: 'Edit PDF',
+    category: 'Edit',
+    description: 'Add text and boxes onto a PDF page.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
+  {
     slug: 'compress-pdf',
     name: 'Compress PDF',
     category: 'Organize',
