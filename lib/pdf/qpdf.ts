@@ -20,8 +20,14 @@ let modPromise: Promise<any> | null = null
 async function load(): Promise<any> {
   if (!modPromise) {
     modPromise = (async () => {
-      // Dynamic import so Next.js does not attempt to bundle the wasm at build time.
-      const factory = (await import('@jspawn/qpdf-wasm')).default
+      // Dynamic import with turbopackIgnore to prevent Turbopack from statically
+      // bundling @jspawn/qpdf-wasm. The package conditionally imports Node builtins
+      // (fs, path, module) at module eval time, which fail in a browser build.
+      // At runtime this executes only in the browser (inside an event handler),
+      // where the wasm loader uses the XHR path instead. webpackIgnore is also set
+      // for compatibility if the webpack bundler is used.
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const factory = (await import(/* webpackIgnore: true */ /* turbopackIgnore: true */ '@jspawn/qpdf-wasm' as any)).default
       const mod = await factory({
         // In the browser: serve qpdf.wasm from /qpdf.wasm (Next.js public/).
         // In Node/tests: the caller must patch globalThis.fetch to supply the wasm binary.

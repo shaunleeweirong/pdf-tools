@@ -17,7 +17,7 @@ export function PdfAnnotator({
     let cancelled = false
     ;(async () => {
       const bytes = new Uint8Array(await file.arrayBuffer())
-      const pdfjs = getPdfjs()
+      const pdfjs = await getPdfjs()
       const loadingTask = pdfjs.getDocument({ data: bytes })
       const doc = await loadingTask.promise
       const page = await doc.getPage(1)

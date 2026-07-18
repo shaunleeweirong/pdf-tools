@@ -2,7 +2,7 @@ import { getPdfjs } from './pdfjs'
 import { imagesToPdf } from './imagesToPdf'
 
 export async function getPageCount(pdfBytes: Uint8Array): Promise<number> {
-  const pdfjs = getPdfjs()
+  const pdfjs = await getPdfjs()
   const loadingTask = pdfjs.getDocument({ data: pdfBytes.slice() })
   const doc = await loadingTask.promise
   const n = doc.numPages
@@ -12,7 +12,7 @@ export async function getPageCount(pdfBytes: Uint8Array): Promise<number> {
 }
 
 export async function renderThumbnails(pdfBytes: Uint8Array, scale = 0.4): Promise<string[]> {
-  const pdfjs = getPdfjs()
+  const pdfjs = await getPdfjs()
   const loadingTask = pdfjs.getDocument({ data: pdfBytes.slice() })
   const doc = await loadingTask.promise
   const out: string[] = []
@@ -38,7 +38,7 @@ export async function renderPageToImageBlob(
   mime: 'image/png' | 'image/jpeg',
   quality = 0.92,
 ): Promise<Blob> {
-  const pdfjs = getPdfjs()
+  const pdfjs = await getPdfjs()
   const loadingTask = pdfjs.getDocument({ data: pdfBytes.slice() })
   const doc = await loadingTask.promise
   const page = await doc.getPage(pageIndex + 1)
@@ -66,7 +66,7 @@ export async function extractPageImages(pdfBytes: Uint8Array): Promise<Blob[]> {
 }
 
 export async function diffFirstPage(a: Uint8Array, b: Uint8Array): Promise<string> {
-  const pdfjs = getPdfjs()
+  const pdfjs = await getPdfjs()
   async function raster(bytes: Uint8Array) {
     const loadingTask = pdfjs.getDocument({ data: bytes.slice() })
     const doc = await loadingTask.promise

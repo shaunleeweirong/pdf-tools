@@ -1,15 +1,24 @@
 // Browser-only pdf.js accessor. Do NOT import from Node tests.
-import * as pdfjsLib from 'pdfjs-dist'
+// pdfjs-dist references DOMMatrix and other browser globals at module evaluation
+// time. Using a lazy dynamic import here prevents it from being evaluated during
+// Next.js SSR prerender (which runs in Node, where DOMMatrix is not defined).
 
-let configured = false
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let pdfjsPromise: Promise<any> | null = null
 
-export function getPdfjs() {
-  if (!configured) {
-    pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
-      'pdfjs-dist/build/pdf.worker.min.mjs',
-      import.meta.url,
-    ).toString()
-    configured = true
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function getPdfjs(): Promise<any> {
+  if (!pdfjsPromise) {
+    pdfjsPromise = (async () => {
+      const lib = await import('pdfjs-dist')
+      if (!lib.GlobalWorkerOptions.workerSrc) {
+        lib.GlobalWorkerOptions.workerSrc = new URL(
+          'pdfjs-dist/build/pdf.worker.min.mjs',
+          import.meta.url,
+        ).toString()
+      }
+      return lib
+    })()
   }
-  return pdfjsLib
+  return pdfjsPromise
 }
