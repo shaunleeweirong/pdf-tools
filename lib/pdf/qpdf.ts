@@ -2,10 +2,22 @@
  * qpdf-wasm loader: encrypt and decrypt PDFs entirely in-browser (client-side only).
  *
  * Uses @jspawn/qpdf-wasm v0.0.2 — a qpdf CLI compiled to WebAssembly via Emscripten.
- * The wasm binary must be served from /qpdf.wasm (copy public/qpdf.wasm in build).
  *
- * Browser loading: the module fetches /qpdf.wasm via URL (served from Next.js public/).
- * Node/test loading: patch globalThis.fetch to return the wasm binary from disk
+ * Why the glue is loaded from /qpdf/ at runtime (not bundled):
+ *   qpdf.mjs / qpdf.js rely on UMD-style global side effects — qpdf.js writes the
+ *   factory to `globalThis.exports.Module` (set up by browser.js), and qpdf.mjs reads
+ *   it back. A bundler (Turbopack/webpack) rewrites the module's bare `exports`/`module`
+ *   bindings to its own module scope, so the browser UMD branch never runs and the
+ *   factory ends up undefined ("createModule is not defined"). It also statically
+ *   parses the process-guarded `import("path")`/`import("module")` and fails the client
+ *   build on Node built-ins. Both problems disappear when the glue runs as real
+ *   top-level browser scripts. So we ship qpdf.mjs/qpdf.js/browser.js from public/qpdf/
+ *   and import the ESM entry at runtime via a non-literal specifier the bundler does
+ *   not parse. See scripts/copy-qpdf.mjs for how these files are kept in sync.
+ *
+ * Browser loading: dynamic-import /qpdf/qpdf.mjs; the factory fetches /qpdf.wasm.
+ * Node/test loading: import the package's ESM entry directly (Node takes the
+ *   process-guarded path); patch globalThis.fetch to supply the wasm binary from disk
  *   (see lib/pdf/__tests__/qpdf.spike.test.ts for the test helper).
  *
  * API surface used: mod.FS.writeFile / mod.callMain / mod.FS.readFile
@@ -17,17 +29,26 @@
 let modPromise: Promise<any> | null = null
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function loadFactory(): Promise<QpdfFactory> {
+  if (typeof window !== 'undefined') {
+    // Browser: load the glue served from public/qpdf/ as real top-level scripts.
+    // The specifier is built at runtime so Turbopack/webpack never parses it and
+    // never tries to bundle the package's Node-built-in imports.
+    const url = new URL('/qpdf/qpdf.mjs', window.location.origin).href
+    const mod = (await import(/* webpackIgnore: true */ /* turbopackIgnore: true */ url)) as {
+      default: QpdfFactory
+    }
+    return mod.default
+  }
+  // Node / Vitest: resolve the package's real ESM entry (takes the process branch).
+  return (await import('@jspawn/qpdf-wasm/qpdf.mjs')).default
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function load(): Promise<any> {
   if (!modPromise) {
     modPromise = (async () => {
-      // Dynamic import with turbopackIgnore to prevent Turbopack from statically
-      // bundling @jspawn/qpdf-wasm. The package conditionally imports Node builtins
-      // (fs, path, module) at module eval time, which fail in a browser build.
-      // At runtime this executes only in the browser (inside an event handler),
-      // where the wasm loader uses the XHR path instead. webpackIgnore is also set
-      // for compatibility if the webpack bundler is used.
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const factory = (await import(/* webpackIgnore: true */ /* turbopackIgnore: true */ '@jspawn/qpdf-wasm' as any)).default
+      const factory = await loadFactory()
       const mod = await factory({
         // In the browser: serve qpdf.wasm from /qpdf.wasm (Next.js public/).
         // In Node/tests: the caller must patch globalThis.fetch to supply the wasm binary.
