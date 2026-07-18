@@ -32,6 +32,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'rotate-pdf',
+    name: 'Rotate PDF',
+    category: 'Organize',
+    description: 'Rotate all pages of a PDF by 90°, 180° or 270°.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
