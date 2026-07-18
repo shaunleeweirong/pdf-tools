@@ -152,6 +152,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'compare-pdf',
+    name: 'Compare PDF',
+    category: 'Edit',
+    description: 'Highlight visual differences between the first pages of two PDFs.',
+    accept: ['application/pdf'],
+    multiple: true,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
