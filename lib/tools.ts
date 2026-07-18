@@ -80,6 +80,14 @@ export const TOOLS: Tool[] = [
     accept: ['application/pdf'],
     multiple: false,
   },
+  {
+    slug: 'crop-pdf',
+    name: 'Crop PDF',
+    category: 'Page tools',
+    description: 'Trim margins off every page of a PDF.',
+    accept: ['application/pdf'],
+    multiple: false,
+  },
 ]
 
 export const TOOL_SLUGS = TOOLS.map((t) => t.slug)
