@@ -6,6 +6,9 @@ import {
   buildToolMetadata,
   toolJsonLd,
   siteJsonLd,
+  buildSitemap,
+  buildRobots,
+  buildRootMetadata,
 } from '@/lib/seo'
 
 describe('getToolSeo', () => {
@@ -51,5 +54,34 @@ describe('siteJsonLd', () => {
     const g = siteJsonLd()
     expect(g.some((n) => n['@type'] === 'WebSite')).toBe(true)
     expect(g.some((n) => n['@type'] === 'SoftwareApplication')).toBe(true)
+  })
+})
+
+describe('buildSitemap', () => {
+  it('lists the homepage and every tool with absolute URLs', () => {
+    const s = buildSitemap()
+    expect(s[0].url).toBe(SITE_URL)
+    for (const slug of TOOL_SLUGS) {
+      expect(s.some((e) => e.url === `${SITE_URL}/${slug}`)).toBe(true)
+    }
+    expect(s).toHaveLength(TOOL_SLUGS.length + 1)
+  })
+})
+
+describe('buildRobots', () => {
+  it('allows all crawlers and points at the sitemap', () => {
+    const r = buildRobots()
+    const rule = Array.isArray(r.rules) ? r.rules[0] : r.rules
+    expect(rule.allow).toBe('/')
+    expect(r.sitemap).toBe(`${SITE_URL}/sitemap.xml`)
+  })
+})
+
+describe('buildRootMetadata', () => {
+  it('sets metadataBase and a title template', () => {
+    const m = buildRootMetadata()
+    expect(m.metadataBase?.toString()).toContain('http')
+    expect((m.title as { template?: string }).template).toContain('%s')
+    expect(m.robots).toEqual({ index: true, follow: true })
   })
 })
