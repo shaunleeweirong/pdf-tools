@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from '@/components/SiteHeader'
 import { SiteFooter } from '@/components/SiteFooter'
+import { buildRootMetadata } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,11 +22,7 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: 'pdf-tool — Free & private PDF tools',
-  description:
-    'Merge, split, convert, edit, sign and more. Every tool runs in your browser — your files never leave your device.',
-};
+export const metadata: Metadata = buildRootMetadata();
 
 export default function RootLayout({
   children,
