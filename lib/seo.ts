@@ -10,6 +10,7 @@ export const TAGLINE =
   'Every PDF tool you need — get it done in seconds, free and in your browser.'
 
 export interface ToolSeo {
+  name: string
   title: string
   description: string
   faq: FaqItem[]
@@ -20,6 +21,7 @@ export function getToolSeo(slug: string): ToolSeo {
   if (!tool) throw new Error(`Unknown tool slug: ${slug}`)
   const override = SEO_CONTENT[slug]
   return {
+    name: tool.name,
     title: override?.title ?? `${tool.name} online — free, in your browser`,
     description:
       override?.description ??
@@ -41,13 +43,12 @@ export function buildToolMetadata(slug: string): Metadata {
 }
 
 export function toolJsonLd(slug: string): Record<string, unknown>[] {
-  const tool = getTool(slug)!
-  const { description, faq } = getToolSeo(slug)
+  const { name, description, faq } = getToolSeo(slug)
   const graph: Record<string, unknown>[] = [
     {
       '@context': 'https://schema.org',
       '@type': 'SoftwareApplication',
-      name: `${tool.name} — ${SITE_NAME}`,
+      name: `${name} — ${SITE_NAME}`,
       applicationCategory: 'UtilitiesApplication',
       operatingSystem: 'Web',
       url: `${SITE_URL}/${slug}`,
