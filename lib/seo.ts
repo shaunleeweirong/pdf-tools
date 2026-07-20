@@ -13,6 +13,8 @@ export interface ToolSeo {
   name: string
   title: string
   description: string
+  intro: string
+  steps: string[]
   faq: FaqItem[]
 }
 
@@ -20,12 +22,15 @@ export function getToolSeo(slug: string): ToolSeo {
   const tool = getTool(slug)
   if (!tool) throw new Error(`Unknown tool slug: ${slug}`)
   const override = SEO_CONTENT[slug]
+  const description =
+    override?.description ??
+    `${tool.description} 100% free, no sign-up — processed right in your browser.`
   return {
     name: tool.name,
     title: override?.title ?? `${tool.name} online — free, in your browser`,
-    description:
-      override?.description ??
-      `${tool.description} 100% free, no sign-up — processed right in your browser.`,
+    description,
+    intro: override?.intro ?? description,
+    steps: override?.steps ?? [],
     faq: override?.faq ?? [],
   }
 }
@@ -43,7 +48,7 @@ export function buildToolMetadata(slug: string): Metadata {
 }
 
 export function toolJsonLd(slug: string): Record<string, unknown>[] {
-  const { name, description, faq } = getToolSeo(slug)
+  const { name, description, steps, faq } = getToolSeo(slug)
   const graph: Record<string, unknown>[] = [
     {
       '@context': 'https://schema.org',
@@ -56,6 +61,19 @@ export function toolJsonLd(slug: string): Record<string, unknown>[] {
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     },
   ]
+  if (steps.length > 0) {
+    graph.push({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: `How to ${name.toLowerCase()}`,
+      description,
+      step: steps.map((text, i) => ({
+        '@type': 'HowToStep',
+        position: i + 1,
+        text,
+      })),
+    })
+  }
   if (faq.length > 0) {
     graph.push({
       '@context': 'https://schema.org',
@@ -68,6 +86,22 @@ export function toolJsonLd(slug: string): Record<string, unknown>[] {
     })
   }
   return graph
+}
+
+// Owned brand profiles for entity recognition (ChatGPT/Bing). Add each URL as
+// the profile is created (X, LinkedIn, GitHub, Product Hunt, Crunchbase…).
+export const SAME_AS: string[] = []
+
+export function organizationJsonLd(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/icon`,
+    description: TAGLINE,
+    ...(SAME_AS.length ? { sameAs: SAME_AS } : {}),
+  }
 }
 
 export function siteJsonLd(): Record<string, unknown>[] {
@@ -89,6 +123,7 @@ export function siteJsonLd(): Record<string, unknown>[] {
       description: TAGLINE,
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     },
+    organizationJsonLd(),
   ]
 }
 

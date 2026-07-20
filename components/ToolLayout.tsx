@@ -5,6 +5,7 @@ import type { PdfJobResult } from '@/lib/pdf/types'
 import { FileDropzone } from './FileDropzone'
 import { ProgressIndicator } from './ProgressIndicator'
 import { DownloadResult } from './DownloadResult'
+import { ToolContent } from './ToolContent'
 import { Button } from '@/components/ui/button'
 
 export type ProcessFn<O> = (files: File[], opts: O) => Promise<PdfJobResult>
@@ -83,6 +84,8 @@ export function ToolLayout<O>({
           </>
         )}
       </div>
+
+      <ToolContent slug={tool.slug} />
     </main>
   )
 }
