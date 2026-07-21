@@ -149,6 +149,52 @@ export function blogPostingJsonLd(meta: {
   }
 }
 
+export function buildUseCaseJsonLd(uc: {
+  tool: string
+  useCase: string
+  h1: string
+  description: string
+  steps: string[]
+  faq: { q: string; a: string }[]
+}): Record<string, unknown>[] {
+  const tool = getTool(uc.tool)
+  const url = `${SITE_URL}/${uc.tool}/${uc.useCase}`
+  const graph: Record<string, unknown>[] = []
+  if (tool) {
+    graph.push({
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: `${tool.name} — ${SITE_NAME}`,
+      applicationCategory: 'UtilitiesApplication',
+      operatingSystem: 'Web',
+      url,
+      description: uc.description,
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    })
+  }
+  if (uc.steps.length > 0) {
+    graph.push({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: uc.h1,
+      description: uc.description,
+      step: uc.steps.map((text, i) => ({ '@type': 'HowToStep', position: i + 1, text })),
+    })
+  }
+  if (uc.faq.length > 0) {
+    graph.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: uc.faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    })
+  }
+  return graph
+}
+
 export function buildSitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
   return [

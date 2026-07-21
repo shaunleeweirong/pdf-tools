@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { buildSitemap, SITE_URL } from '@/lib/seo'
 import { getAllPosts } from '@/lib/blog'
+import { USE_CASES } from '@/content/use-cases'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts()
@@ -13,5 +14,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     })),
   ]
-  return [...buildSitemap(), ...blog]
+  const useCases: MetadataRoute.Sitemap = USE_CASES.map((u) => ({
+    url: `${SITE_URL}/${u.tool}/${u.useCase}`,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }))
+  return [...buildSitemap(), ...blog, ...useCases]
 }
