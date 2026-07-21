@@ -127,6 +127,28 @@ export function siteJsonLd(): Record<string, unknown>[] {
   ]
 }
 
+export function blogPostingJsonLd(meta: {
+  slug: string
+  title: string
+  description: string
+  date?: string
+}): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: meta.title,
+    description: meta.description,
+    url: `${SITE_URL}/blog/${meta.slug}`,
+    ...(meta.date ? { datePublished: meta.date, dateModified: meta.date } : {}),
+    author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/icon` },
+    },
+  }
+}
+
 export function buildSitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
   return [
