@@ -1,0 +1,28 @@
+{
+  "updated": "2026-07-21",
+  "note": "Topic backlog for the content engine. Statuses: idea -> researched -> briefed -> drafted -> published. The content-research skill fills briefs and refreshes this from GSC/mining; content-draft advances status and opens PRs. One unique targetQuery per topic (dedup against published).",
+  "topics": [
+    { "id": "uc-compress-for-email", "surface": "programmatic", "targetQuery": "compress pdf for email", "intent": "transactional", "priority": 1, "status": "published", "url": "/compress-pdf/for-email" },
+    { "id": "uc-compress-for-uploading", "surface": "programmatic", "targetQuery": "compress pdf for upload", "intent": "transactional", "priority": 1, "status": "published", "url": "/compress-pdf/for-uploading" },
+    { "id": "uc-merge-two", "surface": "programmatic", "targetQuery": "combine two pdfs", "intent": "transactional", "priority": 1, "status": "published", "url": "/merge-pdf/combine-two-pdfs" },
+    { "id": "uc-merge-printing", "surface": "programmatic", "targetQuery": "merge pdf for printing", "intent": "transactional", "priority": 2, "status": "published", "url": "/merge-pdf/for-printing" },
+    { "id": "uc-jpg-phone", "surface": "programmatic", "targetQuery": "phone photos to pdf", "intent": "transactional", "priority": 2, "status": "published", "url": "/jpg-to-pdf/from-phone-photos" },
+    { "id": "uc-jpg-scans", "surface": "programmatic", "targetQuery": "scanned images to pdf", "intent": "transactional", "priority": 2, "status": "published", "url": "/jpg-to-pdf/scanned-pages" },
+    { "id": "uc-pdf-jpg-social", "surface": "programmatic", "targetQuery": "pdf to jpg for social media", "intent": "transactional", "priority": 3, "status": "published", "url": "/pdf-to-jpg/for-social-media" },
+    { "id": "uc-pdf-jpg-save", "surface": "programmatic", "targetQuery": "save pdf as images", "intent": "transactional", "priority": 3, "status": "published", "url": "/pdf-to-jpg/save-as-images" },
+    { "id": "blog-compress-email", "surface": "blog", "targetQuery": "how to compress a pdf for email", "intent": "informational", "priority": 1, "status": "published", "url": "/blog/how-to-compress-a-pdf-for-email" },
+
+    { "id": "blog-merge-without-uploading", "surface": "blog", "targetQuery": "merge pdf without uploading", "intent": "commercial", "priority": 1, "status": "idea" },
+    { "id": "blog-smallpdf-alternatives", "surface": "blog", "targetQuery": "smallpdf alternatives no sign up", "intent": "commercial", "priority": 1, "status": "idea" },
+    { "id": "blog-compress-to-100kb", "surface": "blog", "targetQuery": "compress pdf to 100kb", "intent": "informational", "priority": 1, "status": "idea" },
+    { "id": "blog-remove-password", "surface": "blog", "targetQuery": "remove password from pdf without acrobat", "intent": "informational", "priority": 1, "status": "idea" },
+    { "id": "blog-merge-on-mac", "surface": "blog", "targetQuery": "how to merge pdf on mac free", "intent": "informational", "priority": 2, "status": "idea" },
+    { "id": "blog-merge-chromebook", "surface": "blog", "targetQuery": "how to merge pdf on chromebook", "intent": "informational", "priority": 2, "status": "idea" },
+    { "id": "blog-pdf-wont-attach", "surface": "blog", "targetQuery": "why won't my pdf attach to email", "intent": "informational", "priority": 2, "status": "idea" },
+    { "id": "blog-reduce-without-quality-loss", "surface": "blog", "targetQuery": "reduce pdf size without losing quality", "intent": "informational", "priority": 2, "status": "idea" },
+    { "id": "blog-rotate-and-save", "surface": "blog", "targetQuery": "how to rotate a pdf and save it", "intent": "informational", "priority": 3, "status": "idea" },
+    { "id": "blog-private-pdf-tools", "surface": "blog", "targetQuery": "pdf tools that don't upload your files", "intent": "commercial", "priority": 2, "status": "idea" },
+    { "id": "blog-job-application-pdf", "surface": "blog", "targetQuery": "combine documents for a job application pdf", "intent": "informational", "priority": 2, "status": "idea" },
+    { "id": "blog-split-large-pdf", "surface": "blog", "targetQuery": "split a large pdf into smaller files", "intent": "informational", "priority": 3, "status": "idea" }
+  ]
+}
