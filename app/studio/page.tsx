@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { compileMDX } from 'next-mdx-remote/rsc'
@@ -36,17 +35,44 @@ function Column({ title, topics }: { title: string; topics: Topic[] }) {
   )
 }
 
+const header = (
+  <div className="flex items-center justify-between">
+    <h1 className="text-3xl font-semibold tracking-tight">Content Studio</h1>
+    {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+    <a href="/studio/logout" className="text-sm text-muted-foreground hover:text-foreground">Log out</a>
+  </div>
+)
+
 export default async function StudioPage() {
   await requireSession()
-  const [{ topics }, pending] = await Promise.all([fetchKeywordMap(), listPendingDrafts()])
-  const board = groupPipeline(topics)
+
+  let data: { board: ReturnType<typeof groupPipeline>; pending: Awaited<ReturnType<typeof listPendingDrafts>> } | null = null
+  let fetchError: string | null = null
+
+  try {
+    const [{ topics }, pending] = await Promise.all([fetchKeywordMap(), listPendingDrafts()])
+    const board = groupPipeline(topics)
+    data = { board, pending }
+  } catch (err) {
+    fetchError = err instanceof Error ? err.message : String(err)
+  }
+
+  if (fetchError !== null || data === null) {
+    return (
+      <main className="mx-auto max-w-5xl px-4 py-12">
+        {header}
+        <p className="mt-10 text-sm text-destructive">
+          Couldn&apos;t reach GitHub — check the GITHUB_TOKEN env var. ({fetchError})
+        </p>
+      </main>
+    )
+  }
+
+  const { board, pending } = data
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-12">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-semibold tracking-tight">Content Studio</h1>
-        <Link href="/studio/logout" className="text-sm text-muted-foreground hover:text-foreground">Log out</Link>
-      </div>
+      {header}
 
       <section className="mt-10">
         <h2 className="text-lg font-semibold text-foreground">
