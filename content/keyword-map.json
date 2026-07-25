@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-21",
-  "note": "Topic backlog for the content engine. Statuses: idea -> researched -> briefed -> drafted -> published. The content-research skill fills briefs and refreshes this from GSC/mining; content-draft advances status and opens PRs. One unique targetQuery per topic (dedup against published).",
+  "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
     { "id": "uc-compress-for-email", "surface": "programmatic", "targetQuery": "compress pdf for email", "intent": "transactional", "priority": 1, "status": "published", "url": "/compress-pdf/for-email" },
     { "id": "uc-compress-for-uploading", "surface": "programmatic", "targetQuery": "compress pdf for upload", "intent": "transactional", "priority": 1, "status": "published", "url": "/compress-pdf/for-uploading" },
