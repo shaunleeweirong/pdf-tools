@@ -110,6 +110,8 @@ export function applyTopicStatus(
 
 // --- GitHub Git Data API (atomic write) ---
 
+// Raw GitHub JSON responses vary by endpoint; callers narrow to typed locals.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function ghJson(path: string, init?: RequestInit): Promise<any> {
   const token = process.env.GITHUB_TOKEN
   if (!token) throw new Error('GITHUB_TOKEN not set')
