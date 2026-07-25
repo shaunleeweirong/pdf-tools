@@ -175,7 +175,7 @@ async function readRaw(path: string): Promise<string> {
     },
     cache: 'no-store',
   })
-  if (!res.ok) throw new Error(`read ${path}: ${res.status}`)
+  if (!res.ok) throw new Error(`read ${path}: ${res.status} ${await res.text()}`)
   return res.text()
 }
 
