@@ -146,7 +146,8 @@
       "targetQuery": "why won't my pdf attach to email",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "why-wont-my-pdf-attach-to-email"
     },
     {
       "id": "blog-reduce-without-quality-loss",
@@ -154,7 +155,8 @@
       "targetQuery": "reduce pdf size without losing quality",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "reduce-pdf-size-without-losing-quality"
     },
     {
       "id": "blog-rotate-and-save",
