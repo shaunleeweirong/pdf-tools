@@ -15,7 +15,7 @@ Write the **finished** piece from a brief (`content/briefs/<id>.md`) in the pdf-
 
 ## For a BLOG post
 
-1. Create `content/blog/<slug>.mdx` (slug = kebab-case of the target query). Frontmatter:
+1. Create `content/pending/<slug>.mdx` (slug = kebab-case of the target query) — the draft waits here for approval in the `/studio` dashboard; it is NOT a live blog post until approved. Frontmatter:
    ```yaml
    ---
    title: "<= 60 chars, keyword-led>"
@@ -48,16 +48,19 @@ Write the **finished** piece from a brief (`content/briefs/<id>.md`) in the pdf-
 - [ ] Reads naturally to a human; no fluff, no repetition, accurate claims.
 - [ ] `npm run build` succeeds and `npm test` passes.
 
-## Hand off (do NOT publish here)
+## Queue for approval (do NOT publish here)
 
-1. Work on a `content/<slug>` branch (keep `main` clean). Verify `npm run build` + `npm test` are green.
-2. Update the topic `status` to `"drafted"` in `content/keyword-map.json` (add `url`).
-3. Commit to the branch:
+Drafts land in `content/pending/` and are approved in the `/studio` dashboard — never merged straight to `content/blog/` and never auto-published.
+
+1. Verify `npm run build` passes (the pending `.mdx` compiles).
+2. In `content/keyword-map.json`, set the matching topic (by `id`/`targetQuery`, or add one if ad-hoc) to `status: "pending"` and add **`slug: "<slug>"`** (MUST match the pending filename — the Studio matches drafts to topics by `slug`).
+3. Commit + push to `main`:
    ```bash
-   git switch -c content/<slug>
-   git add -A && git commit -m "content: <title>"
+   git add content/pending/<slug>.mdx content/keyword-map.json
+   git commit -m "content: draft <slug> (pending review)"
+   git push origin main
    ```
-4. Hand off to the **content-publish** skill, which presents the post and publishes **only on the user's explicit approval**. Never merge/push to `main` from this skill.
+   The push puts the draft in the repo (still NOT a blog post). The `/studio` "Needs approval" column reads it live; the human clicks **Approve** (→ moves to `content/blog/`, deploys) / **Reject** / **Request changes**. The old `content-publish` PR flow is superseded by the dashboard. (Programmatic use-case pages are not queued through pending — they go in `content/use-cases.ts` as before.)
 
 ## Guardrails
 

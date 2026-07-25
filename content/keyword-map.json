@@ -12,7 +12,7 @@
     { "id": "uc-pdf-jpg-save", "surface": "programmatic", "targetQuery": "save pdf as images", "intent": "transactional", "priority": 3, "status": "published", "url": "/pdf-to-jpg/save-as-images" },
     { "id": "blog-compress-email", "surface": "blog", "targetQuery": "how to compress a pdf for email", "intent": "informational", "priority": 1, "status": "published", "url": "/blog/how-to-compress-a-pdf-for-email" },
 
-    { "id": "blog-merge-without-uploading", "surface": "blog", "targetQuery": "merge pdf without uploading", "intent": "commercial", "priority": 1, "status": "idea" },
+    { "id": "blog-merge-without-uploading", "surface": "blog", "targetQuery": "merge pdf without uploading", "intent": "commercial", "priority": 1, "status": "pending", "slug": "merge-pdf-without-uploading" },
     { "id": "blog-smallpdf-alternatives", "surface": "blog", "targetQuery": "smallpdf alternatives no sign up", "intent": "commercial", "priority": 1, "status": "idea" },
     { "id": "blog-compress-to-100kb", "surface": "blog", "targetQuery": "compress pdf to 100kb", "intent": "informational", "priority": 1, "status": "idea" },
     { "id": "blog-remove-password", "surface": "blog", "targetQuery": "how to remove password from pdf without acrobat", "intent": "informational", "priority": 1, "status": "published", "url": "/blog/how-to-remove-a-password-from-a-pdf" },
