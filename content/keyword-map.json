@@ -108,8 +108,9 @@
       "targetQuery": "compress pdf to 100kb",
       "intent": "informational",
       "priority": 1,
-      "status": "pending",
-      "slug": "compress-pdf-to-100kb"
+      "status": "published",
+      "slug": "compress-pdf-to-100kb",
+      "url": "/blog/compress-pdf-to-100kb"
     },
     {
       "id": "blog-remove-password",
