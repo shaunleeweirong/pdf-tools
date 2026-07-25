@@ -1,19 +1,11 @@
-import { cookies } from 'next/headers'
-import { redirect } from 'next/navigation'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
-import { SESSION_COOKIE } from '@/lib/studio/constants'
-import { verifySessionToken } from '@/lib/studio/auth'
 import { fetchKeywordMap, listPendingDrafts, groupPipeline, type Topic } from '@/lib/studio/github'
 import { mdxComponents } from '@/components/mdx'
+import { requireStudioSession } from './session'
+import { approveAction, rejectAction, requestChangesAction } from './actions'
 
 export const dynamic = 'force-dynamic'
-
-async function requireSession() {
-  const secret = process.env.AUTH_SECRET
-  const token = (await cookies()).get(SESSION_COOKIE)?.value
-  if (!secret || !verifySessionToken(token, secret, Date.now())) redirect('/studio/login')
-}
 
 function Column({ title, topics }: { title: string; topics: Topic[] }) {
   return (
@@ -44,7 +36,7 @@ const header = (
 )
 
 export default async function StudioPage() {
-  await requireSession()
+  await requireStudioSession()
 
   let data: { board: ReturnType<typeof groupPipeline>; pending: Awaited<ReturnType<typeof listPendingDrafts>> } | null = null
   let fetchError: string | null = null
@@ -99,7 +91,35 @@ export default async function StudioPage() {
                     </div>
                     <p className="mt-1 text-sm text-muted-foreground">{p.description}</p>
                     <div className="mt-4 border-t border-border pt-4">{content}</div>
-                    {/* Approve / Reject / Request-changes buttons arrive in Phase 2 */}
+                    <form className="mt-6 space-y-3 border-t border-border pt-4">
+                      <input type="hidden" name="slug" value={p.slug} />
+                      <textarea
+                        name="feedback"
+                        rows={2}
+                        placeholder="What should change? (only used for Request changes)"
+                        className="w-full border border-border bg-transparent px-3 py-2 text-sm"
+                      />
+                      <div className="flex flex-wrap gap-2">
+                        <button
+                          formAction={approveAction}
+                          className="bg-brand px-3 py-1.5 text-sm font-medium text-brand-foreground"
+                        >
+                          Approve &amp; publish
+                        </button>
+                        <button
+                          formAction={requestChangesAction}
+                          className="border border-border px-3 py-1.5 text-sm text-foreground hover:border-brand"
+                        >
+                          Request changes
+                        </button>
+                        <button
+                          formAction={rejectAction}
+                          className="border border-border px-3 py-1.5 text-sm text-destructive hover:border-destructive"
+                        >
+                          Reject
+                        </button>
+                      </div>
+                    </form>
                   </li>
                 )
               }),
