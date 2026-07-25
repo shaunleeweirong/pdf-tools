@@ -29,6 +29,7 @@ export function groupPipeline(topics: Topic[]): Board {
     else if (t.status === 'published') board.published.push(t)
     else if (t.status === 'rejected') board.rejected.push(t)
     else if (IN_PROGRESS.has(t.status)) board.inProgress.push(t)
+    else board.inProgress.push(t)
   }
   return board
 }
@@ -79,6 +80,7 @@ export async function listPendingDrafts(): Promise<PendingDraft[]> {
   return Promise.all(
     slugs.map(async (slug) => {
       const fileRes = await gh(`contents/content/pending/${slug}.mdx?ref=main`)
+      if (!fileRes.ok) throw new Error(`pending ${slug}: ${fileRes.status}`)
       const raw = await fileRes.text()
       const { data, content } = matter(raw)
       return {

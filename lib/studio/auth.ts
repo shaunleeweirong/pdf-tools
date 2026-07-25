@@ -1,4 +1,4 @@
-import { createHmac, timingSafeEqual } from 'node:crypto'
+import { createHash, createHmac, timingSafeEqual } from 'node:crypto'
 
 const DEFAULT_TTL_MS = 7 * 24 * 60 * 60 * 1000
 
@@ -18,8 +18,8 @@ export function verifySessionToken(token: string | undefined, secret: string, no
   const exp = token.slice(0, dot)
   const sig = token.slice(dot + 1)
   const expected = sign(exp, secret)
-  const a = Buffer.from(sig)
-  const b = Buffer.from(expected)
-  if (a.length !== b.length || !timingSafeEqual(a, b)) return false
+  const aHash = createHash('sha256').update(sig).digest()
+  const bHash = createHash('sha256').update(expected).digest()
+  if (!timingSafeEqual(aHash, bHash)) return false
   return Number(exp) > nowMs
 }
