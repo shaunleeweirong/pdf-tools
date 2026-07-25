@@ -99,8 +99,9 @@
       "targetQuery": "smallpdf alternatives no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "pending",
-      "slug": "smallpdf-alternatives-no-sign-up"
+      "status": "published",
+      "slug": "smallpdf-alternatives-no-sign-up",
+      "url": "/blog/smallpdf-alternatives-no-sign-up"
     },
     {
       "id": "blog-compress-to-100kb",
