@@ -9,6 +9,7 @@ export type Topic = {
   status: string
   url?: string
   feedback?: string
+  slug?: string
 }
 
 export type Board = {
@@ -92,4 +93,119 @@ export async function listPendingDrafts(): Promise<PendingDraft[]> {
       }
     }),
   )
+}
+
+// --- Pure helpers ---
+
+export function applyTopicStatus(
+  topics: Topic[],
+  slug: string,
+  status: string,
+  extra: { url?: string; feedback?: string } = {},
+): Topic[] {
+  return topics.map((t) =>
+    t.slug === slug ? { ...t, status, ...(extra.url ? { url: extra.url } : {}), ...(extra.feedback ? { feedback: extra.feedback } : {}) } : t,
+  )
+}
+
+// --- GitHub Git Data API (atomic write) ---
+
+async function ghJson(path: string, init?: RequestInit): Promise<any> {
+  const token = process.env.GITHUB_TOKEN
+  if (!token) throw new Error('GITHUB_TOKEN not set')
+  const full = process.env.GITHUB_REPO ?? 'shaunleeweirong/pdf-tools'
+  const res = await fetch(`https://api.github.com/repos/${full}/${path}`, {
+    ...init,
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      ...(init?.body ? { 'Content-Type': 'application/json' } : {}),
+    },
+    cache: 'no-store',
+  })
+  if (!res.ok) throw new Error(`GitHub ${path}: ${res.status} ${await res.text()}`)
+  return res.json()
+}
+
+type FileChange = { upserts?: Record<string, string>; deletes?: string[] }
+
+/** One atomic commit on main: create/update `upserts` and remove `deletes`. */
+async function commitFiles(change: FileChange, message: string): Promise<void> {
+  const ref = await ghJson('git/ref/heads/main')
+  const baseCommitSha: string = ref.object.sha
+  const baseCommit = await ghJson(`git/commits/${baseCommitSha}`)
+  const baseTreeSha: string = baseCommit.tree.sha
+
+  const tree: Array<Record<string, unknown>> = []
+  for (const [path, content] of Object.entries(change.upserts ?? {})) {
+    const blob = await ghJson('git/blobs', {
+      method: 'POST',
+      body: JSON.stringify({ content, encoding: 'utf-8' }),
+    })
+    tree.push({ path, mode: '100644', type: 'blob', sha: blob.sha })
+  }
+  for (const path of change.deletes ?? []) {
+    tree.push({ path, mode: '100644', type: 'blob', sha: null })
+  }
+
+  const newTree = await ghJson('git/trees', {
+    method: 'POST',
+    body: JSON.stringify({ base_tree: baseTreeSha, tree }),
+  })
+  const commit = await ghJson('git/commits', {
+    method: 'POST',
+    body: JSON.stringify({ message, tree: newTree.sha, parents: [baseCommitSha] }),
+  })
+  await ghJson('git/refs/heads/main', {
+    method: 'PATCH',
+    body: JSON.stringify({ sha: commit.sha }),
+  })
+}
+
+async function readRaw(path: string): Promise<string> {
+  const token = process.env.GITHUB_TOKEN
+  if (!token) throw new Error('GITHUB_TOKEN not set')
+  const full = process.env.GITHUB_REPO ?? 'shaunleeweirong/pdf-tools'
+  const res = await fetch(`https://api.github.com/repos/${full}/contents/${path}?ref=main`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: 'application/vnd.github.raw+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+    },
+    cache: 'no-store',
+  })
+  if (!res.ok) throw new Error(`read ${path}: ${res.status}`)
+  return res.text()
+}
+
+async function updatedKeywordMap(slug: string, status: string, extra?: { url?: string; feedback?: string }): Promise<string> {
+  const map = JSON.parse(await readRaw('content/keyword-map.json'))
+  map.topics = applyTopicStatus(map.topics ?? [], slug, status, extra)
+  return JSON.stringify(map, null, 2) + '\n'
+}
+
+export async function approveDraft(slug: string): Promise<void> {
+  const body = await readRaw(`content/pending/${slug}.mdx`)
+  const map = await updatedKeywordMap(slug, 'published', { url: `/blog/${slug}` })
+  await commitFiles(
+    {
+      upserts: { [`content/blog/${slug}.mdx`]: body, 'content/keyword-map.json': map },
+      deletes: [`content/pending/${slug}.mdx`],
+    },
+    `content: publish ${slug}`,
+  )
+}
+
+export async function rejectDraft(slug: string): Promise<void> {
+  const map = await updatedKeywordMap(slug, 'rejected')
+  await commitFiles(
+    { upserts: { 'content/keyword-map.json': map }, deletes: [`content/pending/${slug}.mdx`] },
+    `content: reject ${slug}`,
+  )
+}
+
+export async function requestChanges(slug: string, feedback: string): Promise<void> {
+  const map = await updatedKeywordMap(slug, 'changes-requested', { feedback })
+  await commitFiles({ upserts: { 'content/keyword-map.json': map } }, `content: request changes on ${slug}`)
 }
