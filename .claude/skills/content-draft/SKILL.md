@@ -48,16 +48,16 @@ Write the **finished** piece from a brief (`content/briefs/<id>.md`) in the pdf-
 - [ ] Reads naturally to a human; no fluff, no repetition, accurate claims.
 - [ ] `npm run build` succeeds and `npm test` passes.
 
-## Ship
+## Hand off (do NOT publish here)
 
-1. Update the topic `status` to `"drafted"` in `content/keyword-map.json` (add `url`).
-2. Branch, commit, open a PR:
+1. Work on a `content/<slug>` branch (keep `main` clean). Verify `npm run build` + `npm test` are green.
+2. Update the topic `status` to `"drafted"` in `content/keyword-map.json` (add `url`).
+3. Commit to the branch:
    ```bash
    git switch -c content/<slug>
    git add -A && git commit -m "content: <title>"
-   gh pr create --fill
    ```
-   In a scheduled routine, bundle the run's posts into ONE daily PR. Human reviews + merges → Vercel auto-deploys. No auto-publish.
+4. Hand off to the **content-publish** skill, which presents the post and publishes **only on the user's explicit approval**. Never merge/push to `main` from this skill.
 
 ## Guardrails
 

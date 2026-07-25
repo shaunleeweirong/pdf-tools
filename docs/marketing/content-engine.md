@@ -9,16 +9,14 @@ The engine is a pipeline: **research → brief → draft → self-score → PR �
 - **Draft skill:** `.claude/skills/content-draft` — turns a brief into a finished MDX blog post (`content/blog/*.mdx`) or a programmatic entry (`content/use-cases.ts`), self-scores, opens a PR.
 - **Surfaces:** blog at `/blog`, programmatic pages at `/{tool}/{use-case}` (both already built + SEO/schema wired).
 
-## Phase A — manual (do this first, ~1–2 weeks)
+## The workflow (4 steps, publish is approval-gated)
 
-Run the loop by hand to lock the quality bar before automating:
+1. **Research** — `/content-research` mines the real questions (PAA, Reddit, Quora, LinkedIn) + studies competitors → a brief in `content/briefs/<id>.md`.
+2. **Draft** — `/content-draft` writes the finished post from the brief on a `content/<slug>` branch, self-scores, and verifies the build. It does **not** publish.
+3. **Approve (you)** — `/content-publish` presents the finished post (title, target query, where it'll live, key claims, link to read it) and asks: *approve to publish, or want changes?* Nothing ships without your explicit yes.
+4. **Publish** — on your OK, `/content-publish` merges the branch to `main` and pushes → Vercel auto-deploys → it's live, and the backlog status flips to `published`.
 
-1. `/content-research` — researches the top backlog topic (or a query you name) → a brief.
-2. Review the brief; adjust the angle if needed.
-3. `/content-draft` — writes the finished post from the brief, self-scores, opens a PR.
-4. Review the PR (does it answer real questions? natural? correct? on-brand?), then merge → Vercel auto-deploys.
-
-Aim to validate ~5–10 posts this way. If a draft is thin, send it back — the point is a high, distinct quality bar.
+**Phase A (do this first, ~1–2 weeks):** run the 4 steps by hand and approve each post, to lock the quality bar. Aim for ~5–10 posts. If a draft is thin, request changes — the point is a high, distinct bar.
 
 ## Phase B — scheduled (turn on once quality holds)
 
