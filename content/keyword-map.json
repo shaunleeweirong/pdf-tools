@@ -99,7 +99,8 @@
       "targetQuery": "smallpdf alternatives no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "smallpdf-alternatives-no-sign-up"
     },
     {
       "id": "blog-compress-to-100kb",
@@ -107,7 +108,8 @@
       "targetQuery": "compress pdf to 100kb",
       "intent": "informational",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-to-100kb"
     },
     {
       "id": "blog-remove-password",
