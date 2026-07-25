@@ -15,7 +15,7 @@
     { "id": "blog-merge-without-uploading", "surface": "blog", "targetQuery": "merge pdf without uploading", "intent": "commercial", "priority": 1, "status": "idea" },
     { "id": "blog-smallpdf-alternatives", "surface": "blog", "targetQuery": "smallpdf alternatives no sign up", "intent": "commercial", "priority": 1, "status": "idea" },
     { "id": "blog-compress-to-100kb", "surface": "blog", "targetQuery": "compress pdf to 100kb", "intent": "informational", "priority": 1, "status": "idea" },
-    { "id": "blog-remove-password", "surface": "blog", "targetQuery": "how to remove password from pdf without acrobat", "intent": "informational", "priority": 1, "status": "drafted", "url": "/blog/how-to-remove-a-password-from-a-pdf" },
+    { "id": "blog-remove-password", "surface": "blog", "targetQuery": "how to remove password from pdf without acrobat", "intent": "informational", "priority": 1, "status": "published", "url": "/blog/how-to-remove-a-password-from-a-pdf" },
     { "id": "blog-merge-on-mac", "surface": "blog", "targetQuery": "how to merge pdf on mac free", "intent": "informational", "priority": 2, "status": "idea" },
     { "id": "blog-merge-chromebook", "surface": "blog", "targetQuery": "how to merge pdf on chromebook", "intent": "informational", "priority": 2, "status": "idea" },
     { "id": "blog-pdf-wont-attach", "surface": "blog", "targetQuery": "why won't my pdf attach to email", "intent": "informational", "priority": 2, "status": "idea" },
