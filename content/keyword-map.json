@@ -168,8 +168,9 @@
       "targetQuery": "how to rotate a pdf and save it",
       "intent": "informational",
       "priority": 3,
-      "status": "pending",
-      "slug": "how-to-rotate-a-pdf-and-save-it"
+      "status": "published",
+      "slug": "how-to-rotate-a-pdf-and-save-it",
+      "url": "/blog/how-to-rotate-a-pdf-and-save-it"
     },
     {
       "id": "blog-private-pdf-tools",
