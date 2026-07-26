@@ -172,7 +172,8 @@
       "targetQuery": "pdf tools that don't upload your files",
       "intent": "commercial",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-tools-that-dont-upload-your-files"
     },
     {
       "id": "blog-job-application-pdf",
@@ -180,7 +181,8 @@
       "targetQuery": "combine documents for a job application pdf",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "combine-documents-for-a-job-application-pdf"
     },
     {
       "id": "blog-split-large-pdf",
