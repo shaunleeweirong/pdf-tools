@@ -216,8 +216,9 @@
       "targetQuery": "how to add page numbers to a pdf free",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "how-to-add-page-numbers-to-a-pdf-free"
+      "status": "published",
+      "slug": "how-to-add-page-numbers-to-a-pdf-free",
+      "url": "/blog/how-to-add-page-numbers-to-a-pdf-free"
     },
     {
       "id": "blog-sign-without-printing",
