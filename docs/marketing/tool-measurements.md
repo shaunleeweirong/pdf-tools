@@ -118,6 +118,17 @@ Unlocking returns the file to within a hundred bytes of its original size, so th
 
 **Wrong passwords were rejected** on every encrypted file, verified in the same run (`qpdf: invalid password`).
 
+## Rotate
+
+`/rotate-pdf`, via `lib/pdf/rotate.ts` (pdf-lib) in Node, 90 degrees clockwise on every page.
+
+| File | Before | After | Change | Time |
+|---|---|---|---|---|
+| photo-deck.pdf | 913.4 KB | 913.4 KB | 0.00% | 31 ms |
+| text-report.pdf | 23.5 KB | 23.5 KB | +0.02% | 15 ms |
+
+Rotation sets one value per page and touches nothing else, so size is unchanged to within a few bytes. A rotate tool that returns a noticeably different file size is re-rendering pages rather than setting the orientation flag, which would turn text into images.
+
 ## Not yet measured
 
 Claims in these areas are not currently backed by first-hand data, so posts should not imply testing:

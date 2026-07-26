@@ -46,9 +46,21 @@ describe('blog E-E-A-T requirements', () => {
     expect(offenders, `posts containing dashes: ${offenders.join(', ')}`).toEqual([])
   })
 
+  /**
+   * Counts the FAQ alongside the body, because both render on the page and the
+   * FAQ is often where the most-searched questions get answered. Measuring the
+   * body alone would penalise moving a body FAQ into frontmatter, which is the
+   * change that makes it emit schema, and would reward padding prose to
+   * compensate. Padding is explicitly something we do not do.
+   */
   it('every post is substantial enough to be worth publishing', () => {
+    const count = (s: string) => (s.trim() ? s.trim().split(/\s+/).length : 0)
     const thin = getPostSlugs()
-      .map((slug) => ({ slug, words: getPost(slug).body.trim().split(/\s+/).length }))
+      .map((slug) => {
+        const { meta, body } = getPost(slug)
+        const faqWords = meta.faq.reduce((n, f) => n + count(f.q) + count(f.a), 0)
+        return { slug, words: count(body) + faqWords }
+      })
       .filter((p) => p.words < 800)
     expect(thin, `posts under 800 words: ${thin.map((p) => `${p.slug} (${p.words})`).join(', ')}`)
       .toEqual([])
