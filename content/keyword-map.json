@@ -137,8 +137,9 @@
       "targetQuery": "how to merge pdf on chromebook",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "how-to-merge-pdf-on-chromebook"
+      "status": "published",
+      "slug": "how-to-merge-pdf-on-chromebook",
+      "url": "/blog/how-to-merge-pdf-on-chromebook"
     },
     {
       "id": "blog-pdf-wont-attach",
