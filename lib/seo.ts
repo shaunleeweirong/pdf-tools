@@ -1,6 +1,7 @@
 import type { Metadata, MetadataRoute } from 'next'
 import { getTool, TOOL_SLUGS } from '@/lib/tools'
 import { SEO_CONTENT, type FaqItem } from '@/lib/seo-content'
+import { DEFAULT_AUTHOR, type Author } from '@/lib/authors'
 
 export const SITE_NAME = 'pdf-tool'
 export const SITE_URL = (
@@ -127,25 +128,76 @@ export function siteJsonLd(): Record<string, unknown>[] {
   ]
 }
 
-export function blogPostingJsonLd(meta: {
-  slug: string
-  title: string
-  description: string
-  date?: string
-}): Record<string, unknown> {
+/** A Person node for an author, reused with a stable @id across all their posts. */
+function authorNode(author: Author): Record<string, unknown> {
+  return {
+    '@type': 'Person',
+    '@id': `${SITE_URL}/author/${author.slug}#person`,
+    name: author.name,
+    url: `${SITE_URL}/author/${author.slug}`,
+    image: `${SITE_URL}${author.image}`,
+    jobTitle: author.jobTitle,
+    description: author.bio,
+    ...(author.sameAs.length ? { sameAs: author.sameAs } : {}),
+    ...(author.knowsAbout.length ? { knowsAbout: author.knowsAbout } : {}),
+    worksFor: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+  }
+}
+
+export function blogPostingJsonLd(
+  meta: { slug: string; title: string; description: string; date?: string; updated?: string },
+  author: Author = DEFAULT_AUTHOR,
+): Record<string, unknown> {
+  const url = `${SITE_URL}/blog/${meta.slug}`
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: meta.title,
     description: meta.description,
-    url: `${SITE_URL}/blog/${meta.slug}`,
-    ...(meta.date ? { datePublished: meta.date, dateModified: meta.date } : {}),
-    author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    image: `${url}/opengraph-image`,
+    ...(meta.date ? { datePublished: meta.date, dateModified: meta.updated || meta.date } : {}),
+    author: authorNode(author),
     publisher: {
       '@type': 'Organization',
       name: SITE_NAME,
       logo: { '@type': 'ImageObject', url: `${SITE_URL}/icon` },
     },
+  }
+}
+
+/** ProfilePage + Person for an author page; Person @id matches every post's author. */
+export function profilePageJsonLd(author: Author): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    mainEntity: authorNode(author),
+  }
+}
+
+export function breadcrumbJsonLd(items: Array<{ name: string; url: string }>): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: it.name,
+      item: it.url,
+    })),
+  }
+}
+
+export function faqPageJsonLd(faq: FaqItem[]): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
   }
 }
 

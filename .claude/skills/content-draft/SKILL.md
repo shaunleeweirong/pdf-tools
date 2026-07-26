@@ -32,15 +32,19 @@ When you state a fact or explain a concept (a file-size limit, a standard like P
    ---
    title: "<= 60 chars, keyword-led>"
    description: "<= 155 chars, answer + benefit>"
-   date: "<YYYY-MM-DD>"
+   date: "<YYYY-MM-DD (today)>"
    keywords: ["<targetQuery>", "<secondary>", ...]
    toolSlugs: ["<relevant tool slugs from lib/tools.ts>"]
+   faq:
+     - q: "<question in the reader's words>"
+       a: "<direct answer>"
    ---
    ```
+   (`faq` is rendered as a visible FAQ section AND emitted as `FAQPage` schema automatically. Optional `updated: "<YYYY-MM-DD>"` sets the "Last updated" date. Do NOT credit an author in frontmatter, do NOT add a manual FAQ section in the body, and do NOT hand-write JSON-LD; the byline (Chris P.), Person/Breadcrumb/BlogPosting schema, and the OG image are all added by the route.)
 2. Body (MDX, starts at `##` — the H1/date/description are rendered from frontmatter):
    - **Answer-first intro** (target keyword in the first sentence).
    - One `##` per question from the brief (use the real PAA/Reddit phrasing as headings).
-   - A **how-to** list where relevant, and a `## Frequently asked questions` section with `###` questions.
+   - A **how-to** list where relevant. Put the FAQ in the `faq` frontmatter (above), NOT a body `## Frequently asked questions` section, so it renders + schemas once (no duplication).
    - **Internal links** to the relevant tool(s) and any matching use-case page — link the tool the first time it's mentioned, e.g. `[Compress PDF tool](/compress-pdf)`.
    - GFM tables/lists are supported (remark-gfm).
    - `BlogPosting` schema is emitted automatically by the route — no manual JSON-LD needed.

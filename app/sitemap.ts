@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { buildSitemap, SITE_URL } from '@/lib/seo'
 import { getAllPosts } from '@/lib/blog'
 import { USE_CASES } from '@/content/use-cases'
+import { AUTHORS } from '@/lib/authors'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts()
@@ -19,5 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: 0.7,
   }))
-  return [...buildSitemap(), ...blog, ...useCases]
+  const authors: MetadataRoute.Sitemap = AUTHORS.map((a) => ({
+    url: `${SITE_URL}/author/${a.slug}`,
+    changeFrequency: 'monthly',
+    priority: 0.5,
+  }))
+  return [...buildSitemap(), ...blog, ...useCases, ...authors]
 }
