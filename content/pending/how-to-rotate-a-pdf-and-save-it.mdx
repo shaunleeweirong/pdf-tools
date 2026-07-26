@@ -1,0 +1,71 @@
+---
+title: "How to Rotate a PDF and Save It Permanently"
+description: "Rotate a PDF and save it so the change sticks. Free, no sign-up, files stay in your browser. Works for one page or the whole document."
+date: "2026-07-26"
+keywords: ["how to rotate a pdf and save it", "rotate pdf permanently", "rotate pdf without adobe", "rotate pdf free no sign up", "rotate single page pdf"]
+toolSlugs: ["rotate-pdf", "organize-pdf"]
+---
+
+You rotated the PDF in your browser, saved it, reopened it, and it's sideways again. That's not a bug in your file. It's how PDF viewers work, and the fix takes about thirty seconds once you know which tool to use.
+
+## Why rotating in Adobe Reader or Chrome doesn't stick
+
+Free PDF viewers, including Adobe Acrobat Reader, Google Chrome, Microsoft Edge, and Firefox, are built to display files, not edit them. When you click the rotate button in the toolbar, the viewer tilts the display for your current session. It doesn't write anything to the file itself.
+
+PDF page orientation is stored as a `/Rotate` entry in the [PDF page dictionary](https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf). A viewer that only reads PDFs skips writing that entry back to disk. So every time you close and reopen the file, the viewer reads the original orientation and shows it as-is.
+
+To make a rotation permanent, you need a tool that actually writes the updated `/Rotate` value back into the file. That's what the [Rotate PDF tool](/rotate-pdf) does, and it runs entirely in your browser so nothing gets uploaded anywhere.
+
+## How to rotate a PDF and save it permanently (step by step)
+
+1. Open the [Rotate PDF tool](/rotate-pdf).
+2. Drop your PDF onto the page or click to select it from your device.
+3. Click the rotate arrow on any page thumbnail to turn it 90 degrees clockwise or counterclockwise. Click again to rotate another 90 degrees.
+4. To rotate all pages at once, use the "Rotate all" button above the thumbnails.
+5. Click **Download** when you're done.
+
+The file you download has the rotation baked in. Open it in any viewer on any device and it'll show in the correct orientation.
+
+## Can I rotate just one page in a PDF?
+
+Yes. The tool shows a thumbnail for each page. You rotate pages individually, so you can fix a single sideways scan while leaving the rest of the document untouched. This is useful when you've scanned a batch of documents and one or two pages came out at the wrong angle.
+
+If you want to go further and rearrange pages at the same time, the [Organize PDF tool](/organize-pdf) lets you reorder, rotate, and delete pages in one step.
+
+## Does rotating a PDF reduce quality?
+
+No. Rotation doesn't touch the image or text data at all. The tool updates the orientation flag in the file metadata, so the actual content (photos, text, vector graphics) is exactly the same. A 2 MB PDF stays 2 MB after rotation.
+
+## How to rotate a PDF on Mac without Acrobat
+
+macOS Preview can rotate PDF pages and save permanently. Open the PDF in Preview, choose **View > Thumbnails**, click a page thumbnail to select it, then go to **Tools > Rotate Left** (or Right). Save with Cmd+S. Unlike Chrome or Safari's reader view, Preview writes the change to the file.
+
+The in-browser [Rotate PDF tool](/rotate-pdf) also works on Mac in any browser, so you don't need to find Preview if you're already in a browser tab.
+
+## How to rotate a PDF on Windows without Acrobat
+
+Microsoft Edge has a rotate icon in the PDF toolbar, but like other viewers it's view-only and won't save permanently. The simplest free option on Windows is to use the browser-based [Rotate PDF tool](/rotate-pdf): upload, rotate, download. No install, no account.
+
+Alternatively, if you have LibreOffice Draw installed, you can open the PDF and rotate individual pages there, though the workflow is slower than using an online tool.
+
+## Frequently asked questions
+
+### Why does my PDF keep reverting to sideways (horizontal) after I save it?
+
+You're likely saving the view, not the file. In PDF viewers, the rotate option in the top toolbar changes how you see the document in that session only. Use a dedicated tool (like the one linked above) that writes the rotation into the file itself.
+
+### Can I rotate a PDF on my phone?
+
+Yes. The [Rotate PDF tool](/rotate-pdf) works in mobile browsers on iPhone and Android. Open the link in Safari or Chrome on your phone, upload the file from your camera roll or Files app, rotate the pages, and download.
+
+### Will the rotated PDF look right when I print it?
+
+Yes. Because the rotation is saved to the file (not just the viewer), the printer will read the correct orientation. Your printer driver doesn't need any special settings.
+
+### Is there a file size limit?
+
+The tool handles standard-sized PDFs in the browser. If your file is very large (hundreds of pages with embedded high-resolution images), performance will depend on your device. For most scanned documents and typical business PDFs, there's no issue.
+
+### Do my files get uploaded to a server?
+
+No. The tool processes your file locally in your browser using JavaScript. The file never leaves your device. This matters if you're rotating confidential documents like contracts, medical records, or tax forms.
