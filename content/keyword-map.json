@@ -235,7 +235,8 @@
       "targetQuery": "how to fill out a pdf form without adobe",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-fill-out-a-pdf-form-without-adobe"
     },
     {
       "id": "blog-watermark-pdf-free",
@@ -267,6 +268,62 @@
       "targetQuery": "how to edit pdf text free without acrobat",
       "intent": "informational",
       "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-extract-pages",
+      "surface": "blog",
+      "targetQuery": "how to extract pages from a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-protect-pdf-password",
+      "surface": "blog",
+      "targetQuery": "how to password protect a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-pdf-android",
+      "surface": "blog",
+      "targetQuery": "compress pdf on android free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-ilovepdf-alternatives",
+      "surface": "blog",
+      "targetQuery": "ilovepdf alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-reorder-pdf-pages",
+      "surface": "blog",
+      "targetQuery": "how to rearrange pages in a pdf free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-flatten-pdf-form",
+      "surface": "blog",
+      "targetQuery": "how to flatten a pdf form free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-n-up-pdf",
+      "surface": "blog",
+      "targetQuery": "how to print pdf 2 pages per sheet free",
+      "intent": "informational",
+      "priority": 3,
       "status": "idea"
     }
   ]
