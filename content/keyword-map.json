@@ -174,8 +174,9 @@
       "targetQuery": "pdf tools that don't upload your files",
       "intent": "commercial",
       "priority": 2,
-      "status": "pending",
-      "slug": "pdf-tools-that-dont-upload-your-files"
+      "status": "published",
+      "slug": "pdf-tools-that-dont-upload-your-files",
+      "url": "/blog/pdf-tools-that-dont-upload-your-files"
     },
     {
       "id": "blog-job-application-pdf",
