@@ -8,9 +8,27 @@ keywords:
  - "job application single pdf"
  - "how to combine cover letter and resume into one pdf"
  - "combine resume cover letter references one file"
+updated: "2026-07-27"
 toolSlugs:
  - "merge-pdf"
  - "organize-pdf"
+ - "split-pdf"
+ - "flatten-pdf"
+faq:
+ - q: "Should my cover letter always go first?"
+   a: "Yes. The cover letter explains why you are applying and what you bring, so a recruiter who opens the file reads your argument before your credentials. Putting the resume first buries the context."
+ - q: "Can I combine a Word document and a PDF directly?"
+   a: "Not with a PDF merger. Convert the Word file to PDF first, then merge the two PDFs."
+ - q: "What if I only have a resume and no cover letter?"
+   a: "Submit just the resume. Only combine when you have several documents to send. There is no value in making a one-document combined file."
+ - q: "Is it safe to merge documents that contain personal information?"
+   a: "Yes, with a browser-based tool. Our Merge PDF tool runs entirely in your browser, so your address, phone number, and your referees' contact details never leave your device."
+ - q: "How do I check the page count before submitting?"
+   a: "Drag the combined PDF into any browser tab, or open it in any PDF viewer, and read the page count from the toolbar."
+ - q: "The portal says the file must be under 2 MB and my combined PDF is too large."
+   a: "Do not compress it. A job application is a text document, and our compressor rasterizes pages, which would make it several times larger and turn your resume into an unsearchable image. Remove the portfolio pages and link to them instead, or re-export from the source with image quality reduced."
+ - q: "My resume has a two-column layout, will that confuse ATS?"
+   a: "A two-column layout affects parsing whether or not you combine files. If ATS compatibility matters for this role, use a single-column layout: it parses cleanly and is quicker for a human to scan too."
 ---
 
 Combining documents for a job application PDF means merging your resume, cover letter, and any supporting files, references, certifications, writing samples, into one file you can submit in a single upload. Many job portals accept only one attachment, and a combined PDF is the cleanest way to make all your materials fit.
@@ -53,6 +71,8 @@ You can merge everything in your browser in about 30 seconds with the [Merge PDF
 
 If the pages end up in the wrong sequence after merging, the [Organize PDF tool](/organize-pdf) lets you drag individual pages into the right order before downloading.
 
+**If any of your documents is a filled-in PDF form, flatten it first.** Merging combines pages, but interactive form fields live at the document level and do not survive. We tested this on our own merge tool: a PDF with a text field reported that field before merging and none afterwards. Application packs often include a filled form, so this is a real risk. Run it through the [Flatten PDF tool](/flatten-pdf) first, which paints your answers permanently into the page, then merge.
+
 ## How to make the combined PDF look professional
 
 A few things to check before you submit:
@@ -63,7 +83,9 @@ A few things to check before you submit:
 
 **File name.** Name the combined file something specific: `FirstName-LastName-Application.pdf` or `FirstName-LastName-RoleName.pdf`. A file named "Resume.pdf" or "Document1.pdf" is harder for recruiters to identify in a folder full of submissions.
 
-**File size.** Most portals accept up to 5 MB. A combined application with text and no large images is typically under 500 KB. If portfolio pages or scanned certificates push the file above the limit, run it through the [Compress PDF tool](/compress-pdf) to bring it down before uploading.
+**File size.** Most portals accept up to 5 MB, and a combined application of typed documents is typically well under 500 KB, so this rarely bites. Merging itself adds nothing: we measured a merge of three files totalling 971.9 KB producing a 970.5 KB result, marginally under the sum of its parts.
+
+If scanned certificates or portfolio pages push you over a limit, resist the urge to run the whole thing through a compressor. In-browser compression works by turning each page into an image, which would make your typed resume larger and, worse, unreadable to the applicant tracking system, since there would no longer be any text to extract. Instead, drop the heavy pages out with the [Split PDF tool](/split-pdf) and link to the portfolio separately, or re-export the scans at a lower resolution before merging.
 
 ## Does a combined PDF hurt your ATS score?
 
@@ -85,40 +107,10 @@ If you're adding portfolio pages to the application file, put them last (after r
 
 Before merging, every document needs to be in PDF format.
 
-**Microsoft Word:** File → Save As → choose PDF from the format dropdown.
+**Microsoft Word:** File → Save As → choose PDF from the format dropdown. [Microsoft's own guide](https://support.microsoft.com/en-us/office/save-or-convert-to-pdf-or-xps-in-office-desktop-apps-d85416c5-7d77-4fd6-a216-6f4bf7c7c110) covers the options if your version looks different.
 
 **Google Docs:** File → Download → PDF Document (.pdf).
 
 **LibreOffice:** File → Export As → Export as PDF.
 
 Once all files are PDFs, drop them into the [Merge PDF tool](/merge-pdf) and combine.
-
-## Frequently asked questions
-
-### Should my cover letter always go first?
-
-Yes. The cover letter is your introduction, it explains why you're applying and what you bring. A recruiter who opens the file reads your argument before they review your credentials. Putting the resume first buries the context.
-
-### Can I combine a Word document and a PDF directly?
-
-Not directly with a PDF merger. Convert the Word document to PDF first (see the section above), then merge the PDF versions together.
-
-### What if I only have a resume and no cover letter?
-
-Submit just the resume. Only combine files when you have multiple documents to submit. There's no need to create a one-document "combined" file from a single document.
-
-### Is it safe to merge documents that contain personal information?
-
-Yes, when you're using a browser-based tool. The [Merge PDF tool](/merge-pdf) runs entirely in your browser, your name, address, phone number, and references' contact details never leave your device.
-
-### How do I check the page count before submitting?
-
-Open the combined PDF in any browser tab (drag the file in) or any PDF viewer. The total page count appears in the toolbar. You can also check via File → Print in any application, the page range shows the total without printing anything.
-
-### The portal says the file must be under 2 MB and my combined PDF is too large.
-
-Run the combined file through the [Compress PDF tool](/compress-pdf). For text-heavy documents, compression typically has minimal effect on quality. For files with scanned pages or images, compression can reduce size significantly. If the file is still too large after compression, consider submitting the portfolio as a separate link (your personal site or a Google Drive share) rather than embedding the pages.
-
-### My resume has a two-column layout, will that confuse ATS?
-
-The two-column layout is a formatting choice that affects ATS parsing regardless of whether you're submitting a combined file or a standalone resume. If ATS compatibility matters for this role, use a single-column resume layout, it parses cleanly and is easier for recruiters to scan quickly as well.

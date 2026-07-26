@@ -1,7 +1,8 @@
 ---
 title: "Reduce PDF Size Without Losing Quality"
-description: "Compress a PDF without quality loss in your browser, free, no upload, no sign-up. Covers lossless compression, text vs image PDFs, Mac tips, and FAQs."
+description: "What lossless PDF compression can and cannot do, when our in-browser tool is the wrong choice, and the right method for each kind of PDF. Free, no upload."
 date: "2026-07-25"
+updated: "2026-07-27"
 keywords:
  - "reduce pdf size without losing quality"
  - "compress pdf without quality loss"
@@ -10,117 +11,89 @@ keywords:
  - "compress pdf free no upload"
 toolSlugs:
  - "compress-pdf"
+ - "split-pdf"
+faq:
+ - q: "Can you reduce PDF size with no quality loss at all?"
+   a: "Only with a lossless optimizer, which strips redundant internal data without touching the page content. That typically saves 5 to 20% on a text PDF. Any tool promising a 70% reduction with no quality loss is re-encoding your images, which is lossy by definition."
+ - q: "Does your Compress PDF tool do lossless compression?"
+   a: "No. It rasterizes each page to a JPEG, which is always lossy. It is very effective on scans and photos and the wrong tool for a typed document, where it will make the file substantially larger."
+ - q: "Does compressing a PDF make text blurry?"
+   a: "With our tool, yes, because the text becomes an image. With a lossless optimizer, no. This is the main reason to know which kind of tool you are using before you start."
+ - q: "Why did my compressed PDF get larger?"
+   a: "Because it was a text document. Our tool converts each page to an image, and text stored as an image is much bigger than text stored as font data. We measured a 23.5 KB text report coming out at 1.4 MB."
+ - q: "Does reducing PDF size affect printing quality?"
+   a: "For a scan compressed at Low or Medium, the re-encoded images still print at a resolution most home and office printers cannot exceed, so printed output looks the same. At High, fine print can soften noticeably."
+ - q: "Is there a free PDF compressor that doesn't upload my file?"
+   a: "Yes. Our Compress PDF tool processes your file entirely inside your browser tab. Nothing is sent to a server, there is no account, and you can verify it in your browser's network tab."
 ---
 
-You can reduce PDF size without losing quality by using a browser-based compressor, drop the file in, click compress, download the result. For most PDFs, especially image-heavy ones, the file shrinks by 50-80% with no visible difference on screen or in print. Here is what to expect and how to get the best result.
+You can only reduce a PDF's size with no quality loss at all by using a lossless optimizer, and the saving is modest, usually 5 to 20% on a typed document. Everything that produces the dramatic reductions people expect, the 15 MB scan that becomes 2 MB, works by re-encoding images at lower quality. That is lossy. This post covers which one you actually need.
 
-## Does compressing a PDF reduce quality?
+We should be upfront about our own tool, because it decides most of what follows: our [Compress PDF tool](/compress-pdf) is lossy only. It converts every page into a JPEG image. That is excellent for scans and photographs, and the wrong choice for a text document.
 
-It depends on what is inside the PDF and which compression mode you use.
+## Lossless and lossy, and why the difference matters here
 
-**Text-based PDFs**, digitally typed documents, forms, CVs, spreadsheets exported to PDF, store text as vector data, not as images. Vector data is not affected by compression at all. Compressing a text PDF removes redundant internal data structures (unused font data, duplicate object references, metadata overhead) rather than touching the visible content. Quality is preserved completely.
+[Lossless compression](https://en.wikipedia.org/wiki/Lossless_compression) removes redundancy without changing what is displayed: duplicate objects, unused resources, metadata bloat, uncompressed streams. Open the result and it is pixel-identical to the original. On a text PDF this is the only kind of compression that is actually safe, and it typically recovers a modest amount.
 
-**Image-heavy PDFs**, scanned pages, brochures, photos, presentations, store content as raster images. Compression re-encodes those images at a slightly lower resolution or quality factor. At moderate settings (the default on most tools), the difference is imperceptible on a standard screen at 100% zoom and invisible in print at normal reading distance. At aggressive settings, you may notice slight softness in fine details.
+[Lossy compression](https://en.wikipedia.org/wiki/Lossy_compression) re-encodes embedded images at lower quality or resolution. The output is close to the original but not identical. This is where the big reductions come from, and it is what turns a 15 MB scanned contract into something emailable.
 
-The short answer: for the vast majority of everyday documents, compressing reduces size significantly and quality noticeably not at all.
+The trap is that both get called "compress a PDF", so people apply the second when they needed the first.
 
-## What is lossless vs lossy PDF compression?
+## What our tool does to each kind of PDF
 
-**Lossless compression** removes redundant data that does not affect the visible content, duplicate objects, unused resources, metadata bloat. The output is bit-for-bit identical in appearance. Most text PDFs benefit mainly from lossless compression.
+We measured this rather than estimating it. Three documents, run through the real tool in a browser:
 
-**Lossy compression** re-encodes the embedded images at a lower quality setting or resolution. The visual output is very close to the original but not identical. The trade-off is a much larger file-size reduction. Lossy is what shrinks a 15 MB scanned contract down to 2 MB.
+| Document | Level | Before | After | Change |
+|---|---|---|---|---|
+| 6-page image deck | High | 913.4 KB | 175.6 KB | 81% smaller |
+| 6-page image deck | Medium | 913.4 KB | 315.3 KB | 66% smaller |
+| 6-page image deck | Low | 913.4 KB | 703.5 KB | 23% smaller |
+| 20-page text report | Medium | 23.5 KB | 1400.8 KB | 60x bigger |
+| 3-page text plus a logo | Medium | 35.0 KB | 171.2 KB | 5x bigger |
 
-Most good PDF compressors apply both together: lossless passes first (fast, free quality), then controlled lossy image re-encoding at a quality level that preserves readability. The [Compress PDF tool](/compress-pdf) takes this approach, it targets a balance between maximum size reduction and maintained visual quality.
+Scans and photos: large reductions, some quality cost, exactly as intended. Text documents: the file balloons and the text stops being selectable, because it is now a picture of text. There is no setting that avoids this, since rasterizing is how the tool works.
 
-## How much can you compress a PDF without it looking bad?
+## So which method should you use?
 
-A rough guide based on PDF type:
+**Your PDF is a scan, a photo album, or a slide deck full of images.** Use the [Compress PDF tool](/compress-pdf). Start at Low, check the result, and step up to Medium or High only if you need more. Because it runs in your browser, the file is never uploaded, which matters for contracts and medical records.
 
-| PDF type | Typical size reduction | Quality impact |
-|---|---|---|
-| Typed document (no images) | 10-40% | None |
-| Presentation with embedded images | 40-70% | Minimal at standard settings |
-| Scanned pages (photos of text) | 50-80% | Slight at high compression |
-| Mixed (charts, photos, text) | 40-65% | Minimal at standard settings |
-| Already-optimised PDF | 0-5% | None (already compact) |
+**Your PDF is a typed document and you want it smaller with no quality loss.** Do not use our tool. Options, roughly in order of convenience:
 
-The big wins come from scanned documents and image-heavy files, exactly the files that tend to be too large to email or upload.
+- **Re-export from the source.** Going back to the Word or Google Docs original and exporting again, with font subsetting on, usually beats any after-the-fact optimizer.
+- **Use a lossless PDF optimizer.** Acrobat's "Reduce File Size", Ghostscript, or qpdf will strip redundancy without rasterizing.
+- **Find the one oversized image.** A text PDF that is unexpectedly large almost always has a full-resolution logo or a scanned signature buried in it. Replacing that single asset can cut the file by 90%.
 
-## How to reduce PDF size without losing quality (step by step)
+**Your PDF is a long text document that is simply large because it is long.** Send fewer pages. The [Split PDF tool](/split-pdf) pulls out the range the recipient actually asked for, with no quality loss of any kind, because nothing is re-encoded.
 
-1. Open the [Compress PDF tool](/compress-pdf).
-2. Drop your PDF onto the page or click to browse for it.
-3. Click **Compress PDF**, processing takes a few seconds and happens entirely in your browser.
-4. Download the compressed file.
-5. Open it and check a few pages at 100% zoom. If the content looks clear, you are done.
+## Do not compress twice
 
-If you need further reduction, run the compressed output through the tool a second time. Each pass removes a little more, useful when you need to hit a specific file size limit like 1 MB or 5 MB.
+A common tip is to run the output through again to squeeze out more. We tested it and it does not work:
 
-Your file is never uploaded to any server. The compression runs in your browser tab, which means no account, no upload, and no risk of your document being stored or shared.
+- Second pass at the same level: 315.3 KB became **598.9 KB**.
+- Second pass at a stronger level: 315.3 KB became 297.8 KB, a 5.6% saving.
 
-## Why doesn't my PDF compress much?
+Re-rendering an already-rasterized page and re-encoding it adds data. If one pass is not enough, start again from the original at a stronger level.
 
-If your file barely shrinks, one of these is likely the reason:
+## Why some PDFs barely shrink
 
-**The PDF is already optimised.** Modern tools like Adobe Acrobat, Google Docs, and macOS create PDFs that are already efficiently compressed. There is little redundant data to remove.
+**It was already optimized.** PDFs from recent versions of Acrobat, Google Docs, and macOS are already efficiently packed, so a lossless pass finds little to remove.
 
-**It is a text-only document.** Text in PDFs is compact vector data. A 50-page typed report might be 500 KB to begin with; compressing it saves only a few kilobytes.
+**It is text.** There is almost nothing for an image compressor to work on, which is why our tool resorts to turning the page into an image and makes things worse.
 
-**It was already compressed once.** A PDF that went through compression before will respond less to a second pass. Diminishing returns apply.
+**The images are already heavily compressed.** A scan that was saved at low quality once will not give up much a second time.
 
-In all these cases, the file is probably as small as it is going to get without reducing the content itself (fewer pages, lower-resolution source images, fewer embedded fonts).
+In all three cases the file is close to as small as it will get without removing content: fewer pages, lower-resolution source images, or fewer embedded fonts.
 
-## Text-heavy vs image-heavy PDFs: why results differ
+## Reducing PDF size on a Mac
 
-Text in a PDF is stored as a series of character codes and font instructions, extremely efficient, already tiny. A 10-page letter in 12-point Times New Roman might be 80 KB.
+**In the browser:** the [Compress PDF tool](/compress-pdf) works in Safari, Chrome, and Firefox with nothing to install. Same caveat as everywhere else on this page: scans yes, text documents no.
 
-Images in a PDF are raster data, each pixel stored individually. A single scanned page at 300 DPI is several megabytes before any compression. When a scanned document runs to 20 pages, the PDF can easily reach 40-50 MB.
+**With Preview, which is built in:** open the PDF, choose **File → Export**, pick **Reduce File Size** in the Quartz Filter menu, and save. See [Apple's Preview guide](https://support.apple.com/guide/preview/welcome/mac) for the current menu layout. This filter is aggressive and applies to the whole document, so check the output before deleting the original.
 
-Compression targets the images. It has almost nothing to work on in a text-only PDF, and a great deal to work on in a scanned document. That is why the same tool produces a 5% reduction on one file and an 80% reduction on another.
+**For many files at once:** Automator can apply the same Quartz filter across a folder. Create a workflow, add **PDFs → Apply Quartz Filter to PDF Documents**, and point it at the directory.
 
-If your PDF contains both text and images (a report with embedded charts, a form with a scanned signature), expect somewhere in the middle.
+## How to check whether quality actually suffered
 
-## How to reduce PDF size on Mac without losing quality
+Open the compressed file next to the original at 100% zoom and look at the smallest text on the busiest page. That is where JPEG artefacts show first. On a scan compressed at Low or Medium you will usually see nothing. At High, fine print softens.
 
-**Using the free in-browser tool:** The [Compress PDF tool](/compress-pdf) works on Mac in Safari, Chrome, and Firefox exactly as on any other platform, no software to install.
-
-**Using Preview (built-in, free):**
-1. Open the PDF in Preview.
-2. Choose **File → Export**.
-3. In the **Quartz Filter** pop-up, select **Reduce File Size**.
-4. Click **Save**.
-
-Preview's Reduce File Size filter applies an aggressive compression pass that sometimes overshoots, text PDFs can come out looking washed out. It works better on image-heavy files. If the Preview result looks too degraded, use the browser-based tool instead, which applies a gentler default setting.
-
-**Using Automator (batch compression on Mac):**
-If you need to compress many files, open Automator, create a new workflow, add the **PDFs → Apply Quartz Filter to PDF Documents** action, select the Reduce File Size filter, and run it on a folder. Faster than processing one by one.
-
-## Frequently asked questions
-
-### Does compressing a PDF make text blurry?
-
-No. Text in a PDF is vector data, it is not affected by image compression. Blurriness only occurs with scanned documents where the page content is stored as a raster image rather than as text characters.
-
-### Is there a free PDF compressor that doesn't upload my file?
-
-Yes. The [Compress PDF tool](/compress-pdf) processes your file entirely inside your browser tab. Nothing is sent to a server. It is free with no account required.
-
-### How do I know if quality was affected?
-
-Open the compressed file and zoom in to 100% on a page with fine detail (small text, a chart, a photo). Compare it to the original at the same zoom level. For most files at standard compression settings, there is no visible difference.
-
-### Can I reduce a scanned PDF size without losing readability?
-
-Yes, up to a point. Standard compression typically reduces a scanned PDF's size by 50-70% while keeping text readable. Very aggressive compression can make fine print hard to read. If readability matters (a legal document, a medical record), use the compressed file once and check before discarding the original.
-
-### Why did my compressed PDF get larger?
-
-This happens when the original was already optimally compressed, typically PDFs created by recent versions of Adobe Acrobat, Google Docs, or macOS. Running it through compression software re-encodes it with a slightly different internal structure, occasionally adding a few bytes. The original file was already as small as possible; use it as-is.
-
-### What is the best PDF compressor for large scanned documents?
-
-Any tool that uses JPEG re-encoding at a controlled quality level works well. The [Compress PDF tool](/compress-pdf) targets a balance between readable quality and maximum size reduction, well suited to scanned contracts, reports, and multi-page forms.
-
-### Does reducing PDF size affect printing quality?
-
-Compression affects the embedded image data. At standard compression levels, the re-encoded images print at a resolution higher than most home and office printers can reproduce, so printed output looks identical to the original. Only very aggressive compression, targeting very small file sizes, would produce a noticeable quality difference in print.
+One more check that takes a second: try to select the text. If you could select it in the original and cannot in the compressed copy, the page has been turned into an image. Sometimes that is fine. If the recipient needs to search, copy from, or run the document through anything automated, it is not.

@@ -2,6 +2,7 @@
 title: "PDF Tools That Don't Upload Your Files"
 description: "Process PDFs in your browser with no upload, no account, and no privacy risk. These tools keep your files on your device."
 date: "2026-07-26"
+updated: "2026-07-27"
 keywords:
  - "pdf tools that don't upload your files"
  - "pdf tools no upload"
@@ -15,6 +16,19 @@ toolSlugs:
  - "rotate-pdf"
  - "unlock-pdf"
  - "protect-pdf"
+faq:
+ - q: "Do I need to install anything to use these tools?"
+   a: "No. They run in any modern browser tab, Chrome, Firefox, Safari or Edge, on Mac, Windows, Linux, Chromebook, Android or iPhone. No extension, plug-in, or download."
+ - q: "Does no upload mean it works offline?"
+   a: "Once the page has fully loaded, yes. The processing logic is already in your browser. Disconnect your internet and the tool still works, which is also the clearest proof that processing is genuinely local."
+ - q: "What happens to my file after I download the result?"
+   a: "Nothing happens server-side, because the file was never there. Locally, the result sits in your Downloads folder like any other file, and you can delete it when you are done."
+ - q: "Are browser-based tools slower than server-side tools?"
+   a: "For typical files, no, and often the opposite, since there is no upload or queue. Compressing a 6-page image deck took under a second in our testing, and merging three documents took about 20 milliseconds. Very large or complex PDFs take longer."
+ - q: "Can I use these tools on a shared or work computer?"
+   a: "Yes. The file is processed locally and downloaded to that device, and nothing is sent externally. On a shared machine, delete the result from Downloads when you are finished."
+ - q: "Why should I trust a browser-based tool's privacy claim over a server-based one?"
+   a: "You do not have to trust it, you can check it. Load the page, disconnect from the network, and run the tool: it still works. A server-based tool's promise requires trusting their implementation, their security, and their future decisions. With a local tool there is no transmitted copy to protect in the first place."
 ---
 
 PDF tools that don't upload your files process everything in your browser using your device's own computing power, your document never leaves your machine. If you're working with a tax return, a signed contract, a medical record, or any file you'd rather keep off someone else's server, these are the tools to use.
@@ -29,9 +43,11 @@ For everyday documents, that's a manageable risk. For anything sensitive, it's a
 
 ## How browser-based PDF tools work
 
-Modern browsers can run near-native code through WebAssembly (WASM). That means a PDF tool can load all of its processing logic into your browser tab once, and from that point on, operate entirely on your local machine, the same way a desktop app would, but without any download or installation.
+Modern browsers can run near-native code through [WebAssembly](https://webassembly.org/). That means a PDF tool can load all of its processing logic into your browser tab once, and from that point on, operate entirely on your local machine, the same way a desktop app would, but without any download or installation.
 
-When you open a browser-based PDF tool and drop in a file, JavaScript running in your browser reads the file. No network request carries it to a server. The output is generated locally and downloaded directly to your device.
+When you open a browser-based PDF tool and drop in a file, JavaScript running in your browser reads the file. No network request carries it to a server. The output is generated locally and downloaded directly to your device. On this site the work is done by [pdf-lib](https://pdf-lib.js.org/) for page operations and [qpdf](https://qpdf.sourceforge.io/) compiled to WebAssembly for encryption, both open source and both running in your tab.
+
+Speed is not the trade-off people expect. In our own testing, merging three documents took about 20 milliseconds and compressing a 6-page image deck took under a second, with no upload wait at either end.
 
 You can verify this yourself: open the tool, disconnect your Wi-Fi, then run the operation. A genuinely local tool still works offline because nothing was ever transmitted. If it fails with a network error, the tool is uploading regardless of what the privacy page says.
 
@@ -43,7 +59,7 @@ Browser-based processing covers every common PDF task:
 Combine two or more PDFs into one file, drag them into order, and download. The [Merge PDF tool](/merge-pdf) handles any number of files without sending them anywhere.
 
 **Compress a PDF**
-Reduce file size for emailing or portal uploads. The [Compress PDF tool](/compress-pdf) processes image-heavy PDFs in your browser, no watermark, no size cap, no account required.
+Reduce file size for emailing or portal uploads. The [Compress PDF tool](/compress-pdf) processes image-heavy PDFs in your browser, no watermark, no size cap, no account required. It is for scans and photos specifically: it rasterizes pages, so on a typed document it will increase the file size rather than reduce it.
 
 **Split a PDF into parts**
 Extract specific pages or page ranges with the [Split PDF tool](/split-pdf). Useful when you need to send one chapter of a report, or pull out a single form from a multi-page packet.
@@ -90,29 +106,3 @@ For the tasks most people actually need day-to-day, merge, split, compress, rota
 ## Is it really free?
 
 Yes. Tools that process files in your browser don't incur per-task server compute costs. The infrastructure is a static web app; there's no cloud bill that scales with each file you process. That removes the financial pressure that drives free-tier usage caps, watermarks, and account requirements on server-based services.
-
-## Frequently asked questions
-
-### Do I need to install anything to use these tools?
-
-No. Browser-based PDF tools run in any modern browser tab, Chrome, Firefox, Safari, or Edge on Mac, Windows, Linux, Chromebook, Android, or iPhone. No extension, plug-in, or download required.
-
-### Does "no upload" mean it works offline?
-
-Once the page has fully loaded, yes. The processing logic is already in your browser. Disconnect your internet and the tool still works, which is also the clearest proof that processing is genuinely local.
-
-### What happens to my file after I download the result?
-
-Nothing server-side, because the file was never there. Locally, the processed PDF is in your Downloads folder. Delete it when you're done, same as any local file.
-
-### Are browser-based tools slower than server-side tools?
-
-For most typical files, no. Merge, split, compress, and rotate operations complete in one to three seconds in a modern browser. Very large or complex PDFs take longer, but the difference is rarely noticeable in practice.
-
-### Can I use these tools on a shared or work computer?
-
-The file is processed locally and downloaded to the device, nothing is sent externally. On a shared computer, delete the processed file from your Downloads folder when you're done, so the next user can't access it.
-
-### Why should I trust a browser-based tool's privacy claim over a server-based one?
-
-You don't have to trust the claim, you can verify it with the offline test described above. A server-based tool's privacy promise requires trusting their implementation, their security posture, and their future decisions. A browser-based tool's "no upload" guarantee is an architectural fact: if your file never left your browser, no server-side breach can expose it.

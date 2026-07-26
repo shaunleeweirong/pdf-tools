@@ -8,6 +8,7 @@ import { blogPostingJsonLd, breadcrumbJsonLd, faqPageJsonLd, SITE_URL } from '@/
 import { DEFAULT_AUTHOR } from '@/lib/authors'
 import { getTool, type Tool } from '@/lib/tools'
 import { mdxComponents } from '@/components/mdx'
+import { AuthorCard } from '@/components/AuthorCard'
 
 export const dynamicParams = false
 
@@ -90,6 +91,7 @@ export default async function BlogPostPage({
             >
               {DEFAULT_AUTHOR.name}
             </Link>
+            , {DEFAULT_AUTHOR.jobTitle}
           </span>
           <span aria-hidden>·</span>
           <span>Published {formatPostDate(meta.date)}</span>
@@ -117,6 +119,16 @@ export default async function BlogPostPage({
             </dl>
           </div>
         )}
+        <AuthorCard author={DEFAULT_AUTHOR} />
+
+        <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+          Researched and drafted with AI assistance, then reviewed and approved by a human before
+          publishing. Claims about our own tools are measured on real files rather than assumed.{' '}
+          <Link href="/editorial-policy" className="underline underline-offset-4 hover:text-foreground">
+            How we work
+          </Link>
+          .
+        </p>
       </article>
 
       {relatedTools.length > 0 && (

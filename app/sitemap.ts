@@ -25,5 +25,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: 0.5,
   }))
-  return [...buildSitemap(), ...blog, ...useCases, ...authors]
+  // Trust pages. Rarely change, but they need to be discoverable: they are what
+  // a reader (or a quality rater) looks for to work out who is behind the site.
+  const trust: MetadataRoute.Sitemap = [
+    '/about',
+    '/editorial-policy',
+    '/privacy',
+    '/contact',
+  ].map((path) => ({
+    url: `${SITE_URL}${path}`,
+    changeFrequency: 'yearly' as const,
+    priority: 0.4,
+  }))
+  return [...buildSitemap(), ...blog, ...useCases, ...authors, ...trust]
 }

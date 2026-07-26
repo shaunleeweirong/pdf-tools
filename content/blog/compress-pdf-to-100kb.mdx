@@ -2,6 +2,7 @@
 title: "How to Compress a PDF to 100KB"
 description: "Need a PDF under 100KB for a job application, government portal, or exam form? Shrink it in seconds, free, in your browser, no upload required."
 date: "2026-07-25"
+updated: "2026-07-27"
 keywords:
  - "compress pdf to 100kb"
  - "reduce pdf size to 100kb"
@@ -10,86 +11,88 @@ keywords:
 toolSlugs:
  - "compress-pdf"
  - "split-pdf"
+faq:
+ - q: "How do I check the size of a PDF?"
+   a: "On Windows, right-click the file, choose Properties, and look at Size. On Mac, right-click and choose Get Info. On a phone, find the file in your Files app and tap for details. Most email clients show the size next to the filename."
+ - q: "Does compressing to 100KB make the text blurry?"
+   a: "On a scan, yes, a little, and more so at higher compression levels. On a typed text document our in-browser compressor turns the page into an image, which both blurs the text and makes the file bigger, so do not use it for those."
+ - q: "Should I compress the file twice to get it smaller?"
+   a: "No. We measured it: running a compressed file through again at the same level made it 90% larger, and at a higher level saved only 5.6%. Go back to the original and compress once at a stronger level instead."
+ - q: "Is it safe to compress a sensitive PDF online?"
+   a: "With our Compress PDF tool, yes. Processing happens entirely in your browser tab and your file is never uploaded, so no server-side copy exists to be stored or breached."
+ - q: "Can I compress a PDF on my phone?"
+   a: "Yes. The in-browser tool works in any modern smartphone browser, including Chrome on Android and Safari on iPhone, with no app to install."
+ - q: "Why did my PDF get larger after I compressed it?"
+   a: "Almost always because it was a text document rather than a scan. Compression rasterizes every page to an image, and text stored as an image is far bigger than text stored as font data. In our testing a 23.5 KB text report came out at 1.4 MB."
 ---
 
-To compress a PDF to 100KB, open a free in-browser compression tool, drop your file in, and download the smaller version. For a text-based PDF, a typed CV, a filled form, a plain letter, one step almost always gets you there. For image-heavy PDFs (scanned pages, photographed IDs, brochures), you may need to combine compression with page extraction to hit the target.
+To compress a PDF to 100KB, open a free in-browser compression tool, drop your file in, and download the smaller version. This works well when the PDF is a scan or a set of photos. If it is a typed document, compression is the wrong tool and will make the file larger, so start with the check below.
 
 ## Why do portals set a 100KB limit?
 
 Government application portals, university admission systems, visa submission forms, and job application websites often enforce a strict 100KB ceiling. The reasons are practical:
 
-- **Older server infrastructure**, many portals were designed when broadband was slower and storage expensive; the limits were never updated.
-- **Batch processing speed**, a system handling thousands of daily submissions processes 80KB files far faster than 5MB ones.
-- **Instant in-browser display**, documents under 100KB load in a web viewer with no visible wait time.
+- **Older server infrastructure.** Many portals were designed when broadband was slower and storage was expensive, and the limits were never revisited.
+- **Batch processing speed.** A system handling thousands of daily submissions gets through 80KB files far faster than 5MB ones.
+- **Instant in-browser display.** Documents under 100KB load in a web viewer with no visible wait.
 
-Common examples where this bites people: UPSC and SSC job applications, Aadhaar-linked government portals in India, bank KYC submissions, university document upload systems, and visa application portals worldwide. If you've ever seen "File size must not exceed 100 KB," you know the frustration, especially when a straightforward scan of one page comes in at 1.5MB.
+Common examples where this bites: UPSC and SSC job applications, Aadhaar-linked government portals in India, bank KYC submissions, university document upload systems, and visa portals worldwide. If you have ever seen "File size must not exceed 100 KB", you know the frustration, especially when a straightforward one-page scan comes in at 1.5MB.
 
-## How to compress a PDF to 100KB in your browser
+## First check: is your PDF a scan or a text document?
+
+Try to select a line of text with your cursor.
+
+**If the text highlights**, it is a typed document and it is almost certainly already small. A CV exported from Word is usually well under 100KB to begin with. Check the size before doing anything: you may already be done. Do not run it through a compressor, because in-browser compression [rasterizes](https://en.wikipedia.org/wiki/Rasterisation) each page into an image, and a page of text stored as an image is much larger than the same page stored as font data. We measured a 20-page text report at 23.5 KB going in and 1.4 MB coming out.
+
+**If nothing highlights**, it is a scan or a photo, and compression is exactly right.
+
+## How to compress a scan to 100KB in your browser
 
 1. Open the [Compress PDF tool](/compress-pdf).
 2. Drop your PDF into the box, or click to browse for it.
-3. Click **Compress PDF** and wait a moment while it processes.
-4. Download the smaller file and check its size.
+3. Choose a level. For a 100KB target, start at **High**.
+4. Click **Compress PDF** and wait a moment while it processes.
+5. Download the smaller file and check its size.
 
-The tool runs entirely in your browser. Your file is never sent to any server, important when you're submitting a government ID, a payslip, or other personal documents to a portal.
+The tool runs entirely in your browser. Your file is never sent to any server, which matters when you are submitting a government ID, a payslip, or a bank statement.
 
-If the first pass brings you close but not under 100KB, try running compression again on the already-compressed file. Each pass reduces file size a bit more; stop when the content is still clearly readable.
+For reference, here is what our own testing produced on a 6-page PDF of full-page images:
 
-## Can every PDF actually reach 100KB?
+| Level | Before | After |
+|---|---|---|
+| High (smallest) | 913.4 KB | 175.6 KB |
+| Medium | 913.4 KB | 315.3 KB |
+| Low (best quality) | 913.4 KB | 703.5 KB |
 
-It depends on what is inside the file.
+A single-page scan starts far smaller than that six-page deck, which is why one page at High usually lands comfortably under 100KB.
 
-**Text-based PDFs** (digitally typed documents, filled forms, CVs made in Word or Google Docs) compress very easily. They are often already under 200KB and reach 100KB in one step with no visible quality change.
+## Do not compress the same file twice
 
-**Scanned documents** (pages photographed with a phone or run through a scanner) are essentially image files wrapped in a PDF container. Compression reduces image quality, at some point the text becomes hard to read. Whether you can hit 100KB while keeping the document legible depends on the original scan resolution and how many pages there are.
+This advice circulates widely and it does not hold up. We ran an already-compressed file back through the tool and measured the result:
 
-**Multi-page image PDFs** are the hardest case. A 10-page scanned report at 300 DPI might start at 5MB; compressing it to 100KB would make the text unreadable. For those files, the better approach is to extract only the specific pages the portal actually needs (usually one or two), compress that smaller file, and submit only the relevant pages.
+- Second pass at the same level: **315.3 KB became 598.9 KB**, nearly double.
+- Second pass at a stronger level: 315.3 KB became 297.8 KB, a saving of 5.6%.
+
+Re-rendering a page that is already an image, then re-encoding it, adds data rather than removing it. If one pass is not enough, go back to the **original** file and compress once at a stronger level.
 
 ## Tips when compression alone isn't enough
 
-Try these in order if one round of compression doesn't reach 100KB:
+**Extract only the pages you need.** Most portals want one specific document: a single certificate, one page of a passport, a one-page form. Use the [Split PDF tool](/split-pdf) to pull out just those pages, then compress the result. Fewer pages means a much smaller file before compression even starts, and it is the single most effective step for a multi-page scan.
 
-**Extract only the pages you need.** Most portals want a specific document, a single certificate, one page of your passport, or a one-page form. Use the [Split PDF tool](/split-pdf) to pull out just those pages, then compress the smaller result. Fewer pages means a much smaller file before compression even starts.
+**Start from a lower-resolution scan.** If you are scanning specifically to submit, scan at 150 [DPI](https://en.wikipedia.org/wiki/Dots_per_inch) rather than 300. The PDF will be dramatically smaller before you open any tool.
 
-**Compress the already-compressed file.** Run the compressed output through compression again. The second pass squeezes out more size at a cost of a little more quality, usually acceptable for document submission.
+**Shoot in good light rather than just at lower resolution.** A blurry or unevenly lit photo produces a larger file at any resolution, because there is more variation for the encoder to preserve. A crisp, evenly lit photo at 150 DPI produces a small, readable result.
 
-**Start from a lower-resolution scan.** If you are scanning a document specifically to submit it, scan at 150 DPI rather than 300 DPI. The resulting PDF will be dramatically smaller before you even open a compression tool.
-
-**Shoot in good light, not just at lower resolution.** A blurry or poorly lit scan at any resolution produces a larger file (the compression algorithm has to preserve more variation), while a crisp, evenly lit photo at 150 DPI produces a small, readable result.
-
-**Check whether the portal limit is actually enforced.** Some portals display an old limit that is no longer strictly checked. Try uploading a file slightly above 100KB (say, 120-150KB) and see if the submission goes through before spending time chasing the last few kilobytes.
+**Check whether the limit is actually enforced.** Some portals display an old limit that is no longer strictly checked. Try 120KB before spending an hour chasing the last few kilobytes.
 
 ## What about scanned IDs and passport copies?
 
-Passport copies, national ID cards, and Aadhaar cards are common targets for strict size limits, and among the hardest to compress because the text must remain legible. The most reliable approach is to start small:
+Passport copies, national ID cards, and Aadhaar cards attract the strictest limits and are among the hardest to compress, because the text has to stay legible. Start small rather than compressing hard:
 
-1. Photograph or scan the document at 150 DPI with good, even lighting.
-2. Run one pass of compression on the resulting PDF.
+1. Photograph or scan at 150 DPI in good, even light.
+2. Crop to the document itself, with no desk around the edges.
+3. Run one pass of compression at High.
 
-Starting from a smaller source file is far more effective than aggressively compressing a high-resolution original. If you already have a high-resolution scan, extract just the relevant face of the ID (one page) before compressing, that alone often brings the file under 200KB, after which compression easily reaches 100KB.
+Starting from a smaller source beats aggressively compressing a high-resolution original every time. If you already have a high-resolution scan, extract just the relevant page first. That alone often brings the file under 200KB, after which one pass reaches the target.
 
-## Frequently asked questions
-
-### How do I check the size of a PDF?
-
-On Windows: right-click the file → Properties → look at "Size." On Mac: right-click the file → Get Info. On a phone: find the file in your Files app and tap for file details. In most email clients, the attachment size is shown next to the filename.
-
-### Does compressing to 100KB make the text blurry?
-
-For text-based PDFs (digital documents), no, text in a PDF is stored as vector data, not as an image, so compression doesn't affect its sharpness at all. For scanned PDFs, compression reduces the quality of the underlying images, which can make text slightly less crisp at very high compression levels. Use the minimum compression that gets you under the limit.
-
-### Is it safe to compress a sensitive PDF online?
-
-With the [Compress PDF tool](/compress-pdf), yes. Processing happens entirely in your browser tab; your file is never uploaded to a server. That means no server-side copy is created, stored, or at risk of a data breach.
-
-### Can I compress a PDF on my phone?
-
-Yes. The in-browser tool works on any modern smartphone browser, Chrome on Android, Safari on iPhone, Firefox on either, with no app download needed. Open the page, tap to select your file, and download the compressed result.
-
-### Why did my PDF get larger after I compressed it?
-
-Some PDFs are already efficiently compressed (common in files created by modern apps like Adobe Acrobat or Google Docs). Running them through another compression tool can sometimes re-encode them slightly less efficiently, causing a marginal size increase. If that happens, the original file is already as small as it is going to get, use it as-is.
-
-### Can I compress multiple PDFs at once?
-
-The in-browser tool processes one file at a time. If you need to compress a batch of PDFs, run them through one at a time, because processing is fast (usually under five seconds per file) this is usually quicker than finding a batch tool.
+If legibility starts to suffer, remember what the document is for. A clerk needs to read the number and the name. Perfect edges on the state seal are not the job.
