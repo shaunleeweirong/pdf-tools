@@ -128,8 +128,9 @@
       "targetQuery": "how to merge pdf on mac free",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "how-to-merge-pdf-on-mac-free"
+      "status": "published",
+      "slug": "how-to-merge-pdf-on-mac-free",
+      "url": "/blog/how-to-merge-pdf-on-mac-free"
     },
     {
       "id": "blog-merge-chromebook",
