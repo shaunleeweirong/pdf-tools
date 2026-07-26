@@ -181,8 +181,9 @@
       "targetQuery": "combine documents for a job application pdf",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "combine-documents-for-a-job-application-pdf"
+      "status": "published",
+      "slug": "combine-documents-for-a-job-application-pdf",
+      "url": "/blog/combine-documents-for-a-job-application-pdf"
     },
     {
       "id": "blog-split-large-pdf",
