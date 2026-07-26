@@ -10,8 +10,9 @@ The job a scheduled Claude Code routine runs each firing. It keeps the `/studio`
 ## Per-run steps
 
 1. **Process feedback first.** For each topic in `content/keyword-map.json` with `status: "changes-requested"`: read its `feedback` + the existing `content/pending/<slug>.mdx`, redraft it with the `content-draft` skill addressing the feedback, overwrite the pending file, and set the topic back to `status: "pending"` (clear `feedback`). This closes the review loop.
-2. **Draft new topics.** Pick the top 1–2 `status: "idea"` topics by `priority` that are NOT already covered by a published slug. For each: run `content-research` → brief, then `content-draft` → a finished `content/pending/<slug>.mdx` with the topic set to `pending` + `slug`. (Research-first — no draft without a brief.)
-3. **Commit + push** all the run's changes to `main` in one commit (`content: pipeline run`). The push lands the drafts in the repo; `/studio` reads them live for approval. It does not publish them.
+2. **Keep the backlog full (refill when low).** Count topics with `status: "idea"`. If fewer than ~6 remain, mine new ones (WebSearch: People-Also-Ask, autocomplete, `site:reddit.com`/`quora.com`/`linkedin.com`, competitor blogs; plus the tool × use-case matrix from `lib/tools.ts`) and add 6 to 10 new, distinct `idea` topics to `content/keyword-map.json` (unique `targetQuery`, not already published or queued). Do this BEFORE drafting so the queue never runs dry.
+3. **Draft new topics.** Pick the top 1 to 2 `status: "idea"` topics by `priority` not covered by a published slug. For each: run `content-research` to a brief, then `content-draft` to a finished `content/pending/<slug>.mdx` (≥800 words; follow content-draft's style rules: no em-dashes, no AI-tell words, 1 to 3 credible outbound links) with the topic set to `pending` + `slug`. Research-first: no draft without a brief.
+4. **Commit + push** all the run's changes to `main` in one commit (`content: pipeline run`). The push lands the drafts in the repo; `/studio` reads them live for approval. It does not publish them.
 
 ## Cadence & scaling
 

@@ -99,7 +99,9 @@
       "targetQuery": "smallpdf alternatives no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "idea"
+      "status": "published",
+      "slug": "smallpdf-alternatives-no-sign-up",
+      "url": "/blog/smallpdf-alternatives-no-sign-up"
     },
     {
       "id": "blog-compress-to-100kb",
@@ -107,7 +109,9 @@
       "targetQuery": "compress pdf to 100kb",
       "intent": "informational",
       "priority": 1,
-      "status": "idea"
+      "status": "published",
+      "slug": "compress-pdf-to-100kb",
+      "url": "/blog/compress-pdf-to-100kb"
     },
     {
       "id": "blog-remove-password",
@@ -124,7 +128,9 @@
       "targetQuery": "how to merge pdf on mac free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "how-to-merge-pdf-on-mac-free",
+      "url": "/blog/how-to-merge-pdf-on-mac-free"
     },
     {
       "id": "blog-merge-chromebook",
@@ -132,7 +138,9 @@
       "targetQuery": "how to merge pdf on chromebook",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "how-to-merge-pdf-on-chromebook",
+      "url": "/blog/how-to-merge-pdf-on-chromebook"
     },
     {
       "id": "blog-pdf-wont-attach",
@@ -140,7 +148,9 @@
       "targetQuery": "why won't my pdf attach to email",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "why-wont-my-pdf-attach-to-email",
+      "url": "/blog/why-wont-my-pdf-attach-to-email"
     },
     {
       "id": "blog-reduce-without-quality-loss",
@@ -148,7 +158,9 @@
       "targetQuery": "reduce pdf size without losing quality",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "reduce-pdf-size-without-losing-quality",
+      "url": "/blog/reduce-pdf-size-without-losing-quality"
     },
     {
       "id": "blog-rotate-and-save",
@@ -165,7 +177,9 @@
       "targetQuery": "pdf tools that don't upload your files",
       "intent": "commercial",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "pdf-tools-that-dont-upload-your-files",
+      "url": "/blog/pdf-tools-that-dont-upload-your-files"
     },
     {
       "id": "blog-job-application-pdf",
@@ -173,7 +187,9 @@
       "targetQuery": "combine documents for a job application pdf",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "combine-documents-for-a-job-application-pdf",
+      "url": "/blog/combine-documents-for-a-job-application-pdf"
     },
     {
       "id": "blog-split-large-pdf",
