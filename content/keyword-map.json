@@ -148,8 +148,9 @@
       "targetQuery": "why won't my pdf attach to email",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "why-wont-my-pdf-attach-to-email"
+      "status": "published",
+      "slug": "why-wont-my-pdf-attach-to-email",
+      "url": "/blog/why-wont-my-pdf-attach-to-email"
     },
     {
       "id": "blog-reduce-without-quality-loss",
