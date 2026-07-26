@@ -157,8 +157,9 @@
       "targetQuery": "reduce pdf size without losing quality",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "reduce-pdf-size-without-losing-quality"
+      "status": "published",
+      "slug": "reduce-pdf-size-without-losing-quality",
+      "url": "/blog/reduce-pdf-size-without-losing-quality"
     },
     {
       "id": "blog-rotate-and-save",
