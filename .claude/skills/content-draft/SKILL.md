@@ -11,7 +11,19 @@ Write the **finished** piece from a brief (`content/briefs/<id>.md`) in the pdf-
 
 - Lead with the reader's **outcome/task** (finish the job), answer-first in the first ~50 words.
 - Proofs: **free, no sign-up, in your browser**. Privacy ("files never leave your browser") is a **trust cue** for client-side tools, never the headline.
-- Plain, concrete, helpful — no marketing fluff. Short paragraphs (2–3 sentences). Answer the brief's questions directly.
+- Plain, concrete, helpful, no marketing fluff. Short paragraphs (2 to 3 sentences). Answer the brief's questions directly.
+
+## Writing style: read like a knowledgeable human, not AI
+
+The reader must not be able to tell a post is AI-generated. Hard rules:
+
+- **Never use em-dashes (—) or en-dashes (–).** Use a comma, a period, parentheses, or "to" for ranges. For number ranges write "20 to 25 MB" or "20-25 MB", never "20–25".
+- **Avoid AI-tell words and phrases.** Do not use: delve, dive into, unleash, unlock, elevate, seamless, robust, leverage, harness, navigate/navigating, landscape, realm, tapestry, testament, moreover, furthermore, additionally, "in conclusion", "it's worth noting", "in today's digital world/age", "whether you're a … or a …", "look no further", game-changer, supercharge, effortless, empower, streamline, cutting-edge, "at the end of the day", "that being said", "when it comes to".
+- Vary sentence length, use contractions, cut filler and hedging. Write like a helpful person explaining something to a friend.
+
+## Link out to credible sources
+
+When you state a fact or explain a concept (a file-size limit, a standard like PDF/A or ISO 32000, how encryption works, an email provider's rules), **link to a high-authority external source** with a normal markdown link: official docs, a standards body, Wikipedia, a .gov/.edu page, or a well-known publication. 1 to 3 outbound links per post, only where they genuinely help. It reads naturally and is good SEO.
 
 ## For a BLOG post
 
@@ -39,14 +51,15 @@ Write the **finished** piece from a brief (`content/briefs/<id>.md`) in the pdf-
 - The `tool` MUST be embeddable — one of the runners in `components/UseCaseTool.tsx` (compress-pdf, merge-pdf, jpg-to-pdf, pdf-to-jpg). To target another tool, add a runner there first (mirror its `app/<slug>/page.tsx` wiring) and update the `EMBEDDABLE` set in `lib/__tests__/use-cases.test.ts`.
 - `SoftwareApplication`/`HowTo`/`FAQPage` schema is emitted automatically.
 
-## Self-score (must pass before opening the PR)
+## Self-score (must pass before queuing for approval)
 
 - [ ] Target keyword in the title, the first heading/intro, and the first ~50 words.
 - [ ] Every question from the brief is answered.
 - [ ] At least one internal link to a relevant tool (and use-case page if one exists).
-- [ ] Unique target query — not cannibalizing a published slug (`content/keyword-map.json`).
-- [ ] Reads naturally to a human; no fluff, no repetition, accurate claims.
-- [ ] `npm run build` succeeds and `npm test` passes.
+- [ ] 1 to 3 outbound links to credible high-authority sources where facts/concepts are explained.
+- [ ] **Zero em-dashes / en-dashes, and none of the banned AI-tell words** (search the file to confirm).
+- [ ] Unique target query, not cannibalizing a published slug (`content/keyword-map.json`).
+- [ ] Reads naturally to a human; no fluff, no repetition, accurate claims. ≥ 800 words.
 
 ## Queue for approval (do NOT publish here)
 

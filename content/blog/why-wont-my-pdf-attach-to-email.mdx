@@ -1,19 +1,19 @@
 ---
 title: "Why Won't My PDF Attach to Email? (Fixed)"
-description: "PDF not attaching to email? Learn the real causes—size limits, encoding overhead, antivirus blocks—and the fastest fixes. Free, in-browser, no sign-up."
+description: "PDF not attaching to email? Learn the real causes, size limits, encoding overhead, antivirus blocks, and the fastest fixes. Free, in-browser, no sign-up."
 date: "2026-07-25"
 keywords:
-  - "why won't my pdf attach to email"
-  - "pdf too large to email"
-  - "email attachment size limit"
-  - "pdf won't send via email"
-  - "fix pdf attachment email"
+ - "why won't my pdf attach to email"
+ - "pdf too large to email"
+ - "email attachment size limit"
+ - "pdf won't send via email"
+ - "fix pdf attachment email"
 toolSlugs:
-  - "compress-pdf"
-  - "split-pdf"
+ - "compress-pdf"
+ - "split-pdf"
 ---
 
-If your PDF won't attach to email, the most common cause is that it's too large for your email provider's limit. The fastest fix is to compress it in your browser — no upload, no account, done in seconds. But size isn't always the culprit. Here's how to diagnose and fix every case.
+If your PDF won't attach to email, the most common cause is that it's too large for your email provider's limit. The fastest fix is to compress it in your browser, no upload, no account, done in seconds. But size isn't always the culprit. Here's how to diagnose and fix every case.
 
 ## What are the email attachment size limits?
 
@@ -24,14 +24,14 @@ Each provider sets a cap on how large a single email (including attachments) can
 | Gmail | 25 MB total email size |
 | Outlook.com / Hotmail | 20 MB |
 | Yahoo Mail | 25 MB |
-| Corporate Outlook / Exchange | 5–20 MB (set by your IT department) |
+| Corporate Outlook / Exchange | 5-20 MB (set by your IT department) |
 | Apple Mail / iCloud | 20 MB (iCloud Drive link offered beyond) |
 
-The limit covers the entire email — message body, all attachments, and any inline images. If you are sending multiple files in one email, their sizes add up against the limit.
+The limit covers the entire email, message body, all attachments, and any inline images. If you are sending multiple files in one email, their sizes add up against the limit.
 
 ## Why does a 19 MB PDF hit Gmail's 25 MB cap?
 
-Email doesn't attach files as raw binary — it encodes them as Base64 text, which adds roughly **33% overhead**. A 19 MB PDF becomes approximately 25.3 MB after encoding, just over Gmail's limit, which is why the attachment fails even though the file itself looks safely under 25 MB.
+Email doesn't attach files as raw binary, it encodes them as Base64 text, which adds roughly **33% overhead**. A 19 MB PDF becomes approximately 25.3 MB after encoding, just over Gmail's limit, which is why the attachment fails even though the file itself looks safely under 25 MB.
 
 A practical rule: aim for a raw file size of no more than **18 MB** to send reliably on Gmail, and **14 MB** on Outlook.com.
 
@@ -44,9 +44,9 @@ For most PDFs, compressing in your browser gets the file under the limit with no
 3. Click **Compress PDF** and wait a few seconds.
 4. Download the smaller file, then check its size before attaching it.
 
-The tool runs entirely in your browser. Your file is never sent to a server — relevant when the PDF contains payslips, contracts, medical records, or any personal document.
+The tool runs entirely in your browser. Your file is never sent to a server, relevant when the PDF contains payslips, contracts, medical records, or any personal document.
 
-For most image-heavy PDFs, a single pass reduces the file by 50–80%. Text-only PDFs (typed letters, CVs, filled forms) are already compact and typically shrink by 20–40%.
+For most image-heavy PDFs, a single pass reduces the file by 50-80%. Text-only PDFs (typed letters, CVs, filled forms) are already compact and typically shrink by 20-40%.
 
 ## What if the PDF is still too large after compressing?
 
@@ -64,7 +64,7 @@ The recipient gets a link to view or download the full-quality file. This works 
 
 If your file is well under the size limit but still won't attach, one of these is likely the cause:
 
-**Corrupted or incomplete file.** If the PDF failed to save properly — a browser download that was interrupted, a conversion that timed out — the file itself may be damaged. Open it first to confirm it displays correctly before trying to attach it again.
+**Corrupted or incomplete file.** If the PDF failed to save properly, a browser download that was interrupted, a conversion that timed out, the file itself may be damaged. Open it first to confirm it displays correctly before trying to attach it again.
 
 **Antivirus or security software blocking the attachment.** Some endpoint security tools flag PDF attachments as a potential threat, particularly files with embedded scripts or forms. Try saving a plain copy of the PDF locally and attaching it from a local folder rather than from a network drive or cloud sync folder.
 
@@ -87,11 +87,11 @@ Compare the raw size to the provider's limit, then subtract 33% to account for B
 
 ### Can I email a 20 MB PDF with Gmail?
 
-A 20 MB raw PDF will encode to roughly 26 MB — just over Gmail's 25 MB limit. Compress it first. A typical image-heavy 20 MB PDF compresses to 5–10 MB, well within Gmail's limit.
+A 20 MB raw PDF will encode to roughly 26 MB, just over Gmail's 25 MB limit. Compress it first. A typical image-heavy 20 MB PDF compresses to 5-10 MB, well within Gmail's limit.
 
 ### Does compressing a PDF for email reduce quality?
 
-For text-based PDFs, no — text is stored as vector data and is not affected by compression. For image-heavy PDFs, the compression re-encodes embedded images at a slightly lower resolution; at moderate settings the difference is not visible on screen or in print.
+For text-based PDFs, no, text is stored as vector data and is not affected by compression. For image-heavy PDFs, the compression re-encodes embedded images at a slightly lower resolution; at moderate settings the difference is not visible on screen or in print.
 
 ### Why is my PDF being blocked by Outlook?
 
@@ -99,12 +99,12 @@ Corporate Outlook/Exchange servers often set stricter attachment limits than Out
 
 ### Is there a free way to compress a PDF for email without uploading it?
 
-Yes. The [Compress PDF tool](/compress-pdf) runs in your browser tab — nothing is uploaded to any server. Drop the file in, compress, and download. Free, no sign-up, works on any device with a modern browser.
+Yes. The [Compress PDF tool](/compress-pdf) runs in your browser tab, nothing is uploaded to any server. Drop the file in, compress, and download. Free, no sign-up, works on any device with a modern browser.
 
 ### How do I send a PDF larger than 25 MB?
 
 Use a cloud storage link. Upload the PDF to Google Drive, OneDrive, Dropbox, or iCloud Drive and paste a sharing link into your email. The recipient can view or download the file at its original quality without any size restrictions.
 
-### My PDF compresses but not enough — what else can I try?
+### My PDF compresses but not enough, what else can I try?
 
 Run the compressed output through the compressor a second time. If the file is still too large, use [Split PDF](/split-pdf) to extract only the pages the recipient needs, then compress the shorter file. Alternatively, share via a cloud link as described above.
