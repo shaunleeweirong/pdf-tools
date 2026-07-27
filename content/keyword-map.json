@@ -226,8 +226,9 @@
       "targetQuery": "how to sign a pdf without printing",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "how-to-sign-a-pdf-without-printing"
+      "status": "published",
+      "slug": "how-to-sign-a-pdf-without-printing",
+      "url": "/blog/how-to-sign-a-pdf-without-printing"
     },
     {
       "id": "blog-fill-pdf-form-free",
@@ -235,8 +236,9 @@
       "targetQuery": "how to fill out a pdf form without adobe",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "how-to-fill-out-a-pdf-form-without-adobe"
+      "status": "published",
+      "slug": "how-to-fill-out-a-pdf-form-without-adobe",
+      "url": "/blog/how-to-fill-out-a-pdf-form-without-adobe"
     },
     {
       "id": "blog-watermark-pdf-free",
@@ -252,7 +254,9 @@
       "targetQuery": "compress pdf on iphone free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "compress-pdf-on-iphone-free",
+      "url": "/blog/compress-pdf-on-iphone-free"
     },
     {
       "id": "blog-crop-pdf-pages",
@@ -268,7 +272,9 @@
       "targetQuery": "how to edit pdf text free without acrobat",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "how-to-edit-pdf-text-free-without-acrobat",
+      "url": "/blog/how-to-edit-pdf-text-free-without-acrobat"
     },
     {
       "id": "blog-extract-pages",
@@ -284,7 +290,9 @@
       "targetQuery": "how to password protect a pdf free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "how-to-password-protect-a-pdf-free",
+      "url": "/blog/how-to-password-protect-a-pdf-free"
     },
     {
       "id": "blog-compress-pdf-android",
@@ -300,7 +308,9 @@
       "targetQuery": "ilovepdf alternatives free no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "idea"
+      "status": "published",
+      "slug": "ilovepdf-alternatives-free-no-sign-up",
+      "url": "/blog/ilovepdf-alternatives-free-no-sign-up"
     },
     {
       "id": "blog-reorder-pdf-pages",
