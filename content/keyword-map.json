@@ -308,8 +308,9 @@
       "targetQuery": "ilovepdf alternatives free no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "pending",
-      "slug": "ilovepdf-alternatives-free-no-sign-up"
+      "status": "published",
+      "slug": "ilovepdf-alternatives-free-no-sign-up",
+      "url": "/blog/ilovepdf-alternatives-free-no-sign-up"
     },
     {
       "id": "blog-reorder-pdf-pages",
