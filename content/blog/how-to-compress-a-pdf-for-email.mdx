@@ -1,51 +1,83 @@
 ---
 title: "How to compress a PDF so it will finally attach to an email"
-description: "Your PDF is over the email size limit? Here is how to shrink it in seconds — free, and without uploading it anywhere."
+description: "Your PDF is over the email size limit? Here is how to shrink it in seconds, free, and without uploading it anywhere. Includes when compression makes things worse."
 date: "2026-07-21"
+updated: "2026-07-27"
 keywords:
-  - "compress pdf for email"
-  - "reduce pdf size"
-  - "pdf too big to email"
+ - "compress pdf for email"
+ - "reduce pdf size"
+ - "pdf too big to email"
 toolSlugs:
-  - "compress-pdf"
-  - "split-pdf"
-  - "merge-pdf"
+ - "compress-pdf"
+ - "split-pdf"
+ - "merge-pdf"
+faq:
+ - q: "What is the maximum PDF size for email?"
+   a: "Gmail and Outlook.com both cap a whole message at 25 MB, attachments included. Because attachments are Base64 encoded in transit, which adds about a third, the practical ceiling for a single PDF is closer to 18 MB."
+ - q: "Does compressing a PDF reduce quality?"
+   a: "Yes, if the PDF is made of scans or photos, because compression re-encodes those images at lower quality. On a text document, our in-browser compressor turns the text into an image, which reduces quality and increases file size at the same time. Compress scans, not text."
+ - q: "Why did my PDF get bigger after compressing it?"
+   a: "Because it was a text document. In-browser compression rasterizes every page to a JPEG, and a page of text stored as a photograph of text is far larger than the same page stored as font data. In our testing a 23.5 KB text report came out at 1.4 MB."
+ - q: "Is it safe to compress a confidential PDF online?"
+   a: "With an in-browser tool like this one, yes. The file is processed on your own device and never uploaded, so nothing is stored on a server. You can confirm it by watching your browser's network tab while the tool runs."
 ---
 
-To compress a PDF for email, open a free compress tool, drop your file in, and download the smaller version — it usually takes a few seconds and, with an in-browser tool, your file is never uploaded anywhere. Most email providers reject attachments larger than 20–25 MB, and a scan- or photo-heavy PDF blows past that fast. Shrinking the file is almost always quicker than fighting your email client.
+To compress a PDF for email, open a free compress tool, drop your file in, and download the smaller version. It takes seconds and, with an in-browser tool, your file is never uploaded anywhere. One thing first, though, because most guides skip it: compression only helps if your PDF is full of images. On a text document it can make the file dramatically bigger.
 
-## The fastest way to compress a PDF for email
+## What the email size limit actually is
+
+Both [Gmail](https://support.google.com/mail/answer/6584) and [Outlook.com](https://support.microsoft.com/en-us/office/sending-limits-in-outlook-com-279ee200-594c-40f0-9ec8-bb6af7735c2e) cap a message at 25 MB, and that cap covers everything in the message, not just the attachment.
+
+There is a catch that trips people up. Attachments are encoded as [Base64](https://en.wikipedia.org/wiki/Base64) before they travel, which inflates them by roughly a third. So a 20 MB PDF arrives at the limit as about 26 MB and gets rejected, even though 20 is visibly less than 25. Work backwards from about 18 MB and you will stay clear.
+
+## First, work out what is inside your PDF
+
+This is the step that decides everything else. Open the file and try to select a line of text with your cursor.
+
+- **The text highlights.** It is a real text document, exported from Word, Google Docs, or similar. Compression is the wrong tool.
+- **Nothing highlights, or you select the whole page as one block.** It is a scan or photos. Compression will help a lot.
+
+The reason this matters is that in-browser compression works by rasterizing: every page is redrawn as a JPEG image. When the page is already a photograph, that is a big win. When the page is text stored as font data, replacing it with a photograph of the same text is a large step backwards.
+
+## What we measured
+
+We ran three documents through our own [Compress PDF tool](/compress-pdf) in Chromium and recorded the exact output size. Full method and corpus are in our editorial notes.
+
+| Document | Level | Before | After | Result |
+|---|---|---|---|---|
+| 6-page image deck | High | 913.4 KB | 175.6 KB | 81% smaller |
+| 6-page image deck | Medium | 913.4 KB | 315.3 KB | 66% smaller |
+| 6-page image deck | Low | 913.4 KB | 703.5 KB | 23% smaller |
+| 20-page text report | Medium | 23.5 KB | 1400.8 KB | 60x **bigger** |
+| 3-page text plus logo | Medium | 35.0 KB | 171.2 KB | 5x **bigger** |
+
+The pattern is stark. Image-heavy files shrink by two thirds or more. Text files do the opposite, and they do it silently, so nobody thinks to check the size afterwards.
+
+## The fastest way to compress an image-heavy PDF
 
 1. Open the [free Compress PDF tool](/compress-pdf).
 2. Drop your PDF into the box, or click to browse for it.
-3. Click **Compress PDF** and wait a moment while it shrinks in your browser.
-4. Download the smaller file and attach it to your email.
+3. Pick a level. Medium is the sensible default. High squeezes hardest and softens fine detail, which matters on small print in a scanned contract.
+4. Click **Compress PDF** and wait a moment while it processes in your browser.
+5. Download the smaller file, check the size, and attach it.
 
-Because the tool runs entirely in your browser, the document never leaves your device — handy when the PDF is a contract, invoice, or anything you would rather not upload to a stranger's server.
+Because the tool runs entirely in your browser, the document never leaves your device. That is worth something when the PDF is a contract, an invoice, or a set of medical records you would rather not hand to a stranger's server.
 
-## Why is my PDF so large?
+## If it is a text PDF and still too big
 
-Almost always, it is the images. A PDF made from phone photos or a scanner stores full-resolution pictures on every page, and those add up quickly. Text-only PDFs are tiny by comparison. That is why compression helps most on image-heavy files — and barely changes a plain text document.
+A text PDF that is too large is large for a different reason, so it needs a different fix.
 
-## What if it is still too big after compressing?
+- **Something raster got embedded.** A logo dropped in at full camera resolution, a signature image scanned at 600 DPI, a screenshot pasted on the cover page. One oversized image can account for nearly all of the file.
+- **Fonts are embedded in full.** Exporting with subsetting turned on keeps only the characters the document actually uses.
+- **The file carries revision history.** Re-saving or printing to PDF flattens it.
+- **It is simply long.** A 400-page manual is big because it is 400 pages.
 
-If one pass is not enough, you have two easy options:
+For the last case, send less of it. Use the [Split PDF tool](/split-pdf) to pull out the pages the recipient asked for. Nobody wants the whole manual anyway.
 
-- **Split it into parts.** Send the document as two or three smaller PDFs with the [Split PDF tool](/split-pdf), then recombine later if needed.
-- **Send only the pages that matter.** Extract the specific pages the recipient actually needs instead of the whole file.
+## If it is still too big after compressing
 
-If you are trying to *combine* several files into one before sending, do that first with the [Merge PDF tool](/merge-pdf), then compress the result.
+- **Split it into parts.** Two or three smaller PDFs with the [Split PDF tool](/split-pdf), sent across two messages.
+- **Send a link instead.** Both Gmail and Outlook will offer to swap an oversized attachment for a cloud link, and that path has no practical size ceiling.
+- **Compress at High rather than Medium.** On a scan this is often the difference between 5 MB and 2 MB, at the cost of some sharpness.
 
-## Frequently asked questions
-
-### What is the maximum PDF size for email?
-
-Gmail and Outlook both cap attachments around 20–25 MB. If your file is larger, either compress it or send a link instead.
-
-### Does compressing a PDF reduce quality?
-
-It can slightly reduce image sharpness, since compression works mainly by shrinking images. For everyday documents the difference is usually invisible; for print-quality artwork, keep an original copy.
-
-### Is it safe to compress a confidential PDF online?
-
-With an in-browser tool like this one, yes — the file is processed on your own device and never uploaded, so nothing is stored on a server.
+If you are combining several files before sending, merge first with the [Merge PDF tool](/merge-pdf), then compress the result. Merging does not inflate anything: in our testing the merged output came out marginally smaller than the sum of its inputs, because shared structure gets written once.

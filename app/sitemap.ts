@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { buildSitemap, SITE_URL } from '@/lib/seo'
 import { getAllPosts } from '@/lib/blog'
 import { USE_CASES } from '@/content/use-cases'
+import { AUTHORS } from '@/lib/authors'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts()
@@ -19,5 +20,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: 0.7,
   }))
-  return [...buildSitemap(), ...blog, ...useCases]
+  const authors: MetadataRoute.Sitemap = AUTHORS.map((a) => ({
+    url: `${SITE_URL}/author/${a.slug}`,
+    changeFrequency: 'monthly',
+    priority: 0.5,
+  }))
+  // Trust pages. Rarely change, but they need to be discoverable: they are what
+  // a reader (or a quality rater) looks for to work out who is behind the site.
+  const trust: MetadataRoute.Sitemap = [
+    '/about',
+    '/editorial-policy',
+    '/privacy',
+    '/contact',
+  ].map((path) => ({
+    url: `${SITE_URL}${path}`,
+    changeFrequency: 'yearly' as const,
+    priority: 0.4,
+  }))
+  return [...buildSitemap(), ...blog, ...useCases, ...authors, ...trust]
 }

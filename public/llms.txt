@@ -1,0 +1,23 @@
+# pdf-tool
+
+> Free, privacy-first PDF tools that run entirely in your browser: merge, split, compress, convert, edit, sign, protect and more. No sign-up, no watermarks, and the in-browser tools never upload your files.
+
+Base URL: https://pdf-tool-blue.vercel.app
+
+## Popular tools
+- Merge PDF: https://pdf-tool-blue.vercel.app/merge-pdf
+- Split PDF: https://pdf-tool-blue.vercel.app/split-pdf
+- Compress PDF: https://pdf-tool-blue.vercel.app/compress-pdf
+- PDF to JPG: https://pdf-tool-blue.vercel.app/pdf-to-jpg
+- Images to PDF: https://pdf-tool-blue.vercel.app/jpg-to-pdf
+- Edit PDF: https://pdf-tool-blue.vercel.app/edit-pdf
+- Protect PDF (password): https://pdf-tool-blue.vercel.app/protect-pdf
+- Unlock PDF: https://pdf-tool-blue.vercel.app/unlock-pdf
+
+## Blog (how-to guides)
+- Blog index: https://pdf-tool-blue.vercel.app/blog
+- Author: Chris P. — https://pdf-tool-blue.vercel.app/author/chris-p
+
+## Machine-readable
+- Sitemap: https://pdf-tool-blue.vercel.app/sitemap.xml
+- Full tool list is in the sitemap.

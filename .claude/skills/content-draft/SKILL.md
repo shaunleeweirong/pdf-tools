@@ -11,7 +11,34 @@ Write the **finished** piece from a brief (`content/briefs/<id>.md`) in the pdf-
 
 - Lead with the reader's **outcome/task** (finish the job), answer-first in the first ~50 words.
 - Proofs: **free, no sign-up, in your browser**. Privacy ("files never leave your browser") is a **trust cue** for client-side tools, never the headline.
-- Plain, concrete, helpful — no marketing fluff. Short paragraphs (2–3 sentences). Answer the brief's questions directly.
+- Plain, concrete, helpful, no marketing fluff. Short paragraphs (2 to 3 sentences). Answer the brief's questions directly.
+
+## Writing style: read like a knowledgeable human, not AI
+
+The reader must not be able to tell a post is AI-generated. Hard rules:
+
+- **Never use em-dashes (—) or en-dashes (–).** Use a comma, a period, parentheses, or "to" for ranges. For number ranges write "20 to 25 MB" or "20-25 MB", never "20–25".
+- **Avoid AI-tell words and phrases.** Do not use: delve, dive into, unleash, unlock, elevate, seamless, robust, leverage, harness, navigate/navigating, landscape, realm, tapestry, testament, moreover, furthermore, additionally, "in conclusion", "it's worth noting", "in today's digital world/age", "whether you're a … or a …", "look no further", game-changer, supercharge, effortless, empower, streamline, cutting-edge, "at the end of the day", "that being said", "when it comes to".
+- Vary sentence length, use contractions, cut filler and hedging. Write like a helpful person explaining something to a friend.
+
+## E-E-A-T: what makes a post credible
+
+Google's raters look for Experience, Expertise, Authoritativeness and Trust, and the first one is the differentiator. These are enforced by `lib/__tests__/blog-eeat.test.ts`, so a draft that skips them fails the build.
+
+- **Never state a fact about our own tools that has not been measured.** `docs/marketing/tool-measurements.md` is the source of truth. If a claim is not traceable to a row in that file, either leave it out or measure it first with `scripts/measure-tools.mjs` / `scripts/measure-compression.mjs`. Do not estimate, do not carry over a competitor's marketing claim, and never invent a benchmark.
+- **Quote real numbers where they help.** "913.4 KB became 315.3 KB at Medium" beats "shrinks significantly", and it is the specificity raters treat as evidence of first-hand experience.
+- **Facts already established, so get them right:**
+  - The compressor **rasterizes every page to JPEG**. It shrinks scans and photos, and makes text PDFs dramatically larger (23.5 KB became 1.4 MB). Never tell a reader to compress a text document.
+  - **Compressing twice makes files bigger** (315.3 KB became 598.9 KB). Never recommend a second pass.
+  - **Merging does not inflate** output (971.9 KB in, 970.5 KB out) but **strips interactive form fields**. Filled forms must be flattened first.
+  - Gmail and Outlook.com both cap messages at **25 MB**, and Base64 adds ~33%, so the practical ceiling is ~18 MB.
+- **Say when to use something else.** Recommending our tool for a job it does badly is the fastest way to lose a reader. The editorial policy commits us to this in writing.
+- **Every post needs `updated:`** in frontmatter when its content changes, which drives `dateModified`.
+- **Every post needs `faq:`** in frontmatter. This is what emits `FAQPage` schema, and it must not be duplicated as a body section.
+
+## Link out to credible sources
+
+When you state a fact or explain a concept (a file-size limit, a standard like PDF/A or ISO 32000, how encryption works, an email provider's rules), **link to a high-authority external source** with a normal markdown link: official docs, a standards body, Wikipedia, a .gov/.edu page, or a well-known publication. 1 to 3 outbound links per post, only where they genuinely help. It reads naturally and is good SEO.
 
 ## For a BLOG post
 
@@ -20,15 +47,19 @@ Write the **finished** piece from a brief (`content/briefs/<id>.md`) in the pdf-
    ---
    title: "<= 60 chars, keyword-led>"
    description: "<= 155 chars, answer + benefit>"
-   date: "<YYYY-MM-DD>"
+   date: "<YYYY-MM-DD (today)>"
    keywords: ["<targetQuery>", "<secondary>", ...]
    toolSlugs: ["<relevant tool slugs from lib/tools.ts>"]
+   faq:
+     - q: "<question in the reader's words>"
+       a: "<direct answer>"
    ---
    ```
+   (`faq` is rendered as a visible FAQ section AND emitted as `FAQPage` schema automatically. Optional `updated: "<YYYY-MM-DD>"` sets the "Last updated" date. Do NOT credit an author in frontmatter, do NOT add a manual FAQ section in the body, and do NOT hand-write JSON-LD; the byline (Chris P.), Person/Breadcrumb/BlogPosting schema, and the OG image are all added by the route.)
 2. Body (MDX, starts at `##` — the H1/date/description are rendered from frontmatter):
    - **Answer-first intro** (target keyword in the first sentence).
    - One `##` per question from the brief (use the real PAA/Reddit phrasing as headings).
-   - A **how-to** list where relevant, and a `## Frequently asked questions` section with `###` questions.
+   - A **how-to** list where relevant. Put the FAQ in the `faq` frontmatter (above), NOT a body `## Frequently asked questions` section, so it renders + schemas once (no duplication).
    - **Internal links** to the relevant tool(s) and any matching use-case page — link the tool the first time it's mentioned, e.g. `[Compress PDF tool](/compress-pdf)`.
    - GFM tables/lists are supported (remark-gfm).
    - `BlogPosting` schema is emitted automatically by the route — no manual JSON-LD needed.
@@ -39,14 +70,19 @@ Write the **finished** piece from a brief (`content/briefs/<id>.md`) in the pdf-
 - The `tool` MUST be embeddable — one of the runners in `components/UseCaseTool.tsx` (compress-pdf, merge-pdf, jpg-to-pdf, pdf-to-jpg). To target another tool, add a runner there first (mirror its `app/<slug>/page.tsx` wiring) and update the `EMBEDDABLE` set in `lib/__tests__/use-cases.test.ts`.
 - `SoftwareApplication`/`HowTo`/`FAQPage` schema is emitted automatically.
 
-## Self-score (must pass before opening the PR)
+## Self-score (must pass before queuing for approval)
 
 - [ ] Target keyword in the title, the first heading/intro, and the first ~50 words.
 - [ ] Every question from the brief is answered.
 - [ ] At least one internal link to a relevant tool (and use-case page if one exists).
-- [ ] Unique target query — not cannibalizing a published slug (`content/keyword-map.json`).
-- [ ] Reads naturally to a human; no fluff, no repetition, accurate claims.
-- [ ] `npm run build` succeeds and `npm test` passes.
+- [ ] 1 to 3 outbound links to credible high-authority sources where facts/concepts are explained.
+- [ ] `faq:` frontmatter present (3 to 6 entries), and no `## Frequently asked questions` section in the body.
+- [ ] `updated:` set when revising an existing post.
+- [ ] Every claim about our tools traces to `docs/marketing/tool-measurements.md`. No invented numbers.
+- [ ] `npx vitest run lib/__tests__/blog-eeat.test.ts` passes.
+- [ ] **Zero em-dashes / en-dashes, and none of the banned AI-tell words** (search the file to confirm).
+- [ ] Unique target query, not cannibalizing a published slug (`content/keyword-map.json`).
+- [ ] Reads naturally to a human; no fluff, no repetition, accurate claims. ≥ 800 words.
 
 ## Queue for approval (do NOT publish here)
 

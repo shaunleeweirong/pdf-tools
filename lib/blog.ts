@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import matter from 'gray-matter'
+import type { FaqItem } from '@/lib/seo-content'
 
 // Server-only blog loader. Posts are MDX files with YAML frontmatter in
 // content/blog/. Do NOT import this from a client component (uses `fs`).
@@ -12,8 +13,10 @@ export interface PostMeta {
   title: string
   description: string
   date: string
+  updated: string
   keywords: string[]
   toolSlugs: string[]
+  faq: FaqItem[]
 }
 
 export function getPostSlugs(): string[] {
@@ -33,8 +36,12 @@ export function getPost(slug: string): { meta: PostMeta; body: string } {
       title: String(data.title ?? slug),
       description: String(data.description ?? ''),
       date: String(data.date ?? ''),
+      updated: String(data.updated ?? data.date ?? ''),
       keywords: Array.isArray(data.keywords) ? data.keywords.map(String) : [],
       toolSlugs: Array.isArray(data.toolSlugs) ? data.toolSlugs.map(String) : [],
+      faq: Array.isArray(data.faq)
+        ? data.faq.map((f: { q?: unknown; a?: unknown }) => ({ q: String(f.q ?? ''), a: String(f.a ?? '') }))
+        : [],
     },
     body: content,
   }

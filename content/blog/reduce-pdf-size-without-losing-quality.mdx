@@ -1,0 +1,99 @@
+---
+title: "Reduce PDF Size Without Losing Quality"
+description: "What lossless PDF compression can and cannot do, when our in-browser tool is the wrong choice, and the right method for each kind of PDF. Free, no upload."
+date: "2026-07-25"
+updated: "2026-07-27"
+keywords:
+ - "reduce pdf size without losing quality"
+ - "compress pdf without quality loss"
+ - "shrink pdf file size"
+ - "lossless pdf compression"
+ - "compress pdf free no upload"
+toolSlugs:
+ - "compress-pdf"
+ - "split-pdf"
+faq:
+ - q: "Can you reduce PDF size with no quality loss at all?"
+   a: "Only with a lossless optimizer, which strips redundant internal data without touching the page content. That typically saves 5 to 20% on a text PDF. Any tool promising a 70% reduction with no quality loss is re-encoding your images, which is lossy by definition."
+ - q: "Does your Compress PDF tool do lossless compression?"
+   a: "No. It rasterizes each page to a JPEG, which is always lossy. It is very effective on scans and photos and the wrong tool for a typed document, where it will make the file substantially larger."
+ - q: "Does compressing a PDF make text blurry?"
+   a: "With our tool, yes, because the text becomes an image. With a lossless optimizer, no. This is the main reason to know which kind of tool you are using before you start."
+ - q: "Why did my compressed PDF get larger?"
+   a: "Because it was a text document. Our tool converts each page to an image, and text stored as an image is much bigger than text stored as font data. We measured a 23.5 KB text report coming out at 1.4 MB."
+ - q: "Does reducing PDF size affect printing quality?"
+   a: "For a scan compressed at Low or Medium, the re-encoded images still print at a resolution most home and office printers cannot exceed, so printed output looks the same. At High, fine print can soften noticeably."
+ - q: "Is there a free PDF compressor that doesn't upload my file?"
+   a: "Yes. Our Compress PDF tool processes your file entirely inside your browser tab. Nothing is sent to a server, there is no account, and you can verify it in your browser's network tab."
+---
+
+You can only reduce a PDF's size with no quality loss at all by using a lossless optimizer, and the saving is modest, usually 5 to 20% on a typed document. Everything that produces the dramatic reductions people expect, the 15 MB scan that becomes 2 MB, works by re-encoding images at lower quality. That is lossy. This post covers which one you actually need.
+
+We should be upfront about our own tool, because it decides most of what follows: our [Compress PDF tool](/compress-pdf) is lossy only. It converts every page into a JPEG image. That is excellent for scans and photographs, and the wrong choice for a text document.
+
+## Lossless and lossy, and why the difference matters here
+
+[Lossless compression](https://en.wikipedia.org/wiki/Lossless_compression) removes redundancy without changing what is displayed: duplicate objects, unused resources, metadata bloat, uncompressed streams. Open the result and it is pixel-identical to the original. On a text PDF this is the only kind of compression that is actually safe, and it typically recovers a modest amount.
+
+[Lossy compression](https://en.wikipedia.org/wiki/Lossy_compression) re-encodes embedded images at lower quality or resolution. The output is close to the original but not identical. This is where the big reductions come from, and it is what turns a 15 MB scanned contract into something emailable.
+
+The trap is that both get called "compress a PDF", so people apply the second when they needed the first.
+
+## What our tool does to each kind of PDF
+
+We measured this rather than estimating it. Three documents, run through the real tool in a browser:
+
+| Document | Level | Before | After | Change |
+|---|---|---|---|---|
+| 6-page image deck | High | 913.4 KB | 175.6 KB | 81% smaller |
+| 6-page image deck | Medium | 913.4 KB | 315.3 KB | 66% smaller |
+| 6-page image deck | Low | 913.4 KB | 703.5 KB | 23% smaller |
+| 20-page text report | Medium | 23.5 KB | 1400.8 KB | 60x bigger |
+| 3-page text plus a logo | Medium | 35.0 KB | 171.2 KB | 5x bigger |
+
+Scans and photos: large reductions, some quality cost, exactly as intended. Text documents: the file balloons and the text stops being selectable, because it is now a picture of text. There is no setting that avoids this, since rasterizing is how the tool works.
+
+## So which method should you use?
+
+**Your PDF is a scan, a photo album, or a slide deck full of images.** Use the [Compress PDF tool](/compress-pdf). Start at Low, check the result, and step up to Medium or High only if you need more. Because it runs in your browser, the file is never uploaded, which matters for contracts and medical records.
+
+**Your PDF is a typed document and you want it smaller with no quality loss.** Do not use our tool. Options, roughly in order of convenience:
+
+- **Re-export from the source.** Going back to the Word or Google Docs original and exporting again, with font subsetting on, usually beats any after-the-fact optimizer.
+- **Use a lossless PDF optimizer.** Acrobat's "Reduce File Size", Ghostscript, or qpdf will strip redundancy without rasterizing.
+- **Find the one oversized image.** A text PDF that is unexpectedly large almost always has a full-resolution logo or a scanned signature buried in it. Replacing that single asset can cut the file by 90%.
+
+**Your PDF is a long text document that is simply large because it is long.** Send fewer pages. The [Split PDF tool](/split-pdf) pulls out the range the recipient actually asked for, with no quality loss of any kind, because nothing is re-encoded.
+
+## Do not compress twice
+
+A common tip is to run the output through again to squeeze out more. We tested it and it does not work:
+
+- Second pass at the same level: 315.3 KB became **598.9 KB**.
+- Second pass at a stronger level: 315.3 KB became 297.8 KB, a 5.6% saving.
+
+Re-rendering an already-rasterized page and re-encoding it adds data. If one pass is not enough, start again from the original at a stronger level.
+
+## Why some PDFs barely shrink
+
+**It was already optimized.** PDFs from recent versions of Acrobat, Google Docs, and macOS are already efficiently packed, so a lossless pass finds little to remove.
+
+**It is text.** There is almost nothing for an image compressor to work on, which is why our tool resorts to turning the page into an image and makes things worse.
+
+**The images are already heavily compressed.** A scan that was saved at low quality once will not give up much a second time.
+
+In all three cases the file is close to as small as it will get without removing content: fewer pages, lower-resolution source images, or fewer embedded fonts.
+
+## Reducing PDF size on a Mac
+
+**In the browser:** the [Compress PDF tool](/compress-pdf) works in Safari, Chrome, and Firefox with nothing to install. Same caveat as everywhere else on this page: scans yes, text documents no.
+
+**With Preview, which is built in:** open the PDF, choose **File → Export**, pick **Reduce File Size** in the Quartz Filter menu, and save. See [Apple's Preview guide](https://support.apple.com/guide/preview/welcome/mac) for the current menu layout. This filter is aggressive and applies to the whole document, so check the output before deleting the original.
+
+**For many files at once:** Automator can apply the same Quartz filter across a folder. Create a workflow, add **PDFs → Apply Quartz Filter to PDF Documents**, and point it at the directory.
+
+## How to check whether quality actually suffered
+
+Open the compressed file next to the original at 100% zoom and look at the smallest text on the busiest page. That is where JPEG artefacts show first. On a scan compressed at Low or Medium you will usually see nothing. At High, fine print softens.
+
+One more check that takes a second: try to select the text. If you could select it in the original and cannot in the compressed copy, the page has been turned into an image. Sometimes that is fine. If the recipient needs to search, copy from, or run the document through anything automated, it is not.

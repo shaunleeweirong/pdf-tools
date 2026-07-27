@@ -1,0 +1,108 @@
+---
+title: "Why Won't My PDF Attach to Email? (Fixed)"
+description: "PDF not attaching to email? Learn the real causes, size limits, encoding overhead, antivirus blocks, and the fastest fixes. Free, in-browser, no sign-up."
+date: "2026-07-25"
+updated: "2026-07-27"
+keywords:
+ - "why won't my pdf attach to email"
+ - "pdf too large to email"
+ - "email attachment size limit"
+ - "pdf won't send via email"
+ - "fix pdf attachment email"
+toolSlugs:
+ - "compress-pdf"
+ - "split-pdf"
+faq:
+ - q: "Can I email a 20 MB PDF with Gmail?"
+   a: "Not as a direct attachment. A 20 MB PDF encodes to roughly 26 MB, just over Gmail's 25 MB cap. If it is a scan, compressing it first will usually bring it well under. If it is a text document, use a Drive link instead, because compressing it will make it larger."
+ - q: "Does compressing a PDF for email reduce quality?"
+   a: "On a scan, yes, slightly at Low or Medium and noticeably at High. On a typed document our in-browser tool turns each page into an image, which reduces quality and increases the file size at the same time, so it is the wrong tool for that job."
+ - q: "My PDF compresses but not enough, what else can I try?"
+   a: "Do not run it through a second time, we measured that and it made the file 90% larger. Go back to the original and compress at a stronger level, or use Split PDF to send only the pages the recipient needs, or share a cloud link."
+ - q: "Why is my PDF being blocked by Outlook?"
+   a: "Corporate Outlook and Exchange servers often set stricter limits than Outlook.com, sometimes as low as 5 MB, and can block files with active content such as embedded scripts or forms. Compress or split the file, and if it is still blocked, share it via a OneDrive link."
+ - q: "How do I send a PDF larger than 25 MB?"
+   a: "Use a cloud storage link. Upload to Google Drive, OneDrive, Dropbox, or iCloud Drive and paste a sharing link into the email. The recipient gets the file at full quality with no size restriction."
+ - q: "Is there a free way to compress a PDF for email without uploading it?"
+   a: "Yes. Our Compress PDF tool runs in your browser tab and nothing is sent to a server. Free, no sign-up, works on any device with a modern browser."
+---
+
+If your PDF won't attach to email, the most common cause is that it's too large for your email provider's limit. The fastest fix is to compress it in your browser, no upload, no account, done in seconds. But size isn't always the culprit. Here's how to diagnose and fix every case.
+
+## What are the email attachment size limits?
+
+Each provider sets a cap on how large a single email (including attachments) can be:
+
+| Provider | Attachment limit |
+|---|---|
+| [Gmail](https://support.google.com/mail/answer/6584) | 25 MB total email size |
+| [Outlook.com / Hotmail](https://support.microsoft.com/en-us/office/sending-limits-in-outlook-com-279ee200-594c-40f0-9ec8-bb6af7735c2e) | 25 MB total email size |
+| Yahoo Mail | 25 MB |
+| Corporate Outlook / Exchange | 5-20 MB (set by your IT department) |
+| Apple Mail / iCloud | 20 MB (iCloud Drive link offered beyond) |
+
+The limit covers the entire email, message body, all attachments, and any inline images. If you are sending multiple files in one email, their sizes add up against the limit.
+
+## Why does a 19 MB PDF hit Gmail's 25 MB cap?
+
+Email doesn't attach files as raw binary, it encodes them as [Base64](https://en.wikipedia.org/wiki/Base64) text, which adds roughly **33% overhead**. A 19 MB PDF becomes approximately 25.3 MB after encoding, just over Gmail's limit, which is why the attachment fails even though the file itself looks safely under 25 MB.
+
+A practical rule: aim for a raw file size of no more than **18 MB** to send reliably on Gmail or Outlook.com.
+
+## How to compress a PDF for email (fastest fix)
+
+This works when the PDF is a scan or is full of photos. Check first: if you can select the text with your cursor, skip to the next section, because compressing a text document makes it larger rather than smaller.
+
+1. Open the [Compress PDF tool](/compress-pdf).
+2. Drop your PDF into the box or click to pick the file.
+3. Choose a level. Medium is a sensible starting point.
+4. Click **Compress PDF** and wait a few seconds.
+5. Download the smaller file, then check its size before attaching it.
+
+The tool runs entirely in your browser. Your file is never sent to a server, relevant when the PDF contains payslips, contracts, medical records, or any personal document.
+
+We measured a 6-page PDF of full-page images going from 913.4 KB to 315.3 KB at Medium, and to 175.6 KB at High. A 20-page text-only report, by contrast, went from 23.5 KB to 1.4 MB, because the tool rasterizes each page and text stored as an image is far bulkier than text stored as font data.
+
+## If it is a text PDF that is too large
+
+Compression is the wrong lever. A typed document that is unexpectedly large usually has one specific cause:
+
+- A logo or signature image embedded at full camera resolution.
+- Fonts embedded in full rather than subsetted, which re-exporting from the source fixes.
+- Accumulated revision history, which flattening by re-saving removes.
+- It is genuinely long, in which case send fewer pages with the [Split PDF tool](/split-pdf).
+
+## What if the PDF is still too large after compressing?
+
+**Split it.** If the document is long, send only the pages the recipient actually needs. Use the [Split PDF tool](/split-pdf) to pull out a specific range, compress the smaller result, and attach that.
+
+**Use a cloud link.** All major email clients let you share large files via a storage link rather than a direct attachment:
+
+- **Gmail**: Click the Google Drive icon in the compose toolbar → upload your PDF → insert as a Drive link.
+- **Outlook**: Click **Attach → Share a copy in OneDrive** when prompted.
+- **Yahoo / Apple Mail**: Upload the file to Dropbox, Google Drive, or iCloud Drive and paste the sharing link into the email body.
+
+The recipient gets a link to view or download the full-quality file. This works for any file size.
+
+## Other reasons a PDF won't attach to email
+
+If your file is well under the size limit but still won't attach, one of these is likely the cause:
+
+**Corrupted or incomplete file.** If the PDF failed to save properly, a browser download that was interrupted, a conversion that timed out, the file itself may be damaged. Open it first to confirm it displays correctly before trying to attach it again.
+
+**Antivirus or security software blocking the attachment.** Some endpoint security tools flag PDF attachments as a potential threat, particularly files with embedded scripts or forms. Try saving a plain copy of the PDF locally and attaching it from a local folder rather than from a network drive or cloud sync folder.
+
+**Email client glitch.** Browser-based email (Gmail, Outlook in Chrome) can occasionally stall on attachments when the browser tab has been open a long time or is low on memory. Refresh the compose window, or open a new tab and try again.
+
+**Poor network connection.** Attachment uploads can silently fail on slow or unstable connections. If you're on Wi-Fi, try switching to a wired connection, or wait until the connection stabilises before attaching.
+
+**Corporate email policy.** Some organisations block PDF attachments at the mail gateway entirely, or for emails coming from outside. If a recipient says they are not getting your PDF, ask them to check their junk folder and confirm with their IT team.
+
+## How to check your PDF's file size before attaching
+
+- **Windows**: right-click the file → Properties → "Size"
+- **Mac**: right-click → Get Info → "Size"
+- **iPhone/iPad**: open Files app, tap and hold the file → Info
+- **Android**: open your file manager, long-press the file → Details
+
+Compare the raw size to the provider's limit, then subtract 33% to account for Base64 encoding overhead. If the result is close, compress first.
