@@ -289,8 +289,9 @@
       "targetQuery": "how to password protect a pdf free",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "how-to-password-protect-a-pdf-free"
+      "status": "published",
+      "slug": "how-to-password-protect-a-pdf-free",
+      "url": "/blog/how-to-password-protect-a-pdf-free"
     },
     {
       "id": "blog-compress-pdf-android",
