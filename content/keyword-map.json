@@ -235,8 +235,9 @@
       "targetQuery": "how to fill out a pdf form without adobe",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "how-to-fill-out-a-pdf-form-without-adobe"
+      "status": "published",
+      "slug": "how-to-fill-out-a-pdf-form-without-adobe",
+      "url": "/blog/how-to-fill-out-a-pdf-form-without-adobe"
     },
     {
       "id": "blog-watermark-pdf-free",
