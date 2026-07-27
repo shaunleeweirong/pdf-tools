@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21",
+  "updated": "2026-07-27",
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
     {
@@ -99,7 +99,9 @@
       "targetQuery": "smallpdf alternatives no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "idea"
+      "status": "published",
+      "slug": "smallpdf-alternatives-no-sign-up",
+      "url": "/blog/smallpdf-alternatives-no-sign-up"
     },
     {
       "id": "blog-compress-to-100kb",
@@ -107,7 +109,9 @@
       "targetQuery": "compress pdf to 100kb",
       "intent": "informational",
       "priority": 1,
-      "status": "idea"
+      "status": "published",
+      "slug": "compress-pdf-to-100kb",
+      "url": "/blog/compress-pdf-to-100kb"
     },
     {
       "id": "blog-remove-password",
@@ -124,7 +128,9 @@
       "targetQuery": "how to merge pdf on mac free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "how-to-merge-pdf-on-mac-free",
+      "url": "/blog/how-to-merge-pdf-on-mac-free"
     },
     {
       "id": "blog-merge-chromebook",
@@ -132,7 +138,9 @@
       "targetQuery": "how to merge pdf on chromebook",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "how-to-merge-pdf-on-chromebook",
+      "url": "/blog/how-to-merge-pdf-on-chromebook"
     },
     {
       "id": "blog-pdf-wont-attach",
@@ -140,7 +148,9 @@
       "targetQuery": "why won't my pdf attach to email",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "why-wont-my-pdf-attach-to-email",
+      "url": "/blog/why-wont-my-pdf-attach-to-email"
     },
     {
       "id": "blog-reduce-without-quality-loss",
@@ -148,7 +158,9 @@
       "targetQuery": "reduce pdf size without losing quality",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "reduce-pdf-size-without-losing-quality",
+      "url": "/blog/reduce-pdf-size-without-losing-quality"
     },
     {
       "id": "blog-rotate-and-save",
@@ -156,7 +168,9 @@
       "targetQuery": "how to rotate a pdf and save it",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "published",
+      "slug": "how-to-rotate-a-pdf-and-save-it",
+      "url": "/blog/how-to-rotate-a-pdf-and-save-it"
     },
     {
       "id": "blog-private-pdf-tools",
@@ -164,7 +178,9 @@
       "targetQuery": "pdf tools that don't upload your files",
       "intent": "commercial",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "pdf-tools-that-dont-upload-your-files",
+      "url": "/blog/pdf-tools-that-dont-upload-your-files"
     },
     {
       "id": "blog-job-application-pdf",
@@ -172,12 +188,152 @@
       "targetQuery": "combine documents for a job application pdf",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "published",
+      "slug": "combine-documents-for-a-job-application-pdf",
+      "url": "/blog/combine-documents-for-a-job-application-pdf"
     },
     {
       "id": "blog-split-large-pdf",
       "surface": "blog",
       "targetQuery": "split a large pdf into smaller files",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-delete-pages-pdf",
+      "surface": "blog",
+      "targetQuery": "how to delete pages from a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "published",
+      "slug": "how-to-delete-pages-from-a-pdf-free",
+      "url": "/blog/how-to-delete-pages-from-a-pdf-free"
+    },
+    {
+      "id": "blog-add-page-numbers",
+      "surface": "blog",
+      "targetQuery": "how to add page numbers to a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "published",
+      "slug": "how-to-add-page-numbers-to-a-pdf-free",
+      "url": "/blog/how-to-add-page-numbers-to-a-pdf-free"
+    },
+    {
+      "id": "blog-sign-without-printing",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf without printing",
+      "intent": "informational",
+      "priority": 2,
+      "status": "published",
+      "slug": "how-to-sign-a-pdf-without-printing",
+      "url": "/blog/how-to-sign-a-pdf-without-printing"
+    },
+    {
+      "id": "blog-fill-pdf-form-free",
+      "surface": "blog",
+      "targetQuery": "how to fill out a pdf form without adobe",
+      "intent": "informational",
+      "priority": 2,
+      "status": "published",
+      "slug": "how-to-fill-out-a-pdf-form-without-adobe",
+      "url": "/blog/how-to-fill-out-a-pdf-form-without-adobe"
+    },
+    {
+      "id": "blog-watermark-pdf-free",
+      "surface": "blog",
+      "targetQuery": "how to watermark a pdf free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "compress pdf on iphone free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "published",
+      "slug": "compress-pdf-on-iphone-free",
+      "url": "/blog/compress-pdf-on-iphone-free"
+    },
+    {
+      "id": "blog-crop-pdf-pages",
+      "surface": "blog",
+      "targetQuery": "how to crop pdf pages free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-edit-pdf-text-free",
+      "surface": "blog",
+      "targetQuery": "how to edit pdf text free without acrobat",
+      "intent": "informational",
+      "priority": 2,
+      "status": "published",
+      "slug": "how-to-edit-pdf-text-free-without-acrobat",
+      "url": "/blog/how-to-edit-pdf-text-free-without-acrobat"
+    },
+    {
+      "id": "blog-extract-pages",
+      "surface": "blog",
+      "targetQuery": "how to extract pages from a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-extract-pages-from-a-pdf-free"
+    },
+    {
+      "id": "blog-protect-pdf-password",
+      "surface": "blog",
+      "targetQuery": "how to password protect a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "published",
+      "slug": "how-to-password-protect-a-pdf-free",
+      "url": "/blog/how-to-password-protect-a-pdf-free"
+    },
+    {
+      "id": "blog-compress-pdf-android",
+      "surface": "blog",
+      "targetQuery": "compress pdf on android free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "compress-pdf-on-android-free"
+    },
+    {
+      "id": "blog-ilovepdf-alternatives",
+      "surface": "blog",
+      "targetQuery": "ilovepdf alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "published",
+      "slug": "ilovepdf-alternatives-free-no-sign-up",
+      "url": "/blog/ilovepdf-alternatives-free-no-sign-up"
+    },
+    {
+      "id": "blog-reorder-pdf-pages",
+      "surface": "blog",
+      "targetQuery": "how to rearrange pages in a pdf free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-flatten-pdf-form",
+      "surface": "blog",
+      "targetQuery": "how to flatten a pdf form free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-n-up-pdf",
+      "surface": "blog",
+      "targetQuery": "how to print pdf 2 pages per sheet free",
       "intent": "informational",
       "priority": 3,
       "status": "idea"
