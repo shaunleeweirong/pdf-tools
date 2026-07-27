@@ -252,8 +252,9 @@
       "targetQuery": "compress pdf on iphone free",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "compress-pdf-on-iphone-free"
+      "status": "published",
+      "slug": "compress-pdf-on-iphone-free",
+      "url": "/blog/compress-pdf-on-iphone-free"
     },
     {
       "id": "blog-crop-pdf-pages",
