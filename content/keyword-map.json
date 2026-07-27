@@ -226,8 +226,9 @@
       "targetQuery": "how to sign a pdf without printing",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "how-to-sign-a-pdf-without-printing"
+      "status": "published",
+      "slug": "how-to-sign-a-pdf-without-printing",
+      "url": "/blog/how-to-sign-a-pdf-without-printing"
     },
     {
       "id": "blog-fill-pdf-form-free",
