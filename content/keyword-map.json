@@ -270,8 +270,9 @@
       "targetQuery": "how to edit pdf text free without acrobat",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "how-to-edit-pdf-text-free-without-acrobat"
+      "status": "published",
+      "slug": "how-to-edit-pdf-text-free-without-acrobat",
+      "url": "/blog/how-to-edit-pdf-text-free-without-acrobat"
     },
     {
       "id": "blog-extract-pages",
