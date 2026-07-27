@@ -85,6 +85,16 @@ describe('blog E-E-A-T requirements', () => {
     )
   })
 
+  /**
+   * The site does not send visitors to the maintainer's personal accounts.
+   * Links to github.io documentation (pdf.js, for instance) are fine; links to
+   * a github.com profile or repository are not.
+   */
+  it('no post links to a personal GitHub account', () => {
+    const offenders = getPostSlugs().filter((slug) => /https?:\/\/(www\.)?github\.com/i.test(raw(slug)))
+    expect(offenders, `posts linking to github.com: ${offenders.join(', ')}`).toEqual([])
+  })
+
   it('no post recommends compressing the same file twice', () => {
     const patterns = [
       /run.{0,40}(compressed|through).{0,40}(again|second time)/i,

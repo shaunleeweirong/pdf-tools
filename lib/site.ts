@@ -13,8 +13,12 @@
  */
 export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? null
 
-/** Public source repository. Issues here are a working contact channel. */
-export const REPO_URL = 'https://github.com/shaunleeweirong/pdf-tools'
+/**
+ * The site deliberately publishes no link to its source repository. Do not
+ * reintroduce one: visitors should not be routed to the maintainer's personal
+ * accounts. The client-side claim is verifiable without it, via the named
+ * open-source libraries below and the browser's own network tab.
+ */
 
 /** The year the site started publishing, for the About page and copyright. */
 export const FOUNDED_YEAR = 2026

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { SITE_NAME } from '@/lib/seo'
-import { FOUNDED_YEAR, REPO_URL } from '@/lib/site'
+import { FOUNDED_YEAR } from '@/lib/site'
 
 const LINKS = [
   { href: '/about', label: 'About' },
@@ -24,14 +24,6 @@ export function SiteFooter() {
               {l.label}
             </Link>
           ))}
-          <a
-            href={REPO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
-            Source
-          </a>
         </nav>
         <p className="mt-6 text-xs text-muted-foreground">
           &copy; {FOUNDED_YEAR} {SITE_NAME}

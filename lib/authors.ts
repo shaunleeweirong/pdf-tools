@@ -16,7 +16,10 @@ export const AUTHORS: Author[] = [
     jobTitle: 'Founder, pdf-tool',
     bio: 'Chris P. builds pdf-tool. A marketer and developer (ex-LinkedIn, ex-Oracle) with over a decade running growth and demand generation for B2B brands, he now writes about getting everyday PDF tasks done simply and privately.',
     image: '/authors/chris-p.jpg',
-    sameAs: ['https://www.linkedin.com/in/sean-p/', 'https://github.com/shaunleeweirong'],
+    // Public profiles for this person, emitted as Person.sameAs and rendered on
+    // the author page, the post author card, and the contact page. Only list
+    // profiles that should receive visitors.
+    sameAs: ['https://www.linkedin.com/in/sean-p/'],
     knowsAbout: ['PDF tools', 'Web development', 'SEO', 'B2B marketing', 'Demand generation'],
   },
 ]

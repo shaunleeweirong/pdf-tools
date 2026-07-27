@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { DEFAULT_AUTHOR } from '@/lib/authors'
-import { REPO_URL, STACK } from '@/lib/site'
+import { STACK } from '@/lib/site'
 import { SITE_NAME } from '@/lib/seo'
 import { TOOL_SLUGS } from '@/lib/tools'
 
@@ -56,7 +56,7 @@ export default function AboutPage() {
       </p>
       <p className="mt-4 leading-relaxed text-muted-foreground">
         That is not a promise you have to take on trust. The heavy lifting is done by open source
-        libraries you can look up, and the site itself is public:
+        libraries you can look up and read for yourself:
       </p>
       <ul className="mt-4 space-y-2 text-muted-foreground">
         {STACK.map((s) => (
@@ -74,17 +74,10 @@ export default function AboutPage() {
         ))}
       </ul>
       <p className="mt-4 leading-relaxed text-muted-foreground">
-        The source is at{' '}
-        <a
-          href={REPO_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-foreground underline underline-offset-4"
-        >
-          github.com/shaunleeweirong/pdf-tools
-        </a>
-        . Open your browser devtools on any tool page and watch the network tab while you run a
-        job: nothing leaves.
+        The strongest check is one you can run yourself in about ten seconds. Open your browser
+        devtools on any tool page, switch to the network tab, and run a job while watching it. You
+        will see the page and its scripts load, and no request carrying your file. Disconnecting
+        from the internet after the page has loaded works too: the tools keep running.
       </p>
 
       <h2 className="mt-12 text-2xl font-semibold tracking-tight text-foreground">

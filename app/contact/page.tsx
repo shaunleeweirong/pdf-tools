@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CONTACT_EMAIL, REPO_URL } from '@/lib/site'
+import { CONTACT_EMAIL } from '@/lib/site'
 import { DEFAULT_AUTHOR } from '@/lib/authors'
 
 export const metadata: Metadata = {
@@ -22,18 +22,10 @@ export default function ContactPage() {
         A tool is broken, or gave a bad result
       </h2>
       <p className="mt-4 leading-relaxed text-muted-foreground">
-        Open an issue at{' '}
-        <a
-          href={`${REPO_URL}/issues`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-foreground underline underline-offset-4"
-        >
-          github.com/shaunleeweirong/pdf-tools/issues
-        </a>
-        . It helps enormously to say which tool, which browser, and roughly what the file was: how
-        many pages, whether it was a scan or a typed document, and how big it was. Please do not
-        attach the file itself if it has anything private in it.
+        Get in touch using one of the routes below. It helps enormously to say which tool, which
+        browser, and roughly what the file was: how many pages, whether it was a scan or a typed
+        document, and how big it was. Please do not send the file itself if it has anything private
+        in it, since a description is almost always enough to reproduce the problem.
       </p>
 
       <h2 className="mt-12 text-2xl font-semibold tracking-tight text-foreground">
@@ -49,21 +41,21 @@ export default function ContactPage() {
         explains how posts are researched, tested, and reviewed.
       </p>
 
+      <h2 className="mt-12 text-2xl font-semibold tracking-tight text-foreground">
+        How to reach us
+      </h2>
       {CONTACT_EMAIL ? (
-        <>
-          <h2 className="mt-12 text-2xl font-semibold tracking-tight text-foreground">Email</h2>
-          <p className="mt-4 leading-relaxed text-muted-foreground">
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
-              className="text-foreground underline underline-offset-4"
-            >
-              {CONTACT_EMAIL}
-            </a>
-          </p>
-        </>
+        <p className="mt-4 leading-relaxed text-muted-foreground">
+          Email{' '}
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="text-foreground underline underline-offset-4"
+          >
+            {CONTACT_EMAIL}
+          </a>
+          . Everything is read, and anything that turns out to be a real problem gets fixed.
+        </p>
       ) : null}
-
-      <h2 className="mt-12 text-2xl font-semibold tracking-tight text-foreground">Elsewhere</h2>
       <ul className="mt-4 space-y-2 text-muted-foreground">
         {DEFAULT_AUTHOR.sameAs.map((url) => (
           <li key={url}>
@@ -78,6 +70,10 @@ export default function ContactPage() {
           </li>
         ))}
       </ul>
+      <p className="mt-4 leading-relaxed text-muted-foreground">
+        Messages go to {DEFAULT_AUTHOR.name} directly, so a reply may take a few days, but it will
+        come from the person who can actually change the thing you are writing about.
+      </p>
     </main>
   )
 }
