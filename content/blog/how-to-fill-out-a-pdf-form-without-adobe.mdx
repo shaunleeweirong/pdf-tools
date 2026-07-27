@@ -2,8 +2,24 @@
 title: "How to Fill Out a PDF Form Without Adobe"
 description: "Fill out any PDF form free in your browser, no sign-up, no Adobe Acrobat. Works on interactive forms and flat scanned forms alike."
 date: "2026-07-26"
+updated: "2026-07-27"
 keywords: ["how to fill out a pdf form without adobe", "fill pdf form free", "fill pdf online no sign up", "pdf form filler free", "fill pdf without acrobat"]
-toolSlugs: ["fill-form", "sign-pdf"]
+toolSlugs: ["fill-form", "sign-pdf", "jpg-to-pdf", "flatten-pdf"]
+faq:
+ - q: "Can I fill a form and add my signature in one step?"
+   a: "Not in one step. The Fill PDF Form tool handles typed fields and checkboxes; the Sign PDF tool places a drawn, typed, or uploaded signature. Fill first, download, then open that file in the sign tool."
+ - q: "The form won't let me type in the fields. What's wrong?"
+   a: "Either it is a flat, non-interactive form, in which case place text boxes over the lines manually, or it is locked. If a banner says the document is certified, the creator has restricted all modification and no free tool will legitimately bypass that."
+ - q: "Does it work with scanned PDFs?"
+   a: "Yes, as a typed overlay. The text sits on top of the scanned image and looks correct on screen and in print, but it is not stored as machine-readable form data. If the recipient needs that, ask for an interactive version."
+ - q: "What file types does the tool accept?"
+   a: "PDF only. Save a Word document as PDF first, or convert a JPEG or PNG scan with the Images to PDF tool before filling it."
+ - q: "Is there a file size limit?"
+   a: "No fixed limit. Most fillable forms are well under 5 MB and load instantly. Very large files take longer because all the work happens on your device rather than a server."
+ - q: "Can I save my progress and come back later?"
+   a: "There is no auto-save. Keep the tab open while filling and download before closing it. To pause, download the partially filled file and re-upload it when you continue."
+ - q: "Why won't my downloaded PDF show the text I typed?"
+   a: "Some viewers do not render overlaid annotations. Open the file in a different viewer or your browser's built-in one. Flattening the PDF also bakes the text permanently into the page."
 ---
 
 You can fill out a PDF form without Adobe Acrobat, free, in your browser, with no account required. The [Fill PDF Form tool](/fill-form) handles both interactive fields and flat scanned forms, and your file never leaves your device.
@@ -58,33 +74,3 @@ Most online PDF tools upload your file to a server, process it there, and send t
 The [Fill PDF Form tool](/fill-form) works differently. It runs in your browser using [PDF.js](https://mozilla.github.io/pdf.js/), Mozilla's open-source PDF rendering engine. Your file never travels over a network. All processing is local to your device, and the downloaded file is generated client-side. There is no server receiving your form data.
 
 If you're filling out anything with personal details, look for a tool that specifically states "in-browser" or "client-side" processing, and read the privacy policy before uploading.
-
-## Frequently asked questions
-
-### Can I fill a form and add my signature in one step?
-
-The [Fill PDF Form tool](/fill-form) handles typed fields and checkboxes. For a signature, use the [Sign PDF tool](/sign-pdf), which lets you draw, type, or upload a signature image and place it anywhere. A common approach: fill first and download, then open the filled PDF in the sign tool to add your signature in a second step.
-
-### The form won't let me type in the fields. What's wrong?
-
-The two most common causes are a flat (non-interactive) form or a locked PDF. For a flat form, switch to the text placement tool and place a text box manually over each line. For a locked form, try a tool that overlays text rather than editing actual fields. If the form also shows "document certified" in a banner, the creator has restricted all modifications, and no free tool will bypass that legitimately.
-
-### Does it work with scanned PDFs?
-
-Yes, for typed overlays. The tool places text on top of the scanned image. The text won't be embedded as true form data, but the output looks correct when viewed or printed. If the receiving party needs a machine-readable completed form (rare for most uses), ask them to send an interactive version.
-
-### What file types does the tool accept?
-
-PDF files only (.pdf). If your form arrived as a Word document, save it as a PDF first. If it's a scanned image (JPEG or PNG), use the [Images to PDF tool](/jpg-to-pdf) to convert it to a PDF, then fill it.
-
-### Is there a file size limit?
-
-The tool handles most standard form PDFs without issue. Very large files (over 50 MB) may load more slowly since all processing happens on your device, not a remote server. Most fillable forms are well under 5 MB.
-
-### Can I save my progress and come back later?
-
-There is no auto-save in the browser tool. Keep the tab open while filling, and download the completed PDF before you close it. If you need to pause and come back, download a partially filled version and re-upload it when you continue.
-
-### Why won't my downloaded PDF show the text I typed?
-
-This can happen if your PDF viewer renders the file without displaying overlaid annotations. Try opening the downloaded file in a different viewer, or print it to see everything correctly. If the problem persists, re-download from the tool and open the new copy directly in your browser's built-in PDF viewer.
