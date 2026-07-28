@@ -1,0 +1,99 @@
+---
+title: "Split a Large PDF Into Smaller Files Free"
+description: "Split any PDF into smaller files by page range, right in your browser. Free, no sign-up, no upload needed."
+date: "2026-07-28"
+keywords:
+  - "split a large pdf into smaller files"
+  - "split pdf free"
+  - "split pdf without adobe"
+  - "split pdf for email"
+  - "split pdf by page range"
+  - "split pdf online no sign up"
+toolSlugs:
+  - "split-pdf"
+  - "compress-pdf"
+  - "extract-pages"
+faq:
+  - q: "Does splitting a PDF reduce its quality?"
+    a: "No. Splitting copies pages into separate files without re-encoding them. Text, images, and formatting come out exactly as they were in the original."
+  - q: "How do I split a PDF to fit Gmail or Outlook's 25 MB attachment limit?"
+    a: "Both Gmail and Outlook cap attachments at 25 MB, but Base64 encoding adds roughly 33% overhead, so aim for each split file to be under 18 MB before attaching. Find a natural page break that keeps each part under that size."
+  - q: "Should I split or compress my PDF to make it smaller?"
+    a: "Split if the file is a text document, form, or contract. Compressing those types usually makes them larger, not smaller, because the compressor rasterizes pages to images. Compress only if the PDF is full of scanned pages or photos and you can accept some image quality reduction."
+  - q: "Can I split a PDF without uploading it anywhere?"
+    a: "Yes. The Split PDF tool on this site runs entirely in your browser. Your file never leaves your device."
+  - q: "Do I need to install anything to split a PDF?"
+    a: "No. Any modern browser on Windows, Mac, iPhone, or Android can run a browser-based PDF splitter with no download or account required."
+  - q: "What happens to form fields when I split a PDF?"
+    a: "Form fields travel with their pages. A field on page 4 will be present in the output file that contains page 4. Splitting preserves form fields, unlike merging, which removes them."
+---
+
+## Split a large PDF into smaller files
+
+The fastest way to split a large PDF into smaller files is to use a browser-based tool that runs on your device. No account, no software to install, no upload to a remote server. Open the [Split PDF tool](/split-pdf), drop in your file, enter the page ranges you want, and download the results.
+
+This works on Windows, Mac, Chromebook, iPhone, and Android. Any device with a modern browser.
+
+## Why would you need to split a PDF?
+
+The most common reason is an email attachment limit. [Gmail and Outlook both cap attachments at 25 MB](https://support.google.com/mail/answer/6584), and email uses Base64 encoding to carry binary files, which adds roughly 33% to the file size in transit. A PDF that measures 20 MB on disk arrives at the mail server weighing about 27 MB, which bounces the message. The practical ceiling before attaching is around 18 MB.
+
+The second reason is that a recipient only needs part of the document. A 200-page technical manual with 10 chapters doesn't need to travel as one file if the recipient only works with chapters 3 and 4. Splitting lets you send exactly what someone needs.
+
+Upload portals, document management systems, and some cloud storage tiers also enforce size limits, and splitting is often the only option when the file can't be shrunk enough another way.
+
+## How to split a PDF by page range
+
+1. Open the [Split PDF tool](/split-pdf).
+2. Upload your PDF. The file stays in your browser; nothing is sent to a server.
+3. Enter the page ranges for each output file. For a 60-page document you want in three equal parts, enter 1-20, 21-40, and 41-60.
+4. Click Split.
+5. Download the separate PDF files.
+
+Each output is a regular PDF. No re-encoding happens, so image quality and text sharpness are exactly the same as the original.
+
+## How to split a PDF into equal parts
+
+Divide the total page count by the number of parts you want, then use those page ranges. A 90-page document split into three parts becomes pages 1-30, 31-60, and 61-90.
+
+If you're splitting to hit a size target rather than a page count, start from roughly the midpoint and adjust after checking the output size. Most PDF splitters show page counts, not file sizes, so you may need one round of trial and error if your goal is a specific MB threshold.
+
+## Should you split or compress?
+
+Splitting and compressing solve different problems, and picking the wrong one wastes time and may not help.
+
+**Split when:**
+- The PDF is a text document, form, invoice, or contract.
+- You need to send specific sections to different people.
+- The file is large because it has many pages, not because of heavy images.
+
+**Compress when:**
+- The PDF is full of scanned pages or photos.
+- You need to keep it as one file.
+- Some reduction in image quality is acceptable.
+
+One thing to know: compressing a text-only PDF almost always makes it bigger, not smaller. The [Compress PDF tool](/compress-pdf) rasterizes every page to a JPEG image, which is great for photo-heavy files and harmful for text-based ones. In measured testing, a 20-page text report grew from 23.5 KB to 1.4 MB after compression at the medium setting. If your PDF is a contract, a report, or a form, splitting (or zipping) is the right fix for a size problem.
+
+## How to split a PDF without Adobe Acrobat
+
+You don't need Acrobat. Adobe's desktop app and online service both require a subscription or a sign-in to use splitting features.
+
+Browser-based tools handle the same task for free. The Split PDF tool here uses [pdf-lib](https://github.com/Hopding/pdf-lib), an open-source JavaScript library that runs the page extraction locally in your browser. No server processes your file. That matters if you're working with anything sensitive, like medical records, legal documents, or financial statements.
+
+## Can I split a PDF on iPhone or Android?
+
+Yes. Because the processing happens inside the browser rather than on a remote server, browser-based splitters work on mobile the same way they do on desktop. Open the tool in Safari on iPhone or Chrome on Android, pick your file from the Files app or camera roll, and download the result. No app installation needed.
+
+## What happens to form fields when you split a PDF?
+
+Form fields travel with their pages. If your PDF has a text field on page 4, that field will be intact in whatever output file contains page 4. Splitting is safe for forms.
+
+This is worth knowing because merging PDFs behaves differently. When you merge two PDFs with form fields, the fields are lost, and only the page content survives. If you're working with filled-in forms, splitting is the safer operation.
+
+## Splitting a PDF for email vs cloud storage
+
+For email, keep each output file under 18 MB. Both Gmail and Outlook cap at 25 MB, but Base64 encoding adds overhead in transit, so a file that reads as 20 MB on disk can push over the limit. Staying under 18 MB gives you a comfortable buffer.
+
+For cloud storage or file upload portals, check the platform's stated limit first. Many systems measure the raw file size, not the encoded version, so a file just under their cap usually goes through without issue.
+
+For large documents like legal case files, technical manuals, or ebook-length reports, splitting by chapter or section has a practical benefit beyond size: each output file opens and searches faster because the reader loads only the pages that matter.
