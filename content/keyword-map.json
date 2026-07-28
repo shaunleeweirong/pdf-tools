@@ -247,7 +247,8 @@
       "targetQuery": "how to watermark a pdf free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-watermark-a-pdf-free"
     },
     {
       "id": "blog-compress-pdf-iphone",
@@ -340,141 +341,67 @@
       "status": "idea"
     },
     {
-      "id": "blog-delete-pages-pdf",
+      "id": "blog-compare-pdf",
       "surface": "blog",
-      "targetQuery": "how to delete pages from a pdf free",
+      "targetQuery": "how to compare two pdf files free",
       "intent": "informational",
       "priority": 2,
-      "status": "published",
-      "slug": "how-to-delete-pages-from-a-pdf-free",
-      "url": "/blog/how-to-delete-pages-from-a-pdf-free"
-    },
-    {
-      "id": "blog-add-page-numbers",
-      "surface": "blog",
-      "targetQuery": "how to add page numbers to a pdf free",
-      "intent": "informational",
-      "priority": 2,
-      "status": "published",
-      "slug": "how-to-add-page-numbers-to-a-pdf-free",
-      "url": "/blog/how-to-add-page-numbers-to-a-pdf-free"
-    },
-    {
-      "id": "blog-sign-without-printing",
-      "surface": "blog",
-      "targetQuery": "how to sign a pdf without printing",
-      "intent": "informational",
-      "priority": 2,
-      "status": "published",
-      "slug": "how-to-sign-a-pdf-without-printing",
-      "url": "/blog/how-to-sign-a-pdf-without-printing"
-    },
-    {
-      "id": "blog-fill-pdf-form-free",
-      "surface": "blog",
-      "targetQuery": "how to fill out a pdf form without adobe",
-      "intent": "informational",
-      "priority": 2,
-      "status": "published",
-      "slug": "how-to-fill-out-a-pdf-form-without-adobe",
-      "url": "/blog/how-to-fill-out-a-pdf-form-without-adobe"
-    },
-    {
-      "id": "blog-watermark-pdf-free",
-      "surface": "blog",
-      "targetQuery": "how to watermark a pdf free",
-      "intent": "informational",
-      "priority": 3,
       "status": "idea"
     },
     {
-      "id": "blog-compress-pdf-iphone",
+      "id": "blog-extract-images",
       "surface": "blog",
-      "targetQuery": "compress pdf on iphone free",
+      "targetQuery": "how to extract images from a pdf free",
       "intent": "informational",
       "priority": 2,
-      "status": "published",
-      "slug": "compress-pdf-on-iphone-free",
-      "url": "/blog/compress-pdf-on-iphone-free"
-    },
-    {
-      "id": "blog-crop-pdf-pages",
-      "surface": "blog",
-      "targetQuery": "how to crop pdf pages free",
-      "intent": "informational",
-      "priority": 3,
       "status": "idea"
     },
     {
-      "id": "blog-edit-pdf-text-free",
+      "id": "blog-compress-windows",
       "surface": "blog",
-      "targetQuery": "how to edit pdf text free without acrobat",
+      "targetQuery": "compress pdf on windows free",
       "intent": "informational",
       "priority": 2,
-      "status": "published",
-      "slug": "how-to-edit-pdf-text-free-without-acrobat",
-      "url": "/blog/how-to-edit-pdf-text-free-without-acrobat"
+      "status": "idea"
     },
     {
-      "id": "blog-extract-pages",
+      "id": "blog-add-text-pdf",
       "surface": "blog",
-      "targetQuery": "how to extract pages from a pdf free",
+      "targetQuery": "how to add text to a pdf free",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "how-to-extract-pages-from-a-pdf-free"
+      "status": "idea"
     },
     {
-      "id": "blog-protect-pdf-password",
+      "id": "blog-pdf-editor-online",
       "surface": "blog",
-      "targetQuery": "how to password protect a pdf free",
-      "intent": "informational",
-      "priority": 2,
-      "status": "published",
-      "slug": "how-to-password-protect-a-pdf-free",
-      "url": "/blog/how-to-password-protect-a-pdf-free"
-    },
-    {
-      "id": "blog-compress-pdf-android",
-      "surface": "blog",
-      "targetQuery": "compress pdf on android free",
-      "intent": "informational",
-      "priority": 2,
-      "status": "pending",
-      "slug": "compress-pdf-on-android-free"
-    },
-    {
-      "id": "blog-ilovepdf-alternatives",
-      "surface": "blog",
-      "targetQuery": "ilovepdf alternatives free no sign up",
+      "targetQuery": "best free pdf editor online no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "published",
-      "slug": "ilovepdf-alternatives-free-no-sign-up",
-      "url": "/blog/ilovepdf-alternatives-free-no-sign-up"
+      "status": "idea"
     },
     {
-      "id": "blog-reorder-pdf-pages",
+      "id": "blog-pdf-to-jpg-free",
       "surface": "blog",
-      "targetQuery": "how to rearrange pages in a pdf free",
+      "targetQuery": "how to convert pdf to jpg free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-flatten-without-acrobat",
+      "surface": "blog",
+      "targetQuery": "how to flatten a pdf without acrobat",
       "intent": "informational",
       "priority": 3,
       "status": "idea"
     },
     {
-      "id": "blog-flatten-pdf-form",
+      "id": "blog-remove-blank-pages",
       "surface": "blog",
-      "targetQuery": "how to flatten a pdf form free",
+      "targetQuery": "how to remove blank pages from a pdf free",
       "intent": "informational",
-      "priority": 3,
-      "status": "idea"
-    },
-    {
-      "id": "blog-n-up-pdf",
-      "surface": "blog",
-      "targetQuery": "how to print pdf 2 pages per sheet free",
-      "intent": "informational",
-      "priority": 3,
+      "priority": 2,
       "status": "idea"
     }
   ]
