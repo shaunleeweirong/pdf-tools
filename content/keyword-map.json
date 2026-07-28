@@ -346,7 +346,8 @@
       "targetQuery": "how to compare two pdf files free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-compare-two-pdf-files-free"
     },
     {
       "id": "blog-extract-images",
