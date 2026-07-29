@@ -365,8 +365,9 @@
       "targetQuery": "compress pdf on windows free",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "compress-pdf-on-windows-free"
+      "status": "published",
+      "slug": "compress-pdf-on-windows-free",
+      "url": "/blog/compress-pdf-on-windows-free"
     },
     {
       "id": "blog-add-text-pdf",
