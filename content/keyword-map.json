@@ -408,6 +408,71 @@
       "targetQuery": "how to remove blank pages from a pdf free",
       "intent": "informational",
       "priority": 2,
+      "status": "pending",
+      "slug": "how-to-remove-blank-pages-from-a-pdf-free"
+    },
+    {
+      "id": "blog-compress-pdf-whatsapp",
+      "surface": "blog",
+      "targetQuery": "compress pdf for whatsapp",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-edit-pdf-metadata",
+      "surface": "blog",
+      "targetQuery": "how to edit pdf metadata free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-add-image-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to add an image to a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-jpg-iphone",
+      "surface": "blog",
+      "targetQuery": "convert pdf to jpg on iphone free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-rotate-one-page",
+      "surface": "blog",
+      "targetQuery": "how to rotate one page in a pdf free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-reduce-pdf-mac",
+      "surface": "blog",
+      "targetQuery": "how to reduce pdf file size on mac free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-adobe-alternatives",
+      "surface": "blog",
+      "targetQuery": "best free adobe acrobat alternatives no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-split-by-page-number",
+      "surface": "blog",
+      "targetQuery": "how to split a pdf by page number free",
+      "intent": "informational",
+      "priority": 3,
       "status": "idea"
     }
   ]
