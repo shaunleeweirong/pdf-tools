@@ -1,0 +1,96 @@
+---
+title: "How to Extract Images from a PDF Free"
+description: "Get every image out of a PDF in your browser, no account and no file upload. Works on scanned PDFs and native PDFs alike."
+date: "2026-07-29"
+keywords: ["how to extract images from a pdf free", "extract images from pdf", "save images from pdf", "pdf image extractor", "pdf to image free", "pull images from pdf"]
+toolSlugs: ["extract-images", "pdf-to-jpg", "split-pdf"]
+faq:
+  - q: "Does extracting images from a PDF reduce quality?"
+    a: "Not with a page-rendering approach. The tool renders each page at double the screen resolution and saves it as a lossless PNG, so what you get is a faithful high-resolution capture of each page."
+  - q: "Can I extract images from a scanned PDF?"
+    a: "Yes. A scanned PDF is a photograph wrapped in a PDF container. The Extract Images tool renders each page as-is, so scanned documents work just as well as native PDFs."
+  - q: "Do I need an account or software to extract images from a PDF?"
+    a: "No. The Extract Images tool runs entirely in your browser. No sign-up, no installation, and your file is never sent to a server."
+  - q: "What image format does the tool output?"
+    a: "Each page is saved as a PNG file. PNG uses lossless compression, which preserves every pixel of the original without the quality loss that JPEG re-encoding would introduce."
+  - q: "Can I extract images from just one or two pages, not the whole PDF?"
+    a: "Yes. Use the Split PDF tool to pull out the pages you want first, then run Extract Images on that shorter file."
+---
+
+You can extract images from a PDF for free, right in your browser, without installing anything or creating an account. Open the [Extract Images tool](/extract-images), drop in your PDF, and download a ZIP of PNG files, one per page.
+
+That covers most situations in under a minute. The sections below explain why the method matters, what happens with scanned PDFs, and how to handle a few common variations.
+
+## Why extracting images from a PDF is trickier than it looks
+
+A PDF isn't a flat image file. Depending on how it was made, a PDF stores its visual content in one of two ways.
+
+Native PDFs (made from Word, InDesign, Google Docs, or a similar app) contain individual image objects embedded inside the file's internal structure. A single page might hold several separate images alongside vector text and graphics.
+
+Scanned PDFs are different. When you scan a physical page, the scanner takes a photograph and wraps it in a PDF container. The whole page is one raster image. There is no separate set of image objects inside.
+
+This distinction matters because tools that extract raw image objects from a PDF's internal structure work fine on native documents but produce nothing on scanned ones. Tools that render each page as a new image work on both types, because they capture what you see rather than digging through the file's structure. The [Extract Images tool](/extract-images) uses page rendering via [PDF.js](https://mozilla.github.io/pdf.js/), Mozilla's open-source PDF renderer, so it handles both kinds without you needing to know which you have.
+
+## The fastest way to extract images from a PDF free
+
+Here is the whole process:
+
+1. Go to the [Extract Images tool](/extract-images).
+2. Drag your PDF onto the drop zone, or click to select it from your device.
+3. The tool renders each page in your browser and packages the results into a ZIP file.
+4. Download the ZIP. Inside you'll find one PNG per page, named image-1.png, image-2.png, and so on.
+
+That's it. No progress bar to wait on while a server handles your file, no email confirmation, no watermark on the output.
+
+## Your file never leaves your device
+
+Most online PDF tools upload your document to a server, process it there, and then send the results back. Some delete the file after a set time; others are less specific about it. For confidential documents, whether a legal contract, medical record, or anything with personal details, that upload is worth thinking about.
+
+The Extract Images tool processes everything locally using JavaScript and WebAssembly in your browser. The PDF data never leaves your machine. You can verify this by opening your browser's developer tools, going to the Network tab, and watching what happens when you run the tool. Nothing is sent out.
+
+## Scanned PDFs vs native PDFs: what to expect
+
+If your PDF is a scan, the output will match what the scanner captured. Resolution is set by the scanner, not by the extraction tool. A scan at 300 DPI will come out looking like a 300 DPI image. A scan at 72 DPI will look fuzzy no matter what you do with it afterward, because the detail simply wasn't recorded.
+
+If your PDF is a native document with embedded images, the output is a rendering of the full page at double the standard viewport resolution. The text, graphics, and images are all captured together in a single PNG per page. If you need the images isolated from the surrounding text, a command-line utility like [pdfimages](https://en.wikipedia.org/wiki/Pdfimages) (part of the open-source Poppler library) extracts raw image objects and is worth looking into if that level of control matters to you.
+
+For most use cases, grabbing the page as a clean PNG is exactly what's needed.
+
+## How to get images from specific pages only
+
+If you have a 60-page report and you only want the charts from pages 12 to 15, processing the whole document and sorting through 60 PNGs wastes time.
+
+The faster way:
+
+1. Open the [Split PDF tool](/split-pdf) and enter the page range you want (for example, 12-15).
+2. Download the resulting 4-page PDF.
+3. Run that file through the [Extract Images tool](/extract-images).
+
+You get 4 PNGs instead of 60, already labeled image-1.png through image-4.png.
+
+## PNG output and what to do if you need JPEG
+
+The tool saves images as PNG, which is a lossless format. Every pixel is preserved exactly. That's the right choice for logos, diagrams, and anything with text or sharp edges, where JPEG compression would introduce visible artifacts at boundaries.
+
+For photographs going onto a website, JPEG usually makes more sense because [JPEG compression](https://en.wikipedia.org/wiki/JPEG) produces much smaller files with minimal visible quality loss on smooth gradients and naturalistic colours. If you need JPEGs, you have two options:
+
+- Use the [PDF to JPG tool](/pdf-to-jpg), which renders pages as JPEG files.
+- Open the PNG files in any image editor (Paint, Preview on Mac, GIMP, etc.) and export as JPEG.
+
+Either takes about 30 seconds.
+
+## What if the extracted images look low resolution?
+
+If the PNGs look blurry or pixelated, the source PDF is the reason. Two common causes:
+
+The PDF was made from compressed images. If someone exported a presentation to PDF and used low-quality settings, the images were already small when they were embedded. Extracting them can only give you what was stored.
+
+The PDF is a low-resolution scan. Consumer flatbed scanners default to 150 DPI, which looks acceptable on screen but prints poorly. If you need sharper output, the original scan would need to be redone at 300 DPI or higher.
+
+No extraction tool can recover detail that was never in the file. If the quality isn't there, go back to the source material if you can.
+
+## Copy-paste vs. extraction: when to use each
+
+Right-clicking an image in a PDF viewer and selecting Copy or Save Image works fine when you need one image from a document you're already reading. It's slower when you need everything, and it doesn't work reliably on scanned PDFs (you tend to get the whole page rather than the image).
+
+For more than a handful of images, or for any scanned document, the [Extract Images tool](/extract-images) is faster and gives you clean individual files without the manual clicking.
