@@ -303,8 +303,9 @@
       "targetQuery": "compress pdf on android free",
       "intent": "informational",
       "priority": 2,
-      "status": "pending",
-      "slug": "compress-pdf-on-android-free"
+      "status": "published",
+      "slug": "compress-pdf-on-android-free",
+      "url": "/blog/compress-pdf-on-android-free"
     },
     {
       "id": "blog-ilovepdf-alternatives",
