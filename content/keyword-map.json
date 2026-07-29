@@ -382,8 +382,9 @@
       "targetQuery": "best free pdf editor online no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "pending",
-      "slug": "best-free-pdf-editor-online-no-sign-up"
+      "status": "published",
+      "slug": "best-free-pdf-editor-online-no-sign-up",
+      "url": "/blog/best-free-pdf-editor-online-no-sign-up"
     },
     {
       "id": "blog-pdf-to-jpg-free",
