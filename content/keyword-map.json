@@ -445,7 +445,8 @@
       "targetQuery": "convert pdf to jpg on iphone free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "convert-pdf-to-jpg-on-iphone-free"
     },
     {
       "id": "blog-rotate-one-page",
