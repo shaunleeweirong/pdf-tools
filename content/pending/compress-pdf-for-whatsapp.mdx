@@ -1,0 +1,84 @@
+---
+title: "How to Compress a PDF for WhatsApp"
+description: "WhatsApp allows documents up to 2 GB, but large PDFs load slowly on mobile. Here's when to compress, what level to pick, and what to do instead for text PDFs."
+date: "2026-07-29"
+keywords: ["compress pdf for whatsapp", "pdf too large for whatsapp", "reduce pdf size for whatsapp", "send large pdf whatsapp", "whatsapp pdf size limit"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is the PDF file size limit on WhatsApp?"
+    a: "WhatsApp allows document attachments up to 2 GB, so most PDFs will send without issue. The old 16 MB limit applies only to videos shared via the camera roll, not to documents. If your PDF is slow to reach the other person, that's a mobile-data speed problem rather than a size rejection."
+  - q: "Will compressing a PDF make it look worse on WhatsApp?"
+    a: "The in-browser compressor rasterizes each page to JPEG. For scan PDFs and image-heavy files, the result looks fine on a phone screen and the file is significantly smaller. For text-only PDFs, the compressed file is actually larger than the original, so compression is the wrong tool for those."
+  - q: "How do I compress a PDF on my phone before sending on WhatsApp?"
+    a: "Open the Compress PDF tool in your phone's browser, upload the file, pick a compression level, and download the result. Then open WhatsApp, tap the attachment icon, choose Document, and select the compressed file from your Downloads folder."
+  - q: "Should I compress a PDF twice to make it even smaller?"
+    a: "No. Running a compressed PDF through the compressor a second time at the same level makes it nearly twice as large. If Medium compression isn't enough, start from the original file and try High instead."
+  - q: "What if my PDF is still too large after compression?"
+    a: "For large text PDFs, compression increases the file size rather than reducing it. Use the Split PDF tool to break the document into smaller sections and send them as separate messages, or share a link from Google Drive or Dropbox."
+---
+
+You can compress a scan-heavy or image-heavy PDF down to a fraction of its size before sending on WhatsApp. Open the [Compress PDF tool](/compress-pdf), upload the file, choose Medium or High, and download the result. It runs in your browser and your file never leaves your device.
+
+That said, there's an important caveat before you start: compression works for image-based PDFs and actively harms text-based PDFs. Read on for a minute to make sure you're using the right tool for your file.
+
+## Does WhatsApp have a PDF size limit?
+
+WhatsApp's document limit is [2 GB](https://faq.whatsapp.com/), which is far more than any PDF most people will send. That older 16 MB restriction only applies to videos shared from the camera roll, not to documents. When you send a PDF through the document attachment (the paperclip icon), it uses the higher limit.
+
+So if your transfer is failing or taking forever, the culprit is usually mobile data speed rather than WhatsApp blocking the file. A 50 MB PDF can take a couple of minutes to arrive over a spotty 4G connection, and it chews through the recipient's data allowance. That's why compressing before you send is still worth it, even though the technical limit is generous.
+
+## When compression helps (and when it makes things worse)
+
+This is the detail most guides skip, and it matters.
+
+The in-browser compressor works by rasterizing each page to [JPEG](https://en.wikipedia.org/wiki/JPEG). That's a very efficient trade-off when pages are photographs or scans, because the content is already image-like. A six-page image deck that measured 913.4 KB before compression came out at 175.6 KB at the highest setting, a reduction of 80.8%. At Medium it was 315.3 KB, still a 65.5% drop.
+
+Run the same process on a text document, and the story is completely different. A 20-page text report that was 23.5 KB grew to 1,400.8 KB after Medium compression. Text glyphs stored as vector outlines in a [PDF](https://en.wikipedia.org/wiki/PDF) are tiny. Text stored as a JPEG photograph of those same glyphs is not. The compressor turns the lean original into a bloated scan.
+
+**Use compression if your PDF is:**
+- Scanned pages (a signed contract photographed on your phone, a fax, a hand-filled form)
+- A product catalogue, photo album, or deck where each page is mostly an image
+- An exported set of screenshots or photos
+
+**Skip compression if your PDF is:**
+- A report, invoice, or contract created in Word, Google Docs, or a similar app
+- A spreadsheet export or presentation made in software rather than scanned
+- Any document where the pages are primarily text
+
+For large text PDFs, use the [Split PDF tool](/split-pdf) to break the document into smaller sections and send them as separate WhatsApp messages.
+
+## How to compress a PDF for WhatsApp, step by step
+
+This works in any browser on iPhone or Android. No app to install, no account required.
+
+1. **Open the tool.** Go to [Compress PDF](/compress-pdf) in Safari, Chrome, or Firefox on your phone.
+2. **Upload your file.** Tap the upload area and select your PDF from the Files app (iPhone) or your file manager (Android).
+3. **Pick a compression level.** Medium is a good default for most scan PDFs. Try High if the file is very large and you're fine with some quality trade-off.
+4. **Download the result.** Tap Download. On iPhone the file goes to your iCloud Drive or Downloads folder. On Android it goes to Downloads.
+5. **Send it in WhatsApp.** Open WhatsApp, tap the attachment icon (the paperclip or the plus sign), choose Document, and find the compressed file. Tap Send.
+
+The whole process takes under a minute for most files.
+
+## Which compression level should I use?
+
+Here's how each level performed on a 913.4 KB six-page image deck:
+
+| Level | Output size | Reduction |
+|---|---|---|
+| Low (best quality) | 703.5 KB | -23.0% |
+| Medium | 315.3 KB | -65.5% |
+| High (smallest file) | 175.6 KB | -80.8% |
+
+For WhatsApp, Medium is the right choice most of the time. It reduces the file to roughly a third of its original size, and the result looks fine on a phone screen. Try High if you need the smallest possible file and visual sharpness matters less than transfer speed.
+
+One thing to avoid: don't compress the same file twice hoping to squeeze out more. Feeding the Medium output back through the compressor at Medium produced a file nearly twice as large as the single-pass result, going from 315.3 KB up to 598.9 KB. That happens because re-encoding an already-compressed JPEG adds artifacts and overhead rather than removing them. If Medium isn't small enough, start from the original and switch to High.
+
+## What if compression doesn't help enough?
+
+If you're dealing with a large text PDF, compression isn't the answer. A few alternatives:
+
+- **Split it.** Use [Split PDF](/split-pdf) to extract chapters or sections and send them as separate files across multiple messages. Most people find this easier to read anyway.
+- **Share a link.** Upload the PDF to Google Drive or Dropbox and share the link in WhatsApp. The recipient can download it on Wi-Fi.
+- **Re-export at lower resolution.** If the PDF was created from high-resolution images (a design file, a print-ready brochure), re-exporting at screen resolution before you hit the compressor can cut the size significantly.
+
+For scan-heavy and photo-rich PDFs, a single pass at Medium or High will usually take care of it. The tool runs entirely in your browser, so the original file stays on your device throughout.

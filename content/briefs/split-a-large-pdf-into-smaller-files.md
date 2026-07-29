@@ -55,4 +55,4 @@ Blog how-to, ~900 words. Answer-first intro. One H2 per question. How-to numbere
 ## Outbound links
 
 - [Gmail attachment limits](https://support.google.com/mail/answer/6584)
-- [pdf-lib open source library](https://github.com/Hopding/pdf-lib)
+- [pdf-lib open source library](https://www.npmjs.com/package/pdf-lib)

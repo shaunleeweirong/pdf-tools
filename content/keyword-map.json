@@ -420,7 +420,8 @@
       "targetQuery": "compress pdf for whatsapp",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-whatsapp"
     },
     {
       "id": "blog-edit-pdf-metadata",
