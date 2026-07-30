@@ -266,7 +266,8 @@
       "targetQuery": "how to crop pdf pages free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-crop-pdf-pages-free"
     },
     {
       "id": "blog-edit-pdf-text-free",
