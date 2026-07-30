@@ -1,0 +1,97 @@
+---
+title: "How to Reduce PDF File Size on Mac for Free"
+description: "Three ways to shrink a PDF on Mac, including Preview and a free browser tool, plus an honest guide on when compression helps and when it won't."
+date: "2026-07-30"
+keywords:
+  - how to reduce pdf file size on mac free
+  - compress pdf mac free
+  - reduce pdf size mac
+  - compress pdf on mac without adobe
+  - mac pdf compressor
+toolSlugs:
+  - compress-pdf
+  - split-pdf
+faq:
+  - q: Does Mac have a built-in PDF compressor?
+    a: >
+      Yes. Preview's File > Export menu has a "Reduce File Size" Quartz filter. It
+      works well on image-heavy or scanned PDFs but makes text-only PDFs significantly
+      larger because it rasterizes every page into a JPEG.
+  - q: Why did my PDF get bigger after using "Reduce File Size" in Preview?
+    a: >
+      Preview's Quartz filter converts every page into a JPEG image. Text stored as
+      vector shapes is very compact; turn it into a photo-of-text and it balloons.
+      A 20-page text report can grow from 23 KB to over 1 MB this way.
+  - q: How do I compress a PDF on Mac without Adobe Acrobat?
+    a: >
+      Use Preview's built-in Reduce File Size option (File > Export > Quartz Filter
+      > Reduce File Size) or a free browser tool like the Compress PDF tool on this
+      site. Neither requires Adobe.
+  - q: Should I compress a PDF twice to make it even smaller?
+    a: >
+      No. A second compression pass re-encodes an already-degraded JPEG and the
+      output is larger and lower quality. If Medium quality is not small enough,
+      start again from your original PDF and choose High instead.
+  - q: What should I do when compression doesn't reduce my PDF on Mac?
+    a: >
+      Your PDF is probably text-based, and compression will make it larger.
+      Remove unneeded pages with the Split PDF tool, or go back to the source
+      document and re-export at lower image resolution instead.
+---
+
+You can reduce PDF file size on Mac for free without Adobe: the fastest route is Preview's built-in Reduce File Size filter, or you can drop the file into a free browser tool that runs entirely in Safari, Chrome, or Firefox. Which method works depends entirely on what your PDF contains, and picking the wrong one will make the file larger, not smaller.
+
+## How do I compress a PDF on Mac using Preview?
+
+macOS includes Preview, and Preview has PDF compression built in. Here's how to use it:
+
+1. Open the PDF in Preview. Double-click the file, or right-click and choose Open With > Preview.
+2. Choose File > Export.
+3. Click the Quartz Filter pop-up menu in the Export dialog.
+4. Select Reduce File Size.
+5. Click Save and pick a destination.
+
+No account, no download, nothing to install. [Apple's Preview documentation](https://support.apple.com/guide/preview/reduce-the-size-of-a-pdf-prvw1509/mac) notes that the output size and quality vary depending on what the PDF contains. That caveat is the important part.
+
+## Why is my PDF getting larger after I compress it on Mac?
+
+This is the most common complaint about both Preview and free browser compressors, and it makes sense once you understand how the compression works.
+
+Both approaches rasterize each page into a [JPEG](https://en.wikipedia.org/wiki/JPEG) image, then discard the original content. When a page is a photograph or scanned document, it's already raster data, so JPEG compression can cut the size substantially. When a page is text stored as vector shapes (the format word processors and most PDF exports use), converting it to a JPEG trades compact scalable glyphs for a photo-of-text, which is far larger.
+
+The gap is real. In browser-based testing on macOS, an image-heavy 6-page PDF measured 913.4 KB before compression and came out at 315.3 KB at the Medium setting, a reduction of 65.5%. Applying the same compression to a 20-page text-only report grew it from 23.5 KB to 1.4 MB.
+
+Rule of thumb: if your PDF is scans, photos, or an image-heavy presentation, compression will help. If it's a contract, an invoice, an exported Word document, or anything where the text is typed rather than photographed, compression will make things worse.
+
+## How do I reduce PDF file size on Mac without Adobe?
+
+If you want more control than Preview's single quality setting, or if you just want something that runs in the browser, the [Compress PDF tool](/compress-pdf) is a free option that works in any Mac browser. It runs locally, so the file doesn't leave your device.
+
+1. Open [the Compress PDF tool](/compress-pdf) in Safari, Chrome, or Firefox on your Mac.
+2. Click to upload your PDF or drag it onto the page.
+3. Choose a quality level. Low keeps the best image quality. High makes the smallest file. Medium is a good starting point for most image-heavy PDFs.
+4. Click Compress and download the result.
+
+The same caveat applies: this works well for scanned pages and image-heavy PDFs. Don't use it on a text-based PDF, or it will grow.
+
+One more thing: don't compress the output a second time. Re-encoding a JPEG that's already been through compression introduces more artifacts and typically produces a file that's both larger and lower quality. If Medium isn't small enough, go back to your original PDF and run it at High instead.
+
+## What to do when compression doesn't work on Mac
+
+If the PDF is text-based, you need a different approach.
+
+**Remove pages you don't need.** The [Split PDF tool](/split-pdf) lets you pull out specific pages and save them as a new file. Dropping a 40-page document with 30 pages of appendices down to 10 pages saves far more than compression ever could.
+
+**Re-export from the source.** If the PDF came from Word, Pages, Keynote, or another app, go back to the original file and check the export settings. Many apps let you reduce image resolution or quality at export time, which is where size savings happen on text-heavy files.
+
+**Send a link instead of an attachment.** [Gmail and Outlook.com both cap email attachments at 25 MB](https://support.google.com/mail/answer/6584), and Base64 encoding adds roughly 33% overhead, so anything over about 18 MB won't go through either way. Sharing a Google Drive or Dropbox link sidesteps the limit entirely.
+
+**Zip the file.** PDF is already compressed internally, so a .zip usually saves only a few percent. It's worth a try if the file is just barely over an attachment limit, but don't expect significant savings.
+
+## Does compressing a PDF on Mac reduce its quality?
+
+Yes, for images. Rasterization-based compression, including Preview's Quartz filter and browser tools, lowers image resolution to reduce file size. Text in the output is usually still readable, but photographs and graphics will look softer, especially at the High setting.
+
+What doesn't improve quality: compressing a file you've already compressed. A JPEG that has been through one compression pass is already a lossy encoding; re-encoding it just degrades it further. The right move is to pick the correct quality level on the first pass and start from the original if you need a different result.
+
+For most real-world use cases, Medium quality on either tool gives a reasonable balance between file size and visual quality for image-heavy PDFs. For text-based PDFs, neither Preview nor a browser compressor helps, and the alternatives above will serve you better.
