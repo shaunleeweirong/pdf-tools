@@ -1,0 +1,99 @@
+---
+title: "How to Add an Image to a PDF Free"
+description: "Add a photo, logo, or signature to any PDF free in your browser. No account, no Acrobat needed, and your files never leave your device."
+date: "2026-07-30"
+keywords: ["how to add an image to a pdf free", "insert image into pdf", "add photo to pdf", "add image to pdf without acrobat", "insert picture into pdf free"]
+toolSlugs: ["jpg-to-pdf", "merge-pdf", "sign-pdf"]
+faq:
+  - q: "Can I add an image to a PDF without Adobe Acrobat?"
+    a: "Yes. Free browser-based tools let you overlay an image on any page, or you can convert the image to a PDF page and merge it into your document. No software download or account required."
+  - q: "How do I add an image as a new page in a PDF?"
+    a: "Convert the image to a one-page PDF using an Images to PDF tool, then merge that result with your original document using a Merge PDF tool. The finished file has your image on its own page."
+  - q: "Can I add my signature as an image to a PDF?"
+    a: "Yes. A Sign PDF tool lets you draw or upload a signature and place it on the correct spot on the page without converting anything first."
+  - q: "Will adding an image make the PDF file much larger?"
+    a: "The file grows by roughly the size of the image itself. Merging two PDFs together adds almost nothing beyond what the original files already total."
+  - q: "Does adding an image to a PDF work on a Mac without extra software?"
+    a: "Yes. Mac's Preview app lets you add any image as a new page (Edit > Insert > Page from File) or paste a copied image onto an existing page using the markup toolbar."
+---
+
+You can add an image to a PDF free, right in your browser, without Adobe Acrobat and without creating an account. Which method works best depends on what you're actually trying to do: add the image as a new page, overlay it on an existing page, or stamp a signature somewhere specific.
+
+## Two ways images get added to PDFs
+
+Most requests fall into one of two categories, and they need different approaches.
+
+**Image as a new page.** You have a scanned document, a photo, or a diagram and you want it included as an additional page in an existing PDF. This is common for job applications, portfolios, contracts, and multi-page reports.
+
+**Image overlaid on an existing page.** You want a company logo in the corner, a photo mid-document, or a signature on a specific line on an existing page. This requires a tool that can position a graphic over the live content of a page.
+
+The method is different for each, so it's worth knowing which one you need before starting.
+
+## Add an image as a new page (browser-based, no upload)
+
+If you want the image on its own page inside the PDF, a two-step approach works in any browser and keeps your files on your device the whole time.
+
+**Step 1: Convert the image to a PDF page.**
+
+Open the [Images to PDF tool](/jpg-to-pdf), drop in your JPG or PNG, and download the result. You get a one-page PDF containing your image.
+
+**Step 2: Merge it into your document.**
+
+Go to the [Merge PDF tool](/merge-pdf), add your original PDF and the image PDF from step 1, put them in the order you want, then download. The merged file comes in at almost exactly the combined size of both inputs. Merging PDFs doesn't inflate the output.
+
+Both tools run in your browser. Files don't leave your device, and there's no account to create.
+
+**Need the image page to appear in the middle of the document?** After merging, use the [Organize PDF](/organize-pdf) tool. It shows all pages visually and lets you drag them into any order before downloading.
+
+## Add an image overlaid on an existing PDF page
+
+Placing an image directly onto an existing page (like a logo in the top-right corner) requires a tool that supports image insertion into a page's content. Our current [Edit PDF](/edit-pdf) tool handles text edits and annotations, but doesn't yet support dropping in images. For this specific job, a free browser-based editor that does support it is the right pick.
+
+A couple of options that process files locally in your browser:
+
+- **AddImageToPDF.com**: upload your PDF, click "Add Image," place and resize it on the page, and download.
+- **PDFCandy's add-image tool**: similar flow, also browser-based.
+
+Under the hood, [PDF image objects](https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf) are defined in the ISO 32000 specification as XObject streams embedded in a page's content. Any compliant editor handles them the same way.
+
+## Add a signature to a PDF
+
+If what you actually want is a signature on a document rather than a general photo or logo, skip the image route entirely. The [Sign PDF tool](/sign-pdf) lets you draw your signature directly on the page or type a name and position it wherever it needs to go. It runs in your browser, it's faster than converting a photo of a signature, and the result is cleaner.
+
+## On a Mac, use Preview (free and built-in)
+
+Mac users have a useful option already installed. [Apple Preview](https://support.apple.com/guide/preview/welcome/mac) handles both cases.
+
+**Adding an image as a new page:**
+1. Open your PDF in Preview.
+2. Go to Edit > Insert > Page from File.
+3. Choose your image. Preview converts it to a page and inserts it immediately.
+
+**Pasting an image onto an existing page:**
+1. Open your image in Preview, select all with Command + A, and copy.
+2. Switch to the PDF in Preview. Click the markup toolbar's signature icon, then paste (Command + V). The image appears as a movable stamp on the page.
+3. Drag and resize it, then close the document. Preview saves automatically.
+
+This approach is good for quick adjustments without installing anything extra. For batch work or complex positioning, a dedicated browser editor gives more control.
+
+## On Windows, what's free?
+
+Windows doesn't include a PDF image editor by default. The practical free options:
+
+- **Online browser tools** (AddImageToPDF.com, PDFCandy) handle the overlay case in any browser.
+- **The jpg-to-pdf + merge approach** from above works on any OS.
+- **[LibreOffice Draw](https://www.libreoffice.org/)** is a free desktop app that opens PDFs and lets you insert images directly. It's more capable than browser editors for complex layouts, though it can occasionally reflow text in documents that use unusual fonts.
+
+## JPG vs PNG: which format should you use?
+
+JPG and PNG both work with every tool mentioned here. The difference is transparency.
+
+If your image has a transparent background (like a company logo with no white box around it), use PNG. JPEG doesn't support transparency, so a JPG version of the same logo will have a white square behind it when placed on a colored or patterned PDF page.
+
+For photos without transparency, JPG is fine and usually produces a smaller file.
+
+## File size after adding an image
+
+The PDF grows by roughly the compressed size of the image you're adding. A high-resolution photo can add several hundred kilobytes; a small logo might add only a few dozen.
+
+If you're trying to stay under an email attachment limit (Gmail and Outlook.com both cap messages at [25 MB](https://support.google.com/mail/answer/6584)), and the combined file is getting close, the [Compress PDF tool](/compress-pdf) can reduce the size of image-heavy PDFs. Just be aware that the compressor works best on files that are already image-heavy, not on text documents or forms.
