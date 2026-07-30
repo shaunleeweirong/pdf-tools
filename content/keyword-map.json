@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29",
+  "updated": "2026-07-30",
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
     {
@@ -342,7 +342,8 @@
       "targetQuery": "how to print pdf 2 pages per sheet free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-print-pdf-2-pages-per-sheet-free"
     },
     {
       "id": "blog-compare-pdf",
@@ -484,6 +485,86 @@
       "targetQuery": "how to split a pdf by page number free",
       "intent": "informational",
       "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-jpg-to-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "how to convert jpg to pdf on iphone free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-iphone",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf on iphone free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-jpg-to-pdf-multiple",
+      "surface": "blog",
+      "targetQuery": "how to combine multiple jpg into one pdf free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf24-alternatives",
+      "surface": "blog",
+      "targetQuery": "pdf24 alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-unlock-restrictions",
+      "surface": "blog",
+      "targetQuery": "how to remove restrictions from pdf free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-to-1mb",
+      "surface": "blog",
+      "targetQuery": "compress pdf to 1mb free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-sign-android",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf on android free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-protect-from-copying",
+      "surface": "blog",
+      "targetQuery": "how to protect pdf from copying free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-split-in-half",
+      "surface": "blog",
+      "targetQuery": "how to split a pdf in half free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-fill-form-iphone",
+      "surface": "blog",
+      "targetQuery": "how to fill out a pdf form on iphone free",
+      "intent": "transactional",
+      "priority": 2,
       "status": "idea"
     }
   ]
