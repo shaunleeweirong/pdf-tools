@@ -1,0 +1,95 @@
+---
+title: "How to Compress a PDF to 1MB Free"
+description: "Need a PDF under 1MB for a portal, email, or form? Compress it free in your browser. No upload, no sign-up. Works for scans and image PDFs."
+date: "2026-07-31"
+keywords:
+  - "compress pdf to 1mb free"
+  - "reduce pdf size to 1mb"
+  - "pdf too large to upload"
+  - "shrink pdf to 1mb"
+  - "compress pdf for portal upload"
+toolSlugs:
+  - "compress-pdf"
+  - "split-pdf"
+faq:
+  - q: "Can I compress any PDF to under 1MB?"
+    a: "Only if it's image-heavy, like a scan or a photo deck. Compressing a text document rasterizes each page into an image, which makes the file much larger rather than smaller. A 23.5 KB text report grew to 1.4 MB in our tests. Check whether you can select text before you compress."
+  - q: "How much can your tool compress a PDF?"
+    a: "On a 6-page image PDF (913.4 KB), High compression produced a 175.6 KB file, an 80.8% reduction. Medium produced 315.3 KB. Low produced 703.5 KB. These are real measured results, not estimates. Your results will depend on how image-heavy your PDF is."
+  - q: "Should I compress the same file twice to get it smaller?"
+    a: "No. We measured this: running an already-compressed file through a second time at the same level turned 315.3 KB into 598.9 KB. Go back to the original file and compress once at a stronger level instead."
+  - q: "Is it safe to compress a passport or payslip online?"
+    a: "With our tool, yes. Compression runs entirely in your browser tab. Your file is never sent to any server, so there's no server-side copy to be stored or leaked."
+  - q: "What if the file is still over 1MB after compression?"
+    a: "If the file has many pages, use the Split PDF tool to extract only the pages the portal actually needs, then compress that smaller file. Fewer pages means a much smaller starting point."
+  - q: "Why do portals set a 1MB limit?"
+    a: "Most upload limits were set when storage was more expensive and servers less powerful. Government, visa, and job application portals often process thousands of files a day, and lower limits keep systems fast and storage predictable. The limit is about their infrastructure, not your document quality."
+---
+
+To compress a PDF to 1MB, open the free [Compress PDF tool](/compress-pdf), drop in your file, choose High or Medium compression, and download the result. This works well for scans and image-heavy PDFs. If your PDF is a typed text document, read the check below first. Compression will make it larger, not smaller.
+
+## Why upload portals enforce a 1MB limit
+
+Job application portals, government forms, visa submissions, and university systems all commonly cap attachments at 1MB. The limit comes down to infrastructure. Many of these platforms were built when storage was expensive and servers less capable, and the ceilings were never raised as technology improved. A system handling tens of thousands of daily submissions also processes faster when every file is small.
+
+Common places you'll see this limit: job application portals, Indian government exam submissions, visa document uploads, bank KYC forms, and local government permit systems. One look at the error message "file must not exceed 1MB" and you're suddenly wondering how to halve a PDF in five minutes.
+
+## Check first: scan or text document?
+
+Before you compress anything, click your cursor on a line of text in the PDF.
+
+**If the text highlights**, it's a typed document. Text PDFs are usually already very small (a 20-page typed report is typically around 20 to 30 KB). Compressing it with an in-browser tool won't help: the tool [rasterizes](https://en.wikipedia.org/wiki/Rasterisation) every page into a JPEG image, and text stored as a photo is far larger than text stored as font data. In our own measurements, a 20-page text report at 23.5 KB came out at 1,400.8 KB after compression, roughly 60 times bigger.
+
+**If nothing highlights**, it's a scan or an image-based PDF. Compression is exactly the right tool.
+
+## How to compress an image PDF to under 1MB
+
+1. Open the [Compress PDF tool](/compress-pdf).
+2. Drop your file in or click to browse.
+3. Pick a compression level. Start with **High** if your file is several megabytes, or **Medium** if it's already close to the limit.
+4. Click **Compress PDF**.
+5. Download the result and check its size.
+
+The tool runs in your browser. Your file never leaves your device, which matters when you're uploading something sensitive like a payslip, passport copy, or government ID.
+
+Here are the actual results from our measurements on a 6-page image PDF:
+
+| Level | Before | After | Reduction |
+|---|---|---|---|
+| High (smallest) | 913.4 KB | 175.6 KB | 80.8% |
+| Medium | 913.4 KB | 315.3 KB | 65.5% |
+| Low (best quality) | 913.4 KB | 703.5 KB | 23.0% |
+
+Based on those ratios, High compression can typically get an image-heavy PDF under 1MB as long as the file starts at roughly 5MB or less. Medium works for files under about 2.9MB. If your file is bigger than that, or if one pass isn't enough, jump to the next section.
+
+## Do not compress the same file twice
+
+A common suggestion is to run the file through compression a second time to squeeze out a bit more. We tested this and it doesn't work.
+
+After one Medium pass, our 913.4 KB image PDF was 315.3 KB. Running it through again at the same level produced 598.9 KB, nearly double. At the next level up, it went to 297.8 KB, a saving of just 5.6%.
+
+The reason is that the already-rasterized page gets re-rendered and re-encoded, which adds data rather than removing it. If one pass isn't enough, go back to the **original** file and compress once at a stronger level.
+
+## What to do when compression alone isn't enough
+
+### Extract only the pages you need
+
+Most portals ask for one specific document: a certificate, a single bank statement page, or one page of a passport. If your PDF has ten pages and you only need two of them, use the [Split PDF tool](/split-pdf) to extract those pages first, then compress the result. Reducing a file from ten pages to two cuts the starting size dramatically before any compression happens.
+
+### Scan at a lower resolution from the start
+
+If you're creating the PDF by scanning a physical document, scan at 150 [DPI](https://en.wikipedia.org/wiki/Dots_per_inch) rather than 300 or 600. The file will be several times smaller before you open any tool. A clean, well-lit photo at 150 DPI is still readable; a blurry high-resolution scan is not. Scan conditions matter more than the DPI number.
+
+### Check whether the portal actually enforces the limit
+
+Some portals display a limit that was set years ago and is no longer strictly validated. If you're at 1.1MB after compression, try submitting anyway. The error message will tell you quickly if the limit is real, and you'll save time if it isn't.
+
+## Quick tip for scanned IDs and passport copies
+
+Passport copies and national ID cards have to stay legible, so compressing hard isn't always an option. The most effective approach is to start with a small source:
+
+1. Photograph or scan in good, even light at 150 DPI.
+2. Crop the image to the document itself, with no desk or background.
+3. Run one pass at High.
+
+Starting from a well-cropped, lower-resolution source almost always works better than aggressively compressing a high-resolution original. A clerk reading your passport needs the number and name to be clear; perfect detail on the national seal is not the goal.

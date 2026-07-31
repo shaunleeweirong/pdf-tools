@@ -535,7 +535,8 @@
       "targetQuery": "compress pdf to 1mb free",
       "intent": "transactional",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-to-1mb-free"
     },
     {
       "id": "blog-sign-android",
