@@ -556,7 +556,8 @@
       "targetQuery": "how to protect pdf from copying free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-protect-pdf-from-copying-free"
     },
     {
       "id": "blog-split-in-half",
@@ -571,6 +572,38 @@
       "surface": "blog",
       "targetQuery": "how to fill out a pdf form on iphone free",
       "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-android",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf on android free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-to-500kb",
+      "surface": "blog",
+      "targetQuery": "compress pdf to 500kb free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-jpg-android",
+      "surface": "blog",
+      "targetQuery": "convert pdf to jpg on android free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-add-page-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to add a page to a pdf free",
+      "intent": "informational",
       "priority": 2,
       "status": "idea"
     }
