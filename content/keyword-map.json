@@ -591,7 +591,8 @@
       "targetQuery": "compress pdf to 500kb free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-to-500kb-free"
     },
     {
       "id": "blog-pdf-to-jpg-android",
