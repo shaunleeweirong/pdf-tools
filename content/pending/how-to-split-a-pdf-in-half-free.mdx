@@ -1,0 +1,97 @@
+---
+title: "How to Split a PDF in Half Free"
+description: "Divide any PDF into two equal parts in your browser, free and no upload needed. Step-by-step guide to splitting a PDF by page count."
+date: "2026-08-01"
+keywords: ["how to split a pdf in half free", "split pdf into two parts free", "divide pdf in half", "split pdf by page count free", "split pdf free online"]
+toolSlugs: ["split-pdf", "merge-pdf"]
+faq:
+  - q: "How do I split a PDF into two equal halves?"
+    a: "Open the Split PDF tool, upload your file, and type the first half's page range (e.g. 1-20 for a 40-page document). Download, then repeat with the second range (21-40) to get the other half."
+  - q: "Does splitting a PDF reduce quality?"
+    a: "No. The tool copies page objects from the original without re-encoding them, so text stays sharp and images keep their original resolution."
+  - q: "Can I split a PDF without uploading it to a server?"
+    a: "Yes. The Split PDF tool runs entirely in your browser. Your file is never sent to any server."
+  - q: "What if my PDF has an odd number of pages?"
+    a: "Just round either way. A 51-page PDF could split at page 25 (giving parts of 25 and 26 pages) or page 26 (giving 26 and 25 pages)."
+  - q: "Can the tool cut each page of a PDF down the middle into two pages?"
+    a: "No. Split PDF divides a document by page count, not by slicing each page's layout. For double-page book scans, you need a page-cropping tool built for that task."
+  - q: "What does the downloaded file look like?"
+    a: "The tool packages your output PDFs into a ZIP file (split.zip). Open the ZIP to get the individual PDF files inside."
+---
+
+Splitting a PDF in half means dividing its pages into two separate files. If you have a 60-page report and need the first 30 pages in one document and the last 30 in another, the [Split PDF tool](/split-pdf) handles this free, in your browser, with no sign-up required.
+
+## What does "split a PDF in half" actually mean?
+
+The phrase gets used two different ways, and knowing which one you need saves time.
+
+**Splitting by page count** is what most people mean. A document with 80 pages becomes two documents of 40 pages each. You pick the cut point, and each half becomes its own file. This is what our [Split PDF tool](/split-pdf) does.
+
+**Cutting each page's layout in half** is a different operation. Scanned books are often saved as double-page spreads, where each "page" in the PDF shows two physical book pages side by side. Splitting those into single pages means slicing the image on each page down the middle. Our Split PDF tool does not do that.
+
+If you have a scanned book where every page looks like an open book, you need a tool built for page cropping. If you have a multi-page document and want two smaller files, the steps below are for you.
+
+## How to split a PDF in half: step by step
+
+1. Open [Split PDF](/split-pdf) and load your file (drag it in or click "Choose file").
+2. Check the total page count. Any PDF viewer shows this in the bottom toolbar. Divide by 2 to find the midpoint.
+3. In the **Page ranges** field, type the range for your first half. For a 40-page file, type `1-20`.
+4. Click the process button. The tool downloads a ZIP file named `split.zip`.
+5. Open the ZIP to get your first output PDF.
+6. Reload your original file in the tool, type the second range (`21-40`), and process again for the second half.
+
+Your file is never uploaded anywhere. Processing runs locally in your browser using [pdf-lib](https://pdf-lib.js.org/), an open-source JavaScript library that reads and writes PDFs entirely on your device.
+
+## What format does the output come in?
+
+The tool downloads a **ZIP archive** containing your split PDFs. On Windows and Mac you can double-click the ZIP to open it, then drag the PDFs out. On iPhone, the Files app handles ZIPs natively. On Android, any file manager app will open them.
+
+You can also split into more than two parts in a single run by entering multiple comma-separated ranges: typing `1-20,21-40` produces two PDFs in one ZIP. Add more ranges if you need three or four sections at once.
+
+## How to find the midpoint of your PDF
+
+Open the file in any viewer (a browser's built-in PDF viewer works fine). The total page count appears in the toolbar or sidebar. Divide by 2 and round if it comes out uneven.
+
+Some examples:
+- 100 pages: split at 50. Ranges `1-50` and `51-100`.
+- 47 pages: split at 23 or 24. Ranges `1-23` and `24-47`, or `1-24` and `25-47`.
+- 12 pages: split at 6. Ranges `1-6` and `7-12`.
+
+If you'd rather split on a chapter boundary than the exact midpoint, check the PDF's bookmark or outline panel. Most chapter-structured PDFs include bookmarks that list chapter titles alongside their starting page numbers, making it easy to find exactly where each chapter begins.
+
+## Does splitting a PDF affect quality?
+
+No. The tool copies [page content objects](https://en.wikipedia.org/wiki/PDF) from the original file rather than re-encoding or re-rendering them. A page with vector text stays as vector text. A page with a high-resolution image keeps that image at its original resolution. The output pages are not recompressed.
+
+One thing to note: if your PDF has interactive form fields (fillable text boxes, checkboxes, and similar), splitting strips those fields from the output. The tool copies page content but not the document's interactive form layer. The visual layout of the page stays intact, but the fields won't be fillable. If you have a filled form you want to preserve, flatten it before splitting to lock the values permanently into the page content.
+
+## Splitting unevenly
+
+You don't have to split at the exact midpoint. Some common unequal splits:
+
+- Send only the appendix (say, pages 45 to 60 of a 60-page report) while keeping the main body in one file.
+- Break out a single chapter for peer review without sharing the entire document.
+- Remove a confidential section before forwarding the rest.
+
+Any page range works. You can run the tool on the same original file as many times as you need to pull out different sections.
+
+## Putting the halves back together
+
+If you split a PDF and later want to recombine it, the [Merge PDF tool](/merge-pdf) will join any number of files into one. Merging doesn't inflate the combined size. In our own [merge tests](/blog/merge-pdf-without-uploading), the output came in marginally *under* the sum of its inputs, because shared PDF structure is written once rather than duplicated across both files.
+
+The same caveat about form fields applies here: merging also strips interactive form fields. Flatten any filled forms first to lock the values into the page before merging.
+
+## Splitting by page range vs. deleting pages
+
+Splitting creates two (or more) separate output files. Deleting pages keeps one file with certain pages removed. Both are useful in different situations:
+
+- Use Split PDF when you need two usable documents from one.
+- Use Delete Pages when you just want a cleaned-up copy with certain pages gone.
+
+If you want one clean copy without the first few pages (removing a title page or a cover sheet, for instance), Delete Pages is faster and you end up with a single file rather than a ZIP.
+
+## Is it safe to split confidential documents this way?
+
+Because the tool runs in your browser, your file never travels to a server. There is no account, no upload, and no copy of your document stored anywhere outside your own device. Once the page has loaded, you can disconnect from the internet and the tool still works, since all processing is local.
+
+For documents with sensitive personal data, financial records, or confidential contracts, a browser-based tool with no server upload removes the risk of a file sitting on a third-party server after your session ends.
