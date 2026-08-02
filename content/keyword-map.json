@@ -654,7 +654,8 @@
       "targetQuery": "compress pdf for google classroom",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-google-classroom"
     },
     {
       "id": "blog-pdf-to-powerpoint",
