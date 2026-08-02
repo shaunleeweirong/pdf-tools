@@ -601,12 +601,77 @@
       "targetQuery": "convert pdf to jpg on android free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "convert-pdf-to-jpg-on-android-free"
     },
     {
       "id": "blog-add-page-to-pdf",
       "surface": "blog",
       "targetQuery": "how to add a page to a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-word-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert word to pdf free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-redact-pdf",
+      "surface": "blog",
+      "targetQuery": "how to redact text in a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-png",
+      "surface": "blog",
+      "targetQuery": "pdf to png free online",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-windows-11",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf on windows 11 free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-google-classroom",
+      "surface": "blog",
+      "targetQuery": "compress pdf for google classroom",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-powerpoint",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to powerpoint free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-excel-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert excel to pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-word-docs-pdf",
+      "surface": "blog",
+      "targetQuery": "combine multiple word documents into one pdf",
       "intent": "informational",
       "priority": 2,
       "status": "idea"
