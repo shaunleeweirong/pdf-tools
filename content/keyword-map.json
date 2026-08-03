@@ -407,7 +407,8 @@
       "targetQuery": "how to flatten a pdf without acrobat",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-flatten-a-pdf-without-acrobat"
     },
     {
       "id": "blog-remove-blank-pages",
@@ -683,6 +684,70 @@
       "priority": 2,
       "status": "pending",
       "slug": "combine-multiple-word-documents-into-one-pdf"
+    },
+    {
+      "id": "blog-compress-chromebook",
+      "surface": "blog",
+      "targetQuery": "how to compress a pdf on chromebook free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-ipad",
+      "surface": "blog",
+      "targetQuery": "how to make a pdf smaller on ipad free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-jpg-mac",
+      "surface": "blog",
+      "targetQuery": "pdf to jpg on mac free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-jpg-to-pdf-android",
+      "surface": "blog",
+      "targetQuery": "how to convert jpg to pdf on android free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-reduce-without-acrobat",
+      "surface": "blog",
+      "targetQuery": "how to reduce pdf file size without acrobat",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-highlight-pdf",
+      "surface": "blog",
+      "targetQuery": "how to highlight text in a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-lock-pdf-editing",
+      "surface": "blog",
+      "targetQuery": "how to lock a pdf so it can't be edited free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-excel",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to excel free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
