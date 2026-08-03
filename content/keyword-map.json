@@ -724,7 +724,8 @@
       "targetQuery": "how to reduce pdf file size without acrobat",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-reduce-pdf-file-size-without-acrobat"
     },
     {
       "id": "blog-highlight-pdf",
