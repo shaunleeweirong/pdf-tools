@@ -663,7 +663,8 @@
       "targetQuery": "how to convert pdf to powerpoint free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-powerpoint-free"
     },
     {
       "id": "blog-excel-to-pdf",
