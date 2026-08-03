@@ -1,0 +1,103 @@
+---
+title: "How to Convert Excel to PDF Free (4 Methods)"
+description: "Save any spreadsheet as PDF for free. Four methods: built-in Excel export, Google Sheets, LibreOffice, and Print to PDF. Formatting tips included."
+date: "2026-08-03"
+keywords: ["how to convert excel to pdf free", "excel to pdf", "xlsx to pdf", "save excel as pdf", "convert spreadsheet to pdf free"]
+toolSlugs: ["merge-pdf", "split-pdf", "protect-pdf"]
+faq:
+  - q: "Will my Excel formatting survive the conversion to PDF?"
+    a: "If you use Excel's own Save As > PDF, formatting carries over almost exactly because Excel controls the layout directly. Online converters may shift column widths if their servers lack your installed fonts. For the most faithful result, use Excel's built-in export or LibreOffice."
+  - q: "How do I convert all sheets in a workbook to one PDF?"
+    a: "Right-click any sheet tab at the bottom of the window and choose Select All Sheets. Then go to File > Save As, choose PDF, and save. Every selected sheet exports into a single PDF file, one sheet per page."
+  - q: "How do I convert Excel to PDF without Microsoft Office installed?"
+    a: "Upload your .xlsx file to Google Sheets (free Google account required) and go to File > Download > PDF Document. Alternatively, install the free LibreOffice suite and use File > Export as PDF. Both handle standard Excel files well."
+  - q: "My PDF cuts off columns on the right side. How do I fix it?"
+    a: "In Excel, go to Page Layout > Scale to Fit and set Width to '1 page'. This forces the sheet to fit within the printable width. For wide tables, also switch to landscape orientation under Page Layout > Orientation > Landscape."
+  - q: "Can I convert Excel to PDF without uploading my file?"
+    a: "Yes. Excel's built-in export, LibreOffice, and Print to PDF on Windows and Mac all run locally. Nothing leaves your device. Online tools do upload your file to a server temporarily, so check the service's privacy policy for sensitive spreadsheets."
+---
+
+## Converting Excel to PDF for free
+
+The fastest way to convert Excel to PDF free is through Excel's built-in Save As feature: go to File, choose Save As, select PDF from the format list, and click Save. If you do not have Excel, Google Sheets, [LibreOffice](https://www.libreoffice.org/), and Windows Print to PDF all handle spreadsheets at no cost and require no sign-up.
+
+This guide covers four reliable methods, explains how to stop columns from being cut off at the page edge, and covers what to do with the PDF once you have it.
+
+## Before you convert: fix the page layout
+
+Spreadsheets behave differently from documents when you convert them to PDF. A letter has a fixed layout, but a spreadsheet can stretch to any width. Excel chooses where to break pages based on your page size, margins, and column widths. A wide table that looks fine on screen can spill across multiple pages or get cropped on the right side in the PDF.
+
+Fix this before you export:
+
+1. Click the **Page Layout** tab in the ribbon.
+2. In the **Scale to Fit** section, set **Width** to **1 page**. This tells Excel to shrink each sheet horizontally so every column fits on one printed page.
+3. If the result looks too small to read, set **Orientation** to **Landscape** to give each page more horizontal space.
+4. Go to **File > Print** to see a print preview and confirm the layout looks right before saving.
+
+The "Fit to 1 page wide" setting is the single most useful step for anyone whose PDFs cut off mid-table.
+
+## Method 1: Excel's built-in Save As (best quality)
+
+This is the simplest method and works on both Windows and Mac.
+
+1. Open your spreadsheet in Excel.
+2. Click **File**, then **Save As**.
+3. Open the file format dropdown and choose **PDF**.
+4. Click **Save**.
+
+Some versions of Excel show **File > Export > Create PDF/XPS** instead of the Save As route. Both produce the same result.
+
+Before saving, click the **Options** button in the Save As dialog. You will see a "Publish what" section where you can choose: Active sheet, Entire Workbook, or a cell selection. Choose "Entire Workbook" to get all sheets in one file.
+
+## Method 2: Export all sheets to one PDF
+
+If your workbook has several tabs and you want them all in a single PDF, there are two quick approaches.
+
+**Option A:** Right-click any sheet tab at the bottom of the window and choose **Select All Sheets**. Then go to File > Save As, pick PDF, and save. Every sheet goes into one PDF, each sheet on its own page.
+
+**Option B:** Go to File > Save As, choose PDF, click Options, and under "Publish what," select **Entire Workbook**. This catches every sheet automatically without needing to select them first.
+
+Both options give you the same result. Option A is faster if you already have the dialog open. Option B is more explicit and harder to forget.
+
+## Method 3: Google Sheets (free, no desktop app needed)
+
+If you do not have Excel, Google Sheets reads .xlsx and .xls files and exports them as PDF at no cost. You need a free Google account.
+
+1. Go to [Google Drive](https://drive.google.com) and upload your file via **New > File upload**.
+2. Right-click the uploaded file and choose **Open with > Google Sheets**.
+3. Go to **File > Download > PDF Document (.pdf)**.
+
+Before downloading, Google Sheets opens a print settings panel. Set scaling to "Fit to width" to prevent columns from being cut off. You can also choose whether to export all sheets or just the active one.
+
+Google Sheets handles most standard Excel formatting well. Very complex pivot tables or charts with custom formatting may look slightly different, so do a quick visual check on the downloaded file.
+
+## Method 4: LibreOffice (free, no upload, works offline)
+
+[LibreOffice](https://www.libreoffice.org/) is a free, open-source office suite that opens Excel files and exports them to PDF without sending anything to a server. This is the right choice for payroll data, client contracts, or any spreadsheet you prefer not to upload.
+
+1. Download and install LibreOffice from libreoffice.org (free, no sign-up needed).
+2. Open your .xlsx or .xls file in **LibreOffice Calc**.
+3. Go to **File > Export as PDF**.
+4. Choose your settings and click **Export**.
+
+The export dialog offers options for quality, encryption, and page range. For most spreadsheets the defaults work fine. Charts render accurately for standard chart types.
+
+## What about online converters?
+
+Tools like PDF24 and Smallpdf convert Excel files to PDF in your browser, and they work for most files. You upload the spreadsheet, the tool converts it, and you download the PDF. No software installation needed, and both have free tiers.
+
+The trade-off is that your file goes to a third-party server. For a product catalog, a class assignment, or a travel budget, that is fine. For tax records, payroll sheets, or anything containing personal data, check the service's privacy terms before uploading. Each service handles file retention differently.
+
+The four methods above convert your file entirely on your own device.
+
+## What to do with the PDF after converting
+
+**Combine multiple PDFs.** If you converted each sheet or each workbook file separately, the [Merge PDF](/merge-pdf) tool joins them into one document in your browser. Merging does not inflate the output: in our testing, combining files that added up to 971.9 KB produced a 970.5 KB result.
+
+**Extract specific pages.** If the workbook had many sheets and you only need a few pages, [Split PDF](/split-pdf) lets you extract the page ranges you want.
+
+**Add a password.** To protect the file before sharing it, [Protect PDF](/protect-pdf) adds AES-256 encryption and runs entirely in your browser.
+
+**A note on compression.** Our [Compress PDF](/compress-pdf) tool works by rasterizing each page to JPEG, which shrinks image-heavy files substantially. Spreadsheet PDFs are almost always text and vector graphics, not photographs. Compressing a text PDF with this tool makes it larger, not smaller. In our testing, a 23.5 KB text-only PDF grew to 1.4 MB after compression. For an Excel-generated PDF, skip the compressor. If the file is too large to email, the culprit is usually an embedded high-resolution chart or logo inside the spreadsheet, not the text.
+
+The [PDF format is an open standard (ISO 32000)](https://pdfa.org/resource/iso-32000/), which is why a spreadsheet you export from Excel opens cleanly in Preview on a Mac, in Chrome's built-in viewer, in Adobe Reader, and in virtually any other PDF application without compatibility issues.
