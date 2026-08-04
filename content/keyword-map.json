@@ -709,7 +709,8 @@
       "targetQuery": "pdf to jpg on mac free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-to-jpg-on-mac-free"
     },
     {
       "id": "blog-jpg-to-pdf-android",
