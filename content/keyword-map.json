@@ -744,7 +744,8 @@
       "targetQuery": "how to lock a pdf so it can't be edited free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-lock-a-pdf-so-it-cant-be-edited-free"
     },
     {
       "id": "blog-pdf-to-excel",
