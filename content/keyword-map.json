@@ -754,6 +754,71 @@
       "targetQuery": "how to convert pdf to excel free online",
       "intent": "informational",
       "priority": 2,
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-excel-free-online"
+    },
+    {
+      "id": "blog-sign-iphone",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf on iphone free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-word",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to word free online",
+      "intent": "informational",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-annotate-pdf",
+      "surface": "blog",
+      "targetQuery": "how to annotate a pdf free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-make-searchable",
+      "surface": "blog",
+      "targetQuery": "how to make a scanned pdf searchable free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-crop-pdf-mac",
+      "surface": "blog",
+      "targetQuery": "how to crop a pdf on mac free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-organize-pdf-pages",
+      "surface": "blog",
+      "targetQuery": "how to organize pdf pages free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-sign-pdf-ipad",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf on ipad free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-linkedin",
+      "surface": "blog",
+      "targetQuery": "compress pdf for linkedin",
+      "intent": "transactional",
+      "priority": 3,
       "status": "idea"
     }
   ]
