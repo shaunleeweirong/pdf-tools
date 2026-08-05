@@ -763,7 +763,8 @@
       "targetQuery": "how to sign a pdf on iphone free",
       "intent": "transactional",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-sign-a-pdf-on-iphone-free"
     },
     {
       "id": "blog-pdf-to-word",
