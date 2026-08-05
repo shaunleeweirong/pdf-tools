@@ -781,7 +781,8 @@
       "targetQuery": "how to annotate a pdf free online",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-annotate-a-pdf-free-online"
     },
     {
       "id": "blog-make-searchable",
