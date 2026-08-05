@@ -772,7 +772,8 @@
       "targetQuery": "how to convert pdf to word free online",
       "intent": "informational",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-word-free-online"
     },
     {
       "id": "blog-annotate-pdf",
