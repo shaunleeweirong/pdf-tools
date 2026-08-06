@@ -1,0 +1,101 @@
+---
+title: "How to Edit PDF Metadata Free"
+description: "Change the title, author, subject, and keywords on any PDF for free, in your browser, without Adobe Acrobat or any software to install."
+date: "2026-08-06"
+keywords: ["how to edit pdf metadata free", "edit pdf metadata", "change pdf title", "change pdf author", "remove name from pdf", "pdf metadata editor free"]
+toolSlugs: ["edit-metadata"]
+faq:
+  - q: "What types of PDF metadata can I edit?"
+    a: "The main fields are title, author, subject, and keywords. Some tools also expose creator and producer fields, but those are less commonly changed. The Edit Metadata tool handles the four standard fields."
+  - q: "Does editing PDF metadata change the file content?"
+    a: "No. Metadata is stored in a separate section of the PDF file, independent of the page content, fonts, and images. Changing a title or clearing an author field does not alter anything visible on the pages."
+  - q: "Can I remove my name from a PDF before sharing it?"
+    a: "Yes. Open the PDF in the Edit Metadata tool, clear the Author field, and download. The document no longer carries your name in its file properties."
+  - q: "Where does PDF metadata appear?"
+    a: "In the file properties dialog on Windows and Mac, in browser tabs when the PDF is open, in document management systems like SharePoint, and in search engine results for the document. Screen readers also use the Title field."
+  - q: "Is editing PDF metadata safe to do in a browser tool?"
+    a: "It depends on the tool. Server-side tools send your document to an external server for processing. The Edit Metadata tool on this site runs entirely in your browser, so the file never leaves your device."
+---
+
+## Edit PDF metadata for free
+
+You can edit the metadata on any PDF for free, right in your browser, without installing any software. The [Edit Metadata tool](/edit-metadata) lets you view and change the title, author, subject, and keywords in a few clicks.
+
+PDF metadata is information stored inside the file that describes the document without being part of the visible pages. It shows up in file properties windows, browser tabs, and search indexes, not on the printed page. Editing it is useful when the title doesn't match the document's actual content, when you need to remove a personal name before sharing a file, or when you're preparing documents for a content management system that relies on metadata for search.
+
+**Quick note if you're coming from Adobe Reader:** the free version of Acrobat Reader can display metadata, but it can't edit it. Editing is locked behind Adobe Acrobat Pro, which is a paid subscription. You don't need to pay for that just to change a title or clear an author field.
+
+## What is PDF metadata?
+
+[PDF metadata](https://en.wikipedia.org/wiki/PDF#Metadata) is structured information embedded in the file but separate from the page content. The four fields most people need to change are:
+
+- **Title** - the document's official name, shown in browser tabs and document management systems
+- **Author** - the person or organization credited as the creator
+- **Subject** - a brief topic or subtitle description
+- **Keywords** - tags that help search tools find and categorize the document
+
+There are also lower-level fields: Creator (the application that originally made the document, such as Microsoft Word) and Producer (the application that last exported it as a PDF). Most standard metadata editors handle the four main fields above.
+
+Metadata is stored in the [XMP (Extensible Metadata Platform)](https://en.wikipedia.org/wiki/Extensible_Metadata_Platform) section of the file, a specification created by Adobe and now maintained as an ISO standard. Every PDF reader and most content management tools know how to read it.
+
+## How to edit PDF metadata: step by step
+
+1. Open the [Edit Metadata tool](/edit-metadata).
+2. Drop your PDF onto the page, or click to browse for it.
+3. The current metadata values load into the fields. Review what's there.
+4. Change any field you need: Title, Author, Subject, or Keywords.
+5. To clear a field entirely, delete the text in it.
+6. Click **Save** (or the equivalent button).
+7. Download the updated PDF.
+
+The original file on your device is not touched. The download is a new version of the file with the updated metadata. If the result isn't right, run the original through the tool again.
+
+## Why would you edit PDF metadata?
+
+**Remove a personal name before sharing.** When you export a PDF from Microsoft Word, it often picks up your account name as the Author. If you're sending the file to a client, posting it publicly, or uploading it to a shared drive, that embedded name may reveal more than you intended. Clearing or changing the Author field is a quick fix.
+
+**Fix a broken or generic title.** PDFs exported as "Document1" or carrying a title from a previous draft show that generic name in browser tabs and in search results for the file. Google also uses the PDF Title field when it indexes a publicly hosted document, much like an HTML `<title>` tag, so an accurate title can improve how your document ranks and appears in search results. Updating it takes five seconds.
+
+**Improve discoverability in a document management system.** Tools like SharePoint, Confluence, and many enterprise DMS platforms index PDF metadata. Adding descriptive Keywords and a clear Subject field can make a document surfaceable without changing a word of its content.
+
+**Accessibility.** Screen readers use the PDF Title field to announce the document to users who rely on assistive technology. A title that matches the document's actual subject is meaningful; "Untitled" or "Scan0042" is not.
+
+## How to change the author name in a PDF
+
+The Author field in a PDF is just a plain text field. You can change it to anything, or clear it completely.
+
+1. Open the [Edit Metadata tool](/edit-metadata).
+2. Load your PDF.
+3. Find the Author field. It may show your name, a company name, or be empty.
+4. Type the new value you want, or delete the contents to leave it blank.
+5. Save and download.
+
+The next person who opens the file and checks its properties sees the updated value (or nothing, if you cleared it). For company PDFs that should list the organization rather than an individual, this is a practical way to standardize without going back to the source document.
+
+## How to view PDF metadata without a tool
+
+You don't need a separate app to read metadata. Every major operating system includes a way to inspect it:
+
+- **Windows:** Right-click the PDF file, choose **Properties**, then go to the **Details** tab. Title, authors, subject, and tags are listed there.
+- **Mac:** Right-click the file and choose **Get Info**, or open the PDF in Preview and go to **Tools > Show Inspector**.
+- **Browser:** Open the PDF in Chrome or Firefox. The browser tab title usually reflects the document's Title field.
+
+Viewing is free and built into your system. You only need a dedicated tool when you want to change the values.
+
+## Does editing metadata affect the visible content?
+
+No. Metadata and page content are stored in separate parts of the file. The [PDF file format](https://en.wikipedia.org/wiki/PDF#File_format) organizes a document as a collection of objects, and metadata is one object among many, independent of the text, images, and fonts on any page. Changing the title or clearing the author does not affect anything you see when you open the document.
+
+Metadata changes are also small in terms of file size. You're replacing a few text strings, not re-rendering any pages, so the file before and after will be nearly identical in size.
+
+## What metadata can't you easily change?
+
+Most browser-based metadata editors, including this one, handle the four main fields: title, author, subject, and keywords. A few others are trickier:
+
+**Creator and Producer** record which application created and exported the PDF. Some tools update these; others don't. If stripping software traces from a document matters for your use case, check whether the tool addresses these fields.
+
+**Creation and modification dates** are typically rewritten whenever any tool saves a new version of the file, including metadata editors. There's no standard way to preserve the original creation date through a round-trip.
+
+**Custom schema fields** used by enterprise systems (legal document management, publishing workflows) may not appear in general-purpose tools and typically require specialist software to edit.
+
+For most everyday purposes, editing the four main fields covers everything that readers, browsers, and search systems actually look at. If you need to strip all metadata comprehensively, including hidden data in embedded streams, that's a different task and requires a PDF redaction or sanitization workflow.
