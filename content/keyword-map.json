@@ -835,7 +835,8 @@
       "targetQuery": "how to convert png to pdf free online",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-png-to-pdf-free-online"
     },
     {
       "id": "blog-scan-to-pdf",
