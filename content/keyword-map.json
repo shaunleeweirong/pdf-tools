@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-01",
+  "updated": "2026-08-06",
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
     {
@@ -461,7 +461,8 @@
       "targetQuery": "how to rotate one page in a pdf free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-rotate-one-page-in-a-pdf-free"
     },
     {
       "id": "blog-reduce-pdf-mac",
@@ -825,6 +826,70 @@
       "surface": "blog",
       "targetQuery": "compress pdf for linkedin",
       "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-png-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert png to pdf free online",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-scan-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to scan a document to pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-google-drive",
+      "surface": "blog",
+      "targetQuery": "how to compress pdf for google drive upload",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-print-to-pdf-windows",
+      "surface": "blog",
+      "targetQuery": "how to print to pdf on windows free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-grayscale-pdf",
+      "surface": "blog",
+      "targetQuery": "how to make a pdf grayscale free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-share-large-pdf",
+      "surface": "blog",
+      "targetQuery": "how to share a large pdf file for free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-google-doc",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to google doc free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-level-guide",
+      "surface": "blog",
+      "targetQuery": "what compression level to use when compressing a pdf",
+      "intent": "informational",
       "priority": 3,
       "status": "idea"
     }
