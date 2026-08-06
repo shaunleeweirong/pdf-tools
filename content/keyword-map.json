@@ -862,7 +862,8 @@
       "targetQuery": "how to print to pdf on windows free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-print-to-pdf-on-windows-free"
     },
     {
       "id": "blog-grayscale-pdf",

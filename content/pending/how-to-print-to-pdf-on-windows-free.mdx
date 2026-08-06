@@ -1,0 +1,112 @@
+---
+title: "How to Print to PDF on Windows Free"
+description: "Windows 10 and 11 include a free built-in PDF printer. Use it from any app with Ctrl+P, fix it if it goes missing, and compress or merge the output."
+date: "2026-08-06"
+keywords: ["how to print to pdf on windows free", "microsoft print to pdf", "print to pdf windows 10", "print to pdf windows 11", "print to pdf not working", "enable microsoft print to pdf"]
+toolSlugs: ["compress-pdf", "merge-pdf"]
+faq:
+  - q: "Does Windows have a free built-in PDF printer?"
+    a: "Yes. Windows 10 and Windows 11 both include Microsoft Print to PDF at no cost, with no third-party software required. Select it from the printer list whenever you press Ctrl+P."
+  - q: "How do I re-enable Microsoft Print to PDF if it's missing?"
+    a: "Press Windows + R, type optionalfeatures, and press Enter. In the Windows Features dialog, check Microsoft Print to PDF and click OK. Windows installs it in a few seconds and it appears in your printer list."
+  - q: "Why does my Print to PDF file come out as 0 bytes or blank?"
+    a: "A bug in Windows builds 26100.4061 and later (present since early 2026) causes empty output for some users. Install the latest Windows updates. While waiting, use your browser's Save as PDF option, or in Office apps use File > Export > Create PDF/XPS."
+  - q: "What is the difference between Print to PDF and Save as PDF?"
+    a: "Print to PDF works in any app that can print, acting like a virtual printer driver. Save as PDF is an app-specific export that usually keeps text selectable and hyperlinks live. Use your app's native Save as PDF when it exists; fall back to Print to PDF for everything else."
+  - q: "Can I print to PDF on Windows 7?"
+    a: "No. Microsoft Print to PDF is only available on Windows 10 and later. On Windows 7, you need a free third-party virtual printer like doPDF or PDF24 Creator."
+---
+
+Windows 10 and 11 ship with a free PDF printer called Microsoft Print to PDF, so you can turn almost anything on screen into a PDF without installing a single extra app. Press Ctrl+P in any app, pick Microsoft Print to PDF, and save. No account, no watermark, no time limit.
+
+Below is how to use it from different apps, how to get it back if it disappears, and what to do with the file afterward.
+
+## How to print to PDF on Windows 10 and Windows 11
+
+The steps are identical on both versions:
+
+1. Open the document, web page, spreadsheet, or image you want to convert.
+2. Press **Ctrl+P** (or go to File > Print).
+3. In the print dialog, open the printer dropdown and select **Microsoft Print to PDF**.
+4. Adjust any settings (page range, orientation, copies), then click **Print**.
+5. A "Save Print Output As" dialog appears. Pick a folder, enter a file name, and click **Save**.
+
+That's the whole process. The PDF shows up wherever you chose to save it.
+
+## How to print to PDF in Chrome or Edge
+
+Both browsers have PDF options you reach the same way.
+
+**Google Chrome:**
+1. Press **Ctrl+P**.
+2. In the Destination field, click the dropdown and select **Save as PDF**.
+3. Click **Save** and pick a location.
+
+**Microsoft Edge:**
+1. Press **Ctrl+P**.
+2. In the Printer field, select **Save as PDF** (Edge's native option).
+3. Click **Print** and save.
+
+One note on browser behavior: if you use Microsoft Print to PDF instead of the browser's own option, the resulting PDF treats each page as an image. Text becomes a picture, so you cannot select it or run a text search. Edge's built-in **Save as PDF** keeps text selectable and produces smaller files. For web pages, prefer the browser's native option.
+
+## How to print to PDF from Microsoft Word or Excel
+
+Word and Excel offer a dedicated export path that produces cleaner PDFs than the print driver.
+
+Go to **File > Export > Create PDF/XPS**, set your quality options, and click **Publish**. This method keeps hyperlinks live, embeds fonts correctly, and outputs a text-based PDF rather than an image-based one.
+
+If you just need a quick copy and don't care about interactive links, Ctrl+P and Microsoft Print to PDF works perfectly well from Office apps too.
+
+## What to do if Microsoft Print to PDF is missing
+
+Microsoft Print to PDF is an optional Windows feature. It can be accidentally removed by some software setups or disabled after a Windows update. Here's how to restore it:
+
+1. Press **Windows + R**, type `optionalfeatures`, and press Enter.
+2. In the "Windows Features" dialog, scroll down and check **Microsoft Print to PDF**.
+3. Click **OK** and let Windows install it. A restart may be required.
+
+If the feature is already checked but still absent from your printer list, uncheck it, click OK, wait a moment, and then re-enable it. That forces Windows to re-register the printer driver.
+
+You can also turn it on from the command line. Open PowerShell as administrator and run:
+
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Printing-PrintToPDFServices-Features
+```
+
+[Microsoft's support pages](https://learn.microsoft.com/en-us/answers/questions/5912013/how-to-add-print-to-pdf) cover additional methods if neither option works.
+
+## What to do if Print to PDF creates a blank or 0-byte file
+
+A bug in certain Windows builds (26100.4061 and higher, introduced in early 2026) causes Microsoft Print to PDF to produce empty files. Third-party PDF software that runs in the background can also interfere by hijacking the virtual printer port.
+
+**Quick fixes to try:**
+
+- Install the latest Windows cumulative update, which should include a patch.
+- In your browser, switch to the browser's own **Save as PDF** instead of the Microsoft driver.
+- In Word or Excel, use **File > Export > Create PDF/XPS** as an alternative.
+- For non-Office apps, a free third-party virtual printer like [doPDF](https://www.dopdf.com/) sidesteps the driver entirely.
+- If third-party PDF software is installed (especially Adobe products), check whether it has overridden your printer ports during a background update.
+
+## Print to PDF vs. Save as PDF: which one to use
+
+Both methods create a PDF, but they're doing different things under the hood.
+
+| | Microsoft Print to PDF | App-native Save as PDF |
+|---|---|---|
+| Works in any app | Yes | Only apps that offer it |
+| Text stays selectable | Depends on app | Usually yes |
+| Hyperlinks preserved | No | Often yes |
+| File size | Larger | Smaller |
+| Ease of access | Ctrl+P from anywhere | App-specific menu |
+
+Use your app's native export whenever it exists. Microsoft Word, Excel, Chrome, Edge, and most modern apps all have one. Fall back to Microsoft Print to PDF for older software, web portals, billing systems, or anything that prints but doesn't export.
+
+The [PDF/A standard](https://en.wikipedia.org/wiki/PDF/A) is relevant here if you're archiving documents: a dedicated export is far more likely to produce a valid archival PDF than the print driver.
+
+## What to do with your PDF after creating it
+
+PDFs made through the print driver are sometimes larger than you expect, because the driver renders each page at screen resolution rather than using the source document's native structure.
+
+If the file is too large for email or an upload form, the [Compress PDF tool](/compress-pdf) works in your browser and handles image-heavy PDFs well. One important caveat: the compressor rasterizes pages to JPEG, so it shrinks files containing photos but makes text-only PDFs larger. A 23.5 KB text report came out at 1.4 MB after compression in our testing. If your PDF is mostly text, compression will make it bigger rather than smaller.
+
+If you created several PDFs from separate print jobs and want to combine them, the [Merge PDF tool](/merge-pdf) joins them without inflating the total. Three files that added up to 971.9 KB came out as a 970.5 KB combined PDF in our measurements, so the output matches what you put in.
