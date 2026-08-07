@@ -1,0 +1,83 @@
+---
+title: "PDF File Too Large to Email? Here's How to Fix It"
+description: "When your PDF hits Gmail's or Outlook's attachment limit, here are the fixes that work, and the one that makes things worse."
+date: "2026-08-07"
+keywords: ["pdf file too large to send by email", "pdf too big for email", "email attachment size limit pdf", "compress pdf for email", "split pdf email"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is the email attachment size limit for Gmail and Outlook?"
+    a: "Gmail and Outlook.com both cap attachments at 25 MB. But email encodes files during transit using Base64, which inflates size by roughly 33%, so a file needs to be under about 18 MB to reliably get through."
+  - q: "Will compressing my PDF always make it smaller?"
+    a: "No. Compression works well for PDFs full of photos or scanned pages. For text-only PDFs (contracts, invoices, reports), it tends to make them much larger, because the compressor converts each page to a JPEG image."
+  - q: "What if my PDF is still too large after compression?"
+    a: "Use the Split PDF tool to break the file into smaller parts and send them as separate emails. Or upload to Google Drive or Dropbox and send a share link instead of an attachment."
+  - q: "What makes a scanned PDF so large?"
+    a: "Scanners save each page as a full-resolution image. A color scan at 300 DPI packs in a lot of pixel data per page. That's why a 10-page scanned document can hit 20 MB while a typed 10-page PDF stays well under 1 MB."
+  - q: "Does zipping a PDF help with email size limits?"
+    a: "Rarely. PDFs already compress their internal data, so wrapping one in a ZIP file typically saves less than 5%, which is rarely enough to make a real difference."
+---
+
+A PDF that's too large to send by email is a common, frustrating problem. The file bounces, the attachment button grays out, or the recipient never gets it. The right fix depends on what's inside the file, and one popular fix (compressing a text PDF) can make things worse. Here's what actually works.
+
+## What is the email attachment size limit?
+
+[Gmail](https://support.google.com/mail/answer/6584) and Outlook.com both cap email messages at 25 MB. But that 25 MB figure is a bit misleading. Email transmits attachments using [Base64 encoding](https://en.wikipedia.org/wiki/Base64), which inflates the file by roughly 33% as it travels across mail servers. A 20 MB attachment becomes about 27 MB on the wire, which is over the limit. The practical ceiling is around 18 MB. If your PDF is below that, you can attach it safely.
+
+## Why is your PDF so large?
+
+Knowing the cause helps you pick the right fix:
+
+- **Scanned pages.** Each scanned page is a full-resolution image. A color scan at 300 DPI packs a huge amount of pixel data per page, so a 10-page color scan can easily hit 20 MB or more.
+- **Embedded photos and graphics.** Brochures, slide decks, and product catalogs embed high-resolution images that add substantial size.
+- **Embedded fonts.** PDFs bundle font data into the file. This adds a few hundred kilobytes, which matters less for large files but contributes to smaller ones being over the limit.
+- **Hidden metadata.** Some tools embed revision history, comments, or image thumbnails that aren't visible but add to file size.
+
+## Fix 1: Compress the PDF (for image-heavy and scanned files)
+
+If your PDF is mostly photos, scanned pages, or graphics, the [Compress PDF tool](/compress-pdf) can cut the size substantially. In measured tests run against the actual tool in a browser, a 6-page image deck dropped from 913.4 KB to 315.3 KB at Medium quality (a 65.5% reduction) and to 175.6 KB at High quality (an 80.8% reduction). For a scanned report running 20 to 30 pages, those ratios can take a file from over 25 MB to well under 18 MB.
+
+**The important caveat:** this compressor converts every page to a JPEG image, which is why it shrinks photos so effectively. For text-only documents, that same conversion goes the wrong way. A 20-page text report grew from 23.5 KB to 1.4 MB in testing. Compressing turns efficient vector text into a much heavier photographic representation of that text. If your PDF is a contract, invoice, letter, or any document that's mostly typed text, skip compression and use Fix 2 or Fix 3 instead.
+
+How to use it:
+
+1. Open the [Compress PDF tool](/compress-pdf). No sign-up, no account.
+2. Drop your PDF in.
+3. Choose **Medium** first. It gives a good balance of file size and quality. Choose **High** (smallest file) if Medium doesn't get the file under 18 MB.
+4. Download and check the size. If it's under 18 MB, you're ready to attach.
+
+One more thing: don't run the tool twice on the same output. A second compression pass at the same quality setting made a file grow from 315.3 KB to 598.9 KB in testing, nearly double. If Medium doesn't get you small enough, start fresh from your original file and run it at High.
+
+## Fix 2: Split the PDF into smaller files
+
+For text documents, or for any file that's too large even at maximum compression, splitting is the cleanest solution. The [Split PDF tool](/split-pdf) lets you extract page ranges into separate files. Send each part in its own email. The recipient can put them back together with the [Merge PDF tool](/merge-pdf) if they need a single document.
+
+This is the right fix when:
+
+- Your PDF is a contract, report, or other typed document where compression would make it larger
+- The file is large enough that even maximum compression leaves it over 18 MB
+- You need to preserve the original quality with no image conversion
+
+A practical approach: if you have a 60-page report, split at page 30 and send two separate emails labeled "Part 1 of 2" and "Part 2 of 2."
+
+## Fix 3: Send a link, not an attachment
+
+When splitting is awkward (the file needs to arrive in one piece, or the recipient won't know how to reassemble it), upload the PDF to Google Drive, Dropbox, or OneDrive and paste the share link into your email instead. The recipient downloads the full file directly, and there's no size limit in play.
+
+This works for any file size, and it keeps the original intact. It's also the better option when you want the recipient to annotate or comment on the file, since cloud-hosted documents support tracked edits in ways email attachments don't.
+
+## Which fix should you use?
+
+| What's in your PDF | Best fix |
+|---|---|
+| Photos, scans, image-heavy pages | Compress PDF |
+| Text, forms, contracts, invoices | Split PDF or send a link |
+| Very large file (over 50 MB) | Split or send a link |
+| File must arrive as one document | Send a link |
+
+## A note on ZIP files
+
+Zipping a PDF saves almost nothing. PDFs already compress their internal content streams using [DEFLATE compression](https://en.wikipedia.org/wiki/Deflate), which is the same algorithm ZIP uses. Running ZIP on top of an already-compressed file typically saves less than 5%, which rarely closes the gap between "too large" and "fits the limit." It's not worth the extra step of asking your recipient to unzip before opening.
+
+## The fastest path
+
+Check what's in your PDF. If it's scans or photos, try the [Compress PDF tool](/compress-pdf) at High quality and see if the result falls under 18 MB. If it's a text document, go straight to the [Split PDF tool](/split-pdf). Either way, the whole process takes under a minute.
