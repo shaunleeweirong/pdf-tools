@@ -1,0 +1,105 @@
+---
+title: "Which PDF Compression Level to Use: High, Medium, or Low"
+description: "Pick the right PDF compression level for your file. Measured: High shrinks image PDFs 81%, Medium 65%, Low 23%. Text PDFs get bigger, not smaller."
+date: "2026-08-07"
+keywords: ["what compression level to use when compressing a pdf", "pdf compression level", "high medium low pdf compression", "pdf compression settings", "best pdf compression level"]
+toolSlugs: ["compress-pdf"]
+faq:
+  - q: "Which PDF compression level should I use?"
+    a: "Medium is the right default for most image-heavy PDFs. Use High when you need the smallest file possible and can accept reduced image quality. Use Low (best quality) when image detail matters, such as for printing. Never compress text-only PDFs."
+  - q: "Will compressing a text PDF make it smaller?"
+    a: "No. In-browser compressors rasterize every page to a JPEG, which makes text PDFs dramatically larger. A 23.5 KB text document grew to 1.4 MB at Medium compression in testing. Only compress PDFs with scans or photos."
+  - q: "Can I compress a PDF twice to shrink it more?"
+    a: "No. A second pass at the same level makes the file larger. A file that was 315.3 KB after Medium compression grew to 598.9 KB when run through Medium again. Pick the right level once and always work from the original."
+  - q: "What types of PDFs shrink the most?"
+    a: "Image-heavy PDFs shrink the most. A 6-page photo deck went from 913.4 KB to 175.6 KB at High compression. Scanned documents also compress well. Text documents, contracts, and invoices get bigger, not smaller."
+  - q: "Why did my PDF get bigger after compression?"
+    a: "In-browser tools rasterize pages to JPEG. If your PDF contains mostly text, those vector characters become pixel images, which take far more space than the original glyphs. The tool is working correctly, just not suited for that file type."
+---
+
+Choosing the right PDF compression level is what separates a file that shrinks by 80% from one that balloons to 60 times its original size. Most tools offer three settings: High (smallest file), Medium, and Low (best quality). The one you pick should depend on what's inside the PDF, not just how large the file is.
+
+Here's what each setting actually does, with numbers from our own [Compress PDF tool](/compress-pdf).
+
+## What the three compression levels actually do
+
+In-browser PDF compressors work by [rasterizing](https://en.wikipedia.org/wiki/Rasterization) every page to a JPEG image at a given quality and resolution, then rebuilding the PDF from those images. The compression level controls how hard the JPEG encoder squeezes each page.
+
+Measured results on a 6-page image deck (913.4 KB input):
+
+| Level | Output size | Reduction |
+|---|---|---|
+| High (smallest) | 175.6 KB | -80.8% |
+| Medium | 315.3 KB | -65.5% |
+| Low (best quality) | 703.5 KB | -23.0% |
+
+The tradeoff is simple: smaller output means more aggressive JPEG compression, which means softer images and some detail loss. High shrinks the most; Low keeps the most quality.
+
+## When to use High compression
+
+Use High when file size is the only thing that matters.
+
+Good fits: a PDF you need under the [25 MB Gmail attachment limit](https://support.google.com/mail/answer/6584), a slide deck you're sending via chat, or any image PDF with a specific upload cap. Keep in mind that Base64 encoding adds about 33% to the effective size of an email attachment, so the practical ceiling for email is closer to 18 MB.
+
+At High, a 913.4 KB image deck dropped to 175.6 KB in under a second. That's an 80.8% reduction. You'll lose some image sharpness, but the content stays readable.
+
+Use High only when the PDF is mostly photos or scans. A text document compressed at High will get much, much bigger.
+
+## When to use Medium compression
+
+Medium is the right default for most image PDFs.
+
+It cuts file size by 65.5% on image content while keeping quality good for screen viewing. If you're sending a PDF to a colleague, uploading it to a portal, or sharing a portfolio, Medium hits the right balance. Files come out meaningfully smaller without images looking obviously degraded.
+
+Start here. If the result is still too large, go back to the original and try High. Don't compress the already-compressed output.
+
+## When to use Low compression (best quality)
+
+Use Low when image quality matters more than file size.
+
+At Low, a 913.4 KB image deck dropped to 703.5 KB, a 23% reduction. That's not dramatic, but images stay noticeably sharper. Good fits: a PDF you'll print, a photography portfolio, or a design deck where the visuals need to look their best on screen.
+
+If you're deciding between Low and no compression, ask yourself whether 23% is worth any quality loss at all. For print, keeping the original is often the better call.
+
+## The one type of PDF you should never compress
+
+Text documents. Invoices, contracts, reports, anything with mostly text.
+
+Here's what happens: rasterization converts [vector text](https://en.wikipedia.org/wiki/Vector_graphics) (which stores each character as a mathematical outline, tiny and razor-sharp at any size) into a JPEG image (which stores each character as a grid of pixels, heavy and a little blurry). The result is not a smaller file. It's a much larger one.
+
+In our tests, a 20-page text report went from 23.5 KB to 1,400.8 KB at Medium compression. That's roughly a 60-fold increase. A mostly-text document with a small logo went from 35.0 KB to 171.2 KB, nearly 5 times larger.
+
+The [Compress PDF tool](/compress-pdf) says this on its own page: it performs "a light, in-browser compression that rasterizes pages. Text becomes an image." That's not a bug. It's just the wrong tool for a text document.
+
+If your text PDF is too large for email, compression won't fix it. The culprit is usually an embedded font, an oversized image somewhere in the document, or tracked-change history. Try removing the image or flattening the file directly.
+
+## Why compressing twice makes things worse
+
+Compressing a second time seems like it would squeeze out more. It doesn't.
+
+When you compress a PDF that's already been rasterized, you're encoding a JPEG as a JPEG. The tool re-renders the page and re-compresses what is already compressed data. The file gets bigger, not smaller.
+
+Measured result: a 315.3 KB file compressed at Medium grew to 598.9 KB when run through Medium again. That's a 90% increase, nearly double the size.
+
+If Medium wasn't small enough, open the original file and choose High. Always start from the original.
+
+## How to compress a PDF to the right size
+
+1. Open the [Compress PDF tool](/compress-pdf). No account needed, nothing uploaded to a server.
+2. Drop in your PDF. Before picking a level, check what the file contains. Mostly photos or scans? Proceed. Mostly text? Stop here and use a different approach.
+3. Select **Medium** as your starting point.
+4. Download the result and check the size. If it's still too large (for example, if you need to stay under 18 MB for email), go back to the original and select **High**.
+5. If image quality is important, for printing or a crisp visual presentation, select **Low** instead of Medium.
+6. Never compress the output again. Always go back to the original.
+
+The entire process runs in your browser. Nothing is sent to a server.
+
+## Quick reference
+
+| What the PDF contains | Level to use |
+|---|---|
+| Photos, scans, image-heavy slides | Medium (start here) |
+| Images and you need the smallest file | High |
+| Images you'll print or need sharp | Low |
+| Text, invoices, contracts, forms | Don't compress |
+| Output from a previous compression | Don't compress again |

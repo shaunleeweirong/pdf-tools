@@ -897,6 +897,71 @@
       "targetQuery": "what compression level to use when compressing a pdf",
       "intent": "informational",
       "priority": 3,
+      "status": "pending",
+      "slug": "what-compression-level-to-use-when-compressing-a-pdf"
+    },
+    {
+      "id": "blog-pdfescape-alternatives",
+      "surface": "blog",
+      "targetQuery": "pdfescape alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-email",
+      "surface": "blog",
+      "targetQuery": "pdf file too large to send by email",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-remove-watermark-pdf",
+      "surface": "blog",
+      "targetQuery": "how to remove watermark from pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-combine-jpg-and-pdf",
+      "surface": "blog",
+      "targetQuery": "how to combine jpg and pdf files together free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-for-google-slides",
+      "surface": "blog",
+      "targetQuery": "how to compress a pdf for google slides",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-save-webpage-as-pdf",
+      "surface": "blog",
+      "targetQuery": "how to save a web page as pdf free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-text",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to text free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-page-numbers-from-page-2",
+      "surface": "blog",
+      "targetQuery": "how to add page numbers to pdf starting from page 2 free",
+      "intent": "informational",
+      "priority": 3,
       "status": "idea"
     }
   ]
