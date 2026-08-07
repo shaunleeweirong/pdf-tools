@@ -932,7 +932,8 @@
       "targetQuery": "how to combine jpg and pdf files together free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-combine-jpg-and-pdf-files-together-free"
     },
     {
       "id": "blog-compress-for-google-slides",
