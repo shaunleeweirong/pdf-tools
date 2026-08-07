@@ -888,7 +888,8 @@
       "targetQuery": "how to convert pdf to google doc free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-google-doc-free"
     },
     {
       "id": "blog-compress-level-guide",
