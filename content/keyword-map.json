@@ -924,7 +924,8 @@
       "targetQuery": "how to remove watermark from pdf free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-remove-watermark-from-pdf-free"
     },
     {
       "id": "blog-combine-jpg-and-pdf",
