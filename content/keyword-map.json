@@ -407,7 +407,8 @@
       "targetQuery": "how to flatten a pdf without acrobat",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-flatten-a-pdf-without-acrobat"
     },
     {
       "id": "blog-remove-blank-pages",
@@ -433,7 +434,8 @@
       "targetQuery": "how to edit pdf metadata free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-edit-pdf-metadata-free"
     },
     {
       "id": "blog-add-image-to-pdf",
@@ -459,7 +461,8 @@
       "targetQuery": "how to rotate one page in a pdf free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-rotate-one-page-in-a-pdf-free"
     },
     {
       "id": "blog-reduce-pdf-mac",
@@ -575,7 +578,8 @@
       "targetQuery": "how to fill out a pdf form on iphone free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-fill-out-a-pdf-form-on-iphone-free"
     },
     {
       "id": "blog-merge-android",
@@ -601,7 +605,8 @@
       "targetQuery": "convert pdf to jpg on android free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "convert-pdf-to-jpg-on-android-free"
     },
     {
       "id": "blog-add-page-to-pdf",
@@ -609,6 +614,361 @@
       "targetQuery": "how to add a page to a pdf free",
       "intent": "informational",
       "priority": 2,
+      "status": "pending",
+      "slug": "how-to-add-a-page-to-a-pdf-free"
+    },
+    {
+      "id": "blog-word-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert word to pdf free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-convert-word-to-pdf-free"
+    },
+    {
+      "id": "blog-redact-pdf",
+      "surface": "blog",
+      "targetQuery": "how to redact text in a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-redact-text-in-a-pdf-free"
+    },
+    {
+      "id": "blog-pdf-to-png",
+      "surface": "blog",
+      "targetQuery": "pdf to png free online",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-windows-11",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf on windows 11 free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-merge-pdf-on-windows-11-free"
+    },
+    {
+      "id": "blog-compress-google-classroom",
+      "surface": "blog",
+      "targetQuery": "compress pdf for google classroom",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "compress-pdf-for-google-classroom"
+    },
+    {
+      "id": "blog-pdf-to-powerpoint",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to powerpoint free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-powerpoint-free"
+    },
+    {
+      "id": "blog-excel-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert excel to pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-convert-excel-to-pdf-free"
+    },
+    {
+      "id": "blog-merge-word-docs-pdf",
+      "surface": "blog",
+      "targetQuery": "combine multiple word documents into one pdf",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "combine-multiple-word-documents-into-one-pdf"
+    },
+    {
+      "id": "blog-compress-chromebook",
+      "surface": "blog",
+      "targetQuery": "how to compress a pdf on chromebook free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "compress-pdf-on-chromebook-free"
+    },
+    {
+      "id": "blog-compress-ipad",
+      "surface": "blog",
+      "targetQuery": "how to make a pdf smaller on ipad free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-make-a-pdf-smaller-on-ipad-free"
+    },
+    {
+      "id": "blog-pdf-to-jpg-mac",
+      "surface": "blog",
+      "targetQuery": "pdf to jpg on mac free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "pdf-to-jpg-on-mac-free"
+    },
+    {
+      "id": "blog-jpg-to-pdf-android",
+      "surface": "blog",
+      "targetQuery": "how to convert jpg to pdf on android free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-convert-jpg-to-pdf-on-android-free"
+    },
+    {
+      "id": "blog-reduce-without-acrobat",
+      "surface": "blog",
+      "targetQuery": "how to reduce pdf file size without acrobat",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-reduce-pdf-file-size-without-acrobat"
+    },
+    {
+      "id": "blog-highlight-pdf",
+      "surface": "blog",
+      "targetQuery": "how to highlight text in a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-highlight-text-in-a-pdf-free"
+    },
+    {
+      "id": "blog-lock-pdf-editing",
+      "surface": "blog",
+      "targetQuery": "how to lock a pdf so it can't be edited free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-lock-a-pdf-so-it-cant-be-edited-free"
+    },
+    {
+      "id": "blog-pdf-to-excel",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to excel free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-excel-free-online"
+    },
+    {
+      "id": "blog-sign-iphone",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf on iphone free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-sign-a-pdf-on-iphone-free"
+    },
+    {
+      "id": "blog-pdf-to-word",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to word free online",
+      "intent": "informational",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-word-free-online"
+    },
+    {
+      "id": "blog-annotate-pdf",
+      "surface": "blog",
+      "targetQuery": "how to annotate a pdf free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-annotate-a-pdf-free-online"
+    },
+    {
+      "id": "blog-make-searchable",
+      "surface": "blog",
+      "targetQuery": "how to make a scanned pdf searchable free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-make-a-scanned-pdf-searchable-free"
+    },
+    {
+      "id": "blog-crop-pdf-mac",
+      "surface": "blog",
+      "targetQuery": "how to crop a pdf on mac free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-organize-pdf-pages",
+      "surface": "blog",
+      "targetQuery": "how to organize pdf pages free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-organize-pdf-pages-free"
+    },
+    {
+      "id": "blog-sign-pdf-ipad",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf on ipad free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-sign-a-pdf-on-ipad-free"
+    },
+    {
+      "id": "blog-compress-linkedin",
+      "surface": "blog",
+      "targetQuery": "compress pdf for linkedin",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-png-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert png to pdf free online",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-convert-png-to-pdf-free-online"
+    },
+    {
+      "id": "blog-scan-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to scan a document to pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-scan-a-document-to-pdf-free"
+    },
+    {
+      "id": "blog-compress-google-drive",
+      "surface": "blog",
+      "targetQuery": "how to compress pdf for google drive upload",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "compress-pdf-for-google-drive"
+    },
+    {
+      "id": "blog-print-to-pdf-windows",
+      "surface": "blog",
+      "targetQuery": "how to print to pdf on windows free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-print-to-pdf-on-windows-free"
+    },
+    {
+      "id": "blog-grayscale-pdf",
+      "surface": "blog",
+      "targetQuery": "how to make a pdf grayscale free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-share-large-pdf",
+      "surface": "blog",
+      "targetQuery": "how to share a large pdf file for free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-share-a-large-pdf-file-for-free"
+    },
+    {
+      "id": "blog-pdf-to-google-doc",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to google doc free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-google-doc-free"
+    },
+    {
+      "id": "blog-compress-level-guide",
+      "surface": "blog",
+      "targetQuery": "what compression level to use when compressing a pdf",
+      "intent": "informational",
+      "priority": 3,
+      "status": "pending",
+      "slug": "what-compression-level-to-use-when-compressing-a-pdf"
+    },
+    {
+      "id": "blog-pdfescape-alternatives",
+      "surface": "blog",
+      "targetQuery": "pdfescape alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "pdfescape-alternatives-free-no-sign-up"
+    },
+    {
+      "id": "blog-pdf-too-large-email",
+      "surface": "blog",
+      "targetQuery": "pdf file too large to send by email",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "pdf-file-too-large-to-send-by-email"
+    },
+    {
+      "id": "blog-remove-watermark-pdf",
+      "surface": "blog",
+      "targetQuery": "how to remove watermark from pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-remove-watermark-from-pdf-free"
+    },
+    {
+      "id": "blog-combine-jpg-and-pdf",
+      "surface": "blog",
+      "targetQuery": "how to combine jpg and pdf files together free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-combine-jpg-and-pdf-files-together-free"
+    },
+    {
+      "id": "blog-compress-for-google-slides",
+      "surface": "blog",
+      "targetQuery": "how to compress a pdf for google slides",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "compress-pdf-for-google-slides"
+    },
+    {
+      "id": "blog-save-webpage-as-pdf",
+      "surface": "blog",
+      "targetQuery": "how to save a web page as pdf free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-text",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to text free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-text-free-online"
+    },
+    {
+      "id": "blog-page-numbers-from-page-2",
+      "surface": "blog",
+      "targetQuery": "how to add page numbers to pdf starting from page 2 free",
+      "intent": "informational",
+      "priority": 3,
       "status": "idea"
     }
   ]

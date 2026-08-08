@@ -1,0 +1,91 @@
+---
+title: "How to Rotate One Page in a PDF Free"
+description: "Rotate a single PDF page without touching the rest. No sign-up or install needed. Methods for browser tools, Mac Preview, Windows, and mobile."
+date: "2026-08-06"
+keywords: ["how to rotate one page in a pdf free", "rotate single page pdf", "rotate pdf without rotating all pages", "permanently rotate pdf page"]
+toolSlugs: ["rotate-pdf", "split-pdf", "merge-pdf"]
+faq:
+  - q: "Can I rotate just one page in a PDF without rotating all of them?"
+    a: "Yes. The cleanest free method is to split the problem page out as a separate one-page PDF, rotate that file, then merge it back into the original document. No sign-up required."
+  - q: "Does rotating a PDF page reduce its quality?"
+    a: "No, provided the tool sets the PDF orientation flag rather than re-rendering the page. File size stays essentially the same. A correct rotate returns a file nearly identical in size to the input."
+  - q: "Why can't I save a rotation in Adobe Reader?"
+    a: "Adobe Reader's Ctrl+Shift+Plus/Minus shortcut changes the on-screen view only, not the file. To write a rotation permanently you need a PDF editor or an online tool. Adobe Reader does not have that ability."
+  - q: "Is it free to rotate a single PDF page?"
+    a: "Yes. The split-rotate-merge browser workflow uses three free tools with no sign-up. Mac users can also use Preview, which is built into macOS at no cost."
+  - q: "How do I rotate a sideways scanned page in a PDF?"
+    a: "Use the Split PDF or Extract Pages tool to pull out the sideways page as a one-page PDF. Rotate that file. Then use Merge PDF to reassemble the pages in the correct order."
+---
+
+## Rotating one page in a PDF is easier than it looks
+
+If you need to rotate one page in a PDF without touching the rest, you have a handful of free options that don't require any software installation or account creation. The most common scenario: a scanner captured one page sideways, or a portrait photo ended up rotated 90° in an otherwise upright document.
+
+The thing to understand first is that most rotate tools, including this site's [Rotate PDF](/rotate-pdf) tool, apply the same angle to every page in the document. That's fine when all pages are sideways. When only one page needs fixing, you need a quick workaround, and it takes about two minutes.
+
+## Why Adobe Reader won't save your rotation
+
+Adobe Reader has a keyboard shortcut, Ctrl+Shift+Plus (rotate clockwise) or Ctrl+Shift+Minus (rotate counterclockwise on Windows), that appears to rotate pages. It doesn't, not permanently. It adjusts the on-screen view only.
+
+Close Reader and reopen the file: the page is right back to its original orientation. To permanently change how a page is stored in the [PDF format](https://en.wikipedia.org/wiki/PDF), you need a tool with actual write access to the file structure. Adobe Reader doesn't have that. That's what Acrobat (paid) is for. Free browser tools and Mac Preview both handle it.
+
+## The browser method: split, rotate, merge
+
+This approach works in any modern browser on Windows, Mac, Linux, or Chromebook, with no downloads and no account required:
+
+1. Open the [Split PDF](/split-pdf) tool and upload your document.
+2. Enter the problem page's number as a one-page range. Type "3" to extract just page 3, for example. Download the resulting one-page PDF.
+3. Open the [Rotate PDF](/rotate-pdf) tool and upload that one-page file. Choose 90° clockwise, 90° counterclockwise, or 180°, whichever fixes the orientation. Download the rotated page.
+4. Open the [Merge PDF](/merge-pdf) tool. Upload the pages of your original document in order, with the rotated page dropped in at the correct position. Download the finished PDF.
+
+The whole process takes about two minutes. Rotation itself is fast, measured at around 15 to 31 milliseconds for files ranging from a 20-page text report to a 6-page image deck, and has no practical effect on file size. The tool sets one orientation value per page in the [PDF page dictionary](https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf) and leaves all page content untouched.
+
+A useful sanity check: if a rotate tool returns a noticeably different file size, it's likely re-rendering pages to images. That converts text to pixels and degrades quality. A properly implemented rotate touches almost nothing beyond the orientation flag.
+
+## How to rotate one page in a PDF on Mac for free
+
+Mac users have a faster built-in path. [Apple Preview](https://support.apple.com/guide/preview/rotate-and-flip-pages-prvw1010/mac) can permanently rotate individual pages without any extra software:
+
+1. Open the PDF in Preview (double-click or Control-click and choose Open With > Preview).
+2. Show the page sidebar: choose View > Thumbnails, or press Command+Option+2.
+3. Click the thumbnail of the page you want to rotate. Hold Shift or Command to select multiple non-adjacent pages at once.
+4. Press Command+L to rotate counterclockwise, or Command+R to rotate clockwise. For 180°, press the shortcut twice in the same direction.
+5. Save with Command+S.
+
+The rotation is permanent and immediate. Preview sets the same orientation flag that any PDF editor would, so quality stays the same and file size barely changes.
+
+## How to rotate one page in a PDF on Windows
+
+Windows doesn't ship with a PDF editor the way Mac does with Preview, so the browser workflow above is the easiest free path on Windows 10 or 11. Your file stays in the browser and is never sent to a server.
+
+A couple of alternatives worth knowing:
+
+**LibreOffice Draw** (free and open source) can open PDFs and rotate individual pages via Page Properties. When you're done, export back to PDF via File > Export as PDF. It works, though it's heavier than a browser tool for a one-page fix.
+
+**Microsoft Edge** can display PDFs and add annotations, but like Adobe Reader it cannot write a permanent rotation to the file.
+
+## Rotating one page in a PDF on Android or iPhone
+
+On mobile, the most reliable free route for a permanent page rotation is a dedicated PDF app. Adobe Acrobat (free tier) on both Android and iPhone lets you rotate individual pages and save the result. Xodo is another solid free option with per-page rotation on both platforms.
+
+If you're near a computer, the browser workflow is usually faster than wrangling a mobile app. Open the tools on your laptop, upload the file, and finish in a couple of minutes.
+
+## Handling scanned documents
+
+If the sideways page is a scanned image rather than a text document, the same rotation methods work exactly the same way. A scanned page is a JPEG (or similar image) wrapped inside a PDF page, and rotating the page object rotates the embedded image with it, no re-scanning needed.
+
+What you can't do is search or copy text from a scanned page after rotating it. The text exists only as pixels. If you need selectable text, that requires OCR (optical character recognition), which is a separate process from page rotation.
+
+## When to rotate all pages instead
+
+If you scanned a whole document and the entire file came out rotated, there's no need for the split-rotate-merge workflow. The [Rotate PDF](/rotate-pdf) tool handles the whole document in one step. Upload the file, choose the angle, download the result. Use the per-page workaround only when fewer pages need rotating than the total in your document.
+
+## Quick reference
+
+| Situation | Best free method |
+|---|---|
+| One page sideways, browser available | Split PDF, rotate, merge |
+| One page sideways, on a Mac | Preview (Command+L or Command+R) |
+| One page sideways, mobile only | Adobe Acrobat free tier or Xodo |
+| All pages sideways | Rotate PDF tool (one step) |
+| Sideways scanned page, need searchable text | Rotate first, then use an OCR tool separately |

@@ -1,0 +1,102 @@
+---
+title: "How to Make a Scanned PDF Searchable for Free"
+description: "Turn any scanned PDF into a searchable document for free using Google Drive, iLovePDF, or OCRmyPDF. No software to buy, no Acrobat needed."
+date: "2026-08-05"
+keywords: ["how to make a scanned pdf searchable free", "ocr pdf free", "searchable pdf", "make pdf searchable", "ocr scanned document free"]
+toolSlugs: ["pdf-to-jpg", "merge-pdf"]
+faq:
+  - q: "Why can't I search text in my scanned PDF?"
+    a: "A scanned PDF is a photograph of a document, not real text. Your PDF reader has no characters to search because the words are just pixels arranged to look like letters. OCR adds a hidden text layer so you can search, copy, and select."
+  - q: "Does Google Drive OCR work for free?"
+    a: "Yes. If you already have a Google account, you can upload any PDF to Google Drive and open it in Google Docs to trigger free OCR. Google recommends keeping files under 2 MB for reliable results."
+  - q: "Is OCR always accurate?"
+    a: "OCR accuracy depends heavily on scan quality. Clean, high-resolution scans of printed text convert very well. Faded text, skewed pages, or handwriting will produce more errors. Always review the output before relying on it."
+  - q: "Can I make a PDF searchable without uploading it to a server?"
+    a: "Yes. OCRmyPDF is a free, open-source command-line tool that runs entirely on your own computer. Install it with pip install ocrmypdf, then run: ocrmypdf input.pdf output.pdf. Nothing leaves your machine."
+  - q: "Does making a PDF searchable change how it looks?"
+    a: "No. OCR adds an invisible text layer underneath the original scanned image. The visible page is unchanged; you're still looking at the original scan, but the text beneath it is now selectable and searchable."
+  - q: "What if my PDF is too large for online OCR tools?"
+    a: "Split the file into smaller sections first, run OCR on each part, then merge the results back together. Many free online OCR tools cap file size at 50 to 100 pages on their free tier."
+---
+
+If you can't select or search text in a PDF, the file is almost certainly a scanned image. Making a scanned PDF searchable is free and takes less than a minute using Google Drive, a free web tool, or a command-line program for private documents.
+
+## Why your scanned PDF won't let you search
+
+When you scan a physical document, your scanner captures a photograph of the page. A scanned PDF is a collection of those images wrapped in a PDF container. Your PDF reader has nothing to search because there are no actual text characters in the file, only pixels arranged to look like letters.
+
+The fix is [OCR (Optical Character Recognition)](https://en.wikipedia.org/wiki/Optical_character_recognition), which reads the shapes in those pixel images and converts them into real, selectable characters. Once OCR runs, your PDF reader can find words, you can copy sentences, and the document behaves like any other text-based PDF.
+
+## Method 1: Google Drive (free, no extra software)
+
+If you have a Google account, you already have free OCR. Google Drive uses Google's text recognition engine, and it runs without any additional software or sign-ups.
+
+1. Go to [drive.google.com](https://drive.google.com) and click **New > File upload**.
+2. Select your scanned PDF.
+3. Once it uploads, right-click the file and choose **Open with > Google Docs**.
+4. Wait for Google Docs to open the file. It runs OCR automatically on image-based PDFs.
+5. Go to **File > Download > PDF Document (.pdf)** to save the searchable version.
+
+Google recommends keeping files under 2 MB for reliable results. Complex layouts with multiple columns or dense tables may not format perfectly, but the text will be searchable. If your file is larger, [split it into smaller sections](/split-pdf) and run OCR on each part separately, then [merge the results back together](/merge-pdf).
+
+## Method 2: Free online OCR tools
+
+No Google account? Several free web tools can handle the job in a browser with no installation.
+
+- **iLovePDF OCR** (ilovepdf.com/ocr-pdf): upload your file, select the document language, and download the searchable PDF. No account required for basic use.
+- **PDF2Go** (pdf2go.com/create-searchable-pdf): similar workflow, supports multiple languages.
+- **OCR.Space** (ocr.space): free API and web interface, works on both PDFs and images.
+
+All three work the same way: upload the scan, the server runs OCR, you download the result. Most free tiers are capped at 50 to 100 pages per file.
+
+A word on privacy: any file you upload to a web service passes through their servers. For sensitive documents (medical records, legal papers, financial statements), the offline method below is a better fit.
+
+## Method 3: OCRmyPDF for offline processing
+
+[OCRmyPDF](https://github.com/jbarlow83/OCRmyPDF) is a free, open-source tool that runs entirely on your computer. It uses [Tesseract](https://github.com/tesseract-ocr/tesseract), the OCR engine that powers many commercial products, and it adds a searchable text layer without touching the visual content of your scan.
+
+**Install and run:**
+
+```bash
+pip install ocrmypdf
+ocrmypdf input.pdf output.pdf
+```
+
+On macOS with Homebrew:
+
+```bash
+brew install ocrmypdf
+ocrmypdf input.pdf output.pdf
+```
+
+A few useful options:
+
+- `--deskew` straightens slightly tilted pages before processing, which noticeably improves accuracy on crooked scans.
+- `--language eng+fra` (or any Tesseract language codes) handles multilingual documents.
+- `--output-type pdfa` produces a PDF/A file, useful for long-term archiving.
+
+This is the best option for large files, batches of documents, or anything you can't send to a third-party server. Nothing leaves your machine, and there's no page cap.
+
+## What affects OCR accuracy
+
+OCR works best on clean, high-contrast scans. These factors reduce accuracy:
+
+- **Low scan resolution.** 300 DPI is the practical minimum. Scans below that produce noticeably more errors, especially on small text. Most modern scanners and scanner apps default to at least 300 DPI.
+- **Text quality.** Printed text from a modern laser or inkjet printer converts almost perfectly. Faded ink, older typewriters, and dot-matrix printing will have more character-level errors.
+- **Handwriting.** General-purpose OCR struggles with handwriting. Dedicated handwriting recognition tools exist, but they're a different product category from PDF OCR.
+- **Page orientation.** Sideways or upside-down pages need to be corrected first. Both Google Docs and OCRmyPDF can detect and rotate pages automatically.
+- **Complex layouts.** Multi-column layouts, tables, and pages mixing text with large graphics may produce garbled output. Review the text layer after conversion for any documents that need to be exact.
+
+Always skim the output for obvious errors before relying on the searchable PDF for anything important.
+
+## What to do after making your PDF searchable
+
+Once your PDF has a text layer, it behaves like any native text PDF:
+
+- **Search within it.** Cmd+F (Mac) or Ctrl+F (Windows) finds any word instantly.
+- **Copy and paste text.** Click and drag to select passages, then copy.
+- **Combine with other documents.** Use the [Merge PDF tool](/merge-pdf) to add a cover page, supporting documents, or other pages to your newly searchable file.
+
+One thing to avoid: running the result through our [Compress PDF tool](/compress-pdf) if your document is text-heavy. Our compressor rasterizes pages to JPEG, which is ideal for photo-heavy PDFs but makes text documents dramatically larger. A 23.5 KB text report grew to 1.4 MB in our tests. For text documents, the OCR-processed file is already compact.
+
+If the online tools cap you at too few pages, [split the PDF](/split-pdf) into chunks first, run each through OCR, then [merge them back](/merge-pdf) once they're all searchable.

@@ -1,0 +1,80 @@
+---
+title: "How to Make a PDF Smaller on iPad (Free, No App)"
+description: "Shrink a PDF on your iPad in Safari with no app and no sign-up. Includes the one warning that saves you from making your file bigger."
+date: "2026-08-04"
+keywords: ["how to make a pdf smaller on ipad free", "compress pdf ipad", "reduce pdf size ipad", "compress pdf safari ipad", "pdf smaller ipad no app"]
+toolSlugs: ["compress-pdf"]
+faq:
+  - q: "Can I compress a PDF on iPad without downloading an app?"
+    a: "Yes. Open Safari, go to the Compress PDF tool, pick your file from the Files app, and download the result. No app, no account, no sign-up."
+  - q: "Does iPad have built-in PDF compression?"
+    a: "No. Unlike Mac's Preview, which has a Reduce File Size export option, iPadOS has no native PDF compressor. You need a browser tool or a dedicated app."
+  - q: "What kind of PDFs actually get smaller after compression?"
+    a: "Image-heavy PDFs: scans, photo slide decks, portfolios. Text documents, contracts, and invoices usually get much larger because the compressor converts every page to a JPEG image, and text as a photograph is far bigger than text as vector characters."
+  - q: "Why did my PDF get bigger after I compressed it?"
+    a: "PDF compressors rasterize every page to a JPEG. Text stored as vector characters is tiny; the same text as a photograph is not. A 23.5 KB text report grew to 1.4 MB after compression in the Compress PDF tool."
+  - q: "Should I compress the same PDF twice to shrink it more?"
+    a: "No. A second pass at the same quality level makes the file bigger. Feed the Medium-compressed output back through at Medium and it nearly doubles. Start from the original at a higher compression level instead."
+---
+
+## The quickest way to make a PDF smaller on iPad
+
+You can make a PDF smaller on iPad for free without installing a single app. Open Safari, go to the [Compress PDF tool](/compress-pdf), upload your file from the Files app, and download the result. The whole process runs inside the browser tab, nothing is sent to a server, and you're done in under a minute.
+
+That's the short answer. Keep reading if you want to know which PDFs this will actually help, which ones it will make worse, and what to do when compression still isn't enough.
+
+## Does iPad have built-in PDF compression?
+
+No. This surprises a lot of people because Mac users are used to the Reduce File Size option in Preview's export dialog. iPadOS dropped that. The Files app on iPad can open, rename, move, and share PDFs, but it can't shrink them.
+
+The [iOS Shortcuts app](https://support.apple.com/guide/shortcuts/welcome/ios) has an "Optimize PDF File Size" action that some guides recommend. It works, but you have to import the shortcut first, the quality control is limited, and the results are inconsistent across iPad models. For straightforward compression with a clear quality setting, a browser tool is more predictable.
+
+## Which PDFs actually get smaller after compression?
+
+This is the thing most guides skip, and skipping it costs you time.
+
+**Image-heavy PDFs shrink well.** If your PDF is a scanned document, a portfolio of photos, or a slide deck where each page is a big image, compression will cut the file size significantly. The tool converts each page to a JPEG at a lower resolution or quality, which is exactly what these files need.
+
+**Text PDFs get bigger, sometimes much bigger.** If your PDF is mostly typed text, a contract, a spreadsheet export, or a report from a word processor, compression will make the file larger. The tool rasterizes every page to a JPEG image, and text stored as vector characters is extremely compact. The same text as a photograph is not.
+
+Based on measurements from the Compress PDF tool: a 6-page image deck starting at 913.4 KB shrank to 315.3 KB at Medium quality (a 65.5% reduction). A 20-page text report starting at 23.5 KB grew to 1,400.8 KB after the same compression, a roughly 60x increase in size.
+
+Before you compress anything, scroll through your PDF. Does it look like scanned pages or photos? Compress it. Does it look like a typed letter or a spreadsheet? Compression will hurt, not help.
+
+## How to pick a compression level
+
+The Compress PDF tool offers three levels:
+
+**Low (best quality)** reduces file size modestly while keeping images as sharp as possible. Good for PDFs where you'll be printing or zooming in on the result.
+
+**Medium** is a solid middle ground. The 913.4 KB image deck came down to 315.3 KB, which is usually small enough to email or upload without visible quality issues when viewed on screen.
+
+**High (smallest file)** gives the biggest reduction but makes images noticeably softer. The same image deck came down to 175.6 KB, an 80.8% reduction. Useful when file size is the priority and sharpness is not.
+
+One rule to remember: never run the same PDF through compression twice expecting to get it smaller. A second pass at Medium on an already-compressed file actually made the test deck jump from 315.3 KB to 598.9 KB, nearly double. If Medium compression isn't cutting it, go back to your original file and try High instead.
+
+## Step-by-step: compress a PDF on iPad in Safari
+
+1. Open Safari on your iPad.
+2. Go to [pdf.tools/compress-pdf](/compress-pdf) or search for the Compress PDF tool.
+3. Tap the upload area. When the file picker appears, tap Browse and locate your PDF in the Files app.
+4. Select a compression level. Medium works for most scans and image-heavy documents.
+5. Tap Compress and wait a few seconds. Larger files with more pages take a little longer.
+6. When the download button appears, tap it. The compressed PDF saves to your Downloads folder in Files.
+7. To move it somewhere else, open Files, find the file in Downloads, tap and hold, then tap Move.
+
+Because everything processes in your browser tab, closing Safari while it's working will interrupt the process. Keep the tab open until the download is ready.
+
+## What to do if the file is still too big
+
+[Gmail](https://support.google.com/mail/answer/6584) and [Outlook.com](https://support.microsoft.com/en-us/office/email-attachment-size-limits-in-outlook-and-outlook-on-the-web-8e71cf3d-8a25-4e72-b2b7-1b1e59d93e46) both cap email messages at 25 MB. Because email encodes attachments in Base64, which adds roughly a third to the file size, the practical ceiling for a PDF attachment is closer to 18 MB.
+
+If your PDF is still over that after compression, a few options:
+
+**Split it into smaller pieces.** The [Split PDF tool](/split-pdf) lets you pull out specific page ranges and save them as separate files. Sending a document in two or three parts is often the simplest fix.
+
+**Share a link instead of attaching the file.** Save the PDF to iCloud Drive, then tap Share in Files and choose Copy iCloud Link. The recipient downloads it directly rather than receiving it as an attachment.
+
+**Check whether the PDF is actually a text document.** If so, compression made it larger, not smaller. A text-heavy PDF that's oversized is usually that way because of embedded fonts, an oversized logo, or revision history baked in by the authoring application. Splitting or sharing a link are better solutions than compression.
+
+For PDFs where each page is a separate scanned image and the file is still large after High compression, the images themselves may need to be at a lower resolution before the PDF is created. That's an upstream fix, but it's worth knowing compression isn't always the right tool.

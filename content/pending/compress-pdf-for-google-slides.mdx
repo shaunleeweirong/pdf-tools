@@ -1,0 +1,86 @@
+---
+title: "Compress a PDF for Google Slides (Free)"
+description: "PDF too large for Google Slides? Compress image-heavy PDFs free in your browser before inserting pages. Includes step-by-step guide and what not to compress."
+date: "2026-08-08"
+keywords:
+  - compress pdf for google slides
+  - pdf too large for google slides
+  - insert pdf google slides
+  - reduce pdf size for presentation
+  - compress pdf presentation free
+toolSlugs:
+  - compress-pdf
+  - pdf-to-jpg
+faq:
+  - q: "Can I insert a PDF directly into Google Slides?"
+    a: "No. Google Slides doesn't support native PDF embedding. The standard workaround is to convert each PDF page to a JPG image and insert those images. Compressing the PDF first keeps each image smaller and your presentation loading fast."
+  - q: "Will compressing a PDF always make it smaller for Google Slides?"
+    a: "Only if the PDF contains photos, scans, or image-heavy pages. Our compressor rasterizes pages to JPEG, which reduces file size dramatically for image PDFs but makes text-only PDFs much larger. For a text-based PDF, skip compression and share it from Google Drive as a link instead."
+  - q: "What file size should I target when inserting a PDF into Google Slides?"
+    a: "Keep each inserted page image under 500 KB if possible. Google Slides presentations run most reliably when the total file stays under 10 MB, so compressing before converting pages to images pays off quickly."
+  - q: "How do I insert a compressed PDF into Google Slides?"
+    a: "Compress the PDF, convert each page to JPG using a PDF to JPG tool, then in Google Slides go to Insert > Image > Upload from computer and select the JPG files."
+  - q: "Does Google Slides have a file size limit?"
+    a: "Presentations uploaded and converted to Google Slides format support files up to 100 MB. In practice, presentations over 10 MB tend to load slowly, especially on mobile, so compressed images make a real day-to-day difference."
+---
+
+Compressing a PDF for Google Slides takes about a minute and keeps your presentation loading fast, whether you're presenting on a school Chromebook or sharing a slide deck over video call. The short version: compress the PDF first, convert its pages to images, then insert those images into Slides.
+
+There's one catch worth knowing upfront: compression only helps for PDFs that contain photos or scanned pages. If your PDF is mostly text, compression will make the file bigger, not smaller. That case has a different fix, covered below.
+
+## Why Google Slides won't accept a PDF directly
+
+Google Slides can't import or embed a PDF as a live document. [The format isn't part of the Slides rendering engine](https://workspace.google.com/products/slides/), so a PDF is treated as something to link to or convert first. This is why inserting a PDF always involves one of three approaches:
+
+- Convert each page to an image and insert the images
+- Upload the PDF to Google Drive and insert a link
+- Use a third-party add-on from the Google Workspace Marketplace
+
+The image approach is the most common because it keeps everything inside one presentation file. It also means file size matters: every inserted image contributes to the total presentation size, and large presentations are slow to open and share.
+
+## How compression helps (and when it doesn't)
+
+Our [Compress PDF tool](/compress-pdf) rasterizes each page to a JPEG image. That's worth understanding, because it means compression is actually well-suited to this workflow. You're going to convert the PDF pages to images anyway. Compression just makes those images start out smaller.
+
+On a 6-page image deck tested at 913.4 KB:
+
+- **Medium compression**: 315.3 KB (down 65.5%)
+- **High compression**: 175.6 KB (down 80.8%)
+
+Those pages, once extracted as individual JPGs and inserted into Google Slides, will be roughly that size per image. Six images at 315 KB each adds up to about 1.9 MB total, well inside the comfortable range for a fast-loading presentation.
+
+**When not to compress:** If your PDF is a text document (a report, contract, invoice, or form), do not run it through the compressor. A text-only 20-page report that starts at 23.5 KB can come out at 1.4 MB after compression, because rasterizing vector text into a JPEG photograph of text adds a lot of data. For text PDFs, the Google Drive link method (described below) is cleaner.
+
+## Step-by-step: compress and insert a PDF into Google Slides
+
+This works for PDFs containing scanned pages, photos, exported slide decks, or any image-heavy content.
+
+1. Go to the [Compress PDF tool](/compress-pdf). No sign-up needed, and your file stays in your browser. Nothing is uploaded to a server.
+2. Drop in your PDF. Choose **Medium** quality as a starting point, or **High** if file size is the priority and you don't mind a slight drop in sharpness.
+3. Download the compressed PDF.
+4. Open the [PDF to JPG tool](/pdf-to-jpg) and convert the compressed PDF. Each page becomes a separate JPG.
+5. In Google Slides, open the slide where you want the first page. Go to **Insert > Image > Upload from computer** and select all the JPG files.
+6. Google Slides will insert each image. Resize and position as needed (dragging a corner handle while holding Shift keeps the aspect ratio).
+
+If you're working with a large multi-page document, select all the JPG files at once in step 5. Slides inserts each one as a separate slide automatically, saving you from placing them one by one.
+
+## When to link instead of insert
+
+If your PDF is text-based, the image workflow isn't the right call. A compressed text PDF is larger than the original, and a high-resolution screenshot of a text page isn't readable at slide scale anyway. The better option is to keep the PDF in Google Drive and link to it.
+
+1. Upload the PDF to Google Drive.
+2. Right-click the file, select **Share**, and set the sharing permissions to **Anyone with the link** (or your school/org domain if that applies).
+3. Copy the sharing link.
+4. In Google Slides, select a text box or shape, go to **Insert > Link**, and paste the Drive URL.
+
+Viewers click the link during your presentation and the PDF opens in Drive at full quality. The slide deck itself stays light.
+
+## File size and Google Slides limits
+
+[Google's documentation on Drive file sizes](https://support.google.com/drive/answer/37603) puts the limit for presentations converted to Google Slides at 100 MB. But presentations approaching that size are a pain to work with: slow to open, sluggish when scrolling between slides, and frustrating to share with people on slow connections.
+
+A more practical target is under 10 MB for the full presentation. That's achievable for most decks where images come from compressed PDF pages at Medium quality. A JPG from a compressed 6-page image deck runs under 100 KB per page at typical slide dimensions, so even a 30-slide presentation stays well under 5 MB.
+
+## Don't compress twice
+
+One common piece of advice is to run compression twice to squeeze out more. It doesn't work. Running a Medium-compressed PDF through the compressor again increases the file size from 315.3 KB to 598.9 KB. Re-encoding a JPEG that has already been compressed adds data rather than removing it. Pick the right level on the first run. If Medium isn't enough, start from the original file and try High.

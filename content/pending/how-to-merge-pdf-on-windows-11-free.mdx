@@ -1,0 +1,86 @@
+---
+title: "How to Merge PDF Files on Windows 11 Free"
+description: "Windows 11 has no built-in PDF combiner. Here's how to merge PDF files on Windows 11 for free, right in your browser, with no install or sign-up."
+date: "2026-08-02"
+keywords:
+  - how to merge pdf on windows 11 free
+  - combine pdf files windows 11
+  - merge pdf windows 11 no download
+  - combine pdf windows without acrobat
+  - merge pdf free windows
+toolSlugs:
+  - merge-pdf
+  - flatten-pdf
+faq:
+  - q: Does Windows 11 have a built-in PDF merge tool?
+    a: No. Windows 11 doesn't include a PDF combiner. Microsoft Print to PDF is a virtual printer that converts documents into PDF format, but it can't combine existing PDF files. You need a separate tool.
+  - q: Can Microsoft Edge merge PDF files?
+    a: No. Edge is Windows 11's default PDF viewer and it can open, scroll, and annotate PDFs, but it has no merge function. You need a browser-based tool or an app to combine files.
+  - q: Will merging PDFs make the combined file bigger?
+    a: Not meaningfully. In measured tests, three PDF files totaling 971.9 KB produced a merged output of 970.5 KB. The output comes in at roughly the sum of the parts.
+  - q: What happens to fillable form fields when I merge PDFs?
+    a: They're stripped. Merging removes interactive form fields from the output, even filled ones. If you need to preserve the values a form contains, flatten the form first using the Flatten PDF tool, which bakes field values into the page as static text.
+  - q: Is it safe to merge PDFs in an online tool?
+    a: It depends on the tool. Many online PDF services upload your files to a remote server where they're stored temporarily. Our Merge PDF tool processes everything in your browser, so your files never leave your device.
+---
+
+You can merge PDF files on Windows 11 for free in under a minute using the [Merge PDF tool](/merge-pdf), which runs entirely in your browser. No install, no sign-up, and your files stay on your device. This page explains how to do it, plus what Windows 11 actually provides on its own.
+
+## Does Windows 11 have a built-in tool to merge PDFs?
+
+No. Windows 11 doesn't ship with anything that can combine existing PDF files. You might have heard about **Microsoft Print to PDF**, which is a virtual printer built into Windows. It's useful for saving web pages or documents as PDF files, but it can't take two PDF files you already have and join them together. It's a "create PDF" tool, not a "combine PDFs" tool.
+
+[Microsoft Edge](https://support.microsoft.com/en-us/microsoft-edge), the default browser and PDF viewer in Windows 11, can open and scroll through PDFs, highlight text, and add annotations. But there's no merge button. Edge opens one PDF at a time and has no way to combine them.
+
+So if you need to combine PDF files on Windows 11, you need a separate tool. The good news is you don't need to install anything.
+
+## How to merge PDFs on Windows 11 without installing anything
+
+The simplest method is a browser-based tool. Our [Merge PDF tool](/merge-pdf) works in Chrome, Edge, Firefox, or any modern browser on Windows 11. Your files are processed locally in the browser tab and never sent to a server.
+
+Here's how to do it:
+
+1. Open the [Merge PDF tool](/merge-pdf) in your browser.
+2. Click **Add files** or drag your PDF files into the upload area. You can add as many files as you need.
+3. Drag the file thumbnails to change the order if you want them combined in a specific sequence.
+4. Click **Merge PDF**.
+5. Download the combined file when it's ready.
+
+That's it. The output file is ready in seconds for most documents.
+
+## Does merging PDFs make the file bigger?
+
+This is one of the most common questions, and the short answer is no, not meaningfully. Combining PDFs doesn't add significant overhead. In measured tests using our tool, three files that totaled 971.9 KB produced a merged output of 970.5 KB, which is actually fractionally smaller than the inputs combined. This happens because shared PDF structure gets written once in the output.
+
+The practical takeaway: if you're trying to keep a combined document under an email attachment limit, merging won't push you over. The combined file will be about the same size as all the parts added together.
+
+## What if my PDF has fillable form fields?
+
+This is important to know before you merge. When you combine PDF files, [interactive form fields](https://en.wikipedia.org/wiki/PDF#Interactive_forms) are stripped from the output. The page content (text, images, layout) all comes through correctly, but any AcroForm fields that let someone type into boxes or check checkboxes don't carry over.
+
+If one of your PDFs is a form you've already filled in, there's a real risk of losing those values if you merge without preparation. The fix is to flatten the form first. Flattening converts the form fields into plain static content baked into the page, so the values become part of the document itself rather than living in editable fields. You can use the [Flatten PDF tool](/flatten-pdf) to do this before merging.
+
+The workflow for a filled form is:
+
+1. Open the filled form with the [Flatten PDF tool](/flatten-pdf) and download the flattened version.
+2. Then go to the [Merge PDF tool](/merge-pdf) and combine the flattened form with your other documents.
+
+After that, all the field values will be visible in the merged output.
+
+## Should I use a desktop app or a browser-based tool?
+
+Desktop apps like [PDFsam Basic](https://pdfsam.org/) (free and open-source) or PDF Arranger give you more control over page ranges and let you work offline. They're worth installing if you merge PDFs regularly or work with very large files.
+
+For one-off tasks, a browser tool is faster. You don't need to find, download, or install anything, and you're done in under two minutes. The [Merge PDF tool](/merge-pdf) is free, handles multiple files, and lets you reorder pages before combining.
+
+## What about Windows Subsystem for Linux or command-line tools?
+
+If you're comfortable in the terminal, tools like [Ghostscript](https://ghostscript.com/) or `pdftk` can combine PDFs from the command line and give you precise control over the output. Ghostscript is free and runs on Windows. This approach is worth knowing about if you need to automate merging across many files or script it into a workflow.
+
+For most people merging a handful of PDFs to send somewhere, the browser tool is faster.
+
+## Merging PDFs for email: a quick note on file size
+
+[Gmail and Outlook](https://support.google.com/mail/answer/6584) both have a 25 MB limit on message attachments. If you're merging several large PDFs to email, check the combined size before sending. Because merging doesn't inflate the file, the combined size will be close to what you'd expect from adding the parts together.
+
+If the merged result is still too large, and the content is image-heavy (scans, photos), you can try compressing it afterward with the [Compress PDF tool](/compress-pdf). Just be aware that compression works best on image-heavy files and will actually make a text-based PDF larger, not smaller.

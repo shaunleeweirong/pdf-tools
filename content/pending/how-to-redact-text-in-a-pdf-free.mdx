@@ -1,0 +1,95 @@
+---
+title: "How to Redact Text in a PDF Free"
+description: "Black out sensitive text in any PDF, free in your browser. Learn the difference between a cosmetic cover-up and true permanent redaction."
+date: "2026-08-02"
+updated: "2026-08-02"
+keywords: ["how to redact text in a pdf free", "redact pdf free", "black out text in pdf", "remove sensitive information from pdf", "pdf redaction no adobe"]
+toolSlugs: ["edit-pdf", "pdf-to-jpg", "jpg-to-pdf", "flatten-pdf"]
+faq:
+  - q: "Is putting a black box over text in a PDF permanent redaction?"
+    a: "No. A black box drawn on top of text only covers it visually. The original text stays in the file and can be copied or revealed by selecting it in a PDF viewer. For sensitive information, you need an approach that removes the text data from the file itself, not just paints over it."
+  - q: "How do I permanently remove text from a PDF for free?"
+    a: "Convert the PDF pages to JPG images using the PDF to JPG tool. Because JPEG stores pixel data rather than text, the text information no longer exists in the output. Draw a solid black box on each image in any image editor, then reassemble the pages with the Images to PDF tool. The resulting PDF has no recoverable text underneath the black areas."
+  - q: "Can I redact a PDF without uploading it to a server?"
+    a: "Yes. The Edit PDF tool on this site runs entirely in your browser, so your document never leaves your device. That matters for confidential files where you do not want the contents sitting on a third-party server."
+  - q: "What is the difference between visual and true PDF redaction?"
+    a: "Visual redaction draws a colored shape over text. The original text is still in the file underneath and can be recovered by moving the box or using a text editor. True redaction permanently deletes the text objects from the PDF content layer so the data cannot be retrieved, even with technical tools."
+  - q: "Does flattening a PDF make the black boxes permanent?"
+    a: "Flattening locks the black box in place so it cannot be easily moved or deleted. But flattening does not remove the underlying text from the file's content stream. The original text remains accessible to anyone who knows how to look for it. For permanent erasure, the rasterization approach described above is more reliable."
+---
+
+You can redact text in a PDF for free without Adobe Acrobat, right in your browser. The method you pick matters a lot, though. Drawing a black box over text hides it on screen but leaves the original words in the file. This guide covers both approaches so you can choose the right one for what you actually need.
+
+## What "redact" actually means
+
+Redaction, done properly, permanently deletes information from a document so it cannot be recovered, even by someone with technical tools. That is very different from hiding text with a colored shape.
+
+A PDF stores content in layers. According to the [open PDF specification (ISO 32000)](https://pdfa.org/resource/iso-32000-2/), text lives as character objects in a content stream at specific positions on the page. Visual elements like rectangles and fills are separate objects in the same structure. When you draw a black box on top of text, you add a new visual object. The text objects underneath are still there.
+
+Several high-profile document leaks have happened exactly this way: a reporter opened a "redacted" PDF, selected all the text, and pasted it into a text editor. The blacked-out content appeared in full.
+
+## How to black out text in a PDF for free
+
+For visual purposes (printing, screenshots, presentations), covering text with a black box is fast and works fine. The [Edit PDF tool](/edit-pdf) lets you draw boxes in your browser with no account and no file upload required.
+
+1. Open the [Edit PDF tool](/edit-pdf) and upload your document.
+2. Select the rectangle or box drawing tool from the toolbar.
+3. Set the fill color to black and remove any border or stroke.
+4. Draw a box over each piece of text you want to cover.
+5. Resize and reposition until the text is fully hidden.
+6. Download the edited PDF.
+
+The boxes are drawn as page objects on top of the text. The result looks redacted in every PDF viewer. If the file will be printed or captured as a screenshot before it is shared, this is often enough.
+
+## Can someone see through the black box?
+
+In many cases, yes. Open any visually redacted PDF in a viewer, press Ctrl+A to select all content, and paste it into a text editor. If the black box was added as a simple shape, the original text often appears in full because the text objects are still in the file.
+
+This means the black box approach is not safe for:
+
+- Names, addresses, and ID numbers in legal documents
+- Patient information in medical records
+- Financial account numbers and salary data
+- Any information covered by privacy regulations such as [HIPAA](https://www.hhs.gov/hipaa/for-professionals/privacy/index.html) or GDPR
+
+For these situations, you need to remove the text data from the file, not just paint over it.
+
+## How to permanently erase text from a PDF for free
+
+The most reliable free approach is rasterization: converting each page to a pixel image. [JPEG images](https://en.wikipedia.org/wiki/JPEG) store pixel data. They have no text layer, no content stream, no character objects. Once a PDF page is converted to JPG, the text information does not exist in the output file.
+
+Here is the workflow using free in-browser tools:
+
+1. **Export the pages as images.** Use the [PDF to JPG tool](/pdf-to-jpg) to convert your PDF. Each page becomes a JPG file. At this point, the text layer is gone from the exported images.
+2. **Cover the sensitive areas.** Open each JPG in any image editor (Windows Paint, macOS Preview, or a free online image editor) and draw a solid black rectangle over each area you want removed. Save the edited images.
+3. **Rebuild the PDF.** Upload the edited images to the [Images to PDF tool](/jpg-to-pdf) and download the reassembled document.
+
+The resulting PDF is built from raster images. There is no text to copy, no hidden layer to reveal, and no data to extract from the covered areas. The only content is pixels.
+
+The trade-offs: the output file is larger than the original, and the document is no longer searchable or selectable. For sensitive documents where privacy matters more than file size or searchability, that trade-off is worth making.
+
+## Which method to use
+
+| Use case | Method |
+|----------|--------|
+| Printing or screenshotting the file before sharing | Black box via Edit PDF |
+| Presentations and visual references | Black box via Edit PDF |
+| Personal information in shared documents | Rasterization (PDF to JPG, then Images to PDF) |
+| Legal, medical, or compliance documents | Rasterization, or a certified redaction tool |
+| Public records disclosure or court filings | Rasterization, or a certified redaction tool |
+
+If your documents fall under legal or regulatory requirements, check with your legal team about what redaction standard applies. Some regulations require certified tools with audit trails, which go beyond what a general PDF editor provides.
+
+## Does flattening the PDF make redactions permanent?
+
+Flattening converts annotations and interactive fields into static page content. The [Flatten PDF tool](/flatten-pdf) does this in your browser. If your black box was added as an annotation, flattening bakes it into the page and prevents it from being moved or deleted through the normal annotation interface.
+
+However, flattening does not remove underlying text objects from the content stream. The original text remains in the file. Flattening stops casual edits but does not achieve true redaction.
+
+The only approach that removes text data is rasterization.
+
+## Privacy: does the tool upload your file?
+
+Many free online redaction tools process files on their servers. That means your document, including any sensitive content you are trying to hide, is uploaded before anything happens. If the reason you are redacting is to protect sensitive information, think carefully before using a server-based tool.
+
+The [Edit PDF tool](/edit-pdf), [PDF to JPG tool](/pdf-to-jpg), and [Images to PDF tool](/jpg-to-pdf) on this site all run in your browser. Your file stays on your device throughout the process.

@@ -1,0 +1,99 @@
+---
+title: "How to Lock a PDF So It Can't Be Edited Free"
+description: "Two ways to lock a PDF from editing without Adobe Acrobat. Password-protect the whole file or flatten form fields. Free, no sign-up, runs in your browser."
+date: "2026-08-04"
+keywords:
+  - "how to lock a pdf so it can't be edited free"
+  - "lock pdf from editing"
+  - "prevent pdf editing"
+  - "make pdf read only free"
+  - "protect pdf from editing"
+toolSlugs:
+  - "protect-pdf"
+  - "flatten-pdf"
+faq:
+  - q: "Does locking a PDF with a password stop someone from editing it?"
+    a: "Yes. Anyone without the password can't open the file at all, so they can't edit it either. The protection uses AES-256 encryption, the same standard used in banking and government systems."
+  - q: "Can I lock a PDF from editing without Adobe Acrobat?"
+    a: "Yes. Use a free browser-based tool like our Protect PDF tool. No software to install, no account required."
+  - q: "What's the difference between a PDF open password and permission restrictions?"
+    a: "An open password blocks all access to the file. Nobody reads or edits it without entering the password. Permission restrictions let people open and view the file but block specific actions like editing or printing. Our Protect PDF tool adds an open password."
+  - q: "How do I stop someone from changing the answers in a filled PDF form?"
+    a: "Flatten the form before sharing it. Flattening bakes the field values into the page as static content, so the fields no longer exist and can't be changed."
+  - q: "Will password-protecting a PDF make the file noticeably larger?"
+    a: "No. Adding AES-256 encryption adds roughly 1 KB regardless of file size. A 23.5 KB document, for example, becomes 24.6 KB. That won't affect email attachment limits."
+---
+
+To lock a PDF so it can't be edited, you have two practical options: add a password that blocks anyone from opening the file, or flatten the document to remove interactive elements. Both are free, require no sign-up, and run entirely in your browser.
+
+## What "locking" a PDF actually means
+
+The phrase "lock a PDF" covers a few different things, and it's worth knowing which one you actually need before you start.
+
+**Open password (encryption).** This is the most common meaning. You set a password, and anyone who tries to open the file must enter it. Get the password wrong and you see nothing at all. Because the person can't open the document, they can't edit it either. This is what our [Protect PDF](/protect-pdf) tool does.
+
+**Permission restrictions.** The [PDF specification](https://www.pdfa.org/resource/pdf-specification-index/) supports a separate "owner password" that lets you allow viewing while blocking editing, printing, or copying. This is different from an open password. Our Protect PDF tool adds an open password, not permission restrictions.
+
+**Flattening.** No password involved. Flattening converts interactive elements, such as fillable form fields and annotations, into static page content. The result looks identical to the original but has no editable fields. This is the right approach when you've filled out a form and want to make sure the values can't be changed before you send it.
+
+Knowing which type you need saves time. If you want no one to open the file without your say-so, use an open password. If you want people to read the file but not change form values, flatten it.
+
+## How to lock a PDF with a password (step by step)
+
+Our [Protect PDF](/protect-pdf) tool adds AES-256 encryption to any PDF file. Here's how to use it:
+
+1. Open the [Protect PDF tool](/protect-pdf).
+2. Click **Choose file** or drag your PDF onto the page.
+3. Enter a password in the field provided.
+4. Click **Protect PDF**.
+5. Download the encrypted file.
+
+The whole process runs in your browser. The file never leaves your device, and there's nothing to install or sign up for.
+
+From our measurements: encrypting a 23.5 KB PDF takes about 426 milliseconds and adds roughly 1 KB to the file size. A 913 KB image-heavy PDF grew by just 1 KB as well. Password protection has no real effect on whether a file fits an email attachment limit.
+
+Wrong passwords are rejected every time. That behavior is guaranteed by the [AES-256 standard](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) that underpins the encryption.
+
+## How to lock PDF form fields so filled values can't be changed
+
+If you've filled out a form and want the recipient to see your answers but not change them, an open password is overkill. You want the file to be readable; you just don't want editable fields.
+
+The answer here is flattening. Use our [Flatten PDF](/flatten-pdf) tool:
+
+1. Open [Flatten PDF](/flatten-pdf).
+2. Upload your filled-in form.
+3. Click **Flatten** and download the result.
+
+Once flattened, the form fields are gone. The values you entered are now part of the page content, just like any other text. No one can click into a field and change it, because there are no fields left.
+
+One reason this matters: if you merge a filled form into a larger PDF without flattening it first, the merge process may strip the form fields entirely. Our measurements confirmed that merging with pdf-lib removes all AcroForm fields from the output. Flatten first, then merge, if you need to combine a filled form with other documents.
+
+## Does a PDF password actually stop editing?
+
+In practice, yes. If someone doesn't have the password, the file is encrypted ciphertext. They can't read it, copy it, or edit it.
+
+The limits of this protection are worth understanding, though.
+
+First, the password itself is the weak link. If you email the password alongside the file, anyone who intercepts either can open both. Choose a strong password and share it through a separate channel.
+
+Second, if the person you share the file with has the correct password, they can decrypt it, remove the password, and edit it freely. A PDF password is access control, not a permanent lock. Once the password is known, the encryption is no longer a barrier.
+
+Third, very short or common passwords are vulnerable to [brute-force attacks](https://en.wikipedia.org/wiki/Brute-force_attack). AES-256 itself is exceptionally strong, but a six-character dictionary word is not. Use a longer, random password for anything sensitive.
+
+For most everyday situations, such as sharing a quote, contract draft, or school assignment, password protection is more than enough. For highly sensitive documents, consider whether you also need a digital signature to prove the document hasn't been altered after signing.
+
+## A quick note on removing PDF passwords
+
+If you later need to remove a password you set, our [Unlock PDF](/unlock-pdf) tool handles that. Enter the correct password, and the tool strips the encryption and returns the file to within a few bytes of its original size.
+
+You need the correct password to remove the protection. The tool won't strip a password you don't know.
+
+## Which method should you use?
+
+Choose based on what you're trying to prevent:
+
+- **Block everyone from opening and editing the file:** Use [Protect PDF](/protect-pdf) to add an open password.
+- **Let people read but not change form values:** Use [Flatten PDF](/flatten-pdf) before sharing.
+- **Lock a form before merging it with other documents:** Flatten first, then merge, to avoid losing field values in the merge.
+
+All three tools are free, run in your browser, and don't require an account.

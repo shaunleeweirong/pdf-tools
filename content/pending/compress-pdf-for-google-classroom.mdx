@@ -1,0 +1,78 @@
+---
+title: "How to Compress a PDF for Google Classroom"
+description: "Large PDF slowing down your Google Classroom upload? Learn when compression helps, when it makes files bigger, and how to shrink a scanned PDF in seconds."
+date: "2026-08-02"
+keywords: ["compress pdf for google classroom", "reduce pdf size google classroom", "pdf too large google classroom", "compress scanned pdf", "compress pdf chromebook"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "Does Google Classroom have a PDF file size limit?"
+    a: "Google Classroom stores files in Google Drive, which allows individual files up to 5 TB. There's no strict PDF limit, but very large files upload slowly on school networks and load slowly on phones, so keeping PDFs under 5 MB is a practical target for smooth use."
+  - q: "Will compressing a typed or printed PDF make it smaller?"
+    a: "No. Compressing a text-based PDF (a typed document, invoice, or form) with a rasterizing tool makes it much larger, because the tool converts each page to a JPEG image. Compression is only worth doing on PDFs that are already image-heavy, like scanned handwritten work."
+  - q: "My homework PDF is 20 MB. How do I reduce it for Google Classroom?"
+    a: "If it's a scanned document, use the Compress PDF tool at Medium or High quality. Those settings can cut a large image-based PDF to a fraction of its original size. If it's a typed document, try splitting it into sections with the Split PDF tool instead."
+  - q: "Can I compress a PDF on a Chromebook for Google Classroom?"
+    a: "Yes. Browser-based tools like the Compress PDF tool on this site run fully in Chrome with no extension or app to install, which makes them a natural fit for Chromebooks."
+  - q: "Is it safe to compress a PDF without uploading it to a server?"
+    a: "The Compress PDF tool on this site runs entirely in your browser. Your file is never sent to any server, so there's no privacy concern with school documents."
+---
+
+You can compress a PDF for Google Classroom using the [Compress PDF tool](/compress-pdf), free and in your browser. Upload your file, pick a compression level, and download the smaller version in seconds. The key thing to know before you do: compression helps image-heavy PDFs like scanned homework, but it makes typed or printed PDFs noticeably larger.
+
+## Why are PDFs so large in Google Classroom?
+
+The most common culprit is scanning. When you photograph handwritten homework with your phone or use a scanner app, each page becomes a high-resolution JPEG image embedded in a PDF file. A single scanned page can weigh 1 to 3 MB at full resolution. A five-page assignment, then, arrives at 5 to 15 MB or more.
+
+That's fine for archiving, but it creates friction in Google Classroom. Large files take longer to upload on shared school Wi-Fi, longer to open on a teacher's phone, and longer to review during class. Some school network proxies also time out on slow uploads, which can make it look like the file failed to submit.
+
+Teachers who upload worksheets or resource packets with lots of embedded diagrams or photos run into the same issue.
+
+## Does Google Classroom have a file size limit?
+
+Not a restrictive one for PDFs. [Google Drive](https://support.google.com/drive/answer/37603), which stores all Classroom files, allows individual files up to 5 TB. So a large PDF won't be rejected outright.
+
+The practical problem is speed. A 20 MB PDF attached to an assignment is slow to download for every student in the class, especially on mobile data or a congested school Wi-Fi network. Keeping submitted PDFs under 5 MB, and shared resources under 2 MB, makes the Classroom experience noticeably smoother.
+
+## When compression actually helps
+
+Compression makes sense when your PDF is made up mostly of images. Scanned handwritten homework, worksheets with photos, presentation slides saved as PDFs, and receipts photographed on a phone all fall into this category. The compressor converts each page to a JPEG, which trims the file size significantly when the content is already raster-based.
+
+Our compress tool offers three levels:
+
+- **Low (best quality):** small reduction, clear text and images
+- **Medium:** good balance of size and quality, the right starting point for most scanned homework
+- **High (smallest file):** biggest reduction, some visible quality drop at 100% zoom
+
+For a multi-page image-heavy PDF, Medium and High settings can cut the file to a fraction of its original size.
+
+## When compression makes files larger (and what to do instead)
+
+If your PDF is a typed document, a printed form, a contract, or anything that started life as digital text, a rasterizing compressor will make it bigger. Sometimes much bigger. That's because a text PDF stores characters as vector data, which is compact. The compressor throws that away and replaces each page with a photo of the page instead.
+
+In our own testing, a 20-page text report grew from 23.5 KB to 1.4 MB after compression. That's more than 60 times the original size. The same principle applies to typed homework submitted as a PDF, invoices, and any form filled and saved digitally.
+
+For these files, the right move is to use the [Split PDF tool](/split-pdf) to break the document into smaller sections, or to share it directly as a Google Doc instead, which keeps the file size tiny.
+
+## How to compress a scanned PDF for Google Classroom
+
+1. Go to the [Compress PDF tool](/compress-pdf) on this site.
+2. Click "Select PDF" or drag your file onto the page. Nothing is uploaded to a server; the work happens in your browser.
+3. Pick a compression level. For a scanned homework submission, Medium is usually the right call. If the result is still too large, repeat from the original file at High.
+4. Click Compress. Download the output file.
+5. Upload the compressed file to your Google Classroom assignment.
+
+The whole process takes under a minute for most files.
+
+One thing to avoid: don't compress the same file twice hoping to squeeze more out. Running the output through compression again at the same level makes the file larger, not smaller, because re-encoding an already-compressed JPEG adds data rather than removing it. If Medium didn't get the file small enough, start from your original and try High instead.
+
+## Tips for Chromebook users
+
+Chromebooks are common in K-12 classrooms, and browser-based compression tools are the simplest option here since there's nothing to install. Open the [Compress PDF tool](/compress-pdf) in Chrome, upload your file, compress it, and save the result to your Downloads folder or directly to Google Drive. The tool uses [WebAssembly](https://webassembly.org/) to run the compression locally in your browser tab.
+
+If you have a lot of scanned pages and the total file is still large after compression, consider splitting the submission into two parts using the [Split PDF tool](/split-pdf). This is common for long lab reports or multi-page handwritten assignments.
+
+## Why your scan settings matter for next time
+
+If you're using your phone to scan homework, the [resolution setting in your scan app](https://en.wikipedia.org/wiki/Image_resolution) makes a big difference before any compression happens. Scanning at 150 to 200 DPI in grayscale keeps file sizes reasonable without sacrificing readability. Most scanner apps default to a much higher resolution aimed at archival quality, which isn't needed for a homework submission.
+
+Adjusting the scan settings at the start can get you a clean, legible PDF under 1 MB per page, without needing any compression step at all.
