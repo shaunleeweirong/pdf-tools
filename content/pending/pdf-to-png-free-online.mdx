@@ -1,0 +1,92 @@
+---
+title: "PDF to PNG Free Online: Convert Without Uploading"
+description: "Convert PDF pages to PNG images free in your browser. No sign-up, no server uploads. Understand when PNG beats JPG and get it done in seconds."
+date: "2026-08-08"
+updated: "2026-08-08"
+keywords: ["pdf to png free online", "convert pdf to png", "pdf to png converter", "pdf pages to png", "pdf to png no sign up"]
+toolSlugs: ["extract-images", "pdf-to-jpg"]
+faq:
+  - q: "Can I convert a PDF to PNG without uploading my file to a server?"
+    a: "Yes. The Extract Images tool runs entirely in your browser using PDF.js. Your PDF is never sent anywhere. All processing happens on your device."
+  - q: "What's the difference between PDF to PNG and PDF to JPG?"
+    a: "PNG is lossless: every pixel in the output exactly matches the rendered page, so text and lines stay sharp with no artifacts. JPG uses lossy compression, which makes files smaller but can blur edges and create faint ringing around text. Choose PNG for text and diagrams, JPG for photos."
+  - q: "Why is my PNG file so much bigger than the original PDF?"
+    a: "PDF stores text as compact vector data (font outlines and positions). PNG stores every pixel of every character on every line. The same content takes much more space as pixels than as instructions. This is normal and expected."
+  - q: "Can I convert just one page of a PDF to PNG?"
+    a: "The Extract Images tool converts all pages and packages them in a ZIP. To get one page, first extract it with the Split PDF tool, then run that single-page file through Extract Images."
+  - q: "Does converting PDF to PNG keep transparency?"
+    a: "PNG supports transparency. If your PDF has transparent areas, the PNG output will preserve them. Most standard PDFs have a solid white background, so the PNG will too. Transparent PDFs (exported from design tools) are the exception."
+---
+
+## How to convert PDF to PNG free online
+
+You can convert any PDF to PNG images right now using the [Extract Images tool](/extract-images). No sign-up, no software download, and no file leaves your browser.
+
+1. Open [Extract Images](/extract-images) and upload your PDF.
+2. The tool renders each page to a high-resolution PNG.
+3. Click download. You get a ZIP file with one PNG per page: `image-1.png`, `image-2.png`, and so on.
+
+The whole conversion runs in your browser using [PDF.js](https://mozilla.github.io/pdf.js/), Mozilla's open-source PDF renderer. Nothing is sent to a server.
+
+## PNG vs JPG: which format should you pick?
+
+When pulling images from a PDF, you have two practical options: PNG and JPG. The right one depends on what's on the page.
+
+**PNG uses [lossless compression](https://en.wikipedia.org/wiki/Lossless_compression).** Every pixel in the output is an exact copy of what was rendered. Nothing is thrown away. That makes PNG the right choice for:
+
+- Documents with body text (reports, contracts, invoices)
+- Technical drawings, flowcharts, and diagrams
+- Presentation slides
+- Anything with sharp edges, thin lines, or logos
+
+**JPG uses lossy compression.** It discards some detail to shrink the file size. For photographs, this trade-off is usually invisible. For text and crisp lines, the loss shows up as faint artifacts, especially at high zoom. JPG makes sense when:
+
+- The page is mostly photographs or scans of photos
+- File size matters more than pixel-perfect accuracy
+
+The practical difference is most visible on text. A page of body text as PNG has clean, sharp letters. The same page as JPG has a subtle ringing pattern around each character (called compression artifacts). Usually minor, but it's there.
+
+If you want JPG output instead of PNG, use the [PDF to JPG](/pdf-to-jpg) tool. Same privacy, same browser-based processing, just JPEG files in the ZIP.
+
+## Why is the PNG bigger than the original PDF?
+
+This surprises most people. A compact PDF can turn into a much larger PNG, and it's working exactly as intended.
+
+PDF is a vector-first format. Text is stored as font outlines and character coordinates: compact instructions that describe how to draw each letter, not a picture of it. A text-heavy document can fit in a few dozen kilobytes because those instructions compress extremely well.
+
+PNG is a pixel format. When you convert, the renderer draws every character onto a canvas and saves the resulting pixels. Every pixel of every letter on every line gets its own entry in the file. The same content takes far more space stored as pixels than as instructions.
+
+This doesn't mean anything went wrong. PNG is the right format when you need something an image editor, design tool, or website can work with directly. It just stores information differently than PDF does.
+
+Pages that already contain large photographs don't grow as dramatically, because those images were already pixels before the conversion.
+
+## Does PNG keep transparency from the PDF?
+
+[PNG supports an alpha channel](https://www.w3.org/TR/PNG/), a value per pixel that controls opacity. So if your PDF has pages with transparent areas, the PNG output will preserve them.
+
+In practice, most standard PDFs have a solid white background, and the PNG will too. The exception is PDFs exported from design tools like Illustrator or Figma, where pages can have true transparency.
+
+If you need a transparent background and your PDF has a white one, that white is content, not a background. You'd need to remove it manually in an image editor after the conversion.
+
+## Converting just one page to PNG
+
+The Extract Images tool processes the whole document and gives you all pages in a ZIP. If you only need one specific page, here's the two-step approach:
+
+1. Use the [Split PDF](/split-pdf) tool to pull out the page you want into its own file.
+2. Run that single-page PDF through [Extract Images](/extract-images).
+
+You get one PNG, no digging through a multi-file ZIP.
+
+## What about high-resolution output?
+
+The tool renders pages at a higher scale than the standard viewport, which gives you sharp, screen-ready images suitable for web use, presentations, and documents. If you're working on print production and need output at a specific DPI for a print shop, a dedicated desktop tool will give you more control over resolution settings.
+
+## Quick reference
+
+| You need | Use |
+|---|---|
+| PNG images of all pages | [Extract Images](/extract-images) |
+| JPG images of all pages | [PDF to JPG](/pdf-to-jpg) |
+| One specific page as PNG | [Split PDF](/split-pdf) then Extract Images |
+
+All three tools run entirely in your browser with no account required.

@@ -641,7 +641,8 @@
       "targetQuery": "pdf to png free online",
       "intent": "transactional",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-to-png-free-online"
     },
     {
       "id": "blog-merge-windows-11",
@@ -968,6 +969,54 @@
       "surface": "blog",
       "targetQuery": "how to add page numbers to pdf starting from page 2 free",
       "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-sign-pdf-mac",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf on mac free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-split-pdf-mac",
+      "surface": "blog",
+      "targetQuery": "how to split a pdf on mac free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-jpg-to-pdf-windows",
+      "surface": "blog",
+      "targetQuery": "how to convert jpg to pdf on windows 10 free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-image-mac",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to image on mac free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-rotate-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "how to rotate a pdf on iphone free",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-batch-pdf-to-jpg",
+      "surface": "blog",
+      "targetQuery": "batch convert pdf to jpg free online",
+      "intent": "transactional",
       "priority": 3,
       "status": "idea"
     }
