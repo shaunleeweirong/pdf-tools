@@ -978,7 +978,8 @@
       "targetQuery": "how to sign a pdf on mac free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-sign-a-pdf-on-mac-free"
     },
     {
       "id": "blog-split-pdf-mac",
