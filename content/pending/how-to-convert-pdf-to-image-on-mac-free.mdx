@@ -1,0 +1,90 @@
+---
+title: "How to Convert PDF to Image on Mac Free"
+description: "Convert PDF pages to JPG, PNG, or TIFF on Mac using built-in Preview or a browser tool. Covers format choice, resolution tips, and batch conversion."
+date: "2026-08-09"
+keywords: ["how to convert pdf to image on mac free", "pdf to image mac", "pdf to png mac free", "convert pdf pages to images mac", "pdf to jpg mac free"]
+toolSlugs: ["pdf-to-jpg", "extract-images"]
+faq:
+  - q: "Which format should I pick: JPG, PNG, or TIFF?"
+    a: "PNG for text, diagrams, and slides (lossless, keeps edges sharp). JPG for photos and image-heavy PDFs where a smaller file size matters. TIFF only when a specific print workflow requires it."
+  - q: "Does Mac Preview export all PDF pages as images at once?"
+    a: "No, Preview exports one page per operation. For all pages at once, use our PDF to JPG tool or the Extract Images tool in your browser, or set up an Automator Quick Action."
+  - q: "Why do my converted PDF images look blurry?"
+    a: "Preview defaults to 72 DPI. In the Export dialog, raise the resolution to 150 DPI for screen sharing or 300 DPI for print to get sharper output."
+  - q: "Can I convert PDF to image on Mac without uploading my file?"
+    a: "Yes. Mac's built-in Preview handles conversion locally. Our PDF to JPG and Extract Images browser tools also process files on your device and never send anything to a server."
+  - q: "How do I convert a PDF to PNG on Mac for free?"
+    a: "Open your PDF in Preview, go to File > Export, and choose PNG from the Format menu. It's free, built into macOS, and requires no downloads."
+---
+
+Converting a PDF to an image on Mac is free and takes under a minute. Mac's built-in [Preview](https://support.apple.com/guide/preview/welcome/mac) app can export any PDF page as a JPEG, PNG, or TIFF without any downloads. If you need all pages converted at once, a browser-based tool handles that in a few clicks with no software to install.
+
+## How to use Preview to convert a PDF to an image
+
+Preview is installed on every Mac and can export PDF pages to images with no third-party software.
+
+1. Open your PDF in Preview. Double-click it in Finder, or right-click and choose Open With > Preview.
+2. In the sidebar on the left, click the page you want to convert. If you don't see the sidebar, go to **View > Thumbnails**.
+3. Go to **File > Export**.
+4. In the **Format** dropdown, choose **JPEG**, **PNG**, or **TIFF** (see the format guide below if you're not sure which to pick).
+5. If you chose JPEG, drag the Quality slider to **Best** for the sharpest result.
+6. Find the **Resolution** field. Preview defaults to **72 DPI**, which looks fine on screen but comes out soft when printed or zoomed in. Set it to **150 DPI** for sharing online, or **300 DPI** for print.
+7. Click **Save**.
+
+The key limitation with Preview: it handles one page per export. A two-page PDF means two separate operations. For a longer PDF, see the batch conversion section below.
+
+## JPEG, PNG, or TIFF: which format to choose
+
+The format you pick changes both how the output looks and how large the file gets. Here's the practical breakdown.
+
+**PNG** is lossless: no data is thrown away during compression. Every pixel in the output matches exactly what was on the original PDF page. That makes PNG the right choice for PDFs that contain text, charts, diagrams, or slides. Hard edges, fine lines, and small type all stay crisp. If you're embedding a PDF page into a Word document, a Keynote presentation, or a website, PNG will look better and hold up at any zoom level.
+
+**JPEG** compresses more aggressively by discarding some visual information. The result is a smaller file, but with subtle softening around edges and fine text. JPEG works well when your PDF pages are photographs or image-heavy layouts where color richness matters and sharpness of thin lines doesn't. It's the format to reach for when you need to email the images or post them on social media and file size is a concern.
+
+**TIFF** is lossless like PNG but produces files that are far larger. It's used in commercial printing and pre-press workflows where TIFF is specifically required by a downstream tool. For everyday use, PNG is the better lossless option because it's smaller and supported everywhere.
+
+A simple rule: text or diagrams? Pick PNG. Photos or mixed visual layouts? Pick JPEG. Someone upstream specifically asked for TIFF? Pick TIFF.
+
+## How to convert all PDF pages to images at once
+
+Preview's per-page limit gets tedious with anything longer than two or three pages. Two free approaches handle the whole PDF in one pass.
+
+### Browser tools (no software, no sign-up)
+
+Our [PDF to JPG tool](/pdf-to-jpg) converts every page of your PDF to a JPEG right in your browser. Drop in your PDF, wait a few seconds, and download a ZIP with one image per page. No account needed, and your file never leaves your Mac. The conversion runs in your browser tab, so nothing is sent to a remote server.
+
+If you need each page as a high-resolution image, the [Extract Images tool](/extract-images) exports all pages in the same no-sign-up, browser-only way. Both tools work in Safari, Chrome, and Firefox on Mac.
+
+### Automator (batch conversion, no internet required)
+
+[Automator](https://support.apple.com/guide/automator/welcome/mac) is a free workflow builder that comes with macOS. Set it up once and you can run it from a right-click menu on any PDF.
+
+1. Open Automator from your Applications folder (or search with Spotlight: Command + Space, then type Automator).
+2. Click **New Document**, then choose **Quick Action**.
+3. Set "Workflow receives current" to **PDF files** in **Finder**.
+4. In the action library on the left, type "Render PDF Pages" in the search box and drag **Render PDF Pages as Images** into the workflow area.
+5. Set the format (JPEG or PNG) and the resolution. 300 DPI is a reliable default for anything you might print; 150 DPI is plenty for screen use.
+6. Add a **Move Finder Items** action to send the output to a specific folder.
+7. Save the Quick Action with a name like "PDF pages to PNG."
+
+After that, right-click any PDF in Finder, hover over **Quick Actions**, and select your workflow. Automator processes every page and saves a separate image file for each one.
+
+## Method and format at a glance
+
+| Situation | Best choice |
+|---|---|
+| One or two pages, any format | Preview |
+| All pages, JPEG output, fast | PDF to JPG tool (browser) |
+| All pages, high-resolution images | Extract Images tool (browser) |
+| Regular batch task, no internet | Automator Quick Action |
+| Text-heavy PDF (reports, slides, diagrams) | PNG |
+| Photo or image-heavy PDF | JPEG |
+| Sensitive PDF, keep files local | Preview or either browser tool |
+
+## Does converting to an image lose any content?
+
+The conversion renders each PDF page as a flat raster image, the same way a printer sees it. Everything visible in the PDF (text, images, shapes, annotations) appears in the output.
+
+The main thing that changes: text in the resulting image is no longer selectable or searchable. It becomes pixels rather than characters. If you need to copy or search text in the image later, you'd need an [OCR tool](https://en.wikipedia.org/wiki/Optical_character_recognition) to read it back from the image file.
+
+For most uses (embedding in a presentation, posting to a website, sharing as a visual), that trade-off is perfectly fine. Just know that the output is a picture of the page, not a document.
