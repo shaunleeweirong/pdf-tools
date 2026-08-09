@@ -803,7 +803,8 @@
       "targetQuery": "how to crop a pdf on mac free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-crop-a-pdf-on-mac-free"
     },
     {
       "id": "blog-organize-pdf-pages",
