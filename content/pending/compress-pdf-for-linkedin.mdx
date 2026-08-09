@@ -1,0 +1,97 @@
+---
+title: "How to Compress a PDF for LinkedIn"
+description: "LinkedIn Easy Apply has a 2 MB resume limit. Compression helps image-heavy PDFs but makes text-only ones larger. Here's the right fix for each case."
+date: "2026-08-09"
+keywords: ["compress pdf for linkedin", "linkedin pdf size limit", "compress resume for linkedin", "linkedin easy apply pdf too large", "linkedin carousel pdf size"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is the PDF file size limit for LinkedIn Easy Apply?"
+    a: "LinkedIn Easy Apply caps resume uploads at 2 MB. Your profile's Featured section allows up to 5 MB for a resume, and document post carousels accept up to 100 MB technically, though keeping carousel files under 10 MB avoids slow rendering."
+  - q: "Will compressing my resume help me get under LinkedIn's 2 MB limit?"
+    a: "Only if your resume has a lot of embedded images. The compressor rasterizes each page to JPEG, which shrinks image-heavy files significantly but makes text-only PDFs much larger. A 20-page text report grew from 23.5 KB to 1.4 MB after compression. For a text resume, re-export from the source application at a lower resolution instead."
+  - q: "How do I compress a carousel PDF for LinkedIn?"
+    a: "Open the Compress PDF tool, upload your PDF, choose Medium or High compression, and download the result. A six-page image deck dropped from 913.4 KB to 315.3 KB at Medium, a 65.5% reduction. No account needed and the file never leaves your browser."
+  - q: "Which compression level should I use for a LinkedIn document?"
+    a: "Medium is the right starting point for most image-heavy PDFs. It reduces file size by around 65% while keeping visuals sharp enough for screen viewing. Use High if you need the smallest possible file and can accept some quality trade-off."
+  - q: "Is it okay to compress a PDF twice before uploading to LinkedIn?"
+    a: "No. Running a compressed PDF through the compressor a second time at Medium made it grow from 315.3 KB to 598.9 KB. If Medium isn't small enough, start from the original file and try High instead."
+---
+
+Compressing a PDF for LinkedIn takes under a minute if your file is the right type for it. Open the [Compress PDF tool](/compress-pdf), upload the file, pick Medium or High, and download the result. Your files never leave your browser.
+
+But read this first: compression only works for image-heavy PDFs. If you're trying to shrink a text-based resume to get under LinkedIn's Easy Apply limit, compression will make the file larger. This post covers when to compress, when to skip it, and what actually works for each situation.
+
+## What are LinkedIn's PDF size limits?
+
+LinkedIn has different limits depending on where you're uploading:
+
+- **Easy Apply job applications**: 2 MB for your resume. This is the one most people hit.
+- **Profile Featured section**: 5 MB for a resume attached to your profile.
+- **Document posts (carousels)**: Technically up to 100 MB, but [LinkedIn recommends keeping carousel files well under 10 MB](https://www.linkedin.com/help/linkedin/answer/a518909) to avoid slow processing and sluggish rendering for viewers.
+
+The 2 MB Easy Apply limit catches people off guard, particularly when the resume was designed in Canva, Adobe InDesign, or another layout tool and exported at print quality. A single high-resolution headshot can push a resume past that limit on its own.
+
+## When compression helps (and when it makes things worse)
+
+This is the detail most guides skip, and it's the reason compression sometimes backfires.
+
+The in-browser compressor works by rasterizing each page to [JPEG](https://en.wikipedia.org/wiki/JPEG). For pages that are already images, that's very efficient. A six-page image deck that measured 913.4 KB before compression dropped to 315.3 KB at Medium (a 65.5% reduction) and 175.6 KB at High (80.8%). Those are real reductions on a real file.
+
+Run the same process on a text document, and the result goes the other direction. A 20-page text report that started at 23.5 KB grew to 1,400.8 KB after Medium compression. Text stored as vector outlines in a [PDF](https://en.wikipedia.org/wiki/PDF) is compact. Text stored as a JPEG photo of those same outlines is not. Compressing a text document converts a lean file into something much heavier.
+
+**Compression makes sense when your PDF is:**
+- A scanned or photographed document (a signed contract, a fax, a hand-filled form)
+- A LinkedIn carousel where each slide is a graphic, photo, or design
+- A portfolio, case study deck, or product lookbook with full-bleed images
+- Screenshots or photos exported as a PDF
+
+**Skip compression when your PDF is:**
+- A resume created in Word, Google Docs, or a simple template
+- An invoice, report, or contract that is mostly text
+- A presentation where the slides are text-heavy rather than image-heavy
+
+## How to compress a LinkedIn carousel PDF
+
+Document carousels on LinkedIn work well with the compressor when the slides are image-based. Here's the process:
+
+1. Open [Compress PDF](/compress-pdf) in your browser.
+2. Click the upload area and choose your carousel PDF.
+3. Select a compression level. Medium is a good default.
+4. Click Compress and download the result.
+5. Go to LinkedIn, start a new post, click the document icon, and upload the compressed file.
+
+No sign-up. The file processes entirely in your browser.
+
+## Which compression level should I use?
+
+Here's how each level performed on a 913.4 KB six-page image deck:
+
+| Level | Output size | Reduction |
+|---|---|---|
+| Low (best quality) | 703.5 KB | -23.0% |
+| Medium | 315.3 KB | -65.5% |
+| High (smallest file) | 175.6 KB | -80.8% |
+
+Medium is the right choice for most LinkedIn uploads. It brings an image-heavy file down to roughly a third of its original size, and the result looks sharp enough on a screen. High is worth trying if you need the absolute smallest file and the images don't need to hold up under close inspection.
+
+One thing to avoid: don't run the compressed file through a second time hoping to squeeze out more. Feeding the Medium output back through at Medium made the file grow from 315.3 KB to 598.9 KB. Re-encoding an already-compressed JPEG adds overhead rather than removing it. If Medium isn't small enough, start from the original file and switch to High.
+
+## My resume is text-based and still over 2 MB. What do I do?
+
+If your resume was built in a design tool and exported at print resolution, the file size is almost certainly coming from embedded images: a headshot, background graphics, icons, or decorative elements. Compression will make that worse, not better. Here are approaches that actually work:
+
+**Re-export at screen resolution.** In Canva, choose "PDF Standard" rather than "PDF Print" when downloading. In Word, export to PDF rather than printing to PDF. In Adobe InDesign, use the "Smallest File Size" preset. Switching from a print export to a web export can cut file size by 70% or more without touching the design.
+
+**Remove or resize the headshot.** A high-resolution photo is often the largest single element in a designed resume. Many hiring guidelines in the US, UK, and Canada recommend against including a photo anyway, so removing it solves the size problem and aligns with common practice.
+
+**Use a simpler template.** Heavily designed resume templates with gradient backgrounds and embedded illustrations export large. A clean Word template with standard fonts will produce a PDF under 100 KB in almost every case.
+
+If none of those options work for your situation, you can use the [Split PDF tool](/split-pdf) to extract the most relevant pages from a longer portfolio and attach only those. That won't help with a one-page resume, but it works for multi-page work samples.
+
+## Compressing PDFs for other LinkedIn uploads
+
+For your profile's Featured section, the 5 MB limit is more generous. If you're adding an image-heavy portfolio or case study deck there, running it through the [Compress PDF tool](/compress-pdf) at Medium before uploading is worth doing. It speeds up how quickly the preview renders for people visiting your profile.
+
+For document carousel posts, LinkedIn does some image processing of its own after upload. That means the visual quality difference between Medium and High compression on your end gets partially smoothed out by the time the carousel renders in the feed. Medium compression is usually enough.
+
+The compressor runs in your browser. Your files don't pass through a server, which matters when you're uploading a document that has confidential information or hasn't been made public yet.

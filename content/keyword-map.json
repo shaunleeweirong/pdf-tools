@@ -830,7 +830,8 @@
       "targetQuery": "compress pdf for linkedin",
       "intent": "transactional",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-linkedin"
     },
     {
       "id": "blog-png-to-pdf",
@@ -1022,6 +1023,62 @@
       "surface": "blog",
       "targetQuery": "batch convert pdf to jpg free online",
       "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-google-forms",
+      "surface": "blog",
+      "targetQuery": "pdf too large for google forms upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-foxit-alternatives",
+      "surface": "blog",
+      "targetQuery": "foxit reader alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-resize-pdf-page",
+      "surface": "blog",
+      "targetQuery": "how to resize pdf page size free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-ms-teams",
+      "surface": "blog",
+      "targetQuery": "compress pdf for microsoft teams upload free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-pdfa",
+      "surface": "blog",
+      "targetQuery": "convert pdf to pdf/a free online",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-pdf-word",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf and word document free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-linux",
+      "surface": "blog",
+      "targetQuery": "how to compress a pdf on linux free",
+      "intent": "informational",
       "priority": 3,
       "status": "idea"
     }
