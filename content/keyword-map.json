@@ -1041,7 +1041,8 @@
       "targetQuery": "foxit reader alternatives free no sign up",
       "intent": "commercial",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "foxit-reader-alternatives-free-no-sign-up"
     },
     {
       "id": "blog-resize-pdf-page",
