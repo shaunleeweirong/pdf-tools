@@ -1,0 +1,122 @@
+---
+title: "Compress PDF on Linux Free (No Terminal Needed)"
+description: "Shrink a PDF on any Linux distro without Ghostscript or any install. Works in Firefox or Chrome in seconds. Ghostscript command-line option included."
+date: "2026-08-11"
+updated: "2026-08-11"
+keywords: ["compress pdf on linux free", "reduce pdf size linux", "compress pdf ubuntu free", "compress pdf linux without ghostscript", "ghostscript compress pdf linux"]
+toolSlugs: ["compress-pdf", "split-pdf", "delete-pages"]
+faq:
+  - q: "Do I need Ghostscript to compress a PDF on Linux?"
+    a: "No. A browser-based tool like the Compress PDF tool runs on any Linux distro with Firefox or Chrome installed. No terminal, no packages, and no admin rights needed."
+  - q: "Why did my PDF get bigger after compressing it on Linux?"
+    a: "The compressor converts every page to a JPEG image inside the browser. If your PDF is mostly text, the file gets much larger: a 20-page text report grew from 23.5 KB to 1.4 MB in testing. Only compress PDFs that contain scanned pages or photographs."
+  - q: "What browser should I use to compress a PDF on Linux?"
+    a: "Firefox, Chrome, Chromium, or Brave all work. Any modern browser with WebAssembly and canvas support is fine."
+  - q: "Can I compress a PDF on Linux without a GUI?"
+    a: "Yes. Ghostscript works in a headless terminal on any Linux distro. The basic command is: gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -dQUIET -sOutputFile=out.pdf in.pdf. Swap /screen for /ebook or /printer for different quality levels."
+  - q: "Does compressing a PDF twice make it smaller?"
+    a: "No, it makes it bigger. A file that came out of one Medium pass at 315 KB returned at 599 KB after a second Medium pass in testing. Go back to the original and choose High instead."
+---
+
+Compressing a PDF on Linux for free doesn't require Ghostscript or any software install. Open Firefox, Chrome, or Chromium, go to the [Compress PDF tool](/compress-pdf), drop your file in, and download a smaller version in seconds. Processing happens inside the browser tab, so nothing gets sent to a server.
+
+If you'd rather stay in the terminal, Ghostscript is covered below too.
+
+## The browser approach: fastest for most Linux users
+
+This works on Ubuntu, Fedora, Debian, Arch, and any other distro with a modern browser. No packages, no admin password, no terminal.
+
+1. Open your browser and go to the [Compress PDF tool](/compress-pdf).
+2. Click the upload area, or drag the PDF from your file manager onto the page.
+3. Pick a quality level. Medium is a good starting point for most files.
+4. Click Compress PDF. The progress bar shows compression happening inside your browser tab.
+5. When it finishes, click Download. The file saves to your Downloads folder.
+
+From there, attach it to an email, upload it to a portal, or share it however you need. No account required.
+
+## Which PDFs actually get smaller
+
+This is the part most guides leave out, and it matters a lot.
+
+The compressor works by converting every page to a [JPEG](https://en.wikipedia.org/wiki/JPEG) at a lower quality setting. That helps when a page is a scan, a photograph, or an image-heavy slide deck. It makes files larger when a page is mostly text.
+
+In browser testing using Chromium:
+
+- A six-page image deck (913.4 KB) compressed to 315.3 KB at Medium, a 65.5% reduction.
+- The same deck at High quality came out at 175.6 KB, an 80.8% reduction.
+- A 20-page text report (23.5 KB) compressed to 1.4 MB at Medium. It grew roughly 60 times larger.
+
+The reason is straightforward. Text stored as vector characters is tiny. A rasterized JPEG photograph of those same characters is not.
+
+**Compress these:** Scanned pages, photo decks, PDFs made from phone camera shots, image-heavy presentations.
+
+**Skip compression for these:** Invoices, contracts, filled forms, text-only reports. If a text PDF is too big to share, try the [Split PDF tool](/split-pdf) to send it in parts, or use the [Delete Pages tool](/delete-pages) to trim pages you don't need.
+
+## Choosing a compression level
+
+| Level | What it does | Best for |
+|---|---|---|
+| Low (best quality) | Small size reduction, almost no visible change | Images you'll print or zoom into closely |
+| Medium | Good balance of size and quality | Everyday sharing via email or messaging |
+| High (smallest file) | Maximum compression, some softness in photos | Strict upload limits or slow connections |
+
+Medium is the default for a reason. It brought a 913 KB image deck down to 315 KB in testing. High pushed the same file to 175.6 KB when the smallest file size was the goal.
+
+## Do not compress the same file twice
+
+Do not compress the same file twice. A second pass makes the file bigger, not smaller.
+
+The compressor re-renders the already-rasterized pages at a larger internal scale before re-encoding them as JPEG. In testing, a 315 KB file that came out of one Medium pass returned at 599 KB after a second Medium pass, nearly double the size.
+
+The right move is to go back to your original file and run it at High instead of Medium. Starting from the original always gives a smaller result than chaining passes.
+
+## What to do when compression isn't enough
+
+Some PDFs won't compress well even at High quality. This happens when:
+
+- The PDF is mostly text (compression makes these larger, as noted above).
+- The images inside are already compressed JPEGs, so there's little left to remove.
+- One large image (a high-resolution logo or cover page) accounts for most of the file size.
+
+A few other options work well on Linux:
+
+- **Split it.** The [Split PDF tool](/split-pdf) pulls out page ranges so you can send parts separately.
+- **Remove pages you don't need.** The [Delete Pages tool](/delete-pages) removes specific pages entirely.
+- **Zip it.** Right-click the file in your file manager and compress it to a .zip or .tar.gz archive. This can recover another 10 to 30% on content that isn't already compressed.
+- **Share a link instead.** [Gmail caps attachments at 25 MB](https://support.google.com/mail/answer/6584), and [Base64 encoding](https://en.wikipedia.org/wiki/Base64) adds about 33%, so the practical ceiling for a PDF attachment is around 18 MB. If your file is close to that, upload it to Google Drive and share a link rather than attaching it directly.
+
+## Compressing a PDF with Ghostscript on Linux
+
+For terminal users, [Ghostscript](https://www.ghostscript.com/) is the standard free tool for PDF compression on Linux. Many distributions ship with it already installed. On Debian and Ubuntu, install it with:
+
+```bash
+sudo apt install ghostscript
+```
+
+The basic compression command:
+
+```bash
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen \
+   -dNOPAUSE -dQUIET -dBATCH \
+   -sOutputFile=compressed.pdf original.pdf
+```
+
+The `-dPDFSETTINGS` flag controls the output quality:
+
+| Setting | Target resolution | Best for |
+|---|---|---|
+| `/screen` | 72 dpi | On-screen reading, smallest file |
+| `/ebook` | 150 dpi | General sharing |
+| `/printer` | 300 dpi | Print-quality output |
+| `/prepress` | 300+ dpi | Pre-press or archiving |
+
+Use `/ebook` if you're unsure. `/screen` gives the smallest file, but text can look soft on high-resolution displays.
+
+Ghostscript has the same core trade-off as the browser tool. At `/screen` or `/ebook`, a text-heavy PDF may get somewhat smaller but at reduced text resolution. Scans and image-heavy files are where both approaches get their best results.
+
+## Browser tool or Ghostscript?
+
+- **No install, any distro, fastest start:** Use the [Compress PDF tool](/compress-pdf) in Firefox or Chrome. No account, no package, no terminal.
+- **Batch files, scripts, or automated workflows:** Ghostscript fits better. It's scriptable with a one-liner and available from the package manager on every major distro.
+
+Both approaches are free. The browser tool processes the file locally inside the tab using your browser's JavaScript engine. Ghostscript runs entirely on your machine and never touches the network. Either way, the PDF doesn't leave your Linux system.
