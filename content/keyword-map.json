@@ -973,7 +973,8 @@
       "targetQuery": "how to add page numbers to pdf starting from page 2 free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-add-page-numbers-to-pdf-starting-from-page-2-free"
     },
     {
       "id": "blog-sign-pdf-mac",
@@ -1088,6 +1089,70 @@
       "priority": 3,
       "status": "pending",
       "slug": "compress-pdf-on-linux-free"
+    },
+    {
+      "id": "blog-sejda-alternatives",
+      "surface": "blog",
+      "targetQuery": "sejda alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-canvas",
+      "surface": "blog",
+      "targetQuery": "compress pdf for canvas lms upload free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-add-hyperlink-pdf",
+      "surface": "blog",
+      "targetQuery": "how to add a hyperlink to a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-blackboard",
+      "surface": "blog",
+      "targetQuery": "pdf too large for blackboard upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-flatten-pdf-mac",
+      "surface": "blog",
+      "targetQuery": "how to flatten a pdf on mac free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-sign-windows",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf on windows free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-rotate-pdf-android",
+      "surface": "blog",
+      "targetQuery": "how to rotate a pdf on android free",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-in-word",
+      "surface": "blog",
+      "targetQuery": "how to compress pdf in microsoft word free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }

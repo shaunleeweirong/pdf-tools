@@ -1,0 +1,101 @@
+---
+title: "Add Page Numbers to PDF Starting From Page 2"
+description: "Skip the cover page and number only the body of your PDF. Free, no sign-up, runs in your browser. Works for reports, theses, and business docs."
+date: "2026-08-11"
+keywords:
+  - "how to add page numbers to pdf starting from page 2 free"
+  - "skip cover page pdf numbering"
+  - "pdf page numbers start on page 2"
+  - "add page numbers pdf offset cover page"
+  - "start page numbering at 1 on second page pdf"
+toolSlugs:
+  - "add-page-numbers"
+  - "split-pdf"
+  - "merge-pdf"
+faq:
+  - q: "Can I add page numbers to a PDF starting from page 2 for free?"
+    a: "Yes. Split the PDF to separate your cover page, number only the body starting at 1 with the Add Page Numbers tool, then merge the two parts back together. Free, no account required."
+  - q: "How do I show '1' on the second page instead of '2'?"
+    a: "The trick is to number only the body of your PDF, not the whole file. Split off the cover page first, add numbers starting at 1, then rejoin. Page 2 of the final PDF will display '1'."
+  - q: "What is the difference between skipping page 1 display and resetting the count?"
+    a: "Skipping display means page 1 gets no stamp but still counts, so page 2 shows '2'. Resetting the count means page 1 is excluded entirely and page 2 shows '1'. Most reports and theses need the reset approach."
+  - q: "Can I skip multiple front-matter pages before numbering starts?"
+    a: "Yes. Split off as many pages as you need (cover page, table of contents, etc.) as one file, number the body separately starting at 1, then merge everything back in order."
+  - q: "Does adding page numbers increase the PDF file size?"
+    a: "Only negligibly. Page number stamps add a small amount of data but won't push a file over any typical email or upload limit."
+  - q: "Do I have to upload my PDF to add page numbers?"
+    a: "No. The Add Page Numbers tool runs entirely in your browser. Your file is never sent to a server."
+---
+
+Adding page numbers to a PDF starting from page 2 is something most free tools handle awkwardly. This guide shows you a clean three-step method that works for any PDF, gives you body pages numbered from 1, and keeps your cover page stamp-free.
+
+## Why "starting from page 2" means two different things
+
+Before picking a method, get clear on the result you want. There are two distinct approaches, and most posts don't distinguish between them.
+
+**Approach A: hide the stamp on page 1, keep the full count**
+
+Page 1 gets no visible number. Page 2 shows "2", page 3 shows "3". The total count is uninterrupted, but the cover just doesn't display a stamp. Some online tools offer this as a checkbox ("skip first page").
+
+**Approach B: exclude page 1 from the count entirely**
+
+Page 1 gets no stamp. Page 2 shows "1", page 3 shows "2". The body count starts fresh. This is what academic papers, legal briefs, and most formal business reports actually need.
+
+If your document follows the standard report convention, you want Approach B. The three-step method below handles it cleanly.
+
+## The three-step method
+
+This uses three free tools that run in your browser: [Split PDF](/split-pdf), [Add Page Numbers](/add-page-numbers), and [Merge PDF](/merge-pdf). No account, no upload to a server.
+
+### Step 1: Separate the cover from the body
+
+Open your PDF in the [Split PDF tool](/split-pdf). Extract the body as a separate file, starting from page 2 and running to the end. You'll end up with two PDFs: the cover (or front matter) and the body.
+
+### Step 2: Number the body starting at 1
+
+Open the body file in the [Add Page Numbers tool](/add-page-numbers). Set the starting number to 1. Choose your position and style. Bottom center is the standard for most report formats, but you can place numbers top right or anywhere else that fits your layout. Download the numbered file.
+
+### Step 3: Rejoin the cover and the numbered body
+
+Open the [Merge PDF tool](/merge-pdf) and add the cover file first, then the numbered body second. The order you load them is the order they appear in the merged file. Download the result.
+
+The merged output will be essentially the same size as the two parts combined. Merging does not inflate file sizes.
+
+## When you have more than one front-matter page
+
+Formal documents often have a cover page plus a table of contents, a preface, or an executive summary, all of which should stay outside the body numbering. The same method works: extract everything up to and including the last front-matter page as one file, extract the body as a second file, number only the body, then merge all pieces back in order.
+
+For very long front-matter sections (say, a 5-page preface), this is still faster than trying to delete stamps from individual pages after the fact.
+
+## Why not just stamp the whole document and remove the first page number?
+
+It's a reasonable shortcut, but it often leaves a faint ghost on the first page or subtly misaligns the stamp. Stamping only the part of the document that should be numbered avoids the problem entirely. The split-number-merge approach also gives you precise control over the starting number, so if you have a section that continues from roman numeral front matter into Arabic body numbering, you can set the starting page yourself.
+
+## Roman numerals for front matter (two-pass method)
+
+Some formal documents number the table of contents and preface with lowercase roman numerals (i, ii, iii) and restart with Arabic numerals for the body. If that is what you need:
+
+1. Extract the front matter (everything before the body).
+2. Number it separately with roman numerals if your tool supports it, or leave it unnumbered.
+3. Extract the body and number it starting at 1.
+4. Merge in order: front matter first, body second.
+
+The [PDF page numbering specification from the W3C](https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF17) describes how PDFs store logical page labels separately from physical page positions. This is why a document can show "i, ii, 1, 2, 3" while still having continuous physical pages 1 through N internally. Understanding this distinction also explains why screen readers and PDF viewers can jump to "page 3" and land on different positions depending on whether they use the physical or the logical label.
+
+## What about desktop Acrobat?
+
+If you have Adobe Acrobat Pro, the [Page Labels feature](https://helpx.adobe.com/acrobat/desktop/edit-documents/organize-pages/renumber-pages.html) lets you define numbering sections directly without splitting the file. You create a section from page 1 to 1 with no numbering style, then a new section from page 2 to the end with Arabic numerals starting at 1. It's cleaner for complex numbering schemes, but it requires a paid license.
+
+For most people with a straightforward cover-plus-body PDF, the free browser-based method above is faster.
+
+## Common use cases where this matters
+
+**University dissertations and theses** almost always require body pages numbered from 1, with the title page and abstract outside the count. Many institutions specify this in their formatting guidelines.
+
+**Annual reports and business proposals** typically have a branded cover page that should not carry a page number, with numbered sections starting on the executive summary page.
+
+**Legal filings** in some jurisdictions require specific page numbering conventions, and the first page of a filing (the caption page) often carries no number.
+
+**Printed booklets** produced from PDFs need the body numbered from the content start, not from the physical first page of the document.
+
+In every case, the split-number-merge approach gives you the correct result without a paid tool.
