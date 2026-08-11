@@ -1,0 +1,92 @@
+---
+title: "Compress PDF for Canvas LMS Upload Free"
+description: "Cut PDF size before submitting to Canvas. Works well for scanned pages and image-heavy files. Won't help text PDFs, and may make them larger."
+date: "2026-08-11"
+keywords: ["compress pdf for canvas", "canvas lms pdf size limit", "reduce pdf size canvas", "canvas file upload limit", "pdf too large canvas"]
+toolSlugs: ["compress-pdf"]
+faq:
+  - q: "What is the Canvas file size limit for PDFs?"
+    a: "Canvas's default per-file limit is 500 MB, but most assignment limits are much lower. Turnitin-linked submissions cap at 20 MB (400 pages max). Many instructors set their own limits, such as 8 MB or 10 MB, listed on the assignment page."
+  - q: "Will compressing my essay or typed report make it smaller?"
+    a: "No. This type of compressor converts pages to JPEG images, which makes text PDFs dramatically larger. A 20-page text report grew from 23.5 KB to 1.4 MB after compression. Only use it on scanned pages or image-heavy PDFs."
+  - q: "How much can I reduce a scanned PDF for Canvas?"
+    a: "Results depend on content. In tests on a 6-page image deck, Medium compression reduced file size by 65.5% (from 913.4 KB to 315.3 KB). High compression achieved an 80.8% reduction (down to 175.6 KB)."
+  - q: "Should I compress my PDF twice to get it even smaller?"
+    a: "No. A second compression pass makes files larger. In tests, running the Medium output through Medium again took it from 315.3 KB to 598.9 KB. If Medium isn't enough, go back to the original file and try High."
+  - q: "What if my PDF is still too large after compressing?"
+    a: "For image PDFs, try the High setting. For text PDFs, re-export from the original app using a 'minimum file size' option, or ask your instructor for an extension if you genuinely cannot get under the limit."
+---
+
+## Compress PDF for Canvas LMS upload
+
+If a PDF is too large to submit through Canvas, the [Compress PDF tool](/compress-pdf) can reduce it in seconds, without installing anything or creating an account. But the tool only helps for certain types of PDFs. Knowing which ones before you start saves a lot of frustration.
+
+**Use compression for:** scanned pages, photos of lab work, design portfolios, handouts photographed on a phone.
+
+**Skip it for:** typed essays, Word-to-PDF exports, contracts, forms, invoices. Compression will make those files larger.
+
+## What file size limit does Canvas actually enforce?
+
+Canvas has a default per-file upload limit of [500 MB](https://help.canvas.yale.edu/a/914638-file-storage-quotas-in-canvas), which most PDFs never approach. The limits that actually bite students come from two other places:
+
+**Turnitin integration.** Many writing assignments are submitted through Turnitin, which has a hard limit of 20 MB per file and a 400-page maximum. This is lower than Canvas's own limit and catches students off guard.
+
+**Instructor-set limits.** Some assignments specify a maximum file size in the instructions, often 8 MB or 10 MB for scan-heavy submissions. Check the assignment page before you start compressing.
+
+**Course storage quota.** Each Canvas course has a total storage quota (typically 1.5 GB to 2 GB). This affects instructors more than students, but if you're uploading a lot of large files across many assignments, it can add up.
+
+If your upload fails, look at the assignment instructions for a stated limit. If you don't see one, try Turnitin's 20 MB threshold as a target.
+
+## Why compression helps some PDFs and ruins others
+
+This compressor works by [rasterizing](https://en.wikipedia.org/wiki/Rasterisation) each page to a JPEG image. That means it converts the page to a photograph of itself, then stores that photograph.
+
+For a page that already contains photographs or scanned images, this is efficient. The page is already a bitmap, and re-encoding it at a lower quality level reduces the size. A 6-page image-heavy PDF dropped from 913.4 KB to 315.3 KB at Medium compression (a 65.5% reduction). High compression brought it to 175.6 KB (80.8% smaller).
+
+For a page containing typed text, the opposite happens. Text stored in a PDF is compact because it is stored as math: font instructions and character positions. A 20-page text report with no images came in at 23.5 KB. After Medium compression, it was 1.4 MB. The compressor converted tight vector text into a large JPEG of that text, multiplying the size roughly 60 times.
+
+This isn't a flaw to fix. It's how rasterization-based compression works, and it's disclosed on the tool page. The implication for Canvas submissions is that you need to know what's in your PDF before you run it through a compressor.
+
+## How to compress a scanned PDF for Canvas
+
+If your PDF contains scanned pages, photos of your work, or images (lab report photos, sketches, photographed handouts), here's the process:
+
+1. Open the [Compress PDF tool](/compress-pdf).
+2. Drop your PDF onto the page. The file stays in your browser and is never uploaded to a server.
+3. Choose a compression level. Start with **Medium**. It reduces size well while keeping images readable.
+4. Click Compress, then download the result.
+5. Check the output file size before submitting. If it's under your target, you're done.
+
+If Medium compression isn't enough, go back to the original file and try **High (smallest)**. Don't run the Medium output through compression again. In tests, a second Medium pass nearly doubled the size, from 315.3 KB to 598.9 KB.
+
+## What to do when your PDF is mostly text
+
+If your assignment is a typed essay, a Word or Google Docs export, or any document where most pages are text with no embedded images, compression will not help. Your options are:
+
+**Re-export at a smaller size.** In Microsoft Word, choose File, Save As, and select PDF. Look for an "Optimize for" or "Minimum size" option. In Google Docs, the PDF download is already optimized and is usually small. If your PDF came from a tool that produced a bloated export, exporting fresh often resolves it.
+
+**Check for hidden content.** Some PDFs carry embedded fonts at full weight, oversized logos on each page, or revision metadata that inflates size. Opening the PDF in Preview on a Mac and exporting it as PDF again sometimes strips this extra content.
+
+**Split the file.** If the assignment allows multiple uploads, [Merge PDF](/merge-pdf) lets you understand your page count and split the document into logical sections. Submit them separately.
+
+**Ask your instructor.** If none of the above gets you under the limit, reach out before the deadline. A large-file exception is a routine request, and most instructors would rather accommodate it than receive a garbled compressed document.
+
+## Scanned lab reports and portfolios
+
+The most common reason a student searches for "compress PDF for Canvas" is a scanned lab report or a packet of handwritten pages photographed on a phone. Those are exactly what the compressor handles well.
+
+Phone cameras produce high-resolution images. A multi-page scanned submission can run 10 to 20 MB or more straight from the camera roll. The compressor's Medium setting pulls that down substantially while keeping the text in the images readable enough for grading.
+
+For the best results with a scanned document: use Medium first and check the output. If the scanned text is blurry or hard to read, try Medium on a fresh scan rather than running High on an already-degraded image.
+
+## A quick checklist before you upload to Canvas
+
+Before you submit, run through this:
+
+- [ ] Is the PDF image-heavy or scanned? (Use the compressor.) Text-only? (Re-export from source instead.)
+- [ ] Did you check the assignment page for an instructor-set file size limit?
+- [ ] If Turnitin is enabled, is the file under 20 MB and under 400 pages?
+- [ ] Did you download the compressed output and verify the new size?
+- [ ] Did you open it to confirm it's readable?
+
+The [Compress PDF tool](/compress-pdf) runs free in any modern browser. No account, no upload, no installation.
