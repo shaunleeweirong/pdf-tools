@@ -1,0 +1,117 @@
+---
+title: "Compress PDF in Microsoft Word: What Works"
+description: "How to reduce PDF size when exporting from Word, plus what to do when you already have a PDF that's too large to send or upload."
+date: "2026-08-11"
+keywords:
+  - compress pdf in microsoft word
+  - reduce pdf size from word
+  - word document pdf too large
+  - how to compress pdf word free
+  - make pdf smaller from word
+toolSlugs:
+  - compress-pdf
+faq:
+  - q: "Does Microsoft Word have a built-in PDF compressor?"
+    a: "Not a dedicated one. Word lets you choose 'Minimum size (publishing online)' when you Save As PDF, which lowers image resolution. That's the main lever. For an existing PDF, Word is not the right tool."
+  - q: "Why is the PDF from my Word document so large?"
+    a: "The most common reasons are high-resolution images embedded in the document, fonts embedded in the PDF, and revision history or tracked changes left in the file before export."
+  - q: "Can I open a PDF in Word and save it smaller?"
+    a: "Technically yes, but it usually makes the file larger, not smaller. Word converts the PDF to an editable document (PDF Reflow), which inflates the size and often distorts the layout."
+  - q: "How do I compress images inside Word before exporting?"
+    a: "Click any image in the document, go to Picture Format in the ribbon, and click Compress Pictures. Choose 96 ppi (Web) or 150 ppi (Print) and make sure 'Delete cropped areas of pictures' is checked."
+  - q: "Will compressing a text-only PDF make it smaller?"
+    a: "No. Browser-based compressors that rasterize pages (like our Compress PDF tool) make text documents dramatically larger, not smaller. A 23.5 KB text report grew to 1.4 MB after compression. Use our tool only for image-heavy PDFs and scans."
+  - q: "What's the smallest a PDF can get with Word's 'Minimum size' option?"
+    a: "It depends entirely on the content. An image-heavy presentation can shrink significantly. A mostly-text document may see little change because the bulk of the size comes from embedded fonts, not images."
+---
+
+Compressing a PDF in Microsoft Word is one of those tasks that sounds straightforward but splits into two very different problems depending on where you're starting. If you still have the original Word document, Word gives you a few useful knobs to pull a smaller PDF out of it. If you already have a PDF and want to shrink it, Word is actually the wrong tool for the job.
+
+Here's how each scenario works.
+
+## Starting from a Word document: export a smaller PDF
+
+This is the case Word is built for. Before you hit Save, there are a few things you can do to reduce what ends up in the PDF.
+
+### Step 1: Compress images inside the document
+
+High-resolution images are the most common reason a Word-to-PDF file is large. To reduce them:
+
+1. Click any image in your document.
+2. In the ribbon, select **Picture Format**, then **Compress Pictures**.
+3. Choose a resolution. **96 ppi** is fine for documents viewed on screen. **150 ppi** works for most print use. Anything higher is usually unnecessary for a PDF you're sending by email.
+4. Make sure **Delete cropped areas of pictures** is checked. Cropped-out portions are still stored in the file otherwise.
+5. Check **Apply to all pictures in this document** to handle every image at once.
+
+### Step 2: Remove tracked changes and comments
+
+Every tracked change and comment adds to the file size, and they're easy to forget. Go to **Review > Accept All** (or **Accept All Changes**) to clear the revision history, then delete any comments.
+
+### Step 3: Export with "Minimum size"
+
+Now export the PDF:
+
+1. Go to **File > Save As** (or **Export > Create PDF/XPS Document** depending on your version).
+2. Set the file type to **PDF**.
+3. At the bottom of the dialog, look for the **Optimize for** option and choose **Minimum size (publishing online)**.
+4. Click **Save** or **Publish**.
+
+"Minimum size" tells Word to compress images more aggressively during the PDF export. The difference is most noticeable in image-heavy documents. For text-heavy reports, the gain is usually modest because text itself is not what's driving the file size.
+
+### Optional: Stop embedding fonts
+
+By default, Word embeds fonts in the PDF so it looks the same on any device. That's usually the right call, but it adds to the file size. If the recipient uses common fonts (Times New Roman, Arial, Calibri), you can disable embedding:
+
+1. Go to **File > Options > Save**.
+2. Uncheck **Embed fonts in the file**.
+
+Be aware this is a trade-off. If the viewer doesn't have the font installed, the PDF may render differently on their end.
+
+## Already have a PDF? Word is not the answer
+
+People often try opening an existing PDF in Word to compress it. Word can do this, using a feature called [PDF Reflow](https://support.microsoft.com/en-us/office/edit-pdf-content-in-word-b2d1d729-6b79-499a-bcdb-233379c2f63a), but the result is almost always a file that's larger, not smaller. Word converts the PDF into an editable document, which inflates the size and frequently breaks the layout of tables, columns, and images.
+
+For an existing PDF, you need a dedicated PDF compressor.
+
+## Compressing an existing PDF for free
+
+You can use the [Compress PDF tool](/compress-pdf) in your browser, no account needed. Upload your file, choose a compression level, and download the result. The files never leave your device.
+
+A few things to know before you use it:
+
+**It works best on image-heavy PDFs.** The tool rasterizes each page to JPEG. That's great for scanned documents, photo decks, and anything where the pages are already images. In testing, a 6-page image deck went from 913.4 KB to 315.3 KB at Medium compression (a 65.5% reduction).
+
+**Do not use it on text-heavy PDFs.** When pages contain mostly text and vector graphics, rasterizing makes the file dramatically larger. A 20-page text report grew from 23.5 KB to 1.4 MB after compression, roughly 60 times the original size. This is expected behavior: text stored as vector glyphs is tiny; the same text stored as a photograph of glyphs is not.
+
+**One pass is enough.** Running the same PDF through compression a second time at the same level nearly doubles the size. A 315.3 KB file became 598.9 KB on a second Medium pass. If the first pass doesn't get you where you need to be, start from the original and try the High (smallest file) level instead.
+
+If your PDF is a text document that needs to fit an email limit, compression won't help. Options that do help: split it into parts with the [Split PDF tool](/split-pdf), or remove pages you don't need to send with [Delete Pages](/delete-pages).
+
+## Choosing the right compression level
+
+The [Compress PDF tool](/compress-pdf) offers three levels:
+
+| Level | Best for | Trade-off |
+|---|---|---|
+| Low (best quality) | Images you still want to look good | Smallest size reduction |
+| Medium | Most image-heavy documents | Good balance |
+| High (smallest) | Sending over email or WhatsApp when size is the only goal | Visible quality drop on detailed images |
+
+Start at Medium. If the output is still too large and quality matters less than deliverability, try High from the original file, not from the Medium output.
+
+## What actually makes a Word-to-PDF large?
+
+If you're wondering why your PDF is large in the first place, these are the usual causes:
+
+- **High-resolution images.** A phone photo dropped straight into a Word document is often 3 to 5 MB on its own.
+- **Embedded fonts.** Fonts embedded in the PDF can add several hundred KB, especially if the document uses multiple typefaces.
+- **Revision history.** Tracked changes store every prior version of the text. A heavily edited document can carry significant hidden data.
+- **Embedded objects.** Linked charts from Excel or embedded spreadsheets add their native file to the PDF.
+
+Fix these at the source and the PDF will come out smaller automatically, no compression step needed.
+
+## Quick summary
+
+If you're **exporting from Word**: compress images first, remove tracked changes, and choose "Minimum size" in the Save As dialog. That's usually enough.
+
+If you **already have a PDF**: use a browser-based compressor for image-heavy files and scans. For text-heavy PDFs, compression makes them bigger, so split or trim instead.
