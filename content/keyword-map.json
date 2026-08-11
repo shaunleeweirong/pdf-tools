@@ -1137,7 +1137,8 @@
       "targetQuery": "how to sign a pdf on windows free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-sign-a-pdf-on-windows-free"
     },
     {
       "id": "blog-rotate-pdf-android",
