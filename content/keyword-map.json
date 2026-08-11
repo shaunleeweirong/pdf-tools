@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-10",
+  "updated": "2026-08-11",
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
     {
@@ -1096,7 +1096,8 @@
       "targetQuery": "sejda alternatives free no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "sejda-alternatives-free-no-sign-up"
     },
     {
       "id": "blog-compress-canvas",
