@@ -1018,7 +1018,8 @@
       "targetQuery": "how to rotate a pdf on iphone free",
       "intent": "transactional",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-rotate-a-pdf-on-iphone-free"
     },
     {
       "id": "blog-batch-pdf-to-jpg",
