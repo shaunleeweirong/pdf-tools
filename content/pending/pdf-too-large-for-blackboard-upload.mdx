@@ -1,0 +1,73 @@
+---
+title: "PDF Too Large for Blackboard Upload"
+description: "Blackboard caps uploads at 25 to 250 MB depending on your school. The right fix depends on what's in your file. Here's how to get under the limit fast."
+date: "2026-08-12"
+keywords: ["pdf too large for blackboard upload", "reduce pdf size blackboard", "compress pdf for blackboard", "blackboard file size limit", "blackboard pdf upload limit"]
+toolSlugs: ["compress-pdf", "split-pdf", "extract-pages"]
+faq:
+  - q: "What is Blackboard's file size limit for PDFs?"
+    a: "Blackboard doesn't set a single global limit. Each institution configures its own cap. Most schools now follow Blackboard's 2024 recommended limit of 250 MB per file, but some are stricter, going as low as 25 MB at certain colleges. Check your school's IT support pages for the exact number."
+  - q: "Will compressing a PDF make it small enough for Blackboard?"
+    a: "If your PDF contains scanned pages or photos, yes. Compression can cut the file size by 65 to 80%. If your PDF was exported from Word or Google Docs and doesn't contain many images, compressing it will likely make it larger, not smaller, because the tool converts text to image pixels."
+  - q: "How do I compress a scanned PDF for Blackboard without Acrobat?"
+    a: "Use a free browser-based tool like the Compress PDF tool on this site. No download or account needed, and your file never leaves your browser."
+  - q: "Can I split my assignment into multiple files on Blackboard?"
+    a: "It depends on how your instructor set up the assignment. If multiple file uploads are allowed, a Split PDF tool can divide your document into page ranges. Always check with your instructor before submitting multiple files."
+  - q: "Why does my PDF get larger when I try to compress it?"
+    a: "This happens when the PDF is text-based rather than image-based. Compression rasterizes each page into a JPEG image, which is far larger than crisp vector text. If your PDF came from a word processor, don't compress it. Resize the embedded images in the original file instead."
+  - q: "What if my PDF is still too large after compressing?"
+    a: "Try the High compression setting if you used Medium, but start from the original file, not the already-compressed output. If that's still not enough, split the PDF into sections, or ask your instructor whether you can submit a Google Drive link."
+---
+
+When your PDF is too large for Blackboard, the fix depends on what's in the file. If it's a scanned handwritten assignment or a photo-heavy document, a free browser tool can cut the size by more than half in seconds. If it's a Word export or a typed report, compression will backfire and make the file bigger. This guide covers both cases.
+
+## What is Blackboard's file size limit for PDFs?
+
+There's no single answer. Blackboard lets each institution set its own upload limit, so the cap varies by school. Most universities now follow [Blackboard's recommended cap of 250 MB per file](https://help.blackboard.com/node/43106), introduced with their 2024 upload limit updates. Some institutions are stricter: Grand Rapids Community College limits uploads to 25 MB, and UMBC sets a 75 MB cap. A few schools allow up to 256 MB or more for certain assignment types.
+
+If you're not sure of your school's limit, check the IT support or eLearning help pages for your institution, or ask your instructor.
+
+## Why is your PDF so large?
+
+The cause matters, because it determines which fix to use.
+
+**Scanned handwritten work or phone photos.** Phone cameras capture images at high resolution, often 4000 x 3000 pixels or more per shot. Scanning 10 pages of handwritten notes at 300 DPI produces a PDF in the 30 to 80 MB range, sometimes larger. Each page is essentially a photograph, and the file packs all that image data in.
+
+**Documents from Word, Google Docs, or similar apps.** These PDFs are small by default unless they contain large embedded images or graphics. If your typed essay is coming in at 30 MB, there's a high-resolution image somewhere in the document. Compression tools are the wrong fix here.
+
+Identifying which type you have takes two seconds: if you scanned or photographed the pages, it's image-heavy. If you typed it on a computer, it's text-based.
+
+## How to compress a scanned PDF for Blackboard
+
+If your PDF is made of scanned pages or photos, compression is the right move. The [Compress PDF tool](/compress-pdf) runs entirely in your browser, so your file never gets uploaded to any server. Drop in your file, pick a quality level, and download the result.
+
+In testing, a 6-page image deck compressed at the Medium setting went from 913.4 KB to 315.3 KB, a 65.5% reduction. At the High setting (which produces the smallest file), the same deck came down to 175.6 KB, an 80.8% reduction. The trade-off is some visual quality, so use Medium if your instructor will be reading the content closely, and High if you just need to clear the size limit.
+
+A couple of things to keep in mind:
+
+- **Compress from the original file.** If you run compression twice on the same file, the size goes up, not down. In testing, a second Medium pass took a 315.3 KB output back up to 598.9 KB. If Medium isn't enough, go back to the original and try High.
+- **The tool works in your browser.** There's no sign-up, and the files stay on your device.
+
+## When compression will make your file larger
+
+If your PDF was exported from Word, Google Docs, or any word processor, a compression tool will almost certainly make it larger. The reason is that compression rasterizes each page, meaning it converts the page to a [JPEG](https://en.wikipedia.org/wiki/JPEG) image. Crisp vector text becomes a photograph of text, and photographs take far more space than the original vector data.
+
+In testing, a 20-page text-only report went from 23.5 KB to 1.4 MB after compression. That's roughly 60 times larger.
+
+For a typed document that's too big, the real fix is to reduce the images inside the original file before exporting. Open the document in Word or Google Docs, right-click any large images and reduce their resolution, then export to PDF again. Alternatively, if the document doesn't contain images and is still unexpectedly large, try re-exporting with "optimized" or "minimum size" settings if your word processor offers them.
+
+## How to split a large PDF into smaller files
+
+If your assignment allows multiple file uploads, splitting the PDF into sections is another route. The [Split PDF tool](/split-pdf) lets you specify page ranges and save each range as a separate PDF.
+
+This works well for large portfolios, multi-part lab reports, or any submission where the content can be logically divided. Before submitting in pieces, confirm with your instructor that multiple uploads are permitted for that assignment.
+
+If you only need a few pages rather than the full document, the [Extract Pages tool](/extract-pages) lets you pull specific pages into a new, smaller PDF.
+
+## Other options when compression and splitting aren't enough
+
+**Reduce scan resolution at the source.** If you're scanning future assignments with your phone, most scanning apps (including Microsoft Lens, Apple's built-in scanner, and Adobe Scan) let you set output quality or resolution. Scanning at 150 DPI instead of 300 DPI roughly halves the file size with minimal loss for text legibility.
+
+**Submit via a cloud link.** Some instructors accept a Google Drive or OneDrive link as an alternative to a direct upload. This is especially common for large portfolios or media files. Ask your instructor before the deadline rather than after.
+
+**Contact your IT help desk.** At many institutions, instructors can request a higher upload limit for a specific assignment. If your submission is legitimately large (for example, a design portfolio with high-resolution artwork), your school may be able to accommodate it. It's worth a quick email.
