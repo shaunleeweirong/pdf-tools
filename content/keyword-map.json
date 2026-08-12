@@ -1200,7 +1200,8 @@
       "targetQuery": "why does compressed pdf look blurry",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "why-does-compressed-pdf-look-blurry"
     },
     {
       "id": "blog-compress-docusign",

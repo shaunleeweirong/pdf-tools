@@ -1,0 +1,78 @@
+---
+title: "Why Does My Compressed PDF Look Blurry?"
+description: "PDF compressors rasterize pages to JPEG images. Text turns into pixels and the file can get bigger. Here's what's happening and what to do instead."
+date: "2026-08-12"
+keywords: ["why does compressed pdf look blurry", "compressed pdf blurry text", "pdf compression blurry", "compress pdf without losing quality", "pdf rasterization text quality"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "Why does my PDF text look blurry after compression?"
+    a: "Most browser-based compressors rasterize every page to a JPEG image. Vector text gets converted to pixels, and reducing file size means reducing pixel density, which makes text look soft or blurry."
+  - q: "Does compressing a PDF ruin quality?"
+    a: "It depends on what's in the PDF. A photo or scan PDF compresses well with minimal visible quality loss. A text-only document gets bigger AND blurry, because rasterizing clean vector text into JPEG always loses information."
+  - q: "How do I compress a PDF without making it blurry?"
+    a: "Only compress PDFs that consist mostly of images or scans. For text documents, find what's actually making the file large (an embedded image or font file) and fix that instead."
+  - q: "Can I fix a blurry PDF after compression?"
+    a: "Not really. Once vector text is rasterized and compressed as JPEG, the original sharp detail is gone from that file. Go back to the original and either skip compression or try a lower compression level."
+  - q: "Should I compress a text document, invoice, or contract PDF?"
+    a: "No. A text-only PDF uses vector glyphs that are already compact. Compressing it rasterizes those glyphs to JPEG, making the file dramatically larger while also turning crisp text into blurry pixels."
+---
+
+## Why compression makes text blurry
+
+Compressed PDF text looks blurry because the compressor converts each page into a [JPEG](https://en.wikipedia.org/wiki/JPEG) photograph before shrinking it. JPEG was designed for photographic images, not for text. When you squeeze a photograph, you discard pixel data and average neighboring colors together. Text glyphs with sharp, clean edges become soft blobs.
+
+Here is what the compressor actually does: it takes each page, renders it onto a canvas as a raster image (a grid of pixels), encodes that grid as JPEG, and stitches the JPEG images back into a PDF shell. This process is called rasterization. Every letter on the page, which was originally stored as a mathematical outline in the [PDF format](https://en.wikipedia.org/wiki/PDF), gets turned into pixels. The harder you compress, the fewer pixels survive, and the blurrier your text looks.
+
+We measured this directly. A 20-page text report at 23.5 KB was compressed at Medium quality. The output came out at 1,400.8 KB. That is roughly 60 times larger than the original. Text that was a clean 23.5 KB of vector data became 1.4 MB of JPEG imagery. The file did not get smaller. It got dramatically larger, and the text looked like a photograph of itself rather than actual text.
+
+## When compression works and when it does not
+
+Compression works well when your PDF is already full of raster images. A six-page image deck at 913.4 KB compressed to 315.3 KB at Medium quality, a reduction of 65.5%. Those pages were images to begin with, so re-encoding them as smaller JPEG images is exactly what the tool is built for.
+
+Compression goes wrong on text-heavy documents:
+
+- **Text-only files** (reports, letters, essays, contracts): rasterizing makes them bigger, not smaller.
+- **Invoices and forms**: same problem. The text is vector data; turning it into JPEG adds data rather than removing it.
+- **Mixed documents with a small logo or graphic**: the text dominates, and the result is still worse. A 3-page document with a small raster logo per page grew from 35.0 KB to 171.2 KB after Medium compression.
+
+The pattern holds consistently. If your PDF contains a lot of text stored as vector glyphs, rasterization creates more data than it removes.
+
+## What to do instead of compressing a text PDF
+
+If your text PDF is large, compression is the wrong tool. Here is what actually helps:
+
+**1. Find out what is making it large.** Open the file in a PDF reader and look at its properties or embedded objects. Oversized embedded images, full-resolution logos, and large embedded font subsets are the most common culprits. A text document over 1 MB almost always has an image or font file responsible for most of the size.
+
+**2. Fix the image at the source.** If your report includes a banner graphic or company logo, resize it in your image editor before inserting it, or reduce its resolution on export. Swapping a 5 MB embedded photo for a 300 KB version of the same image can cut the PDF by 90% with no visible change to the text.
+
+**3. Re-export from the source application.** In Word, choosing "Optimize for standard size" during PDF export compresses embedded images without rasterizing the text layer. Google Docs and LibreOffice have similar options. The result is a smaller file with sharp text.
+
+**4. Split instead of compress.** If a large document needs to travel by email and the recipient's attachment limit is the real issue, use a [split-pdf](/split-pdf) tool to send it in smaller sections. Each section stays in its original format, and text stays sharp throughout.
+
+## How to use compression correctly
+
+If your PDF is a scan or a photo deck, compression does help, and here is how to use it well:
+
+Use the [Compress PDF tool](/compress-pdf) and start with Medium quality. This gave a 65.5% reduction on a six-page image deck in testing. If you need to go smaller, start fresh from the original file and select High quality (smallest file) instead of running Medium again.
+
+Do not run compression twice. A second pass at the same level makes the file bigger, not smaller. In testing, running Medium on an already Medium-compressed image deck grew it from 315.3 KB to 598.9 KB. The re-encoded JPEG data adds bulk rather than shedding it. If Medium is not enough, go back to the original and run High in one pass.
+
+## Why text PDFs are already compact
+
+Vector text in a PDF is small by design. Each character is stored as a code pointing to an outline in the embedded font, not as a grid of pixels. One letter "A" takes a handful of bytes at any font size. A clean 20-page text report at 23.5 KB is not unusually large. If your text PDF is genuinely large, the extra weight is coming from something else, not from the text itself.
+
+Scanned documents are a different situation. A scan is a photograph of a page, not a vector document. The text in it is already rasterized (that is what scanning does), so compressing a scan does not introduce new blurriness the way compressing a digital text file does. A scan that looks blurry usually looked blurry before compression too, often because the scanner was set to a low resolution.
+
+## What to do if your PDF is already blurry
+
+If you have already compressed a text PDF and it now looks blurry, the compressed copy cannot be fixed. The original sharp detail is gone from that version of the file. Your options are:
+
+- Go back to the original pre-compression file. If you saved over it, check your application's auto-save folder or version history.
+- Export a fresh copy from the source application (Word, Google Docs, InDesign) at standard or high quality.
+- If the PDF came from someone else and you need it sharp, ask for the original before it was compressed.
+
+A blurry PDF cannot be unblurred by any tool. Sharpening filters add artificial contrast at edges and can make text readable at a glance, but they do not restore information that was discarded during compression. The only real fix is the original file.
+
+## The short version
+
+PDFs look blurry after compression because the compressor rasterizes each page to a JPEG image. Vector text, which was stored as clean mathematical outlines, becomes a photograph of itself. The more aggressive the compression, the blurrier the text. For text documents, this process also makes the file dramatically larger, not smaller. Use compression only on PDFs that are already made of images, such as scanned pages or photo presentations. For text documents, find and address the actual source of the file size instead.
