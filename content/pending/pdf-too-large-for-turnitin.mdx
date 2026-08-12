@@ -1,0 +1,80 @@
+---
+title: "PDF Too Large for Turnitin? Fix It in a Few Steps"
+description: "Turnitin caps uploads at 100 MB and 800 pages. Find what's inflating your file and cut it down before the deadline."
+date: "2026-08-12"
+keywords: ["pdf too large for turnitin submission", "turnitin file size limit", "reduce pdf size for turnitin", "turnitin pdf too big", "compress pdf for turnitin"]
+toolSlugs: ["compress-pdf", "split-pdf", "delete-pages", "extract-pages"]
+faq:
+  - q: "What is Turnitin's maximum file size?"
+    a: "Turnitin's official limit is 100 MB. Many institutions set lower internal thresholds, so aim for under 40 MB when possible to be safe."
+  - q: "Will compressing my PDF make Turnitin reject it?"
+    a: "It can. Browser compressors that rasterize pages convert text to JPEG images. Turnitin rejects PDFs that contain only images of text, so check that text remains selectable after any compression."
+  - q: "Can I split my thesis into parts for Turnitin?"
+    a: "Yes, if your instructor allows it. Split the document into chapters or sections, then upload each part separately. Confirm with your instructor first."
+  - q: "Why does Turnitin say my PDF is image-only?"
+    a: "Your file was either scanned without OCR, or a compressor rasterized the pages into JPEG images. Turnitin needs a selectable text layer to run a similarity check."
+  - q: "How do I remove pages to reduce my PDF size?"
+    a: "Use the Delete Pages tool to cut appendices, blank pages, or image-heavy sections that aren't required for the submission."
+---
+
+If your PDF is too large for Turnitin submission, the fastest fix is usually removing pages you don't need or re-exporting from your source document with lower image quality. Compression can help in some cases, but used on the wrong kind of file it can make Turnitin reject your PDF entirely, so it's worth understanding which approach fits your situation before the deadline.
+
+## What causes a PDF to be too large for Turnitin?
+
+The most common cause is images. Every figure, screenshot, chart, or photograph embedded in a document is stored as raw image data, and high-resolution versions push file size up fast. A 50-page thesis with 20 figures at print quality (300 DPI) can easily reach 80 to 100 MB before you count the text.
+
+The second cause is export settings. When you save a Word document or Google Doc as PDF, the default is usually print quality. That is ideal for a printer, not for an online submission portal.
+
+A less obvious culprit is embedded metadata or revision history. Some PDF creators bake in tracked changes or comment layers, adding hidden bulk the reader never sees.
+
+## Turnitin's file size and format requirements
+
+Before you start cutting your file down, it helps to know the exact limits. According to [Turnitin's official file requirements](https://guides.turnitin.com/hc/en-us/articles/23929463501965-File-requirements-for-accepting-submissions-in-Turnitin):
+
+- Maximum file size: **100 MB**
+- Maximum pages: **800 pages**
+- Minimum content: **20 words of selectable text**
+- Rejected formats: PDFs containing only images of text, PDF forms, PDF portfolios, and PDFs with multiple embedded files
+
+That last point is the one that catches students off guard. Turnitin needs a real text layer to run similarity checks. A PDF made entirely of scanned pages, or one where all the text has been converted to images, gets rejected with an "image-only" error, regardless of how small the file is.
+
+## Does compressing help? (And when it backfires)
+
+Compressing helps for image-heavy PDFs, but can cause Turnitin to reject text-heavy ones.
+
+Browser-based compressors, including our [Compress PDF tool](/compress-pdf), work by rasterizing every page into a JPEG. That's what keeps them fast and private (files never leave your browser), but it also means the resulting PDF contains images rather than selectable text. In our own testing, a 913.4 KB image deck shrank to 315.3 KB at Medium quality (a real saving). But a 23.5 KB text document grew to 1.4 MB after the same compression, because vector text is far more compact than a photograph of the same characters.
+
+More critically for Turnitin: if you run a rasterizing compressor on a text document and then try to upload the result, Turnitin sees a PDF full of JPEG images and rejects it as image-only. You'd end up in the same position as submitting a scanned document without [optical character recognition (OCR)](https://en.wikipedia.org/wiki/Optical_character_recognition), leaving you with a file that cannot produce a similarity report.
+
+Use the compress tool if your PDF is already image-heavy: a design portfolio, a research paper dense with photographs, or a slide deck exported to PDF. Don't use it on a written essay or dissertation. The text needs to stay as text.
+
+## How to reduce your PDF size for Turnitin
+
+### 1. Remove pages you don't need
+
+Appendices, raw data tables, blank pages, and image-heavy sections all contribute to file size. The [Delete Pages tool](/delete-pages) lets you strip out anything that isn't required for the submission. The [Extract Pages tool](/extract-pages) does the reverse: you pick the pages you want to keep and save only those as a new file.
+
+This approach leaves the text layer intact and often solves the problem entirely. A 40-page appendix of charts or survey data images can add 30 to 50 MB to a file that would otherwise be under the limit.
+
+### 2. Split the document into parts
+
+If your institution allows multi-file submissions, use the [Split PDF tool](/split-pdf) to divide your document into chapters or logical sections. Submit each part through a separate upload box. Check with your instructor first, since some assignments require a single file and splitting without permission may cause issues during grading.
+
+### 3. Re-export from the source document
+
+If you still have the original Word, Google Docs, or LaTeX file, re-exporting with lower image quality is the cleanest fix. The text stays as text and only the embedded images get smaller.
+
+- **Word on Windows:** File > Save As > PDF, then click Options. Set the image resolution to 150 PPI instead of the default 220 or 300.
+- **Word on Mac:** File > Save As > PDF, then choose "Best for Electronic Distribution" rather than "Best for Printing." This downsamples images automatically.
+- **Google Docs:** File > Download > PDF Document. Reduce the size of any embedded images inside the document itself before exporting.
+- **LaTeX:** Pass your source images through a separate image compressor before including them, or lower the DPI in your `\includegraphics` options.
+
+Re-exporting from source is almost always better than post-processing a finished PDF. The text layer stays intact, images get smaller, and Turnitin sees the document as it was intended.
+
+## What if Turnitin still says the file is image-only?
+
+If you've reduced the size but Turnitin still rejects the file as image-only, the PDF was likely created from scanned pages without OCR. Turnitin cannot extract text from an image and needs a selectable text layer to generate a similarity report.
+
+You'll need a tool that applies OCR before re-submitting. Adobe Acrobat has OCR built in under Tools > Scan and OCR. Free options include [OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF), an open-source command-line tool, and various online OCR services that add a searchable text layer to scanned documents.
+
+One final check after any fix: confirm that Turnitin actually generated a Similarity Score after your upload. Some submissions go through without error but produce no report if the text layer is still unreadable. A submission without a similarity report may be treated as incomplete by your instructor, so verify before you log off.
