@@ -1160,6 +1160,71 @@
       "priority": 2,
       "status": "pending",
       "slug": "how-to-compress-pdf-in-microsoft-word-free"
+    },
+    {
+      "id": "blog-best-pdf-compressor",
+      "surface": "blog",
+      "targetQuery": "best free pdf compressor online no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "best-free-pdf-compressor-online-no-sign-up"
+    },
+    {
+      "id": "blog-pdf-too-large-turnitin",
+      "surface": "blog",
+      "targetQuery": "pdf too large for turnitin submission",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-split-every-page",
+      "surface": "blog",
+      "targetQuery": "how to split pdf into individual pages free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-no-upload",
+      "surface": "blog",
+      "targetQuery": "compress pdf without uploading to server free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-blurry-compression",
+      "surface": "blog",
+      "targetQuery": "why does compressed pdf look blurry",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-docusign",
+      "surface": "blog",
+      "targetQuery": "compress pdf for docusign upload free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-reduce-pdf-google-docs",
+      "surface": "blog",
+      "targetQuery": "how to reduce pdf size in google docs free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-google-drive",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf files in google drive free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
