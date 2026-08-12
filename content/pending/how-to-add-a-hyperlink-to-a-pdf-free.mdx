@@ -1,0 +1,108 @@
+---
+title: "How to Add a Hyperlink to a PDF Free"
+description: "Add a clickable link to any PDF without Adobe Acrobat. Go back to the source doc, or use a free browser tool for existing PDFs. No sign-up needed."
+date: "2026-08-12"
+keywords: ["how to add a hyperlink to a pdf free", "add link to pdf free", "add clickable link to pdf without acrobat", "add hyperlink to existing pdf free online"]
+toolSlugs: ["edit-pdf"]
+faq:
+  - q: "Can I add a hyperlink to a PDF for free without signing up?"
+    a: "Yes. PDFescape works in the browser without an account for PDFs under 100 pages. LibreOffice Draw is a free desktop download with no account needed."
+  - q: "What is the difference between a URL and a hyperlink in a PDF?"
+    a: "A URL typed as text just shows on the page. A proper hyperlink is a link annotation embedded in the file, which opens a browser when clicked. You need a PDF editor to create real link annotations."
+  - q: "Do hyperlinks in PDFs work on phones?"
+    a: "Yes. Most modern PDF apps on iOS and Android support clickable link annotations, including the built-in Files viewers on both platforms."
+  - q: "Can I add links to a scanned PDF?"
+    a: "Yes. Scanned pages are images, and PDF link annotations sit on top of the page at specific coordinates. All the online editors listed here work on scanned PDFs."
+  - q: "Will hyperlinks survive if I compress or merge the PDF?"
+    a: "Our compressor rasterizes pages to JPEG, which replaces the original page content with an image, so link annotations may not survive. If your links matter, compress a copy first and test before sharing. Merge behavior with annotations has not been measured, so test that too."
+---
+
+You can add a hyperlink to a PDF for free without Adobe Acrobat. The most reliable method is to add the link in the original document (Google Docs, Word, or LibreOffice) and re-export to PDF. For an existing PDF where you no longer have the source file, free browser tools like PDFescape and Sejda let you insert clickable link annotations directly.
+
+## What counts as a hyperlink in a PDF?
+
+This distinction trips up many people, so it's worth a quick explanation before jumping to steps.
+
+A **visible URL** is text on the page, something like "https://example.com" typed in a text box. It shows up when someone reads the PDF, but clicking it may or may not do anything. Some PDF viewers auto-detect URL-shaped text and make it clickable; others ignore it entirely.
+
+A **link annotation** is an invisible rectangle placed at specific coordinates on the page, with a URL action attached. When a reader clicks inside that rectangle, the PDF viewer opens the URL. This is a true hyperlink, embedded in the [PDF file structure](https://en.wikipedia.org/wiki/PDF#Interactive_features) as defined in ISO 32000, and it works reliably across all compliant PDF readers.
+
+Most people asking how to add a hyperlink to a PDF want link annotations. That is what the methods below create.
+
+## Method 1: Go back to the source document (most reliable)
+
+If you created the PDF from a Word file, Google Doc, or LibreOffice document, the cleanest fix is to add the link in that source file and re-export. The exporting engine writes proper link annotations, so they behave predictably.
+
+**Google Docs:**
+1. Open your document and highlight the text you want to link.
+2. Press Ctrl+K (Cmd+K on Mac) to open the link dialog.
+3. Paste the URL and press Apply.
+4. File, Download, PDF Document. The downloaded file will have clickable link annotations.
+
+**Microsoft Word:**
+1. Highlight the text.
+2. Press Ctrl+K, paste the URL, and click OK.
+3. File, Save As, choose PDF format. Word embeds link annotations automatically.
+
+**LibreOffice Writer** (free, works on Windows, Mac, and Linux):
+1. Highlight the text.
+2. Press Ctrl+K or go to Insert, Hyperlink, paste the URL into the Internet field, and click Apply.
+3. File, Export as PDF. In the dialog, leave the default settings; hyperlinks export by default.
+
+[LibreOffice](https://www.libreoffice.org) is a free, open-source office suite. It handles the full cycle: create, link, export to PDF, all without a subscription.
+
+This approach is worth the extra step when you have the source file. The links are part of the document from the start, not painted on afterward.
+
+## Method 2: Add links to an existing PDF in your browser
+
+When you do not have the source file, you need a PDF editor that writes link annotations into an existing PDF. These are all free to use:
+
+**PDFescape** runs entirely in the browser with no sign-up required for PDFs under 100 pages and 10 MB. Open your PDF, choose the Link insert tool in the left toolbar, draw a rectangle over the area you want to link, type or paste the URL, and save.
+
+**Sejda PDF Editor** is another browser-based option. Open your file, use Insert, Link from the toolbar, draw the clickable area, enter the URL, and download. Sejda offers a generous free tier without requiring an account.
+
+**Zoho PDF Editor** requires a free Zoho account. Open the PDF, click Link in the top toolbar, draw the area, enter the destination URL, and save.
+
+None of these need software installation. If your PDF contains sensitive content, check each service's current privacy policy before uploading.
+
+## Method 3: LibreOffice Draw (desktop, free)
+
+LibreOffice also includes a module called Draw that can open and edit existing PDFs, even ones you did not create:
+
+1. In LibreOffice, go to File, Open, and select your PDF. It opens in Draw.
+2. Click the text or area where you want to add the link.
+3. Go to Insert, Hyperlink (Ctrl+K), enter the URL, and click Apply, then Close.
+4. File, Export as PDF to save the result.
+
+The page layout may shift slightly on complex PDFs with many fonts or embedded graphics, so review the result before sharing.
+
+## Method 4: macOS Preview (Mac only)
+
+If you are on a Mac, the built-in Preview app includes a Markup Toolbar with a link annotation tool in some versions:
+
+1. Open the PDF in Preview.
+2. Go to View, Show Markup Toolbar (or click the pencil icon in the toolbar).
+3. If a Link option is available, click it, draw the area on the page, and enter the URL.
+4. Press Cmd+S to save.
+
+Preview is the quickest option on a Mac for a one-link edit. It does not always handle complex annotations reliably on every macOS version, so open the saved file in Chrome or another viewer and click the link to confirm it works.
+
+## Just need a URL to appear on the page?
+
+If you do not need the link to be clickable and just want a URL to show up as text on a page, our [Edit PDF tool](/edit-pdf) handles that in the browser with no sign-up and no upload to a server. Open the tool, upload your PDF, select the text tool, type or paste the URL, position it, and download. It is useful for adding a reference URL to a document meant for printing, where click-to-open is not the goal.
+
+For a true clickable link, use one of the methods above.
+
+## Can I add multiple hyperlinks to one PDF?
+
+Yes. All the methods described here support multiple links. In PDFescape or Sejda, draw as many link rectangles as you need before downloading. In a source document, add links to as many words or phrases as you like before exporting. There is no fixed limit in the [PDF specification](https://pdfa.org/resource/iso-32000/) (PDF/A Foundation ISO 32000 reference), though very large numbers of annotations can slow down some PDF viewers.
+
+## Will hyperlinks work after you share or email the PDF?
+
+Yes, assuming they were added as proper link annotations. The URL is embedded inside the file and travels with it when you email, upload, or share.
+
+A few things to watch out for:
+
+Our [Compress PDF tool](/compress-pdf) rasterizes pages to JPEG images. This is designed for shrinking image-heavy PDFs and makes text PDFs larger, not smaller. Because the compression replaces page content with images, it may also remove link annotations. If you need to both add links and reduce file size, compress first and then add links, or add links and compress a separate copy to check.
+
+If you plan to [merge the PDF](/merge-pdf) with other files afterward, note that our merge tool is designed to combine pages and has not been tested for annotation preservation. Test the merged output before treating the links as reliable.
