@@ -875,7 +875,8 @@
       "targetQuery": "how to make a pdf grayscale free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-make-a-pdf-grayscale-free"
     },
     {
       "id": "blog-share-large-pdf",
@@ -1231,6 +1232,70 @@
       "priority": 2,
       "status": "pending",
       "slug": "how-to-merge-pdf-files-in-google-drive-free"
+    },
+    {
+      "id": "blog-compress-for-resume",
+      "surface": "blog",
+      "targetQuery": "compress pdf for resume free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-screenshot-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert a screenshot to pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-make-pdf-fillable",
+      "surface": "blog",
+      "targetQuery": "how to make a pdf fillable free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-insert-blank-page",
+      "surface": "blog",
+      "targetQuery": "how to insert a blank page into a pdf free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-duplicate-page-pdf",
+      "surface": "blog",
+      "targetQuery": "how to duplicate a page in a pdf free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-save-email-as-pdf",
+      "surface": "blog",
+      "targetQuery": "how to save an email as pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-remove-images-from-pdf",
+      "surface": "blog",
+      "targetQuery": "how to remove images from a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-for-insurance",
+      "surface": "blog",
+      "targetQuery": "compress pdf for insurance claim free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }

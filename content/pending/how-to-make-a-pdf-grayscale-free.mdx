@@ -1,0 +1,89 @@
+---
+title: "How to Make a PDF Grayscale Free"
+description: "Strip color from any PDF to cut printing costs and reduce file size. Free methods for Mac, Windows, and online tools that need no sign-up."
+date: "2026-08-13"
+keywords: ["how to make a pdf grayscale free", "pdf to grayscale", "convert pdf to black and white free", "grayscale pdf online", "pdf black and white free"]
+toolSlugs: ["compress-pdf", "pdf-to-jpg"]
+faq:
+  - q: "Does converting a PDF to grayscale reduce its file size?"
+    a: "It depends on the method. Printing to PDF with grayscale re-renders each page as a raster image, so text-only PDFs often get larger. PDFs that are already image-heavy usually shrink. If size reduction is your main goal, a dedicated compression tool is a more predictable choice."
+  - q: "Can I make a PDF grayscale on a Mac without extra software?"
+    a: "Yes. Open the PDF in Preview, click File, then Export. In the export dialog, open the Quartz Filter dropdown and choose 'Gray Tone'. Save the file. Note that Preview's result is technically still tagged as RGB, so some print workflows may not treat it as a true grayscale document."
+  - q: "Does Windows have a built-in way to make a PDF black and white?"
+    a: "Yes. Open the PDF in any viewer, press Ctrl+P to open the print dialog, select 'Microsoft Print to PDF' as the printer, check 'Print in grayscale (black and white)', then print. This saves a new PDF with all color removed."
+  - q: "Can I convert a PDF to grayscale without uploading it to a server?"
+    a: "Yes. A small number of browser-based tools process the file entirely in your browser using JavaScript, so nothing leaves your device. Look for tools that explicitly state 'no upload' or 'client-side' conversion."
+  - q: "What is the difference between grayscale and true black-and-white?"
+    a: "Grayscale keeps all shades from black to white, which works well for photos, diagrams, and anything with smooth gradients. True black-and-white (bilevel or 1-bit) makes every pixel either fully black or fully white. Most documents look better in grayscale."
+---
+
+Converting a PDF to grayscale free is straightforward on both Mac and Windows using tools you already have, and several online converters handle it without requiring an account or a file upload to a server.
+
+Below are the most reliable methods, what to expect from each one, and honest notes on when grayscale conversion actually shrinks the file.
+
+## Why make a PDF grayscale?
+
+The most common reason is printing cost. Color toner and ink cost substantially more than monochrome. Removing color from a document before sending it to print can cut per-page cost from around 12 to 15 cents down to 3 to 5 cents, according to typical [office printing cost surveys](https://en.wikipedia.org/wiki/Printer_(computing)#Cost_per_page). For a team printing hundreds of pages a week, that adds up fast.
+
+A few other reasons people strip color from PDFs:
+
+- **Consistent appearance.** Color formatting that looks intentional on screen can look accidental when printed on a basic office printer. Grayscale removes that ambiguity.
+- **Compatibility.** Some submission systems (fax, archival platforms, certain government portals) prefer or require monochrome documents.
+- **File size.** Grayscale images take up less space than color equivalents, but this benefit depends heavily on the conversion method (more on that below).
+
+## How to convert a PDF to grayscale on Mac
+
+Mac's built-in Preview app handles this with no extra installs.
+
+1. Open the PDF in Preview.
+2. Click **File** in the menu bar, then **Export**.
+3. Make sure the Format is set to **PDF**.
+4. Open the **Quartz Filter** dropdown and select **Gray Tone**.
+5. Click **Save**.
+
+Preview creates a new file with the grayscale filter applied. One thing to know: the Quartz Gray Tone filter renders each page at a lower internal resolution than the original, and the resulting PDF is technically still tagged as RGB in its color space metadata. For personal use and standard office printing this does not matter. For print-production workflows, a proper [color-managed PDF conversion](https://www.prepressure.com/pdf/basics/editing/convert-color-to-grayscale) gives more accurate results.
+
+If you want to squeeze more quality out of the Preview approach, the **Black & White** Quartz filter is a higher-contrast variant. Try both and compare, since results vary by document content.
+
+## How to make a PDF grayscale on Windows
+
+Windows has no dedicated "convert to grayscale" button for PDFs, but the print dialog gets the job done cleanly.
+
+1. Open the PDF in any viewer (Edge, Adobe Reader, or the built-in PDF viewer in Chrome all work).
+2. Press **Ctrl+P** to open the print dialog.
+3. In the Printer dropdown, select **Microsoft Print to PDF**.
+4. Look for a **Grayscale** or **Print in grayscale (black and white)** checkbox, usually under "More settings" or "Advanced".
+5. Click **Print**, choose where to save the new file, and click **Save**.
+
+You end up with a new PDF where every page has been re-rendered in black and white. The original file is untouched.
+
+One tradeoff: the printer driver re-rasterizes each page, which means text is no longer stored as vector data. For documents you'll reuse as editable PDFs, keep the color original and only send the grayscale version for printing.
+
+## Free online tools (no sign-up required)
+
+If you need a quick conversion and don't want to mess with print settings, several web tools do this for free without creating an account:
+
+- **Browser-based converters** (files never leave your device): A small category of tools, including OneClickPDF, run the conversion entirely in your browser using JavaScript. Your file isn't uploaded anywhere. This is the best option for sensitive documents.
+- **Server-side converters** (file is uploaded, then deleted): Tools like DeftPDF and Sejda upload your PDF, convert it on their servers, and delete it after a short window. They're fast and handle larger files well, but your document does travel to a third-party server.
+
+For most personal documents, either type is fine. For contracts, medical records, or anything confidential, prefer a client-side tool or one of the desktop methods above.
+
+## Does converting to grayscale reduce file size?
+
+Sometimes, and the answer depends on what's in your PDF and how the conversion works.
+
+**Image-heavy PDFs** (scans, photo decks, presentations full of visuals) often shrink after grayscale conversion, because grayscale images require less data than color images to encode the same visual content.
+
+**Text-based PDFs** (invoices, contracts, reports) may get larger. When a print-to-PDF approach re-renders the page, it converts crisp vector text into a raster image. Vector text in a PDF is stored very compactly, so turning it into a bitmap adds bytes rather than removing them.
+
+If your goal is primarily a smaller file, grayscale conversion is not always the right tool. For image-heavy PDFs, our [Compress PDF](/compress-pdf) tool reduces file size directly, though keep in mind it works by rasterizing pages to JPEG, which makes it the right call for scans and photo documents, not for text-only files.
+
+## When to use something else
+
+Grayscale conversion is the right move when you need to print in black-and-white or submit a monochrome document. It's less useful when:
+
+- **You just need a smaller file.** If the PDF has a lot of images, compression gives more predictable size reduction than grayscale conversion. If it's mostly text, neither grayscale nor compression will help much. The document is already compact as a vector PDF.
+- **You need the text to stay searchable and selectable.** Print-to-PDF grayscale converts text to images. If the recipient needs to copy text or search the document, keep the original format.
+- **You're working with a scan.** Scans are already raster images. Converting a scanned PDF to grayscale strips the color channel from the embedded images, which can slightly reduce size, but the document's searchability doesn't change since the text was already an image.
+
+For converting PDF pages to image files you can edit individually, the [PDF to JPG](/pdf-to-jpg) tool exports each page as a separate image file.
