@@ -1239,7 +1239,8 @@
       "targetQuery": "compress pdf for resume free",
       "intent": "transactional",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-resume-free"
     },
     {
       "id": "blog-screenshot-to-pdf",
