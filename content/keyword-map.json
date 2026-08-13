@@ -1212,7 +1212,8 @@
       "targetQuery": "compress pdf for docusign upload free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-docusign"
     },
     {
       "id": "blog-reduce-pdf-google-docs",
