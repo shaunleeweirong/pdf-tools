@@ -1248,7 +1248,8 @@
       "targetQuery": "how to convert a screenshot to pdf free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-a-screenshot-to-pdf-free"
     },
     {
       "id": "blog-make-pdf-fillable",
