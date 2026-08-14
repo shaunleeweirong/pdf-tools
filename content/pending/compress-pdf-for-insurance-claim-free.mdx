@@ -1,0 +1,83 @@
+---
+title: "How to Compress a PDF for an Insurance Claim"
+description: "Get claim PDFs under the portal's size limit. Free, browser-based, no sign-up. Plus honest guidance on when compression won't help and what to do instead."
+date: "2026-08-14"
+keywords: ["compress pdf for insurance claim free", "reduce pdf size for insurance upload", "insurance claim pdf too large", "compress claim documents pdf"]
+toolSlugs: ["compress-pdf", "merge-pdf", "split-pdf"]
+faq:
+  - q: "What file size limit do insurance portals use?"
+    a: "Limits vary by insurer, but most portals cap individual files at 5 to 10 MB. Chubb's portal enforces a 7 MB limit per document. Check your insurer's upload screen or help section before you start, because some portals also limit the total number of files per submission."
+  - q: "Will compressing my scanned damage photos reduce image quality?"
+    a: "Our compress tool re-encodes pages as JPEG, which can soften fine detail. At Medium, scanned documents stay clearly readable. Zoom into the result before uploading and make sure any dollar amounts, serial numbers, or handwritten notes are still legible. If not, the original was large enough that you may need to use Low compression instead."
+  - q: "Why did my PDF get bigger after I compressed it?"
+    a: "Our compressor rasterizes each page to JPEG before shrinking it. That works well for scanned pages but makes text-only documents much larger. A 20-page text report went from 23.5 KB to 1,400.8 KB at Medium compression in our testing. If your file is a digital invoice or policy document, split out only the pages you need rather than compressing."
+  - q: "Can I merge all my claim documents into one PDF before compressing?"
+    a: "Yes. In our testing, three PDFs totaling 971.9 KB merged into a 970.5 KB file. Merging itself adds nothing. But if the merged file mixes scanned pages with text-based digital documents, compression results will be unpredictable. Compress each image-heavy document separately first, then merge."
+  - q: "Is it safe to compress sensitive insurance documents online?"
+    a: "With our tool, yes. Everything runs in your browser using JavaScript. No file is sent to a server. Your documents stay on your device throughout the process."
+---
+
+When an insurance portal rejects your PDF for being too large, compressing it is often the fastest fix. But compression only helps certain types of documents, and using the wrong approach on a text-based invoice or policy form can make the file much larger, not smaller.
+
+This guide covers how to compress a PDF for an insurance claim for free, which documents benefit from compression, and what to do when compression isn't the right tool.
+
+## What file size limits do insurance portals use?
+
+Most insurers cap uploaded files at 5 to 10 MB per document. The exact limit depends on the company and the claim type. Chubb's claim portal, for example, enforces a [7 MB per-document limit](https://www.ucop.edu/risk-services-travel/_files/uc-travel-insurance/chubb-claim-portal-guidelines-.pdf). Some portals also restrict the total number of files per submission or require specific file types.
+
+Before doing anything else, find the size limit for your specific portal. It's usually on the upload screen or in the help section. Knowing the target number upfront lets you pick the right compression level on the first try.
+
+## Will compressing your PDF actually make it smaller?
+
+This depends almost entirely on what's inside the document.
+
+**It helps for scanned documents and photo evidence.** If your PDF is a scan of physical records (damage photos, receipts, medical bills, repair estimates printed on paper), each page is stored as a raster image. Compression re-encodes those images as [JPEG](https://en.wikipedia.org/wiki/JPEG), which can cut file size significantly. In our testing with a six-page image deck, Medium compression reduced the file from 913.4 KB to 315.3 KB, a 65.5% reduction. High compression brought that same file down to 175.6 KB, an 80.8% reduction.
+
+**It hurts for digital text documents.** If your PDF is a digital file, such as an online invoice, a contract your insurer sent by email, or a policy document downloaded from a web portal, its pages are stored as text and vector graphics. These are already very small. Our compress tool rasterizes every page to JPEG before shrinking it, and that conversion alone makes the file much larger. In our testing, a 20-page text document grew from 23.5 KB to 1,400.8 KB at Medium compression, roughly 60 times larger than it started.
+
+If you're not sure which type you have, open the PDF and zoom in on some text. If it stays sharp at any zoom level, it's a text-based digital file. If it turns blurry or pixelated, it's a scan.
+
+## How to compress an insurance claim PDF (step by step)
+
+Use this for scanned pages, damage photos, and any medical records stored as images.
+
+1. Open the [Compress PDF tool](/compress-pdf). No account required.
+2. Drop your claim PDF onto the tool.
+3. Start with **Medium** compression. This usually cuts scanned files by 50% or more while keeping handwriting and printed text readable.
+4. Download the result and check the new file size.
+5. If the file is still over the portal's limit, go back to your original and try **High** compression.
+6. Zoom in on the result before uploading. Confirm that dollar amounts, policy numbers, dates, and any handwritten notes are still clear.
+
+One thing to avoid: never run the same file through compression twice. A second pass on an already-compressed file makes it larger. In our testing, a file compressed once at Medium grew from 315.3 KB to 598.9 KB when run through the same level a second time. If Medium isn't enough, go back to the original and select High. Always compress from the original, not from a previous output.
+
+## What to do when your document is text-based
+
+If compression makes your file bigger instead of smaller, the document is text-based. These approaches work instead:
+
+**Extract only the relevant pages.** A policy document might run 40 pages, but your insurer may only need a specific endorsement or declaration page. Use the [Split PDF tool](/split-pdf) to pull out just those pages. A 5 MB policy document might contain 4 pages the insurer needs, and those 4 pages together could come in under 500 KB.
+
+**Re-export from the source.** If you created the document yourself in Word, Google Docs, or similar software, open the original and export a fresh PDF using the built-in PDF export option. This often cuts embedded font overhead and compresses internal images automatically, sometimes reducing file size by 50% or more, without touching any content.
+
+**Scan your paper copy at a lower resolution.** For future submissions, 150 dpi produces clear, readable scans for most documents. Many phone scanners and desktop scanners default to 300 dpi, which doubles the file size without any noticeable quality benefit for portal submission.
+
+## Sorting your claim documents before you upload
+
+Most insurance claims involve a mix of document types. Damage photos and scanned receipts are image-heavy, so compression helps. Online invoices, contracts, and digital policy forms are text-based, so compression will hurt. Knowing which is which before you start saves time.
+
+A quick checklist for a typical property or health claim:
+
+| Document | Type | What to do |
+|---|---|---|
+| Damage photos | Image-heavy | Compress at Medium or High |
+| Scanned receipts | Image-heavy | Compress at Medium |
+| Scanned medical bills | Image-heavy | Compress at Medium |
+| Repair estimates (digital) | Text-based | Split to relevant pages |
+| Policy or coverage document | Text-based | Split to relevant pages |
+| Completed claim form | Text-based | Submit as-is; do not compress |
+| Police or incident report | Varies | Zoom in to check; compress only if it looks scanned |
+
+## Combining multiple documents into one file
+
+Some insurers ask for a single combined PDF rather than separate uploads. Merging files before submission is fine. In our testing, three PDFs totaling 971.9 KB combined into a single 970.5 KB file. Merging adds nothing to the file size.
+
+Use the [Merge PDF tool](/merge-pdf) to combine your files in the order your insurer requests. If the merged total is still too large, compress the image-heavy sections before merging rather than compressing the combined file after. That gives you more control and avoids the unpredictable results you get when compression runs across a mix of scanned and text pages.
