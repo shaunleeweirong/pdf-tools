@@ -1028,7 +1028,8 @@
       "targetQuery": "batch convert pdf to jpg free online",
       "intent": "transactional",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "batch-convert-pdf-to-jpg-free-online"
     },
     {
       "id": "blog-pdf-too-large-google-forms",
