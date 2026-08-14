@@ -1,0 +1,94 @@
+---
+title: "How to Remove Images from a PDF Free"
+description: "Cover or delete images from a PDF in your browser with no account. Three approaches for different situations, including image-only pages and mixed text pages."
+date: "2026-08-14"
+keywords: ["how to remove images from a pdf free", "delete image from pdf", "remove image pdf online free", "pdf image removal", "strip images from pdf"]
+toolSlugs: ["edit-pdf", "delete-pages", "extract-pages", "organize-pdf"]
+faq:
+  - q: "Does covering an image with white actually delete it from the PDF?"
+    a: "No. Drawing a white box over an image hides it visually but the image data remains in the file. Deleting the entire page is the only way to permanently remove a page's content."
+  - q: "Will removing images make the PDF file smaller?"
+    a: "It depends on how you do it. Deleting pages that contain images makes the file smaller because those pages are gone. Covering an image with a white rectangle does not meaningfully reduce file size, since the image data is still in the file."
+  - q: "Can I remove images from a scanned PDF?"
+    a: "A scanned PDF is a sequence of photographs, one per page. The page itself is the image, not a document with an embedded image object. To remove the content, delete those pages using the Delete Pages tool."
+  - q: "Can I remove the same image from every page at once?"
+    a: "The Edit PDF tool works one page at a time. Covering a logo that appears on 20 pages means making the edit on each page individually."
+  - q: "What if I want a text-only version of a document that has both text and image pages?"
+    a: "Use Extract Pages to specify which pages to keep. Build a new PDF from only the text pages and leave the image pages behind."
+---
+
+You can remove images from a PDF free, right in your browser, with no software to install and no account to create. The right approach depends on one thing: is the image mixed in with text you need to keep, or does it have its own page?
+
+## Two different problems
+
+Before picking a tool, it helps to know what kind of image you're dealing with.
+
+**An embedded image on a text page.** A company logo at the top of an invoice, a photo inserted into a report, a diagram on a chapter page. The image and the surrounding text live on the same page. Page-level tools can't touch just the image.
+
+**An image-only page.** Scanned documents, photographs of forms, full-page screenshots saved as PDFs. The entire page is the image. Here, deleting the page removes the image.
+
+The approach for each case is different, and choosing the wrong one will either miss the image entirely or wipe out text you needed.
+
+## Remove an image from a text page
+
+The [Edit PDF tool](/edit-pdf) lets you draw a white rectangle anywhere on a page. Position it over the image, and the image disappears from view. The text around it stays untouched.
+
+How to do it:
+
+1. Open your PDF in the [Edit PDF tool](/edit-pdf).
+2. Select the rectangle tool in the toolbar.
+3. Draw a box that covers the image completely. You can drag to adjust before confirming.
+4. Download the edited PDF.
+
+This approach covers the image rather than deleting it. The image data stays in the PDF's internal structure, hidden under a white rectangle. For almost every practical purpose, sharing, printing, converting, this works exactly as you'd expect. The image is gone from any view of the document.
+
+If you need the image data to be physically absent from the file (say, for legal or compliance reasons), the only reliable option is to delete the entire page.
+
+## Remove image-only pages
+
+When images occupy their own pages, deleting those pages is the fastest and cleanest approach.
+
+The [Delete Pages](/delete-pages) tool lets you type in the page numbers you want removed. A 30-page report where pages 25 to 30 are scanned appendices becomes a 24-page document in a few clicks.
+
+The [Organize PDF](/organize-pdf) tool takes a more visual approach. It shows thumbnail previews of every page, so you can see which ones contain images before you act. Click the pages you want to remove, confirm, and download. This is useful when you're not sure which pages are which, since you can see them all at once rather than guessing by page number.
+
+Both tools create a new PDF that excludes the pages you deleted. The pages are gone, along with their content.
+
+## Keep only the text pages
+
+If you want the opposite result, keep specific pages and drop the rest, the [Extract Pages](/extract-pages) tool does that. You specify which pages to keep, and it builds a new PDF from only those pages.
+
+A common use case: a 50-page document where pages 1 to 40 are text and pages 41 to 50 are scanned photos. Extract pages 1 to 40, and you have a text-only version of the document.
+
+## Does removing images make a PDF smaller?
+
+It depends on how you remove them.
+
+**Deleting pages** that contain images reduces the file because those pages and their content are gone. The more image-heavy the removed pages, the bigger the reduction.
+
+**Covering an image with a white rectangle** does not meaningfully reduce file size. The image is still in the file's internal data; you've just placed a rectangle on top of it.
+
+If your main goal is reducing file size, deleting the image pages directly is more effective than covering them. But if the images are embedded on pages with text you need, covering is the only free browser-based option that preserves the surrounding content.
+
+One thing to avoid: running a PDF through the [Compress PDF](/compress-pdf) tool to strip images. That tool works by rasterizing every page to JPEG, which is excellent for image-heavy PDFs but makes text documents dramatically larger. A 20-page text report grew from 23.5 KB to 1.4 MB in testing. Don't use compression to remove images from a text PDF.
+
+## Why PDF images can be hard to edit
+
+[PDF](https://en.wikipedia.org/wiki/PDF) was designed for faithful display and printing, not for editing. Image objects in a PDF are stored as embedded binary streams at specific coordinates. Clicking on what looks like an image doesn't always give you an editable object, because some PDFs encode their pages as flat raster images (like a scanned document) rather than as composed objects.
+
+A document created by exporting from Word or Keynote has discrete image objects a proper editor can select and delete. A scanned PDF has no such objects. Each page is a JPEG photograph; there's nothing to "select" because the whole page is the image. That's why the approach for scanned PDFs is page deletion rather than image editing.
+
+The [ISO 32000 standard](https://www.iso.org/standard/75839.html) that defines the PDF format reflects this: images, text, and graphics are stored as separate streams that renderers composite at display time. Getting them back out individually is not part of the original design.
+
+## When to use each approach
+
+| Situation | Best tool |
+|---|---|
+| Logo or photo embedded on a text page | [Edit PDF](/edit-pdf) (white box) |
+| Full page is a scanned image | [Delete Pages](/delete-pages) |
+| Multiple image-only pages, not sure which | [Organize PDF](/organize-pdf) |
+| Want to keep only certain pages | [Extract Pages](/extract-pages) |
+| Need to reduce file size from scans | [Delete Pages](/delete-pages) |
+| Image appears on every page (header/footer) | [Edit PDF](/edit-pdf), one page at a time |
+
+All of these tools work in your browser and are free to use. No account required.

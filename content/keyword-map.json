@@ -1291,7 +1291,8 @@
       "targetQuery": "how to remove images from a pdf free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-remove-images-from-a-pdf-free"
     },
     {
       "id": "blog-compress-for-insurance",
