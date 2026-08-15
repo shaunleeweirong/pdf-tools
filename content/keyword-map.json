@@ -1,5 +1,6 @@
 {
   "updated": "2026-08-15",
+
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
     {
@@ -1304,6 +1305,79 @@
       "priority": 2,
       "status": "pending",
       "slug": "compress-pdf-for-insurance-claim-free"
+    },
+    {
+      "id": "blog-best-pdf-merger",
+      "surface": "blog",
+      "targetQuery": "best free pdf merger online no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "best-free-pdf-merger-online-no-sign-up"
+    },
+    {
+      "id": "blog-heic-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert heic to pdf free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-sharepoint",
+      "surface": "blog",
+      "targetQuery": "pdf too large for sharepoint upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-scanned-pdf",
+      "surface": "blog",
+      "targetQuery": "how to compress a scanned pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-tiff-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert tiff to pdf free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-under-5mb",
+      "surface": "blog",
+      "targetQuery": "how to compress pdf to under 5mb free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-jpg-to-pdf-high-quality",
+      "surface": "blog",
+      "targetQuery": "how to convert jpg to pdf high quality free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-blurry-printing",
+      "surface": "blog",
+      "targetQuery": "why does my pdf look blurry when printed",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-pdf-offline",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf files without internet",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
     }
   ]
 }
