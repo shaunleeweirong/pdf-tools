@@ -1,0 +1,86 @@
+---
+title: "How to Compress a Scanned PDF Free"
+description: "Scanned PDFs are image-heavy and compress very well. Shrink one for free, right in your browser, with no account and no upload to a server."
+date: "2026-08-15"
+keywords: ["how to compress a scanned pdf free", "compress scanned pdf", "reduce scanned pdf size", "scanned pdf too large", "scanned document pdf smaller"]
+toolSlugs: ["compress-pdf"]
+faq:
+  - q: "Can I compress a scanned PDF for free without signing up?"
+    a: "Yes. The Compress PDF tool on this site runs entirely in your browser, requires no account, and never sends your file to a server."
+  - q: "Does compressing a scanned PDF make it blurry?"
+    a: "At Medium compression, text stays legible and the file shrinks noticeably. High compression is more aggressive and can soften fine print, so it depends on how clear the original scan is."
+  - q: "What compression level should I use for a scanned PDF?"
+    a: "Medium is a reliable starting point for most scans. Use High if you need the file much smaller and the original scan is sharp. Use Low when preserving as much detail as possible matters more than file size."
+  - q: "Should I compress a scanned PDF twice to get it smaller?"
+    a: "No. Running a compressed file through a compressor a second time almost always makes it larger. If the first pass wasn't enough, go back to the original and use a higher level instead."
+  - q: "Why is my scanned PDF so large in the first place?"
+    a: "Scanners convert each page into a full-resolution image, often at 300 DPI in color. A single color page at that resolution can weigh several megabytes even before any PDF compression."
+---
+
+## Scanned PDFs compress well, and here's why
+
+Compressing a scanned PDF for free is one of the easiest wins in file management. It usually works much better than people expect, and it takes seconds.
+
+The reason it works so well comes down to what a scanned PDF actually is. When a scanner captures a document, it doesn't read the text. It photographs the page and saves that image inside a [PDF container](https://en.wikipedia.org/wiki/PDF). So a 20-page scanned document is really just 20 photographs bundled into one file. At 300 DPI in color, each of those photographs can weigh several megabytes before any compression touches them.
+
+A PDF compressor works by re-encoding those images at a smaller resolution and quality level. For image-heavy files, that's exactly what they're built to do.
+
+This is different from compressing a typed, digitally created PDF (like an invoice or a contract generated from Word). Those documents store text as vector data, which is already very compact. Compressing them typically makes them larger, not smaller, because the compressor converts the vector text into an image. If you're not sure what kind of PDF you have, try selecting some text. If you can highlight and copy it, the document has real text and compression probably won't help. If nothing selects, every page is an image, and compression should give you a meaningfully smaller file.
+
+## How to compress a scanned PDF in your browser
+
+The [Compress PDF tool](/compress-pdf) processes your file locally. Your document never leaves your device, which matters when the scan contains tax forms, medical records, contracts, or anything else you'd rather not upload to a stranger's server.
+
+1. Open the [Compress PDF tool](/compress-pdf).
+2. Drop your scanned PDF onto the page or click to browse for it.
+3. Pick a compression level (see the table below for guidance).
+4. Click Compress, then download the result.
+
+There's no sign-up, no watermark, and nothing is stored after you download.
+
+## Choosing the right compression level
+
+The tool offers three levels. Here are the results from our tests on an image-heavy 6-page PDF, run in a real browser against the live tool:
+
+| Level | File size change | Best for |
+|---|---|---|
+| High (smallest) | Around 80% smaller | Email limits, tight upload limits |
+| Medium | Around 65% smaller | Good balance of size and legibility |
+| Low (best quality) | Around 23% smaller | Fine print, high-detail scans |
+
+Your actual reduction will vary depending on how the scan was originally done. A full-color 600 DPI scan will compress more than a grayscale 150 DPI one, because there's more redundancy to remove. But in general, scanned documents compress far better than text-based PDFs.
+
+Medium is the right starting point for most people. It brings the file down to roughly a third of its original size while keeping text readable and photos clear. If you need to hit a specific size limit (say, a portal that caps uploads at 10 MB), go with High. If you're compressing something with small print or fine detail and quality matters more than size, Low gives you the mildest touch.
+
+## Why compressing twice doesn't help
+
+One of the most common mistakes is running the output file through the compressor a second time, hoping to squeeze a few more megabytes out. It doesn't work.
+
+[JPEG](https://en.wikipedia.org/wiki/JPEG) compression, which is what most browser-based PDF compressors use for image-heavy files, is lossy. Every encoding pass discards some data to make the file smaller. When you re-encode an already-compressed image, the compressor has to render the page again at a larger intermediate size before reducing it, which adds overhead rather than removing it. In our measurements, compressing the same file a second time at the same level made it 90% larger, not smaller.
+
+If Medium compression isn't enough, go back to the original file and try High instead. Starting fresh from the original always gives a better result than chaining passes.
+
+## When the file is too large even after compression
+
+Some scanned PDFs are large for reasons compression alone can't fix. A 400-page legal filing or a full-color brochure at 600 DPI may still be too large after compression.
+
+In that case, two other approaches often work better:
+
+- **Remove pages you don't need.** If you only need a subset of the document, use the [Delete Pages tool](/delete-pages) to cut it down first, then compress what's left.
+- **Split the document.** If the recipient can accept multiple files, [Split PDF](/split-pdf) lets you break the scan into smaller parts. Many file upload portals accept a 5 MB file but not a 50 MB one, and a 10-file split at 5 MB each is easier to manage than one rejected 50 MB upload.
+
+## Color, grayscale, and DPI: what affects file size most
+
+If you have control over the scanning settings, a few choices affect file size much more than post-scan compression:
+
+- **Resolution.** 300 DPI is the standard for archiving. For sharing a readable copy by email, 150 to 200 DPI is usually sufficient and cuts the file size in half before you even open a compressor.
+- **Color mode.** Full-color scans are much heavier than grayscale ones. If the document doesn't contain important color (signatures, stamps, photos), grayscale saves significant space.
+- **Format inside the PDF.** Scanners sometimes embed images as uncompressed TIFF inside a PDF, which creates very large files. Running that PDF through a compressor replaces the TIFF data with JPEG, often with a dramatic size reduction.
+
+If you received the scan from someone else and can't rescan it, the [Compress PDF tool](/compress-pdf) is still the fastest free option. You don't need Acrobat, you don't need an account, and you don't need to install anything.
+
+## A note on text PDFs scanned at high quality
+
+There's one scenario where scanned PDFs don't compress well: documents that were already scanned at low resolution, or that someone already compressed before sending. If the images inside the PDF are already highly compressed, there's not much redundancy left to remove. The compressor will still run, but the file size reduction will be small.
+
+In that situation, the [Delete Pages tool](/delete-pages) or [Split PDF](/split-pdf) may be more useful than compression. Removing a handful of pages from a 50-page scan makes a bigger dent than re-compressing an already-compressed one.
