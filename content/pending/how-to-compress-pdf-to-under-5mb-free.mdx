@@ -1,0 +1,88 @@
+---
+title: "How to Compress a PDF to Under 5 MB Free"
+description: "Get a PDF under 5 MB in seconds: use our free in-browser compressor for image-heavy files, or split and delete pages for text-heavy ones. No sign-up."
+date: "2026-08-15"
+keywords: ["compress pdf to under 5mb", "compress pdf to 5mb free", "reduce pdf size to 5mb", "pdf file too large 5mb", "pdf too large to upload"]
+toolSlugs: ["compress-pdf", "split-pdf", "delete-pages"]
+faq:
+  - q: "Does compressing a PDF to under 5 MB reduce quality?"
+    a: "For image-heavy PDFs, yes, slightly. The tool converts pages to JPEG, so photos and scans may show minor quality loss at High compression. Text PDFs should not be compressed at all because rasterizing text to JPEG makes files much larger and blurry."
+  - q: "Why is my PDF still over 5 MB after I compress it?"
+    a: "If your file is mostly text, our compressor will actually increase the size because it rasterizes every page to JPEG. Try deleting pages you don't need with the Delete Pages tool, or split the document into smaller parts instead."
+  - q: "Can I compress the same PDF twice to make it smaller?"
+    a: "No. A second compression pass at the same level makes the file larger. In tests, a Medium-compressed file grew from 315.3 KB to 598.9 KB on a second Medium pass. If the first pass isn't enough, start again from the original at a higher compression level."
+  - q: "Which sites have a 5 MB PDF upload limit?"
+    a: "Government portals, job sites, university systems, and planning applications commonly cap uploads at 5 MB. The UK Planning Portal and many HR and immigration systems use this threshold."
+  - q: "What if my text PDF is over 5 MB?"
+    a: "Skip the compressor. A text-only PDF over 5 MB is usually large because of embedded fonts, a high-resolution logo in the header, or revision metadata from Word. Delete unnecessary pages or split the document into smaller files."
+---
+
+Compressing a PDF to under 5 MB takes about 30 seconds when the file is image-heavy. The free [Compress PDF tool](/compress-pdf) runs entirely in your browser, so nothing is uploaded to a server and there's no sign-up required.
+
+The catch: not every PDF shrinks with compression. Which method works depends on what's actually inside your file.
+
+## Does your PDF need compression or something else?
+
+PDFs end up over 5 MB for two very different reasons, and the fix is different for each.
+
+**Image content:** Scanned pages, embedded photos, high-resolution logos, and presentation slides all store a lot of pixel data. These files compress well.
+
+**Document structure:** Embedded fonts, revision history carried over from Word or Google Docs, and bloated metadata can inflate even a text-only file. These files don't compress well with a JPEG-based compressor.
+
+A quick way to tell which you have: open the PDF and zoom in on the text. If it looks like a photograph (slightly grainy, fixed resolution), the document is image-based and compression will help. If the text is sharp and clear at any zoom level, it's made of vector glyphs and the compressor will hurt, not help.
+
+## How to compress an image-heavy PDF to under 5 MB
+
+1. Open the [Compress PDF tool](/compress-pdf).
+2. Drop your file onto the page.
+3. Choose **Medium** as your starting compression level.
+4. Download the result and check the file size.
+5. If it's still over 5 MB, go back to the original file and try **High**.
+
+The tool processes everything in your browser using your device's own processing power. No file leaves your machine at any point.
+
+## What the compression levels actually do
+
+The differences between levels are meaningful. In testing with an image-heavy 913.4 KB file:
+
+| Level | Output size | Reduction |
+|---|---|---|
+| Low (best quality) | 703.5 KB | 23.0% |
+| Medium | 315.3 KB | 65.5% |
+| High (smallest file) | 175.6 KB | 80.8% |
+
+Medium brings that 913.4 KB file to 315.3 KB. High brings it to 175.6 KB. Both clear a 5 MB limit by a wide margin, so for most files Medium is the right starting point.
+
+One thing to avoid: running the compressor twice on the same file. In tests, a second Medium pass on an already-compressed file grew it from 315.3 KB to 598.9 KB. The tool re-renders pages that are already JPEG, and re-encoding JPEG that has already been processed adds data instead of removing it. If Medium isn't enough, start fresh from your original file at High.
+
+## Why compression won't work on text PDFs
+
+The [PDF format](https://en.wikipedia.org/wiki/PDF) stores text as compact vector instructions. A 20-page text report might be just 23 KB. When our compressor runs on that file, it converts each page into a JPEG image, and images of text are far larger than the original vector data. In our measurements, a 23.5 KB text report grew to 1.4 MB after compression at Medium.
+
+If your text-only PDF is already over 5 MB, something else is causing it: a high-resolution image in the header or footer, fonts embedded in the file, or metadata carried over from a Word export. The compressor can't fix those things. Sending a 23.5 KB text file through compression and getting back 1.4 MB is a common frustration, and it comes from using the wrong tool for the job.
+
+## What to do when compression isn't the answer
+
+**Delete pages you don't need.** Use the [Delete Pages tool](/delete-pages) to remove pages that aren't required for the submission. Fewer pages means a proportionally smaller file.
+
+**Split the document.** The [Split PDF tool](/split-pdf) lets you divide a large PDF into separate parts. Many submission portals accept multiple files, so splitting is often the cleanest path through a 5 MB cap. You don't have to compress at all.
+
+**Re-export from the source file.** If the PDF was exported from Word or Google Docs, try re-exporting it. In Word, choose File > Save As > PDF and pick "Minimum size (publishing online)" to strip embedded metadata and reduce image resolution.
+
+## Which portals commonly enforce a 5 MB limit?
+
+The 5 MB threshold shows up across many systems. The UK [Planning Portal](https://blog.planningportal.co.uk/2012/04/26/three-tips-for-working-with-the-5mb-attachment-limit/) uses it for supporting documents on planning applications. Canada's immigration portal (IRCC) applies similar caps on visa and immigration attachments. Many university application systems, HR platforms, insurance claim portals, and court filing systems use the same limit.
+
+The common thread is that these systems handle enormous volumes of documents and store them for years. A conservative upload cap keeps storage manageable on their end.
+
+If the portal accepts multiple uploads, splitting is usually the simpler solution. That way you avoid compressing at all. If it only accepts one file, compress first for image-heavy content, or delete unnecessary pages for text-heavy content.
+
+## Quick decision guide
+
+- **Image-heavy PDF over 5 MB?** Use the [Compress PDF tool](/compress-pdf) at Medium. If still over 5 MB, try High starting from the original.
+- **Text PDF over 5 MB?** Don't compress. Delete unnecessary pages or split the document.
+- **PDF just slightly over 5 MB?** Low compression or removing a single page is often enough.
+- **Must submit as a single file?** Compress if image-heavy. For text files, delete pages or re-export from source.
+- **Portal accepts multiple files?** Split the document. That works for any file type and avoids quality loss.
+
+The compressor is the right tool for image content. For text-heavy files, the structural fixes (delete pages, split, re-export) get you where you need to go without making things worse.
