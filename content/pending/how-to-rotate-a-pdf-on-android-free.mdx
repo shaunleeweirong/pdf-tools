@@ -1,0 +1,81 @@
+---
+title: "How to Rotate a PDF on Android Free"
+description: "Permanently rotate a sideways PDF on Android in a few taps, free, no app needed. Covers why rotations sometimes don't save and how to fix them."
+date: "2026-08-15"
+keywords: ["how to rotate a pdf on android free", "rotate pdf android", "rotate pdf android no app", "permanent pdf rotation android", "pdf orientation android"]
+toolSlugs: ["rotate-pdf"]
+faq:
+  - q: "Does rotating a PDF on Android change the file size?"
+    a: "No. Rotation updates an orientation flag in the PDF without re-rendering any content, so the file size stays the same."
+  - q: "Why does my PDF revert to sideways after I rotate it?"
+    a: "Most basic PDF viewers only rotate the display temporarily. They don't change the file itself. Use a tool that rewrites the orientation flag inside the PDF, like the Rotate PDF tool, and the change will stick."
+  - q: "Can I rotate just one page of a PDF on Android?"
+    a: "The Rotate PDF tool rotates all pages at once. For a single page, split that page out with Split PDF, rotate it, then rejoin the pages with Merge PDF."
+  - q: "Do I need to sign up to rotate a PDF on Android?"
+    a: "No. The Rotate PDF tool is free and requires no account or app download. Open it in any Android browser and you can start right away."
+  - q: "Will the rotated PDF look correct when I print or email it?"
+    a: "Yes. A permanent rotation writes the new orientation into the file itself, so it displays correctly wherever it's opened, printed, or sent as an attachment."
+---
+
+Rotating a PDF on Android is free and takes under a minute with the right tool. Open the [Rotate PDF tool](/rotate-pdf) in Chrome on your Android phone, upload the file, choose the angle, and download the corrected copy. No app install, no account required.
+
+The tricky part is that many viewers let you tilt a page on screen without saving that change to the file. You close the PDF, reopen it, and it's sideways again. Here's how to tell the difference and fix it for good.
+
+## Why your rotated PDF might revert to sideways
+
+When you rotate a PDF in most basic viewers, including the built-in PDF viewer in Android Chrome and many free apps, you're only changing how the app shows the file, not the file itself. The moment you close the app, the change disappears. Send the file to someone else and it arrives sideways.
+
+A permanent rotation does something different: it writes a value to the `/Rotate` entry in each page's data structure, as defined by the [PDF specification (ISO 32000)](https://pdfa.org/resource/pdf-specification/). Any viewer that opens the file reads that entry and displays the page at the correct angle, because the orientation is embedded in the document itself.
+
+A quick test: rotate the PDF with a tool, then open the result in a completely different app. If it's still rotated correctly, the change is permanent. If it's sideways again, the first tool only changed the view.
+
+## How to rotate a PDF on Android in your browser
+
+You don't need to download anything. Browser-based tools work in Android Chrome, Firefox for Android, Samsung Internet, and other modern mobile browsers.
+
+Here's how to use the [Rotate PDF tool](/rotate-pdf):
+
+1. Open Chrome (or your preferred browser) on your Android device.
+2. Go to the Rotate PDF tool and tap "Select PDF."
+3. Choose the file from your phone storage, Downloads folder, or Google Drive.
+4. Select the rotation angle: 90° clockwise, 90° counterclockwise, or 180°.
+5. Tap "Rotate" and wait a few seconds while the tool processes the file.
+6. Tap "Download" to save the updated PDF to your phone.
+
+Open the downloaded file in any viewer and it will be the right way up. Rotation doesn't change the file size at all, because the tool updates an orientation flag rather than re-rendering any page content. So you won't push the file over an email attachment limit by correcting its orientation.
+
+No sign-up required, and the tool is free.
+
+## How to rotate just one page of a PDF on Android
+
+The [Rotate PDF tool](/rotate-pdf) rotates all pages at the same angle. That covers the most common case: a PDF that's entirely sideways because it was scanned upside down or downloaded from a rotated source.
+
+If only one page needs fixing, you'll need a few extra steps, but it's still free:
+
+1. Use [Split PDF](/split-pdf) to extract the page that needs rotating. Enter just that page number as the range.
+2. Use the [Rotate PDF tool](/rotate-pdf) to correct its orientation.
+3. Use [Merge PDF](/merge-pdf) to put all the pages back together in the right order.
+
+It takes a few more taps, but gives you exact control over which pages change.
+
+## Using an Android app instead
+
+If you'd rather use an installed app than a browser tool, there are a couple of free options.
+
+**Xodo PDF Reader** is a free Android app that supports permanent page rotation. You can rotate individual pages or the whole document, and the change is saved to the file when you export it. No account is required for basic tasks.
+
+**Adobe Acrobat Reader** is free to install on Android. The Organize Pages view, which is where permanent rotation lives, requires an Acrobat subscription as of 2026. The free tier handles viewing and annotation but restricts page-level editing.
+
+For a one-time fix with no installation, the browser-based tool is usually quicker.
+
+## What to do if the PDF still looks wrong after rotating
+
+A few things can cause a PDF to stay sideways even after you've run it through a rotation tool:
+
+**The viewer has auto-rotate turned on.** Some Android apps override the file's embedded orientation and follow your phone's screen rotation instead. Look in the app's settings for something labeled "auto-rotate pages" or "fit to screen" and disable it.
+
+**Only some pages needed rotating.** If your document has pages in different orientations, some portrait and some already horizontal, rotating all of them at once will flip the wrong ones. Use the split-rotate-merge approach above to handle each group separately.
+
+**The content itself is rotated, not just the page orientation.** Rotating the PDF corrects the page's orientation flag, but if the document was scanned sideways, the image on the page is still sideways regardless. For scanned documents, fix the rotation in a photo app before converting to PDF. The [Images to PDF tool](/jpg-to-pdf) lets you arrange corrected images into a single PDF once you've fixed the orientation in your camera roll.
+
+For most Android users, the browser approach handles it: open the [Rotate PDF tool](/rotate-pdf) in Chrome, upload, rotate, download, and the PDF is fixed.
