@@ -1,0 +1,85 @@
+---
+title: "Why Your PDF Looks Blurry When Printed"
+description: "Four reasons a PDF prints blurry and how to fix each one. Includes the cause most tools won't tell you: compression that rasterizes text into a JPEG."
+date: "2026-08-15"
+keywords:
+  - "why does my pdf look blurry when printed"
+  - "pdf blurry when printed"
+  - "fix blurry pdf print"
+  - "pdf print quality"
+  - "blurry text pdf"
+toolSlugs:
+  - "compress-pdf"
+  - "split-pdf"
+faq:
+  - q: "Why does my PDF look blurry when printed but sharp on screen?"
+    a: "Screens display at 72 to 96 pixels per inch, so a rasterized or low-resolution PDF can look fine on screen but fall apart at 300 or 600 DPI on paper. Compression, low-res source images, and low-DPI scans are the three most common causes."
+  - q: "Does compressing a PDF make it print blurry?"
+    a: "It depends on what's in the PDF. Browser-based compressors that rasterize pages to JPEG will make text PDFs blurry when printed (the vector text gets turned into a photograph of text). For image-heavy PDFs the output can still look acceptable. The safest move is to avoid compressing text documents at all."
+  - q: "What DPI should a PDF be for clear printing?"
+    a: "300 DPI is the standard minimum for print. 600 DPI is better for text-heavy documents and sharp line art. Most office printers expect 300 DPI image data. Anything lower and the printer has to interpolate, which looks blurry."
+  - q: "How do I fix a blurry-when-printed PDF?"
+    a: "Start from the uncompressed original and re-export or re-scan at 300 DPI or higher. If the file is a text document that was compressed with a rasterizing tool, you can't recover the original vector quality from the compressed copy. Go back to the source."
+  - q: "Can I fix a blurry PDF without the original?"
+    a: "Not fully. Once a PDF is rasterized, the vector outlines are gone. You can apply sharpening filters in some tools, but they enhance the appearance rather than restore lost resolution. The only real fix is to regenerate from the original source file."
+---
+
+When a PDF looks blurry or pixelated on paper but looks fine on your screen, there are four likely causes. Most come down to the difference between resolution on a monitor (72 to 96 pixels per inch) and resolution a printer needs to produce crisp results (300 DPI or higher for [print-ready PDF output](https://en.wikipedia.org/wiki/PDF)). Knowing which cause applies to your file tells you exactly how to fix it.
+
+## The PDF was compressed with a rasterizing tool
+
+This is the cause nobody mentions, and it's worth understanding because it catches people off guard.
+
+Many browser-based PDF compressors work by rasterizing every page to a JPEG image and then saving that image back into a new PDF. That process works well for PDFs full of photographs, where turning pixels into compressed pixels doesn't change much. But it goes badly wrong for text documents.
+
+When a text PDF gets rasterized, every letter that was stored as a crisp, scalable vector outline gets converted into a photograph of a letter. On screen, both look identical at normal zoom. On paper at 300 or 600 DPI, a photograph of a letter is blurry and a vector letter is sharp.
+
+We measured exactly this with our own [Compress PDF tool](/compress-pdf). A 20-page text report that was 23.5 KB came out at 1.4 MB after running medium compression, about 60 times larger, because JPEG pages are far bigger than vector text. The file got bigger *and* the print quality got worse. That's the rasterization trade-off: it reliably helps image-heavy PDFs and reliably hurts text PDFs.
+
+If your PDF was compressed and now prints blurry, that's almost certainly what happened. The fix is to go back to the original uncompressed file. There's no way to recover vector sharpness from an already-rasterized copy.
+
+**When is compression OK?** For a PDF that's mostly photos or scan images, compression can cut the size by more than half with no visible quality hit at normal print sizes. A six-page photo deck in our tests went from 913.4 KB down to 315.3 KB at medium quality. The pages were already JPEG images, so rasterizing them again didn't meaningfully change what they were.
+
+The rule: compress image-heavy PDFs, not text documents. If your PDF has any significant text content (invoices, contracts, reports, presentations with readable text), skip the compressor.
+
+## The source images in the PDF were low-resolution
+
+PDFs can embed any image at any resolution. If the image going in was 72 DPI (a screenshot, an image saved from a web page, or a small photo), it will stay 72 DPI inside the PDF. The [PDF format itself](https://www.iso.org/standard/75839.html) doesn't add resolution. It just stores what you put in.
+
+Printers default to 300 or 600 DPI. When a 72 DPI image lands at a 600 DPI printer, the printer has to invent the missing pixels. It does this by averaging neighboring pixels together, which produces the characteristic soft, smeared look of a low-res print.
+
+The fix here is to replace low-resolution images with higher-resolution versions before creating the PDF. If you no longer have the original image, the best option is to find a higher-resolution version rather than trying to upscale the existing one. Upscaling makes the file bigger without adding real detail.
+
+## The original scan was at low DPI
+
+If your PDF came from a scanner or a phone camera, the capture resolution sets the ceiling for print quality. Scanning at 150 DPI gives you a PDF that will look soft on any printer expecting 300 DPI. Scanning at 75 DPI gives you something that's visibly blocky on paper.
+
+The [standard for archival scanning](https://www.archives.gov/preservation/technical/guidelines.html) from the U.S. National Archives recommends 300 DPI for text documents and 400 DPI or higher for photographs. Most modern office scanners and phone scanning apps default to 200 to 300 DPI, which is fine. Older flatbed scanners sometimes default to 75 DPI if nobody changed the settings.
+
+Check your scanner's DPI setting before you scan. If you've already scanned and the result looks bad, re-scanning from the original document is the only way to recover quality.
+
+## The "Print as Image" setting is on
+
+Adobe Acrobat Reader has an option called "Print as Image" in the advanced print settings. When this is on, Acrobat rasterizes each page before sending it to the printer, the same way a compressor does. At low rasterization DPI, the output looks blurry.
+
+This setting exists as a compatibility workaround for printers that struggle with complex PDF content. Most of the time it makes output worse, not better.
+
+To turn it off: open the print dialog in Acrobat or Acrobat Reader, click "Advanced," and make sure "Print as Image" is unchecked. If the printer still has problems, try a different PDF viewer (Chrome's built-in viewer, Preview on Mac, or Edge on Windows) before assuming the file is at fault.
+
+## How to fix a blurry-when-printed PDF
+
+The fix depends on what caused the problem. Here's a decision tree:
+
+1. **Did you compress the PDF recently?** Go back to the original and use the compressed version only for digital sharing, not printing. If the uncompressed file is too large to email, try our [Split PDF tool](/split-pdf) to break it into smaller sections, or zip the original for the attachment.
+2. **Is the PDF a scan?** Re-scan at 300 DPI or higher. If it came from a phone app, check the app's quality setting.
+3. **Are there specific images in the PDF that look blurry?** Replace those images with higher-resolution originals in the source document (Word, InDesign, Keynote), then re-export the PDF.
+4. **Is the PDF fine in one PDF viewer but blurry in another?** The viewer is rasterizing it. Switch viewers. If you're printing from Acrobat, turn off "Print as Image."
+5. **Is the original file unavailable?** This is the hard case. You can try a sharpening pass in an image editor on a rasterized copy, but you're improving the appearance rather than restoring resolution. Get access to the source and regenerate if at all possible.
+
+One thing that won't help: compressing the blurry PDF a second time. Our measurements show that running compression again on an already-compressed image PDF takes it from 315.3 KB back up to 598.9 KB (nearly double) with no quality gain. If the first compression pass made it blurry, a second pass makes it blurry *and* larger. Always start from the original.
+
+## A quick rule for print-ready PDFs
+
+If you know a PDF will be printed, build it for print from the start. Keep source images at 300 DPI or higher. Export to PDF with a "high quality print" preset if your software offers one. And skip the compressor. Use the uncompressed file for printing, and share a [compressed version](/compress-pdf) only when the recipient needs a smaller file for digital use (and only if the PDF is image-heavy, not a text document).
+
+That separation between a print copy and a sharing copy solves most blurry-print problems before they start.
