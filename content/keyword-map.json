@@ -1321,7 +1321,8 @@
       "targetQuery": "how to convert heic to pdf free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-heic-to-pdf-free"
     },
     {
       "id": "blog-pdf-too-large-sharepoint",
