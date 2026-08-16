@@ -1348,7 +1348,8 @@
       "targetQuery": "how to convert tiff to pdf free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-tiff-to-pdf-free"
     },
     {
       "id": "blog-compress-under-5mb",
