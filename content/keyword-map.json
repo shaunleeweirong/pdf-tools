@@ -1386,6 +1386,71 @@
       "intent": "informational",
       "priority": 3,
       "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-splitter",
+      "surface": "blog",
+      "targetQuery": "best free pdf splitter online no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "best-free-pdf-splitter-online-no-sign-up"
+    },
+    {
+      "id": "blog-compress-to-2mb",
+      "surface": "blog",
+      "targetQuery": "compress pdf to 2mb free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-windows-10",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf on windows 10 free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-split-google-drive",
+      "surface": "blog",
+      "targetQuery": "how to split pdf in google drive free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-split-every-2-pages",
+      "surface": "blog",
+      "targetQuery": "how to split pdf every 2 pages free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-epub",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to epub free online",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-print-booklet",
+      "surface": "blog",
+      "targetQuery": "how to print pdf as booklet free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-linux",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf on linux free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
     }
   ]
 }
