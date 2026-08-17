@@ -1,0 +1,83 @@
+---
+title: "How to Merge PDF on Windows 10 for Free"
+description: "Windows 10 has no built-in PDF merger. Here are the fastest free ways to combine PDF files on Windows 10 without Adobe."
+date: "2026-08-17"
+keywords: ["how to merge pdf on windows 10 free", "combine pdf windows 10", "merge pdf windows 10 without software", "free pdf merger windows 10"]
+toolSlugs: ["merge-pdf", "flatten-pdf"]
+faq:
+  - q: "Does Windows 10 have a built-in PDF merger?"
+    a: "No. Windows 10 can open PDFs through Microsoft Edge but has no built-in tool to combine multiple PDF files into one."
+  - q: "Can I merge PDFs on Windows 10 without installing software?"
+    a: "Yes. A browser-based tool like the Merge PDF tool works with no install and no sign-up required."
+  - q: "Will merging PDFs increase the file size?"
+    a: "No. Merging doesn't inflate file size. Three test files totaling 971.9 KB merged to 970.5 KB, essentially the same size."
+  - q: "What happens to form fields when I merge PDFs?"
+    a: "Merging strips interactive form fields. Flatten any filled forms first before merging to preserve the entered values as static content."
+  - q: "What's the difference between merging and combining PDFs?"
+    a: "Nothing practical. Both terms mean joining multiple PDF files into one document."
+  - q: "Does this work on Windows 11 too?"
+    a: "Yes. Windows 11 also lacks a built-in PDF merger, and the same browser and desktop methods work on both Windows versions."
+---
+
+Merging PDF files on Windows 10 is free and takes under a minute, but it's not obvious where to start. Unlike macOS, where the Preview app handles PDF merging out of the box, Windows 10 has no built-in tool for it. Here's what works.
+
+## Does Windows 10 have a built-in PDF merger?
+
+No. Microsoft Edge, the default PDF viewer in Windows 10, can open PDFs, add annotations, and print them, but it can't combine multiple PDFs into one file. The "Print to PDF" option in Windows also won't do this job. It converts whatever you're currently printing into a PDF, but it can't join existing PDF files together.
+
+On Mac, the Preview app fills this role and has for years. On Windows 10, you need either a browser-based tool or a free downloadable app.
+
+## Method 1: Merge PDFs in your browser (no install needed)
+
+The simplest option is to use an online tool directly in your browser. No download, no account, just open a tab and go.
+
+The [Merge PDF tool](/merge-pdf) runs in Chrome, Edge, Firefox, or any modern browser on Windows 10:
+
+1. Open the [Merge PDF](/merge-pdf) page.
+2. Click **Choose files** and select the PDFs you want to combine. You can select multiple files at once.
+3. Drag the files into the order you want. Pages from the first file in the list appear first in the combined document.
+4. Click **Merge**.
+5. Download the merged PDF.
+
+The process takes a few seconds for typical documents. You don't need to create an account or enter an email address.
+
+**If any of your PDFs contain fillable form fields, read this first.** Merging strips interactive form fields from the output. A filled-in tax form, rental application, or job document will lose its field structure in the merged file. The fix is to flatten each filled form before merging. Use the [Flatten PDF tool](/flatten-pdf) on the filled document first, which bakes the entered values into the page as static text. Then merge the flattened version. Skip this step and the data you typed may not appear in the final file.
+
+## Method 2: PDFsam Basic, a free Windows app
+
+If you merge PDFs regularly, or prefer all processing to happen on your machine, [PDFsam Basic](https://pdfsam.org/pdfsam-basic/) is the best free option. It's open-source, has no feature limits in the free tier, and has been in active development for well over a decade.
+
+To use it:
+
+1. Download PDFsam Basic from pdfsam.org (the Basic tier is completely free).
+2. Install and launch the app.
+3. Click **Merge** in the main panel.
+4. Click **Add** or drag in the PDFs you want to combine.
+5. Reorder them by dragging rows.
+6. Set an output file location and click **Run**.
+
+PDFsam runs entirely on your PC. Your files don't leave your computer during processing, which is useful if you're handling contracts or other sensitive documents.
+
+The tradeoff is setup time. If you only merge PDFs once or twice a month, installing a desktop app might not be worth the few minutes it takes. In that case, the browser-based method is the simpler choice.
+
+## Will merging PDFs increase the file size?
+
+No, and this is a common worry when combining files before sending by email.
+
+In testing, three PDF files with a combined unmerged size of 971.9 KB produced a merged output of 970.5 KB, a hair smaller than the sum of the parts. The tiny reduction comes from shared [PDF](https://en.wikipedia.org/wiki/PDF) structure being written once in the output rather than repeated from each source file.
+
+Merging won't push your document over an email attachment limit. Both Gmail and Outlook cap attachments at 25 MB, and because email encoding adds roughly one third to the file's size, the practical safe ceiling for an attachment is around 18 MB. As long as your PDFs add up to less than that before merging, you're fine.
+
+If the merged file is still too large for email, the most reliable fix is to share it via a cloud link (Google Drive, Dropbox, or OneDrive) rather than attaching it. You can also try the [Compress PDF tool](/compress-pdf), but only if the PDF contains photos or scanned pages. Compressing a text-only document (invoices, contracts, typed reports) actually makes it larger, because the compression rasterizes every page to JPEG. Vector text is tiny; a photograph of that text is not.
+
+## What happens to form fields when you merge PDFs?
+
+Merging copies the visible page content from each file but drops the document's interactive form structure. Any fields, text boxes, checkboxes, radio buttons, and drop-downs are removed from the merged output.
+
+This matters most when combining a completed form with another document, a common step when submitting job applications or signed contracts. Merge a filled-out form directly and the field values will not survive in the result.
+
+The fix: run the [Flatten PDF tool](/flatten-pdf) on any filled form before merging. Flattening converts the form fields into regular page graphics, so the typed values show up as normal text in the merged file rather than editable inputs. If you're merging blank form templates that haven't been filled in yet, you don't need to flatten anything.
+
+## Can you use the same methods on Windows 11?
+
+Yes. Windows 11 also has no built-in PDF merger, and Microsoft Edge in Windows 11 has the same limitation. The browser-based tool and PDFsam Basic both work identically on Windows 10 and Windows 11, so you don't need a different approach if you upgrade.
