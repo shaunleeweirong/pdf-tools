@@ -1447,7 +1447,8 @@
       "targetQuery": "how to print pdf as booklet free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-print-pdf-as-booklet-free"
     },
     {
       "id": "blog-merge-linux",
