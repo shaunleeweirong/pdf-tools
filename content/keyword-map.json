@@ -1226,7 +1226,8 @@
       "targetQuery": "how to reduce pdf size in google docs free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-reduce-pdf-size-in-google-docs-free"
     },
     {
       "id": "blog-merge-google-drive",
