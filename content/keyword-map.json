@@ -1074,7 +1074,8 @@
       "targetQuery": "convert pdf to pdf/a free online",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "convert-pdf-to-pdfa-free-online"
     },
     {
       "id": "blog-merge-pdf-word",
@@ -1458,6 +1459,70 @@
       "priority": 3,
       "status": "pending",
       "slug": "how-to-merge-pdf-on-linux-free"
+    },
+    {
+      "id": "blog-merge-ipad",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf on ipad free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-copy-text-pdf",
+      "surface": "blog",
+      "targetQuery": "how to copy text from a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-court",
+      "surface": "blog",
+      "targetQuery": "compress pdf for court filing free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-court",
+      "surface": "blog",
+      "targetQuery": "pdf too large for court submission",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-split-by-bookmarks",
+      "surface": "blog",
+      "targetQuery": "how to split pdf by bookmarks free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-preview-mac",
+      "surface": "blog",
+      "targetQuery": "how to make pdf smaller in preview on mac free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-batch-images-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to batch convert images to pdf free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-reader-windows",
+      "surface": "blog",
+      "targetQuery": "best free pdf reader for windows no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }

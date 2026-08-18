@@ -1,0 +1,117 @@
+---
+title: "Convert PDF to PDF/A Free Online"
+description: "PDF/A is the ISO archival standard for long-term document preservation. Learn what it means, which version to pick, and how to convert for free."
+date: "2026-08-18"
+keywords: ["convert pdf to pdf/a free online", "pdf/a converter free", "archive pdf free", "pdf/a-1b pdf/a-2b", "pdf long-term preservation", "pdf archiving standard"]
+toolSlugs: ["merge-pdf", "compress-pdf", "flatten-pdf"]
+faq:
+  - q: "Does converting to PDF/A make the file smaller?"
+    a: "Not automatically. PDF/A requires all fonts to be embedded, which can add a few kilobytes. If you need a smaller file, compress the original first, then convert. But don't compress text-heavy PDFs before archiving: our compressor rasterizes pages, which makes text documents much larger, not smaller."
+  - q: "Can I open a PDF/A file in a regular PDF reader?"
+    a: "Yes. PDF/A is still a valid PDF and opens in Adobe Reader, Apple Preview, Chrome, and any standard viewer. Some readers show a blue information bar noting that the file meets PDF/A standards, but the document itself looks and behaves the same."
+  - q: "Do government agencies and courts require PDF/A?"
+    a: "Some do, some don't. Requirements vary by jurisdiction and agency. Always check the specific filing instructions for the body you're submitting to. When in doubt, PDF/A-1b is the safest choice because it's the oldest and most widely accepted version."
+  - q: "What happens to form fields when I convert to PDF/A?"
+    a: "PDF/A-1 does not allow interactive form fields, so they get flattened into static content during conversion. PDF/A-2 and PDF/A-3 permit forms, but many converters still flatten them. Flatten any filled form yourself before converting to make sure the values are permanently saved in the page."
+  - q: "Can I convert a password-protected PDF to PDF/A?"
+    a: "No. PDF/A-1 prohibits encryption entirely. You need to remove the password first, then convert. Our password-removal tool at /unlock-pdf strips a known open or owner password before you send the file to a PDF/A converter."
+---
+
+Converting a PDF to PDF/A gives you a file that will look exactly the same whether you open it today or in thirty years. PDF/A is the [ISO 19005 archival standard](https://en.wikipedia.org/wiki/PDF/A) for long-term document preservation, and a growing number of government agencies, courts, and institutions require it for official submissions.
+
+This guide explains what PDF/A actually is, which version to pick, and how to convert for free online.
+
+## What is PDF/A and when do you actually need it?
+
+PDF/A is a restricted form of PDF designed for archiving. The "A" stands for Archive. A file that conforms to PDF/A is self-contained: it embeds everything it needs to render correctly and strips out anything that might become inaccessible in the future.
+
+You probably need PDF/A if:
+
+- A government agency, court, or regulatory body specifies it in filing instructions
+- You're depositing documents with a library, archive, or records office
+- You want to store contracts, legal papers, or compliance records for decades without worrying about software changes
+
+For routine sharing or emailing, standard PDF is fine. PDF/A is specifically for preservation, not everyday use.
+
+## How PDF/A differs from a regular PDF
+
+A standard PDF can reference fonts from the operating system, contain JavaScript, link to external resources, and carry DRM encryption. That flexibility is useful for interactive documents, but it creates problems for archiving: if a system font isn't available ten years from now, text in the document may render differently or fail to display at all.
+
+PDF/A avoids those problems by requiring the file to carry everything it needs inside itself and prohibiting anything that could cause it to break:
+
+- All fonts must be embedded in the file
+- Colors must use device-independent color spaces
+- No JavaScript, no executable content, no audio or video
+- No references to external resources
+- PDF/A-1 prohibits encryption entirely; PDF/A-2 and PDF/A-3 permit some
+
+The result is a file that any PDF reader can render identically, now or decades from now, without depending on the creating software.
+
+## Which version should you use: PDF/A-1, PDF/A-2, or PDF/A-3?
+
+The version you choose depends on what the document contains and what the recipient requires.
+
+**PDF/A-1** is the original version from 2005, based on PDF 1.4. It's the strictest and the most universally accepted. Older government systems and legacy archives often require it. If a filing requirement just says "PDF/A" without a version number, PDF/A-1b is a safe bet.
+
+**PDF/A-2** (2011) adds support for JPEG 2000 compression, transparency, and attachments in other PDF/A formats. Files that use transparency effects or high-quality images tend to be smaller under PDF/A-2 than PDF/A-1. For new documents with no specific version requirement, **PDF/A-2b is the most practical choice** today.
+
+**PDF/A-3** is nearly identical to PDF/A-2, except it allows any file type as an embedded attachment, not just other PDF/A files. This is useful if you need to archive a document alongside its source spreadsheet or XML data. For plain documents, PDF/A-3 offers nothing over PDF/A-2.
+
+Within each version, the conformance levels are:
+
+- **Level b (basic):** requires reliable visual reproduction only. This is what most filers and converters target.
+- **Level a (accessible):** also requires tagged structure for reading order and semantic content. Most free converters don't produce a fully tagged document, so level a is rarely achieved without manual work.
+- **Level u (unicode):** requires character-to-Unicode mapping so text is copyable and searchable, but doesn't mandate reading order structure.
+
+For most people, **PDF/A-2b** covers everything needed. If the recipient specifies a different level, follow their instructions.
+
+## How to convert a PDF to PDF/A for free online
+
+pdf-tools doesn't currently have a PDF/A converter. Here are three free options that work without creating an account:
+
+**PDF24** (tools.pdf24.org/en/pdf-to-pdfa) processes files in the browser and lets you pick the conformance level. It doesn't store your files on its servers, which matters if the document is sensitive.
+
+**PDFCreator Online** (pdfforge.org/online/en/pdf-to-pdfa) lets you select PDF/A-1b, PDF/A-2b, or PDF/A-3b as the output. Upload, choose the version, download.
+
+**FreePDFConvert** (freepdfconvert.com/pdf-to-pdfa) is another account-free option that handles standard PDFs and gives you a download link when done.
+
+All three are free for single-file conversions.
+
+## What to do before you convert
+
+Getting the source PDF in good shape first avoids problems in the converted file.
+
+**If you're combining multiple documents,** [merge them into a single PDF](/merge-pdf) before converting. Merging doesn't inflate the file: a three-document input of 971.9 KB came out at 970.5 KB in our tests, so you won't be adding bytes just by combining pages.
+
+**If the PDF has filled form fields,** flatten the form first using the [Flatten PDF tool](/flatten-pdf). When a filled form gets merged or converted without flattening, the interactive fields can be stripped while the values become invisible. Flattening paints the field values permanently into the page before conversion so nothing disappears.
+
+**If the PDF is password-protected,** remove the encryption before converting. PDF/A-1 prohibits encryption, so a protected PDF will either fail to convert or have its protection stripped by the converter anyway. Our [Remove Password tool](/unlock-pdf) strips a known password cleanly before you send the file anywhere.
+
+**If you want to compress the file,** only do it for image-heavy PDFs, and do it before archiving. Our [Compress PDF tool](/compress-pdf) rasterizes every page to JPEG, which cuts file size dramatically for photo-based documents (913.4 KB became 315.3 KB at Medium quality in our tests) but makes text-only documents much larger, not smaller. A 20-page text report grew from 23.5 KB to 1.4 MB. Don't compress a text document before converting to PDF/A.
+
+## Will the converted file look different?
+
+For most documents, no. If the source PDF already embeds its fonts and uses standard color spaces, the converted file looks identical.
+
+Problems tend to surface in a few specific cases:
+
+**Missing embedded fonts.** If the source PDF references a system font without embedding it, the converter has to substitute something similar. Headings or body text may look slightly different if the substitution isn't exact.
+
+**Transparency effects in PDF/A-1.** PDF/A-1 doesn't support transparency. If your document has overlapping text with a transparency effect or a logo with a transparent background, the converter will flatten the transparency. The result usually looks the same, but complex layering effects may shift.
+
+**Hyperlinks and JavaScript.** Links remain visible in the converted file but any JavaScript-driven actions are removed. Standard URL hyperlinks pointing to web addresses continue to work.
+
+If the appearance of the archived document matters, open it side by side with the original and compare before submitting.
+
+## What PDF/A doesn't do
+
+PDF/A is about long-term readability, not security or accessibility. Converting to PDF/A does not:
+
+- Encrypt the file or prevent copying and printing
+- Make the text accessible to screen readers (that requires tagged structure, which is separate from PDF/A-b conformance)
+- Reduce the file size automatically
+- Validate whether the document's content is correct or complete
+
+If you need a smaller file, reduce the size before archiving. If you need security, [protect the PDF with a password](/protect-pdf) after archiving, noting that the protected version will no longer be valid PDF/A-1 since encryption is not allowed.
+
+Archiving and all the preparation steps before it are separate tasks. For everything before the PDF/A conversion, the tools at pdf-tools.com cover the full workflow: [Merge PDF](/merge-pdf), [Flatten PDF](/flatten-pdf), [Compress PDF](/compress-pdf), and [Remove Password](/unlock-pdf).
