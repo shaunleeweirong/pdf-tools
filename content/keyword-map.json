@@ -1518,7 +1518,8 @@
       "targetQuery": "how to batch convert images to pdf free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-batch-convert-images-to-pdf-free"
     },
     {
       "id": "blog-best-pdf-reader-windows",
