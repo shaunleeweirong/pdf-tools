@@ -1508,7 +1508,8 @@
       "targetQuery": "how to make pdf smaller in preview on mac free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-make-pdf-smaller-in-preview-on-mac-free"
     },
     {
       "id": "blog-batch-images-to-pdf",
