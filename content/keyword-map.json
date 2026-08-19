@@ -1530,6 +1530,71 @@
       "priority": 2,
       "status": "pending",
       "slug": "best-free-pdf-reader-for-windows-no-sign-up"
+    },
+    {
+      "id": "blog-reverse-page-order",
+      "surface": "blog",
+      "targetQuery": "how to reverse page order in pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-reverse-pdf-page-order-free"
+    },
+    {
+      "id": "blog-compress-multiple-pdfs",
+      "surface": "blog",
+      "targetQuery": "how to compress multiple pdfs at once free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-reader-mac",
+      "surface": "blog",
+      "targetQuery": "best free pdf reader for mac no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-remove-header-footer",
+      "surface": "blog",
+      "targetQuery": "how to remove header and footer from pdf free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-webp-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert webp to pdf free online",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-split-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "how to split a pdf on iphone free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-visa-application",
+      "surface": "blog",
+      "targetQuery": "compress pdf for visa application free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-print-selected-pages",
+      "surface": "blog",
+      "targetQuery": "how to print specific pages from a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
