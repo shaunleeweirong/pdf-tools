@@ -1,0 +1,109 @@
+---
+title: "How to Compress Multiple PDFs at Once Free"
+description: "Four practical ways to shrink a batch of PDFs for free, with honest advice on which PDFs actually get smaller and which get bigger after compression."
+date: "2026-08-19"
+keywords: ["compress multiple pdfs at once", "batch compress pdf free", "bulk pdf compressor", "compress multiple pdf files"]
+toolSlugs: ["compress-pdf"]
+faq:
+  - q: "Can I compress multiple PDFs without uploading them to a server?"
+    a: "Yes. Browser-based tools that run on WebAssembly process files entirely on your device. Our Compress PDF tool never uploads your files. Compression happens in the browser."
+  - q: "Why did my PDF get bigger after compression?"
+    a: "PDF compression rasterizes each page to JPEG. This shrinks image-heavy PDFs but makes text-only documents much larger. Only compress PDFs that contain scanned pages or embedded photos."
+  - q: "Does compressing a PDF twice make it smaller?"
+    a: "No. A second compression pass at the same quality level makes the file larger. If the first result is still too big, start from the original file and try a higher compression level."
+  - q: "How many PDFs can I compress at once with a free tool?"
+    a: "Browser-based tools typically handle one file at a time. Free batch online tools allow 10 to 30 files per session. Command-line tools like Ghostscript have no file count limit."
+  - q: "Is it safe to use online tools for confidential PDFs?"
+    a: "For sensitive documents, use a tool that processes files locally in your browser. Our Compress PDF tool never uploads your files. Everything runs on your device."
+---
+
+To compress multiple PDFs at once for free, you have four practical options: process files one at a time in a browser-based tool, upload a batch to a free bulk service, run a command-line tool across an entire folder, or zip the files as a container. This guide covers each approach, and explains why some PDFs get bigger instead of smaller when you try to compress them.
+
+## Know before you compress: which PDFs actually shrink
+
+This is the part most batch-compression guides skip. PDF compression works by rasterizing each page to a JPEG image. That process helps enormously for scanned documents and image-heavy PDFs, and hurts just as much for text-only ones.
+
+In our own testing:
+
+- A 6-page image deck (913.4 KB) compressed to 315.3 KB at Medium quality (a 65.5% reduction).
+- A 20-page text-only report (23.5 KB) grew to 1.4 MB after compression at Medium quality.
+
+If you batch-compress a folder of invoices, contracts, or Word-exported PDFs, you'll likely end up with larger files than you started with. Sort your batch first: compress the scanned documents and photo-heavy presentations; leave text PDFs alone.
+
+One more thing to know: running a second compression pass makes files bigger, not smaller. If the first result is still over your size target, start from the original and use a higher compression level. Our [Compress PDF tool](/compress-pdf) offers Low, Medium, and High quality settings. High (smallest file) took that same 913.4 KB image deck down to 175.6 KB.
+
+## Method 1: browser-based tool, one file at a time
+
+For a handful of files, the simplest and most private approach is a browser-based compressor. Our [Compress PDF tool](/compress-pdf) processes each file entirely on your device using in-browser rendering. Your files are never uploaded to a server.
+
+It handles one file per session, which is actually quick in practice. Drop a file, pick a quality level, download the result, repeat. For five to ten PDFs you can work through them in a few minutes. The privacy trade-off is worth it if the documents are sensitive.
+
+For each file:
+
+1. Open the [Compress PDF tool](/compress-pdf) in your browser.
+2. Drop the PDF onto the tool.
+3. Choose **Medium** for most scanned documents or image decks. Use **High** only if Medium did not reduce the file enough. High compression is visible as blurring on text that's embedded in images.
+4. Download the compressed file.
+5. Move to the next PDF.
+
+If you need to share all the compressed files together, create a ZIP archive when you're done. A ZIP container does not reduce the individual file sizes, but it bundles everything into one download.
+
+## Method 2: bulk online tools for batch processing
+
+When you have 20 or more PDFs to compress at once, uploading them one at a time to a browser tool adds up. Free batch services let you drop a folder of files, compress them all in one click, and download a ZIP of the results.
+
+A few that work without a sign-up:
+
+- **PDF24** (tools.pdf24.org): accepts multiple files, no file size cap, no account required.
+- **MiniWebTool PDF Compressor**: takes up to 30 files per batch, with client-side processing options.
+- **CleanPDF**: advertises no server uploads and no sign-up.
+
+These tools are convenient for non-sensitive documents. Check whether the tool you choose processes files locally or uploads them to a server. Most free batch services do upload, which matters for contracts, medical records, or anything confidential.
+
+## Method 3: Ghostscript on the command line (free, no limits)
+
+If you're comfortable with a terminal, [Ghostscript](https://www.ghostscript.com/) is the most capable free option. It's open-source, runs on macOS, Linux, and Windows, and can process an entire folder of PDFs in a single command. Many paid batch-compression tools use Ghostscript as their engine internally.
+
+On macOS or Linux, with Ghostscript installed:
+
+```bash
+for f in *.pdf; do
+  gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 \
+     -dPDFSETTINGS=/ebook \
+     -dNOPAUSE -dQUIET -dBATCH \
+     -sOutputFile="compressed_${f}" "$f"
+done
+```
+
+The `-dPDFSETTINGS` flag controls quality:
+
+| Flag | Target DPI | Good for |
+|---|---|---|
+| `/screen` | 72 dpi | Smallest files, screen reading only |
+| `/ebook` | 150 dpi | Good balance for most documents |
+| `/printer` | 300 dpi | Print-ready output |
+| `/prepress` | 300 dpi | High-quality prepress |
+
+This loop processes every `.pdf` in the current directory and writes compressed copies with a `compressed_` prefix. No file count limit, no sign-up, no uploading. On Windows, you can run equivalent commands in PowerShell after installing Ghostscript from [ghostscript.com](https://www.ghostscript.com/download/gsdnld.html).
+
+## What to do when compression does not help
+
+If you run a batch and find some files are the same size or larger, here is what is probably happening:
+
+**The PDFs are mostly text.** Compression rasterizes pages to JPEG, which is efficient for photographs and destructive for rendered text. A text-heavy PDF that is too large for email usually has oversized embedded fonts or revision history baked in. Those cannot be reduced by a JPEG-based compressor.
+
+**The files were already compressed.** This is common with scans from modern scanners, which often apply JPEG compression internally. A second pass at the same quality setting rebuilds the image from the already-degraded JPEG and re-encodes it, adding data rather than removing it.
+
+**Only part of the file is an image.** Mixed documents (text plus a logo per page) compress less well than pure image decks. In our testing, a 3-page mostly-text document with a small logo grew from 35 KB to 171 KB at Medium. For these files, the best move is usually to reduce the resolution of embedded images before generating the PDF, not to compress after the fact.
+
+For files that still exceed your size limit after compression, consider [splitting the PDF](/split-pdf) to send only the relevant pages, or [merging](/merge-pdf) several smaller documents. Merging does not inflate the output. In our testing, three files totaling 971.9 KB merged to 970.5 KB.
+
+## Hitting specific file size targets
+
+Common size limits that bring people to batch compression:
+
+- **Email** (Gmail and Outlook.com): both cap attachments at [25 MB](https://support.google.com/mail/answer/6584). Because [Base64 encoding](https://en.wikipedia.org/wiki/Base64) adds roughly 33% overhead, the practical upload ceiling is closer to 18 MB. If your compressed PDF still will not attach, splitting it into sections is usually more reliable than re-compressing.
+- **Court and government portals**: typically require files under 5 MB or 10 MB. Scanned documents are the most common cause, and compression is the right fix, as long as the PDFs contain page images, not just rendered text.
+- **Learning management systems** (Canvas, Google Classroom): limits vary from 25 MB to 100 MB, so most files fit without any compression.
+
+When a document must hit a precise target, start with High compression on the original. If that is still not enough, split the file and share the relevant section. Chaining compression passes only makes things worse.
