@@ -1610,7 +1610,8 @@
       "targetQuery": "how to convert apple pages to pdf free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-apple-pages-to-pdf-free"
     },
     {
       "id": "blog-invert-pdf-colors",
