@@ -1280,7 +1280,8 @@
       "targetQuery": "how to duplicate a page in a pdf free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-duplicate-a-page-in-a-pdf-free"
     },
     {
       "id": "blog-save-email-as-pdf",
