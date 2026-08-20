@@ -1272,7 +1272,8 @@
       "targetQuery": "how to insert a blank page into a pdf free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-insert-a-blank-page-into-a-pdf-free"
     },
     {
       "id": "blog-duplicate-page-pdf",
@@ -1602,6 +1603,70 @@
       "priority": 2,
       "status": "pending",
       "slug": "how-to-print-specific-pages-from-a-pdf-free"
+    },
+    {
+      "id": "blog-pages-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert apple pages to pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-invert-pdf-colors",
+      "surface": "blog",
+      "targetQuery": "how to invert pdf colors for dark mode free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-strip-pdf-metadata",
+      "surface": "blog",
+      "targetQuery": "how to strip metadata from pdf for privacy free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-uscis",
+      "surface": "blog",
+      "targetQuery": "compress pdf for uscis application free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-overlay-two-pdfs",
+      "surface": "blog",
+      "targetQuery": "how to overlay two pdf files free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-fit-on-one-page",
+      "surface": "blog",
+      "targetQuery": "how to make a pdf fit on one page free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-jpg-windows-11",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to jpg on windows 11 free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-scholarship",
+      "surface": "blog",
+      "targetQuery": "compress pdf for scholarship application free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
