@@ -1572,7 +1572,8 @@
       "targetQuery": "how to convert webp to pdf free online",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-webp-to-pdf-free-online"
     },
     {
       "id": "blog-split-pdf-iphone",
