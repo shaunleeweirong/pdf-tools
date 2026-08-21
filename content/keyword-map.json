@@ -1635,7 +1635,8 @@
       "targetQuery": "compress pdf for uscis application free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-uscis-application-free"
     },
     {
       "id": "blog-overlay-two-pdfs",

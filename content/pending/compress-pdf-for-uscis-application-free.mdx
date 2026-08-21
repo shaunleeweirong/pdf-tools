@@ -1,0 +1,89 @@
+---
+title: "Compress PDF for USCIS Application (Free, No Upload)"
+description: "Scanned USCIS supporting documents too large to upload? Compress them free in your browser. Includes what to skip compression on."
+date: "2026-08-21"
+keywords:
+  - "compress pdf for uscis"
+  - "uscis pdf file size limit"
+  - "reduce pdf size uscis"
+  - "compress uscis supporting documents"
+  - "pdf too large uscis upload"
+toolSlugs:
+  - "compress-pdf"
+  - "split-pdf"
+  - "merge-pdf"
+faq:
+  - q: "What is the USCIS file size limit for uploads?"
+    a: "USCIS's online portal typically caps each document at around 6 MB, though the exact limit varies by form. Check the filing instructions for your specific form on uscis.gov to confirm."
+  - q: "Can I compress a USCIS form PDF like an I-485 or I-130?"
+    a: "You can, but it will make the file significantly larger. In-browser compression rasterizes every page to a JPEG, which works against text documents. A 23.5 KB text document grew to 1.4 MB in our testing. Only compress scanned physical documents, not digitally generated forms."
+  - q: "Is it safe to compress immigration documents online?"
+    a: "With an in-browser tool, yes. Your files are processed entirely on your own device and never uploaded to any server. You can confirm by watching your browser's network tab while the tool runs."
+  - q: "Which USCIS documents should I compress?"
+    a: "Compress scanned physical documents: passport copies, birth and marriage certificates, bank statements you printed and scanned, and tax returns scanned from paper. Skip compression on anything generated digitally, such as downloaded bank statements or e-filed tax forms."
+  - q: "What if my document is still too large after compressing?"
+    a: "Try starting over from the original file at the High compression level rather than Medium. If it is still too large, use the Split PDF tool to separate it into smaller parts. Most USCIS evidence categories allow multiple uploads."
+---
+
+Compressing a PDF for a USCIS application takes about 30 seconds when the file is a scan. Open the [Compress PDF tool](/compress-pdf), drop the file in, pick a level, and download. Your immigration documents are processed entirely in your browser and never touch a server. There is one thing to check first, though: compression only helps if the PDF is made of scanned images. On digitally generated documents, it does the opposite.
+
+## What is the USCIS upload size limit?
+
+[USCIS's online filing portal](https://my.uscis.gov) typically caps each uploaded document at around 6 MB, though the exact limit can vary by form. When a file is rejected, the error message usually names the limit for that form. To be sure, check the filing instructions for your specific form at [uscis.gov/forms](https://www.uscis.gov/forms).
+
+USCIS accepts PDF, JPG, and PNG. PDF is the format most used for multi-page supporting documents because it keeps everything in a single file and prints cleanly at any size.
+
+## Which documents compress well, and which don't
+
+This distinction saves a lot of wasted effort.
+
+**Compress these:**
+
+- Passports and national ID cards scanned on a flatbed or phone scanner
+- Birth certificates, marriage certificates, and divorce decrees printed and scanned
+- Bank statements, tax returns, or pay stubs printed on paper and scanned to PDF
+- Photographs of physical documents taken with a phone and converted to PDF
+
+These are scanned documents. Every page is already a photograph. Compressing them re-encodes those photographs at a smaller file size, which is exactly what the tool does well. In our own testing, a 6-page image-heavy PDF shrank from 913.4 KB to 315.3 KB at Medium compression, and to 175.6 KB at High.
+
+**Do not compress these:**
+
+- USCIS forms (I-485, I-130, I-765, and similar) filled out and saved digitally
+- Bank statements downloaded directly from your bank's website as a PDF
+- Tax documents received by email (W-2, 1099, or accountant-prepared PDFs)
+- Any document where you can click a word and the text highlights
+
+These are digital PDFs: the pages contain text and vector graphics, not photographs. In-browser compression rasterizes every page to a JPEG before reassembling the file, and a page of text stored as a photograph is far larger than the same page stored as font data. In our testing, a 20-page text document went from 23.5 KB to 1.4 MB after compression. That is roughly 60 times larger, and it would blow past the upload limit you were trying to clear.
+
+Not sure which type you have? Open the file and try to click a word. If the text highlights, it is digital. If clicking anywhere selects the whole page as one block, it is a scan.
+
+## How to compress a scanned PDF for USCIS
+
+1. Open the [Compress PDF tool](/compress-pdf).
+2. Drop your PDF onto the upload area, or click to browse.
+3. Choose a compression level. **Medium** is a good default. If the output is still over the size limit, start over from the original and choose **High**.
+4. Click **Compress PDF** and wait a few seconds while your browser processes the file.
+5. Download the compressed file and check its size before uploading to USCIS.
+
+Everything runs in your browser. Passport scans, birth certificates, and financial records never leave your device. Nothing is sent to a server, stored, or logged anywhere. For documents as sensitive as immigration paperwork, that matters.
+
+## What to check before you submit
+
+After compressing, open the file and zoom in to about 150%. Look closely at:
+
+- **Signatures.** They must be legible, not blurred.
+- **Dates.** Every digit should read clearly.
+- **ID and document numbers.** Passport numbers, case numbers, and USCIS receipt numbers must be unambiguous.
+- **Photographs.** If you compressed a passport scan, the photo should show a recognizable face.
+
+If anything looks blurry, go back to the original and compress at **Low** quality instead. Low compression still reduces the file size on a scan, just less aggressively. A slightly oversized but readable document is easier to deal with than a blurry one that raises questions.
+
+## What if the file is still too large?
+
+**Try High compression.** On a scanned document, the difference between Medium and High can be significant. A file that comes out at 7 MB at Medium might come out under 4 MB at High. Always start from the original file, not from an already-compressed version. Running a second pass on a compressed file typically makes it larger, not smaller.
+
+**Split the document.** If the PDF holds several separate scanned documents merged together, use the [Split PDF tool](/split-pdf) to break them into individual files. Most USCIS evidence categories allow multiple uploads for the same document type. Submitting three 2 MB files works just as well as one 6 MB file, and often better.
+
+**Merge before compressing, if you have many small scans.** If you have five separate 1-page scans, combine them into a single file with the [Merge PDF tool](/merge-pdf) and then compress. Merging does not inflate the output: in our testing, three files totaling 971.9 KB merged to 970.5 KB, essentially unchanged. Compressing the merged file in one pass is more efficient than compressing each scan separately.
+
+**Scan at a lower resolution.** If you control the scanner, try 150 DPI grayscale instead of 300 DPI color. USCIS requires that documents be legible, not that they be scanned at a specific resolution. A 150 DPI grayscale scan of a birth certificate is almost always clear enough to read, and it will be a fraction of the size of a 300 DPI color version.
