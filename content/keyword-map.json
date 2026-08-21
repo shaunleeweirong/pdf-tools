@@ -1389,7 +1389,8 @@
       "targetQuery": "how to merge pdf files without internet",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-merge-pdf-files-without-internet"
     },
     {
       "id": "blog-best-pdf-splitter",

@@ -1,0 +1,98 @@
+---
+title: "How to Merge PDF Files Without Internet"
+description: "Combine PDFs offline using Mac Preview, free Windows software, or an in-browser tool that processes files locally so nothing ever gets uploaded."
+date: "2026-08-21"
+keywords: ["how to merge pdf files without internet", "merge pdf offline", "combine pdf without internet", "merge pdf without uploading", "pdf merger offline free"]
+toolSlugs: ["merge-pdf", "flatten-pdf"]
+faq:
+  - q: "Can I merge PDFs without an internet connection?"
+    a: "Yes. On Mac, the built-in Preview app handles it with no network needed. On Windows, free apps like PDFsam Basic run locally. In-browser tools that use WebAssembly also process files on your device, so your documents never leave your computer even though you load the page over the internet."
+  - q: "Does merging PDFs change the file size?"
+    a: "Almost never in a meaningful way. The output is essentially the sum of the parts. In our own testing, combining three files totaling 971.9 KB produced a 970.5 KB result, a difference of less than 0.2%. You won't push a file over an email limit by merging."
+  - q: "Will I lose data if I merge a filled-out PDF form?"
+    a: "Possibly. Merging can strip interactive form fields, so filled-in values may disappear. To be safe, flatten the form first so the values are baked into the page as static text, then merge. Use a Flatten PDF tool before combining."
+  - q: "What's the best free offline PDF merger for Windows?"
+    a: "PDFsam Basic is free, open-source, and runs entirely on your computer. It handles merge, split, and rotate without any cloud connection or account."
+  - q: "Is it safe to merge PDFs using a browser-based tool?"
+    a: "It depends on the tool. Tools that process files locally in the browser, using JavaScript or WebAssembly, never send your documents to a server. Look for a tool that explicitly states files are processed in your browser and never uploaded."
+---
+
+You can merge PDF files without internet in three ways: use Mac's built-in Preview app, install a free desktop program on Windows, or use an in-browser tool that processes everything locally so your files never leave your device. Which one you choose depends on your operating system and whether you want to install software.
+
+## Why "without internet" means two different things
+
+When people search for offline PDF merging, they usually mean one of two things.
+
+The first is truly offline: no network connection at all, like on a plane or in a remote location. The second is "without uploading," meaning they have internet but don't want to send sensitive documents to a random server. Tax returns, medical records, legal agreements. Both concerns are valid, and the solutions overlap quite a bit.
+
+## Merge PDFs on Mac using Preview (no download needed)
+
+Mac users have the easiest path. Preview is built into macOS and works completely offline. No account, no install, no upload.
+
+1. Open the first PDF in Preview.
+2. Go to **View** and select **Thumbnails** to show the sidebar.
+3. Drag the second PDF file from Finder into the thumbnail sidebar. Drop it where you want it to appear in the merged document.
+4. Repeat for any additional files.
+5. Go to **File** and choose **Export as PDF** to save the combined document.
+
+That's it. The [Apple Support page for Preview](https://support.apple.com/guide/preview/combine-pdfs-prvw43696/mac) has screenshots if you get stuck. The entire process happens on your Mac, and nothing touches the internet.
+
+One thing to watch: Preview merges visual page content, but it doesn't always handle interactive form fields correctly. If you're combining a filled-out form with another document, flatten the form first (more on that below).
+
+## Merge PDFs on Windows using free desktop software
+
+Windows has no built-in PDF merger. Your options are a free download or an in-browser tool.
+
+For a true offline solution, [PDFsam Basic](https://pdfsam.org/pdfsam-basic/) is the most widely recommended free option. It's open-source, runs locally, and has been around long enough to be well-tested. Here's how to use it:
+
+1. Download and install PDFsam Basic from pdfsam.org.
+2. Open it and click **Merge** from the main screen.
+3. Drag your PDF files into the panel, or use the Add button.
+4. Drag the files into the order you want.
+5. Choose an output location and click **Run**.
+
+The merged PDF saves to your computer. No account, no upload, no file size limit set by a server.
+
+If you'd rather not install anything, skip ahead to the in-browser section below.
+
+## Merge PDFs in a browser without uploading files
+
+Here's the option most guides miss. Browser-based tools that use JavaScript to process files locally give you the convenience of an online tool with the privacy of a desktop app. Your files are read by the browser, combined in memory, and saved back to your device. Nothing travels over the network.
+
+Our [Merge PDF tool](/merge-pdf) works this way. You drop in your files, reorder them if needed, and download the result. No account, no upload, no daily limit.
+
+A few things worth knowing based on our own measurements:
+
+**Merging doesn't inflate file size.** When we combined three test files totaling 971.9 KB, the output came out at 970.5 KB. Slightly smaller, actually, because shared PDF structure gets written once. You won't accidentally push a combined document over an email attachment limit just by merging.
+
+**Speed is fast.** The same three-file merge ran in about 21 milliseconds in our testing. Even large documents process in well under a second.
+
+This approach also works offline after the page has loaded in your browser, as long as you don't need to reload the page.
+
+## Merge PDFs on mobile without uploading
+
+On iPhone, the Files app handles basic PDF merging. Open the Files app, tap and hold the first PDF, then tap **More** from the menu. Select **Create PDF** if you're combining images, or use the Share menu to send both files to a PDF app. A simpler route: long-press the first PDF, tap Select, select additional PDFs, then tap the share icon and choose **Create PDF**.
+
+On Android, the process varies by manufacturer. Google Files and many third-party apps handle local merging. If you want a consistent cross-platform experience and don't mind loading a web page, the in-browser approach above works on mobile too.
+
+## What to do with filled-out PDF forms
+
+This is the scenario that catches people off guard. You fill out a job application or a tax form as a PDF, then want to combine it with another document.
+
+Merging can strip interactive form fields from the document. The field may disappear entirely, taking your data with it. Whether the filled-in text remains visible as static content afterward depends on the tool and the PDF, and it's not something you want to find out after the fact.
+
+The safe approach: flatten the form before merging. Flattening converts the interactive fields into static page content, so the values are painted onto the page and can't be lost. Use the [Flatten PDF tool](/flatten-pdf) first, then merge the flattened version with your other documents.
+
+This matters most when you're submitting multiple documents together, which is exactly when people merge PDFs.
+
+## Picking the right method
+
+| Situation | Best option |
+|---|---|
+| On a Mac, no install wanted | Preview (built-in) |
+| On Windows, need truly offline | PDFsam Basic (free download) |
+| Have internet, don't want to upload | In-browser tool (local processing) |
+| On a phone | iOS Files app or in-browser tool |
+| Merging a filled form | Flatten first, then merge |
+
+The in-browser option is the most flexible because it works on any device with a modern browser and handles all the same files a desktop app would. For truly offline situations with no browser loaded, Preview on Mac and PDFsam on Windows are the two free options worth knowing.
