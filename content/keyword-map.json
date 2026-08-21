@@ -1505,7 +1505,8 @@
       "targetQuery": "how to split pdf by bookmarks free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-split-pdf-by-bookmarks-free"
     },
     {
       "id": "blog-compress-preview-mac",

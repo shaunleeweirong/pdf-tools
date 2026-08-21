@@ -1,0 +1,95 @@
+---
+title: "How to Split a PDF by Bookmarks Free"
+description: "Split a PDF into chapters or sections using its built-in bookmarks. Three free online tools, plus what to do if your PDF has no bookmarks."
+date: "2026-08-21"
+keywords: ["how to split pdf by bookmarks free", "split pdf by chapters", "split pdf by outline", "pdf bookmark splitter", "extract chapters from pdf free"]
+toolSlugs: ["split-pdf"]
+faq:
+  - q: "What are PDF bookmarks?"
+    a: "PDF bookmarks (also called the outline or document outline) are navigation anchors embedded in the file. They mark the start of each section or chapter and let readers jump directly to them. A bookmark-aware splitter reads this list and cuts the PDF at each anchor point."
+  - q: "How do I check if my PDF has bookmarks?"
+    a: "Open the file in Chrome and press Ctrl+Shift+H (Cmd+Option+B on Mac) to open the bookmarks panel. In Adobe Reader, look for the bookmark icon in the left sidebar. If the panel is empty, the PDF has no embedded outline."
+  - q: "What if my PDF has no bookmarks?"
+    a: "You'll need to split by page range instead. Find the chapter start pages in the PDF's printed table of contents, then use a tool like our Split PDF to extract each range manually."
+  - q: "Will output files be named after the bookmarks?"
+    a: "Some tools (Sejda, DeftPDF) name each output file after the bookmark text. Others use generic names like part-1.pdf. Check the tool's output options before you start."
+  - q: "Can I split by nested bookmarks, not just top-level ones?"
+    a: "Most free tools only split at the top level (for example, chapter headings). Sub-sections within a chapter stay together in one output file. A few tools like DeftPDF let you choose the bookmark depth."
+  - q: "Does splitting a PDF by bookmarks remove the bookmarks from the output files?"
+    a: "It depends on the tool. Most keep the relevant bookmarks in each output file. Test with a small document first if the output structure matters to you."
+---
+
+Splitting a PDF by bookmarks turns a long document into separate chapter files automatically, without counting a single page number. If your PDF has a built-in outline or table of contents, free online tools can handle this in under a minute.
+
+## What "split by bookmarks" actually means
+
+PDF bookmarks are not the yellow sticky-note kind. They are navigation anchors embedded in the [PDF document structure](https://en.wikipedia.org/wiki/PDF#Outline), also called the document outline. When you open a PDF and see a sidebar listing chapters you can click on, those are bookmarks.
+
+A bookmark-aware splitter reads that list and cuts the PDF at each bookmark's start page, producing one file per section. You end up with one file per chapter, named (in some tools) after the bookmark text itself.
+
+## How to check if your PDF has bookmarks
+
+Open the file in Chrome. Press `Ctrl+Shift+H` on Windows or `Cmd+Option+B` on Mac to open the bookmarks panel. In Adobe Reader, click the bookmark icon in the left sidebar.
+
+If the panel shows a list of named sections, you're good. If it's empty, the PDF has no embedded outline, and you'll need the page-range approach described later in this post.
+
+## Three free tools that split PDFs by bookmarks
+
+### Sejda
+
+Sejda's split-by-outline tool is the most polished free option. Upload your PDF and it reads the outline, then lists the sections it found. You can split at the top level only or include sub-levels. Files download in a ZIP archive, named after the bookmark text.
+
+Free plan limits: files up to 50 MB and a maximum of 200 pages. Most reports and ebooks fit within these limits.
+
+### DeftPDF
+
+DeftPDF shows you the bookmark tree before splitting, so you can confirm the structure looks right before committing. No watermarks, no subscription required. Good choice when you want to verify the outline first.
+
+### i2PDF
+
+i2PDF's bookmark splitter handles larger files and produces clean output. Upload, review the bookmarks it detected, and download the ZIP. No account needed.
+
+## Step-by-step: how to split a PDF by bookmarks
+
+1. Check that your PDF has bookmarks (open it in Chrome and press `Ctrl+Shift+H` on Windows or `Cmd+Option+B` on Mac).
+2. Go to Sejda, DeftPDF, or i2PDF in your browser.
+3. Upload your PDF.
+4. Review the bookmark list the tool displays and confirm the sections are correct.
+5. Choose whether to split at the top level only or include nested bookmarks.
+6. Click Split and wait a few seconds.
+7. Download the ZIP file containing your individual section PDFs.
+
+## What to do if your PDF has no bookmarks
+
+Many scanned PDFs and older documents have no embedded outline. Bookmark-based splitting won't work because there is nothing for the tool to read.
+
+The reliable fallback is splitting by page range. Find the chapter start and end pages from the PDF's printed table of contents (if it has one on the page), then use our [Split PDF](/split-pdf) tool to extract each range. You specify the pages you want and the tool saves them as a new PDF. It takes a few more steps, but works on any PDF.
+
+## Splitting by bookmarks vs. splitting by page range
+
+| | By bookmarks | By page range |
+|---|---|---|
+| Requires bookmarks in the PDF | Yes | No |
+| Manual page counting needed | None | Yes |
+| Works on any PDF | No | Yes |
+| Best for | Books, manuals, reports with outlines | Scanned docs, PDFs without outlines |
+
+For documents with a well-structured outline, bookmark splitting is faster and more accurate. For everything else, page-range splitting with our [Split PDF](/split-pdf) tool is the better choice.
+
+## A note on nested bookmarks
+
+Most free tools only split at the top level of the bookmark tree. If your PDF has a chapter structure like "Chapter 1 > Section 1.1 > Section 1.2", the tool puts all of Chapter 1 (including 1.1 and 1.2) into one file.
+
+If you need finer cuts, check whether the tool explicitly supports sub-level splitting. DeftPDF gives you this option. For everything else, extract sections by page range once you have the top-level chapters separated.
+
+## Why some PDFs have bookmarks and others don't
+
+Bookmarks are added during the authoring process, typically by the tool that created the PDF. Word, InDesign, and LaTeX can all embed a document outline automatically when you export to PDF, provided you've used proper heading styles or structured the document correctly.
+
+Scanned PDFs have no structure at all. They are essentially photographs of pages. PDFs created by printing to a PDF printer from unstructured documents also tend to have no outline.
+
+The [ISO 32000 standard](https://www.iso.org/standard/75839.html) that defines the PDF format includes a full specification for the document outline, but whether a given PDF actually uses it comes down to how the file was made. If you receive a PDF without bookmarks but want to add them before splitting, Adobe Acrobat Pro and some desktop tools like PDFsam can do this, though it is a manual process.
+
+## Quick recap
+
+If your PDF has an embedded outline, a free tool like Sejda or DeftPDF handles bookmark-based splitting cleanly, online, with no sign-up. If it doesn't have bookmarks, use our [Split PDF](/split-pdf) tool and enter the page ranges manually. Either way, you end up with the chapters or sections you need as separate files.
