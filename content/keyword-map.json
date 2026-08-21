@@ -1661,7 +1661,8 @@
       "targetQuery": "how to convert pdf to jpg on windows 11 free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-jpg-on-windows-11-free"
     },
     {
       "id": "blog-compress-scholarship",
