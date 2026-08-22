@@ -1,0 +1,95 @@
+---
+title: "Compress PDF for Court Filing: E-Filing Size Limits"
+description: "Most courts cap e-filed PDFs at 10 to 50 MB. Here's when compression helps, when it backfires, and faster ways to get your filing under the limit."
+date: "2026-08-18"
+keywords: ["compress pdf for court filing", "court e-filing pdf size limit", "reduce pdf for court submission", "pdf too large for court", "court filing pdf requirements"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is the PDF size limit for court e-filing?"
+    a: "It depends on the court. Federal courts using CM/ECF typically allow 10 to 50 MB per document. Many state e-filing platforms set 25 MB per document and 35 MB per filing envelope. Check your specific court's CM/ECF page or use the PACER Court Finder."
+  - q: "Can I compress a typed court brief to make it smaller?"
+    a: "No. A tool that rasterizes pages will make a typed brief much larger, not smaller. A 20-page text PDF can grow from under 30 KB to well over 1 MB after rasterization. Export from Word directly to PDF instead."
+  - q: "When does PDF compression help for court filings?"
+    a: "Compression helps when your PDF contains scanned images, like photo exhibits or signed physical forms. A 6-page image-heavy PDF can shrink by 65 to 80% at high compression. It does not help, and actively hurts, text-only documents."
+  - q: "What if my PDF is still too large after compressing?"
+    a: "Split the filing into numbered volumes. Most courts accept volume filings where each part has its own caption page. Use a free split PDF tool to divide by page range and file each volume separately."
+  - q: "What scanner settings keep court PDFs small?"
+    a: "Scan at 300 DPI in black and white (not color or grayscale). Color scanning at 300 DPI can push a single page past 2 MB. Black and white at the same DPI runs under 100 KB per page."
+---
+
+## How to compress a PDF for court filing
+
+Compressing a PDF for court e-filing sounds simple, but the right approach depends on what's inside your document. Use the wrong method and a brief that started at 2 MB can balloon to 14 MB.
+
+This page covers the size limits courts actually enforce, how to bring a scanned exhibit under the limit, and what to do when your filing is a typed document that won't respond to compression.
+
+## What are the PDF size limits for court e-filing?
+
+Every court sets its own limit. [Federal courts using CM/ECF](https://pacer.uscourts.gov/help/faqs/there-limit-size-pdf-files-which-cmecf-will-accept) typically fall somewhere between 10 MB and 50 MB per document. The 10th Circuit, for example, caps appendices at 30 MB per uploaded file, with a 150 MB total transaction limit. The Western District of Washington raised its per-document ceiling to 100 MB in early 2026.
+
+State courts using commercial e-filing platforms tend to cap individual documents at 25 MB and total filing envelopes (all documents in one transaction) at 35 MB. If you have a 20 MB brief and a 20 MB exhibit appendix, a 35 MB envelope limit will reject both, even though each file is under 25 MB individually.
+
+The fastest way to find your court's exact limit: look up the court in the [PACER Court Finder](https://pacer.uscourts.gov/file-case) or check the court's local rules page directly.
+
+## Why compression works for scanned exhibits but backfires on typed briefs
+
+This is the part most guides skip, and it's the most important thing to understand before you touch any PDF tool.
+
+Browser-based tools like the [Compress PDF tool](/compress-pdf) work by rasterizing every page, which means converting each page to a JPEG image. That's exactly what you want when your pages already are images: scanned exhibits, signed physical forms, or photo attachments. For those files, compression at the High setting can cut size by roughly 65 to 80%.
+
+But for a typed brief, motion, or memorandum created in Word or any PDF printer, the pages are stored as vector text, which is extremely compact. Rasterizing those pages replaces efficient vector data with a photograph of the text. A 20-page text document that starts at 23.5 KB can swell to 1.4 MB after rasterization. That's a 60x increase. Your filing will be rejected, not accepted.
+
+The rule:
+- Scanned exhibits, signed pages, photo attachments: compression helps
+- Typed briefs, motions, orders, contracts: compression makes it worse
+
+If you're not sure which type you have, open the PDF and try to select text with your cursor. If the text selects, it's a vector document. If nothing selects, it's an image-based scan.
+
+## How to compress a scanned court exhibit
+
+If your exhibit is a scanned PDF, here's how to bring it under the court's limit:
+
+1. Open the [Compress PDF tool](/compress-pdf) in your browser. No account or software install required.
+2. Drop in your scanned exhibit PDF.
+3. Start at the Medium compression level and download the result.
+4. Check the file size against your court's limit.
+5. If it's still too large, open the original file again and run it at High.
+
+One important rule: never run compression twice on the same file. Feeding the already-compressed output back through at the same level nearly doubles the file size (a 315 KB file grew to 598 KB in testing). If Medium wasn't enough, start fresh from the original at High, not from the Medium output.
+
+Your files stay in your browser and are never uploaded to a server. That matters for client confidentiality.
+
+## How to reduce a typed court document that's over the limit
+
+If your brief or memorandum is too large, compression is not the answer. Try these approaches instead.
+
+**Export from Word directly to PDF.** Never create a court PDF by printing a document and scanning it. A Word document exported to PDF produces a compact, vector file. The same document printed and scanned produces a bloated image PDF that's often 20 to 50 times larger. In Microsoft Word, go to File, then Save As, and choose PDF as the format.
+
+**Split the filing into volumes.** Most courts allow you to break one large document into multiple numbered parts, each with its own cover or caption page. Use the [Split PDF tool](/split-pdf) to divide by page range. File each volume separately. Volume I, Volume II, and so on is standard practice for large exhibit appendices and is almost universally accepted.
+
+**Look for embedded images inside the document.** A brief that's unusually large often has a high-resolution logo, photograph, or diagram embedded in the Word file before export. Reduce or remove those in Word before exporting to PDF.
+
+**Check whether your court has a higher limit.** Some districts have raised their limits significantly in recent years. The Western District of Washington went from 75 MB to 100 MB in 2026. If you filed in that court before and got rejected, it may be worth checking the current rules.
+
+## Scanner settings that keep court PDFs small from the start
+
+If you're scanning physical documents for court, the [PACER scanning guidelines](https://pacer.uscourts.gov/help/faqs/recommended-scanner-file-settings-documents-submitted-pdf-image-files) recommend:
+
+**300 DPI.** Higher resolutions create unnecessarily large files without improving legibility for court review. 300 DPI is the widely accepted standard for readable, compact scans.
+
+**Black and white, not grayscale or color.** A single color page at 300 DPI can exceed 2 MB. The same page in black and white runs under 100 KB. For text documents and most exhibits, black and white captures everything a court needs.
+
+**Text mode when your scanner offers it.** This creates a searchable PDF with an embedded text layer, rather than a pure image. Searchable PDFs are smaller and let judges, clerks, and opposing counsel copy and search the text.
+
+For straightforward text pages, 200 DPI in black and white is also acceptable and produces even smaller files.
+
+## Pre-filing checklist
+
+Before you submit, run through this list:
+
+- Confirm your specific court's per-document and per-envelope size limits
+- Typed documents: export directly from your word processor, never print-to-scan
+- Scanned exhibits: check file size; compress at Medium or High if over the limit
+- Started from the original file for each compression attempt (never compress a compressed output)
+- If still too large: split into volumes with a caption page on each part
+- When filing multiple documents at once, confirm the total envelope size stays under the limit

@@ -1,0 +1,83 @@
+---
+title: "How to Merge PDFs on iPad for Free"
+description: "Combine multiple PDFs in Safari on your iPad. No app download, no sign-up, and files stay in your browser the whole time."
+date: "2026-08-18"
+keywords: ["how to merge pdf on ipad free", "combine pdf on ipad", "merge pdf ipad safari", "merge pdf files ipad"]
+toolSlugs: ["merge-pdf", "flatten-pdf"]
+faq:
+  - q: "Can I merge PDFs on iPad without downloading an app?"
+    a: "Yes. The Merge PDF tool runs in Safari with no app download or account needed. Open the tool, add your files, drag to set the order, and download the result."
+  - q: "Does the Files app on iPad merge PDFs?"
+    a: "Yes. Select multiple PDFs in the Files app, tap More, then Create PDF. It combines them in alphabetical order by file name, so rename the files first if order matters."
+  - q: "Will merging PDFs make the file larger?"
+    a: "No. Merging combines pages without re-encoding them. The output is the same size as the sum of the inputs, or fractionally smaller."
+  - q: "What happens to PDF form fields when I merge on iPad?"
+    a: "Interactive form fields are stripped during a merge. Flatten the form first so the filled-in values are baked into the page, then merge."
+  - q: "Does in-browser PDF merging work in Safari on iPad?"
+    a: "Yes, on iPadOS 14 or later. If the file picker doesn't open, go to Settings > Safari and turn off Prevent Cross-Site Tracking."
+  - q: "Is it free to merge PDFs on iPad?"
+    a: "Yes. Both the built-in Files app method and the browser-based Merge PDF tool are free with no sign-up or account required."
+---
+
+Merging PDFs on your iPad is faster than most people expect, and you don't need to install anything. The [Merge PDF tool](/merge-pdf) runs entirely in Safari, so your files stay in your browser and nothing is sent to a server.
+
+There are two main free methods: a browser-based tool that works in Safari, and Apple's built-in Files app. Both take under a minute. Here's how each one works.
+
+## How to merge PDFs on iPad using Safari
+
+This method works on any iPad running iPadOS 14 or later. Open Safari and go to the [Merge PDF tool](/merge-pdf), then:
+
+1. Tap **Choose files** and pick your first PDF from iCloud Drive, the Files app, or another location.
+2. Tap **Add more files** to select additional PDFs. Drag them into the order you want.
+3. Tap **Merge** and wait a few seconds while the browser processes everything.
+4. Tap **Download** to save the merged PDF back to your device, or share it directly from the share sheet.
+
+Files never leave your browser. The whole process happens locally in Safari on your iPad, with no account required.
+
+## How to merge PDFs using the Files app
+
+iPadOS has a built-in merge feature inside the Files app. Most people don't know it's there:
+
+1. Open the **Files** app and go to the folder containing your PDFs.
+2. Tap **Select** in the top-right corner.
+3. Tap each PDF you want to combine (two or more).
+4. Tap the **More** button (the three-dot icon at the bottom right of the screen).
+5. Choose **Create PDF**.
+
+iPadOS creates the merged PDF in the same folder right away.
+
+One limitation: the Files app combines pages in alphabetical order based on file names, not the order you tapped them. If the order matters, rename the files before you start. A simple naming scheme like 01-intro.pdf, 02-body.pdf, 03-conclusion.pdf works well and sorts exactly as you'd expect.
+
+## Will merging make the file larger?
+
+No. Merging combines page content without re-encoding anything, so the output is about the same size as the inputs added together, sometimes fractionally smaller. On our tool, three files totalling 971.9 KB produced a merged output of 970.5 KB.
+
+That matters if you're working around an email size limit. [Gmail and Outlook both cap](https://support.google.com/mail/answer/6584) messages at 25 MB, but Base64 encoding adds roughly 33%, so the practical ceiling for an attachment is closer to 18 MB. Merging separate PDFs into one doesn't change their total size, so if the parts already add up to less than 18 MB, the merged file will too.
+
+## What happens to form fields when you merge?
+
+If one of your PDFs has interactive form fields (text boxes, checkboxes, a signature field), merging will strip those fields. The page content stays intact, but the fields are no longer interactive.
+
+If you've already filled in a form and want to include it in a merged document, flatten it first. The [Flatten PDF tool](/flatten-pdf) bakes the filled-in values into the page permanently, so they survive the merge. The correct order is: fill the form, flatten it, then merge.
+
+## Does Safari on iPad support in-browser PDF tools?
+
+Yes. Safari on iPadOS handles these tools well, including picking files from iCloud Drive, the Downloads folder, and third-party storage apps. These tools rely on [WebAssembly](https://webassembly.org/), a standard that Safari has supported since 2017, so compatibility isn't an issue on any modern iPad.
+
+If the file picker doesn't appear after you tap "Choose files," try this: go to **Settings > Safari** and turn off **Prevent Cross-Site Tracking**. That resolves the most common file-picker issue in Safari on iPad.
+
+## What if the merged file is too large to email?
+
+Merging PDFs that are already image-heavy (scanned pages, photos) can result in a combined file that's too large to attach to an email. In that case, compress the individual PDFs before merging. Use the [Compress PDF tool](/compress-pdf) on each image-heavy file first, then run the merge.
+
+One thing to be aware of: the compressor works by rasterizing pages to JPEG, which shrinks image-heavy PDFs well but makes text-only documents much larger. If you have a PDF that's mostly text (a contract, a report, an invoice), skip the compressor. Text PDFs are usually small already, and compressing them will make the problem worse, not better.
+
+## Browser tool vs. app: which is right for you?
+
+For a one-time merge, a browser tool is the quicker path. There's nothing to download, no account to create, and no permissions to grant. Open Safari, merge, download, done.
+
+If you merge PDFs every day or need features like OCR, annotation tools, or batch processing, a dedicated app is worth considering. But for most iPad users who need to combine a handful of files occasionally, the free browser method gets the job done without the friction.
+
+## Merging on an iPad vs. other devices
+
+The same [Merge PDF tool](/merge-pdf) works on a Mac, a Chromebook, or any device with a modern browser. The steps are identical. If you're on a Mac and want specific guidance on using built-in tools like Preview, see [how to merge PDFs on Mac for free](/blog/how-to-merge-pdf-on-mac-free). For Chromebook users there's a [separate guide](/blog/how-to-merge-pdf-on-chromebook) covering the Files app method there too.

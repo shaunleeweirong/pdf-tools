@@ -1,0 +1,94 @@
+---
+title: "How to Duplicate a Page in a PDF Free"
+description: "Copy any page in a PDF for free with no software or sign-up. Works in any browser on Windows, Mac, iPhone, and Android."
+date: "2026-08-20"
+keywords: ["how to duplicate a page in a pdf free", "copy pdf page", "duplicate pdf page", "repeat page in pdf", "duplicate pdf page without acrobat"]
+toolSlugs: ["extract-pages", "merge-pdf", "split-pdf"]
+faq:
+  - q: "Can I duplicate a PDF page without Acrobat?"
+    a: "Yes. Use the Extract Pages tool to save a copy of the page as its own PDF, then use the Merge PDF tool to combine it back into your original at the position you choose."
+  - q: "Does duplicating a page make the file larger?"
+    a: "By roughly the size of that one page's content. Merging itself adds almost no overhead. In our tests, three PDFs totalling 971.9 KB merged into a 970.5 KB file."
+  - q: "Can I duplicate a page on Mac for free without extra software?"
+    a: "Yes. Open the PDF in Preview, switch to thumbnail view, click the page, press Cmd+C, click the thumbnail before where you want the copy, and press Cmd+V. Save with Cmd+S."
+  - q: "Will form fields survive if I duplicate a form page?"
+    a: "No. Merging strips interactive form fields. Flatten the page first using the Flatten PDF tool so any filled values become permanent page content before you merge."
+  - q: "Can I duplicate more than one page at a time?"
+    a: "Yes. Use the Extract Pages tool to pull out multiple pages at once, then merge that PDF back into your original at the right position."
+---
+
+Duplicating a page in a PDF for free takes two steps: extract the page, then merge it back in wherever you need it. No Acrobat required, no account, and the whole thing runs in your browser.
+
+Here's how it works for different situations.
+
+## The free browser method: extract, then merge
+
+Most free tools don't have a single "duplicate page" button, but combining two tools gets the same result cleanly.
+
+1. Open the [Extract Pages tool](/extract-pages).
+2. Upload your PDF.
+3. Select the page (or pages) you want to copy.
+4. Download the result. You now have a small PDF containing just that page.
+5. Open the [Merge PDF tool](/merge-pdf).
+6. Upload your original document.
+7. Click the add-file button and upload the extracted page PDF.
+8. Drag the thumbnail for the extracted page to the position where the copy should appear.
+9. Click Merge and download.
+
+The original file on your device stays unchanged. The downloaded file is your document with the duplicated page in the spot you chose.
+
+If you want the copy to land in the middle of a long document, there's a cleaner path. Use the [Split PDF tool](/split-pdf) to cut the original at the insertion point, creating a "before" half and an "after" half. Then merge three files in order: the first half, the extracted page, the second half. One extra step, but it's easier to control than dragging many thumbnails around in the Merge tool.
+
+## How to duplicate a PDF page on Mac for free
+
+Mac users can do this without any extra software. The built-in **Preview** app handles it.
+
+1. Open the PDF in Preview (it's the default reader on macOS).
+2. If the page sidebar isn't showing, go to **View > Thumbnails**.
+3. Click the thumbnail of the page you want to copy.
+4. Press **Cmd+C**.
+5. Click the thumbnail of the page just *before* where you want the copy to land. Preview inserts the pasted page directly after whichever thumbnail is selected.
+6. Press **Cmd+V**.
+7. Press **Cmd+S** to save.
+
+Preview writes directly to the file on save, so duplicate your PDF in Finder first if you want to keep the original unchanged. You can also use **File > Export as PDF** to save the modified version under a different name.
+
+[Apple's Preview user guide](https://support.apple.com/guide/preview/welcome/mac) covers its full set of PDF editing features, which go further than most people realize.
+
+## Can I duplicate multiple pages at once?
+
+Yes. The Extract Pages tool lets you select multiple pages, and it packages them into a single PDF. So if you want pages 3, 7, and 11 duplicated, select all three in the Extract Pages tool, download the result, then merge it into your original wherever you need those copies.
+
+The order you set in the Merge tool is the order they appear in the output. You can drag thumbnails freely before clicking Merge, so getting the sequence right doesn't require multiple attempts.
+
+## Does duplicating a page change the file size?
+
+Each duplicated page adds roughly its own content weight to the total. That's usually less than you'd expect, because [PDF files can store image data efficiently by embedding it once and referencing it from multiple pages](https://en.wikipedia.org/wiki/PDF#File_format), so duplicating a page with a large photo might add surprisingly little.
+
+Merging itself adds almost no overhead. In our tests, three PDFs totalling 971.9 KB merged into a 970.5 KB file. The merge step is very close to lossless in size terms.
+
+If file size is a concern after duplicating, and the document has image-heavy pages, the [Compress PDF tool](/compress-pdf) can reduce the total. That said, it works best on scans and photo-heavy documents. Compressing a text document will make it larger, not smaller, because the tool rasterizes pages to JPEG.
+
+## What about form fields on the duplicated page?
+
+This is the main thing to watch for. [PDF form fields](https://en.wikipedia.org/wiki/PDF#Interactive_elements) are stored in a separate internal structure (called the AcroForm dictionary) and don't carry over when you merge PDFs. Page content, text, images, and layout all survive. Interactive fields do not.
+
+If you're duplicating a page that has filled-in answers, flatten the form before merging. The [Flatten PDF tool](/flatten-pdf) converts field values into regular static content, so the answers are preserved in the merged output. It takes one extra step but is the reliable approach when form data matters.
+
+If you need blank, interactive form fields to remain editable on the duplicated page, the extract-and-merge method won't work. For that, you'd need a tool with full AcroForm editing support, like Adobe Acrobat.
+
+## Why would you need to duplicate a PDF page?
+
+A few situations come up regularly:
+
+- **Form templates.** You have a one-page entry form and need it to appear several times in one document so multiple people or entries can each have their own.
+- **Section dividers.** You want the same title or cover page repeated between chapters or sections in a combined document.
+- **Double-sided printing.** You need a page to appear on both the front and back of a printed sheet, or need to pad a document to an even page count.
+- **Signature pages.** A contract needs the same signature block repeated for multiple signatories.
+- **Checking layout.** You want to see how a page looks placed next to itself before finalizing a booklet or handout design.
+
+In all these cases, the extract-then-merge approach works. The [Merge PDF tool](/merge-pdf) accepts any mix of files, so you can combine segments from the same document with extracted copies, in whatever order you need, in a single step.
+
+## What if I get the page order wrong?
+
+No penalty for starting over. Merging doesn't modify your source files. If the result has pages in the wrong order, go back to the Merge tool with your original files and try again. Quality doesn't degrade, and there's no file size cost to re-running the operation. For bigger reorganizations, the [Organize PDF tool](/organize-pdf) lets you drag all pages into a custom order visually before downloading.

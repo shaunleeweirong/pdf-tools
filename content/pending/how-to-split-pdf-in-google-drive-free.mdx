@@ -1,0 +1,96 @@
+---
+title: "How to Split a PDF in Google Drive (Free)"
+description: "Google Drive has no built-in split feature. Here's the free, no-install way to extract pages from any PDF stored in Drive, with no account required."
+date: "2026-08-17"
+keywords:
+  - how to split pdf in google drive free
+  - split pdf google drive
+  - extract pages google drive
+  - separate pdf pages google drive
+toolSlugs:
+  - split-pdf
+  - extract-pages
+faq:
+  - q: Does Google Drive have a built-in PDF split tool?
+    a: No. Google Drive handles storage and sharing but has no native feature to split or extract pages from a PDF. You need a separate tool for that.
+  - q: Do I need to install a Google Workspace add-on to split a PDF from Drive?
+    a: No. You can download the PDF from Drive, split it in your browser with the Split PDF tool, and re-upload the result if you want it back in Drive. No add-on or account required.
+  - q: Will my PDF be sent to another server when I split it?
+    a: Not with the Split PDF tool on this site. It runs entirely in your browser, so the file stays on your device and is never uploaded anywhere.
+  - q: How do I extract only a few specific pages rather than a continuous range?
+    a: Use the Extract Pages tool, which lets you pick individual page numbers rather than cutting at a fixed point.
+  - q: Why does my PDF look different after I open it in Google Docs?
+    a: Opening a PDF in Google Docs converts it to an editable document, which re-renders the layout and can change formatting. This is not the same as splitting. Use a PDF-specific tool to preserve the original appearance.
+---
+
+You want to split a PDF that's sitting in Google Drive, but there's no split button anywhere. That's because Google Drive doesn't have one. This guide covers how to split any PDF stored in Drive for free, without installing anything or creating an account.
+
+## Does Google Drive have a built-in PDF split feature?
+
+No. [Google Drive](https://workspace.google.com/products/drive/) is built for storage, sharing, and collaboration. It can display a PDF, generate a shareable link, and let you download the file, but it has no tool for splitting pages into separate files or extracting a range of pages.
+
+This catches a lot of people off guard. Google Docs can open a PDF, but that process converts the document to editable text, re-renders the layout, and produces a Google Doc rather than a PDF. That's useful for editing, not for splitting. If what you need is to preserve the original pages exactly as they are, just in a smaller file, Docs is the wrong tool.
+
+To split a PDF properly, you need a tool that understands the [PDF file format's page structure](https://en.wikipedia.org/wiki/PDF). The good news is that you can do it in your browser in about a minute, free.
+
+## The fastest way to split a PDF from Google Drive
+
+Here's the method that works for most people:
+
+1. Open Google Drive and find the PDF you want to split.
+2. Right-click it and choose **Download** to save it to your computer.
+3. Open the [Split PDF tool](/split-pdf).
+4. Click to load the file you just downloaded.
+5. Enter the page range you want. For example, type `1-5` to get the first five pages as a new file, or `6-20` for the remainder.
+6. Click **Split** and download the result.
+7. If you want the split file stored in Drive, drag it back into your Drive folder.
+
+The tool runs in your browser using [JavaScript file processing](https://developer.mozilla.org/en-US/docs/Web/API/File_API), so the file never leaves your device. Nothing is uploaded to a server. Once you download the result, you're done.
+
+## How to extract specific pages (not just a range)
+
+The Split PDF tool works well when you want a continuous block of pages. If you need to pull out scattered pages, say page 2, page 8, and page 14, use the [Extract Pages tool](/extract-pages) instead.
+
+Extract Pages lets you pick individual page numbers and saves only those as a new PDF. It's the right choice when you're cherry-picking sections from a large document rather than cutting it at a single point.
+
+Both tools are free, run in your browser, and don't require an account.
+
+## What about Google Workspace add-ons?
+
+If you search the [Google Workspace Marketplace](https://workspace.google.com/marketplace), you'll find several add-ons that can split PDFs from inside Google Drive. Some of them work well. But every one of them requires you to:
+
+- Install the add-on and authorize it to access your Google account
+- Grant the app permission to read and write files in your Drive
+- Accept the add-on developer's own terms of service
+
+On personal accounts, that's a minor inconvenience. On work or school accounts, your organization may restrict which third-party add-ons can be installed, so the option might not even be available to you.
+
+For a one-off split, downloading the file, processing it in your browser, and re-uploading is usually quicker and involves fewer permissions.
+
+## Will my PDF be sent to another server?
+
+It depends on which tool you use.
+
+Many online PDF services require you to upload your file to their servers. That's fine for most documents, but it's worth thinking about if your PDF contains medical records, contracts, tax documents, or other personal information.
+
+The [Split PDF tool](/split-pdf) on this site works differently. It processes the file in your browser, so the PDF never leaves your computer. Nothing is stored on our servers. Once you close the tab, there's no trace of the file anywhere except your own device.
+
+If privacy matters to you, that's a meaningful difference from most online tools.
+
+## What about opening the PDF in Google Docs?
+
+When you right-click a PDF in Drive and choose "Open with Google Docs," Google converts the PDF to a Google Doc. This can be handy for copying out text or making small edits.
+
+It's not a split. The conversion re-renders the document, which changes how text and images are positioned on the page. Tables shift, headers move, and the result often looks quite different from the original PDF. If you then export it back to PDF, you get a re-rendered version rather than the original pages.
+
+For splitting pages while keeping them exactly as they were, use a tool that handles the PDF directly.
+
+## What if the split file is still too large to share?
+
+Splitting a PDF produces a smaller file because it contains fewer pages, so in most cases you'll already be within sharing limits after the split.
+
+If you still need to reduce the file size, what you do next depends on what's in the PDF. The [Compress PDF tool](/compress-pdf) works well for files that are heavy with scanned pages or embedded photos. It rasterizes each page to a compressed image, which can cut the size significantly for image-heavy documents.
+
+One important caveat: the compression tool makes text-only PDFs larger, not smaller. A text document gets rasterized the same way, turning crisp vector text into a photo of text, which takes more space. If your split file is mostly text, compression won't help. Sharing via a cloud link or a file transfer service is a better option in that case.
+
+If you're splitting a PDF because it's too large for email, the [Merge PDF tool](/merge-pdf) can also be useful in reverse: if you have multiple smaller PDFs you later need to recombine into one, merge adds almost no overhead to the total size.

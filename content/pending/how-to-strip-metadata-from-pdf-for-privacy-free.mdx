@@ -1,0 +1,100 @@
+---
+title: "How to Strip Metadata from a PDF Free"
+description: "Your PDF hides author names, creation dates and software info. Here's how to view and remove PDF metadata free, right in your browser."
+date: "2026-08-21"
+keywords: ["how to strip metadata from pdf", "remove pdf metadata", "pdf metadata privacy", "strip pdf metadata free", "remove author from pdf"]
+toolSlugs: ["edit-metadata", "protect-pdf"]
+faq:
+  - q: "What metadata fields are the biggest privacy risk in a PDF?"
+    a: "The Author field (which often defaults to your Windows or macOS username), the Creator field (the application that made the source document), and the creation and modification timestamps are the most commonly exposed identifiers."
+  - q: "Does printing to PDF remove metadata?"
+    a: "Yes, mostly. Printing to a new PDF creates a fresh file from the print driver, which drops the original Author, Creator, and most Info fields. It will not remove EXIF metadata embedded inside images that were placed into the PDF."
+  - q: "Is it safe to upload a sensitive PDF to an online metadata remover?"
+    a: "If the file is private enough to warrant metadata removal, uploading it to a third-party server creates a second privacy problem. Use a tool that processes the file locally."
+  - q: "Can I see what metadata is in a PDF before sharing it?"
+    a: "Yes. Open the file in the Edit Metadata tool to see all standard Info fields including Title, Author, Subject, Keywords, Creator, and Producer. On macOS you can also check Tools > Show Inspector in Preview, or press Cmd+D in Adobe Reader."
+  - q: "Does removing metadata change the document content?"
+    a: "No. Metadata is stored separately from page content. Clearing the Author, Title, or Creator fields does not change anything visible on any page."
+  - q: "What is XMP metadata in a PDF?"
+    a: "XMP (Extensible Metadata Platform) is a second metadata store that Adobe applications write alongside the classic Info dictionary. Some tools only clear the Info fields and leave XMP intact, so an author name can still appear when someone inspects the raw file."
+---
+
+## Your PDF probably has more in it than you think
+
+Stripping metadata from a PDF before sharing it is a five-minute task, and it's worth doing for any document where the author's identity, the software used, or the creation date isn't meant to be public. The [Edit Metadata tool](/edit-metadata) lets you view and clear those fields without signing up for anything.
+
+The issue catches people off guard because metadata is invisible on the page. You read through the document, it looks clean, and you send it. But anyone who opens the file properties can see who made it, when, and with what software.
+
+## What metadata is hidden inside a PDF?
+
+A PDF file carries two separate metadata stores. The first is the Info dictionary, which holds:
+
+- **Title** and **Subject** (often copied from the original Word or Keynote file)
+- **Author** (defaults to the account or username of whoever created the source document)
+- **Creator** (the application that originally produced the file, such as Microsoft Word or Google Chrome)
+- **Producer** (the PDF generator, such as macOS Quartz PDFContext or Adobe PDF Library)
+- **CreationDate** and **ModDate** (timestamps for when the file was first made and last saved)
+
+The second store is [XMP (Extensible Metadata Platform)](https://en.wikipedia.org/wiki/Extensible_Metadata_Platform), an XML-based format that Adobe introduced and that many PDF editors write alongside the Info dictionary. XMP can carry all the same fields plus custom properties that applications add.
+
+## What personal information can PDF metadata reveal?
+
+The Author field is the most common leak. When you export a PDF from Microsoft Word, the Author defaults to the name on your Microsoft 365 account. Export from LibreOffice and it uses the name you entered during setup. The result is that a document intended for anonymous sharing carries a full name, or a Windows domain username like `company\jsmith`, right inside the file.
+
+Journalists and legal teams have used Author and Creator fields in obtained documents to identify who produced them. A [guide from the University of Wisconsin Law School](https://wisblawg.law.wisc.edu/2006/01/23/guide-to-removing-sensitive-metadata-from-pdf-documents/) warned lawyers early on that metadata in court filings can reveal information the filing party intended to keep private. That risk hasn't gone away.
+
+Other fields that matter:
+
+- **CreationDate** can place a document within a time window that narrows down its origin.
+- **Producer** names the PDF generator, which can expose internal tools or publishing workflows.
+- **Subject and Keywords** sometimes contain internal classification tags added by a document management system.
+
+## How to view PDF metadata before sharing
+
+Before you remove anything, it helps to see what's actually in the file.
+
+1. Open the PDF in the [Edit Metadata tool](/edit-metadata).
+2. The tool displays the current values for Title, Author, Subject, Keywords, Creator, and Producer.
+3. Review each field and decide what to clear.
+
+On macOS, you can also check file properties in Preview: go to Tools > Show Inspector and pick the document info tab. In Adobe Reader or Acrobat, press Ctrl+D (Windows) or Cmd+D (macOS) to open Document Properties. Both are read-only views. To change or clear fields, you need an editor.
+
+## How to strip PDF metadata free
+
+Here's how to clear metadata fields using the [Edit Metadata tool](/edit-metadata):
+
+1. Open the [Edit Metadata tool](/edit-metadata) and drop in your PDF.
+2. Review the fields shown: Title, Author, Subject, Keywords, Creator, and Producer.
+3. Clear the fields you want to remove. For most privacy purposes, that means Author, Subject, Keywords, Creator, and Producer. Title is often safe to keep if it's just the document name.
+4. Download the cleaned file.
+
+No account required.
+
+## Does "print to PDF" remove metadata?
+
+Mostly, yes. When you print a document to a new PDF file, the operating system's PDF printer creates a fresh file. The original Author, Creator, and most Info dictionary fields are not carried over, because the new PDF is produced by the print driver rather than the original application.
+
+The catch: metadata embedded inside images placed into the PDF can survive. EXIF data in a photo (which may include GPS coordinates or the camera model) lives inside the image stream, not in the PDF's Info dictionary, so printing to PDF does not touch it. If you embedded a phone photo into the document, check the image's EXIF data separately.
+
+Printing to PDF also re-renders text as images in some configurations, making the file larger and unsearchable. For most cases, editing the metadata fields directly is the cleaner approach.
+
+## What about XMP metadata?
+
+XMP is a second metadata container inside the same PDF file. The [ISO 32000 standard that defines the PDF format](https://pdfa.org/resource/pdf-specification-index/) specifies how both the Info dictionary and XMP coexist. The two stores are supposed to stay in sync, but tools that only clear the Info dictionary sometimes leave XMP untouched. If someone inspects the XMP block, the original author name can still be there.
+
+If the document is sensitive enough that authorship genuinely must not be traceable, check both stores after cleaning. A tool that rewrites XMP to match the cleared Info fields gives you the most thorough result.
+
+## Fields to clear before sharing
+
+A quick checklist for any document where author identity, timing, or toolchain should stay private:
+
+- **Author** (usually the biggest risk, often contains a real name or username)
+- **Subject** (may contain internal classification text)
+- **Keywords** (can include internal tags from a document management system)
+- **Creator** (reveals the source application)
+- **Producer** (reveals the PDF generator)
+- **CreationDate and ModDate** (remove these if timing is sensitive)
+
+Title is the one field you can usually leave alone, since it's typically just the document's display name.
+
+For documents that also need access restrictions, pairing metadata removal with the [Protect PDF tool](/protect-pdf) adds a password and encryption so only intended recipients can open the file at all.

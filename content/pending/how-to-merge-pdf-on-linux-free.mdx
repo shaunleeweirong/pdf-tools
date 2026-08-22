@@ -1,0 +1,184 @@
+---
+title: "How to Merge PDF on Linux Free (No Install Needed)"
+description: "Merge PDFs on any Linux distro for free: browser tool (no install), pdfunite, pdftk, Ghostscript, or PDF Arranger. Files never leave your device."
+date: "2026-08-17"
+keywords: ["how to merge pdf on linux free", "merge pdf linux", "combine pdf linux free", "pdfunite merge pdf", "pdftk merge pdf linux", "merge pdf linux no install", "combine pdf files ubuntu"]
+toolSlugs: ["merge-pdf", "compress-pdf", "split-pdf"]
+faq:
+  - q: "Can I merge PDFs on Linux without installing anything?"
+    a: "Yes. Open the Merge PDF tool in Firefox, Chrome, or Chromium, drop your files in, and download the combined PDF. Everything runs inside your browser tab using JavaScript, so nothing gets installed and your files never leave your machine."
+  - q: "What is the quickest command to merge PDFs on Linux?"
+    a: "pdfunite is the simplest: pdfunite file1.pdf file2.pdf merged.pdf. It's part of the poppler-utils package, which ships with most Linux distros or installs in one step with apt, dnf, or pacman."
+  - q: "Does pdfunite preserve bookmarks and hyperlinks when merging?"
+    a: "No. pdfunite is known to break internal hyperlinks and bookmarks in the merged output. If your documents contain links you want to keep working, use pdftk or qpdf instead."
+  - q: "Will merging PDFs on Linux make the file bigger?"
+    a: "Not meaningfully. In testing, three files totalling 971.9 KB produced a merged result of 970.5 KB, fractionally under the sum, because shared PDF structure is written once. pdfunite and pdftk copy page content without re-encoding it, so the output always lands close to the sum of the inputs."
+  - q: "How do I merge password-protected PDFs on Linux?"
+    a: "pdftk fails with 'Not Authorized' on owner-protected PDFs. Strip the restriction first with qpdf: qpdf --decrypt protected.pdf unlocked.pdf, then merge the output file with pdftk or pdfunite."
+---
+
+Merging PDFs on Linux for free doesn't require installing anything. The quickest route is to open the [Merge PDF tool](/merge-pdf) in your browser, drop in your files, and download the combined result. Your files never leave your machine. If you prefer the terminal, pdfunite handles most merges in a single command; pdftk, Ghostscript, and qpdf cover the trickier cases.
+
+## The fastest way: browser tool, no install
+
+This works on Ubuntu, Fedora, Debian, Arch, Pop!\_OS, and any other Linux distro with a modern browser installed. No root access, no packages, no terminal.
+
+1. Open Firefox, Chrome, or Chromium and go to the [Merge PDF tool](/merge-pdf).
+2. Click the upload area or drag your PDF files onto the page.
+3. Drag the files to reorder them if the page sequence matters.
+4. Click **Merge** and wait a few seconds.
+5. Click **Download** to save the combined PDF to your Downloads folder.
+
+The tool processes files locally inside your browser tab using JavaScript and WebAssembly. Your PDFs never reach a server. No account required, and there is no file size cap imposed by a subscription tier.
+
+Linux users tend to be the most privacy-conscious segment of PDF tools users, and the browser approach is genuinely differentiated: neither server-side online tools nor command-line tools give you in-browser processing. For a deeper look at why that matters, [merge PDF without uploading](/blog/merge-pdf-without-uploading) walks through the technical details.
+
+## How to merge PDFs on Linux using the command line
+
+### Method 1: pdfunite (quickest, usually pre-installed)
+
+[pdfunite](https://poppler.freedesktop.org/) is part of the poppler-utils package. Most Linux distros ship with it, or you can install it in one step:
+
+```bash
+# Debian, Ubuntu, Mint
+sudo apt install poppler-utils
+
+# Fedora
+sudo dnf install poppler-utils
+
+# Arch
+sudo pacman -S poppler
+```
+
+Then merge any number of PDFs like this:
+
+```bash
+pdfunite file1.pdf file2.pdf file3.pdf merged.pdf
+```
+
+The output file is always the last argument. To merge every PDF in the current folder at once:
+
+```bash
+pdfunite *.pdf merged.pdf
+```
+
+**One important limitation:** pdfunite breaks internal hyperlinks and bookmarks in the merged output. If your documents contain links that need to stay functional, use pdftk instead.
+
+### Method 2: pdftk (best when bookmarks and page ranges matter)
+
+pdftk preserves internal hyperlinks and bookmarks during merging, and it also lets you pick specific page ranges from each input:
+
+```bash
+# Merge whole files
+pdftk file1.pdf file2.pdf cat output merged.pdf
+
+# Merge page ranges: pages 1-7 from file A, pages 1-5 from file B
+pdftk A=file1.pdf B=file2.pdf cat A1-7 B1-5 output merged.pdf
+
+# Merge all PDFs in a folder
+pdftk *.pdf cat output merged.pdf
+```
+
+**Installing pdftk on Ubuntu 22.04 and later:** pdftk was dropped from the default Ubuntu repositories because of a dependency that became hard to maintain. The replacement is pdftk-java, which is a drop-in compatible port:
+
+```bash
+# Ubuntu 22.04+ / Debian Bookworm+
+sudo apt install pdftk-java
+
+# Fedora
+sudo dnf install pdftk
+
+# Arch (from the AUR)
+yay -S pdftk
+```
+
+### Method 3: Ghostscript (merge and compress in one step)
+
+[Ghostscript](https://www.ghostscript.com/) is pre-installed on most Linux systems. It's slower than pdfunite, but it lets you merge and reduce the output size at the same time:
+
+```bash
+gs -dNOPAUSE -sDEVICE=pdfwrite \
+   -sOUTPUTFILE=merged.pdf -dBATCH \
+   file1.pdf file2.pdf file3.pdf
+```
+
+Add `-dPDFSETTINGS=/ebook` to reduce the output size (good balance of quality and compression), or `/screen` for the smallest possible file. This is worth doing when the merged result needs to fit an email attachment limit and the files are image-heavy.
+
+### Method 4: qpdf (best for password-protected PDFs)
+
+pdftk throws "Not Authorized" when it encounters an owner-protected PDF. qpdf handles this cleanly:
+
+```bash
+# Strip the restriction first
+qpdf --decrypt protected.pdf unlocked.pdf
+
+# Then merge the output normally
+pdftk unlocked.pdf other.pdf cat output merged.pdf
+
+# Or merge in one step entirely with qpdf
+qpdf --empty --pages first.pdf second.pdf -- combined.pdf
+```
+
+qpdf is in all major distro repos: `sudo apt install qpdf` / `sudo dnf install qpdf` / `sudo pacman -S qpdf`.
+
+## Merge PDFs on Linux with a GUI (no terminal needed)
+
+### PDF Arranger
+
+[PDF Arranger](https://github.com/pdfarranger/pdfarranger) is the most popular lightweight option. It displays pages as thumbnails so you can drag, reorder, rotate, or delete pages before exporting the final file.
+
+```bash
+# Ubuntu / Debian
+sudo apt install pdfarranger
+
+# Fedora
+sudo dnf install pdfarranger
+
+# All distros (via Flatpak)
+flatpak install flathub com.github.jeromerobert.pdfarranger
+```
+
+Drag your PDFs into the window, arrange the pages as you want them, then go to **File > Export** to save the merged result.
+
+### PDFSam Basic
+
+PDFSam Basic is a heavier cross-platform Java application with more features: split, merge, rotate, and extract pages with visual previews. It's worth considering for complex merge jobs where you want to preview pages before committing. For a simple two-file combine, it's more than you need.
+
+## Which tool should you use?
+
+| Situation | Best option |
+|---|---|
+| No install, any distro, fastest start | [Merge PDF tool](/merge-pdf) in your browser |
+| Quick terminal merge, links don't matter | `pdfunite` |
+| Terminal merge, need to preserve bookmarks | `pdftk` |
+| Merge and compress the output at the same time | Ghostscript |
+| Password-protected PDFs | `qpdf` |
+| Visual page reordering, no terminal | PDF Arranger |
+| Batch scripting, cron jobs, or automation | `pdfunite` or `pdftk` in a shell script |
+
+**One tool to avoid: ImageMagick's `convert` command.** Several older guides suggest it, but `convert` re-encodes every page as a rasterized image before combining them. The output is blurry, usually much larger than the originals, and you've lost the original vector text. Never use `convert` to merge PDFs.
+
+## Common problems and fixes
+
+**"pdftk: command not found" on Ubuntu 22.04+**
+
+pdftk was removed from Ubuntu's default repositories. Install pdftk-java instead: `sudo apt install pdftk-java`. It behaves identically to the original.
+
+**"pdfunite merged my files but all the links are broken"**
+
+Expected behavior. pdfunite doesn't copy the document's link table. Switch to pdftk for the same merge: `pdftk file1.pdf file2.pdf cat output merged.pdf`.
+
+**"pdftk says 'Not Authorized'"**
+
+The PDF has owner restrictions. Strip them first with qpdf: `qpdf --decrypt protected.pdf unlocked.pdf`, then run your pdftk command on the resulting file.
+
+## Does merging PDFs make the file bigger?
+
+Not meaningfully. In testing, three files totalling 971.9 KB produced a merged result of 970.5 KB, fractionally under the sum, because structure shared across the input files gets written once rather than repeated. pdfunite and pdftk copy page content without re-encoding it, so the output size should always land close to the sum of the inputs.
+
+If the combined file is still too large after merging, the right fix depends on what's inside it:
+
+- **Scans and image-heavy pages:** The [Compress PDF tool](/compress-pdf) can reduce these substantially. A six-page image deck came out at 315.3 KB from 913.4 KB at Medium quality in testing.
+- **Text-heavy pages:** Don't compress them. The compressor rasterizes every page to JPEG, which made a 20-page text report grow from 23.5 KB to 1.4 MB in testing. Use the [Split PDF tool](/split-pdf) to send the document in parts instead.
+
+Also working on Mac or Chromebook? See [how to merge PDF on Mac free](/blog/how-to-merge-pdf-on-mac-free) or [how to merge PDF on Chromebook](/blog/how-to-merge-pdf-on-chromebook).

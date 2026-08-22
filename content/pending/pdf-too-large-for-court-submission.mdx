@@ -1,0 +1,74 @@
+---
+title: "PDF Too Large for Court Submission: How to Fix It"
+description: "Court e-filing rejected your PDF? Find out why, check your court's size limit, and apply the right fix for scanned exhibits or typed briefs."
+date: "2026-08-19"
+keywords: ["pdf too large for court submission", "court e-filing pdf size limit", "cm/ecf file size limit", "pacer pdf size limit", "reduce pdf size for court filing"]
+toolSlugs: ["compress-pdf", "split-pdf", "merge-pdf"]
+faq:
+  - q: "What is the PDF file size limit for federal court e-filing?"
+    a: "Federal courts using CM/ECF (accessed through PACER) each set their own limit. The range runs from 3 MB in certain bankruptcy courts to 200 MB in others. Most federal district courts fall between 25 and 50 MB. Check the PACER court lookup for your specific court."
+  - q: "Why is my scanned court exhibit so large?"
+    a: "Scanning at 300 DPI in full color produces roughly 2 to 3 MB per page. A 30-page exhibit appendix can easily hit 60 to 90 MB. Scanning at 200 DPI in black and white cuts that dramatically."
+  - q: "Can I compress a typed brief or contract to make it smaller?"
+    a: "No. The compress tool rasterizes every page into a JPEG, which makes text documents much larger, not smaller. A 20-page text report grew from 23.5 KB to 1.4 MB in testing. Only use compression on scanned or image-heavy PDFs."
+  - q: "What if my PDF is still too large after compression?"
+    a: "Split the filing into separate files. Most courts accept multi-part exhibits labeled Part 1, Part 2, and so on. Check your local rules or ask the clerk's office to confirm splitting is allowed."
+  - q: "Does splitting a PDF damage the content?"
+    a: "No. Splitting separates pages into new files without changing what's on them."
+  - q: "Will merging parts back together make the total file larger?"
+    a: "Barely. Merging doesn't inflate output. Three files totaling 971.9 KB merged to 970.5 KB in testing. If the total already exceeds your court's limit, keep the parts separate."
+---
+
+If your PDF is too large for court submission, you need to know two things before you try anything: what type of document it is and what your court's actual size limit is. Scanned exhibits and image-heavy attachments can often be cut dramatically with compression. Typed briefs and word-processor documents cannot. Compressing a text document makes it larger, not smaller.
+
+## Why do courts have file size limits?
+
+Courts manage electronic filing through case management systems. Federal courts use [CM/ECF (Case Management/Electronic Case Files)](https://pacer.uscourts.gov/help/faqs/there-limit-size-pdf-files-which-cmecf-will-accept), which is accessible through PACER. Many state courts run on Odyssey File and Serve or similar platforms. Each system enforces a size cap, and when your file exceeds it, the submission is rejected before the clerk ever sees it.
+
+Two limits usually apply at once. The first is the per-document limit, which applies to each individual PDF. The second is the per-envelope limit, which caps the total size of everything you submit in one transaction. If you're filing a 20 MB brief and a 20 MB exhibit appendix and the envelope limit is 35 MB, the entire submission will be rejected even though each file is individually under the cap.
+
+## What's the size limit for your court?
+
+Federal courts each set their own limit. Most federal district courts fall between 25 and 50 MB, but the range is wide. PACER publishes a lookup table with the [CM/ECF file size limit for each court](https://pacer.uscourts.gov/help/faqs/there-limit-size-pdf-files-which-cmecf-will-accept). Before you do anything else, look up the exact limit for your court.
+
+State courts vary just as much. Courts using Odyssey File and Serve typically cap filings at 25 to 35 MB per document. Your court's local rules or clerk's office is the authoritative source.
+
+## What makes court PDFs so large?
+
+The most common culprit is scanning. A single page scanned at 300 DPI in full color runs roughly 2 to 3 MB. A 30-page exhibit appendix, scanned that way, lands at 60 to 90 MB before you've done anything else. Medical records, contracts with handwritten signatures, and photograph exhibits are especially prone to this.
+
+Typed documents are rarely the problem. A 30-page brief exported directly from Word or Google Docs usually runs 500 KB to 2 MB. If a word-processor document is unusually large, a high-resolution logo or image embedded on every page is typically the cause, not the text itself.
+
+## Fix 1: Compress scanned or image-heavy PDFs
+
+If your court filing consists of scanned pages, photographs, or image-heavy exhibits, compression will help. The [Compress PDF tool](/compress-pdf) runs entirely in your browser. Your files don't leave your device.
+
+In testing, a 6-page image-based PDF went from 913.4 KB down to 315.3 KB at Medium quality (a 65.5% reduction) and 175.6 KB at High compression (80.8% reduction). Applied to a 40 MB scanned appendix, that kind of reduction gets most filings comfortably under a 25 MB limit.
+
+Start with Medium. If the result still exceeds the limit, run the original through High. One pass is enough. Re-compressing the output makes things worse: a second Medium pass grew a file from 315.3 KB to 598.9 KB in testing. Always compress from the original, and only once.
+
+## Fix 2: Do not compress typed briefs or contracts
+
+If your filing is a typed brief, a contract, a form, or any document that came out of a word processor, skip the compress tool entirely. The tool rasterizes each page into a JPEG image. That works well on photographs, but it's very bad for text. In testing, a 20-page text report grew from 23.5 KB to 1.4 MB after one compression pass, an increase of nearly 5,900 percent.
+
+If a text-based PDF is too large, re-exporting it from the source application usually fixes it. Open the original Word or Google Docs file, export to PDF with default settings, and check the size. Many PDF export paths (especially from older software or after multiple edits) leave behind revision history, embedded fonts at oversized resolutions, or duplicate image streams that bloat the file significantly. A clean export removes most of it.
+
+## Fix 3: Split the PDF into smaller parts
+
+When you can't compress and a clean re-export doesn't bring the file under the limit, split it. The [Split PDF tool](/split-pdf) lets you define a page range and save it as a new file.
+
+Most courts accept multi-part exhibits. The convention is to label them sequentially: Exhibit A, Part 1; Exhibit A, Part 2; and so on. Check your local rules before filing this way, and contact the clerk's office if you're not sure whether splitting is allowed for your case type.
+
+If you need to combine separate files before submission, [Merge PDF](/merge-pdf) doesn't inflate the output. Three files totaling 971.9 KB merged to 970.5 KB in our testing, so merging adds almost nothing. That said, if the combined total already exceeds the court's limit, keep the files separate and file them as distinct attachments.
+
+## Fix 4: Re-scan at a lower resolution
+
+If you have the original physical documents and time to re-scan, this gives you the best result. Set your scanner to 200 DPI and black and white for any page that's mostly text. The [Northern District of Georgia's PDF scanning guidelines](https://www.gand.uscourts.gov/pdf-files-and-scanning-tips) recommend exactly this, and it's good advice for any court submission.
+
+A page that weighs 2.5 MB at 300 DPI in color will typically come in under 200 KB at 200 DPI in black and white. That difference compounds fast across a 30-page exhibit. Use 300 DPI and color only for pages with photographs, color diagrams, or graphics that need to be legible at full size.
+
+## A note on page-size rejections
+
+Some courts reject filings labeled "document too large" because a page's physical dimensions exceed 8.5 by 11 inches, not because of the file size in megabytes. If you scanned on a legal-size (8.5 by 14 inch) bed, or if any pages came from a non-standard paper size, the filing system may flag them even if the file size is fine.
+
+Check that every page in your PDF is standard letter size (8.5 by 11 inches) before submitting. Most PDF viewers will show page dimensions in the document properties.

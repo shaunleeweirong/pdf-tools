@@ -1,0 +1,96 @@
+---
+title: "Make a PDF Smaller in Mac Preview"
+description: "Open File > Export > Reduce File Size in Preview to shrink a PDF for free. Works well for scanned pages, can blur text PDFs. Here's when to use it and when not to."
+date: "2026-08-18"
+keywords:
+  - "how to make pdf smaller in preview on mac"
+  - "reduce pdf size preview mac"
+  - "compress pdf preview mac"
+  - "quartz filter reduce file size"
+  - "make pdf smaller mac free"
+toolSlugs:
+  - "compress-pdf"
+faq:
+  - q: "Does Preview actually reduce PDF file size?"
+    a: "Yes, but only for PDFs that contain images. Preview's Quartz filter resamples embedded images at lower quality. A PDF made of text and vector shapes will see little or no reduction."
+  - q: "Why does my PDF look blurry after using Preview?"
+    a: "Preview's Reduce File Size filter forces every embedded image down to 50% of its original dimensions and applies heavy JPEG compression. That's aggressive enough to make photos and scanned text look soft or blocky."
+  - q: "Can I control the compression level in Preview?"
+    a: "No. The built-in Reduce File Size preset applies a fixed setting. If you want to choose low, medium, or high compression, you need a different tool."
+  - q: "Does Reduce File Size work on text PDFs?"
+    a: "Barely. A PDF of typed text stores characters as vector data, not images. The Quartz filter has almost nothing to compress, so the file size barely changes."
+  - q: "What's a free alternative to Preview for compressing image-heavy PDFs?"
+    a: "The Compress PDF tool on this site runs entirely in your browser, no upload required. It reduced a 6-page image deck from 913.4 KB to 315.3 KB at the Medium setting."
+  - q: "Is my file safe when I compress it in Preview?"
+    a: "Yes. Preview processes files locally on your Mac. Nothing is sent to any server, which makes it suitable for sensitive documents."
+---
+
+You can make a PDF smaller in Preview by opening the file, choosing **File > Export**, and selecting **Reduce File Size** from the Quartz Filter menu. It's free, requires no install, and works offline. But there's a catch: Preview uses one fixed, aggressive compression preset, and the result on a scanned document or photo-heavy PDF can look noticeably softer than the original.
+
+Here's how to use it, what it does under the hood, and how to decide whether it's the right tool for your file.
+
+## How to use Preview's Reduce File Size
+
+1. Open your PDF in **Preview** (double-click the file, or right-click and choose **Open With > Preview**).
+2. Go to **File > Export** in the menu bar. Do not choose "Export as PDF"; you want plain "Export".
+3. In the dialog, find the **Quartz Filter** dropdown and select **Reduce File Size**.
+4. If you want to keep the original, change the filename in the **Export As** field before saving.
+5. Click **Save**.
+
+That's all there is to it. The saved file replaces (or sits alongside) the original. Check the result in the Finder; the new file size appears in the Get Info panel (Command + I).
+
+For full, up-to-date steps, [Apple's official Preview guide](https://support.apple.com/guide/preview/reduce-the-size-of-a-pdf-prvw1509/mac) covers the current menu layout across macOS versions.
+
+## What the Quartz filter actually does
+
+The Reduce File Size preset is a [Quartz filter](https://en.wikipedia.org/wiki/Quartz_(graphics_layer)), a macOS graphics processing rule. What it does, concretely, is resample every embedded image to 50% of its original dimensions and re-encode them as JPEGs at low quality.
+
+That one step is almost all of the compression that happens. There's no control over the level, no choice of target file size, and no distinction between "this is a photo" and "this is a diagram". Everything gets the same treatment.
+
+The upside: it can cut an image-heavy PDF substantially. A scanned contract or a photo album that started at 10 MB can come down to 2 to 3 MB.
+
+The downside: fine detail, small text in images, and anything with sharp edges gets JPEG artifacts. If you zoom in to 150% and the result looks soft or blocky in ways the original didn't, that's the filter. You can't undo it on the already-saved file, so always keep the original until you've checked the output.
+
+## When Preview is the right call
+
+Preview's Reduce File Size filter is a reasonable choice in these situations:
+
+**The PDF is a scan of a paper document.** Scanned pages are already photos, and the filter's downsampling tends to be less noticeable on scanned content than on a carefully laid-out designed file.
+
+**The PDF will only ever be read on screen at normal zoom.** If no one will be zooming in past 100%, and the content isn't being printed, the quality trade-off is often unnoticeable.
+
+**You need to work offline.** Preview processes the file locally. No network connection needed, no file upload, no third-party service.
+
+**The file just needs to clear a size limit, not look perfect.** Reducing a 12 MB document to 4 MB so it fits a web form is a legitimate use case, even if the compressed version loses some crispness.
+
+## When Preview is the wrong call
+
+**Your PDF is mostly text.** A typed document stores text as vector outlines (characters described mathematically), not images. The Quartz filter has almost nothing to compress. File size changes little or not at all, and any savings aren't worth the risk of blurring what few images might be embedded. If a text PDF is too large to email, it's usually because of an embedded high-resolution logo or a scanned signature, not the text itself. Replacing that one asset or splitting off unneeded pages will fix it more reliably.
+
+**Quality matters.** If the PDF is a design file, a portfolio, a legal exhibit, or anything people will scrutinize closely, the fixed, aggressive preset is hard to trust. You want to choose a compression level and preview the result at different settings.
+
+**You've already run the filter once.** Running the filter a second time on the already-compressed output won't reduce the file further in any meaningful way. The images have already been resampled and re-encoded; there's little left to remove. Start from the original if the first pass wasn't enough.
+
+## A better free option for image-heavy PDFs
+
+If you want more control, the [Compress PDF tool](/compress-pdf) on this site runs entirely in your browser. Nothing is uploaded to any server, which makes it a practical choice for confidential files. You pick the compression level yourself: Low preserves more quality, High gives the smallest file.
+
+We measured the results on a real 6-page image deck. At Medium, it went from 913.4 KB to 315.3 KB, a reduction of 65.5%. At High, the same deck came down to 175.6 KB.
+
+One important caveat, the same one that applies to Preview: this tool is not for text PDFs. Like Preview's Quartz filter, it works by rasterizing pages, turning each one into an image. On a text-only PDF, that makes the file dramatically larger, not smaller. A 23.5 KB text report came out at 1.4 MB in our testing. Stick to image-heavy or scanned PDFs.
+
+## What to do if your text PDF is too large
+
+If your PDF is a typed document that's too big to send or upload, a few options work better than any compressor:
+
+**Re-export from the source.** Open the original Word, Pages, or Google Docs file and export again. Choose "Optimize for: Online Publishing" or "Compress images" if the export dialog offers it. The original source file often produces a smaller PDF than any after-the-fact tool can.
+
+**Send only the pages someone needs.** The [Split PDF tool](/split-pdf) extracts a page range into a new file. Nothing is re-encoded, so there's no quality loss. If someone asked for pages 3 to 7 of a 40-page report, there's no reason to send the whole thing.
+
+**Zip the file before attaching.** Most email clients handle ZIP attachments, and a ZIP of a PDF typically saves 10 to 25% on a text document with no change to the PDF itself.
+
+## Checking whether the compression worked
+
+Open the compressed file and the original side by side in Preview. Go to **View > Zoom In** until you're at 150% or 200%. Look at the smallest readable text on the busiest page. On a well-compressed image PDF, the difference is often hard to see at normal zoom. On a poorly compressed one, JPEG block patterns show up around edges and in gradients.
+
+If you can still select text in the original (hold down the cursor and drag over a word), try the same in the compressed copy. If text selection no longer works, the page has been rasterized into an image. That may or may not be a problem depending on how the file will be used.

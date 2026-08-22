@@ -1,0 +1,96 @@
+---
+title: "How to Insert a Blank Page into a PDF Free"
+description: "Insert a blank page into any PDF, free and in your browser. Split, add the blank, and merge back in three quick steps. No Acrobat needed."
+date: "2026-08-20"
+keywords: ["how to insert a blank page into a pdf free", "insert blank page pdf", "add blank page to pdf online", "insert blank page pdf mac", "add blank page pdf chromebook"]
+toolSlugs: ["merge-pdf", "split-pdf", "organize-pdf", "flatten-pdf", "jpg-to-pdf"]
+faq:
+ - q: "Can I insert a blank page into a PDF without Acrobat?"
+   a: "Yes. You do not need Acrobat. Split the PDF at the spot you want the blank, make a one page blank PDF with your browser's Print > Save as PDF, then merge the three pieces in order. It's free and runs in your browser."
+ - q: "How do I add a blank page in Preview on Mac?"
+   a: "Open the PDF in Preview, show Thumbnails from the View menu, click the page that should sit before the new blank, then choose Edit > Insert > Blank Page. Save with Command + S. Apple's own guide covers it in one screenshot."
+ - q: "Is there a way to do this on Windows or Chromebook?"
+   a: "Yes. Neither Microsoft Edge nor Chrome can add a blank page on their own, but the browser workflow works on both. Open the Merge PDF tool, drop in your files in order (part one, blank page, part two), and download the combined file."
+ - q: "Will inserting a page break form fields or hyperlinks?"
+   a: "Merging preserves the visible page content, but interactive form fields do not survive the merge. If your PDF is a filled form, flatten it first with the Flatten PDF tool so the values are painted onto the page. Hyperlinks inside the page content are usually preserved, but always spot-check after."
+ - q: "Can I insert a whole other PDF instead of a blank page?"
+   a: "Yes. The Merge PDF tool takes any number of PDFs and stitches them in the order you set. Drag the second document to whichever position you want it, then download the result."
+ - q: "How do I add a blank page for double-sided printing?"
+   a: "Insert one blank page immediately after every page you want to end up on its own sheet (like a chapter title). When you print the combined file duplex, each of those pages lands on a fresh sheet with a clean back."
+---
+
+## Insert a blank page into a PDF, free
+
+You've got a PDF and you need an empty page somewhere in the middle. Maybe it's a spacer before an appendix, a "sign here" placeholder, or a filler so a chapter starts on a fresh sheet when you print two sided. You can do it free, in your browser, in about a minute.
+
+None of our tools has an "insert blank page" button on its own, and that's on purpose. Inserting a page is just merging: cut the PDF at the spot you want the blank, drop in a one page blank PDF, and merge the three files in order. The [Merge PDF tool](/merge-pdf) handles the merge. Nothing gets uploaded to a server, and nothing is added to the file except the pages you asked for.
+
+## The three step method that works on any device
+
+Here is the whole workflow, from a PDF sitting in your Downloads folder to a new PDF with a blank page in it.
+
+1. Open the [Split PDF tool](/split-pdf) and drop your PDF in.
+2. Split it into two files at the spot you want the blank. If your blank goes after page 5, that's pages 1 to 5 in one file and 6 to end in the other. Download both.
+3. Make a one page blank PDF. In any browser, open a fresh empty tab, hit **Ctrl + P** (or **Cmd + P** on Mac), pick **Save as PDF**, and save it. That's your blank. (If you already have one, skip this step.)
+4. Open the [Merge PDF tool](/merge-pdf), drop the three files in, and drag them into order: part one, blank, part two.
+5. Click **Merge PDF** and download the result.
+
+That's it. If the order needs a nudge after the fact, the [Organize PDF tool](/organize-pdf) shows every page as a thumbnail so you can drag pages around visually.
+
+The Print to PDF trick works because every modern browser can save what it's rendering as a PDF using the [system print pipeline](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_paged_media). An empty page renders as, well, an empty page.
+
+## How do I insert a blank page in Preview on Mac?
+
+If you're on a Mac, Preview does this natively and it's the fastest route.
+
+1. Open the PDF in Preview (it's the default PDF app on macOS).
+2. Show the sidebar: **View > Thumbnails**.
+3. Click the thumbnail of the page that should sit *before* the new blank.
+4. Go to **Edit > Insert > Blank Page**.
+5. Save with **Cmd + S**.
+
+Preview writes the change into the original file when you save. Duplicate the PDF first (**File > Duplicate**) if you want to keep the untouched version around. Apple's [official guide for Preview pages](https://support.apple.com/guide/preview/add-delete-or-move-pdf-pages-prvw11793/mac) covers the same steps with screenshots if you want the pictures.
+
+The blank page Preview inserts is US Letter by default. If your document is A4, the odd page is easy to spot and easy to fix: delete it, then use the browser workflow above with an A4 blank instead. You can build one by opening a blank tab, going to your printer settings, choosing A4, and printing to PDF.
+
+## What do I do on Windows or Chromebook?
+
+Windows doesn't ship anything like Preview. Microsoft Edge can view and annotate a PDF, but it can't add or remove pages. Chromebooks are in the same boat with Chrome.
+
+The browser workflow above works on both without installing anything. The [Split PDF](/split-pdf), [Merge PDF](/merge-pdf), and [Organize PDF](/organize-pdf) tools all run in your browser tab, on any modern OS. Files stay on your device.
+
+If you'd rather skip the split step and just tack a blank onto the end (say, so a printed cover sheet has a clean back), open the Merge tool, drop in your PDF plus a one page blank you saved with Print to PDF, and download.
+
+## Will inserting a page break form fields or hyperlinks?
+
+This one bites people, and it's worth calling out before you find out at the printer.
+
+- **Form fields do not survive a merge.** We tested this: a PDF with a filled text field ("Jane" in `applicant.name`) came out of the merge with the pages intact but the field gone. If your document is a filled form, flatten it first with the [Flatten PDF tool](/flatten-pdf). Flattening paints the field values onto the page as normal graphics, so nothing can be lost.
+- **Hyperlinks inside page content are usually kept**, because they're stored with the page. Cross document links or bookmarks that jump to a specific page number can end up pointing at the wrong page once you've shifted the numbering, so open the merged file and click any links you care about.
+- **Signatures**: a cryptographic signature invalidates the moment you edit the PDF, whether you insert a page, add a watermark, or reorder. That's the point of a signature. If you need to add a blank page to a signed document, do it before the signature step, or ask the signer to re-sign the new version.
+
+## Can I insert a whole other PDF into a PDF?
+
+Yes. The workflow is the same. The [Merge PDF tool](/merge-pdf) doesn't care whether one of your inputs is a single blank page or a 40 page contract. Split the target PDF at the insertion point, drop in the second document, and merge in order.
+
+If you're combining a filled form with a cover letter (a job application, a rental application, an insurance claim), flatten the form first for the reason above. We wrote up the whole workflow in the [job application PDF post](/blog/combine-documents-for-a-job-application-pdf) if you want the full walk through.
+
+## How to insert a blank page for double sided printing
+
+The classic reason to insert a blank is to fix chapter starts when you print duplex. You want each new section to start on a right hand page, which means the previous section has to end on an even page. If it ends on an odd page, you need a blank on the reverse.
+
+Rule of thumb: before every page you want on the right in the printed booklet, count the pages that come before it. If the count is odd, insert one blank page. The [Organize PDF tool](/organize-pdf) is useful here because you can see the running count as a thumbnail strip and drop blanks in visually.
+
+For long documents with many chapters, do the splits and merges once, save the final PDF, and print that. Fixing chapter starts inside the print dialog every time you print is a slow way to get the same result.
+
+## Why insert a blank page in the first place?
+
+A few reasons come up over and over:
+
+- **Print duplex cleanly.** Chapter starts, cover pages, and appendices land where you want them.
+- **Placeholder for a signature.** Send a document with a blank "sign here" page that the recipient can fill in with the [Sign PDF tool](/sign-pdf).
+- **Section divider.** Legal, medical, and academic packets often want a blank page between tabs.
+- **Room for handwritten notes** in a printed report.
+- **Fixing a bad scan.** If a scanner ate a page, insert a blank so page numbers still line up while you go re-scan the missing one.
+
+For any of these, the split + merge workflow is the same. The whole thing runs in your browser, is free, and doesn't touch a server. The only thing it costs is the minute it takes to drag the files into order.
