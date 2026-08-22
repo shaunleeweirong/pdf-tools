@@ -1694,20 +1694,13 @@
       "slug": "how-to-translate-a-pdf-to-another-language-free"
     },
     {
-      "id": "blog-google-slides-to-pdf",
-      "surface": "blog",
-      "targetQuery": "how to convert google slides to pdf free",
-      "intent": "informational",
-      "priority": 1,
-      "status": "idea"
-    },
-    {
       "id": "blog-best-pdf-to-word-converter",
       "surface": "blog",
       "targetQuery": "best free pdf to word converter online no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "best-free-pdf-to-word-converter-online-no-sign-up"
     },
     {
       "id": "blog-pdf-too-large-irs",
