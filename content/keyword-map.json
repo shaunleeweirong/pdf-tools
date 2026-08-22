@@ -1708,7 +1708,8 @@
       "targetQuery": "pdf file too large for irs submission",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-too-large-for-irs"
     },
     {
       "id": "blog-add-bookmarks-pdf",
