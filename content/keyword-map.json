@@ -1382,6 +1382,15 @@
       "intent": "informational",
       "priority": 3,
       "status": "idea"
+    },
+    {
+      "id": "blog-google-slides-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert google slides to pdf free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-convert-google-slides-to-pdf-free"
     }
   ]
 }
