@@ -1795,7 +1795,8 @@
       "targetQuery": "best free pdf tools for students no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "best-free-pdf-tools-for-students-no-sign-up"
     },
     {
       "id": "blog-add-cover-page-pdf",
