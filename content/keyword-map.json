@@ -1746,6 +1746,87 @@
       "priority": 1,
       "status": "pending",
       "slug": "how-to-convert-google-slides-to-pdf-free"
+    },
+    {
+      "id": "blog-compress-200kb",
+      "surface": "blog",
+      "targetQuery": "compress pdf to 200kb free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "pending",
+      "slug": "compress-pdf-to-200kb-free"
+    },
+    {
+      "id": "blog-delete-pages-iphone",
+      "surface": "blog",
+      "targetQuery": "how to delete pages from pdf on iphone free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-delete-pages-android",
+      "surface": "blog",
+      "targetQuery": "how to delete pages from pdf on android free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdfcandy-alternatives",
+      "surface": "blog",
+      "targetQuery": "pdf candy alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-rotate-pdf-no-upload",
+      "surface": "blog",
+      "targetQuery": "rotate pdf online without uploading free",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-tools-students",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for students no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-add-cover-page-pdf",
+      "surface": "blog",
+      "targetQuery": "how to add a cover page to a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-stamp-pdf-online",
+      "surface": "blog",
+      "targetQuery": "how to add a stamp to a pdf free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-indeed",
+      "surface": "blog",
+      "targetQuery": "pdf too large for indeed job application",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-split-pdf-by-chapter",
+      "surface": "blog",
+      "targetQuery": "how to split pdf by chapter free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
     }
   ]
 }

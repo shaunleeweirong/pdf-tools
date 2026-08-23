@@ -1,0 +1,115 @@
+---
+title: "Compress a PDF to 200 KB Free"
+description: "How to compress a PDF to 200 KB free in your browser. Which compression level to pick, when it won't work, and what to do if your file is still too large."
+date: "2026-08-23"
+keywords: ["compress pdf to 200kb", "reduce pdf to 200kb", "shrink pdf to 200kb", "compress pdf to 200kb without quality loss", "pdf 200kb online"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "Can I compress any PDF to 200 KB?"
+    a: "It depends on what's in the file. Image-heavy and scanned PDFs compress well. At our High setting, a 913 KB image deck came out at 175 KB. Text-only PDFs will get larger, not smaller, because the compressor converts each page to a JPEG. For text PDFs, use the Split PDF tool to remove pages instead."
+  - q: "What compression level gets a PDF under 200 KB?"
+    a: "High (smallest size) gives the maximum reduction. For a roughly 1 MB image-heavy PDF, it typically brings the result under 200 KB. If the file is larger or mostly text, High won't be enough on its own."
+  - q: "Does compressing a PDF twice make it smaller?"
+    a: "No. A second pass at the same level makes the file larger. In our tests, a 315 KB file grew to 599 KB on a second Medium pass. Start from the original each time and pick the right level the first time."
+  - q: "Will the compressed PDF look blurry?"
+    a: "At the High setting, fine image detail can soften. Scanned text usually stays readable at normal zoom. If you need sharper output, use Medium or Low instead."
+  - q: "Does the tool work on iPhones and Android phones?"
+    a: "Yes. The tool runs entirely in your browser, so it works on iPhones, Android phones, and tablets with no app to install."
+  - q: "What if my PDF still won't reach 200 KB after compression?"
+    a: "If it's an image-heavy PDF, try removing pages with the Split PDF tool to reduce the starting size, then compress again. If it's a text-based PDF, compression isn't the right tool. Re-export from the source application at a lower image quality, or remove pages."
+---
+
+## Compress a PDF to 200 KB: what actually works
+
+To compress a PDF to 200 KB free, use the [Compress PDF tool](/compress-pdf). It runs entirely in your browser, nothing is uploaded to a server, and no sign-up is needed. At its High setting, a 913 KB six-page image deck came out at 175 KB, well under the 200 KB mark.
+
+That said, compression works differently depending on what's in your file. A PDF full of scanned pages or photos will shrink significantly. A text-only document will actually get larger. Here's how to tell which applies to you and what to do in each case.
+
+## How to compress a PDF to 200 KB (steps)
+
+1. Open the [Compress PDF tool](/compress-pdf).
+2. Drop your file onto the page, or click **Choose file** to browse.
+3. Select **High (smallest size)** from the compression options.
+4. Click **Compress** and wait a few seconds.
+5. Download the result and check the file size.
+
+If the output is still above 200 KB, see the sections below. There are a few specific reasons it may not reach your target, and each has a different fix.
+
+## Which compression level should you use?
+
+The tool has three settings. Here's what each one produced on a 913 KB image-heavy PDF in our tests:
+
+| Level | Output size | Reduction |
+|---|---|---|
+| High (smallest) | 175 KB | -80.8% |
+| Medium | 315 KB | -65.5% |
+| Low (best quality) | 703 KB | -23.0% |
+
+For a 200 KB target, **High** is the only level that got the 913 KB file there. Medium and Low left the file well above 200 KB at that starting size.
+
+If you don't have a hard size limit and just want a smaller file, Medium is a good default. The quality stays closer to the original and the reduction is still substantial.
+
+## Why won't my PDF compress to 200 KB?
+
+There are two main reasons.
+
+### The PDF is mostly text, not images
+
+The compressor works by converting every page to a JPEG, then encoding the result as a PDF. That's effective for scanned documents and image-heavy files. For text-only documents, it works backward: a 20-page text report that was 23.5 KB grew to 1.4 MB at Medium compression, because vector text stored as characters is tiny, while the same text stored as a photograph of characters is not.
+
+If your PDF is a Word export, a contract, a spreadsheet, or any mostly-text document, skip the compressor. It will make the file bigger, not smaller.
+
+### The original images are very large
+
+Even at -80.8%, a 5 MB image PDF would come out at roughly 960 KB, still well above 200 KB. The compressor can only do so much. If the starting file is large, you may need to remove some pages or use lower-resolution source images before compression can get you to 200 KB.
+
+## What to do when compression isn't enough
+
+**Remove pages you don't need.** The [Split PDF tool](/split-pdf) lets you pick a page range and save it as a new file. A 10-page document cut to 4 relevant pages is already 60% smaller before you apply any compression. Extract just the pages you need, then run the compressor on the result.
+
+**Re-export from the source file.** If you have the original Word, InDesign, or PowerPoint file, re-export it to PDF with a "web" or "screen quality" preset. This downsamples images at the source, which is usually the most effective way to shrink the file. The resulting PDF will compress further as well.
+
+**Check the scan resolution.** If your PDF came from a scanner or phone camera, the source images may be at 300 DPI or higher. Re-scanning at 150 to 200 DPI before converting to PDF is often the single biggest lever for scanned documents. You get a much smaller file to start with, and compression takes it even further.
+
+## When compression works best
+
+The compressor is most useful when your PDF consists of:
+
+- Scanned pages (paper documents scanned to PDF)
+- Presentations or portfolios with full-page photos
+- Product catalogs or image-heavy reports
+- Mobile camera scans of documents
+
+It won't help when your PDF is:
+
+- A text document exported from Word, Pages, or Google Docs
+- A spreadsheet, form, or invoice
+- A file that has already been through a compression pass (a second pass at the same level makes the file bigger, not smaller; see below)
+
+## Why compressing twice makes the file bigger
+
+Running compression a second time seems like it should help. It doesn't. When you compress a file that's already been through a lossy JPEG pass, the encoder re-encodes an already-degraded signal and adds more [JPEG artifacts](https://en.wikipedia.org/wiki/Compression_artifact) rather than stripping more data.
+
+In our tests: a 315 KB file compressed once at Medium grew to 599 KB on a second Medium pass. A second pass at High on the same file clawed back only 17 KB, to 297 KB, which isn't worth the added quality loss.
+
+The correct approach: always start from the original file. If the first pass at High isn't enough, don't run it again. Instead, reduce the page count with the split tool, then compress the trimmed file from scratch.
+
+## Does compression affect text readability?
+
+For scanned documents, quality at the High setting depends on the original scan resolution and font size. In practice:
+
+- Standard body text (12 pt or larger) on an A4 or letter-size page typically stays readable at normal zoom even at High.
+- Very small print (6 to 8 pt) and fine line art can soften at High.
+- Full-page photographs lose more detail at High than documents do, because [JPEG compression](https://en.wikipedia.org/wiki/JPEG) is more noticeable in complex textures and gradients.
+
+If you need the output to be razor-sharp, print quality, or used in a context where people will zoom in closely, use Medium or Low instead. You'll get a smaller file than the original without the softening that High introduces.
+
+## Summary
+
+To compress a PDF to 200 KB free:
+
+1. Open the [Compress PDF tool](/compress-pdf) and select **High (smallest size)**.
+2. Download and check the output. A 1 MB image-heavy PDF typically lands under 200 KB at this setting.
+3. If the file is still too large: use [Split PDF](/split-pdf) to remove pages, then compress again from the original. If it's a text PDF, skip compression entirely and re-export from the source.
+
+Everything runs in your browser. Files don't leave your device, and you don't need an account.
