@@ -1735,7 +1735,8 @@
       "targetQuery": "how to convert pdf to google slides free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-google-slides-free"
     },
     {
       "id": "blog-google-slides-to-pdf",
