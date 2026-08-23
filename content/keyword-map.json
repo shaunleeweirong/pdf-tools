@@ -1762,7 +1762,8 @@
       "targetQuery": "how to delete pages from pdf on iphone free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-delete-pages-from-pdf-on-iphone-free"
     },
     {
       "id": "blog-delete-pages-android",
