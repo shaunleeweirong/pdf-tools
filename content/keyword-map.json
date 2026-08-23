@@ -1726,7 +1726,8 @@
       "targetQuery": "how to zip multiple pdf files free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-zip-multiple-pdf-files-free"
     },
     {
       "id": "blog-pdf-to-google-slides",

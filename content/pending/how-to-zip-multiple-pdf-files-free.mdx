@@ -1,0 +1,108 @@
+---
+title: "How to Zip Multiple PDF Files Free"
+description: "Bundle several PDFs into one ZIP folder on Windows or Mac in seconds, no extra software needed. Plus: when to zip versus merge or compress."
+date: "2026-08-23"
+keywords:
+  - "how to zip multiple pdf files free"
+  - "zip pdf files windows"
+  - "zip pdf files mac"
+  - "zip multiple pdfs"
+  - "send multiple pdfs one email"
+toolSlugs:
+  - "merge-pdf"
+  - "compress-pdf"
+  - "split-pdf"
+faq:
+  - q: "Does zipping PDF files make them smaller?"
+    a: "Usually not by much. PDFs already use internal compression, so a ZIP wrapper typically shrinks the total by only 1 to 5 percent. If your goal is to reduce size for email, compress the individual PDFs first (image-heavy ones only), then zip them."
+  - q: "Do I need WinZip or 7-Zip to zip PDFs?"
+    a: "No. Both Windows and Mac have built-in zip tools. On Windows, right-click and choose 'Send to > Compressed (zipped) folder'. On Mac, right-click in Finder and choose 'Compress'."
+  - q: "What is the difference between zipping and merging PDFs?"
+    a: "Zipping bundles files into a folder but keeps each PDF separate inside. Merging combines them into a single PDF. Use zip when the recipient needs individual files; use merge when one combined document is easier to handle."
+  - q: "My zip file is still too large for email. What can I do?"
+    a: "Upload the ZIP to Google Drive, Dropbox, or OneDrive, then share the link. Or merge your PDFs into one file and compress it if it contains images. Gmail and Outlook both cap attachments at 25 MB."
+  - q: "Can I zip PDFs on my phone?"
+    a: "On iPhone, select files in the Files app, tap the share button, and choose 'Compress'. On Android, use the Files by Google app: long-press files, tap the three-dot menu, and select 'Compress'."
+---
+
+You can zip multiple PDF files free in under a minute using tools already built into Windows and Mac. No extra software required. Here's the fastest way to do it on each platform, plus guidance on when zipping is the right move versus merging or compressing.
+
+## How to zip multiple PDF files on Windows
+
+Windows has had a built-in zip tool since XP, so you don't need WinZip, 7-Zip, or anything else.
+
+1. Open File Explorer and go to the folder with your PDFs.
+2. Click the first file, then hold **Ctrl** and click each additional PDF you want to include.
+3. Right-click any of the selected files.
+4. Choose **Send to** and then **Compressed (zipped) folder**.
+5. A new `.zip` file appears in the same location. Rename it if you like.
+
+That's it. The original PDFs stay untouched; the ZIP is a separate file containing copies of all of them.
+
+On Windows 11, Microsoft moved this option slightly: right-click, choose **Compress to ZIP file** from the top-level context menu (no sub-menu needed). The result is the same.
+
+## How to zip multiple PDF files on Mac
+
+Mac's Finder handles zipping natively too.
+
+1. Open a Finder window and go to the folder containing your PDFs.
+2. Click the first file, hold **Command**, and click the rest.
+3. Right-click (or Control-click) any of the highlighted files.
+4. Choose **Compress X Items** (where X is your file count).
+5. A file named `Archive.zip` appears in the same folder. Rename it to something descriptive.
+
+If you're on an older Mac running macOS Catalina or earlier, the option says **Compress** without the item count, but it works the same way.
+
+## Does zipping actually make PDFs smaller?
+
+Probably not much. A [ZIP archive](https://en.wikipedia.org/wiki/ZIP_(file_format)) compresses files using algorithms like DEFLATE, which works best on text, code, and uncompressed images. PDFs are already internally compressed, using formats like Flate (similar to ZIP) and DCT (JPEG) for embedded images. Applying ZIP compression on top of an already-compressed file yields very little gain, typically 1 to 5 percent.
+
+What zipping does well is bundle files. Sending one ZIP attachment is tidier than attaching ten PDFs separately, and most email clients accept a single ZIP even when they'd flag multiple large attachments.
+
+If you genuinely need to reduce file size, zipping alone won't get you there. See the section below on what to do instead.
+
+## Zip vs merge vs compress: which one should you use?
+
+These three approaches solve different problems.
+
+**Zip** when:
+- You need to send several PDFs and the recipient needs each file separately.
+- You want to organize a batch of files into one download link.
+- The total size is already under the email limit.
+
+**Merge** when:
+- One combined document is easier for the recipient than a folder of files.
+- You're assembling a report, portfolio, or application from multiple pieces.
+- You want to cut down the number of attachments.
+
+Our [Merge PDF tool](/merge-pdf) combines files in your browser with no server upload. Merging does not inflate file size, so three PDFs totaling 1 MB will merge into roughly 1 MB. One thing to know: merging strips interactive form fields, so if any of your PDFs have fillable forms, [flatten them](/flatten-pdf) before merging so the filled values are preserved.
+
+**Compress** when:
+- You have image-heavy PDFs (scanned documents, photo decks) that are too large for email.
+- You want to reduce file size before zipping or sharing.
+
+Our [Compress PDF tool](/compress-pdf) works in your browser and is most effective on scanned pages and photos. If your PDF is mostly text (invoices, contracts, Word exports), compression will actually make it larger, because the tool rasterizes pages to JPEG, which is far less efficient than the vector text format. For text PDFs that are too large, zipping is often a better choice, or you can split the document into smaller parts with [Split PDF](/split-pdf).
+
+## What if my zip file is still too big for email?
+
+[Gmail](https://support.google.com/mail/answer/6584) and Outlook both cap email attachments at 25 MB. Because email encodes attachments in [Base64](https://en.wikipedia.org/wiki/Base64), a 25 MB file takes up about 33 MB in the message, so the practical ceiling is closer to 18 to 19 MB.
+
+If your ZIP is over that limit, you have a few options:
+
+- **Use a cloud link.** Upload the ZIP (or the individual PDFs) to Google Drive, Dropbox, or OneDrive and share the link. Most of these services offer free storage up to 5 to 15 GB.
+- **Split the batch into two zips.** If you have 20 PDFs, zip 10 in each archive and send two emails.
+- **Merge and compress.** If the content is images or scans, merge all files into one PDF and run compression on it. This can cut size significantly for image-heavy documents.
+
+## A note on password-protecting your ZIP
+
+If the PDFs contain sensitive information, you can add a password to the ZIP itself. On Windows, the built-in tool does not support ZIP passwords; you'll need 7-Zip (free, open-source) for that. On Mac, you can password-protect a ZIP from Terminal with the command `zip -e archive.zip file1.pdf file2.pdf`, then enter a password when prompted.
+
+Alternatively, you can password-protect the individual PDFs before zipping them using our [Protect PDF](/protect-pdf) tool, which adds AES-256 encryption in your browser.
+
+## Quick recap
+
+- Windows: select files, right-click, choose **Send to > Compressed (zipped) folder**.
+- Mac: select files, right-click, choose **Compress X Items**.
+- Zipping keeps files separate; merging creates one document.
+- Zipping rarely reduces PDF size much since PDFs are already compressed internally.
+- For genuinely large files, use a cloud share link rather than an attachment.
