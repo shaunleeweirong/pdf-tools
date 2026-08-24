@@ -1443,7 +1443,8 @@
       "targetQuery": "how to convert pdf to epub free online",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-epub-free-online"
     },
     {
       "id": "blog-print-booklet",
