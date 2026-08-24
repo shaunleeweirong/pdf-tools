@@ -1823,7 +1823,8 @@
       "targetQuery": "pdf too large for indeed job application",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-too-large-for-indeed-job-application"
     },
     {
       "id": "blog-split-pdf-by-chapter",
