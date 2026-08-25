@@ -1844,7 +1844,8 @@
       "targetQuery": "best free pdf annotator online no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "best-free-pdf-annotator-online-no-sign-up"
     },
     {
       "id": "blog-pdf-too-large-canva",
