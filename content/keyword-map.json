@@ -1862,7 +1862,8 @@
       "targetQuery": "compress pdf for telegram free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-telegram"
     },
     {
       "id": "blog-pdf-too-large-slack",
