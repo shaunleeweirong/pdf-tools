@@ -1569,7 +1569,8 @@
       "targetQuery": "how to remove header and footer from pdf free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-remove-header-and-footer-from-pdf-free"
     },
     {
       "id": "blog-webp-to-pdf",
@@ -1834,6 +1835,70 @@
       "surface": "blog",
       "targetQuery": "how to split pdf by chapter free",
       "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-annotator",
+      "surface": "blog",
+      "targetQuery": "best free pdf annotator online no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-canva",
+      "surface": "blog",
+      "targetQuery": "pdf too large for canva upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-telegram",
+      "surface": "blog",
+      "targetQuery": "compress pdf for telegram free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-slack",
+      "surface": "blog",
+      "targetQuery": "pdf too large for slack attachment",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-dropbox",
+      "surface": "blog",
+      "targetQuery": "compress pdf for dropbox upload free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-onedrive",
+      "surface": "blog",
+      "targetQuery": "pdf too large for onedrive upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-flatten-before-merging",
+      "surface": "blog",
+      "targetQuery": "do i need to flatten pdf before merging",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-zoom",
+      "surface": "blog",
+      "targetQuery": "compress pdf for zoom chat free",
+      "intent": "transactional",
       "priority": 3,
       "status": "idea"
     }
