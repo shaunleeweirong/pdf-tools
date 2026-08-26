@@ -1880,7 +1880,8 @@
       "targetQuery": "compress pdf for dropbox upload free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-dropbox-free"
     },
     {
       "id": "blog-pdf-too-large-onedrive",
