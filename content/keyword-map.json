@@ -1933,7 +1933,8 @@
       "targetQuery": "what does flatten a pdf mean",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "what-does-flatten-a-pdf-mean"
     },
     {
       "id": "blog-find-replace-text-pdf",
