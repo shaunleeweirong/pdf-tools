@@ -1908,6 +1908,71 @@
       "intent": "transactional",
       "priority": 3,
       "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-to-jpg-converter",
+      "surface": "blog",
+      "targetQuery": "best free pdf to jpg converter no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "best-free-pdf-to-jpg-converter-no-sign-up"
+    },
+    {
+      "id": "blog-google-docs-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to save google docs as pdf free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-what-does-flatten-pdf-mean",
+      "surface": "blog",
+      "targetQuery": "what does flatten a pdf mean",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-find-replace-text-pdf",
+      "surface": "blog",
+      "targetQuery": "how to find and replace text in a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-not-printing-correctly",
+      "surface": "blog",
+      "targetQuery": "pdf not printing correctly how to fix",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-flatten-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "how to flatten a pdf on iphone free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-split-pdf-windows",
+      "surface": "blog",
+      "targetQuery": "how to split a pdf on windows free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-reduce-pdf-pages",
+      "surface": "blog",
+      "targetQuery": "how to reduce the number of pages in a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
