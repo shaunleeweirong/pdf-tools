@@ -1942,7 +1942,8 @@
       "targetQuery": "how to find and replace text in a pdf free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-find-and-replace-text-in-a-pdf-free"
     },
     {
       "id": "blog-pdf-not-printing-correctly",
