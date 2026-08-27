@@ -1978,6 +1978,71 @@
       "targetQuery": "how to reduce the number of pages in a pdf free",
       "intent": "informational",
       "priority": 2,
+      "status": "pending",
+      "slug": "how-to-reduce-the-number-of-pages-in-a-pdf-free"
+    },
+    {
+      "id": "blog-sign-chromebook",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf on chromebook free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-delete-pages-mac",
+      "surface": "blog",
+      "targetQuery": "how to delete pages from pdf on mac free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-split-android",
+      "surface": "blog",
+      "targetQuery": "how to split a pdf on android free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-fill-form-android",
+      "surface": "blog",
+      "targetQuery": "how to fill out a pdf form on android free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-excel",
+      "surface": "blog",
+      "targetQuery": "best free pdf to excel converter online no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-outlook",
+      "surface": "blog",
+      "targetQuery": "how to compress pdf for outlook email free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-quality",
+      "surface": "blog",
+      "targetQuery": "how to merge pdfs without losing quality free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-reader-dark-mode",
+      "surface": "blog",
+      "targetQuery": "best free pdf reader with dark mode no sign up",
+      "intent": "commercial",
+      "priority": 2,
       "status": "idea"
     }
   ]
