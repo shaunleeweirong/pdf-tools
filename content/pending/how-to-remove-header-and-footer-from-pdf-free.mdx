@@ -1,0 +1,97 @@
+---
+title: "How to Remove Header and Footer from PDF Free"
+description: "Remove headers and footers from any PDF in your browser, free. Use the Crop PDF tool to trim margins or cover with white. No Acrobat, no sign-up."
+date: "2026-08-25"
+keywords: ["remove header from pdf", "remove footer from pdf", "how to remove header and footer from pdf free", "delete pdf header online free", "pdf footer remover free"]
+toolSlugs: ["crop-pdf", "edit-pdf"]
+faq:
+  - q: "Can I remove just the footer and keep the header?"
+    a: "Yes. Set only the bottom margin crop value in the Crop PDF tool and leave the top margin at 0. The header stays untouched."
+  - q: "Will cropping damage the main content?"
+    a: "Only if the header or footer overlaps the body text. Start with a small crop value and preview the result before finalizing."
+  - q: "Does this work on scanned PDFs?"
+    a: "Yes. The Crop PDF tool trims image-based pages the same way it trims text pages, so a fax header or date stamp in a scanned document gets removed cleanly."
+  - q: "What if the header can't be cropped without cutting into the text?"
+    a: "Use the Edit PDF tool to draw a white filled rectangle over the header. This hides the text visually without changing page dimensions."
+  - q: "Is my file uploaded to a server when I use these tools?"
+    a: "No. Both the Crop PDF and Edit PDF tools run entirely in your browser. Your file never leaves your device."
+---
+
+You can remove a header or footer from a PDF free, without Acrobat, by cropping the top or bottom margin off every page. The [Crop PDF tool](/crop-pdf) handles this in your browser in seconds. For headers that overlap body text, the [Edit PDF tool](/edit-pdf) lets you cover them with a white box instead.
+
+## Why removing headers and footers is not as simple as clicking delete
+
+PDF headers and footers are not a separate layer you can switch off. In most PDFs, the text at the top or bottom of each page, whether it's a page number, a document title, or a company name, is baked directly into the page's content stream. There is no "header region" to delete the way you'd remove one in Microsoft Word.
+
+When a Word document is exported to [PDF format](https://en.wikipedia.org/wiki/PDF), each page is rendered to a flat representation. The header becomes part of the page image. That's why the cleanest fix, if you still have the source file, is to remove the header in Word and re-export. If you only have the PDF, you have two practical options: crop the margin away, or paint over it.
+
+## Method 1: Crop away the margin
+
+Cropping physically trims a strip off the top or bottom of every page. If your header or footer sits in a clear margin band, this is the fastest approach.
+
+**Steps to remove a header by cropping:**
+
+1. Open the [Crop PDF tool](/crop-pdf).
+2. Drop your PDF into the upload area.
+3. Set the **top margin** value to remove the header. A typical header sits within the top 40 to 60 points of a page (roughly 14 to 21 mm). Start conservatively and adjust if needed.
+4. If you also want to remove the footer, set the **bottom margin** value at the same time.
+5. Leave the left and right margin values at 0 unless you want to trim those edges too.
+6. Click **Crop** and download the finished file.
+
+No account needed, no upload to a server. The crop runs client-side in your browser.
+
+**When this works well:**
+- The header or footer sits entirely in the top or bottom margin, clear of the body text.
+- Every page uses the same layout, so one crop depth applies to all.
+- The document is scanned, so there is no editable text to work with.
+
+**When to try something else:**
+- The header overlaps the body text. Cropping deep enough to remove it would also cut body content.
+- The margin depth varies across pages, so a single value clips some pages correctly and over-crops others.
+
+## Method 2: Cover it with a white box
+
+If cropping risks cutting into content, the [Edit PDF tool](/edit-pdf) lets you draw a white filled rectangle over the header or footer. The text becomes invisible without changing the page dimensions.
+
+**Steps:**
+
+1. Open the [Edit PDF tool](/edit-pdf).
+2. Upload your PDF.
+3. Select the shape or rectangle tool and set the fill color to white.
+4. Draw a rectangle that covers the header area on the first page.
+5. Repeat for each page where the header appears.
+6. Download the result.
+
+This takes longer on multi-page documents but is precise. You can cover just the page number in the footer while leaving the rest of the page untouched.
+
+## Can you remove just the header and keep the footer?
+
+Yes. With cropping, set only the top margin value and leave the bottom at 0. The footer stays in place. Do the reverse to remove just the footer. With the white-box approach, cover whichever element you want gone on each page and leave the other alone.
+
+A common case: removing a confidential label from the top of each page while keeping the page numbers at the bottom. Set the top crop depth to clear the label, leave the bottom at 0, and you're done.
+
+## Does cropping work on scanned PDFs?
+
+Yes. Scanned PDFs are image-based rather than text-based, so you can't click on the header text and select it. But the crop tool still works: it trims the image at the top or bottom of each page, removing whatever is printed there. Fax headers, date stamps, a "DO NOT COPY" line printed at the top of a photocopied page, all go away cleanly.
+
+## What about PDFs where the header is proper vector text?
+
+Some PDFs do store text as individual editable objects inside the file. In those cases a capable PDF editor can let you click on the header, select it, and press delete. Adobe Acrobat's [header and footer removal feature](https://helpx.adobe.com/acrobat/using/add-headers-footers.html) works this way for headers that were added through Acrobat's own header tool.
+
+The catch: this only works when Acrobat's header tool was used to create the header in the first place. Headers produced by printing from Word, by a scanner, or by a third-party PDF generator are usually part of the general page content and can't be isolated by that method. If you try it and nothing disappears, the header is embedded in the content stream and you need the crop or paint-over approach.
+
+## Tips for getting the crop right the first time
+
+PDF dimensions use points as the unit of measure. One point is 1/72 of an inch. An A4 page is 842 points tall; a US Letter page is 792 points tall. A typical header or footer occupies the top or bottom 30 to 60 points.
+
+If your tool shows a preview, use it. Check that the crop line falls below the header text with a small gap. If the header is still visible, increase the crop value. If body text is getting clipped, reduce it.
+
+Cropping once at the right value is better than running the tool twice. A second crop pass adds no quality cost, since cropping only adjusts the page boundary rather than re-encoding the page content, but doing it right the first time is faster.
+
+If you need to remove the header and footer at the same time, set both the top and bottom values in a single crop pass rather than running the tool twice.
+
+## What if you need to remove headers from many PDFs?
+
+The [Crop PDF tool](/crop-pdf) processes one file at a time. If you have a batch of files with the same layout, crop the first one to confirm the right margin values, then apply the same values to each subsequent file. The values stay the same as long as the page layout is consistent across files.
+
+For large volumes, a command-line tool like [Ghostscript](https://www.ghostscript.com/) or a desktop PDF editor may be faster because they support batch operations. For one-off tasks or occasional use, the browser-based crop approach is faster to reach and requires no installation.

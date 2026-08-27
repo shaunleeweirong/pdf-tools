@@ -1,0 +1,95 @@
+---
+title: "PDF Too Large for Canva? Here's How to Fix It"
+description: "Canva's PDF upload limit is 300 MB and 500 pages. Here's how to compress or split your PDF so it uploads without errors, with the right fix for each file type."
+date: "2026-08-25"
+keywords:
+  - pdf too large for canva upload
+  - canva pdf upload limit
+  - canva pdf file size limit
+  - compress pdf for canva
+  - canva import pdf too large
+toolSlugs:
+  - compress-pdf
+  - split-pdf
+faq:
+  - q: What is Canva's PDF upload file size limit?
+    a: Canva accepts PDF uploads up to 300 MB. There's also a limit of 500 pages per design and 1,400 embedded elements or images per file. Exceed any of these and the upload will fail or import incompletely.
+  - q: How do I compress a PDF for Canva?
+    a: Use an online PDF compressor before uploading. Compression works well if your PDF contains photos or design graphics. If your PDF is mostly text, compression will make it larger, not smaller. Split the file instead.
+  - q: Can Canva edit the text in an imported PDF?
+    a: No. When you import a PDF into Canva, each page is converted to an image. The text becomes part of the image and is not editable. You can rearrange or resize the pages, but you can't change the words.
+  - q: My PDF is text-heavy but still over 300 MB. What should I do?
+    a: Don't compress it. Compression rasterizes pages and typically makes text PDFs much larger. Instead, split the file into sections using a PDF splitter, then upload each part to Canva separately.
+  - q: Does Canva have a page limit for PDF imports?
+    a: Yes. Canva designs support up to 500 pages. If your PDF exceeds this, split it into sections first and import each section as its own Canva project.
+---
+
+If your PDF is too large for Canva, you've hit one of two thresholds: the 300 MB file size cap or the 500-page maximum. Both are fixable without paid software. The right fix depends on what's inside your PDF.
+
+## What limits does Canva put on PDF uploads?
+
+According to [Canva's upload requirements](https://www.canva.com/help/upload-formats-requirements/), a PDF must stay under:
+
+- **300 MB** total file size
+- **500 pages** per design
+- **1,400 elements or images** per file
+
+Files that exceed any of these will fail to upload or will import only partially. The page and element limits are less commonly hit; the 300 MB size cap is what trips most people up.
+
+One thing worth knowing: [when you import a PDF into Canva](https://www.canva.com/help/import-and-edit-pdfs-canva/), each page is converted to a rasterized image. The text won't be editable. This is relevant to which fix you should use, as you'll see below.
+
+## Why is your PDF so large?
+
+The short answer is images. A PDF made mostly of text is compact by nature, since vector text glyphs take very little space. But when a PDF contains high-resolution photos, design graphics, or layouts exported from tools like Illustrator or Figma, the file size grows quickly. A single full-bleed image at 300 DPI can run to 2 or 3 MB, and a 50-page catalog at print quality can easily clear 150 MB.
+
+If you exported the PDF from Canva itself using the "PDF Print" option, that's probably why it's large. PDF Print exports at 300 DPI for professional printing. The fix for that case is simple, and we'll cover it in the last section.
+
+## How to compress a PDF for Canva (for image-heavy files)
+
+If your PDF is full of photos, graphics, or design layouts, compression is the right move. Our [Compress PDF tool](/compress-pdf) runs entirely in your browser and cuts most image-heavy files by 50 to 80 percent.
+
+Here's how to do it:
+
+1. Open the [Compress PDF tool](/compress-pdf).
+2. Drop your PDF into the tool.
+3. Choose **Medium** quality. For an image-heavy PDF, Medium brought a 913.4 KB file down to 315.3 KB, a 65.5% reduction.
+4. Download the compressed file and upload it to Canva.
+
+If Medium isn't enough to get under 300 MB, try **High (smallest)** starting from the original file. Don't run the output through compression a second time. A second compression pass at the same level makes the file larger, not smaller, because re-encoding an already-compressed JPEG adds overhead instead of removing it.
+
+The pages will look slightly softer after compression, but Canva rasterizes PDF pages to images on import anyway. For working in Canva, the quality trade-off is almost never noticeable.
+
+## When compression makes things worse (text PDFs)
+
+This is the part most guides skip, and it matters. If your PDF is a report, contract, invoice, resume, or anything built mostly from text and vector graphics, do not compress it.
+
+Compression rasterizes every page to a JPEG image. Text that's stored as vector data takes almost no space; the same text stored as a photograph of itself takes a lot more. A 20-page text report measured at 23.5 KB grew to 1.4 MB after compression, roughly 60 times bigger. Compressing a text PDF will push it further over Canva's limit, not under it.
+
+For text PDFs that exceed 300 MB, splitting is the fix.
+
+## How to split a PDF that's too large or has too many pages
+
+The [Split PDF tool](/split-pdf) lets you break a large document into smaller sections. Each section can then be imported into Canva as its own upload.
+
+1. Open the [Split PDF tool](/split-pdf).
+2. Enter the page ranges you want. A 200-page document could become four 50-page files, for example.
+3. Download the parts.
+4. Upload each part to Canva and work on each section as its own project, or combine them at export time.
+
+Splitting also solves the 500-page limit. If your document is under 300 MB but over 500 pages, compression won't help at all. The only path is to divide the file.
+
+## If the PDF was originally exported from Canva
+
+If the PDF you're trying to upload came from a Canva project in the first place, there's a faster fix before compressing or splitting. When you download from Canva, choose **PDF Standard** instead of **PDF Print**.
+
+PDF Print targets 300 DPI for commercial printing and produces much larger files. PDF Standard uses 96 DPI, which is more than enough for screen use, and it cuts the file size significantly. Re-export with Standard selected and try the upload again.
+
+## Which fix to use
+
+| Situation | Best fix |
+|---|---|
+| Image-heavy PDF over 300 MB | Compress with our Compress PDF tool |
+| Text or vector PDF over 300 MB | Split into smaller sections |
+| PDF with more than 500 pages | Split into sections |
+| PDF exported from Canva at Print quality | Re-export from Canva as PDF Standard |
+| PDF over both size and page limits | Split first, then compress if still needed |

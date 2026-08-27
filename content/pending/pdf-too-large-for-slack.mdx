@@ -1,0 +1,84 @@
+---
+title: "PDF Too Large for Slack Attachment: Fix It Free"
+description: "PDF too large for a Slack attachment? The fix depends on what's in the file. Compress scans, split text PDFs, or share a cloud link instead, free."
+date: "2026-08-25"
+keywords: ["pdf too large for slack attachment", "slack pdf file size limit", "compress pdf for slack", "pdf too big for slack", "slack upload pdf limit"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is Slack's file size limit for PDF attachments?"
+    a: "Slack allows files up to 1 GB per upload on every plan, including free. The more common constraint for free workspaces is a 5 GB total storage cap shared across the whole team. Once that fills up, uploads fail regardless of how small the individual file is."
+  - q: "Will compressing my PDF let me upload it to Slack?"
+    a: "It depends on what's in the file. For scanned documents and image-heavy PDFs, compression can cut the size by 65 to 80 percent. For typed documents, invoices, or digital forms, a rasterizing compressor makes the file much larger, not smaller. Only compress PDFs made of images or scanned pages."
+  - q: "How do I compress a PDF for Slack?"
+    a: "Open the Compress PDF tool, upload your file, choose Medium or High compression, and download the result. The file never leaves your browser. Then attach the smaller version in Slack as usual."
+  - q: "My PDF is a typed document and it's too large for Slack. What do I do?"
+    a: "Don't compress it. Compression converts pages to images and makes text PDFs dramatically larger. Instead, use the Split PDF tool to break it into smaller sections you can share separately, or upload the file to Google Drive or Dropbox and paste a link into Slack."
+  - q: "My PDF is under 1 GB but still won't upload to Slack. Why?"
+    a: "If you're on a free Slack plan, the 5 GB total workspace storage cap may be full. When that happens, new uploads fail regardless of file size. Someone on your team needs to delete older files to free up space, or your admin can upgrade to a paid plan."
+---
+
+If your PDF is too large for a Slack attachment, the fix depends on what type of file it is. For scanned documents and image-heavy PDFs, the [Compress PDF tool](/compress-pdf) can shrink it significantly, free, in your browser with no account needed. For typed documents and digital files, compression will actually make them larger. For those, [Split PDF](/split-pdf) is a better option, or you can share a cloud link instead of attaching the file at all.
+
+## What is Slack's file size limit?
+
+[Slack allows files up to 1 GB per upload](https://slack.com/help/articles/201330736-Add-files-to-Slack) on every plan: Free, Pro, Business+, and Enterprise Grid. A typical PDF won't come anywhere near that ceiling.
+
+The more common problem for free workspaces is total storage. Free plans share a 5 GB allowance across the entire team. When that fills up, new uploads fail even if the individual file is small. Check whether the error message says "file too large" versus something about storage being full, because the solutions are different.
+
+## Why your PDF might be too large for Slack
+
+PDFs vary in size for very different reasons, and knowing why yours is large points you toward the right fix.
+
+**Scanned documents.** When you photograph pages with your phone or use a scanner app, each page becomes a high-resolution image. A single scanned page can be 1 to 3 MB at full resolution. A six-page scan can easily hit 10 MB or more, even if the content is just handwritten notes.
+
+**Image-heavy PDFs.** Reports, presentations, and portfolios that include full-bleed photographs or graphics grow large quickly. A few high-resolution photos can push a PDF past 20 or 30 MB.
+
+**Typed or digital documents.** Word documents saved as PDFs, invoices, contracts, and digital forms are usually compact, often under 1 MB for several pages. If one of these is unexpectedly large, the culprit is typically an embedded font package, a high-resolution logo added without resizing, or a photo inserted at print resolution.
+
+## How to fix an image-heavy or scanned PDF: compression
+
+If your PDF contains scanned pages or photos, compression is the right move. The [Compress PDF tool](/compress-pdf) converts each page to a JPEG and re-encodes it at a lower quality setting, which cuts file size significantly for image-based content.
+
+In our own measurements, a 913.4 KB image deck compressed to 315.3 KB at Medium quality (a 65.5% reduction) and to 175.6 KB at High quality (an 80.8% reduction). A 20 MB scanned document would follow a similar pattern: Medium would bring it to roughly 7 MB, High to roughly 4 MB.
+
+How to compress a PDF for Slack:
+
+1. Open the [Compress PDF tool](/compress-pdf). The tool runs in your browser and your file is never sent to any server.
+2. Drag your PDF onto the page, or click to select it.
+3. Pick a compression level. Medium is a good starting point. If the result is still larger than you need, go back to your original file and try High.
+4. Download the compressed file.
+5. Attach it in Slack as normal.
+
+One thing to avoid: don't run the same file through compression twice. Re-compressing an already-compressed PDF at the same quality setting makes it larger. In our testing, a file compressed once at Medium grew by 90% when put through compression a second time at the same level. If Medium isn't enough, start from the original and pick High.
+
+## Do not compress text-based PDFs
+
+Compressing a typed document, a digital invoice, a filled form, or anything that started life as digital text will make it larger, sometimes dramatically.
+
+Text PDFs store characters as [vector data](https://en.wikipedia.org/wiki/Vector_graphics), which is extremely compact. A compressor that rasterizes pages converts those compact characters into a photograph of the page instead, and photographs of text are far heavier than the text itself.
+
+In our testing, a 23.5 KB text report grew to 1.4 MB after compression at Medium quality. That's roughly 60 times larger. Compressing a text PDF that's already pushing Slack's limits would likely make things worse.
+
+If your PDF is a typed document, two alternatives actually help.
+
+## Split the PDF into smaller parts
+
+The [Split PDF tool](/split-pdf) lets you divide a document into separate files by page range. If you have a 50-page report and only need to share one section, you can extract those pages as a standalone file that's a fraction of the original size.
+
+You can also send sections as separate messages if the recipient needs the full document. For most conversations, this is simpler than trying to compress something that won't compress well.
+
+## Share a cloud link instead of attaching
+
+This is often the easiest path for large files. Upload your PDF to Google Drive, Dropbox, or OneDrive, then paste the sharing link into Slack. There's no file size ceiling on a link, the recipient gets the original file with no quality reduction, and it doesn't count against your Slack workspace storage.
+
+For sensitive files, check the sharing settings before you paste the link. Both [Google Drive](https://support.google.com/drive/answer/2494822) and Dropbox let you restrict a link to specific people rather than anyone who has the URL.
+
+## What if the workspace storage is full?
+
+If you're on a free Slack plan and uploads are failing regardless of file size, the 5 GB workspace storage cap may be the issue. The fix is to delete older files from Slack to free up space. Slack doesn't automatically clear files, so someone on your team has to do it manually.
+
+The longer-term solution, if your team shares files regularly, is to use cloud links for everything. Files shared as links don't count against Slack storage at all, so you get the convenience of sharing inside Slack without chewing through the allowance.
+
+## A note on privacy
+
+If the PDF contains sensitive information, such as a legal document, medical record, or financial file, you may prefer not to send it through a third-party service. The [Compress PDF tool](/compress-pdf) and [Split PDF tool](/split-pdf) run entirely in your browser. Your file is never uploaded to any server. Everything happens locally on your device, so you can handle confidential documents without them leaving your machine.
