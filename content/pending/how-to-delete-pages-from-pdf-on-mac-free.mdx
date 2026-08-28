@@ -1,0 +1,101 @@
+---
+title: "How to Delete Pages from a PDF on Mac Free"
+description: "Delete pages from a PDF on Mac for free, no Adobe needed. Use built-in Preview or a free browser tool. No account, no install required."
+date: "2026-08-28"
+keywords: ["how to delete pages from pdf on mac free", "delete pdf pages mac", "remove pages pdf mac free", "delete page pdf preview mac", "mac pdf page remover free"]
+toolSlugs: ["delete-pages", "organize-pdf"]
+faq:
+  - q: "Can I delete pages from a PDF on Mac without Adobe Acrobat?"
+    a: "Yes. Mac's built-in Preview app removes pages for free. If Preview doesn't work for your file, the free browser-based Delete Pages tool handles it with no account or install required."
+  - q: "Why is the Delete key greyed out when I try to remove a page in Preview?"
+    a: "You probably clicked the main document area instead of the thumbnail sidebar. Go to View > Thumbnails, click the small page thumbnail on the left, then press Delete. If it still won't work, the PDF may be password protected."
+  - q: "Can I delete multiple pages from a PDF on Mac at once?"
+    a: "Yes. In Preview, hold Command and click each thumbnail you want to remove, or Shift-click to select a continuous range. Then press Delete to remove all of them in one step."
+  - q: "Should I use File > Save or File > Export as PDF after deleting pages?"
+    a: "Export as PDF writes a fresh file with only the remaining pages, which is the cleaner option. File > Save works too, but Preview's versioning system may keep cached data from the deleted pages in the file."
+  - q: "What if my PDF is password protected and Preview won't let me delete pages?"
+    a: "Encrypted PDFs block editing in Preview. Use the Unlock PDF tool to remove the password first, then open the unlocked file and delete the pages you need."
+---
+
+You can delete pages from a PDF on Mac for free without Adobe Acrobat. The two fastest methods are Mac's built-in Preview app and the free browser-based [Delete Pages tool](/delete-pages), which works in Safari, Chrome, or Firefox with no sign-up.
+
+## How to delete pages from a PDF in Mac Preview
+
+Preview is installed on every Mac and handles basic PDF page removal without any extra software.
+
+1. Double-click your PDF to open it in Preview. If it opens in a different app, right-click the file and choose "Open With > Preview."
+2. Go to **View > Thumbnails** (or press Option + Command + 2) to show the page sidebar on the left.
+3. Click the thumbnail of the page you want to delete. It highlights in blue when selected.
+4. Press the **Delete** key. The page disappears from the sidebar and the remaining pages shift to fill the gap.
+5. Choose **File > Export as PDF** to save the updated document.
+
+That covers the basic case. The sections below handle the most common follow-up questions.
+
+## How to select multiple pages to delete at once
+
+You don't have to remove pages one by one. Preview lets you select several thumbnails at the same time:
+
+- **Non-adjacent pages:** Hold **Command** and click each thumbnail you want to remove.
+- **A continuous range:** Click the first thumbnail in the range, then Shift-click the last one. All pages between them are selected.
+- Once you have the pages selected, press **Delete** to remove them all in one step.
+
+This is useful for stripping out an appendix, clearing blank pages at the end of a scanned document, or removing every other page from a two-sided scan.
+
+## Should you use File > Save or File > Export as PDF?
+
+Both work, but there is a practical difference.
+
+**File > Save** (Command + S) updates the existing file in place. It's fine for most situations. One thing to know: Preview uses a versioning system that can cache prior states of the file. After deleting pages, some people find the file size doesn't drop as much as expected. That's the cache, not a bug.
+
+**File > Export as PDF** writes a fresh file from scratch containing only the pages that remain. It's the cleaner option if you want to be sure no leftover data from the deleted pages stays in the file, and it's what [Apple's official Preview guide](https://support.apple.com/guide/preview/add-delete-or-move-pdf-pages-prvw11793/mac) recommends when you want to save the result as a new file while keeping the original.
+
+If you're sending the file somewhere with a size limit, Export as PDF is the safer choice.
+
+## What if the Delete key is greyed out or does nothing?
+
+This is the most common problem people hit, and the fix is almost always the same: you clicked the main document area rather than the page thumbnail in the sidebar.
+
+Go to **View > Thumbnails** to make sure the sidebar is visible. Then click the small thumbnail on the left side, not the large page view on the right. When a thumbnail is properly selected, it shows a blue highlight. The Delete key should respond now.
+
+If the thumbnail is selected and Delete still does nothing, the PDF is probably restricted. Move on to the next section.
+
+## What if the PDF is password protected?
+
+[Password-protected PDFs](https://en.wikipedia.org/wiki/PDF#Security_and_signatures) block all editing in Preview. When you try to remove a page from a locked file, Preview either disables the option or prompts for a password. If you don't have the owner password, the file won't budge.
+
+The fix is to remove the password first. The [Unlock PDF tool](/unlock-pdf) strips the password from a PDF when you provide the correct one, giving you an unlocked version you can edit freely. Open that unlocked file in Preview and delete the pages you need.
+
+## Using the free Delete Pages tool in your browser
+
+If Preview gives you trouble, or you'd rather not install or save anything locally, the [Delete Pages tool](/delete-pages) runs in any modern browser on your Mac. There's no installation and no account.
+
+1. Open the [Delete Pages tool](/delete-pages).
+2. Click to select your PDF, or drag the file into the tool.
+3. Pick the pages you want to remove.
+4. Download the updated PDF.
+
+Your file is processed in your browser and never sent to a server.
+
+If you want a visual overview of all your pages before deciding what to cut, the [Organize PDF tool](/organize-pdf) shows everything in a grid. You can drag pages to reorder them and remove the ones you don't need, which is easier to work with on long documents.
+
+## One thing to check before deleting pages: form fields
+
+If your PDF has interactive form fields that someone has already filled in, there's an extra step worth knowing about.
+
+When you merge a PDF that has form fields, the merge operation removes the form field structure from the output. The [pdf-lib library used for merging](https://pdf-lib.js.org/) copies page content rather than the document's AcroForm structure, so field data doesn't carry through. If you plan to delete some pages from a form PDF and then combine the remaining pages with another document, flatten the form fields first using the [Flatten PDF tool](/flatten-pdf). Flattening bakes the filled values permanently into the page content so they can't be lost by any downstream step.
+
+You don't need to flatten if you're just deleting pages and sending the file as-is. It only matters when the remaining document still has interactive fields that you intend to merge with something else.
+
+## Preview vs. a browser tool: which should you use?
+
+Use **Preview** when:
+- The PDF is not password protected
+- You're comfortable with the thumbnail sidebar
+- You want to work offline without opening a browser tab
+
+Use the **browser tool** when:
+- Preview is failing on a specific file
+- The file is protected and you've already unlocked it
+- You want a slightly different processing path as a sanity check
+
+Both are free. Neither requires Adobe Acrobat, a subscription, or an account.

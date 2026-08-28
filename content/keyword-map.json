@@ -1996,7 +1996,8 @@
       "targetQuery": "how to delete pages from pdf on mac free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-delete-pages-from-pdf-on-mac-free"
     },
     {
       "id": "blog-split-android",
