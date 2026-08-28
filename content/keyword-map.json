@@ -2037,7 +2037,8 @@
       "targetQuery": "how to merge pdfs without losing quality free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-merge-pdfs-without-losing-quality-free"
     },
     {
       "id": "blog-pdf-reader-dark-mode",
