@@ -2031,7 +2031,8 @@
       "targetQuery": "how to compress pdf for outlook email free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-outlook-email-free"
     },
     {
       "id": "blog-merge-quality",
