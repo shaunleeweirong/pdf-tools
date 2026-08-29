@@ -2093,7 +2093,8 @@
       "targetQuery": "jpg vs pdf which format should i use",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "jpg-vs-pdf-which-format-should-i-use"
     },
     {
       "id": "blog-sign-pdf-google-docs",
