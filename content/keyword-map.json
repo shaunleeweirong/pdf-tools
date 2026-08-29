@@ -1907,7 +1907,8 @@
       "targetQuery": "compress pdf for zoom chat free",
       "intent": "transactional",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-zoom"
     },
     {
       "id": "blog-best-pdf-to-jpg-converter",
@@ -2052,6 +2053,70 @@
       "priority": 2,
       "status": "pending",
       "slug": "best-free-pdf-reader-with-dark-mode-no-sign-up"
+    },
+    {
+      "id": "blog-merge-edge",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf in microsoft edge free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-teachers",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for teachers no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-workday",
+      "surface": "blog",
+      "targetQuery": "pdf file too large for workday upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-repair-corrupted-pdf",
+      "surface": "blog",
+      "targetQuery": "how to repair a corrupted pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-jpg-vs-pdf",
+      "surface": "blog",
+      "targetQuery": "jpg vs pdf which format should i use",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-sign-pdf-google-docs",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf in google docs free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-moodle",
+      "surface": "blog",
+      "targetQuery": "pdf too large for moodle upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-real-estate",
+      "surface": "blog",
+      "targetQuery": "compress pdf for real estate documents free",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
     }
   ]
 }
