@@ -1,0 +1,93 @@
+---
+title: "PDF Too Large for Moodle Upload"
+description: "Moodle's upload limit can be as low as 1 MB on MoodleCloud or much higher at self-hosted schools. Here's how to shrink your PDF and submit your assignment."
+date: "2026-08-30"
+keywords: ["pdf too large for moodle upload", "compress pdf for moodle", "moodle file size limit", "reduce pdf size moodle", "moodle assignment upload limit"]
+toolSlugs: ["compress-pdf", "split-pdf", "extract-pages"]
+faq:
+  - q: "What is Moodle's file size limit for PDFs?"
+    a: "There's no single answer. The limit depends on your school's server settings and Moodle configuration. MoodleCloud defaults to 1 MB site-wide. Self-hosted Moodle installations set their own caps, and most institutions land somewhere between 10 MB and 100 MB. Your instructor or IT help desk can tell you the exact limit."
+  - q: "Will compressing my PDF work for Moodle submission?"
+    a: "Yes, if your PDF contains scanned pages, photos, or other images. Compression can cut file size by 65% or more. If your PDF was exported from Word or Google Docs and has mostly text, compression will likely make it larger, not smaller."
+  - q: "Why does my PDF get bigger after I compress it?"
+    a: "Compression tools rasterize each page into a JPEG image. That process shrinks image-heavy pages dramatically but turns crisp vector text into a photograph of text, which takes far more space. A 20-page typed report can grow from 23.5 KB to 1.4 MB after compression."
+  - q: "Can I submit multiple files on a Moodle assignment?"
+    a: "Only if your instructor allowed multiple file uploads in the assignment settings. Check the assignment page. If multiple uploads are permitted, you can split your PDF into sections and submit each separately."
+  - q: "How do I ask my school to raise the Moodle upload limit?"
+    a: "Email your instructor or the IT help desk and explain what you're submitting. Instructors can raise the limit for their own assignments up to the site maximum. If the site maximum is too low, your IT admin would need to change the server settings."
+  - q: "What if my PDF is still too large after compressing at the highest setting?"
+    a: "Always start from the original file, not the already-compressed output. Compressing twice makes files larger. If High compression still isn't enough, try splitting the PDF into smaller sections, or ask your instructor if they'll accept a cloud link instead."
+---
+
+When your PDF is too large for Moodle, the right fix depends on what's in the file. Scanned pages and photos compress well and can drop by 65% or more in seconds. Typed documents exported from Word or Google Docs usually don't, and running a compressor on them typically makes things worse. This guide covers both cases, plus what to do when the Moodle limit itself is the real problem.
+
+## Why is the Moodle upload limit so low?
+
+Moodle's effective upload limit is actually set in layers, and the most restrictive one wins. Three things interact:
+
+1. **The server's PHP settings.** The hosting server has hard caps in `upload_max_filesize` and `post_max_size`. Nothing Moodle does can allow larger uploads than these allow.
+2. **The site-wide Moodle setting.** Admins set a maximum at the Moodle level, which must be at or below the PHP cap.
+3. **The activity-level setting.** Instructors can set a limit for their specific assignment, but only up to the site maximum.
+
+On **MoodleCloud**, the default site-wide limit is 1 MB, which can catch students off guard because it overrides any higher course-level setting an instructor may have tried to configure. Administrators can raise it up to 250 MB. On **self-hosted Moodle**, the cap depends entirely on what the IT team has configured. Many universities land between 10 MB and 100 MB, with IT support pages typically recommending you aim for files under 10 MB for reliable uploads.
+
+If you're getting an error, the first thing worth doing is checking the assignment page or your school's IT help pages to find the actual limit. That tells you how much you need to reduce the file.
+
+## Why is your PDF so large?
+
+The cause matters, because it points to different fixes.
+
+**Scanned handwritten work or phone photos.** When you scan pages with your phone camera or a scanner app, each page is saved as a high-resolution photograph. Ten pages of handwritten notes at 300 DPI can easily produce a 30 to 80 MB file. The same goes for assignments where you photographed your work and stitched the images into a PDF. These files are image-heavy by nature.
+
+**Typed documents exported from Word or Google Docs.** If you created your assignment on a computer and exported it to PDF, it should be compact unless you included large embedded images. A 20-page essay with no graphics is usually under 200 KB. If your typed document is coming in at several megabytes, there's likely a high-resolution image embedded somewhere, or the PDF contains a lot of vector graphics.
+
+Identifying which situation you're in takes a moment: if you photographed or scanned the pages, it's image-heavy. If you typed it, it's text-based.
+
+## How to compress a scanned PDF for Moodle
+
+If your PDF is made of scanned pages or photos, the [Compress PDF tool](/compress-pdf) is the fastest path to a smaller file. It runs entirely in your browser with no sign-up needed, and your file never gets sent to a server.
+
+In measured testing, a 6-page image deck compressed at the Medium setting went from 913.4 KB to 315.3 KB, a 65.5% reduction. At the High setting, the same file came down to 175.6 KB, an 80.8% reduction. High gives the smallest file but some visual quality loss, so use Medium if your instructor will read handwriting or diagrams closely.
+
+Two things to keep in mind:
+
+- **Always start from your original file.** Running compression twice backfires. In testing, a second Medium pass took a 315.3 KB output back up to 598.9 KB. If Medium isn't enough, go back to the original and try High from the start.
+- **Pick the right level the first time.** If High compression doesn't get you under the limit, the file probably has more pages than the limit allows at any compression level. At that point, splitting is the better move (see below).
+
+## When compression will make your PDF larger
+
+If your PDF came from a word processor like Word, LibreOffice, or Google Docs, don't run it through a compression tool. The tool rasterizes each page into a [JPEG](https://en.wikipedia.org/wiki/JPEG), converting crisp vector text into a photograph of text. In measured testing, a 20-page typed report grew from 23.5 KB to 1.4 MB after a Medium compression pass. That's roughly 60 times the original size.
+
+For typed documents that are unexpectedly large, the real fix is different:
+
+- **Re-export with smaller images.** Open the original document, right-click any large photos or graphics, and compress or resize them. Then export to PDF again. Most word processors let you export at "standard" or "minimum size" quality.
+- **Remove embedded fonts.** Some PDF export settings embed the entire font file. Switching to a common system font before exporting can sometimes shave significant size.
+- **Try a different export setting.** In Word, the "Optimize for: Minimum size (publishing online)" option in the Save As dialog produces a considerably smaller PDF than the default.
+
+## How to split a large PDF into smaller sections
+
+If your file is still too big after compression, or if it's a text-based PDF that doesn't compress well, splitting is the alternative. The [Split PDF tool](/split-pdf) lets you specify page ranges and save each range as a separate, smaller PDF.
+
+This works well for multi-part reports, portfolios, or any submission where the content divides naturally. For example, a 60-page design portfolio might split cleanly into three 20-page sections.
+
+Before submitting in pieces, check whether the Moodle assignment allows multiple file uploads. That's set by the instructor in the assignment settings. If it does allow multiple uploads, you can submit each section as a separate file. If it only accepts one file, this route doesn't work without asking your instructor to change the setting.
+
+If you only need to pull out specific pages from a larger document, the [Extract Pages tool](/extract-pages) lets you choose individual pages and save them as a new, smaller PDF.
+
+## Scan settings to try before you even create the PDF
+
+If you haven't scanned yet, you can prevent the problem. Mobile scanning apps like Microsoft Lens, Apple's built-in document scanner, and Adobe Scan all let you adjust output quality. Scanning at 150 DPI instead of 300 DPI roughly halves the resulting file size with minimal impact on text legibility. Using the app's "document" mode rather than "photo" mode also helps, since it applies contrast adjustments that sharpen text without inflating the image data.
+
+## Asking your instructor or school to raise the limit
+
+If you've compressed and split and you're still hitting a wall, it's worth a quick email. Instructors can raise the file size limit for their own Moodle assignment, up to whatever the site administrator allows. If the assignment doesn't accept multiple uploads, they can enable that setting too.
+
+If the site-wide limit itself is the bottleneck, your school's IT help desk is the right contact. On MoodleCloud, administrators can raise the site limit up to 250 MB. On self-hosted Moodle, IT can adjust the PHP server settings to allow larger uploads. It doesn't hurt to ask, especially for a legitimate large submission like a design portfolio or a lab report with embedded data files.
+
+Alternatively, some instructors are happy to accept a Google Drive or OneDrive link in the submission text box. That's worth checking if the deadline is close and you're still stuck.
+
+## A note on merging files before submission
+
+Some students combine multiple documents into one PDF to submit a single file. Merging works fine and doesn't inflate the file. In testing, combining files totaling 971.9 KB produced an output of 970.5 KB. The size stays essentially the same because shared PDF structure is written just once.
+
+One thing to watch: if you merge a filled PDF form with other documents using the [Merge PDF tool](/merge-pdf), the form fields won't survive the merge. Use the [Flatten PDF tool](/flatten-pdf) first to bake the filled values into the page, then merge. That way the content stays visible even though the fields are gone.

@@ -2114,7 +2114,8 @@
       "targetQuery": "pdf too large for moodle upload",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-too-large-for-moodle-upload"
     },
     {
       "id": "blog-compress-real-estate",
