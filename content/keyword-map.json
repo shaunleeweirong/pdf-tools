@@ -2132,7 +2132,8 @@
       "targetQuery": "best free pdf tools for small business no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "best-free-pdf-tools-for-small-business-no-sign-up"
     },
     {
       "id": "blog-pdf-not-opening-chrome",
