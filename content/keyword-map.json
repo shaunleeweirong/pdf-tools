@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29",
+  "updated": "2026-08-30",
 
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
@@ -1657,7 +1657,8 @@
       "targetQuery": "how to make a pdf fit on one page free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-make-a-pdf-fit-on-one-page-free"
     },
     {
       "id": "blog-pdf-to-jpg-windows-11",
@@ -2123,6 +2124,70 @@
       "targetQuery": "compress pdf for real estate documents free",
       "intent": "transactional",
       "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-tools-small-business",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for small business no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-not-opening-chrome",
+      "surface": "blog",
+      "targetQuery": "pdf not opening in chrome how to fix",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-send-pdf-to-kindle",
+      "surface": "blog",
+      "targetQuery": "how to send pdf to kindle for free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-extract-tables-from-pdf",
+      "surface": "blog",
+      "targetQuery": "how to extract tables from pdf free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-tools-lawyers",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for lawyers no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-pdf-dropbox",
+      "surface": "blog",
+      "targetQuery": "how to combine pdf files in dropbox free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-print-pdf-no-margins",
+      "surface": "blog",
+      "targetQuery": "how to print pdf without white margins free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-flatten-pdf-android",
+      "surface": "blog",
+      "targetQuery": "how to flatten a pdf on android free",
+      "intent": "transactional",
+      "priority": 2,
       "status": "idea"
     }
   ]
