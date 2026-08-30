@@ -1,0 +1,66 @@
+---
+title: "Compress a PDF for Outlook Email (Free, No Upload)"
+description: "Shrink a PDF to fit under Outlook's size limit. Free, in-browser, no sign-up. Includes when compression helps and what to do when it doesn't."
+date: "2026-08-28"
+keywords: ["how to compress pdf for outlook email free", "compress pdf outlook", "reduce pdf size for outlook", "pdf too large for outlook", "outlook attachment size limit"]
+toolSlugs: ["compress-pdf"]
+faq:
+  - q: "What is Outlook's attachment size limit?"
+    a: "Outlook desktop on standard internet accounts (POP3/IMAP) defaults to 20 MB. Outlook.com allows up to 34 MB. Corporate Exchange accounts often cap at 10 MB, set by IT. The effective limit is whichever of the sender's and recipient's servers is lower, so aiming for under 10 MB covers most scenarios."
+  - q: "Will compressing a PDF make it small enough to send in Outlook?"
+    a: "It depends on what's inside the file. Image-heavy PDFs and scanned pages shrink well. A 913.4 KB image deck dropped to 315.3 KB at Medium compression and to 175.6 KB at High in our tests. Text-only PDFs do the opposite: a 20-page text report grew from 23.5 KB to 1.4 MB after compression. If your PDF is mostly text, split it or share it via link instead."
+  - q: "Does compressing a PDF reduce its quality?"
+    a: "The compressor rasterizes every page to JPEG, so images look slightly softer at smaller sizes. Text in a text-heavy PDF becomes an image of text, readable on screen but no longer selectable. For scanned documents this usually doesn't matter. For contracts or reports someone needs to quote from, send the original via a shared link."
+  - q: "Can I compress a PDF twice to make it even smaller?"
+    a: "No. Running the compressed file through a second pass at the same level nearly doubled the size in our tests: 315.3 KB became 598.9 KB. If Medium isn't small enough, start over from the original and choose High instead of chaining passes."
+  - q: "What should I do if the PDF is still too large after compression?"
+    a: "Split the PDF into sections with our Split PDF tool and send each as a separate email. Or upload the original to Google Drive or OneDrive and paste a shared link into your email. Either approach avoids the size cap entirely."
+---
+
+Compressing a PDF for Outlook takes under a minute using the [Compress PDF tool](/compress-pdf). Open the tool in your browser, drop in your file, pick a compression level, and download the result. Nothing is uploaded to a server. No account needed.
+
+That's the quick answer. The important caveat is that compression only works well on certain PDFs. Run the wrong kind through the compressor and you'll end up with a larger file, not a smaller one. Here's how to tell the difference and what to do in each case.
+
+## What is Outlook's attachment size limit?
+
+The limit depends on which version of Outlook you're using, and it's lower than many people expect.
+
+[Microsoft's default for Outlook desktop](https://support.microsoft.com/en-us/office/reduce-attachment-size-to-send-large-files-with-outlook-8c698842-b462-4a4c-8d53-5c5dd04f77ef) on standard internet accounts (POP3 and IMAP) is 20 MB. Outlook.com, the browser version, is more generous at 34 MB. Corporate email accounts running Exchange Server are often set much lower, with 10 MB being a common ceiling that IT departments configure.
+
+There's a catch even when your account allows more: the recipient's server has its own limit, and the lower of the two is what applies. A 25 MB attachment might leave your outbox fine but bounce back when it hits a corporate inbox capped at 10 MB. If you're sending to a client, a school, or any organization you don't control, aim for under 10 MB to avoid the bounce.
+
+## Will compression help your PDF?
+
+This is the most important question to answer before you do anything, and the answer depends on what's inside the file.
+
+**Compression works well on image-heavy PDFs.** Scanned documents, photo decks, and files with large embedded images shrink well. In our measurements, a 6-page image deck went from 913.4 KB to 315.3 KB at Medium compression (65.5% smaller) and to 175.6 KB at High (80.8% smaller). If your PDF came from a scanner, a camera app, or a design program that embedded photos, the compressor is a good choice.
+
+**Compression makes text PDFs larger, not smaller.** A 20-page typed report at 23.5 KB grew to 1.4 MB after compression, nearly 60 times bigger. That's not a bug. The compressor works by rasterizing every page to a [JPEG image](https://en.wikipedia.org/wiki/JPEG). A page of text stored as efficient vector glyphs becomes a photograph of that text, and photographs are far heavier than the original. For a typed report, invoice, or contract, the compressor makes things worse.
+
+Not sure which type of PDF you have? Open it in any PDF viewer and try to select a word with your cursor. If you can highlight individual characters, it's a text PDF and compression will make it bigger. If your cursor draws a selection box over the whole page like you're taking a screenshot, it's a scanned image and compression will help.
+
+## How to compress a PDF for Outlook (step by step)
+
+1. Open the [Compress PDF tool](/compress-pdf) in any browser.
+2. Click **Choose file** or drag your PDF onto the drop zone. The file stays in your browser.
+3. Start with **Medium** compression. It gives a reasonable balance of size and quality.
+4. Click **Compress PDF** and wait a few seconds.
+5. Download the result and check the file size before attaching it to your Outlook email.
+
+If Medium didn't get the file below Outlook's limit, go back to the original file and try **High**. Don't run the compressed version through a second pass. In our tests, compressing an already-compressed file at the same level grew it from 315.3 KB to 598.9 KB. Feeding a JPEG-rasterized page back through the same process adds data rather than removing it. Start fresh from the original each time.
+
+## What if the PDF is still too large?
+
+If the file is still over the limit after High compression, or if compression isn't appropriate for your PDF type, you have a couple of reliable alternatives.
+
+**Split it.** The [Split PDF tool](/split-pdf) lets you divide a document into separate sections. Send each section as its own email, or attach all the parts to one message if their combined size fits. This works for any PDF type and keeps quality exactly as it was.
+
+**Share a link.** Upload the original file to Google Drive, Dropbox, or OneDrive, then paste the share link into your Outlook email. The recipient gets the full-quality file with no size cap involved. This is the most reliable option for large files and is widely accepted in professional contexts.
+
+**Try a ZIP file.** Right-clicking a PDF and choosing "Compress" on Mac or "Send to Compressed folder" on Windows wraps it in a ZIP archive. PDFs are already internally compressed, so this rarely saves more than a few percent, but it can help if you're right at the limit and need a little headroom.
+
+## Does compression affect how the PDF looks in Outlook?
+
+The preview panel in Outlook renders the attachment fine at any compression level. At High compression, photos look slightly softer than at Low, but the difference is subtle at typical screen resolution.
+
+What changes is whether text is selectable. Once a page is rasterized, text becomes a pixel image of text. A reader can still read it, but they can't copy a sentence or search the document. For a scanned receipt or an image-based form, this is usually acceptable. For a contract or a document someone needs to reference, share the original via a link rather than compressing it.

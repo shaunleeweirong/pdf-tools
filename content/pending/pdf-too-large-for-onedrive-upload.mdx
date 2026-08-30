@@ -1,0 +1,99 @@
+---
+title: "PDF Too Large for OneDrive Upload"
+description: "OneDrive's per-file limit is 250 GB, so the real cause is usually a full storage quota or a scanned PDF packed with images. Here's how to fix it fast."
+date: "2026-08-26"
+keywords: ["pdf too large for onedrive upload", "onedrive pdf upload limit", "compress pdf for onedrive", "reduce pdf size onedrive", "onedrive file size limit pdf"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is OneDrive's file size limit for PDFs?"
+    a: "OneDrive accepts individual files up to 250 GB, so the upload cap is almost never the issue. The more common problem is a full storage quota (the free plan gives 5 GB total) or a scanned PDF that's larger than expected."
+  - q: "Why can't I see a preview of my PDF in OneDrive?"
+    a: "OneDrive doesn't generate PDF previews for files larger than 100 MB. The file still uploads and downloads normally, but the thumbnail and inline viewer won't appear. Compressing the PDF below 100 MB restores previews."
+  - q: "Will compressing my PDF fix the OneDrive upload problem?"
+    a: "It depends on what's inside the PDF. If it contains scanned pages or photos, compression can cut the size by 65 to 80%. If it was exported from Word or Google Docs, compression will make it larger, not smaller, because it converts each page to a JPEG image."
+  - q: "How do I compress a scanned PDF for OneDrive without Acrobat?"
+    a: "Use the free Compress PDF tool on this site. It runs entirely in your browser, so your file never gets sent to any server. Drop in the file, pick a quality level, and download."
+  - q: "What if my PDF is still too large after compressing?"
+    a: "Try the High compression setting, but start from the original file. Running compression twice on the same file makes it larger, not smaller. If that's still not enough, split the PDF into smaller sections using the Split PDF tool."
+  - q: "My OneDrive is a work account and I keep getting upload errors. Why?"
+    a: "Company OneDrive for Business accounts can have upload limits configured by an IT administrator, often lower than the 250 GB personal default. Check with your IT team about the SharePoint document library's upload size setting."
+---
+
+When a PDF is too large for OneDrive, the 250 GB per-file upload limit is almost never the reason. Unless you're working with an extraordinary document, your PDF fits inside that cap. The real causes are more mundane: a full storage quota, a scanned document loaded with high-resolution images, or an admin-configured policy on a work account. This guide covers how to figure out which problem you're hitting and what to do about it.
+
+## What OneDrive's actual limits are
+
+[Microsoft raised OneDrive's per-file limit to 250 GB in 2020](https://www.theregister.com/2020/07/02/microsoft_onedrive_upload_limit_100gb/), and that cap applies to both personal and business accounts in 2026. Using a modern browser like Chrome, Edge, Firefox, or Safari, you can upload right up to that limit. Only very old browsers drop it to 300 MB.
+
+There's a separate limit worth knowing: [OneDrive stops generating PDF previews for files over 100 MB](https://support.microsoft.com/en-us/office/restrictions-and-limitations-in-onedrive-and-sharepoint-64883a5d-228e-48f5-b3d2-eb39e07630fa). The file uploads and downloads just fine, but you won't see a thumbnail or the inline viewer. If you're sharing the PDF so a colleague can flip through it without downloading, bringing it under 100 MB is worth doing.
+
+## Is your OneDrive storage quota full?
+
+The most common reason any upload fails on OneDrive is a full quota, not a file size problem.
+
+The free tier gives you 5 GB total. Scanned reports, presentations, and photos fill that up fast. When the quota is full, every upload fails, even a 50 KB file. Go to your OneDrive settings and look at the storage indicator. If it's nearly full, you'll need to either delete files you no longer need or upgrade your plan (Microsoft 365 Personal gets 1 TB, Microsoft 365 Family gets up to 6 TB shared across accounts).
+
+If you're on a work or school account, your admin controls the quota. Contact IT if you're running out of space unexpectedly.
+
+## Why your PDF is large
+
+Not all PDFs get large for the same reason, and the right fix depends on what's inside.
+
+**Scanned pages and phone photos.** If you scanned pages with your phone or a flatbed scanner, each page is essentially a photograph. A 10-page scan at 300 DPI in color can run 15 to 50 MB. A 30-page scanned report can easily break 100 MB. This is the most common reason a PDF ends up too large for a practical upload or preview.
+
+**Embedded high-resolution images.** If a Word or InDesign file had large images in it before someone exported to PDF, those images travel at full resolution. A single 10 MB product photo on a slide adds 10 MB to the final file.
+
+**Text-only PDFs.** These are usually small. A 20-page report with only text typically comes in around 20 to 50 KB. If yours is unexpectedly large, look for an embedded logo at high resolution or a non-standard font with a large character set.
+
+Knowing which type you have determines what to do next.
+
+## How to compress a scanned or image-heavy PDF
+
+For PDFs made of scanned pages, photos, or image-rich slides, compression is the right fix. The [Compress PDF tool](/compress-pdf) runs entirely in your browser. Your file doesn't get uploaded to any server, which matters if the PDF contains private documents, financial records, or personal information.
+
+In testing against a 6-page image deck:
+
+- Medium compression reduced the file from 913.4 KB to 315.3 KB, a 65.5% reduction.
+- High compression (which produces the smallest output) brought it down to 175.6 KB, an 80.8% reduction.
+
+For most OneDrive use cases, Medium is the right call. It keeps the file readable while still cutting the size substantially. If your PDF is a photo album or a reference deck no one will be zooming into, High gets you a smaller file at some cost to image sharpness.
+
+One thing to avoid: running compression a second time. Testing showed that applying Medium compression to an already-compressed file pushed the size from 315.3 KB up to 598.9 KB. Re-encoding a JPEG that's already been through compression adds data rather than removing it. If Medium isn't small enough, go back to your original file and run High from scratch.
+
+## When compression makes things worse
+
+If your PDF was exported from Microsoft Word, Google Docs, or a similar word processor, skip the compression tool. Compression rasterizes each page, turning crisp vector text into a photograph of text. [Vector graphics](https://en.wikipedia.org/wiki/Vector_graphics) store text as mathematical descriptions of letterforms, which are tiny. A photograph of the same text is far larger.
+
+In testing, a 20-page text-only report went from 23.5 KB to 1.4 MB after compression. That's roughly 60 times larger than the original.
+
+For a text-based PDF that's too large for OneDrive, the fix is at the source:
+
+1. Open the original file in Word or Google Docs.
+2. Find any large embedded images and reduce their resolution. In Word, right-click an image and choose "Compress Pictures," then pick "Web" or "Email" quality.
+3. Re-export to PDF. In Word, File > Save As > PDF, and pick "Minimum size" if the option appears. In Google Docs, File > Download > PDF document.
+
+This keeps the text as vector data, and the resulting file will be a fraction of the size.
+
+## How to split a PDF that's still too large
+
+If your PDF is a long report or a collection of documents, splitting it into sections is a clean alternative to compression. The [Split PDF tool](/split-pdf) lets you specify page ranges and export each range as a separate file.
+
+Splitting works especially well when the PDF is logically divided anyway. A 25-chapter report can become 25 smaller PDFs. A portfolio with 60 pages can become three 20-page files. Each section stays well under OneDrive's upload limit and under the 100 MB preview threshold.
+
+To split: open the tool, upload your PDF, set the page ranges you want, and download the results. No account required.
+
+## OneDrive for Business upload limits
+
+If you're on a company or university account, your IT team may have configured tighter limits through SharePoint. The default 250 GB personal cap doesn't always carry over. Some organizations restrict uploads in specific shared drives or document libraries to 250 MB or even lower.
+
+If compression and splitting still don't fix the upload error, the issue may be a policy restriction rather than file size. Ask your IT team what the upload limit is for the drive you're uploading to, and whether it can be raised for your use case.
+
+## Quick summary
+
+The most common reasons a PDF fails to upload to OneDrive:
+
+- **Full storage quota:** Check your usage and free up space or upgrade.
+- **Scanned PDF with heavy images:** Use the [Compress PDF tool](/compress-pdf) at Medium or High. Start from the original if you need to try multiple levels.
+- **Text-based PDF:** Don't compress. Reduce images in the source file and re-export.
+- **File over 100 MB:** Compress or split to restore OneDrive's inline preview.
+- **Work account policy:** Check with your IT team about SharePoint upload limits.

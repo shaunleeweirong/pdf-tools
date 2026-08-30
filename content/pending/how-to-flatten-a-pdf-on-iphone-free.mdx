@@ -1,0 +1,93 @@
+---
+title: "How to Flatten a PDF on iPhone for Free"
+description: "Lock form fields and annotations into your PDF right from iPhone Safari, no app needed. Free, no sign-up, and your file stays on your device."
+date: "2026-08-27"
+keywords: ["how to flatten a pdf on iphone free", "flatten pdf iphone", "flatten pdf ios", "lock pdf form fields iphone", "flatten pdf safari iphone"]
+toolSlugs: ["flatten-pdf", "fill-form", "merge-pdf"]
+faq:
+  - q: "What does it mean to flatten a PDF?"
+    a: "Flattening merges all interactive elements, like form fields, signatures, and annotations, into the static page content. After flattening, nobody can tab through fields or move annotations, because they are no longer separate layers."
+  - q: "Can I flatten a PDF on iPhone without downloading an app?"
+    a: "Yes. Open Safari, visit a browser-based flatten tool, pick your file, and download the result. No app install, no account required."
+  - q: "Does flattening a PDF change the file size?"
+    a: "Usually not by much. Flattening only merges layers, it does not re-compress images or remove pages, so the resulting file stays close in size to the original."
+  - q: "Should I flatten a PDF before merging?"
+    a: "Yes, if it contains filled form fields. When you merge PDFs, the interactive form layer can be lost, taking your filled values with it. Flatten the form first to burn those values into the page, then merge safely."
+  - q: "Is flattening the same as compressing a PDF?"
+    a: "No. Flattening locks interactive elements into the page. Compressing reduces file size by re-encoding images. They're separate operations with different goals, though you can do both."
+---
+
+You can flatten a PDF on your iPhone for free, right in Safari, without installing anything. Open the [Flatten PDF tool](/flatten-pdf), drop in your file, and get a locked copy back in seconds. Form fields, signatures, and annotations get merged into the page permanently, so the document looks the same no matter who opens it or on what device.
+
+## What flattening a PDF actually does
+
+Think of a PDF as a stack of clear sheets. The bottom sheet holds the page content (text, images, background). Layered on top are separate, interactive sheets: one for form fields, one for annotations, one for signatures, one for comments.
+
+Each of those layers can be selected, edited, or removed independently while the document stays "live." Flattening collapses the whole stack into a single sheet, like making a photocopy with everything still in place. The copy shows all the content, but nothing is a separate editable element anymore.
+
+This is exactly why [PDF/A archiving standards](https://pdfa.org/resource/iso-19005-pdfa/) recommend flat documents for long-term storage: a flattened PDF looks identical regardless of which software or device opens it, now or years from now.
+
+## Why flatten before sharing or emailing?
+
+When you email a filled form, the person receiving it can clear your answers, change them, or re-save the file with different values. Once you flatten the PDF, your answers are part of the page content, just like printed text. Nobody can alter them by clicking into a field.
+
+Common situations where flattening matters:
+
+- Submitting a signed application so your signature can't be moved or deleted
+- Sharing an annotated document where your highlights and comments should be permanent
+- Archiving a contract with filled fields baked in, not floating on top
+- Uploading to government portals or courts that require non-interactive PDFs
+
+## Why flatten before merging?
+
+This trips people up. When you combine PDFs with a merge tool, the page content copies across correctly, but the [AcroForm layer](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatlayers/) (the interactive form structure) does not travel with it. If you merge a filled-in job application with a cover letter, your form field values can disappear from the output file. The pages look correct in the preview, but the fields are gone.
+
+The fix is to flatten the filled form first, then merge. Flattening burns your values into the page before merging happens, so there's nothing to lose. Use the [Flatten PDF tool](/flatten-pdf) on the form, then take the result into [Merge PDF](/merge-pdf).
+
+## How to flatten a PDF on iPhone in your browser
+
+This works in Safari, Chrome for iOS, Firefox for iOS, or any modern mobile browser.
+
+1. Open [Flatten PDF](/flatten-pdf) in your browser.
+2. Tap the upload area and choose your PDF from the Files app, Mail, or wherever it lives.
+3. Wait a few seconds while the tool processes your file.
+4. Tap the download button. The flattened PDF saves to your Files app.
+
+Your file doesn't leave your device to reach a remote server. No account, no sign-up.
+
+## The built-in iOS "Print to PDF" method
+
+If you prefer a fully offline approach, iPhone has a native workaround through the print system.
+
+1. Open your PDF in the Files app or in Mail.
+2. Tap the Share button (the box with an arrow pointing up).
+3. Tap Print.
+4. When the print preview appears, use a two-finger pinch-out gesture on the preview thumbnail. The preview opens full-screen.
+5. Tap the Share button again, then tap Save to Files.
+
+This saves a new flat copy of the PDF. It works because iOS renders the print view as a rasterized output, which collapses interactive layers in the process.
+
+One important trade-off: because this method rasterizes the pages (turns them into images), the text in the result is no longer selectable or searchable. If you're submitting a form to an employer or an agency and they just need to see the values, that's fine. If you want the recipient to be able to search or copy text, use the browser tool instead, which preserves real text while merging the interactive layers.
+
+## Flattening vs. other PDF operations
+
+People often mix up flattening with other things:
+
+- **Compressing** shrinks file size by re-encoding images. Flattening doesn't change size in a meaningful way.
+- **Protecting** adds a password so the document can't be opened without it. Flattening removes editability, not access.
+- **Locking** or restricting editing uses PDF permissions flags. That's a security setting; flattening is a structural change.
+- **Converting to JPG** turns every page into a separate image file. The visual result is similar, but it's no longer a PDF.
+
+## Filling a form and then flattening
+
+If you need to fill out the form first and then lock it, try the [Fill PDF Form tool](/fill-form) on your iPhone. Enter your values in each field, download the filled PDF, then run it through [Flatten PDF](/flatten-pdf). Two steps, no app, done.
+
+## Before you flatten: save a copy
+
+Flattening is permanent. There's no way to un-flatten and get the editable fields back. So keep the original version before you start, especially if:
+
+- The form is partially complete and you might need to change an answer
+- You have annotations that others still need to respond to
+- You plan to reuse the same form with different information later
+
+A simple habit: rename the flattened file "formname-flat.pdf" and keep the original as "formname.pdf" in a separate folder. Takes five seconds and saves headaches later.

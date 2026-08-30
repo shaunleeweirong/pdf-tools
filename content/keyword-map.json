@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20",
+  "updated": "2026-08-29",
 
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
@@ -1443,7 +1443,8 @@
       "targetQuery": "how to convert pdf to epub free online",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-epub-free-online"
     },
     {
       "id": "blog-print-booklet",
@@ -1568,7 +1569,8 @@
       "targetQuery": "how to remove header and footer from pdf free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-remove-header-and-footer-from-pdf-free"
     },
     {
       "id": "blog-webp-to-pdf",
@@ -1735,7 +1737,8 @@
       "targetQuery": "how to convert pdf to google slides free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-google-slides-free"
     },
     {
       "id": "blog-google-slides-to-pdf",
@@ -1747,6 +1750,329 @@
       "slug": "how-to-convert-google-slides-to-pdf-free"
     },
     {
+      "id": "blog-compress-200kb",
+      "surface": "blog",
+      "targetQuery": "compress pdf to 200kb free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "pending",
+      "slug": "compress-pdf-to-200kb-free"
+    },
+    {
+      "id": "blog-delete-pages-iphone",
+      "surface": "blog",
+      "targetQuery": "how to delete pages from pdf on iphone free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-delete-pages-from-pdf-on-iphone-free"
+    },
+    {
+      "id": "blog-delete-pages-android",
+      "surface": "blog",
+      "targetQuery": "how to delete pages from pdf on android free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-delete-pages-from-pdf-on-android-free"
+    },
+    {
+      "id": "blog-pdfcandy-alternatives",
+      "surface": "blog",
+      "targetQuery": "pdf candy alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "pdf-candy-alternatives-free-no-sign-up"
+    },
+    {
+      "id": "blog-rotate-pdf-no-upload",
+      "surface": "blog",
+      "targetQuery": "rotate pdf online without uploading free",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "pending",
+      "slug": "rotate-pdf-online-without-uploading-free"
+    },
+    {
+      "id": "blog-best-pdf-tools-students",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for students no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "best-free-pdf-tools-for-students-no-sign-up"
+    },
+    {
+      "id": "blog-add-cover-page-pdf",
+      "surface": "blog",
+      "targetQuery": "how to add a cover page to a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-add-a-cover-page-to-a-pdf-free"
+    },
+    {
+      "id": "blog-stamp-pdf-online",
+      "surface": "blog",
+      "targetQuery": "how to add a stamp to a pdf free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-add-a-stamp-to-a-pdf-free-online"
+    },
+    {
+      "id": "blog-pdf-too-large-indeed",
+      "surface": "blog",
+      "targetQuery": "pdf too large for indeed job application",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "pdf-too-large-for-indeed-job-application"
+    },
+    {
+      "id": "blog-split-pdf-by-chapter",
+      "surface": "blog",
+      "targetQuery": "how to split pdf by chapter free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-annotator",
+      "surface": "blog",
+      "targetQuery": "best free pdf annotator online no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "best-free-pdf-annotator-online-no-sign-up"
+    },
+    {
+      "id": "blog-pdf-too-large-canva",
+      "surface": "blog",
+      "targetQuery": "pdf too large for canva upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "pdf-too-large-for-canva-upload"
+    },
+    {
+      "id": "blog-compress-telegram",
+      "surface": "blog",
+      "targetQuery": "compress pdf for telegram free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "compress-pdf-for-telegram"
+    },
+    {
+      "id": "blog-pdf-too-large-slack",
+      "surface": "blog",
+      "targetQuery": "pdf too large for slack attachment",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "pdf-too-large-for-slack"
+    },
+    {
+      "id": "blog-compress-dropbox",
+      "surface": "blog",
+      "targetQuery": "compress pdf for dropbox upload free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "compress-pdf-for-dropbox-free"
+    },
+    {
+      "id": "blog-pdf-too-large-onedrive",
+      "surface": "blog",
+      "targetQuery": "pdf too large for onedrive upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "pdf-too-large-for-onedrive-upload"
+    },
+    {
+      "id": "blog-flatten-before-merging",
+      "surface": "blog",
+      "targetQuery": "do i need to flatten pdf before merging",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "do-i-need-to-flatten-pdf-before-merging"
+    },
+    {
+      "id": "blog-compress-zoom",
+      "surface": "blog",
+      "targetQuery": "compress pdf for zoom chat free",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "pending",
+      "slug": "compress-pdf-for-zoom"
+    },
+    {
+      "id": "blog-best-pdf-to-jpg-converter",
+      "surface": "blog",
+      "targetQuery": "best free pdf to jpg converter no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "best-free-pdf-to-jpg-converter-no-sign-up"
+    },
+    {
+      "id": "blog-google-docs-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to save google docs as pdf free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-save-google-docs-as-pdf-free"
+    },
+    {
+      "id": "blog-what-does-flatten-pdf-mean",
+      "surface": "blog",
+      "targetQuery": "what does flatten a pdf mean",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "what-does-flatten-a-pdf-mean"
+    },
+    {
+      "id": "blog-find-replace-text-pdf",
+      "surface": "blog",
+      "targetQuery": "how to find and replace text in a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-find-and-replace-text-in-a-pdf-free"
+    },
+    {
+      "id": "blog-pdf-not-printing-correctly",
+      "surface": "blog",
+      "targetQuery": "pdf not printing correctly how to fix",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "pdf-not-printing-correctly-how-to-fix"
+    },
+    {
+      "id": "blog-flatten-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "how to flatten a pdf on iphone free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-flatten-a-pdf-on-iphone-free"
+    },
+    {
+      "id": "blog-split-pdf-windows",
+      "surface": "blog",
+      "targetQuery": "how to split a pdf on windows free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-split-a-pdf-on-windows-free"
+    },
+    {
+      "id": "blog-reduce-pdf-pages",
+      "surface": "blog",
+      "targetQuery": "how to reduce the number of pages in a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-reduce-the-number-of-pages-in-a-pdf-free"
+    },
+    {
+      "id": "blog-sign-chromebook",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf on chromebook free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-sign-a-pdf-on-chromebook-free"
+    },
+    {
+      "id": "blog-delete-pages-mac",
+      "surface": "blog",
+      "targetQuery": "how to delete pages from pdf on mac free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-delete-pages-from-pdf-on-mac-free"
+    },
+    {
+      "id": "blog-split-android",
+      "surface": "blog",
+      "targetQuery": "how to split a pdf on android free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-split-a-pdf-on-android-free"
+    },
+    {
+      "id": "blog-fill-form-android",
+      "surface": "blog",
+      "targetQuery": "how to fill out a pdf form on android free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-fill-out-a-pdf-form-on-android-free"
+    },
+    {
+      "id": "blog-best-pdf-excel",
+      "surface": "blog",
+      "targetQuery": "best free pdf to excel converter online no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "best-free-pdf-to-excel-converter-online-no-sign-up"
+    },
+    {
+      "id": "blog-compress-outlook",
+      "surface": "blog",
+      "targetQuery": "how to compress pdf for outlook email free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "compress-pdf-for-outlook-email-free"
+    },
+    {
+      "id": "blog-merge-quality",
+      "surface": "blog",
+      "targetQuery": "how to merge pdfs without losing quality free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-merge-pdfs-without-losing-quality-free"
+    },
+    {
+      "id": "blog-pdf-reader-dark-mode",
+      "surface": "blog",
+      "targetQuery": "best free pdf reader with dark mode no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "pending",
+      "slug": "best-free-pdf-reader-with-dark-mode-no-sign-up"
+    },
+    {
+      "id": "blog-merge-edge",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf in microsoft edge free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-merge-pdf-in-microsoft-edge-free"
+    },
+    {
+      "id": "blog-best-pdf-teachers",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for teachers no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "best-free-pdf-tools-for-teachers-no-sign-up"
+    },
+    {
       "id": "blog-pdf-too-large-workday",
       "surface": "blog",
       "targetQuery": "pdf file too large for workday upload",
@@ -1754,6 +2080,49 @@
       "priority": 2,
       "status": "pending",
       "slug": "pdf-too-large-for-workday-upload"
+    },
+    {
+      "id": "blog-repair-corrupted-pdf",
+      "surface": "blog",
+      "targetQuery": "how to repair a corrupted pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-repair-a-corrupted-pdf-free"
+    },
+    {
+      "id": "blog-jpg-vs-pdf",
+      "surface": "blog",
+      "targetQuery": "jpg vs pdf which format should i use",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "jpg-vs-pdf-which-format-should-i-use"
+    },
+    {
+      "id": "blog-sign-pdf-google-docs",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf in google docs free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-sign-a-pdf-in-google-docs-free"
+    },
+    {
+      "id": "blog-pdf-too-large-moodle",
+      "surface": "blog",
+      "targetQuery": "pdf too large for moodle upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-real-estate",
+      "surface": "blog",
+      "targetQuery": "compress pdf for real estate documents free",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
     }
   ]
 }

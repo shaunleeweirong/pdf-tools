@@ -1,0 +1,108 @@
+---
+title: "How to Split a PDF on Windows Free"
+description: "Split a PDF on Windows without Adobe Acrobat. Use Edge's built-in print trick, our free browser Split PDF tool, or PDFsam Basic for advanced splits."
+date: "2026-08-27"
+keywords:
+  - "how to split a pdf on windows free"
+  - "split pdf windows 10"
+  - "split pdf windows 11"
+  - "split pdf without adobe windows"
+  - "extract pages from pdf windows"
+  - "separate pdf pages windows free"
+toolSlugs:
+  - "split-pdf"
+  - "extract-pages"
+faq:
+  - q: "Can I split a PDF on Windows without installing anything?"
+    a: "Yes. Open the PDF in Microsoft Edge, press Ctrl+P, set the printer to Microsoft Print to PDF, enter the page range, and click Print. This method is built into every Windows 10 and 11 machine."
+  - q: "How do I split a PDF into individual pages on Windows?"
+    a: "Use the Split PDF tool at /split-pdf or PDFsam Basic (free download, open-source). Both support splitting every page into its own file. The Edge print trick requires one print job per page, so it gets tedious beyond a few pages."
+  - q: "Does splitting a PDF reduce quality?"
+    a: "No. Splitting copies pages into a new file without re-encoding them. Text stays sharp, images keep their original resolution, and the resulting files are as clean as the pages in the original."
+  - q: "Can I split a password-protected PDF on Windows?"
+    a: "You need to remove the password first. Use the Unlock PDF tool at /unlock-pdf with the current password, then split the resulting file."
+  - q: "What is the difference between Split PDF and Extract Pages?"
+    a: "Split PDF divides a file into parts by page range. Extract Pages lets you pick individual pages by clicking thumbnails and saves just those pages as a new PDF. Both are free at /split-pdf and /extract-pages."
+---
+
+You can split a PDF on Windows for free without Adobe Acrobat or any paid software. The fastest built-in method uses Microsoft Edge, which ships pre-installed on every Windows 10 and 11 machine. For custom page ranges or splitting a file into many parts at once, a free browser-based tool handles it without uploading anything to a server.
+
+## Method 1: Microsoft Edge and Microsoft Print to PDF
+
+Windows comes with two built-in pieces that work as a basic splitting tool: [Microsoft Edge](https://support.microsoft.com/en-us/topic/microsoft-edge-browser-help-0eed9e53-25bb-4ed1-e413-ba764d0e5555) opens PDFs and the [Microsoft Print to PDF](https://support.microsoft.com/en-us/windows/print-to-pdf-in-windows-b4c7a2a4-7c74-4dce-9eff-78bad9c9a975) driver saves any print job as a PDF file. Together they let you extract any page range without a third-party app.
+
+**Steps:**
+
+1. Right-click your PDF and choose **Open with > Microsoft Edge**.
+2. Press **Ctrl+P** to open the Print dialog.
+3. In the **Printer** dropdown, select **Microsoft Print to PDF**.
+4. Under **Pages**, choose **Custom** and type the range you need. For example:
+   - `1-5` for the first five pages
+   - `3,7,12` for three non-consecutive pages
+   - `6-10` for a specific chapter or section
+5. Click **Print**, choose a save location, and name the file.
+
+Repeat for each section you want as a separate file. That's the main limit of this method: one print job produces one output file. If you need to cut a 30-page report into six parts, you'll run through these steps six times. For an occasional split, that's fine. For anything more repetitive, one of the tools below is quicker.
+
+## Method 2: Use the free Split PDF tool (your file stays local)
+
+The [Split PDF tool](/split-pdf) runs entirely in your browser. Your file stays on your device throughout and is never sent to a server, which matters when you're handling contracts, medical records, or confidential documents.
+
+**Steps:**
+
+1. Open the [Split PDF tool](/split-pdf) in any modern browser (Chrome, Edge, Firefox).
+2. Drop your PDF onto the page.
+3. Enter the page range you want for each output file.
+4. Click **Split** and download the result.
+
+This handles multiple ranges in one pass and works with files of any length, all without installing anything. It's the right pick when the Edge print trick would require too many repetitions.
+
+If you want to pick individual pages rather than a contiguous range, the [Extract Pages tool](/extract-pages) lets you see thumbnails of every page and click the ones you want before saving them as a new PDF.
+
+Need to rearrange or delete pages rather than split the file? The [Organize PDF tool](/organize-pdf) shows all pages as thumbnails and lets you drag them into a new order or remove the ones you don't need.
+
+## Method 3: PDFsam Basic for advanced splitting
+
+[PDFsam Basic](https://pdfsam.org/pdfsam-basic/) is a free, [open-source](https://github.com/torakiki/pdfsam) desktop application for Windows (also Mac and Linux). It handles splitting modes that neither Edge nor a browser tool supports:
+
+- **Split after every N pages** (divide a long scan into equal-length chapters)
+- **Split by bookmarks** (each top-level bookmark becomes a separate file)
+- **Burst** (one file per page, auto-named by page number)
+
+Install PDFsam Basic from the official site and choose the "Basic" edition, which is free. Open it, pick **Split** from the sidebar, load your PDF, choose a split mode, set an output folder, and click **Run**.
+
+PDFsam is worth the one-time install if you work with PDFs often and need bookmark-based splitting or automatic batch output that the browser tools don't offer.
+
+## Which method should I use?
+
+| Situation | Best method |
+|---|---|
+| One quick extraction, no install | Edge + Microsoft Print to PDF |
+| Multiple ranges at once, no upload | [Split PDF tool](/split-pdf) |
+| Pick individual pages by eye | [Extract Pages tool](/extract-pages) |
+| Split by bookmarks or fixed intervals | PDFsam Basic |
+| Rearrange or remove pages | [Organize PDF tool](/organize-pdf) |
+
+## Splitting a PDF into individual pages
+
+All three methods can do this, with different levels of effort:
+
+- **Edge print trick:** Type each page number as a separate custom range and print one at a time. Works, but becomes tedious for more than a handful of pages.
+- **Split PDF tool:** Set the split to one page per file before downloading.
+- **PDFsam Basic:** Choose "Burst" mode. It names and saves each page automatically with no manual repetition.
+
+For a 20-page document that needs to become 20 separate files, PDFsam Basic's burst mode is the most practical free choice on Windows.
+
+## Does splitting a PDF change the quality?
+
+No. The [PDF format](https://en.wikipedia.org/wiki/PDF) stores each page as an independent object inside the file. Splitting copies those objects into a new file without re-rendering anything. Text stays as vector text (crisp at any zoom level), images keep their original resolution, and the size of each split file is roughly proportional to the pages it contains.
+
+One caveat: if your PDF has interactive form fields and you plan to merge the pieces back together later, those fields won't survive the merge. If you've filled in a form and want the values permanently embedded in the page, run the form through the [Flatten PDF tool](/flatten-pdf) before splitting or merging. Flattening bakes the entered values into the page content so nothing gets lost.
+
+## What if the PDF is password-protected?
+
+If you get an error when trying to split, the file may be restricted. [PDF security can block editing operations](https://en.wikipedia.org/wiki/PDF#Encryption_and_access_privileges), including splitting, even without an open password. You'll need to remove that restriction first. The [Unlock PDF tool](/unlock-pdf) handles this with the current password, and you can split the resulting file without issues.
+
+## Putting pieces back together
+
+If you split a file into parts to share separately and later need to rejoin them, the [Merge PDF tool](/merge-pdf) combines files in any order you choose. Merging doesn't inflate the output: the combined file comes in at roughly the same size as the parts added together.
