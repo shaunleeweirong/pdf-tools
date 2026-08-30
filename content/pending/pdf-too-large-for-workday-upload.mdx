@@ -1,0 +1,93 @@
+---
+title: "PDF Too Large for Workday Upload: 5 Fixes That Work"
+description: "Workday caps resume and document uploads at 5 MB. Here's how to get under the limit based on what's actually inside your PDF."
+date: "2026-08-30"
+keywords: ["pdf file too large for workday upload", "workday pdf upload limit", "workday resume too large", "reduce pdf size workday", "workday file size limit"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is Workday's file size limit for PDF uploads?"
+    a: "Most Workday installations cap uploads at 5 MB. Employer-specific configurations sometimes set it lower, at 2 MB or even 1 MB. The error message usually says 'file exceeds size limit' or 'file is too large.'"
+  - q: "Will compressing my resume PDF make it smaller?"
+    a: "It depends on what is inside your resume. If your resume is mostly text with no embedded images, compressors that rasterize pages to JPEG will actually make the file bigger, not smaller. Compression works well on PDFs that already contain photos or scanned pages."
+  - q: "Will Workday accept a Word document instead of a PDF?"
+    a: "Yes. Most Workday job applications accept .docx files. A plain Word document is often under 200 KB, well inside any upload limit. If your resume PDF is oversized, exporting a fresh copy from Word is often the fastest fix."
+  - q: "Does removing pages help with the Workday upload limit?"
+    a: "Yes. Splitting out only the pages you need is one of the cleanest fixes, especially for multi-page documents. A one-page resume that was converted from a multi-page template can shed a lot of size just by removing the blank or unused pages."
+  - q: "My PDF has scanned pages. Will compression help?"
+    a: "Yes. Scanned pages are images, and compression can shrink them substantially. An in-browser compressor reduced a 913 KB image-heavy PDF to 315 KB at Medium quality, which is well under any Workday limit."
+---
+
+Getting a "file too large" error when uploading a PDF to Workday is a common problem, and the right fix depends on what's inside your file. If you have a **pdf file too large for workday upload**, you can usually get it under the limit in two or three minutes with the right approach.
+
+## What Workday's upload limit actually is
+
+Most Workday recruiting portals cap document uploads at [5 MB](https://www.profileops.com/en/blog/resume-file-size-ats). Some employers configure the limit lower, at 2 MB or 1 MB, so the error can appear even on files that feel small to you. Workday doesn't publish a single universal number because each employer's implementation is configured separately.
+
+The 5 MB cap applies to resumes, cover letters, and supporting documents uploaded through the candidate-facing portal. Internal HR document uploads (like uploading to an employee record) may have different limits depending on which Workday module your company uses.
+
+## Why your PDF is too large
+
+A few things commonly inflate a PDF past Workday's limit:
+
+- **Embedded images or a photo on the resume.** A headshot or company logo stored at high resolution can add several megabytes by itself.
+- **A design-heavy resume template.** Templates that use gradients, background images, or decorative shapes often embed raster graphics that bloat the file.
+- **Scanned pages.** If you scanned a signed document or printed and scanned a resume, every page is stored as a photo, which takes up far more space than text.
+- **Exported from a presentation tool.** Canva, Google Slides, and PowerPoint exports pack pages as images. A three-page Canva resume can easily hit 10 to 20 MB.
+- **Embedded fonts.** Some design tools embed the full font file rather than just the characters used, which adds size even to text-only pages.
+
+## Step one: figure out what kind of PDF you have
+
+This matters more than most guides admit, because the right fix is completely different depending on the answer.
+
+**Open your PDF and try to select some text.** If you can highlight words on the page, you have a text-based PDF. If clicking anywhere on the page just selects the whole page (or nothing), your PDF is image-based (usually a scan or a Canva/Slides export).
+
+- **Text-based PDF** (most resumes exported from Word, Google Docs, or Apple Pages): compressing will likely make the file bigger, not smaller. More on why below. Use the other fixes instead.
+- **Image-based or scanned PDF**: compression can help a lot. A 913 KB image-heavy PDF shrank to 315 KB at Medium quality using our tool. That's a 65% reduction from a single step.
+
+## Fix 1: Compress scanned or image-heavy PDFs
+
+If your PDF is a scan, a Canva export, or a document with lots of embedded photos, the [Compress PDF](/compress-pdf) tool is the fastest fix. Open the file, pick Medium quality (a good balance of size and legibility), and download. No account needed, and the file never leaves your browser.
+
+One note: if Medium compression isn't enough, run the original file through High compression rather than compressing the same file twice. Running a second pass on an already-compressed file makes it bigger, not smaller.
+
+## Fix 2: For text-only resumes, skip compression
+
+If you can select text in your PDF, an in-browser compressor that rasterizes pages to JPEG will convert your crisp text into a photo of text. That process inflates a text PDF dramatically rather than shrinking it. The right fixes for a text-heavy PDF are different:
+
+**Export a fresh copy from your word processor.** Open the original .docx or Google Doc and export it directly to PDF. Word and Google Docs produce very lean PDFs, typically under 200 KB for a one-page resume with no images. This is the single most effective fix if your source file still exists.
+
+**Remove the headshot.** If your resume template includes a profile photo, delete it before exporting. A single 200 dpi headshot can add 300 to 500 KB to an otherwise small file.
+
+**Switch to a simpler template.** Design-heavy templates use background images and decorative graphics that balloon the file size. A clean, single-column resume in a basic template will almost always come in under 500 KB.
+
+**Upload as .docx instead.** Workday accepts Word documents in most cases. A .docx version of the same content is usually a fraction of the size of a PDF. If you have the original Word file, try uploading that directly.
+
+## Fix 3: Split out only the pages you need
+
+If you have a multi-page document and Workday only needs part of it, you can pull out the relevant pages with the [Split PDF](/split-pdf) tool. Open the file, select the page range you want to keep, and download. This is especially useful for HR documents or portfolios where you're submitting a subset of a larger file.
+
+For resumes, this also handles a common problem: some resume builders export a five-page template even if you only filled in two pages, leaving three blank pages that add unnecessary bulk.
+
+## Fix 4: Export from the original source if you can
+
+If your resume or document was created in Google Docs, Word, Pages, or any other desktop app, going back to the source and exporting a fresh PDF will almost always produce a smaller file than trying to compress an existing PDF. File export from a word processor generates lean, vector-based PDFs that are a fraction of the size of a scan or a design-tool export.
+
+If you no longer have the source file and your PDF is text-based, you can sometimes recover a workable version by copying the text into a blank Google Doc and reformatting it, then exporting that as PDF.
+
+## Fix 5: Check whether Workday accepts a link
+
+Some Workday job applications include a field for a LinkedIn URL or portfolio link as an alternative to a file upload. If your document is truly too complex to compress without quality loss (a detailed portfolio, for example), attaching a link to a cloud-hosted version can be a practical workaround.
+
+For resumes specifically, this is not a great substitute since Workday parsers extract contact information and work history from the uploaded file. But for supporting documents like writing samples or design portfolios, a link is often cleaner than a heavily compressed PDF.
+
+## How to get the file ready
+
+Here's the quick checklist before your next upload attempt:
+
+1. Try selecting text in the PDF. If you can, skip compression and export a fresh copy from your source app.
+2. If you can't select text (scanned or image-based), open it in the [Compress PDF](/compress-pdf) tool and try Medium quality first.
+3. If the file is still over the limit, use [Split PDF](/split-pdf) to remove any pages you don't need.
+4. If you have the source file, export a new PDF from there and skip the compressor entirely.
+5. As a last resort, upload a .docx version if the application allows it.
+
+Most resume PDFs that hit Workday's limit get there because of an embedded image or an overly complex template, not because of long content. Fixing the source is faster and safer than compressing a file that's mostly text.
