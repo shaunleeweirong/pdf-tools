@@ -2204,7 +2204,8 @@
       "targetQuery": "pdf vs docx which format is better for sharing documents",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-vs-docx-which-format-is-better-for-sharing"
     },
     {
       "id": "blog-best-pdf-viewer-linux",
