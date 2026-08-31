@@ -2150,7 +2150,8 @@
       "targetQuery": "how to send pdf to kindle for free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-send-pdf-to-kindle-for-free"
     },
     {
       "id": "blog-extract-tables-from-pdf",
