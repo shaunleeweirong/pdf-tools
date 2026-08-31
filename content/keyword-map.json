@@ -2124,7 +2124,8 @@
       "targetQuery": "compress pdf for real estate documents free",
       "intent": "transactional",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-real-estate-documents-free"
     },
     {
       "id": "blog-best-pdf-tools-small-business",
@@ -2196,6 +2197,70 @@
       "priority": 2,
       "status": "pending",
       "slug": "how-to-flatten-a-pdf-on-android-free"
+    },
+    {
+      "id": "blog-pdf-vs-docx",
+      "surface": "blog",
+      "targetQuery": "pdf vs docx which format is better for sharing documents",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-viewer-linux",
+      "surface": "blog",
+      "targetQuery": "best free pdf viewer for linux no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-present-pdf-slideshow",
+      "surface": "blog",
+      "targetQuery": "how to present a pdf as a slideshow free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-add-toc-pdf",
+      "surface": "blog",
+      "targetQuery": "how to add a table of contents to a pdf free online",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-make-pdf-accessible",
+      "surface": "blog",
+      "targetQuery": "how to make a pdf accessible for screen readers free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-csv",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to csv free online",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-number-pages-roman-numerals",
+      "surface": "blog",
+      "targetQuery": "how to add roman numeral page numbers to pdf free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-pdf-shared-drive",
+      "surface": "blog",
+      "targetQuery": "compress pdf for shared drive upload free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
