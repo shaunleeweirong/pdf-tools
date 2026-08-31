@@ -1,0 +1,103 @@
+---
+title: "How to Extract Tables From PDF Free Online"
+description: "Four free methods to pull table data out of a PDF, from browser copy-paste to Tabula, including what to do when your PDF is a scanned image."
+date: "2026-08-31"
+keywords:
+  - "how to extract tables from pdf free online"
+  - "extract table from pdf"
+  - "pdf table to excel free"
+  - "pdf table to csv"
+  - "tabula pdf extract"
+toolSlugs:
+  - "extract-pages"
+  - "pdf-to-jpg"
+faq:
+  - q: "Can Tabula extract tables from scanned PDFs?"
+    a: "No. Tabula only reads text-based PDFs where the text layer is embedded. If your PDF is scanned, Tabula returns nothing. You need an image-based approach first."
+  - q: "What's the fastest free way to extract a table from a PDF?"
+    a: "Open the PDF in your browser, select the table text, copy it, and paste into Google Sheets or Excel. No account or download needed, and it works instantly for text-based PDFs."
+  - q: "How do I extract a table from a scanned PDF for free?"
+    a: "Use a PDF-to-JPG tool to convert the page to an image, then paste the image into Google Sheets. Recent versions of Sheets can convert a pasted image of a table into editable cells."
+  - q: "Does extracting a table change the original PDF?"
+    a: "No. All of these methods read the PDF without modifying it. Your original file stays exactly as it was."
+  - q: "Are online PDF table extractors safe for confidential documents?"
+    a: "Most upload your file to a third-party server. For sensitive documents, use a local tool like Tabula or the browser copy-paste method, which keep the file on your machine."
+---
+
+Extracting tables from a PDF free online is straightforward when the PDF has selectable text, and it takes one extra step when the PDF is a scan. The method that works for you depends on how the PDF was made. Below are four approaches, ordered from quickest to most involved.
+
+## First, figure out what type of PDF you have
+
+Open the PDF in Chrome or Firefox and try to click and drag over the table. If the cursor selects individual words and characters, the PDF is text-based and the first three methods will all work. If the whole page behaves like one locked image and nothing highlights, the PDF is scanned and you'll need Method 4.
+
+This matters because text-based PDFs embed the actual characters with their positions on the page. Scanned PDFs are raster images with no text at all, so any tool that reads the text layer will come back empty.
+
+## Method 1: Copy and paste from your browser
+
+This is the fastest approach, and it works for many tables without installing anything.
+
+1. Open the PDF in Chrome, Firefox, or Edge.
+2. Click and drag to select the table cells you want.
+3. Press Ctrl+C (or Cmd+C on Mac).
+4. Open Google Sheets or Excel and press Ctrl+V.
+5. Check that columns landed correctly and clean up stray spaces.
+
+Results vary. A simple table with clear column separators often pastes with its structure intact. Tables with merged cells, inconsistent spacing, or multi-line rows sometimes collapse into a single column. If the paste looks wrong, Tabula (Method 2) handles complex tables much more cleanly.
+
+Try this first because it costs nothing and takes about thirty seconds.
+
+## Method 2: Tabula, the best free tool for text-based PDFs
+
+[Tabula](https://tabula.technology/) is a free, open-source app built specifically for pulling tables out of PDFs into CSV or Excel. It runs entirely on your computer, so your files never touch a third-party server.
+
+How to use it:
+
+1. Download Tabula from tabula.technology. Java is required.
+2. Open Tabula in your browser. It runs as a local web app at localhost, not on an external server.
+3. Upload your PDF into Tabula.
+4. Click and drag to draw a selection box around the table.
+5. Click "Preview & Export," choose CSV or XLS, and download.
+
+Tabula shows a preview before you export, so you can confirm the rows and columns came through correctly. If the first attempt misses part of the table, you can draw multiple boxes on the same page and export them together.
+
+One firm limit: Tabula reads the embedded text layer. If the PDF is scanned, there is no text layer, and Tabula returns an empty result. For scanned documents, skip to Method 4.
+
+## Method 3: Google Drive and Google Docs
+
+If the PDF is already in Google Drive, or if you'd rather not install anything, this path can get you a workable table quickly.
+
+1. Upload the PDF to Google Drive.
+2. Right-click the file and choose "Open with > Google Docs."
+3. Google converts the PDF to a Doc. Tables in text-based PDFs usually carry over with their structure.
+4. Select and copy the table from the Doc.
+5. Paste it into Google Sheets.
+
+The conversion isn't perfect. PDFs with complex multi-column layouts or unusual fonts sometimes come through scrambled. For a straightforward data table from a report or spreadsheet export, it usually works well enough without any extra tools.
+
+## Method 4: Convert to image first (for scanned PDFs)
+
+Scanned PDFs are images. The table you can see on screen is painted pixels, not text, so every extraction tool that reads a text layer will get nothing. The workaround is to convert the page to an image and use a tool that can recognize table structure from a picture.
+
+Here's the free workflow:
+
+1. If the table is buried in a longer document, use the [Extract Pages tool](/extract-pages) to save just the page you need as a new PDF. This keeps the file small and focused.
+2. Convert that page to a JPG with the [PDF to JPG tool](/pdf-to-jpg).
+3. Open Google Sheets. Go to Insert > Image > Insert image in cell, or simply paste the image into the spreadsheet.
+4. In current versions of Google Sheets, after inserting an image you may see an option to import the data as a table. Results depend on how clean and high-resolution the scan is.
+
+For low-quality scans or complex table structures, a dedicated OCR service will do better than Sheets alone. The Google Docs method from above also works sometimes for scanned PDFs, since Drive runs its own OCR when opening an image-based PDF as a Doc.
+
+## Which method fits your situation?
+
+| Situation | Best free approach |
+|---|---|
+| Text-based PDF, simple table | Copy-paste from browser |
+| Text-based PDF, complex multi-column table | Tabula |
+| PDF already in Google Drive | Open with Google Docs |
+| Scanned or image-based PDF | Extract page, convert to JPG, import into Sheets |
+
+## A word on third-party websites
+
+Several websites offer one-click table extraction and genuinely work for many cases. The catch is that most upload your file to a remote server, cap free pages per day, or both. For documents containing personal details, financial data, or anything confidential, it's worth using Tabula or the copy-paste method, since both keep your file on your own computer. The [PDF to JPG tool](/pdf-to-jpg) and [Extract Pages tool](/extract-pages) also run entirely in your browser, with no upload to a server.
+
+If you do use an online service for non-sensitive files, check its privacy policy before uploading. Many free tools monetize by processing the documents they receive, which is worth knowing before you send anything private.
