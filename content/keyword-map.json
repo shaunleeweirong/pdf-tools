@@ -2213,7 +2213,8 @@
       "targetQuery": "best free pdf viewer for linux no sign up",
       "intent": "commercial",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "best-free-pdf-viewer-for-linux-no-sign-up"
     },
     {
       "id": "blog-present-pdf-slideshow",
