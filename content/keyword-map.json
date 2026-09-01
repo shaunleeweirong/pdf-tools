@@ -1623,7 +1623,8 @@
       "targetQuery": "how to invert pdf colors for dark mode free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-invert-pdf-colors-for-dark-mode-free"
     },
     {
       "id": "blog-strip-pdf-metadata",
