@@ -1649,7 +1649,8 @@
       "targetQuery": "how to overlay two pdf files free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-overlay-two-pdf-files-free"
     },
     {
       "id": "blog-fit-on-one-page",

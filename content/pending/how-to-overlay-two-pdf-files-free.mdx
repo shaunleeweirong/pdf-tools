@@ -1,0 +1,100 @@
+---
+title: "How to Overlay Two PDF Files Free"
+description: "Overlay two PDFs so both contents appear on the same pages. Learn the difference from merging, free browser tools with no upload, and when a simpler tool does the job."
+date: "2026-09-01"
+keywords: ["overlay two pdf files", "overlay pdf free", "layer two pdfs together", "superimpose pdf", "pdf overlay online"]
+toolSlugs: ["merge-pdf", "watermark-pdf", "flatten-pdf", "compare-pdf"]
+faq:
+  - q: "What is PDF overlay?"
+    a: "PDF overlay places one PDF on top of another so both documents' content appears on each page simultaneously. It's different from merging, which adds pages in sequence to make a longer document."
+  - q: "Is overlaying PDFs the same as merging them?"
+    a: "No. Merging stacks pages end-to-end, so a 5-page and a 3-page PDF become an 8-page document. Overlay places both sets of pages on top of each other, so you end up with content from both files visible on the same pages."
+  - q: "Can I overlay PDFs without uploading them to a server?"
+    a: "Yes. Browser-based tools like CustomizedPDF process everything locally in your browser. Your files are never sent to a server, which matters for confidential documents."
+  - q: "What's the difference between overlay and a watermark?"
+    a: "A watermark tool stamps text (like 'DRAFT' or 'CONFIDENTIAL') across every page. An overlay tool places a full PDF, which can contain any content, on top of another PDF page by page."
+  - q: "What if my two PDFs have different page counts?"
+    a: "Most overlay tools either repeat the shorter document's pages to match the longer one, or stop at the last page of the shorter document. Check the tool's settings to confirm which behavior it uses."
+---
+
+To overlay two PDF files, you place one document on top of the other so both documents' content appears together on each page. That's a different operation from merging, which adds pages end-to-end. If you've searched for an overlay tool and kept finding merge tools instead, that confusion is common, and this guide will sort it out.
+
+## Overlay vs. merge: the key difference
+
+Merging two PDFs stacks their pages sequentially. A 5-page document merged with a 3-page document gives you an 8-page document.
+
+Overlaying two PDFs puts both documents' content on the same pages. A 5-page document overlaid with a 5-page letterhead gives you a 5-page document where every page shows content from both files simultaneously.
+
+Here's a quick way to picture it: imagine printing two documents on transparencies and holding one over the other. You can see through both at once. That's overlay.
+
+| Action | Input | Output |
+|---|---|---|
+| Merge | 5-page + 5-page | 10-page document |
+| Overlay | 5-page + 5-page | 5-page document, both visible |
+
+Our [Merge PDF tool](/merge-pdf) handles the sequential case. For true overlay (layering), you need a dedicated overlay tool, covered below.
+
+## When you'd actually need overlay
+
+Overlay is the right tool for a few specific situations:
+
+**Letterhead**: Your company letterhead exists as a separate one-page PDF. You want it applied to every page of a proposal or report so the final output looks branded throughout.
+
+**Stamp from a PDF**: You have a "REVIEWED" stamp or approval graphic saved as a PDF and want to place it on every page of a document. A text watermark tool can't reproduce a graphic stamp, but overlay can.
+
+**Blueprint comparison**: Engineers and architects sometimes overlay an old drawing with a revised version to see exactly what changed. (If that's your goal, also check out our [Compare PDF tool](/compare-pdf), which highlights differences without actually merging content.)
+
+**Form backgrounds**: A blank form template serves as the background PDF; scanned handwritten data goes on top as the overlay.
+
+## Free tools that do PDF overlay
+
+### CustomizedPDF (browser-based, files never leave your device)
+
+CustomizedPDF runs entirely in your browser using JavaScript. Nothing is uploaded to a server. For contracts, medical records, or anything else you'd rather not hand to a third-party service, this is worth the extra step of finding it.
+
+1. Open customizedpdf.com/pdf-overlay.html in your browser.
+2. Click to load the base PDF (the document you want to apply the overlay to).
+3. Load the overlay PDF (the content to place on top, such as a letterhead or stamp).
+4. Adjust opacity if you want the overlay to show through partially.
+5. Click to generate and then download the result.
+
+The tool handles multi-page documents. A single-page overlay (like a letterhead) gets repeated across all pages of the base document.
+
+### PDF24 Overlay
+
+PDF24 is a German-based free tool suite with a solid track record. Its overlay tool is at tools.pdf24.org/en/overlay-pdf.
+
+1. Open the overlay tool and upload your base PDF.
+2. Upload the overlay PDF.
+3. Choose which should be on top.
+4. Download the result.
+
+PDF24 processes files on its servers, so read their privacy policy if you're working with sensitive documents. For most everyday tasks it's a perfectly good choice.
+
+### Adobe Acrobat Pro (paid, but already on many office computers)
+
+If your workplace has Acrobat Pro, you can overlay PDFs through the Watermark menu. In Acrobat, go to Edit, then Watermark, then Add, and choose a PDF as the source instead of entering text or an image. This works particularly well for multi-page letterheads. Acrobat is not free, but a lot of organizations already license it.
+
+## When you don't actually need overlay
+
+Overlay is the right tool, but it's often not what people need once they understand the options.
+
+**Adding a text watermark**: If you just want to stamp text like "CONFIDENTIAL" or "DRAFT" across every page, our [Watermark PDF tool](/watermark-pdf) does exactly that. No overlay needed.
+
+**Combining pages in sequence**: If you want a cover page, then a report, then an appendix, that's a merge. Our [Merge PDF tool](/merge-pdf) does this, and merging doesn't inflate file size. In our testing, inputs totalling 971.9 KB merged to an output of 970.5 KB.
+
+**Merging a filled form with other documents**: One important thing to know about merging: it strips interactive form fields. If you've filled out a PDF form and want to merge it with a cover letter, flatten the form first with our [Flatten PDF tool](/flatten-pdf). Flattening bakes the filled-in values into the page as static content, so nothing is lost when you merge. Skip this step and the filled values may disappear from the merged output.
+
+## A note on multi-page overlays
+
+The [PDF specification](https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf) doesn't define a standard overlay operation. Each tool implements its own approach, which means results can vary slightly between services. If you overlay a 3-page letterhead onto a 10-page report, one tool might repeat the letterhead pages in a loop while another applies the first letterhead page to all 10 pages of the report. Test with a sample before committing to a tool for a large batch.
+
+The [PDF Association](https://pdfa.org) maintains documentation on PDF standards and the technical underpinnings of how content streams work, which is useful context if you're building an overlay workflow into a larger process.
+
+## Choosing the right tool for your situation
+
+- Both documents' content on the same page: use CustomizedPDF or PDF24 Overlay.
+- Text stamp across every page: use the [Watermark PDF tool](/watermark-pdf).
+- Pages combined in sequence: use the [Merge PDF tool](/merge-pdf).
+- Visual comparison of two PDFs: use the [Compare PDF tool](/compare-pdf).
+- Filled form needs to be merged safely: use the [Flatten PDF tool](/flatten-pdf) first, then merge.
