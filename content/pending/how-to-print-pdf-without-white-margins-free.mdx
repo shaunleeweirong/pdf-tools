@@ -1,0 +1,92 @@
+---
+title: "Print PDF Without White Margins: 4 Free Methods"
+description: "Remove white borders when printing a PDF. Crop the file, use your browser, or pick a borderless paper size. Free, no software to install."
+date: "2026-09-01"
+keywords: ["how to print pdf without white margins free", "print pdf borderless", "remove white margins pdf", "print pdf no border", "print pdf without margins"]
+toolSlugs: ["crop-pdf"]
+faq:
+  - q: "Why does my PDF have a white border when I print?"
+    a: "Two things cause it: white space baked into the PDF file itself, or margins added by your printer driver. The fix depends on which one it is. Check whether the white space is visible in a PDF viewer before deciding."
+  - q: "How do I print a PDF without margins in Chrome?"
+    a: "Open the PDF in Chrome, press Ctrl+P (or Cmd+P on Mac), click More settings, set Margins to None, and keep Scale at 100%. This removes the margins Chrome adds, not any blank space already inside the file."
+  - q: "Do I need a special printer for borderless PDF printing?"
+    a: "Only if the content goes all the way to the page edge. If the white space is padding inside the PDF, cropping it out works on any printer. True edge-to-edge printing (ink reaching paper edges) requires borderless-capable printer hardware."
+  - q: "Will cropping a PDF change the text or images?"
+    a: "No. Cropping removes blank padding around the content. The text, images, and layout are not affected."
+  - q: "Can I print a PDF without white margins on Mac for free?"
+    a: "Yes. Open the PDF in Preview, go to File > Print, click Show Details, then choose a paper size labeled '(borderless)' in the Paper Size dropdown. If your printer supports it, that option will be there."
+---
+
+Printing a PDF without white margins comes down to one question: is the white space part of the PDF file, or is the printer adding it? The answer changes which fix to use. Both are free and take under a minute once you know where the margin is coming from.
+
+## Why your PDF prints with white borders
+
+There are two separate problems that look the same on paper:
+
+**White space inside the PDF.** The PDF's page dimensions include blank area around the actual content. The printer is reproducing the file faithfully, white space and all. Changing printer settings won't help.
+
+**Margins added by the printer driver.** Most printers physically cannot print all the way to the paper edge. [Consumer inkjet and laser printers typically leave 3 to 5 mm unprintable around the border](https://en.wikipedia.org/wiki/Inkjet_printing) because the paper feed mechanism needs to grip the sheet somewhere.
+
+A fast way to tell them apart: open the PDF in any viewer and look at whether the content reaches the edge of the page canvas. If there's visible blank space in the viewer, the margin is inside the file. If the content looks edge-to-edge but prints with a border, your printer is adding it.
+
+## Method 1: Crop the white space out of the PDF (works on any printer)
+
+If the margin is part of the file, you need to remove it before printing. This is the most reliable fix because it works regardless of whether your printer supports borderless printing.
+
+Use the [Crop PDF tool](/crop-pdf) to trim the margins directly in your browser:
+
+1. Open the [Crop PDF tool](/crop-pdf) and drop your file onto the page.
+2. Drag the crop handles inward on each side until they sit flush with your actual content.
+3. Apply the crop to all pages if the margin runs through the whole document.
+4. Download the result.
+5. Print normally.
+
+The text and images are not touched. Only the blank padding around them is trimmed. After printing, the content will reach much closer to the paper edge, limited only by your printer's minimum unprintable zone.
+
+## Method 2: Set margins to None in Chrome or Edge
+
+If you're printing a PDF that's open in a browser tab, the browser adds its own margins on top of whatever is in the file. You can turn those off:
+
+1. Open the PDF in Chrome or Edge.
+2. Press **Ctrl+P** on Windows or **Cmd+P** on Mac.
+3. Click **More settings**.
+4. Set **Margins** to **None**.
+5. Set **Scale** to **100%** so the content isn't shrunk.
+6. Print.
+
+This only removes the margins the browser adds. If there's still a visible white border after this, the white space is inside the PDF file, and Method 1 is the next step.
+
+## Method 3: Mac Preview borderless printing
+
+[Mac Preview](https://support.apple.com/guide/preview/print-a-document-or-image-prvw1007/mac) supports borderless paper sizes when your printer offers them:
+
+1. Open the PDF in Preview.
+2. Go to **File > Print**.
+3. Click **Show Details** if the full options panel isn't showing.
+4. Open the **Paper Size** dropdown.
+5. Look for a size with **(borderless)** next to the name, like "US Letter (borderless)".
+6. Select it and print.
+
+If no borderless option appears in the list, your printer driver hasn't registered that capability. Cropping the PDF first (Method 1) and then printing normally is the practical alternative.
+
+## Method 4: Windows printer settings
+
+Windows doesn't have one universal borderless checkbox, but there are a few places to look:
+
+**Browser print dialog.** If the PDF is open in Chrome or Edge, follow Method 2. It handles the margins those browsers add.
+
+**Printer properties.** Open your print dialog, then click **Printer Properties** or **More settings > Printer properties**. Look for a Borderless or Full-bleed option on the Layout or Paper/Quality tab. This varies by manufacturer and model, so check your printer's documentation if nothing obvious appears.
+
+**Fit and scale.** As a workaround when nothing else is available, some people scale up slightly (105 to 110%) in the Windows print dialog to push content past the default margins. That clips a thin strip off the edges, so it's not a clean solution, but it can work for content where the edges aren't critical.
+
+## Which fix to use
+
+| What you see | What to do |
+|---|---|
+| White space visible in a PDF viewer | Crop the PDF first, then print normally |
+| Content looks edge-to-edge in a viewer but prints with a border | Adjust printer settings (Methods 2, 3, or 4) |
+| Both | Crop the file, then also use borderless settings |
+
+For most people, the margin is part of the file, not the printer. Cropping it takes about 30 seconds and means you don't need to rely on borderless printer support at all. True borderless printing, where ink reaches the physical paper edge, requires hardware support that most standard office printers don't include for letter or A4 paper.
+
+If your goal is to print a scanned document or photo that fills the entire page, check whether the scan itself has blank space around it first. Running it through the [Crop PDF tool](/crop-pdf) before printing is the step most guides skip, and it's usually all you need.
