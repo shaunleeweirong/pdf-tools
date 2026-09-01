@@ -1839,7 +1839,8 @@
       "targetQuery": "how to split pdf by chapter free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-split-pdf-by-chapter-free"
     },
     {
       "id": "blog-best-pdf-annotator",
