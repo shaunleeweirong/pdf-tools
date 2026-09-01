@@ -1,0 +1,89 @@
+---
+title: "Combine PDF Files in Dropbox Free"
+description: "Two ways to merge PDFs stored in Dropbox, including the built-in editor and a no-login browser option that keeps files off any server."
+date: "2026-08-31"
+keywords: ["how to combine pdf files in dropbox free", "merge pdf dropbox", "combine pdf dropbox", "combine pdf files dropbox"]
+toolSlugs: ["merge-pdf", "flatten-pdf"]
+faq:
+  - q: "Does Dropbox let you merge PDFs for free?"
+    a: "Yes. Dropbox includes a built-in PDF editor that can combine files. You need a Dropbox account to use it, but basic merging is included in the free plan."
+  - q: "Can I merge PDFs from Dropbox without logging into Dropbox?"
+    a: "Yes. Download the files to your device, merge them using a browser-based tool like the Merge PDF tool on this site, then re-upload the result. No Dropbox login needed for the merge step itself."
+  - q: "Will merging PDF files change the file size?"
+    a: "Barely. Combining two or more PDFs doesn't inflate the output. The result comes out close to the sum of the source files, because merging copies pages rather than re-encoding them."
+  - q: "What happens to form fields when I merge PDFs?"
+    a: "Most merge tools strip interactive form fields from the output. Flatten any filled forms before merging so the field values are baked into the page and survive the combine step."
+  - q: "Do I need to download anything to combine PDFs from Dropbox?"
+    a: "No. Both Dropbox's built-in editor and browser-based tools like Merge PDF work entirely in your browser, with no desktop app or plugin to install."
+---
+
+Combining PDF files stored in Dropbox is free, and you can do it without installing anything. Dropbox has its own PDF editor for this, and if you'd rather skip the Dropbox login, you can download the files, merge them in a browser tool, and re-upload the result in under a minute.
+
+This guide walks through both approaches so you can pick whichever fits your situation.
+
+## Does Dropbox have a built-in PDF merge tool?
+
+Yes. Dropbox includes a PDF editor that lets you insert pages from one file into another. It's available on the free Dropbox plan, though you do need to be logged into your account to use it.
+
+The editor works in your browser. There's nothing to install, and the combined file can be saved directly back to your Dropbox storage.
+
+## How to merge PDFs using Dropbox's built-in editor
+
+1. Open [Dropbox](https://www.dropbox.com) and sign into your account.
+2. Click **+ Create** in the left sidebar, then choose **Edit**, then **PDF**. (On some versions of the interface, you'll see an **Edit PDF** shortcut under the search bar instead.)
+3. Select the first PDF you want in the merged result. It opens in the PDF editor.
+4. Click **Insert Page** inside the editor, then choose the second PDF from your Dropbox files or your device.
+5. Repeat for any additional files. Reorder pages by dragging if needed.
+6. Click **Save**. Dropbox saves the combined file to your storage.
+
+You can download the result by right-clicking the file in Dropbox and choosing **Download**.
+
+One limitation: Dropbox's editor is a page-by-page tool, not a batch combiner. It works well for two or three short documents. For longer files or more than a few PDFs, a dedicated merge tool is faster.
+
+## How to merge PDFs from Dropbox without a Dropbox login
+
+If you're on a shared device, working quickly, or just don't want to use Dropbox's editor, download the files first and merge them in a browser-based tool:
+
+1. Open Dropbox in your browser (or the desktop app) and find the PDFs.
+2. Right-click each file and choose **Download** (or hold Shift, select multiple files, and download them as a zip, then unzip).
+3. Go to the [Merge PDF](/merge-pdf) tool. No account needed.
+4. Upload the files and arrange them in the order you want.
+5. Click **Merge**, then download the combined PDF.
+6. Drag the new file into your Dropbox folder or upload it from the Dropbox web interface.
+
+The whole process runs in your browser. Files aren't sent to a server.
+
+This approach also gives you more control over page order. You can rearrange individual files in the upload queue before combining.
+
+## What happens to the file size?
+
+Not much. Combining PDFs doesn't inflate the output. In testing, three source files totaling 971.9 KB merged to 970.5 KB. The difference is negligible, well under 0.2%. You won't suddenly end up with a file twice the size of your originals.
+
+If the combined file is still larger than you need (for email, say), compress it after merging, starting from the original files at the compression level you need. [Gmail and Outlook both cap attachments at 25 MB](https://support.google.com/mail/answer/6584), and because Base64 encoding adds roughly 33%, the practical ceiling for an email attachment is around 18 MB. Don't compress before merging. The order doesn't help, and it adds an extra step with no benefit.
+
+## What about form fields?
+
+If any of the PDFs contain interactive form fields (text boxes, checkboxes, signature fields), flatten them before merging. Most merge tools, including our [Merge PDF](/merge-pdf) tool, strip form fields from the output as part of the combine process. The page content stays, but text typed into form boxes can disappear when the fields are removed.
+
+Flattening bakes the values into the page as static content, so nothing is lost during the merge. Use the [Flatten PDF](/flatten-pdf) tool on each filled form, then combine the flattened copies. This step matters most for things like filled job application forms or signed documents.
+
+## Does merging damage content or reduce quality?
+
+No. A PDF merge copies page content from each source file into the new document without re-rendering or re-encoding anything. [PDF files store pages as self-contained content streams](https://en.wikipedia.org/wiki/PDF), and merging at the page level pulls those streams across intact. Text stays as text, images stay at their original resolution, and formatting is preserved exactly as it appeared in each source file.
+
+The things that can get stripped are document-level structures: AcroForm fields (as covered above), bookmarks, and sometimes annotations like comments or highlights. If preserving those matters, flatten or export first.
+
+## Which approach should you use?
+
+**Use Dropbox's built-in editor if:**
+- You're already signed into Dropbox.
+- You're combining two or three short documents.
+- You want the result saved directly to Dropbox without a separate download.
+
+**Use a browser tool like [Merge PDF](/merge-pdf) if:**
+- You're not signed into Dropbox or you're on a shared device.
+- You're combining more than a few files, or the documents are long.
+- You want more control over page order before merging.
+- You'd rather files not touch any cloud service during the merge step, since the browser tool processes everything locally.
+
+Either way, the result is the same: one PDF ready to share, email, or drop back into Dropbox.

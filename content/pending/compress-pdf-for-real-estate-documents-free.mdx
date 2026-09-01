@@ -1,0 +1,89 @@
+---
+title: "How to Compress Real Estate PDFs for Free"
+description: "Compress inspection reports, listing brochures, and appraisals in your browser. Free, no sign-up. Know which files to compress and which to leave alone."
+date: "2026-08-31"
+keywords: ["compress pdf for real estate documents free", "compress inspection report pdf", "real estate pdf too large", "reduce pdf size real estate", "compress appraisal pdf"]
+toolSlugs: ["compress-pdf", "merge-pdf", "protect-pdf", "split-pdf"]
+faq:
+  - q: "Which real estate PDFs can I compress?"
+    a: "Photo-heavy files like inspection reports, listing brochures, and appraisals with site photos compress very well. Text-heavy files like contracts, disclosures, and title reports will get much larger if you try to compress them."
+  - q: "Will compressing a PDF damage the photos in an inspection report?"
+    a: "At Medium quality, photos stay legible for on-screen review and standard printing. At High quality (smallest file), images look slightly softer but still readable. Choose High when you need to meet a strict portal size limit."
+  - q: "What is the file size limit for emailing a real estate PDF?"
+    a: "Gmail and Outlook both cap attachments at 25 MB. Because email encodes files in Base64, which adds about 33% overhead, the practical safe ceiling is around 18 MB."
+  - q: "Does compressing a PDF twice make it smaller?"
+    a: "No. Running a compressed PDF through a second pass at the same quality makes it bigger. If Medium quality is not small enough, go back to the original file and run it at High instead."
+  - q: "Can I compress a signed real estate contract?"
+    a: "Skip it. Text-based PDFs get dramatically larger when compressed because the tool rasterizes each page into an image. A 150 KB disclosure form can balloon past 1 MB. Use compression only on photo-heavy files."
+---
+
+## Which real estate PDFs compress well (and which don't)
+
+Compressing a PDF for real estate works beautifully on inspection reports and listing brochures, but it can ruin a contract. You need to know which is which before you start. The [Compress PDF tool](/compress-pdf) rasterizes every page to a JPEG image. That's great when a page is already a photograph and genuinely harmful when a page is text.
+
+**Compress these:**
+- Home inspection reports (dozens of embedded camera photos)
+- Property appraisals with site photos and comparable sale photos
+- Listing brochures with full-resolution property images
+- Environmental or structural reports with aerial photos or maps
+- Photo addenda attached to disclosure packages
+
+**Leave these alone:**
+- Purchase agreements and addenda
+- Title reports and settlement statements
+- Disclosure forms (text fields, signatures)
+- Lease agreements and property management contracts
+- HOA documents and CC&Rs
+
+If you're not sure what's in the file, look at how it was created. A PDF generated from Word or a web form is almost always text-based. A PDF exported from inspection software or a photo tool is almost always image-heavy.
+
+## Why real estate PDFs get so large
+
+A 45-page home inspection report can hit 20 MB or more. The cause is almost always embedded photos. Inspection platforms like [HomeGauge](https://www.homegauge.com/) and Spectora export photos at whatever resolution the inspector's camera used, sometimes 3 to 5 MB per image. Multiply that by dozens of shots of the roof, electrical panel, plumbing, and HVAC system, and the total adds up fast.
+
+Listing brochures made in design tools have the same issue: property photos inserted at full resolution without any resizing.
+
+That's the specific problem compression solves. An image-heavy PDF typically shrinks 65% to 80%. In testing, a 6-page photo deck dropped from 913.4 KB to 315.3 KB at Medium quality and to 175.6 KB at High quality. A full inspection report in the 15 to 20 MB range could realistically land around 3 to 7 MB after compression, well within most email and portal limits.
+
+## What file size limits apply to real estate documents?
+
+[Gmail and Outlook both cap attachments at 25 MB](https://support.google.com/mail/answer/6584), but Base64 encoding, which is how email transmits attachments, adds about 33% overhead. That makes the practical ceiling around 18 MB for what you can reliably send as an email attachment.
+
+MLS portals and transaction management platforms often set their own limits. Many cap document uploads at 10 MB per file. Some limit individual photos separately. It's worth checking the specific platform's documentation before you share a large package.
+
+## How to compress a real estate PDF for free
+
+1. Open the [Compress PDF tool](/compress-pdf) in your browser.
+2. Click the upload area or drag your inspection report, appraisal, or listing brochure onto it.
+3. Pick a compression level. Medium is a good starting point. High gives a smaller result if you need to meet a strict size cap.
+4. Click compress, then download the result.
+
+No account required. The file processes in your browser, so the document never leaves your device.
+
+## Which compression level to choose
+
+**Low (best quality):** The file shrinks the least. Use this only if you're printing at large format and need maximum sharpness. For most emailing or uploading purposes, it doesn't help enough.
+
+**Medium:** A strong balance of size reduction and readable photos. Photos stay legible for email, on-screen review, and standard 8.5x11 printing. A good default for inspection reports going to a buyer.
+
+**High (smallest file):** The most aggressive option. Photos look softer at close inspection but remain clear enough for review. Use this when a portal has a strict 10 MB cap and Medium doesn't get you there.
+
+One rule to keep: do not compress a file twice. Running the compressed output through a second pass at Medium quality actually makes it bigger, not smaller. If Medium is not small enough, start fresh from the original file and choose High.
+
+## When compression isn't enough
+
+Some inspection reports are simply too long. A 120-page report with hundreds of photos may still exceed 10 MB even after High compression. A few options in that case:
+
+**Split the report.** Use the [Split PDF tool](/split-pdf) to break it into a narrative section and a photo appendix, then upload them as separate files. Many platforms accept multiple documents per transaction.
+
+**Remove photos before export.** Most inspection software lets you delete blurry or duplicate photos before generating the PDF. Removing five photos can shave several megabytes.
+
+**Share a link.** Upload the original to Google Drive, Dropbox, or your transaction management system and share the link instead of attaching the file. This also lets the recipient access the latest version if you update the report.
+
+If the recipient needs everything in a single document later, you can recombine compressed sections with the [Merge PDF tool](/merge-pdf). The merged output stays close to the sum of its parts in size, so you won't add significant bulk by combining them.
+
+## What about protecting sensitive disclosures?
+
+If you're emailing a signed agreement or a disclosure form, consider adding a password first. The [Protect PDF tool](/protect-pdf) adds [AES-256 encryption](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) in your browser, with no upload to an external server. Encryption adds only about 1 KB of overhead to a file, so it has no practical effect on whether the document fits under a size limit.
+
+To be clear: this is for the text-heavy documents (contracts, disclosures) that you should not compress. Compress the photo-heavy reports, protect the sensitive text documents, and you're set for most real estate workflows.

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29",
+  "updated": "2026-09-01",
 
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
@@ -1623,7 +1623,8 @@
       "targetQuery": "how to invert pdf colors for dark mode free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-invert-pdf-colors-for-dark-mode-free"
     },
     {
       "id": "blog-strip-pdf-metadata",
@@ -1658,7 +1659,8 @@
       "targetQuery": "how to make a pdf fit on one page free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-make-a-pdf-fit-on-one-page-free"
     },
     {
       "id": "blog-pdf-to-jpg-windows-11",
@@ -2115,7 +2117,8 @@
       "targetQuery": "pdf too large for moodle upload",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-too-large-for-moodle-upload"
     },
     {
       "id": "blog-compress-real-estate",
@@ -2123,7 +2126,146 @@
       "targetQuery": "compress pdf for real estate documents free",
       "intent": "transactional",
       "priority": 3,
+      "status": "pending",
+      "slug": "compress-pdf-for-real-estate-documents-free"
+    },
+    {
+      "id": "blog-best-pdf-tools-small-business",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for small business no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "best-free-pdf-tools-for-small-business-no-sign-up"
+    },
+    {
+      "id": "blog-pdf-not-opening-chrome",
+      "surface": "blog",
+      "targetQuery": "pdf not opening in chrome how to fix",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "pdf-not-opening-in-chrome-how-to-fix"
+    },
+    {
+      "id": "blog-send-pdf-to-kindle",
+      "surface": "blog",
+      "targetQuery": "how to send pdf to kindle for free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-send-pdf-to-kindle-for-free"
+    },
+    {
+      "id": "blog-extract-tables-from-pdf",
+      "surface": "blog",
+      "targetQuery": "how to extract tables from pdf free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-extract-tables-from-pdf-free-online"
+    },
+    {
+      "id": "blog-best-pdf-tools-lawyers",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for lawyers no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "best-free-pdf-tools-for-lawyers-no-sign-up"
+    },
+    {
+      "id": "blog-merge-pdf-dropbox",
+      "surface": "blog",
+      "targetQuery": "how to combine pdf files in dropbox free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-combine-pdf-files-in-dropbox-free"
+    },
+    {
+      "id": "blog-print-pdf-no-margins",
+      "surface": "blog",
+      "targetQuery": "how to print pdf without white margins free",
+      "intent": "informational",
+      "priority": 3,
       "status": "idea"
+    },
+    {
+      "id": "blog-flatten-pdf-android",
+      "surface": "blog",
+      "targetQuery": "how to flatten a pdf on android free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-flatten-a-pdf-on-android-free"
+    },
+    {
+      "id": "blog-pdf-vs-docx",
+      "surface": "blog",
+      "targetQuery": "pdf vs docx which format is better for sharing documents",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "pdf-vs-docx-which-format-is-better-for-sharing"
+    },
+    {
+      "id": "blog-best-pdf-viewer-linux",
+      "surface": "blog",
+      "targetQuery": "best free pdf viewer for linux no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "pending",
+      "slug": "best-free-pdf-viewer-for-linux-no-sign-up"
+    },
+    {
+      "id": "blog-present-pdf-slideshow",
+      "surface": "blog",
+      "targetQuery": "how to present a pdf as a slideshow free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-add-toc-pdf",
+      "surface": "blog",
+      "targetQuery": "how to add a table of contents to a pdf free online",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-make-pdf-accessible",
+      "surface": "blog",
+      "targetQuery": "how to make a pdf accessible for screen readers free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-csv",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to csv free online",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-number-pages-roman-numerals",
+      "surface": "blog",
+      "targetQuery": "how to add roman numeral page numbers to pdf free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-pdf-shared-drive",
+      "surface": "blog",
+      "targetQuery": "compress pdf for shared drive upload free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "compress-pdf-for-shared-drive"
     }
   ]
 }
