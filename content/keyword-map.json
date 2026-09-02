@@ -2309,7 +2309,8 @@
       "targetQuery": "how to combine scanned pages into one pdf free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "combine-scanned-pages-into-one-pdf-free"
     },
     {
       "id": "blog-pdf-too-large-icloud",
