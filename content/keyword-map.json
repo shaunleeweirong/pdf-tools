@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-01",
+  "updated": "2026-09-02",
 
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
@@ -2268,6 +2268,71 @@
       "priority": 2,
       "status": "pending",
       "slug": "compress-pdf-for-shared-drive"
+    },
+    {
+      "id": "blog-pdfelement-alternatives",
+      "surface": "blog",
+      "targetQuery": "pdfelement alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "pdfelement-alternatives-free-no-sign-up"
+    },
+    {
+      "id": "blog-open-pdf-without-adobe",
+      "surface": "blog",
+      "targetQuery": "how to open a pdf without adobe free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-reader-ipad",
+      "surface": "blog",
+      "targetQuery": "best free pdf reader for ipad no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-not-loading-browser",
+      "surface": "blog",
+      "targetQuery": "pdf not loading in browser how to fix",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-combine-scanned-pages",
+      "surface": "blog",
+      "targetQuery": "how to combine scanned pages into one pdf free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-icloud",
+      "surface": "blog",
+      "targetQuery": "pdf file too large for icloud drive upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-tools-accountants",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for accountants no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-view-pdfs-side-by-side",
+      "surface": "blog",
+      "targetQuery": "how to view two pdf files side by side free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
     }
   ]
 }
