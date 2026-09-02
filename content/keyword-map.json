@@ -2284,7 +2284,8 @@
       "targetQuery": "how to open a pdf without adobe free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-open-a-pdf-without-adobe-free"
     },
     {
       "id": "blog-best-pdf-reader-ipad",
