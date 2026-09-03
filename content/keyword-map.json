@@ -2320,7 +2320,8 @@
       "targetQuery": "pdf file too large for icloud drive upload",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-file-too-large-for-icloud-drive-upload"
     },
     {
       "id": "blog-best-pdf-tools-accountants",
