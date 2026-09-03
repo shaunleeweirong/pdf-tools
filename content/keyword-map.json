@@ -2380,7 +2380,8 @@
       "targetQuery": "how to edit a scanned pdf free online",
       "intent": "informational",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-edit-a-scanned-pdf-free-online"
     },
     {
       "id": "blog-pdfzorro-alternatives",
