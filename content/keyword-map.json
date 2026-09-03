@@ -2372,7 +2372,8 @@
       "targetQuery": "best free pdf tools for freelancers no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "best-free-pdf-tools-for-freelancers-no-sign-up"
     },
     {
       "id": "blog-edit-scanned-pdf",
