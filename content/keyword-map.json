@@ -2340,6 +2340,71 @@
       "intent": "informational",
       "priority": 3,
       "status": "idea"
+    },
+    {
+      "id": "blog-nitro-alternatives",
+      "surface": "blog",
+      "targetQuery": "nitro pdf alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "nitro-pdf-alternatives-free-no-sign-up"
+    },
+    {
+      "id": "blog-pdf-too-large-wordpress",
+      "surface": "blog",
+      "targetQuery": "pdf too large for wordpress upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-print-double-sided",
+      "surface": "blog",
+      "targetQuery": "how to print pdf double sided free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-tools-freelancers",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for freelancers no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-edit-scanned-pdf",
+      "surface": "blog",
+      "targetQuery": "how to edit a scanned pdf free online",
+      "intent": "informational",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdfzorro-alternatives",
+      "surface": "blog",
+      "targetQuery": "pdfzorro alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-read-pdf-aloud",
+      "surface": "blog",
+      "targetQuery": "how to read a pdf aloud free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-create-pdf-from-scratch",
+      "surface": "blog",
+      "targetQuery": "how to create a pdf from scratch free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
