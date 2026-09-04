@@ -2412,6 +2412,79 @@
       "priority": 2,
       "status": "pending",
       "slug": "how-to-create-a-pdf-from-scratch-free-online"
+    },
+    {
+      "id": "blog-protect-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "how to password protect a pdf on iphone free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-password-protect-pdf-on-iphone-free"
+    },
+    {
+      "id": "blog-pdf-creator",
+      "surface": "blog",
+      "targetQuery": "best free pdf creator online no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-protect-pdf-android",
+      "surface": "blog",
+      "targetQuery": "how to password protect a pdf on android free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-before-print",
+      "surface": "blog",
+      "targetQuery": "compress pdf before printing free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-make-pdf-read-only",
+      "surface": "blog",
+      "targetQuery": "how to make a pdf read only free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-scanner",
+      "surface": "blog",
+      "targetQuery": "best free pdf scanner app no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-not-uploading",
+      "surface": "blog",
+      "targetQuery": "pdf file not uploading to website how to fix",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-convert-bmp-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert bmp to pdf free online",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-convert-svg-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert svg to pdf free online",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
