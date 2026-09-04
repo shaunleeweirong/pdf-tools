@@ -1,0 +1,98 @@
+---
+title: "PDF Too Large for WordPress Upload: Fix It Fast"
+description: "Your PDF is too large for WordPress because PHP limits file size. Compress or split it to get under the limit, no server changes needed."
+date: "2026-09-04"
+keywords:
+  - pdf too large for wordpress upload
+  - wordpress pdf upload limit
+  - reduce pdf size for wordpress
+  - wordpress max upload size pdf
+  - compress pdf for wordpress
+toolSlugs:
+  - compress-pdf
+  - split-pdf
+  - delete-pages
+faq:
+  - q: What is the WordPress upload file size limit?
+    a: WordPress itself doesn't set the limit. Your web host controls it through PHP settings. Common defaults range from 2 MB to 64 MB. Check your current limit in your WordPress dashboard under Media > Add New.
+  - q: Why is my PDF too large even though it's a short document?
+    a: Short text documents are rarely over 2 MB. If yours is unexpectedly large, it probably contains high-resolution embedded images, large fonts, or revision history carried over from a design tool like Canva or InDesign. Compressing will likely make it bigger. Try deleting pages you don't need, or link to it from Google Drive instead.
+  - q: Will compressing my PDF make it blurry?
+    a: It can, at high compression levels on dense image pages. But text PDFs should not be compressed at all with a JPEG-rasterizing tool, because the file will come out much larger, not smaller. Only compress image-heavy or scanned PDFs.
+  - q: Can I link to a PDF instead of uploading it to WordPress?
+    a: Yes. Upload the PDF to Google Drive or Dropbox, get a shareable link, and paste it into WordPress as a regular hyperlink. This bypasses the upload limit entirely and keeps your media library clean.
+  - q: Does WordPress compress PDFs automatically when uploaded?
+    a: No. WordPress resizes uploaded images automatically, but it does nothing to PDFs. Whatever size you upload is what gets stored on your server.
+---
+
+If your PDF is too large for WordPress upload, the cause is almost always a PHP file size limit set by your hosting provider. WordPress doesn't set this limit itself, and there's no toggle in the WordPress settings to raise it. Here's what you can do right now, without touching a server config file.
+
+## Why WordPress rejects large PDFs
+
+The upload limit comes from two PHP configuration values: `upload_max_filesize` and `post_max_size`. Your hosting provider sets both. Common defaults range from 2 MB on budget shared hosts to 64 MB or higher on managed WordPress plans. [WordPress's support documentation](https://wordpress.org/documentation/) confirms that these values are controlled at the server level, not inside WordPress.
+
+To find your current limit, go to your WordPress dashboard and click Media in the sidebar, then Add New. Below the upload area, you'll see something like "Maximum upload file size: 8 MB." That's your ceiling.
+
+If your PDF is close to or over that number, you have a few practical options, depending on what kind of PDF it is.
+
+## Fix 1: Compress the PDF (best for image-heavy files)
+
+If your PDF contains mostly photos, scanned pages, slide decks, or brochures, a compressor can cut the file size substantially. Our [Compress PDF tool](/compress-pdf) rasterizes each page to JPEG and re-encodes it at a lower quality. In our own testing, a six-page image deck went from 913.4 KB to 315.3 KB at Medium quality, a 65.5% reduction. At High quality (smallest file), the same deck dropped to 175.6 KB.
+
+One important caveat: this approach does not work on text documents. A 20-page text report grew from 23.5 KB to 1,400.8 KB after being run through the same compressor at Medium. If your PDF is a contract, invoice, report, or anything where most of the content is text, skip compression entirely. It will make the file much larger.
+
+How to compress a PDF for WordPress:
+
+1. Open the [Compress PDF tool](/compress-pdf) in your browser. No account needed.
+2. Drop your PDF onto the upload area.
+3. Select a compression level. Medium is a good starting point for most image-heavy files. Use High if Medium doesn't bring the file under your upload limit.
+4. Download the result and check its size.
+5. If it's smaller than your WordPress upload limit, upload it to your media library.
+
+Start from the original file each time. Running compression twice on an already-compressed file at the same quality level makes it bigger, not smaller. Our testing found that a file already compressed at Medium grew by 90% on a second pass at the same level.
+
+## Fix 2: Split the PDF into smaller files
+
+If your PDF is a long document, you may not need all of it in one upload. The [Split PDF tool](/split-pdf) lets you pull out a page range into a separate file. A 50-page report that's 20 MB might break into two 10 MB sections, each under your upload limit.
+
+You can then link to each part separately from a WordPress post or page. For readers, a two-part download is usually less frustrating than a single massive file anyway.
+
+## Fix 3: Remove pages you don't need
+
+Some PDFs include blank pages, appendices, cover pages, or back matter that nobody needs online. The [Delete Pages tool](/delete-pages) lets you strip those out before uploading. This is different from compression: removing a page drops its content entirely, so the savings scale with how content-heavy the removed pages are.
+
+This approach works equally well on text PDFs and image-heavy ones, since you're not touching the remaining pages at all.
+
+## Fix 4: Link to the PDF instead of uploading it
+
+This is often the simplest path. Upload your PDF to Google Drive or Dropbox, set it to be accessible to anyone with the link, and copy the share URL. In WordPress, paste that URL as a text hyperlink or style it as a button in the block editor. Visitors click it and the PDF opens in a new tab or downloads.
+
+This completely sidesteps the WordPress upload limit. It also makes future updates easier: swap the file in Google Drive and the link stays the same, so you don't have to update anything in WordPress.
+
+## Fix 5: Raise the PHP upload limit
+
+If you upload large PDFs regularly and the fixes above aren't practical for your workflow, the right long-term solution is increasing the limit itself. The most reliable way is to contact your hosting provider's support and ask them to raise `upload_max_filesize` and `post_max_size`. Most hosts can do this quickly through their support chat or control panel.
+
+If you have access to a `php.ini` file in your hosting account, you can set it yourself. The [PHP documentation for upload_max_filesize](https://www.php.net/manual/en/ini.core.php#ini.upload-max-filesize) covers the exact syntax. Some hosts also allow these values to be set in a `.htaccess` file, though that approach varies by server configuration.
+
+## Picking the right fix
+
+| PDF type | Best approach |
+|---|---|
+| Photo book, brochure, scanned pages | Compress PDF |
+| Long text report or legal document | Split PDF or link externally |
+| Document with unneeded pages | Delete pages, then try again |
+| File that updates regularly | Link from Google Drive or Dropbox |
+| Hosting account you manage | Raise the PHP upload limit |
+
+## Why PDFs can be surprisingly large
+
+The [PDF format](https://en.wikipedia.org/wiki/PDF) supports embedding high-resolution images, full font libraries, and revision histories inside a single file. A one-page brochure exported from a design tool can be 15 MB because every photo is stored at print resolution. A 200-page text report, by contrast, might be under 1 MB because the text is stored as scalable vector data.
+
+This is why the fix depends on what's inside the file, not just how long it is.
+
+## How to tell if your PDF is text-heavy or image-heavy
+
+Try selecting and copying text from the PDF. If the text copies cleanly, the PDF stores content as actual text, and compression will make it larger. If nothing selects, or if the whole page selects as one block, it's likely a scan or an image-based export, and compression will help.
+
+You can also just try compressing it and check the output size. Our [Compress PDF tool](/compress-pdf) shows you the before and after sizes, so you'll know immediately whether it worked. If the result is smaller, upload that. If it's larger, switch to one of the other fixes above.
