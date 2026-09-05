@@ -2446,7 +2446,8 @@
       "targetQuery": "compress pdf before printing free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-before-printing-free"
     },
     {
       "id": "blog-make-pdf-read-only",
