@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04",
+  "updated": "2026-09-05",
 
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
@@ -2471,7 +2471,8 @@
       "targetQuery": "pdf file not uploading to website how to fix",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-file-not-uploading-to-website"
     },
     {
       "id": "blog-convert-bmp-to-pdf",
