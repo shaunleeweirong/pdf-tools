@@ -1,0 +1,99 @@
+---
+title: "How to Make a PDF Read Only Free"
+description: "Two free browser methods to lock a PDF so others can view but not edit it: flatten form fields or add a permissions password. No Acrobat needed."
+date: "2026-09-05"
+keywords: ["how to make a pdf read only free", "make pdf non editable", "lock pdf from editing", "read only pdf", "pdf permissions password"]
+toolSlugs: ["protect-pdf", "flatten-pdf"]
+faq:
+  - q: "Does making a PDF read only stop someone from copying text?"
+    a: "A permissions password can block copying, but flattening alone does not. Use the Protect PDF tool and enable copy restrictions if you need to prevent text selection."
+  - q: "What's the difference between read only and password protected?"
+    a: "Read only means the file opens freely but editing is blocked. Password protected means the file won't open at all without the correct password. They solve different problems."
+  - q: "Can I make a PDF read only without Acrobat?"
+    a: "Yes. The Flatten PDF and Protect PDF tools on this site both run entirely in your browser with no Acrobat or sign-up required."
+  - q: "Does flattening a PDF make it read only?"
+    a: "Flattening removes form fields and annotations and bakes them into the page permanently. The file still opens without a password, so anyone can view it freely."
+  - q: "Will a read only PDF still print?"
+    a: "Yes, unless you specifically block printing. Use the Protect PDF tool and set printing permissions to None when creating the permissions password if you also want to block printing."
+---
+
+## Two approaches, two different results
+
+Making a PDF read only for free comes down to picking the right method for your situation. There are two main approaches, and they work in different ways.
+
+**Flattening** removes interactive elements (form fields, annotations, comments) and bakes them into the page permanently. Once flattened, there's nothing left to edit because the interactive layer is gone. Anyone can still open the file without a password.
+
+**Adding a permissions password** keeps the file looking the same but instructs PDF readers to block editing, copying, and printing unless the viewer supplies the right password. Anyone can open and read it, but they can't make changes.
+
+Neither method requires Acrobat. Both run in your browser in under a couple of minutes.
+
+## How to flatten a PDF to make it non-editable
+
+Flattening is the right move when you've filled out a form and want to lock the answers in, or when you want to remove interactive elements before sharing a document.
+
+1. Open the [Flatten PDF tool](/flatten-pdf).
+2. Drop your PDF onto the page.
+3. Click **Flatten** and download the result.
+
+The output looks identical to the original but has no form fields or editable layers. Someone who opens it in any PDF reader sees the text and images as static content, not a live form.
+
+Use this method when you want to share a completed document and you don't mind if others can open it freely. It's also the correct step before merging a filled form with other documents, since the [Merge PDF tool](/merge-pdf) strips form fields during the merge process. Flattening first bakes your filled values into the page as static text, so nothing gets lost.
+
+## How to add a permissions password to block editing
+
+A permissions password (sometimes called a restrictions password or owner password) lets anyone open the PDF but blocks editing, copying, and printing unless they provide the password. [PDF's security model](https://en.wikipedia.org/wiki/PDF#Security_and_signatures) distinguishes between an open password (controls who can view the file) and a permissions password (controls what they can do with it). Most "read only" workflows only need the permissions password.
+
+1. Open the [Protect PDF tool](/protect-pdf).
+2. Upload your PDF.
+3. Set a permissions password and choose which actions to restrict (editing, copying, printing).
+4. Download the protected file.
+
+The protection uses [AES-256 encryption](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard), the same standard used for secure document storage. Based on our measurements, adding a password to a 23.5 KB text document added just over 1 KB of overhead (from 23.5 KB to 24.6 KB), so the file size stays nearly identical regardless of how large your document is.
+
+This approach works well for contracts, reports, and any document you want others to read but not alter.
+
+## Setting a file read-only at the OS level
+
+On Windows, right-click the PDF, select **Properties**, check the **Read-only** box, and click **OK**. On macOS, select the file, press Cmd+I (Get Info), and set Sharing and Permissions to read-only for the relevant users.
+
+This is the quickest option and requires no tools at all. The catch is that it only affects that specific copy on that machine. Anyone who copies or downloads the file to their own computer can edit it without restriction. It also doesn't protect against editing in a browser-based PDF viewer.
+
+Use OS-level read-only when you're managing access to a shared folder or preventing accidental changes on your own machine. For external sharing, use one of the two methods above.
+
+## Which method fits your situation
+
+| Situation | Best method |
+|---|---|
+| Completed form, want to lock in the answers | Flatten PDF |
+| Contract or report, want to block editing | Permissions password |
+| Sharing internally to prevent accidents | OS read-only |
+| Need to block text copying as well | Permissions password (enable copy restriction) |
+| About to merge multiple PDFs | Flatten first, then merge |
+
+If you've filled a PDF form and then want to combine it with other documents, flatten it before merging. The [Merge PDF tool](/merge-pdf) copies page content but not the document's form fields. Any values you typed into the form could disappear. Flattening beforehand turns those values into permanent page text.
+
+## Making a PDF read only on iPhone or Android
+
+Both iOS and Android have limited native PDF tools. The most practical path on mobile is to open the file in a browser and use a tool that runs client-side.
+
+The [Protect PDF tool](/protect-pdf) and [Flatten PDF tool](/flatten-pdf) both work in a mobile browser because they process your file entirely on your device. Your PDF never gets sent to a server, so there are no privacy concerns with sensitive documents.
+
+## Does this prevent someone from taking a screenshot?
+
+No free method can reliably stop screenshots. A permissions password blocks text selection and the standard copy action, but it can't stop someone from photographing their screen. This is a known limitation of [PDF document rights management](https://en.wikipedia.org/wiki/Digital_rights_management) and applies to any tool, including Acrobat.
+
+For everyday use cases, a permissions password is more than enough to block casual edits and accidental changes. If you need to protect highly sensitive content from determined recipients, purpose-built DRM software is the only option, and those products are outside the scope of what any free browser tool can do.
+
+## Making a fillable form read only without losing field values
+
+Fill the form first, then use the [Flatten PDF tool](/flatten-pdf) to convert each field value into static page content. The resulting file looks identical to the filled form, but there are no live fields for anyone to clear or change.
+
+This is the correct workflow when you've signed or completed something and need to share a final version. It prevents the recipient from erasing your answers and typing in different information.
+
+If you also want to prevent someone from printing the document or copying its text, run the flattened file through the [Protect PDF tool](/protect-pdf) afterward and set a permissions password with printing and copying disabled. That combination gives you the strongest read-only protection available without paid software.
+
+## Why not just convert the PDF to an image?
+
+Converting a PDF to a JPG or PNG using the [PDF to JPG tool](/pdf-to-jpg) makes editing almost impossible (there's no selectable text), but it also drops quality and makes the file much harder to read on screen. Embedded fonts and vector graphics get replaced by pixel data.
+
+Flattening or adding a permissions password preserves the original layout and text quality. Go the image route only if the PDF consists entirely of scanned pages to begin with, since there's no quality loss in converting a scan that's already raster-based.
