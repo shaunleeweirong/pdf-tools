@@ -2462,7 +2462,8 @@
       "targetQuery": "best free pdf scanner app no sign up",
       "intent": "commercial",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "best-free-pdf-scanner-app-no-sign-up"
     },
     {
       "id": "blog-pdf-not-uploading",
