@@ -2490,7 +2490,8 @@
       "targetQuery": "how to convert svg to pdf free online",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-svg-to-pdf-free-online"
     }
   ]
 }
