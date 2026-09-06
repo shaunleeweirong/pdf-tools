@@ -2533,7 +2533,8 @@
       "targetQuery": "does compressing a pdf reduce quality",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "does-compressing-a-pdf-reduce-quality"
     },
     {
       "id": "blog-best-pdf-app-android",

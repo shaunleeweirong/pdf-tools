@@ -1,0 +1,114 @@
+---
+title: "Does Compressing a PDF Reduce Quality?"
+description: "Yes, most online PDF compressors do reduce visual quality. Here's exactly what changes, how much, and when compression is worth it."
+date: "2026-09-06"
+keywords: ["does compressing a pdf reduce quality", "pdf compression quality loss", "compress pdf without losing quality", "pdf compression levels", "pdf compress blurry"]
+toolSlugs: ["compress-pdf"]
+faq:
+  - q: "Does compressing a PDF reduce quality?"
+    a: "Yes. Browser-based PDF compressors convert every page to a JPEG image, which reduces visual quality. The effect is mild on scans and photo decks but severe on text documents, which turn blurry and often get larger, not smaller."
+  - q: "Can you compress a PDF without losing quality?"
+    a: "Not with JPEG-based online tools. You can minimize loss by picking Low compression, which still reduced a 913 KB image PDF by 23% in our tests. For text PDFs, compression always degrades quality and increases file size."
+  - q: "Why does my PDF look blurry after compression?"
+    a: "Because the compressor turned your text into a JPEG photo. Vector text is crisp at any zoom; a photograph of text is not. If your PDF is mostly text, skip the compressor and remove pages or split the file instead."
+  - q: "Should I use high or low compression for a PDF?"
+    a: "Low preserves the most quality; High shrinks the most. For a scanned image deck, Medium is a sensible default (65.5% smaller in our tests). For text-based files, none of the settings help."
+  - q: "Does compressing a PDF twice reduce the file size more?"
+    a: "No. Running a second compression pass at the same level makes the file bigger. A photo PDF compressed at Medium (315.3 KB) grew to 598.9 KB on a second Medium pass. Always start from the original if one pass isn't enough."
+---
+
+Compressing a PDF does reduce quality, at least with every browser-based tool that converts pages to JPEG. How much quality you lose, and whether it even matters, depends almost entirely on what is inside the file.
+
+A PDF built from scanned pages or photographs will come out noticeably smaller with only mild softness at the default setting. A PDF built from text will come out blurry, and it'll usually be larger than when you started. Understanding why helps you decide when to use the [Compress PDF tool](/compress-pdf) and when to try something else.
+
+## What actually happens when you compress a PDF
+
+Most online PDF compressors work the same way under the hood. Each page gets drawn onto an HTML canvas element, then re-exported as a [JPEG image](https://en.wikipedia.org/wiki/JPEG), which gets embedded into a new PDF. The process runs identically on every page, regardless of whether that page holds a photograph, a spreadsheet, or a page of text.
+
+JPEG compression works well on photographs. Photos have gradual tonal shifts, and small JPEG artifacts blend in. The same artifacts on sharp-edged text are obvious as halos and blurring, because text has hard black edges that JPEG cannot represent cleanly.
+
+There is also a size problem. A text PDF stores characters as compact vector references. A 20-page report might weigh 23 KB because the font is stored once and the glyphs are just pointers. The moment you rasterize it to JPEG, each page becomes a full-resolution photograph of text. The file gets much larger. We measured this: a 23.5 KB text report grew to 1,400 KB at Medium compression, an increase of over 5,800%.
+
+## Image PDFs vs. text PDFs: a very different outcome
+
+The results below come from actual measurements on our compressor, not estimates.
+
+For a PDF built from full-page images (scans, photos, slides):
+
+| Compression level | Before | After | Change |
+|---|---|---|---|
+| High (smallest) | 913.4 KB | 175.6 KB | -80.8% |
+| Medium | 913.4 KB | 315.3 KB | -65.5% |
+| Low (best quality) | 913.4 KB | 703.5 KB | -23.0% |
+
+For a 20-page text report at Medium:
+
+| File | Before | After | Change |
+|---|---|---|---|
+| Text report | 23.5 KB | 1,400.8 KB | +5,861% |
+
+If your PDF is text-heavy and too large for email, compression is the wrong tool. The [PDF format](https://pdfa.org/pdf-specification-index/) stores text very efficiently; the problem is usually something else, like an embedded high-resolution image or a legacy font. Removing unnecessary pages or splitting the document are better approaches.
+
+## Which compression level should you use?
+
+Most compressors offer three settings. The labels vary by tool, but the idea is consistent:
+
+**Low compression (best quality):** The file gets smaller, quality holds well. On our image deck, size dropped 23% at this setting with minimal softness.
+
+**Medium compression:** A reasonable default for scans and photo-heavy PDFs. Size dropped 65.5% in our tests. Some softness appears on close inspection, but it is usually acceptable for on-screen sharing.
+
+**High compression (smallest file):** The most aggressive setting. Size dropped 80.8%. The output looks fine for screen viewing but shows clear quality degradation when printed at full size or zoomed in.
+
+For text PDFs, none of these settings are useful. The file will be larger after compression at any level, and the text will look blurry.
+
+If you are compressing a scan or image deck, try Medium first. If the result is still too large, discard it and run High on the original file. That brings us to the next point.
+
+## Does compressing a PDF twice help?
+
+No. This is one of the most persistent pieces of bad advice about PDF compression, and the numbers show why it is wrong.
+
+A photo PDF compressed at Medium came out at 315.3 KB. Running that same 315.3 KB output through Medium compression again produced a 598.9 KB file, nearly doubling it.
+
+A second pass at High instead of Medium recovered only 5.6% (315.3 KB became 297.8 KB), which is rarely worth the extra quality loss.
+
+What happens: the tool re-renders the already-compressed JPEG page onto a canvas, then re-encodes it. Re-encoding a JPEG that has already been through the mill adds more data rather than removing it. The original vector structure is gone; there is nothing efficient left to strip.
+
+The right approach: start from the original at the level you actually need. If Medium is not small enough, discard the compressed output and run High on the original.
+
+## When to skip compression entirely
+
+Compression is the right call for PDFs made of scans, photographs, or image-heavy presentations. It is the wrong call for:
+
+**Text documents** (invoices, contracts, reports, CVs): They get larger and blurry. A 500 KB text PDF is already fine for most email attachments. Compressing it produces a 30+ MB file.
+
+**Filled PDF forms**: Compression rasterizes the form fields along with everything else. The values become static images and the form is no longer interactive. Flatten the form first if you must compress it.
+
+**Files you plan to print**: Higher compression settings produce JPEG artifacts that are invisible on screen but visible on paper, especially in text and fine lines.
+
+**Already-small files**: If your PDF is under a megabyte, it is unlikely to be blocking anything. Compress only when you have a concrete size target to hit.
+
+## How to compress a scan or image PDF without losing too much quality
+
+Here's a simple process that avoids the common mistakes:
+
+1. Open your original PDF (not a previously compressed version) in the [Compress PDF tool](/compress-pdf).
+2. Start with Medium compression.
+3. Download and check the result. Open it at 100% zoom and scan for blurring.
+4. If the file is still too large, go back to the original and try High.
+5. Do not run a second compression pass on the output.
+
+The key step is step 5. Many people compress at Medium, find the file is still over their limit, and run it through again. That almost always makes the file larger. Start from the original each time.
+
+## What about approaches that don't reduce quality?
+
+A few options can shrink PDFs without any JPEG rasterization:
+
+**Remove pages you don't need.** Every page you cut saves space with zero quality change. If you're sending a report but only a few sections are relevant, extract just those pages.
+
+**Merge fewer files.** If you're combining documents, check whether each piece is already too large. Merging itself adds almost no overhead. We measured 971.9 KB of files merging into a 970.5 KB output, a reduction of 0.1%. [Merge PDF](/merge-pdf) won't balloon your file size.
+
+**Zip the PDF.** A ZIP archive compresses losslessly using methods that don't affect visual quality. For text PDFs, ZIP often achieves better size reduction than JPEG-based compression does, with no quality loss at all.
+
+**Fix the source file.** If a logo or embedded image in your PDF is 10 MB when it should be 100 KB, fixing the original before exporting to PDF removes the bloat without touching the content.
+
+For most people, the choice is simple: if your PDF is full of scans or images, try Medium compression and it'll likely be fine. If it's a text document, don't compress it.
