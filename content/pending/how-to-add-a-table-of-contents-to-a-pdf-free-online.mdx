@@ -1,0 +1,93 @@
+---
+title: "How to Add a Table of Contents to a PDF Free"
+description: "Two ways to add a TOC to a PDF: a visual list page or clickable bookmarks. Learn the free online options and when to use each."
+date: "2026-09-06"
+keywords: ["how to add a table of contents to a pdf free online", "pdf table of contents", "pdf toc", "pdf bookmarks free", "add toc to pdf"]
+toolSlugs: ["merge-pdf", "edit-pdf"]
+faq:
+  - q: "Can I add a table of contents to an existing PDF without converting it?"
+    a: "For bookmarks, yes. Tools like PDFNavigator scan your file for headings and write a clickable outline. For a visual TOC page, create it in Word or Google Docs, export as PDF, then merge it with your main document."
+  - q: "What is the difference between PDF bookmarks and a table of contents page?"
+    a: "Bookmarks live in the PDF viewer's sidebar and let readers jump to sections by clicking. A table of contents page is an actual page inside the document listing section titles and page numbers, like in a book."
+  - q: "Does merging a TOC page change the file size much?"
+    a: "No. Merging produces output within about 0.1% of the sum of the input files, so adding a one-page TOC won't push you over an email or upload limit."
+  - q: "Will my form fields survive if I merge a TOC page with a filled PDF?"
+    a: "No. Merging strips interactive form fields. Flatten the filled form first to lock in the values, then merge it with your TOC page."
+  - q: "Should I use a visual TOC page or PDF bookmarks?"
+    a: "Both have their place. A visual page works for printed copies and readers who don't use a PDF viewer that shows the bookmarks panel. Bookmarks are faster for screen navigation. Many professional documents include both."
+---
+
+You can add a table of contents to a PDF free online, but the right approach depends on which kind of TOC you actually need. There are two distinct types, and most guides mix them up.
+
+## The two kinds of PDF table of contents
+
+A **visual TOC page** is a real page inside the document, usually near the front, listing section headings and page numbers. You can read it, print it, and share the document with anyone regardless of which PDF viewer they use.
+
+**PDF bookmarks** (also called the navigation outline or outline panel) are a separate data structure embedded in the file. They don't appear as a page in the document. Instead, they show up in the sidebar of [Adobe Acrobat Reader](https://get.adobe.com/reader/) or a browser's built-in PDF viewer, letting readers jump to any section by clicking.
+
+Both are useful. Many professional reports include both: a printed page for people skimming the front, and bookmarks for people reading on screen. Knowing which type you need saves you from downloading tools that solve the wrong problem.
+
+## How to add a visual TOC page to your PDF free
+
+The cleanest free approach: create the TOC page in a word processor, export it as a PDF, and merge it with your main document. No special PDF software required.
+
+**Step 1: Build the TOC page in Word or Google Docs**
+
+Open a new document and type your section headings and page numbers. Keep the formatting clean. Two or three columns (section title on the left, page number on the right) is the most readable layout.
+
+If your original document was made in Microsoft Word with proper heading styles, Word can generate this automatically. Place your cursor at the top of the first page, go to **References > Table of Contents**, and pick a built-in style. Word pulls the headings and page numbers together in seconds.
+
+Google Docs has a similar feature under **Insert > Table of contents**. It builds a linked list from your Heading 1 and Heading 2 paragraphs automatically.
+
+**Step 2: Export the TOC page as a PDF**
+
+In Word: **File > Save As**, choose PDF. In Google Docs: **File > Download > PDF Document**. If the TOC is just the first page of a longer file, use a print-to-PDF driver with the page range set to page 1 only.
+
+**Step 3: Merge the pages together**
+
+Use [Merge PDF](/merge-pdf) to combine the TOC PDF with your main document. Put the TOC first in the list, then add your main file. The tool combines them without altering the content of either. Merging doesn't inflate the output size beyond what the parts already add up to, so adding a one-page TOC won't push you over an email or upload limit.
+
+**One thing to know before merging:** if your main PDF has fillable form fields, merging strips those fields out. Use [Flatten PDF](/flatten-pdf) first to lock in any typed values, then merge. The content stays on the page; the fields just become non-editable.
+
+## How to add clickable bookmarks to a PDF free
+
+Bookmarks are harder to retrofit into an existing PDF because most simple tools don't write to the file's internal outline structure. A few free options do work, though.
+
+**PDFNavigator** scans your PDF for headings and generates clickable bookmarks automatically. This works best on PDFs exported from Word or Google Docs, where the text structure is preserved in the file. It won't work on scanned pages, since those are photos rather than text data.
+
+For people comfortable with a terminal, the open-source [pdftk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/) tool can set bookmarks from a plain text file. It's free and works on Windows, Mac, and Linux. The syntax is a bit fiddly, but there are clear guides online.
+
+If your PDF came from a scanner, skip the bookmark route. No tool can reliably detect section headings in an image-based PDF. A visual TOC page (the merge approach above) is your only practical option.
+
+## Can I type a TOC directly onto an existing PDF page?
+
+Yes. The [Edit PDF](/edit-pdf) tool lets you add text boxes to any page of an existing document. You could type a short TOC directly onto the first page, or onto a blank page you've inserted before it. This is slower than the merge approach for anything beyond a few lines, but useful when you want to avoid creating a separate file.
+
+## Choosing the right approach
+
+| Goal | Best free approach |
+|------|---------------------|
+| Readers will print the document | Visual TOC page merged in |
+| Readers will read on screen | Clickable bookmarks via PDFNavigator |
+| PDF came from a scan | Visual TOC page only |
+| You need both types | Create TOC page + add bookmarks separately |
+| Original source file is available | Add TOC in Word or Docs before exporting |
+
+## When it's easier to go back to the source
+
+If you still have the original Word document, Google Docs file, or InDesign project, adding the TOC there before exporting to PDF is almost always faster than retrofitting it afterward. These tools were built for this exact workflow.
+
+Microsoft Word updates an automatic TOC in one click whenever you edit headings. Google Docs does the same. If you can regenerate the PDF, do that.
+
+For PDFs you received from someone else and can't regenerate, the merge approach or a bookmarks tool is your only practical path.
+
+## When to skip the TOC
+
+A table of contents adds value for longer documents with distinct sections that readers might want to jump to. For a short PDF of five pages or fewer, readers can scroll and find what they need faster than they'd scan a TOC.
+
+Skip it if:
+- The document is fewer than five or six pages
+- It will be read straight through without jumping around
+- There are no distinct named sections
+
+For reports, manuals, compiled submissions, or anything with ten or more pages and clear sections, a TOC is worth the few minutes it takes to add.
