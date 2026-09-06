@@ -1,0 +1,112 @@
+---
+title: "How to Save Google Sheets as PDF Free"
+description: "Export any Google Sheet to PDF in seconds using the built-in Download menu. Fix cut-off columns, pick the right scaling, and export from mobile too."
+date: "2026-09-06"
+keywords: ["how to save google sheets as pdf free", "google sheets to pdf", "export google sheets pdf", "google sheets download pdf", "convert google spreadsheet to pdf"]
+toolSlugs: ["compress-pdf", "merge-pdf"]
+faq:
+  - q: "How do I save a Google Sheet as a PDF?"
+    a: "Open your sheet, click File > Download > PDF Document (.pdf). A settings panel opens where you can pick the print area, paper size, orientation, and scaling. Click Export and the PDF downloads to your computer."
+  - q: "Can I export just one tab or a selected range of cells?"
+    a: "Yes. In the print settings dialog, choose Current sheet to export only the active tab, or highlight a range of cells first and then select Selected cells as the print area."
+  - q: "Why are my columns cut off in the exported PDF?"
+    a: "The default export uses portrait orientation and standard margins, so wide spreadsheets overflow the page. Switch to Landscape orientation and set Scaling to Fit to width to keep all columns on one page."
+  - q: "How do I make the whole spreadsheet fit on one page?"
+    a: "In the print settings, open the Scaling menu and choose Fit to page. This shrinks all rows and columns proportionally to fill a single page. For large sheets, Fit to width is usually better because it keeps columns readable while letting rows flow across multiple pages."
+  - q: "Can I export Google Sheets as PDF on a phone?"
+    a: "Yes. Open the sheet in the Google Sheets app, tap the three-dot menu, then Share and export > Save as PDF. The PDF saves to your device."
+  - q: "What if my exported PDF is too big to email?"
+    a: "If the PDF contains charts or images, the Compress PDF tool can reduce the file size. If it is a text-heavy spreadsheet, compression will not help and may make the file larger instead."
+---
+
+Saving a Google Sheet as a PDF is free and built right into the app. You don't need Adobe Acrobat, a third-party converter, or any add-ons. Open the sheet, click **File > Download > PDF Document (.pdf)**, adjust a few settings, and you're done.
+
+This guide covers every method, explains the settings that actually matter, and shows how to fix the most common problem: columns that get cut off in the exported file.
+
+## The step-by-step process
+
+1. Open your Google Sheet in a browser.
+2. Click **File** in the top menu bar.
+3. Hover over **Download**, then click **PDF Document (.pdf)**.
+4. A settings panel opens on the right side of the screen alongside a live preview on the left.
+5. Adjust the settings for your needs (explained in the next section).
+6. Click **Export** in the top-right corner.
+
+The PDF downloads to your browser's default downloads folder. That's all there is to a straightforward export.
+
+## What each setting does
+
+Google's export panel has more options than it looks like at first glance. Here's what each one controls.
+
+**Print area** decides what gets included:
+
+- *Workbook* exports every tab in the file as separate pages.
+- *Current sheet* exports only the tab you're viewing right now.
+- *Selected cells* exports only the cells you highlighted before opening the download menu.
+
+**Page orientation** is either portrait (tall pages) or **Landscape** (wide pages). For spreadsheets with many columns, the wide orientation is almost always the better choice because it gives you more horizontal space.
+
+**Paper size** defaults to Letter (8.5 x 11 in) in the US and A4 (210 x 297 mm) elsewhere. [ISO 216](https://www.iso.org/standard/36631.html) defines the international paper size standard if you need to match a specific requirement.
+
+**Scaling** is the option that trips most people up, and it's the most powerful one in the panel:
+
+- *Normal (100%)* exports at natural size. Wide sheets will overflow the page.
+- *Fit to width* shrinks the content just enough so all columns fit across one page, while rows flow onto as many pages as they need. This is the most useful option for typical spreadsheets.
+- *Fit to height* fits all rows on one page vertically, letting wide columns spill to additional pages.
+- *Fit to page* squeezes everything onto a single page. Fine for small sheets; can make text very small on larger ones.
+
+**Margins** (Normal, Narrow, Wide, or custom numbers) control how much blank space surrounds the content. Narrow margins give you a bit more usable width on each page.
+
+**Headers and footers** let you print the sheet title, current date, page numbers, or a custom label at the top and bottom of each page.
+
+## How to fix columns getting cut off
+
+This is the most common export problem. You open the PDF and the last few columns are missing or pushed onto a second page. Fix it like this:
+
+1. In the print settings, change **Page orientation** to **Landscape**.
+2. Change **Scaling** to **Fit to width**.
+3. Check the preview on the left before clicking Export. If the text looks too small, consider hiding columns you don't need (right-click a column header > Hide column).
+4. If you have very wide columns with long text, try wrapping the text (Format > Wrapping > Wrap) and reducing column widths before you export.
+
+## Set a print area to export only part of a sheet
+
+If you only need a section of your data, highlight those cells before you open the export dialog. Then in the print settings, change **Print area** to **Selected cells**.
+
+This works well when you want to share a summary table without exposing the raw data beneath it, or when a sheet has working calculations that don't belong in the final document.
+
+## Control exactly where pages break
+
+By default, Google Sheets decides where to split content across pages. If a chart or data block ends up split awkwardly, you can insert your own breaks: with your sheet open, click **View > More options > Insert page break** at the row or column where you want a new page to begin.
+
+## Export from a phone or tablet
+
+The Google Sheets mobile app for [iOS](https://apps.apple.com/app/google-sheets/id842849113) and Android supports PDF export:
+
+1. Open the spreadsheet in the Google Sheets app.
+2. Tap the **three-dot menu** in the top-right corner.
+3. Tap **Share and export > Save as PDF**.
+4. Adjust any available settings and save to your device.
+
+The mobile export offers fewer layout controls than the desktop version, but it works fine for straightforward sheets where you don't need custom scaling or print areas.
+
+## Use Ctrl+P as an alternative
+
+Pressing **Ctrl+P** (Windows/ChromeOS) or **Cmd+P** (Mac) opens the print dialog. In Chrome, change the **Destination** to **Save as PDF** and click Print. On Windows, choose **Microsoft Print to PDF**.
+
+This works, but the browser print dialog gives you fewer options than the native Google Sheets export panel. If you want scaling controls and a live preview, File > Download is the better route.
+
+## What to do with the PDF after exporting
+
+Once you have the file, you may need to take one more step:
+
+**If the PDF is too large to email.** Email providers like Gmail and Outlook limit attachments to around 25 MB. If your exported PDF has embedded charts or images and is pushing that limit, the [Compress PDF](/compress-pdf) tool can reduce the file size in your browser.
+
+One important caveat: our compressor rasterizes each page to a JPEG image. That approach shrinks image-heavy files significantly but makes text-only files larger. A spreadsheet PDF with nothing but data and borders is mostly text, so compression will likely increase the file size rather than decrease it. In that case, the better fix is to reduce the number of columns or rows you're exporting, or to export a selected range instead of the whole sheet.
+
+**If you need to combine the sheet PDF with other documents.** Use the [Merge PDF](/merge-pdf) tool to join your spreadsheet PDF with a cover letter, report pages, or any other PDFs into a single file. Merging doesn't inflate the file size, and it works entirely in your browser.
+
+## How this compares to Google Docs
+
+If you're working in [Google Docs](https://support.google.com/docs/answer/49114) rather than Sheets, the export path is the same: File > Download > PDF Document (.pdf). The difference is that Docs doesn't offer the scaling and print area controls that Sheets does, because a word-processing document flows naturally across pages without needing to squeeze columns together.
+
+For Sheets, the print settings panel is worth spending a minute on before you export. Getting the orientation and scaling right the first time saves a lot of back-and-forth.
