@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
 
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
@@ -2340,7 +2340,8 @@
       "targetQuery": "how to view two pdf files side by side free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-view-two-pdf-files-side-by-side-free"
     },
     {
       "id": "blog-nitro-alternatives",
@@ -2493,6 +2494,70 @@
       "priority": 2,
       "status": "pending",
       "slug": "how-to-convert-svg-to-pdf-free-online"
+    },
+    {
+      "id": "blog-pdf-to-html",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to html free online",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-tile-print-pdf",
+      "surface": "blog",
+      "targetQuery": "how to print pdf as poster on multiple pages free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-google-sheets-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to save google sheets as pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdfa-vs-pdf",
+      "surface": "blog",
+      "targetQuery": "what is the difference between pdf and pdfa format",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-does-compression-reduce-quality",
+      "surface": "blog",
+      "targetQuery": "does compressing a pdf reduce quality",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-app-android",
+      "surface": "blog",
+      "targetQuery": "best free pdf app for android no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-ideal-file-size",
+      "surface": "blog",
+      "targetQuery": "what is a good pdf file size for sharing",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-screenshot-pdf-mac",
+      "surface": "blog",
+      "targetQuery": "how to screenshot a pdf page on mac free",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
     }
   ]
 }
