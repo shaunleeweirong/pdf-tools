@@ -1,0 +1,90 @@
+---
+title: "PDF vs PDF/A: What's the Difference?"
+description: "PDF/A is a locked-down archival version of PDF. Learn what it restricts, when you need it, and when a regular PDF works fine."
+date: "2026-09-06"
+keywords: ["what is the difference between pdf and pdfa format", "PDF/A", "PDF vs PDF/A", "archival PDF", "PDF/A-1", "PDF/A-2", "PDF/A-2b"]
+toolSlugs: ["compress-pdf", "flatten-pdf", "unlock-pdf"]
+faq:
+  - q: "Is a PDF/A file bigger than a regular PDF?"
+    a: "Usually, yes. Fonts must be embedded and more metadata is required, so the file size grows. The increase is modest for most documents, but can be larger if the original PDF used external fonts or had unembedded color profiles."
+  - q: "Can a PDF/A file be password protected?"
+    a: "No. The PDF/A standard prohibits encryption. If you need access control, keep the document as a regular PDF rather than converting it to PDF/A."
+  - q: "Do I need PDF/A for court filings?"
+    a: "It depends on the court. Some federal courts and government agencies specifically require PDF/A for electronic filing. Check the local rules for the court or agency you're submitting to."
+  - q: "What's the difference between PDF/A-1, PDF/A-2, and PDF/A-3?"
+    a: "PDF/A-1 (2005) is the strictest version. PDF/A-2 (2011) allows JPEG 2000 compression and transparency. PDF/A-3 (2012) allows any file type to be embedded. For most general archiving, PDF/A-2b is the practical default."
+  - q: "How do I know if a file is already PDF/A?"
+    a: "Check the document properties in your PDF viewer. Adobe Acrobat shows the conformance level (such as PDF/A-2b) in Document Properties. Some viewers display a blue banner when a file is in archival mode."
+  - q: "Can I convert a regular PDF to PDF/A for free?"
+    a: "Yes. Several free online tools handle the conversion. They embed fonts, strip encryption and JavaScript, add required metadata, and convert color spaces to device-independent profiles."
+---
+
+## What is the difference between PDF and PDF/A?
+
+The difference between PDF and PDF/A is self-containment. A regular PDF can include fonts that aren't embedded, links to external resources, encryption, JavaScript, audio, and video. PDF/A strips all of that out so every piece of content the document needs is baked into the file itself. Open it in 2050 with whatever software exists then, and it should look identical to how it looks today.
+
+The "A" stands for archival. The format is defined by [ISO 19005](https://www.iso.org/standard/38920.html), first published in 2005. The motivation was real: electronic documents from the 1990s frequently depended on fonts that were never embedded, software that no longer runs, or external links that have long since gone dead. PDF/A closes those gaps by making the file entirely self-sufficient.
+
+## What does PDF/A actually restrict?
+
+A conforming PDF/A file cannot contain:
+
+- **Encryption or password protection.** This surprises a lot of people. You cannot add a password to a PDF/A file. The standard prohibits it outright, because encryption could prevent future access.
+- **External references.** Fonts, images, and other resources must live inside the file. Nothing can be fetched from outside.
+- **Audio and video.** Multimedia content is not allowed.
+- **JavaScript.** Interactive scripting is prohibited.
+- **Transparency** (in PDF/A-1 specifically; later versions allow it).
+
+In return, PDF/A requires all fonts to be embedded, color spaces to be device-independent using [ICC profiles](https://en.wikipedia.org/wiki/ICC_profile), and XMP metadata to be present with the correct conformance information. The result is a file that any PDF viewer can reproduce faithfully without needing anything from the outside world.
+
+## The versions of PDF/A
+
+PDF/A has gone through four generations. Within each version there are also conformance levels: "b" for basic visual conformance, "a" for accessible (structured text for screen readers), and in PDF/A-4, "e" for engineering documents.
+
+| Version | Year | Key additions over previous |
+|---------|------|-----------------------------|
+| PDF/A-1 | 2005 | The original; strictest restrictions |
+| PDF/A-2 | 2011 | JPEG 2000 compression, transparency, layers |
+| PDF/A-3 | 2012 | Any file type can be embedded as an attachment |
+| PDF/A-4 | 2020 | Based on PDF 2.0; updated digital signature support |
+
+For most archiving situations, **PDF/A-2b** is the practical choice. It supports transparency and better image compression than PDF/A-1, and it's widely accepted by government record systems and document management platforms. PDF/A-3 is used in specific industries where you need to embed a spreadsheet or XML file alongside the visual document, such as electronic invoicing in Europe (ZUGFeRD, Factur-X).
+
+## When to use PDF/A instead of regular PDF
+
+Use PDF/A when the document needs to be preserved exactly as-is for years or decades, or when a specific organization requires it. The most common situations:
+
+- **Government and legal filings.** National archives in Germany, the UK, and the United States mandate or recommend PDF/A for permanent electronic records. The [PDF Association's resource page on ISO 19005](https://pdfa.org/resource/iso-19005-pdfa/) lists the relevant standards. Some federal courts in the US require PDF/A for electronic filing; check the local rules for the court or agency before you submit.
+- **Academic submissions.** Many universities require theses and dissertations in PDF/A format. The Library of Congress recommends PDF/A for digital preservation.
+- **Corporate records.** Contracts, financial statements, and board minutes retained for 7 to 10 years or more are good candidates. PDF/A removes the risk that a document won't open correctly when an auditor needs it five years from now.
+- **Healthcare and insurance records.** Long-term patient records and claims documents benefit from the archival guarantee.
+
+Regular PDF is fine for everything else: email attachments, shared reports you might revise, presentations, anything that doesn't need to survive unchanged for more than a few years.
+
+## Does PDF/A affect file size?
+
+Usually PDF/A files end up a bit larger than their regular PDF equivalents. The main reason is font embedding. If the original PDF linked to external fonts instead of embedding them, the PDF/A conversion has to pull those fonts in, which adds to the file size. More metadata is also required.
+
+The size difference is small for most documents. Where it can get significant is when converting a large document with many unembedded fonts or when a full ICC color profile needs to be included.
+
+If you need to reduce file size before converting to PDF/A, keep in mind that our [Compress PDF tool](/compress-pdf) rasterizes every page to JPEG. That works well for scans and image-heavy PDFs, but it will make text-based PDFs much larger (a 20-page text report in our testing grew from 23.5 KB to 1.4 MB). So only compress if your PDF is primarily made up of images or scanned pages.
+
+## How to convert a PDF to PDF/A
+
+Here's how the process works, regardless of which tool you use:
+
+1. **Remove any password protection first.** PDF/A prohibits encryption, so an encrypted PDF cannot be converted until the password is removed. Use our [Unlock PDF tool](/unlock-pdf) to remove it.
+2. **Flatten form fields if needed.** Interactive form fields may not survive the conversion to PDF/A-1, because some field types aren't supported. If your PDF has a filled-in form, flatten it first using our [Flatten PDF tool](/flatten-pdf) so the values are burned into the page as static content and nothing is lost during conversion.
+3. **Choose a PDF/A version.** PDF/A-2b is the safest default for new work. Check your institution's or agency's requirements if you're converting for a specific submission.
+4. **Run the conversion.** The tool will embed fonts, convert color spaces, strip prohibited features, and add the required XMP metadata.
+5. **Verify the output.** Open the result in a PDF viewer and check the document properties for the conformance label. If the file passes, you'll see something like "PDF/A-2b" in the conformance field.
+
+## What about PDF/X and PDF/E?
+
+While researching PDF/A you may come across similar names. PDF/X is a different ISO standard built for print production. It requires CMYK color spaces and specific bleed settings, and it's aimed at the graphic arts industry, not archiving. PDF/E is designed for engineering documents, such as technical drawings and CAD data. Neither is the same as PDF/A, and asking for one when someone specified another will create problems. If a client, court, or archive asks for PDF/A, they mean the archival standard specifically.
+
+## Is PDF/A worth it for everyday use?
+
+For most personal and small-business documents, no. A regular PDF is simpler: you can encrypt it, embed links, and open it in any viewer. The restrictions that make PDF/A reliable for archives also make it less flexible for day-to-day work.
+
+Where PDF/A earns its place is exactly where it was designed: government records, legal filings, academic submissions, and anything that needs to be a permanent, trustworthy record. If someone asks you to submit in PDF/A, they have a good reason. For everything else, a well-saved regular PDF gets the job done.
