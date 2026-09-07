@@ -1,0 +1,89 @@
+---
+title: "How to Make a PDF Accessible for Screen Readers"
+description: "Make your PDF screen-reader friendly without Acrobat Pro. Covers tagging, alt text, document title, and free tools that actually work."
+date: "2026-09-07"
+keywords: ["how to make a pdf accessible for screen readers free", "accessible pdf", "pdf tags", "pdf/ua", "screen reader pdf", "wcag pdf", "tagged pdf"]
+toolSlugs: ["edit-metadata"]
+faq:
+  - q: "Does a PDF need to be tagged to work with a screen reader?"
+    a: "Yes. Without tags, screen readers announce everything as a flat stream of text and cannot jump between headings, read tables cell-by-cell, or identify which images are decorative versus meaningful."
+  - q: "What is the fastest free way to make an accessible PDF?"
+    a: "Create the document in Word or Google Docs with proper heading styles, then export it as a PDF with accessibility options enabled. This produces a tagged PDF without any extra tools or cost."
+  - q: "Can I make a scanned PDF accessible for free?"
+    a: "Yes. Upload the scanned PDF to Google Drive, open it as a Google Doc (Drive runs OCR automatically), clean up the text, apply heading styles, and download as a PDF."
+  - q: "Does setting the document title help with screen reader accessibility?"
+    a: "It's one of the most commonly missed fixes. Screen readers announce the document title when a file opens. Without it, they read the filename, which is often cryptic. You can set a title for free using the Edit Metadata tool."
+  - q: "Do I need Acrobat Pro to add alt text to images already in a PDF?"
+    a: "For existing PDFs, adding image alt text properly usually requires Acrobat Pro or a specialist tool like PDFix. The free workaround is to add captions in your source document before you export to PDF."
+---
+
+Making a PDF accessible for screen readers comes down to three things: real, selectable text instead of scanned images; structure tags that define headings, lists, and tables; and a document title set in the file's metadata. You can handle all three for free. Here's how.
+
+## What makes a PDF accessible to screen readers?
+
+Screen reader software like NVDA, JAWS, and VoiceOver doesn't interpret pixels. It reads the underlying data in the file. A PDF works with those tools when it has the following:
+
+**Real, selectable text.** A scanned page is just an image. To a screen reader, a scanned contract looks identical to a blank page. Scanned PDFs need OCR (optical character recognition) before anything else will help.
+
+**Tags.** [PDF tags](https://www.pdfa.org/) are the PDF equivalent of HTML elements. A heading tag tells the screen reader this text is a heading. A list tag says these items belong together. Without tags, everything gets announced as a flat stream with no structure. The formal standard is [ISO 14289, known as PDF/UA](https://www.iso.org/standard/64599.html) (Universal Accessibility), which specifies exactly which tags are required and how they must nest.
+
+**A document title and language.** Screen readers announce the document title when a file opens. If the Title field is blank, they fall back to the filename. The language field controls which pronunciation rules the reader applies. English text read with German phonemes is hard to follow.
+
+**Alt text for images.** Any image that carries meaning needs a text description. Purely decorative images should be flagged as artifacts so the reader skips them rather than announcing "graphic."
+
+**Logical reading order.** The order that content is tagged in doesn't always match the visual layout, especially in multi-column documents or files with sidebars. A reader following the tag order should get the content in a sensible sequence.
+
+## The easiest free path: start from a well-structured document
+
+If you're creating a new document, this approach costs nothing and produces a properly tagged PDF without any specialist software.
+
+1. Write your document in Microsoft Word, Google Docs, or LibreOffice. Use the built-in heading styles (Heading 1, Heading 2, Heading 3) rather than making text bold or large by hand.
+2. Use real numbered and bulleted lists instead of manually typed hyphens or asterisks.
+3. For images in Word: right-click each image, choose "Format Picture," and add alt text in the panel that opens. For decorative images, check "Mark as decorative."
+4. Set a document title. In Word: File > Info > Properties on the right panel. In Google Docs: File > Document properties.
+5. Export as PDF with structure preserved. In Word: File > Save As > PDF, then click Options and check "Document structure tags for accessibility." In Google Docs: File > Download > PDF exports a tagged PDF automatically.
+6. In Word, run the built-in checker before exporting: go to Review > Check Accessibility. It flags missing alt text, heading skips, and other common issues.
+
+This single workflow covers tags, reading order, headings, and lists in one pass. The [W3C WCAG guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) provide a comprehensive checklist if you want to go further.
+
+## How to check if your PDF is already accessible
+
+You can get a quick answer with tools you already have.
+
+**Read Out Loud in Acrobat Reader (free):** Open the file in the free version of Adobe Acrobat Reader, go to View > Read Out Loud > Activate Read Out Loud, then press Shift+Ctrl+B to read the whole document. Jumbled order, silent images, or missing structure all point to accessibility problems.
+
+**Screen reader test:** If you have NVDA (free on Windows) or use VoiceOver (built into macOS and iOS), open the PDF and move through it with the Tab or arrow keys. Headings should be announced as headings. Table cells should be navigable individually. Images without alt text will be announced as "graphic" and nothing else.
+
+**PDFix online checker:** [PDFix.io](https://pdfix.io/make-pdf-accessible/) offers a free browser-based tool that checks a PDF against PDF/UA requirements and lists specific problems without requiring an account or software install.
+
+## What to do with a scanned PDF
+
+Scanned documents need OCR before any other fix applies. Google Drive makes this free without installing anything:
+
+1. Upload the scanned PDF to Google Drive.
+2. Right-click it and choose Open with > Google Docs.
+3. Drive runs OCR automatically and opens the content in an editable document.
+4. Fix OCR errors, apply heading styles, and add alt text to any images.
+5. Download as PDF (File > Download > PDF Document).
+
+Scan quality affects results significantly. A clean, high-resolution scan produces accurate text. A dark photo taken at an angle may need heavy cleanup. This approach works well for single-page or short documents; for long scanned books, a dedicated OCR tool may produce cleaner output.
+
+## Fixing an existing inaccessible PDF without Acrobat
+
+This is the hard case. Retrofitting an existing PDF is more difficult than creating an accessible one from the start, but free options exist.
+
+**PDFix auto-tagger:** PDFix.io can automatically infer and add tags to an existing PDF based on its visual layout. It runs in your browser, no sign-up needed. The output isn't always clean for complex layouts with multiple columns or merged table cells, but it's a free first step.
+
+**Re-export from the source:** If you still have the original Word or Google Docs file, editing it for structure and re-exporting is almost always cleaner than trying to fix a finished PDF. Even a quick pass to add heading styles makes a big difference.
+
+What you can't easily do for free in an existing PDF: manually reorder the tag tree, add alt text to images that are already baked in, or correct tables that exported without proper header relationships. Those tasks genuinely require Acrobat Pro or a paid accessibility remediation service.
+
+## Set the document title right now, for free
+
+One piece of accessibility metadata you can fix on any PDF without re-exporting or installing software: the document title.
+
+Open your file in the [Edit Metadata tool](/edit-metadata), type a clear, descriptive title in the Title field, and download the updated file. That's the title screen readers will announce when the document opens. You can also set the Author, Subject, and language in the same step.
+
+A missing title is one of the most common failures in a quick PDF accessibility audit, and it's the simplest to fix. If someone keeps ten PDFs open in a reader, "Q3 Expense Report" is far more useful than "expense-q3-v2-FINAL (1).pdf."
+
+This one step won't make a complex, multi-column PDF fully accessible on its own. But it's a real improvement you can make in under a minute, and it's the right place to start before working through the larger structural fixes.
