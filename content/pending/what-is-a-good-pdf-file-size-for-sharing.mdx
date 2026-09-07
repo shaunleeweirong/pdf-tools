@@ -1,0 +1,103 @@
+---
+title: "What Is a Good PDF File Size for Sharing?"
+description: "It depends on where you're sharing it. Size limits for email, uploads, and common platforms, plus when compression actually helps vs. backfires."
+date: "2026-09-07"
+keywords: ["what is a good pdf file size for sharing", "pdf file size for email", "pdf size limit", "pdf too large", "compress pdf for sharing"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is the maximum PDF file size for email?"
+    a: "Gmail and Outlook.com both accept attachments up to 25 MB, but Base64 encoding inflates files by roughly a third in transit. A file around 18 MB or smaller sends reliably. For anything larger, share a Google Drive link instead."
+  - q: "Is a 5 MB PDF too large to send by email?"
+    a: "No. 5 MB is well within the limits of Gmail, Outlook, and most other email services and sends fine as a direct attachment."
+  - q: "Is a 10 MB PDF too large for email?"
+    a: "Usually not for Gmail or Outlook consumer accounts, but some corporate mail servers cap attachments at 10 MB. Compressing to 5 to 8 MB gives you more breathing room with stricter servers."
+  - q: "Why is my scanned PDF so large?"
+    a: "Each page in a scanned PDF is stored as a raster image, which takes far more space than vector text. A PDF compressor works well on these, often cutting the file by 65 to 80 percent."
+  - q: "Does compressing a PDF reduce quality?"
+    a: "Compression that rasterizes pages to JPEG makes text slightly softer at lower quality settings. For scan-heavy PDFs the result is still readable. For text-only PDFs, our in-browser compressor actually makes files larger, so avoid compressing those."
+  - q: "What size should a resume PDF be?"
+    a: "Under 1 MB is ideal. Most applicant tracking systems accept up to 5 MB. A plain text resume PDF is typically well under 200 KB. If yours is larger, it likely contains a high-resolution photo or logo."
+---
+
+A good PDF file size for sharing depends on where it's going. For most email attachments, anything under 10 MB sends without friction and under 18 MB stays within the limits for Gmail and Outlook. But "good" shifts considerably by platform, the type of content in the PDF, and how the recipient plans to use it.
+
+Here's how to pick a target that works for your situation.
+
+## What size should I aim for when sending by email?
+
+[Gmail](https://support.google.com/mail/answer/6584) and Outlook.com both accept attachments up to 25 MB per message. The catch: email clients encode binary files as Base64 text before sending, which adds roughly 33 percent to the file's size in transit. A 19 MB PDF becomes about 25 MB on the wire and slides through. A 21 MB PDF becomes roughly 28 MB and bounces.
+
+The safe practical ceiling for email is around 18 MB. That leaves a buffer for encoding overhead and for corporate mail servers that apply a lower cap than consumer providers. Many company-managed mail systems limit attachments to 10 MB, and some government or legal portals go as low as 5 MB.
+
+A quick-reference breakdown:
+
+- Under 5 MB: sends everywhere with no issues
+- 5 to 10 MB: fine for Gmail and Outlook, may hit corporate limits
+- 10 to 18 MB: fine for consumer Gmail and Outlook, risky through strict corporate gateways
+- Over 18 MB: share via a link (Google Drive, Dropbox) rather than attaching
+
+## What size works for web uploads and form submissions?
+
+Platform limits vary and aren't always posted anywhere obvious:
+
+- **Google Forms and Google Classroom**: typically 10 MB per file for student uploads
+- **Job application portals** (Indeed, Greenhouse, Lever, Workday): usually 5 MB for resumes, sometimes up to 10 MB
+- **Court and government e-filing** portals: often 10 MB, sometimes 2 to 5 MB per document
+- **LMS platforms** (Canvas, Blackboard, Moodle): typically 10 to 25 MB per submission
+- **Cloud drives** (Google Drive, Dropbox, OneDrive): no practical limit for normal PDFs
+
+When a platform doesn't post its limit, targeting under 5 MB is a reliable default. It clears virtually every upload form you'll encounter.
+
+## Does the type of PDF affect what size is normal?
+
+Yes, and the gap is significant.
+
+**Text-only PDFs** (contracts, reports, invoices, forms created in Word or a similar app) are tiny when built from a word processor. A 20-page text report typically sits around 23.5 KB. That's because text in a PDF is stored as vector glyphs, not as pixels. If your text-only PDF is several megabytes, something is off: there's likely a high-resolution embedded image, an oversized font file, or revision history baked in.
+
+**Scanned PDFs and image-heavy files** are large because each page is stored as a raster image. A six-page image deck can hit 913 KB or more before any compression. These files are the ones that benefit from a compressor.
+
+Short rule: a text PDF should stay under 1 MB without any effort. An image-heavy PDF can reasonably reach several MB per page and still be shareable once compressed.
+
+## When does compression actually help, and when does it backfire?
+
+Compression works by rasterizing each page to JPEG and re-encoding it. That's highly effective on PDFs where pages are already images.
+
+On our in-browser [Compress PDF](/compress-pdf) tool, a 913.4 KB six-page image deck dropped to 315.3 KB at Medium quality (a 65.5 percent reduction) and to 175.6 KB at High quality (an 80.8 percent reduction). Both outputs fell well within any email attachment limit.
+
+For a **text PDF**, compression does the opposite. The same tool turned a 23.5 KB, 20-page text report into 1,400.8 KB because rasterizing crisp vector text into a JPEG is wasteful by design. The text gets stored as a photograph of characters rather than as characters themselves.
+
+Never compress a text-only PDF to bring it under an email limit. It will come back many times larger.
+
+One other thing to avoid: running compression twice on the same file. After a first Medium pass, running Medium again on the output inflated that same image deck from 315.3 KB back up to 598.9 KB. If Medium isn't small enough, open the original and try High instead of recompressing.
+
+## What to do when compression is not the right tool
+
+If you have a text PDF that's too large to send:
+
+1. **Split it** into shorter sections with the [Split PDF](/split-pdf) tool and send them separately.
+2. **Upload to cloud storage** and share a link. Google Drive, Dropbox, and OneDrive all handle large files without the size restrictions that email imposes.
+3. **Find and remove embedded objects**. A single high-resolution photo tucked into a page can add several megabytes. Opening the PDF in Preview (Mac) or Adobe Reader and checking what's on each page usually reveals the culprit.
+4. **Zip the file** as a last resort if the platform accepts ZIP uploads. This doesn't reduce size much for PDFs (they're already compressed internally), but some servers accept archives they would reject as direct attachments.
+
+## A quick size guide by use case
+
+| Use case | Target size |
+|---|---|
+| Resume for a job portal | Under 1 MB |
+| Email attachment (safe for all servers) | Under 5 MB |
+| Email via Gmail or Outlook (consumer) | Under 18 MB |
+| Government or court e-filing | Under 5 MB (check the portal) |
+| Google Classroom or Canvas submission | Under 10 MB |
+| Cloud drive share, no attachment | No practical limit |
+
+## How to check your PDF's size before sending
+
+On Windows: right-click the file, choose **Properties**, and look at the Size field.
+
+On Mac: click the file once, press **Command + I**, and check the Size line in the Get Info panel.
+
+In any browser-based PDF tool: most show file size once a document loads.
+
+If your PDF already fits the target for where you're sending it, you're done. There's no reason to compress preemptively. Running a compressor on a text PDF will make it larger, and running it twice on an image PDF will also make it larger than a single pass.
+
+Know your PDF's content type, pick the right target for your platform, and only reach for a tool when the current size doesn't fit.
