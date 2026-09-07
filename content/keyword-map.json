@@ -2573,7 +2573,8 @@
       "targetQuery": "how to convert powerpoint to pdf free",
       "intent": "informational",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-powerpoint-to-pdf-free"
     },
     {
       "id": "blog-pdf-too-large-facebook",
