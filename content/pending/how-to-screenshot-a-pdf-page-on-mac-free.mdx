@@ -1,0 +1,98 @@
+---
+title: "Screenshot a PDF Page on Mac: 4 Free Methods"
+description: "How to capture a PDF page as a sharp image on your Mac, from keyboard shortcuts to Preview export. No extra software or sign-up needed."
+date: "2026-09-07"
+keywords: ["how to screenshot a pdf page on mac free", "screenshot pdf mac", "save pdf page as image mac", "capture pdf page mac", "pdf to jpg mac free"]
+toolSlugs: ["pdf-to-jpg"]
+faq:
+  - q: "Why does my PDF screenshot look blurry on Mac?"
+    a: "A keyboard screenshot captures pixels at your display's resolution (72 to 144 DPI depending on your monitor). If the PDF is zoomed out, the result will be low resolution. Use Preview's File > Export and set 200 to 300 DPI for a sharper image."
+  - q: "What is the highest-quality way to save a PDF page as an image on Mac?"
+    a: "Use Preview's File > Export. Choose PNG or JPEG, then set the resolution to 200 or 300 DPI. This renders the page from the PDF's underlying data rather than from your screen, giving you a much sharper image."
+  - q: "Can I capture just part of a PDF page on Mac?"
+    a: "Yes. Press Shift+Command+4, then drag over the area you want. The selection saves as a PNG on your desktop. Or, in Preview, hold Option while dragging to select a region, then copy and paste it."
+  - q: "How do I save every page of a PDF as a separate image on Mac?"
+    a: "Use a PDF to JPG converter to process all pages at once. Doing them one by one in Preview works but is slow for a long document."
+  - q: "Is Preview's Export feature free on Mac?"
+    a: "Yes. Preview is built into macOS and free to use. No sign-up, no downloads, no cost."
+---
+
+The quickest way to screenshot a PDF page on a Mac is Shift+Command+4 to drag a selection. But if you need a sharp image for a presentation, a report, or anything printed, Preview's Export is a better choice. Both are free. Here's how each works and when to pick which.
+
+## Why a keyboard screenshot of a PDF can look blurry
+
+When you use Shift+Command+4, Mac captures exactly what's on screen at the time. On a standard display that's around 72 DPI; on a Retina screen it's closer to 144 DPI. The resolution you get depends entirely on how large the PDF is rendered at your current zoom level.
+
+That's usually fine for sending a quick reference over Slack or attaching to an email. It's a problem when the image will be viewed at a large size, dropped into a slide, or sent to print. At those sizes the lack of resolution becomes obvious as soft edges and jagged text.
+
+The fix isn't a paid app. Preview, which ships with every Mac, can export a page at any resolution you want.
+
+## Method 1: Keyboard shortcut (fastest option)
+
+Press **Shift+Command+4**. Your cursor turns into a crosshair. Drag it across the part of the page you want to capture, then release. The screenshot saves as a PNG on your Desktop.
+
+A few things that help here:
+
+- Zoom the PDF in as far as possible before taking the screenshot. More pixels on screen means more pixels in the screenshot.
+- On a MacBook Pro or iMac with a Retina display, the extra pixel density helps a lot compared to an external monitor at 1080p.
+- If you want the whole page without the rest of your screen, use **Shift+Command+5** to open the Screenshot toolbar. Click "Capture a window," then click the Preview window. You'll get a clean image of just that window.
+
+This approach takes about five seconds and is hard to beat for speed. Just don't expect print-quality output.
+
+## Method 2: Preview's Export (best quality, one page at a time)
+
+[Preview](https://support.apple.com/guide/preview/welcome/mac) has a proper image export feature that most people miss. It renders the page from the PDF's actual data rather than from your screen, so you control the resolution.
+
+Here's how to use it:
+
+1. Open the PDF in Preview.
+2. In the sidebar, click the thumbnail of the page you want.
+3. Go to **File > Export** (not "Export as PDF").
+4. Click the Format dropdown and pick JPEG or PNG.
+5. Adjust the Resolution slider. 150 DPI works for presentations; 200 to 300 DPI is better for anything you'll print or view at a large size.
+6. Click Save.
+
+The result is a clean image file. At 300 DPI, text is sharp and fine lines are clear, because the renderer is working from the original vector data in the PDF rather than guessing what was on your screen.
+
+**PNG vs JPEG:** PNG is lossless, so it's better for text-heavy pages where compression artifacts would show on sharp edges. JPEG produces a smaller file and looks fine for image-heavy pages. For most cases, JPEG at 200 DPI is a good balance.
+
+One limitation: Preview exports one page at a time. If you need ten pages, you'll repeat these steps ten times.
+
+## Method 3: Preview's snapshot selection (for grabbing a region)
+
+If you only need part of a page, a keyboard screenshot works well, but Preview has a built-in alternative. Open the PDF, hold **Option** and drag over the area you want. This creates a selection box. You can then copy it with Command+C and paste it into another application, or go to **File > Take Screenshot > From Selection** to save it as its own image file.
+
+This is useful for lifting a chart, a table, or a specific paragraph from a page without capturing the surrounding content. It's quicker than cropping a screenshot after the fact.
+
+## Method 4: Convert all pages to images at once
+
+If you need every page of a multi-page PDF as a separate image file, going through Preview one page at a time gets tedious fast. The [PDF to JPG tool](/pdf-to-jpg) converts each page of your PDF into a separate JPG in your browser. There's no software to install and no account required. Your file is processed entirely in the browser and doesn't get sent to a server.
+
+For a 20-page PDF, it takes a fraction of the time it would take to export each page individually. You download the results as a zip file with all the pages numbered in order.
+
+## Which method should you use?
+
+| What you're doing | Best method |
+|---|---|
+| Quick grab for Slack or email | Shift+Command+4 screenshot |
+| One page at high quality for print or slides | Preview > File > Export |
+| A specific region of a page | Option-drag in Preview (or Shift+Command+4) |
+| All pages as separate images | [PDF to JPG tool](/pdf-to-jpg) |
+
+The keyboard shortcut wins on speed but loses on quality. Preview's Export wins on quality but requires a few extra steps. Pick based on what the image is for.
+
+## What resolution to use when exporting
+
+[PDF](https://en.wikipedia.org/wiki/PDF) stores most content as vectors, which means it can render at any resolution without loss. When you export from Preview, the question is how many pixels you actually need:
+
+- **72 to 96 DPI**: Good for web use and anything viewed on screen. Files stay small.
+- **150 DPI**: Comfortable minimum for presentations, where slides typically display at 1920x1080.
+- **300 DPI**: The [standard for commercial printing](https://www.prepressure.com/library/resolution). Use this when the image will go to a printer or be viewed at large scale.
+
+There's no penalty for going higher than you need except file size. For a quick presentation asset, 150 DPI is enough. For anything going to a printer, 300 is the safe choice.
+
+## A note on protected PDFs
+
+If the PDF has copy or print restrictions enabled, Preview may not let you export pages as images. You'll see the export controls grayed out. In that case, a screenshot (Shift+Command+4) usually still works since it captures what's on your display, regardless of restrictions. The quality ceiling is your screen resolution, but it's often the only option available for restricted documents.
+
+If you own the document and set the restrictions yourself, remove them first. The [password remover tool](/unlock-pdf) handles this in the browser if you know the password.
