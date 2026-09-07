@@ -2261,7 +2261,8 @@
       "targetQuery": "how to add roman numeral page numbers to pdf free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-add-roman-numeral-page-numbers-to-pdf-free"
     },
     {
       "id": "blog-compress-pdf-shared-drive",
@@ -2565,6 +2566,70 @@
       "priority": 3,
       "status": "pending",
       "slug": "how-to-screenshot-a-pdf-page-on-mac-free"
+    },
+    {
+      "id": "blog-pptx-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to convert powerpoint to pdf free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-facebook",
+      "surface": "blog",
+      "targetQuery": "pdf too large for facebook upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-jpg-to-pdf-chromebook",
+      "surface": "blog",
+      "targetQuery": "how to convert jpg to pdf on chromebook free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-remove-page-numbers",
+      "surface": "blog",
+      "targetQuery": "how to remove page numbers from a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-pdf-for-website",
+      "surface": "blog",
+      "targetQuery": "how to compress pdf for website upload free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-tools-real-estate",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for real estate agents no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-pdf-onedrive",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf files in onedrive free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-batch-word-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to batch convert word documents to pdf free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
