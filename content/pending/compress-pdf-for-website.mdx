@@ -1,0 +1,98 @@
+---
+title: "Compress PDF for Website Upload: Free Guide"
+description: "How to shrink a PDF before uploading to your website. Works best for image-heavy files. No sign-up, runs entirely in your browser."
+date: "2026-09-07"
+keywords:
+  - "compress pdf for website upload"
+  - "reduce pdf file size for website"
+  - "pdf too large for website upload"
+  - "compress pdf free online"
+  - "make pdf smaller for web"
+toolSlugs:
+  - "compress-pdf"
+  - "split-pdf"
+faq:
+  - q: "How big should a PDF be for a website?"
+    a: "Under 2 MB is a practical target for most sites. WordPress and similar CMS platforms accept files up to 32 to 64 MB by default, but smaller PDFs load faster for visitors, and some shared hosting plans cap uploads much lower."
+  - q: "Will compressing a PDF make it look blurry?"
+    a: "For scanned pages and image-heavy files, compression reduces size with acceptable quality loss. For text-only PDFs, you should not compress at all. The compressor rasterizes every page to JPEG, which turns crisp vector text into a photograph of that text."
+  - q: "Can I compress a PDF without uploading it to a server?"
+    a: "Yes. Our Compress PDF tool runs entirely in your browser. Your file never touches our servers."
+  - q: "My PDF is already under 1 MB but it still fails to upload. What else can I try?"
+    a: "The CMS may be filtering on file type rather than size. Check that the platform accepts PDF uploads at all, and that the file is not password-protected. Some systems also reject PDFs that contain embedded scripts."
+  - q: "What if the compressed PDF is still too large?"
+    a: "Try splitting the document into smaller sections with our Split PDF tool, or remove pages you do not need with Delete Pages. For text-heavy PDFs that are large because of embedded fonts or metadata, compression will only make the file bigger."
+---
+
+Compressing a PDF for website upload takes about ten seconds with the right tool, and it's free. The catch is that compression only helps certain types of PDFs. If you pick the wrong approach for your file, you can end up with something larger than what you started with.
+
+This guide explains which PDFs compress well, which ones don't, and what to do when compression isn't an option.
+
+## What counts as "too large" for a website?
+
+There's no universal answer because every CMS and hosting setup is different. That said, a few common limits come up repeatedly:
+
+- **WordPress** defaults to a maximum upload size set by the server's PHP configuration, typically between 2 MB and 64 MB on shared hosting. Many entry-level plans cap it at 8 MB.
+- **Squarespace and Wix** allow PDF uploads up to 100 MB through their file manager, though individual page load times suffer with large files.
+- **Academic and government portals** often enforce a hard 5 MB or 10 MB cap on any document you submit.
+
+Beyond the upload limit itself, there's a usability argument for keeping PDFs small. A 15 MB brochure that a visitor has to download before reading creates friction. Under 2 MB is a reasonable goal for most public-facing documents. Under 500 KB is even better for anything embedded on a page.
+
+## Why compression works for some PDFs and not others
+
+The [PDF file format](https://en.wikipedia.org/wiki/PDF) can store two very different kinds of content: vector graphics (crisp at any size, stored as math instructions) and raster images (stored as grids of pixels, like a JPEG or PNG). Text and line art are usually vector. Photographs and scanned pages are raster.
+
+Our [Compress PDF tool](/compress-pdf) works by rasterizing every page to a JPEG image. That approach shrinks image-heavy files dramatically because a JPEG of a photograph can be far smaller than the raw raster data embedded in the original PDF. But when you rasterize a text page, you're converting something stored efficiently as vector instructions into a low-efficiency photograph of that text.
+
+In practice: a 6-page image deck we tested came in at 913.4 KB. After compression at the Medium setting, it dropped to 315.3 KB, a 65.5% reduction. A 20-page text report at 23.5 KB ballooned to 1.4 MB after the same treatment. Don't compress text PDFs.
+
+**Good candidates for compression:**
+- Scanned documents (your scanner embeds full-resolution raster images)
+- Photo portfolios, lookbooks, or product catalogs
+- Slide decks exported from PowerPoint or Keynote where every slide is a rendered image
+- Any PDF where the pages are photographs
+
+**Bad candidates for compression:**
+- Contracts, invoices, and reports made entirely of text
+- Spreadsheets exported to PDF
+- PDFs with interactive form fields (compression strips them)
+- PDFs that are already under 1 MB
+
+## How to compress a PDF for your website
+
+1. Open the [Compress PDF tool](/compress-pdf) in your browser. No account needed.
+2. Drop your PDF onto the tool, or click to browse for it.
+3. Choose a compression level. **Medium** is a good starting point for most image-heavy files. It cuts size noticeably while keeping the result readable. **High** (smallest) gives maximum size reduction at the cost of some visual quality.
+4. Wait for the tool to process. For most files this takes under two seconds.
+5. Download the compressed file and check the size before uploading to your website.
+
+The tool runs entirely in your browser. Nothing is sent to a server, which matters if your PDF contains confidential client information, financial data, or personal details.
+
+## Checking quality before you publish
+
+Open the downloaded PDF and zoom to 100% to check how text and images look. If text appears pixelated at normal reading size, the quality has dropped too far for a public document. In that case, go back and try the Low setting instead.
+
+If you compressed a file with the Medium setting and the result still isn't small enough, don't run it through compression a second time. A second pass increases file size rather than reducing it further. Start again from the original file and select High.
+
+## What to do when compression isn't enough
+
+For text-heavy PDFs that are large because of embedded fonts, revision history, or metadata, compression doesn't help. The most effective alternatives are:
+
+**Split the document.** If a long report needs to go on your website in sections anyway, our [Split PDF tool](/split-pdf) lets you pull out specific page ranges and save each as its own file. Visitors download only the section they need.
+
+**Remove pages you don't need.** If the PDF has appendices or blank pages that don't add value for your site visitors, use Delete Pages to strip them out before uploading.
+
+**Export from the source app at lower image quality.** If you made the PDF in Word, InDesign, or a similar tool, re-exporting with image downsampling turned on often beats post-processing in a standalone compressor. The source app can reduce images before they're embedded, rather than rasterizing finished pages.
+
+**Zip the file.** Some CMS platforms accept a .zip archive containing a PDF. The compression you get from zipping a PDF is small (PDFs are already compressed internally), but it changes the file type, which can bypass file-size checks in some upload forms.
+
+## Keeping website PDFs small from the start
+
+A few habits that prevent oversized PDFs:
+
+- Set your scanner to 150 DPI for web-only documents. 300 DPI is overkill for screen viewing and creates much larger files.
+- Flatten form fields before saving a final PDF. Editable fields add to file size.
+- Remove document passwords before uploading. [Encryption adds a small amount overhead](https://en.wikipedia.org/wiki/Encryption), and some CMS systems won't index or preview password-protected files.
+- Export from presentation software at 96 DPI or "web quality" rather than print-ready resolution.
+
+The [PDF specification](https://pdfa.org/resource/pdf-specification-index/) doesn't set a maximum file size, so anything making your file large is something you put there, or that your tools added by default. Tracking down the actual cause, whether that's oversized images, unnecessary metadata, or embedded fonts for every variant, usually gives better results than blanket compression.

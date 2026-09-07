@@ -2606,7 +2606,8 @@
       "targetQuery": "how to compress pdf for website upload free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-website"
     },
     {
       "id": "blog-best-pdf-tools-real-estate",
