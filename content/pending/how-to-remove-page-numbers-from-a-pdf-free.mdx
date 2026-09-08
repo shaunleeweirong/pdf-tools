@@ -1,0 +1,96 @@
+---
+title: "How to Remove Page Numbers from a PDF Free"
+description: "Remove page numbers from any PDF without Adobe. Works for text-based, scanned, and header-style numbers. Free, no sign-up required."
+date: "2026-09-08"
+keywords: ["how to remove page numbers from a pdf free", "delete page numbers pdf", "remove footer page number pdf", "pdf page number remover free"]
+toolSlugs: ["edit-pdf", "merge-pdf", "add-page-numbers"]
+faq:
+  - q: "Can I remove page numbers from a scanned PDF for free?"
+    a: "Not truly. Scanned page numbers are image pixels, not text. You can cover them with a white rectangle using an editor, but the underlying image stays in the file. For full removal you would need redaction software."
+  - q: "Does removing page numbers reduce the file size?"
+    a: "No, not meaningfully. A few digits of text weigh almost nothing. If your PDF is large, the page numbers are not the cause."
+  - q: "Can I remove page numbers from just the first page?"
+    a: "Yes. Open the PDF in an editor, go to page one only, and delete the number there. Leave the rest of the pages unchanged."
+  - q: "What if the page numbers were added using Word's header or footer?"
+    a: "Go back to the Word file, delete the header or footer, and re-export to PDF. That is faster than editing each page of the PDF manually."
+  - q: "Will removing page numbers break anything in the PDF?"
+    a: "No. Page numbers are just text content. Removing them does not affect layout, links, bookmarks, or how the file prints."
+---
+
+Removing page numbers from a PDF is possible for free, but the right method depends on what kind of numbers you have. Some are editable text, some are baked into a scanned image, and some were added by a word processor's header or footer feature. Getting this wrong wastes time, so it is worth taking thirty seconds to figure out which type you are dealing with.
+
+## How to tell what kind of page numbers you have
+
+Open the PDF in any viewer and click on one of the page numbers.
+
+- If a text cursor appears and you can highlight individual characters, the numbers are editable text.
+- If nothing happens when you click, you are either looking at a scanned image or at text that has been flattened into the page as graphics.
+- If you added the numbers using a word processor's Header or Footer feature and still have the original file, you are in the easiest situation: remove them there and re-export.
+
+The fix differs for each case.
+
+## Remove text-based page numbers with a PDF editor
+
+For editable page numbers, the [Edit PDF tool](/edit-pdf) lets you click into the page, select the number text, and delete it, all in your browser with no sign-up.
+
+1. Open the [Edit PDF tool](/edit-pdf) and upload your file.
+2. Go to the first page that has a number.
+3. Click directly on the page number. A text cursor should appear.
+4. Double-click to select the number, then press Backspace or Delete.
+5. Repeat for each remaining page.
+6. Download the edited file when you are done.
+
+This is manual but fast for short documents. A five-page PDF takes about a minute. For a hundred-page file, it is tedious enough that checking for the original source document first is worth the effort.
+
+One thing to watch for: if the numbers appear in an identical fixed position on every page (bottom center, top right, and so on), they were almost certainly added as a header or footer. Removing them from the source document is quicker than editing each page by hand.
+
+## Cover scanned page numbers with a white box
+
+Scanned page numbers are not text. They are part of a photograph of the physical page, so there is nothing to select or delete. The only free option, without specialized redaction software, is to cover them.
+
+In the [Edit PDF tool](/edit-pdf), use the shape or annotation drawing tools to place a white rectangle over each page number. This hides the number visually, including when printed.
+
+This works for most practical purposes. If you are preparing a document for legal or archival submission and need provable removal rather than visual coverage, you need a dedicated redaction tool that permanently destroys the underlying pixel data rather than layering something on top.
+
+## Go back to the source file when you can
+
+If the PDF came from a word processor and you still have the original, this is the fastest path by far.
+
+For Microsoft Word:
+
+1. Open the .docx file.
+2. Double-click the header or footer area where the page number sits.
+3. Select the page number field and press Delete. Or go to Insert, then Page Number, then Remove Page Numbers.
+4. Close the header/footer editing view and save the file.
+5. Export to PDF again via File, Save As, PDF.
+
+For Google Docs the same approach applies: edit the header or footer in Docs, then download as PDF.
+
+The result has no page numbers at all, no coverage layer, and no per-page editing work. It is the cleanest outcome you can get, and it takes under a minute if you still have the source.
+
+## Page number conflicts after merging PDFs
+
+A common reason people search this topic is that they merged two documents and ended up with clashing numbers. Document A ends at page 12 and document B starts at page 1, so the merged file shows both sequences side by side.
+
+The [Merge PDF tool](/merge-pdf) combines page content exactly as it is in each source file. It does not strip or rewrite page numbers. So conflicts in numbering come from the source documents, not from the merge itself.
+
+The cleanest fix is to remove page numbers from each source document before merging, then stamp a fresh continuous sequence on the merged file using the [Add Page Numbers tool](/add-page-numbers). That gives the final document one consistent numbering from cover to last page.
+
+## When removing is not what you actually need
+
+A few related scenarios that call for a different approach:
+
+- You want to **reorder pages** but keep the numbers. Use the [Organize PDF tool](/organize-pdf). The page numbers stay attached to whichever page they are on, regardless of order.
+- You want numbering to **start from a different page**, for example to skip a cover page or table of contents. Remove the existing numbers first, then use the Add Page Numbers tool with an offset to start counting from wherever you want.
+- The PDF viewer is showing a **different number in its navigation bar** than what appears on the page. That is a separate concept called [logical page numbering](https://en.wikipedia.org/wiki/PDF), stored in the PDF's internal page labels dictionary, independent of any visible text on the page. Deleting the visible numbers does not change this.
+
+## Quick reference
+
+| Your situation | Best approach |
+|---|---|
+| Text-based numbers, editable | Edit PDF tool, click and delete per page |
+| Numbers from a Word or Docs header/footer | Remove from source file, re-export to PDF |
+| Scanned numbers (image pixels) | Cover with white rectangle in editor |
+| Post-merge numbering conflicts | Remove from source files, re-add after merging |
+
+Removing page numbers takes a couple of minutes for short documents. For longer files, the original source document is almost always the faster route. If you do not have the source, the [Edit PDF tool](/edit-pdf) covers the most common case, and the result downloads straight to your device.
