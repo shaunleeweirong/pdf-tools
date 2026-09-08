@@ -2582,7 +2582,8 @@
       "targetQuery": "pdf too large for facebook upload",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-too-large-for-facebook-upload"
     },
     {
       "id": "blog-jpg-to-pdf-chromebook",
