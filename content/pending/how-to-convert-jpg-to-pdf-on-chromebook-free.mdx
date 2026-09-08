@@ -1,0 +1,99 @@
+---
+title: "Convert JPG to PDF on Chromebook Free"
+description: "Three ways to turn JPG photos into a PDF on Chromebook: the built-in Gallery trick, Chrome's print dialog, and a free browser tool that combines multiple images."
+date: "2026-09-08"
+keywords: ["how to convert jpg to pdf on chromebook free", "jpg to pdf chromebook", "chromebook convert photo to pdf", "chromebook images to pdf", "combine jpg to pdf chromebook"]
+toolSlugs: ["jpg-to-pdf", "merge-pdf", "compress-pdf"]
+faq:
+  - q: "Can I convert JPG to PDF on a Chromebook without installing anything?"
+    a: "Yes. ChromeOS has a built-in print-to-PDF feature. Open the image in Gallery, press Ctrl+P, set the destination to Save as PDF, and click Save. No app downloads or sign-ups needed."
+  - q: "How do I combine multiple JPGs into one PDF on a Chromebook?"
+    a: "The built-in Gallery app converts one image at a time. To put several photos into a single PDF, use the Images to PDF tool at /jpg-to-pdf. Upload your files, arrange them in order, and download one combined PDF with each image on its own page."
+  - q: "Does converting a JPG to PDF reduce quality?"
+    a: "The built-in print-to-PDF method keeps the image at its display resolution. For best results, start from the highest-quality version of your photo before converting."
+  - q: "Does the browser JPG to PDF tool upload my files to a server?"
+    a: "No. The tool runs in your browser and your images never leave your device. That matters when converting photos that contain personal or sensitive content."
+  - q: "What if my converted PDF is still too large to send?"
+    a: "If the file is too big, try the Compress PDF tool at /compress-pdf. Compression works best on image-heavy files. It will make text-only PDFs larger, so only use it when your PDF contains photos."
+---
+
+Converting a JPG to PDF on a Chromebook is quick and free: open the image in the Gallery app, press Ctrl+P, choose "Save as PDF" as the destination, and hit Save. You're done in under 30 seconds, no account required, no app to install.
+
+That handles a single image. If you need to combine several photos into one document, or want more control over the output, two more options are worth knowing.
+
+## Method 1: Use the Gallery app and print to PDF (built-in, works offline)
+
+This method uses only what comes with ChromeOS, so it works without an internet connection.
+
+1. Open the **Files** app and locate your JPG.
+2. Double-click the image to open it in **Gallery**.
+3. Press **Ctrl + P** to open the print dialog.
+4. Click the **Destination** dropdown and choose **Save as PDF**.
+5. Click **Save**, pick a folder (Downloads, Google Drive, or wherever you like), and name the file.
+
+The dialog shows a preview before you commit, so check orientation and scale first.
+
+**Image is sideways?** Rotate it in Gallery before printing. The toolbar has a rotate button. Straighten the image there, then run Ctrl+P again, and the PDF will come out correctly oriented.
+
+**PNG files?** The same steps work. Any image the Gallery app can open, including PNG, WebP, and BMP, can be printed to PDF this way.
+
+**One caveat:** this method produces one PDF per image. If you have five photos, you end up with five separate PDF files. For combining them into one document, jump to Method 3.
+
+## Method 2: Use Chrome's print dialog directly
+
+If your image is already open in a Chrome browser tab rather than Gallery, you don't need to switch apps.
+
+1. Open Chrome and go to the image file. You can drag the file into a new tab, or type `file:///` followed by the file path in the address bar.
+2. Press **Ctrl + P**.
+3. Set **Destination** to **Save as PDF**.
+4. Click **Save**.
+
+This uses the same [ChromeOS print-to-PDF feature](https://support.google.com/chromebook/answer/6311967) as Method 1. It's been part of ChromeOS since the early days, so it works on any Chromebook running a recent build of the operating system.
+
+One practical use: if you screenshot something on your Chromebook (Ctrl + Show Windows key) and want to archive it as a PDF, you can open the screenshot in Chrome and print it to PDF without ever touching Gallery.
+
+## Method 3: Use a free browser tool (best for combining multiple images)
+
+The built-in methods above make one PDF per image. If you have a batch of photos to put into a single document, the [Images to PDF tool](/jpg-to-pdf) is the better choice.
+
+Upload multiple JPG or PNG files, drag them into the order you want, and download one PDF with each image on its own page. The tool runs entirely in your browser. Your files are processed on your device and never sent to any server.
+
+Here's how to do it:
+
+1. Open [Images to PDF](/jpg-to-pdf) in Chrome.
+2. Click **Choose files** or drag your JPG files into the upload area.
+3. Drag the thumbnails to set the page order.
+4. Click **Convert** and wait a few seconds.
+5. Download the PDF.
+
+No sign-up, no watermark on the result.
+
+This approach also saves you from manually merging files after conversion. If you converted five images individually using the Gallery method and now need one combined PDF, you'd have to run them through a merge tool afterward. Doing it all in one step with the browser tool is faster.
+
+## Comparing the three methods
+
+| Method | Works offline? | Multiple images in one PDF? | Sign-up required? |
+|---|---|---|---|
+| Gallery + print to PDF | Yes | No (one image at a time) | No |
+| Chrome browser + print | Yes | No (one image at a time) | No |
+| Images to PDF browser tool | No (needs internet) | Yes | No |
+
+If you're on a plane or somewhere without Wi-Fi, use the built-in methods. If you're online and need to combine photos, the browser tool is the quicker path.
+
+## What to do if the PDF is too large
+
+Photos can produce large PDFs. A single full-resolution JPEG from a phone camera can create a file that's 4 to 8 MB, which is over the 25 MB limit that [Gmail and Outlook.com](https://support.google.com/mail/answer/6584) impose on attachments. After [Base64 encoding](https://en.wikipedia.org/wiki/Base64) (which email uses internally), a 25 MB message holds only about 18 MB of actual file content, so the practical ceiling is tighter than it appears.
+
+If you need a smaller file, the [Compress PDF tool](/compress-pdf) can help. It works well on image-heavy PDFs. A few things to keep in mind:
+
+- Compression rasterizes each page at a lower resolution. The file shrinks, but the image loses some sharpness. For photos that started as JPEGs, this trade is usually acceptable.
+- Try Medium quality first. If the file still isn't small enough, start again from the original PDF at High (smallest) quality. Do not run compression twice on the same file: a second pass at the same quality level makes the file larger, not smaller, because re-encoding an already-compressed JPEG adds overhead rather than removing it.
+- If your PDF contains text rather than photos, compression will make it bigger. The tool rasterizes pages to JPEG, and text stored as a photo of glyphs is far larger than the same text stored as vector outlines. For text PDFs, split or zip the file instead.
+
+## Can you convert other image formats on a Chromebook?
+
+Yes. The Gallery app and Chrome's print dialog handle any format ChromeOS recognizes, including PNG, WebP, HEIC (from iPhone cameras), and BMP. The [Images to PDF tool](/jpg-to-pdf) accepts JPG and PNG. If you have a HEIC or WebP image and want to use the browser tool, convert it to JPG or PNG first using any free image converter, then run it through.
+
+For Google Drive users: Google Drive itself doesn't convert images to PDF directly, but you can open an image in Google Docs (right-click in Drive, choose Open with Google Docs) and then export it as PDF from the File menu. The result tends to have extra whitespace around the image, so the Gallery method or the browser tool usually gives a cleaner output.
+
+If you need to work with the PDF after conversion, the same tools that work in Chrome on a desktop work on a Chromebook. You can [merge the PDF with other documents](/merge-pdf), rotate pages, or split it, all from the browser, with no software to install.

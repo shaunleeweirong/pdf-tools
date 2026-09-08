@@ -2590,7 +2590,8 @@
       "targetQuery": "how to convert jpg to pdf on chromebook free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-jpg-to-pdf-on-chromebook-free"
     },
     {
       "id": "blog-remove-page-numbers",
