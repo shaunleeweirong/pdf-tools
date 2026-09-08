@@ -2636,6 +2636,71 @@
       "targetQuery": "how to batch convert word documents to pdf free",
       "intent": "transactional",
       "priority": 2,
+      "status": "pending",
+      "slug": "how-to-batch-convert-word-documents-to-pdf-free"
+    },
+    {
+      "id": "blog-remove-pdf-annotations",
+      "surface": "blog",
+      "targetQuery": "how to remove annotations from pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-protected-pdfs",
+      "surface": "blog",
+      "targetQuery": "how to merge password protected pdf files free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-cut-off-printing",
+      "surface": "blog",
+      "targetQuery": "why is my pdf cut off when printing",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-audio",
+      "surface": "blog",
+      "targetQuery": "how to convert pdf to audio file free online",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-to-word-formatting",
+      "surface": "blog",
+      "targetQuery": "convert pdf to word without losing formatting free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-safari-not-opening",
+      "surface": "blog",
+      "targetQuery": "pdf not opening in safari how to fix",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-tools-remote",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for remote workers no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-reduce-pdf-resolution",
+      "surface": "blog",
+      "targetQuery": "how to reduce pdf image resolution dpi free online",
+      "intent": "informational",
+      "priority": 3,
       "status": "idea"
     }
   ]
