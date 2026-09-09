@@ -2653,7 +2653,8 @@
       "targetQuery": "how to merge password protected pdf files free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-merge-password-protected-pdf-files-free"
     },
     {
       "id": "blog-pdf-cut-off-printing",
