@@ -2689,7 +2689,8 @@
       "targetQuery": "pdf not opening in safari how to fix",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-not-opening-in-safari-how-to-fix"
     },
     {
       "id": "blog-best-pdf-tools-remote",
