@@ -1,0 +1,106 @@
+---
+title: "Why Is My PDF Cut Off When Printing?"
+description: "PDF cutting off when printing usually comes down to a paper size mismatch, the wrong scale setting, or your printer's non-printable border. Here's how to fix it."
+date: "2026-09-09"
+keywords: ["why is my pdf cut off when printing", "pdf printing cut off", "pdf cut off on edges", "pdf prints text missing", "fix pdf printing cut off"]
+toolSlugs: ["compress-pdf", "crop-pdf"]
+faq:
+  - q: "Why does my PDF print with the right side cut off?"
+    a: "A paper size mismatch is the most common cause. If your PDF was built for A4 and your printer is loaded with US Letter paper, the small width difference pushes content off the right edge. Open the print dialog, confirm the paper size matches what's in the tray, and switch scale from 'Actual size' to 'Fit' or 'Shrink to printable area'."
+  - q: "How do I stop my printer from cutting off text at the top or bottom?"
+    a: "Switch from 'Actual size' (100%) to 'Fit' or 'Shrink to printable area' in the print dialog. Printers have a small unprintable border on every edge, and printing at 100% clips any content that falls inside that border."
+  - q: "Does the PDF viewer I use affect whether content cuts off?"
+    a: "Yes. Browsers like Chrome and Edge apply their own scaling logic, which can clip content differently from a dedicated PDF reader. If content cuts off when printing from a browser, download the PDF and open it in Adobe Acrobat Reader or your OS's built-in viewer, then print from there."
+  - q: "My PDF prints fine on one printer but cuts off on another. Why?"
+    a: "Each printer model has a different non-printable border. A printer with a 5mm unprintable edge handles the same PDF differently from one with a 3mm border. If your document has content close to the page boundary, the printer with the wider border will clip it."
+  - q: "Can I fix a PDF whose content is too close to the page edge?"
+    a: "The quickest fix is to switch to 'Fit' in the print dialog so the viewer scales the page down enough to clear the unprintable zone. If you need to permanently adjust the visible page area, a crop or resize tool can help trim the boundary so content sits further from the edge."
+---
+
+If your PDF cuts off when printing, the problem is almost always one of three things: a paper size mismatch, a scale setting left on "Actual size," or content that sits inside your printer's non-printable border. All three are fixable, usually in under a minute, without touching the original file.
+
+## What is the "printable area" and why does it matter?
+
+Most home and office printers cannot print all the way to the physical edge of the paper. There is a small unprintable border around every side, typically 3 to 5mm wide, that the print head cannot reach. If a PDF has content that sits inside that border, it will not appear on the printout. The content does not move or reflow. It simply does not get printed.
+
+This is a hardware limitation, not a software bug. You can find the exact unprintable margins for your printer model in the manufacturer's spec sheet.
+
+## Cause 1: Paper size mismatch (A4 vs Letter)
+
+This is the single most common cause of PDF content being cut off. [US Letter paper (8.5 x 11 inches) and ISO A4 paper (210 x 297mm)](https://en.wikipedia.org/wiki/Paper_size) are close in size but not identical. A4 is slightly narrower and taller. If a PDF was created for A4 and you print it on Letter paper without adjusting, or the reverse, content near the edges will be clipped.
+
+How to check: open the print dialog and confirm the paper size listed there matches what is actually in your printer tray. If they do not match, change the setting, preview the page, and print again.
+
+## Cause 2: Scale is set to "Actual size"
+
+Printing at "Actual size" or 100% tells the printer to reproduce each page at exactly 1:1 scale. This is fine when the PDF's page dimensions perfectly match your paper AND all content stays inside the printable area. When either condition fails, content at the edges gets cut off.
+
+The safer default is "Fit" or "Shrink to printable area." These options scale the content down just enough to land fully inside the printable zone. The result is very slightly smaller than 1:1, but nothing gets clipped.
+
+Where to change this setting:
+- Adobe Acrobat and Reader: look for "Page sizing and handling" in the print dialog, then select "Shrink to printable area."
+- Chrome: File, Print, More settings, Scale. Set a custom value like 95% or choose "Fit to page."
+- macOS Preview: open the print dialog, click "Show Details," and look for the Scale field.
+- Windows: check the print settings inside the application you are printing from, not just the system dialog.
+
+## Cause 3: Content is too close to the page edge
+
+Sometimes the PDF itself is the cause. A document created with very small margins, or with content that bleeds right to the page boundary, will always clip on a standard printer because there is no room to account for the unprintable border.
+
+This is common with PDFs exported from design tools, spreadsheets formatted to fill the full page, or web pages saved as PDF. The "Fit" setting in the print dialog will shrink everything down just enough to avoid clipping, but the text will be slightly smaller.
+
+If you want to permanently adjust the visible boundary of pages, our [Crop PDF tool](/crop-pdf) lets you trim the edges of each page so the content area is smaller and sits further from the physical boundary when printed.
+
+## Cause 4: Printing from a browser
+
+Browsers handle PDF rendering differently from dedicated PDF readers. Chrome, Edge, and Firefox each have their own print pipeline, and they do not always match what you see on screen. Some browser versions have been known to clip PDFs on the right or bottom after updates reset the default scale setting.
+
+The simplest fix: download the PDF file and open it in a dedicated reader such as Adobe Acrobat Reader (free) or the built-in viewer on macOS or Windows, then print from there. This bypasses the browser's rendering layer entirely.
+
+## Cause 5: Print settings reset after an update
+
+Print settings sometimes reset silently after a driver update, a Windows update, or a change in your default printer. If PDFs that used to print correctly suddenly cut off, the culprit may be a setting that reverted to a problematic default.
+
+On Windows: go to Settings, Printers and Scanners, click your printer, Manage, Printing preferences, and verify the paper size and layout match your usual setup.
+
+On macOS: open the Print dialog, click "Show Details," and check the Paper Size and Scale fields.
+
+## How to fix PDF cut off: step by step
+
+1. Open the print dialog (Ctrl+P on Windows, Command+P on Mac).
+2. Confirm the paper size in the dialog matches the paper in the printer tray.
+3. In page sizing or scale, switch from "Actual size" to "Fit" or "Shrink to printable area."
+4. Check the print preview. All content should be visible with a small margin around it.
+5. If content is still cut off, verify the printer driver's default paper size in system settings.
+6. If you are printing from a browser and the preview looks fine but the printout is clipped, try printing the same file from a dedicated PDF reader.
+
+## Quick reference: scale settings by viewer
+
+| Viewer | Where to find scale | Recommended setting |
+|---|---|---|
+| Adobe Acrobat/Reader | Page sizing and handling | Shrink to printable area |
+| Chrome | More settings, Scale | 95% or Fit to page |
+| Edge | Print settings | Fit to page |
+| macOS Preview | Print dialog, Scale | Scale to fit |
+| Firefox | Page setup | Shrink to fit |
+
+## When the PDF itself cannot be changed
+
+If you cannot edit the original PDF and the content consistently clips no matter what scale you choose, you have a few options.
+
+First, try a scale of 90 to 95% rather than "Fit." This gives the content more breathing room and often keeps it legible without changing anything visually noticeable.
+
+Second, if the file is image-heavy and very large, the printer may time out before finishing, which can look like a clipping problem. Our [Compress PDF tool](/compress-pdf) can reduce file size for scan-based or photo-heavy PDFs, which may help the file spool to the printer faster. Note that the compression works by rasterizing pages, so it is most useful for PDFs that are already image-based, not text documents.
+
+Third, check orientation. A landscape document that the print dialog treats as portrait will clip content on the right and leave the bottom blank. Confirm the orientation in the print dialog matches the document's layout.
+
+## Check before you print
+
+One habit that prevents most printing problems: always open the print preview before clicking Print. If you can see all four edges of the page content in the preview with a small clear border around it, the page will print correctly. If any edge of the content runs to the edge of the preview or is visibly missing, adjust the scale before printing.
+
+The print preview is the only way to know what your printer will actually put on paper. It takes three seconds and saves a wasted sheet every time.
+
+## External links
+
+- [ISO A4 and US Letter dimensions](https://en.wikipedia.org/wiki/Paper_size#International_standard_sizes) via Wikipedia
+- [PDF specification (ISO 32000)](https://www.iso.org/standard/75839.html) via ISO
