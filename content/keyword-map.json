@@ -2698,7 +2698,8 @@
       "targetQuery": "best free pdf tools for remote workers no sign up",
       "intent": "commercial",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "best-free-pdf-tools-for-remote-workers-no-sign-up"
     },
     {
       "id": "blog-reduce-pdf-resolution",
