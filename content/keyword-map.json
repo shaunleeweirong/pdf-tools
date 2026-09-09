@@ -2680,7 +2680,8 @@
       "targetQuery": "convert pdf to word without losing formatting free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "convert-pdf-to-word-without-losing-formatting-free"
     },
     {
       "id": "blog-pdf-safari-not-opening",
