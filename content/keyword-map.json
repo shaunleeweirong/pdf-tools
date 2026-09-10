@@ -2709,6 +2709,71 @@
       "priority": 3,
       "status": "pending",
       "slug": "how-to-reduce-pdf-image-resolution-dpi-free-online"
+    },
+    {
+      "id": "blog-pdfxchange-alternatives",
+      "surface": "blog",
+      "targetQuery": "pdf xchange editor alternatives free no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "pdf-xchange-editor-alternatives-free-no-sign-up"
+    },
+    {
+      "id": "blog-html-to-pdf",
+      "surface": "blog",
+      "targetQuery": "html to pdf converter free online",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-open-pdf-in-word",
+      "surface": "blog",
+      "targetQuery": "how to open a pdf in word free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-edit-pdf-google-docs",
+      "surface": "blog",
+      "targetQuery": "can you edit a pdf in google docs free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-make-pdf-editable",
+      "surface": "blog",
+      "targetQuery": "how to make a pdf editable free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-for-tax-filing",
+      "surface": "blog",
+      "targetQuery": "compress pdf for tax filing free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-split-pdf-by-size",
+      "surface": "blog",
+      "targetQuery": "how to split pdf by file size free online",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-send-pdf-text-message",
+      "surface": "blog",
+      "targetQuery": "how to send a large pdf via text message free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
     }
   ]
 }
