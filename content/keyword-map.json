@@ -2760,7 +2760,8 @@
       "targetQuery": "compress pdf for tax filing free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-tax-filing-free"
     },
     {
       "id": "blog-split-pdf-by-size",
