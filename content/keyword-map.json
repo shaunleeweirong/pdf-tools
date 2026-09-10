@@ -2749,7 +2749,8 @@
       "targetQuery": "how to make a pdf editable free online",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-make-a-pdf-editable-free-online"
     },
     {
       "id": "blog-compress-for-tax-filing",
