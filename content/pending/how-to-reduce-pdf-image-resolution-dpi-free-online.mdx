@@ -1,0 +1,106 @@
+---
+title: "How to Reduce PDF Image Resolution and DPI Free"
+description: "Lower the DPI of images inside a PDF to cut file size. Works in any browser, no sign-up, and files never leave your device."
+date: "2026-09-10"
+keywords: ["reduce pdf image resolution dpi", "reduce pdf dpi", "lower pdf resolution", "pdf image resolution", "compress pdf images"]
+toolSlugs: ["compress-pdf"]
+faq:
+  - q: "Does reducing PDF image resolution affect text quality?"
+    a: "If your PDF has real vector text (typed documents, invoices, forms), using a rasterizing compressor will make it much larger, not smaller. Only reduce resolution on PDFs made up mostly of scanned pages or embedded photos."
+  - q: "What DPI should a PDF be for email?"
+    a: "Screen-quality viewing needs only 72 to 96 DPI. For most email attachments, 150 DPI is sharp enough on screen while keeping file size manageable."
+  - q: "Should I compress a PDF twice to reduce the file further?"
+    a: "No. A second compression pass at the same level makes the file larger. If the first result is still too big, go back to the original and try a higher compression setting."
+  - q: "How much can compression reduce a PDF's file size?"
+    a: "For an image-heavy PDF, Medium compression reduced a 913.4 KB file to 315.3 KB (65.5% smaller). High compression brought the same file to 175.6 KB (80.8% smaller)."
+  - q: "Can I reduce PDF image resolution on a phone?"
+    a: "Yes. The Compress PDF tool runs in Chrome, Firefox, and Safari on both Android and iPhone. No app or software download is needed."
+---
+
+## How to reduce PDF image resolution for free
+
+Reducing PDF image resolution is the fastest way to shrink a file packed with scanned pages or embedded photos. Open the [Compress PDF tool](/compress-pdf), drop in your file, choose a compression level, and download the result. Everything runs inside your browser, so your file is never sent to a server.
+
+Here is the step-by-step:
+
+1. Go to the [Compress PDF tool](/compress-pdf).
+2. Click **Choose file** or drag your PDF onto the upload area.
+3. Select a compression level:
+   - **High** cuts file size the most, reducing an image-heavy PDF by around 80%.
+   - **Medium** is the right default for most files, reducing size by about 65%.
+   - **Low** preserves the most image quality while still cutting size by roughly 23%.
+4. Click **Compress**.
+5. Download the smaller PDF.
+
+The tool rasterizes each page to a [JPEG](https://en.wikipedia.org/wiki/JPEG) and re-embeds it at a lower resolution. That's what reduces the effective DPI of the images inside the file.
+
+## What DPI should a PDF be?
+
+[DPI (dots per inch)](https://en.wikipedia.org/wiki/Dots_per_inch) describes how many pixels are packed into each inch of an image. Higher DPI means more detail and a larger file.
+
+Different uses call for different resolution targets:
+
+| Use case | Target DPI |
+|---|---|
+| Screen viewing, web uploads | 72 to 96 DPI |
+| Email attachments, ebooks | 150 DPI |
+| Standard document printing | 300 DPI |
+| High-quality press printing | 600 DPI or higher |
+
+If your PDF is going to an email inbox or an online portal, you rarely need more than 150 DPI. Dropping from 300 DPI to 150 DPI halves the data per image and makes a noticeable dent in file size.
+
+## How much smaller will my PDF get?
+
+That depends on what is in the file. These results come from running the actual Compress PDF tool on a test file: a 6-page image-heavy PDF (913.4 KB) made up of full-page raster images.
+
+| Compression level | Before | After | Change |
+|---|---|---|---|
+| High (smallest file) | 913.4 KB | 175.6 KB | 80.8% smaller |
+| Medium | 913.4 KB | 315.3 KB | 65.5% smaller |
+| Low (best quality) | 913.4 KB | 703.5 KB | 23.0% smaller |
+
+Your results will vary with your PDF's content, but the direction is reliable: image-heavy and scanned PDFs shrink substantially.
+
+## The mistake that makes PDFs larger instead of smaller
+
+Here's the catch that catches most people out. If your PDF contains real typed text (contracts, invoices, reports, forms), using a rasterizing compressor will make it bigger, not smaller.
+
+A 20-page text-only report measuring 23.5 KB grew to 1.4 MB after Medium compression. That's roughly 60 times larger. The reason: vector text is extremely compact (a character is just a set of coordinates), but a photo of text is thousands of pixels per page.
+
+**If your PDF has real text, compression is the wrong tool.** Try one of these instead:
+
+- Use the [Split PDF tool](/split-pdf) to break a large document into smaller chunks.
+- Use [Delete Pages](/delete-pages) to remove pages you do not need.
+- Check whether the file has an embedded font or embedded revision history inflating the size.
+
+If your PDF is a scan, a photo portfolio, or a deck of images, compression will help. If it is a digital document with typed text, it will not.
+
+## Should you compress the same PDF twice?
+
+No. Running the same file through compression a second time at the same level makes it larger, not smaller.
+
+A PDF already compressed at Medium went from 315.3 KB to 598.9 KB when run through Medium again. That is almost double the size. Once an image has been through JPEG encoding, re-encoding it at the same quality picks up artifacts and pads the file.
+
+If Medium was not enough, go back to your original file and run it at High. Starting from the original always gives a better result than re-compressing the output.
+
+## Alternatives for desktop users
+
+The browser-based [Compress PDF tool](/compress-pdf) covers most cases, but if you need precise control over output DPI, desktop tools offer more options.
+
+[Ghostscript](https://www.ghostscript.com/) is a free, open-source command-line tool that can downsample images to a specific DPI. The flag `-dPDFSETTINGS=/ebook` targets 150 DPI for screen use, and `-dPDFSETTINGS=/screen` targets 72 DPI. It handles text separately from images, so it will not bloat a text PDF the way a rasterizing tool does.
+
+On Mac, the Preview app has a built-in **Reduce File Size** option under File > Export as PDF, which adjusts image resolution without converting text to images. Results vary by file, but it is a quick first attempt before reaching for other tools.
+
+## Choosing the right compression level
+
+Pick based on what the file is for, not just how small you want it.
+
+**Low (best quality):** Use when you need to preserve image sharpness and you are only trying to trim a little off the file size. A 23% reduction is modest but keeps photos looking sharp.
+
+**Medium:** The right choice for most situations. A 65% reduction on an image-heavy PDF clears most email size limits and upload caps, and quality is still good for on-screen viewing.
+
+**High (smallest file):** Use when file size is the only priority, such as uploading to a web form with a strict 5 MB or 10 MB cap. Quality degrades at pixel level, especially on fine text in scanned pages. For a scanned utility bill or a signed agreement going to an online portal, this level is usually fine.
+
+If you are not sure, start with Medium. If the result is still too large, go back to the original and try High. If the quality at High is not acceptable, the file may not be a good candidate for this type of compression, and splitting or removing pages is a better path.
+
+[Compress your PDF now](/compress-pdf) and pick the level that fits your use case.
