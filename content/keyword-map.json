@@ -2781,6 +2781,71 @@
       "priority": 3,
       "status": "pending",
       "slug": "how-to-send-a-large-pdf-via-text-message-free"
+    },
+    {
+      "id": "blog-best-pdf-app-iphone",
+      "surface": "blog",
+      "targetQuery": "best free pdf app for iphone no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "best-free-pdf-app-for-iphone-no-sign-up"
+    },
+    {
+      "id": "blog-compress-chrome-browser",
+      "surface": "blog",
+      "targetQuery": "how to compress pdf in chrome browser free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-zendesk",
+      "surface": "blog",
+      "targetQuery": "pdf too large for zendesk attachment",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-combine-receipts-pdf",
+      "surface": "blog",
+      "targetQuery": "how to combine receipt photos into one pdf free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-sign-pdf-with-mouse",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf with your mouse free online",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-insert-pages-pdf",
+      "surface": "blog",
+      "targetQuery": "how to insert pages from one pdf into another free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-crop-pdf-windows",
+      "surface": "blog",
+      "targetQuery": "how to crop pdf pages on windows free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-tools-healthcare",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for healthcare workers no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
