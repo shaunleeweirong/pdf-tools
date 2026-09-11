@@ -1,0 +1,95 @@
+---
+title: "How to Send a Large PDF via Text Message"
+description: "Text a large PDF without it bouncing. Learn file size limits for iMessage, MMS, RCS and WhatsApp, then shrink or split it in seconds."
+date: "2026-09-11"
+keywords: ["how to send a large pdf via text message", "send pdf via text", "pdf too large for text message", "compress pdf for text message", "pdf text message size limit"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is the maximum PDF size for a text message?"
+    a: "It depends on the protocol. Standard MMS caps attachments at around 300 KB to 1 MB, depending on your carrier. iMessage and RCS support much larger files, often up to 100 MB, but if the conversation falls back to SMS, the carrier's lower limit applies."
+  - q: "Why does my PDF fail to send even though it seems small?"
+    a: "The conversation may have switched from iMessage to SMS/MMS without you noticing. On iPhone, a green send button means SMS/MMS is active and the carrier's 1 MB cap applies. A blue button means iMessage is on."
+  - q: "Can I compress a text-based PDF to send it via text message?"
+    a: "No. Our compressor rasterizes pages to JPEG, which makes a text PDF much larger, not smaller. A 20-page text report grew from 23.5 KB to 1.4 MB in testing. For text PDFs, split the file into smaller sections or share a cloud link instead."
+  - q: "Does WhatsApp have a PDF size limit?"
+    a: "WhatsApp allows document attachments up to 100 MB, so most PDFs go through fine. If yours is image-heavy and still too large, compress it first. For text-based PDFs, share a cloud link rather than compressing."
+  - q: "What's the fastest fix when a PDF is too large to text?"
+    a: "Upload to Google Drive, Dropbox, or iCloud and text the share link. The link arrives in seconds regardless of file size, and the recipient taps it to open or download the full PDF."
+---
+
+Sending a large PDF via text message fails when the file is bigger than what the messaging protocol allows. The fix depends on what's in the PDF: compress it if it's full of images or scans, split it if it's mostly text, or share a cloud link if neither approach gets the size low enough. Here's how each option works.
+
+## Why text messages reject large PDFs
+
+There's no single size limit that covers every conversation. The limit changes depending on which protocol is actually carrying your message.
+
+[MMS (Multimedia Messaging Service)](https://en.wikipedia.org/wiki/Multimedia_Messaging_Service) is the fallback when iMessage or RCS isn't active. It's a carrier-controlled protocol, and most US carriers cap MMS attachments somewhere between 300 KB and 1 MB. A scanned form, a multi-page brochure, or a standard contract can easily exceed that range.
+
+iMessage raises the ceiling to around 100 MB. Apple's servers handle the file instead of your carrier, so large attachments go through. The catch is that if the recipient doesn't have an iPhone, or if your phone drops to a cellular connection and falls back to SMS, the carrier cap kicks back in.
+
+RCS (Rich Communication Services) is the modern Android equivalent. Google Messages uses it, and the file size limit is similar to iMessage, often 100 MB or more. But again, a conversation that reverts to SMS falls back to the carrier's lower limit.
+
+## How to tell which protocol you're using
+
+On iPhone: look at the send button color. Blue means iMessage is active. Green means you're on SMS/MMS and the 1 MB limit probably applies.
+
+On Android with Google Messages: a blue chat bubble next to the contact means RCS is on. A grey bubble means SMS/MMS.
+
+If you're on green or grey, assume a 1 MB cap. Most PDFs are bigger than that.
+
+## Compress the PDF if it contains images or scans
+
+If your PDF is an image deck, a photo of a document, or a scanned page, the [Compress PDF tool](/compress-pdf) can reduce it significantly. Everything runs in your browser, files never leave your device, and no sign-up is required.
+
+1. Open the [Compress PDF tool](/compress-pdf).
+2. Drop your file onto the page or click to select it.
+3. Pick a compression level. High (smallest) gives the biggest size reduction. Low (best quality) keeps the images sharper.
+4. Download the compressed file, then send it.
+
+In testing on a 913 KB image deck, Medium compression produced a 315 KB file. High compression brought it down to 176 KB. Either result fits comfortably under a 1 MB MMS limit.
+
+A couple of things to keep in mind. First, if the file is still too large after compression, start again from the original and try the High setting. Running a second pass on the same file doesn't help: in testing, putting the Medium output through a second Medium compression run grew the file from 315 KB to 599 KB. The compressor re-encodes already-compressed JPEG data, which adds size rather than removing it.
+
+Second, do not use this tool on a text-based PDF. The compressor rasterizes pages to JPEG, and text stored as a JPEG image takes far more space than text stored as vector data. A 20-page text report grew from 23.5 KB to 1.4 MB when compressed. The section below covers what to do with text PDFs instead.
+
+## Split the PDF if it's mostly text
+
+For contracts, reports, forms, or any PDF that's mostly typed text, compression will make the file bigger. The right move is to split it.
+
+Our [Split PDF tool](/split-pdf) lets you extract a page range and save it as a new, smaller file. Send the chunks as separate messages and the recipient gets all the content.
+
+1. Open the [Split PDF tool](/split-pdf).
+2. Upload the PDF.
+3. Enter the page range for the first chunk (for example, pages 1 to 8).
+4. Download and send it, then repeat for the remaining pages.
+
+A 30-page contract split into three 10-page chunks typically results in files well under 1 MB each.
+
+## Share a cloud link when the file still won't fit
+
+Sometimes the simplest fix is sending a link rather than the file itself. Upload your PDF to Google Drive, Dropbox, or iCloud Drive, generate a share link, and text that link. The link arrives instantly regardless of file size, and the recipient taps it to view or download the full document.
+
+This approach works especially well when:
+- The PDF is too large to compress below the carrier limit
+- You're sending to multiple people at once
+- The recipient may want to download the file on their own schedule
+
+Most messaging apps show a preview of the linked document in the conversation, so the recipient can see what's coming before they tap.
+
+## Sending via WhatsApp
+
+If both parties use WhatsApp, the size problem is usually smaller. [WhatsApp supports document attachments up to 100 MB](https://faq.whatsapp.com/821040498252609), which covers the vast majority of PDFs. Tap the paperclip or attachment icon, choose Document, and select your PDF.
+
+If the file is an image-heavy PDF and still large, compress it first using the steps above. For text-based PDFs under 100 MB, send as-is.
+
+## Quick reference
+
+| Situation | What to do |
+|-----------|------------|
+| Image or scan PDF over 1 MB | Compress, then send |
+| Text PDF over 1 MB | Split into page ranges, or share a cloud link |
+| Sending via WhatsApp, under 100 MB | Send as-is |
+| File size still too large after compression | Share a cloud link |
+| Not sure if iMessage is active | Check send button color (blue = iMessage, green = SMS/MMS) |
+
+The key thing to know is that "text message" isn't one fixed limit. iMessage and RCS handle much larger files than MMS. Check which protocol is active, then pick the approach that matches what's actually in your PDF.
