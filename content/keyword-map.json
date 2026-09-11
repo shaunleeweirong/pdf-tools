@@ -2743,7 +2743,8 @@
       "targetQuery": "can you edit a pdf in google docs free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "can-you-edit-pdf-in-google-docs-free"
     },
     {
       "id": "blog-make-pdf-editable",
