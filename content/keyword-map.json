@@ -2813,7 +2813,8 @@
       "targetQuery": "how to combine receipt photos into one pdf free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-combine-receipt-photos-into-one-pdf-free"
     },
     {
       "id": "blog-sign-pdf-with-mouse",
