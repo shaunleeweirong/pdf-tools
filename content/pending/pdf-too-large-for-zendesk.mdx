@@ -1,0 +1,105 @@
+---
+title: "PDF Too Large for Zendesk? How to Fix It"
+description: "Zendesk ticket attachments cap at 50 MB, outbound email at 7 MB. Learn how to compress your PDF or share it via link to get past the limit."
+date: "2026-09-12"
+keywords: ["pdf too large for zendesk", "zendesk attachment size limit", "zendesk pdf too large", "compress pdf for zendesk", "zendesk file size limit"]
+toolSlugs: ["compress-pdf"]
+faq:
+  - q: "What is the maximum attachment size for a Zendesk ticket?"
+    a: "Tickets submitted via email or the web form accept up to 50 MB per file. Outbound agent emails are capped at 7 MB per file, and Help Center articles cap at 20 MB."
+  - q: "Can I increase Zendesk's attachment size limit?"
+    a: "No. Zendesk does not allow you to raise the attachment limit on any plan. Compress the file or share it via a cloud link instead."
+  - q: "Does compressing a PDF make it blurry for Zendesk?"
+    a: "For image-heavy or scanned PDFs, Medium compression reduces file size by around 65% with no visible loss at normal reading size. Text-only PDFs should not be compressed."
+  - q: "What types of PDFs benefit from compression?"
+    a: "Image-heavy PDFs and scanned documents compress well. Text-only PDFs (contracts, invoices, reports) do not. Compressing them makes files larger, not smaller."
+  - q: "What if my PDF is still too large after compression?"
+    a: "Upload to Google Drive, Dropbox, or OneDrive and paste the sharing link into your Zendesk ticket instead of attaching the file directly."
+---
+
+If your PDF is too large for a Zendesk attachment, the fix depends on what's in the file. Zendesk caps ticket attachments at 50 MB per file for web and email submissions, and outbound agent emails at 7 MB. Image-heavy and scanned PDFs can often be compressed to well under those limits. Text documents usually can't be.
+
+## What are Zendesk's attachment size limits?
+
+[Zendesk's support documentation](https://support.zendesk.com/hc/en-us/articles/4408882848538-Can-I-change-the-attachment-size-limit-in-ticket-comments) sets separate caps depending on where you're attaching:
+
+- **Ticket web form or incoming email:** 50 MB per file
+- **Outbound agent email:** 7 MB per file (files over this threshold are converted to a linked attachment automatically)
+- **Help Center articles:** 20 MB per file
+- **API imports:** 20 MB per file
+
+You cannot raise these limits on any Zendesk plan. They apply to free trials and enterprise accounts alike. If your file is over the limit, your only options are to shrink it or share it differently.
+
+## Why is your PDF so large?
+
+The most common causes:
+
+- **Scanned pages.** A scanner set to 300 DPI or higher on a 10-page document can produce a 5 to 10 MB PDF without trouble.
+- **Embedded photos.** Product brochures, presentation exports, and any PDF with full-resolution images carry raw image data that adds up fast.
+- **Repeated slides or copies.** Exporting a 60-slide deck as a PDF creates a file that grows with every slide that has a background image.
+- **Text documents rarely cause this.** A typed 20-page report as a clean PDF is typically 25 to 50 KB. If yours is large, it probably has an embedded high-resolution logo or was created from a design tool rather than Word or a standard office app.
+
+The key question before you try anything: is your PDF mainly images, or mainly text?
+
+## How to compress an image-heavy or scanned PDF
+
+If your PDF has scanned pages or embedded photos, compression can cut the file to a fraction of its original size. The [Compress PDF tool](/compress-pdf) runs entirely in your browser, so nothing gets sent to a remote server.
+
+Tested against a six-page image deck (913.4 KB original):
+
+| Compression level | Output size | Reduction |
+|---|---|---|
+| Low (best quality) | 703.5 KB | -23.0% |
+| Medium | 315.3 KB | -65.5% |
+| High (smallest) | 175.6 KB | -80.8% |
+
+Medium is the practical choice for most support attachments. It cuts file size by around two-thirds while keeping diagrams and photos readable at normal screen size.
+
+One thing to avoid: running compression twice. Feeding the Medium-compressed output back through the tool at the same level grew the file from 315.3 KB to 598.9 KB, nearly doubling it. If Medium is not small enough, go back to your original file and choose High. Don't chain passes.
+
+### Step-by-step: compressing for Zendesk
+
+1. Open the [Compress PDF tool](/compress-pdf) and upload your file.
+2. Select **Medium** quality.
+3. Download the result and check its size.
+4. Compare against your limit (50 MB for ticket attachments, 7 MB for agent outbound email).
+5. If it's still too large, repeat from the original at **High**.
+
+The whole process takes about a minute.
+
+## Do not compress a text-only PDF
+
+If your PDF is a contract, invoice, lease, or any document made of typed text, skip the compressor. It works by rasterizing every page to a JPEG image. A 23.5 KB text report grew to 1.4 MB after compression, because vector text takes up almost no space and a photograph of that same text takes up a lot.
+
+For a text-only PDF that's still somehow over Zendesk's 50 MB limit, something unusual is going on. Check whether the PDF has an embedded high-resolution logo, revision history baked in, or was exported from a design tool. On macOS, opening it in Preview and saving a copy often produces a smaller file without any conversion step.
+
+## When compression isn't enough: share via link
+
+If the PDF is still over the limit after compression, or if it's a text document you shouldn't compress, upload it to a cloud service and paste the sharing link into the Zendesk ticket comment.
+
+Three options that work well:
+
+- **[Google Drive](https://drive.google.com):** Upload the file, click Share, set access to "Anyone with the link," and copy the URL.
+- **Dropbox:** Upload, open sharing options, and generate a public link.
+- **OneDrive:** Right-click the file, select Share, and copy a link.
+
+Paste the URL into the ticket body. The agent or customer gets access to the full file without running into any size ceiling. Agents' replies can also include linked attachments if the file exceeds the 7 MB outbound email limit.
+
+## Zendesk attachment limits at a glance
+
+| Context | Per-file limit |
+|---|---|
+| Ticket (web form or email) | 50 MB |
+| Outbound agent email | 7 MB |
+| Help Center article | 20 MB |
+| Zendesk API import | 20 MB |
+
+These limits are consistent across all Zendesk plans and cannot be changed through admin settings.
+
+## Attaching vs. linking: when to use each
+
+Attach directly if the file is under the relevant limit. A compressed scan at 1 to 2 MB works fine as a direct ticket attachment, and the recipient gets the file immediately without needing to follow a link.
+
+Link instead of attaching when the file is over the limit, when the recipient needs to access the most current version of the document (a linked file can be updated; an attachment is frozen at upload time), or when you want to restrict access through folder permissions.
+
+For most Zendesk tickets, one compression pass gets scanned or image-heavy PDFs well under the 50 MB cap. For agent outbound emails, the 7 MB threshold is tighter, and a cloud link is often the cleaner answer regardless of file size.
