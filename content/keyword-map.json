@@ -2831,7 +2831,8 @@
       "targetQuery": "how to insert pages from one pdf into another free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-insert-pages-from-one-pdf-into-another-free"
     },
     {
       "id": "blog-crop-pdf-windows",

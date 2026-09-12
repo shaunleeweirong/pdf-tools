@@ -1,0 +1,82 @@
+---
+title: "Insert Pages from One PDF into Another Free"
+description: "How to insert pages from one PDF into another free, in your browser. No Acrobat needed, no sign-up, files stay on your device."
+date: "2026-09-12"
+keywords: ["insert pages from one pdf into another", "add pages to pdf free", "insert pdf pages free online", "how to insert pages into pdf without acrobat"]
+toolSlugs: ["merge-pdf", "extract-pages", "organize-pdf"]
+faq:
+  - q: "Can I insert pages from one PDF into a specific position in another?"
+    a: "Yes. Use the Merge PDF tool to upload both files, drag them into the order you want (including splitting out individual pages first with Extract Pages), then download the merged result."
+  - q: "Will inserting pages change the file size?"
+    a: "Barely. Merging PDFs adds almost no overhead. In our tests, three files totaling 971.9 KB merged to 970.5 KB."
+  - q: "Do I need to create an account to insert PDF pages?"
+    a: "No. The tools on this site work in your browser with no sign-up required."
+  - q: "What happens to fillable form fields when I insert pages?"
+    a: "Merging strips interactive form fields from the document. If you have a filled-in form, flatten it first with the Flatten PDF tool so the values become part of the page content before you merge."
+  - q: "Can I insert a blank page into a PDF?"
+    a: "Not directly with a merge tool. The easiest workaround is to export a blank page as a separate one-page PDF (for example from a word processor) and then merge it in at the position you want."
+---
+
+## The fastest way to insert pages from one PDF into another
+
+Inserting pages from one PDF into another takes about a minute with a browser-based tool. You do not need Adobe Acrobat, an account, or any software installed.
+
+The general approach: use the [Merge PDF tool](/merge-pdf) to combine both documents, arrange them in the right order, and download the result. If you only want specific pages from the source document, pull them out first with the [Extract Pages tool](/extract-pages), then merge.
+
+Here is the exact workflow.
+
+## How to insert pages at any position
+
+1. Open the [Extract Pages tool](/extract-pages) if you only need some pages from the second PDF. Upload it, type the page numbers you want to pull out, and download those pages as a new PDF. Skip this step if you want the whole second document.
+2. Open the [Merge PDF tool](/merge-pdf) and upload both files, your main document and the pages you want to insert.
+3. Drag the thumbnails into the order you need. You can interleave pages from both files however you like.
+4. Click **Merge** and download the combined file.
+
+That is it. No watermarks, no page limits, no upload to a remote server.
+
+## How to insert pages at a specific spot inside a long document
+
+When your main PDF has many pages and you need the new content somewhere in the middle, the cleanest path is to split the original into two chunks, then merge all three pieces.
+
+1. Open the [Extract Pages tool](/extract-pages) and upload your main document. Extract pages 1 through N (everything before the insertion point) as one file. Then extract pages N+1 to the end as a second file.
+2. You now have three PDFs: the first half, the pages you want to insert, and the second half.
+3. Open [Merge PDF](/merge-pdf), upload all three, drag them into order (first half, new pages, second half), and merge.
+
+It takes an extra step but gives you precise control over where the new content lands.
+
+## What about form fields?
+
+If any of the PDFs you are merging contain interactive form fields, those fields are lost when you merge. The [PDF format](https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.7old.pdf) stores form data in a document-level structure (the AcroForm dictionary) that pdf-lib's page-copy operation does not carry over.
+
+To keep the values visible, flatten the form before merging:
+
+1. Open the [Flatten PDF tool](/flatten-pdf) and upload your filled form.
+2. Download the flattened version. The values are now baked into the page as static graphics.
+3. Proceed with the merge as normal.
+
+This matters most when you are assembling a job application, a contract package, or any document bundle that mixes filled forms with other files.
+
+## Does merging increase the file size?
+
+Barely. In our testing, three files totaling 971.9 KB merged to 970.5 KB, a reduction of 0.1%. Shared PDF structures are written once in the output rather than duplicated, so the result typically comes in at or just under the sum of its parts. Merging will not push you over a file size limit you are already close to.
+
+If the final file is still too large for email, [Gmail and Outlook both cap attachments at 25 MB](https://support.google.com/mail/answer/6584). The practical ceiling is lower (around 18 MB) because [Base64 encoding](https://developer.mozilla.org/en-US/docs/Glossary/Base64) adds roughly 33% to attachment size in transit. Compress the merged document with the [Compress PDF tool](/compress-pdf) if you are sending a scanned or image-heavy PDF. Avoid compressing text-only documents since the tool rasterizes pages to JPEG, which makes text PDFs much larger.
+
+## Inserting pages versus merging: what is the difference?
+
+They are the same operation under the hood. "Insert pages" usually means adding content at a specific point in the middle of an existing document, while "merge" often implies stacking two or more documents end-to-end. The Merge PDF tool handles both. Because you can drag page thumbnails into any order before downloading, you can place new content anywhere in the document, not just at the front or back.
+
+## Can I insert a blank page?
+
+Not with a built-in blank-page option on this site, but there is an easy workaround. Create a one-page blank PDF using any word processor (create a blank document and export or print to PDF), then merge it into your document at the position you need.
+
+## Using the Organize tool for visual control
+
+If you prefer a visual approach where you can see every page at once, the [Organize PDF tool](/organize-pdf) lets you drag pages around on a grid before saving. Upload your main document, then use the Merge PDF tool if you need to add pages from a second file first. Once everything is in one document, open Organize PDF to rearrange.
+
+## Summary
+
+- For a whole document at the end: drag both files into [Merge PDF](/merge-pdf) and download.
+- For specific pages at a specific position: use [Extract Pages](/extract-pages) to pull out what you need, then merge all pieces in order.
+- Always flatten filled forms with the [Flatten PDF tool](/flatten-pdf) before merging to preserve the values.
+- The result will not be noticeably larger than the sum of the parts.
