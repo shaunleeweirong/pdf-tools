@@ -2852,6 +2852,71 @@
       "priority": 2,
       "status": "pending",
       "slug": "best-free-pdf-tools-for-healthcare-workers-no-sign-up"
+    },
+    {
+      "id": "blog-rotate-pdf-mac",
+      "surface": "blog",
+      "targetQuery": "how to rotate pdf on mac free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-rotate-pdf-on-mac-free"
+    },
+    {
+      "id": "blog-pdf-too-large-notion",
+      "surface": "blog",
+      "targetQuery": "pdf too large for notion upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-salesforce",
+      "surface": "blog",
+      "targetQuery": "compress pdf for salesforce attachment free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-page-size-a4",
+      "surface": "blog",
+      "targetQuery": "how to change pdf page size to a4 free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-print-landscape",
+      "surface": "blog",
+      "targetQuery": "how to print pdf in landscape free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-university",
+      "surface": "blog",
+      "targetQuery": "pdf too large for university portal submission",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-flatten-pdf-windows",
+      "surface": "blog",
+      "targetQuery": "how to flatten a pdf on windows free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-for-passport",
+      "surface": "blog",
+      "targetQuery": "compress pdf for passport application free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
