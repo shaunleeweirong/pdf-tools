@@ -1,0 +1,101 @@
+---
+title: "PDF Too Large for Notion? Fix It in Minutes"
+description: "Notion's free plan caps uploads at 5MB. Here's how to shrink your PDF so it uploads without errors, and when to use an embed link instead."
+date: "2026-09-13"
+keywords: ["pdf too large for notion upload", "notion pdf file size limit", "compress pdf for notion", "how to upload pdf to notion free", "notion 5mb limit"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is Notion's file size limit for PDFs?"
+    a: "On the free plan, Notion limits every uploaded file to 5MB. Paid plans (Plus and above) raise that cap significantly."
+  - q: "Why does Notion say my file is too large?"
+    a: "Your PDF exceeds the 5MB per-file upload limit on Notion's free plan. Compressing or splitting the PDF usually fixes this."
+  - q: "Does compressing a PDF reduce quality in Notion?"
+    a: "For scanned and image-heavy PDFs, compression reduces size with minimal visible change. For text-only PDFs, our compressor actually makes them larger, so split those instead."
+  - q: "Can I embed a PDF in Notion without the size limit?"
+    a: "Yes. Upload the PDF to Google Drive, set the sharing link to 'anyone with the link', then paste it into Notion as an embed. The 5MB limit only applies to direct file uploads."
+  - q: "Should I re-compress a PDF to get it smaller?"
+    a: "No. Running compression twice on the same file makes it larger, not smaller. If Medium compression isn't enough, go back to the original and use High (smallest) instead."
+---
+
+If your PDF is too large to upload to Notion, you've hit the free plan's 5MB per-file limit. The good news: there are a few reliable fixes, and which one you pick depends on what's actually inside the file.
+
+## What Notion's upload limit means for PDFs
+
+Notion's [free plan](https://www.notion.com/pricing) caps every uploaded file at 5MB, whether it's an image, a video clip, or a PDF. That limit catches a lot of people off guard because PDFs can vary wildly in size, from a few kilobytes for a plain invoice to dozens of megabytes for a scanned research report.
+
+Paid plans (Plus and above) raise this cap substantially. But if you're on the free tier and need to upload a large PDF today, upgrading isn't the only option.
+
+## Why your PDF might be so large
+
+Page count alone doesn't tell you much. A 100-page text document can be under 1MB. A 5-page scan can be 20MB. What matters is what's embedded in the file.
+
+**Scanned documents** are the biggest culprit. When you scan a paper document, each page becomes a photograph stored inside the PDF. A scanner at 300 DPI produces an image file for each page, and those add up fast. Ten pages at high resolution can easily clear 15MB.
+
+**Image-heavy PDFs** work the same way: slide decks exported to PDF, portfolios, catalogues with product photos, annual reports with full-bleed graphics. Each image is stored at whatever resolution it was inserted, and PDF does not automatically compress them.
+
+**Text-only PDFs** are usually tiny. In our own measurements, a 20-page text report with headings and body copy weighed just 23.5 KB. Contracts, invoices, and plain reports are almost never the problem.
+
+Knowing which type you have determines the right fix.
+
+## How to compress a PDF for Notion
+
+The [Compress PDF tool](/compress-pdf) runs entirely in your browser. Your file never touches a server.
+
+1. Go to [Compress PDF](/compress-pdf).
+2. Click **Choose file** and select your PDF.
+3. Pick **Medium** compression to start.
+4. Click **Compress** and wait a few seconds.
+5. Download the result, check the file size, then upload to Notion.
+
+**What to expect from compression:** We measured a 6-page image-heavy PDF (913.4 KB) and it dropped to 315.3 KB at Medium, a 65.5% reduction. If that's still not under 5MB, go back to the original file and try High (smallest), which brought the same file down to 175.6 KB (an 80.8% reduction).
+
+A few things worth knowing:
+
+- Always compress from the original, not from a previously compressed output. Feeding a compressed file back through the tool adds size, not removes it. In testing, running Medium compression twice on the same image deck pushed the file from 315.3 KB back up to 598.9 KB.
+- The tool works by converting each page to a JPEG image. That's great for pages that are already photographs or scans, and a problem for pages that are mostly text (see below).
+
+## When compression will make things worse
+
+If your PDF is mostly text, tables, or vector graphics, compression will inflate the file rather than shrink it. The tool rasterizes every page to JPEG. Vector text rendered as a JPEG photograph takes far more space than text stored as text.
+
+We measured a 20-page text-only report: compression at Medium grew it from 23.5 KB to 1.4 MB, roughly 60 times its original size. Compressing a contract or a spreadsheet export to get it under Notion's limit will not work.
+
+For text-heavy PDFs, the two practical options are splitting the file or hosting it elsewhere.
+
+## How to split a large PDF for Notion
+
+Splitting is the cleaner fix when compression isn't appropriate. The [Split PDF tool](/split-pdf) lets you extract page ranges from any PDF.
+
+1. Open [Split PDF](/split-pdf).
+2. Upload your PDF.
+3. Enter the first page range you want (for example, 1 to 30).
+4. Download that section.
+5. Repeat for the remaining sections.
+6. Upload each section to Notion separately.
+
+A 90-page policy document that sits at 8MB as a whole becomes three 30-page chunks, each well under 5MB. Inside Notion, you can link the sections together with page references so readers can move between them.
+
+## Hosting on Google Drive and embedding instead
+
+If the PDF is too large even in sections, or if splitting makes the content hard to follow, hosting it on [Google Drive](https://drive.google.com) and embedding it in Notion is the cleanest alternative. The file lives on Drive; Notion just displays it inline.
+
+Steps:
+
+1. Upload the PDF to Google Drive.
+2. Right-click the file and select **Get link**.
+3. Change permissions to **Anyone with the link** (viewer access is enough).
+4. Copy the link.
+5. In Notion, type `/embed` on a new line, then paste the link.
+
+Notion will display the PDF as an inline viewer, same as a direct upload. The only downside is that the file now depends on Drive: if you remove it or change its permissions, the embed breaks.
+
+## Picking the right approach
+
+| PDF type | Best option |
+|---|---|
+| Scanned pages or photos | Compress at Medium or High |
+| Text only (contracts, reports) | Split into sections |
+| Mix of text and images | Try Medium compression; split if still over 5MB |
+| Already compressed and still large | Host on Google Drive and embed |
+
+The [Compress PDF tool](/compress-pdf) and [Split PDF tool](/split-pdf) are both free, require no account, and run in your browser without uploading your files to any server. Start with compression for image-heavy PDFs, split for text-heavy ones, and fall back to Google Drive when neither gets the file small enough.
