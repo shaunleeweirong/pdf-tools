@@ -1,0 +1,82 @@
+---
+title: "Compress PDF for Salesforce Attachments"
+description: "Hit Salesforce's 25 MB attachment limit? Learn when PDF compression helps, when it backfires, and how to get your file uploaded."
+date: "2026-09-13"
+keywords: ["compress pdf for salesforce attachment free", "salesforce pdf size limit", "salesforce attachment too large", "reduce pdf size salesforce", "salesforce 25mb limit pdf"]
+toolSlugs: ["compress-pdf", "split-pdf", "merge-pdf"]
+faq:
+  - q: "What is the Salesforce attachment size limit?"
+    a: "Legacy Notes and Attachments are capped at 25 MB per file. Salesforce Files (ContentVersion) in Lightning Experience support up to 2 GB. If you're on the legacy related list and hitting the cap, switching to Salesforce Files may solve the problem without any compression."
+  - q: "Will compressing a PDF always make it smaller for Salesforce?"
+    a: "No. The compression tool rasterizes every page to JPEG. It shrinks image-heavy and scanned PDFs dramatically but makes text-only documents much larger. A 20-page text report grew from 23.5 KB to 1.4 MB after compression. Only compress PDFs that are mostly images or scans."
+  - q: "Can I compress a PDF inside Salesforce itself?"
+    a: "No native tool exists for this in standard Salesforce. You compress the file outside the platform first, then upload the result as an attachment or file record."
+  - q: "What should I do if my contract PDF is too large for Salesforce?"
+    a: "For text-heavy PDFs, compression makes the file bigger, not smaller. Try switching to Salesforce Files (2 GB limit), splitting the document into sections, or zipping it before attaching."
+  - q: "Does the 25 MB Salesforce limit apply to email attachments too?"
+    a: "Yes. Outbound emails sent from Salesforce also carry a 25 MB total size limit that covers the message body and all attachments combined."
+---
+
+Compressing a PDF for Salesforce is the right move when your file is packed with scanned pages or images, but it's the wrong move for text-based contracts and reports. Here's how to tell the difference, and how to get your PDF uploaded without surprises.
+
+## Why Salesforce blocks large PDF uploads
+
+The limit depends on which part of Salesforce you're using. Legacy **Notes and Attachments** records, the classic related list that shows up on most objects in Salesforce Classic and older Lightning pages, cap each file at 25 MB. [Salesforce's own documentation](https://help.salesforce.com/s/articleView?id=sf.notes_and_attachments.htm&type=5) confirms this has been the standard ceiling for legacy attachments for years.
+
+Salesforce **Files** (the ContentVersion and ContentDocument objects used in Lightning Experience) push that ceiling to 2 GB per file. If your org hasn't yet moved to the Files-based related list, a quick admin setting change could remove the size problem entirely without you touching the PDF at all.
+
+For outbound emails sent directly from Salesforce, the limit is 25 MB total across the body and every attachment combined. That 25 MB cap is consistent with how [Gmail and Outlook](https://support.google.com/mail/answer/6584?hl=en) both limit message size, so it reflects the constraints of the broader email ecosystem rather than a Salesforce-specific quirk.
+
+## When compressing a PDF for Salesforce actually works
+
+PDF compression works by rasterizing each page to a JPEG image. That process is extremely effective when the page is already a photograph, a scan, or an image-heavy layout because you're swapping one encoding for a more compact one.
+
+On an image deck tested against the [Compress PDF](/compress-pdf) tool:
+
+- At **High compression** (smallest file): 913.4 KB became 175.6 KB, a drop of 80.8%
+- At **Medium compression**: 913.4 KB became 315.3 KB, a drop of 65.5%
+
+If your Salesforce attachment is a scanned contract scan, a photo proposal, a deck of product images, or a set of signed documents photographed with a phone, compression will likely cut the file to a fraction of its original size.
+
+The tool runs entirely in your browser. No sign-up, no file upload to a server.
+
+## When compression makes things worse
+
+Here's the catch that most guides skip: **compression makes text-based PDFs dramatically larger.** A 20-page text report measured at 23.5 KB grew to 1.4 MB after a single compression pass. That's roughly 60 times bigger.
+
+Why? When you compress a PDF full of vector text and simple shapes, the tool converts those compact text glyphs into a photograph of the page. Text stored as glyphs is tiny. Text stored as a photograph of glyphs is not.
+
+This matters for Salesforce users because the most common attachments, contracts, invoices, order forms, call notes, proposals, and reports, are usually text-heavy PDFs. Compressing them before uploading to Salesforce will push the file well over 25 MB, not under it.
+
+**Compressing the same file twice makes it even bigger.** A second pass on the Medium-compressed output grew it from 315.3 KB to 598.9 KB. Don't chain compression passes.
+
+If you're not sure what type of PDF you have, open it and try to select text. If you can highlight words, it's a text PDF. If the cursor treats the whole page as an image, it's a rasterized scan.
+
+## How to compress a PDF before uploading to Salesforce
+
+If your file is image-heavy or a scanned document, here's the process:
+
+1. Open the [Compress PDF](/compress-pdf) tool.
+2. Drop your PDF onto the page. Nothing leaves your browser.
+3. Choose a compression level. **Medium** works well for most scanned documents. Use **High** if Medium still leaves the file over 25 MB, but expect some visible quality reduction.
+4. Download the compressed file.
+5. Check the size before uploading: right-click the file, choose Properties (Windows) or Get Info (Mac).
+6. Attach the compressed file to the Salesforce record.
+
+Pick the level that gets the file under 25 MB in one pass. Starting again from the original at a higher level beats running a second pass on an already-compressed file.
+
+## What to do when you can't compress the file down enough
+
+For text-heavy PDFs that would only grow under compression, or for image files that are simply too large even at High, you have a few alternatives.
+
+**Switch to Salesforce Files.** If your admin can enable the Files-based related list for the object you're working with, you get a 2 GB limit per file. This is often the fastest fix for an organization that has already upgraded to Lightning Experience.
+
+**Split the PDF.** The [Split PDF](/split-pdf) tool lets you break a document into page ranges. A 50-page contract could become two 25-page documents, each well under 25 MB. Splitting does not affect text quality because it only rearranges pages without re-rendering them.
+
+**Merge first, then split.** If you're combining several documents before uploading, note that [merging PDFs](/merge-pdf) doesn't inflate the output. Three files totaling 971.9 KB merged to 970.5 KB in testing. You can combine related documents freely without worrying that the merge itself pushes the file over the limit.
+
+**Zip the file.** For plain text PDFs that are legitimately large, zipping the PDF before attaching often produces a meaningful reduction. A zip doesn't touch the PDF itself, so the contents stay lossless.
+
+**Remove images from the PDF.** If the file is a text document with a large embedded logo or header image, removing those images directly addresses the size problem without degrading any text. A PDF editor that can delete embedded graphics is more precise than a compression tool for this case.
+
+The right approach depends on what's in your PDF. Image-heavy files belong in the [Compress PDF](/compress-pdf) tool. Text-heavy files belong in the split or zip flow, or in Salesforce Files where the limit doesn't apply.
