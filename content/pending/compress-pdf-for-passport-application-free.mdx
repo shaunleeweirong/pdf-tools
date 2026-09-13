@@ -1,0 +1,82 @@
+---
+title: "Compress a PDF for Passport Applications"
+description: "Reduce scanned passport documents under your portal's file size limit in seconds. Free, no account, files never leave your browser."
+date: "2026-09-13"
+keywords: ["compress pdf for passport application", "reduce pdf size passport", "compress passport documents pdf", "pdf too large passport portal", "government portal pdf size limit"]
+toolSlugs: ["compress-pdf", "split-pdf", "delete-pages"]
+faq:
+  - q: "What file size limit do passport portals set for document uploads?"
+    a: "Limits vary by country and portal. The UK's UKVCAS system caps individual documents at 6 MB. VFS Global, used in many countries for visa and passport collection, sets 2 MB per file. New Zealand immigration asks for files under 5 MB. Check the upload page of your specific portal before you start."
+  - q: "Will compressing a scanned passport document make it unreadable?"
+    a: "Not at Medium compression. A 6-page image-heavy PDF can shrink by about 65% at Medium while staying clearly legible. Always open the downloaded file and check that document numbers and signatures are still sharp before you submit."
+  - q: "Can I compress my passport photo in PDF format?"
+    a: "Most portals handle photos separately from supporting documents, and many require JPEG or PNG rather than PDF for photos. The US State Department's online renewal system, for example, only accepts JPEG, PNG, HEIC, or HEIF for photos. Keep your photo as JPEG or use the PDF to JPG tool to convert it."
+  - q: "What if the PDF is still too large after compression?"
+    a: "Delete pages the portal hasn't asked for using the Delete Pages tool, then try compressing the smaller file from scratch. If you bundled multiple documents into one PDF, split them apart and upload each file individually."
+  - q: "Is it safe to compress passport documents with an online tool?"
+    a: "Look for a browser-based tool that processes files locally. This tool runs entirely in your browser and sends nothing to a server, so your passport documents stay on your device throughout."
+---
+
+## Compress a PDF for your passport application
+
+Passport and immigration portals set strict file size limits on document uploads, and scanned identity documents often exceed them. Compressing a scanned PDF for a passport application takes under a minute once you know which approach to use.
+
+## Why passport portals reject large files
+
+Government portals cap file sizes to keep their systems fast and to ensure case officers can open documents quickly. Limits vary:
+
+- The UK's [UKVCAS portal](https://www.ukvcas.co.uk) for visa and citizenship applications caps each document at 6 MB.
+- VFS Global, which handles document collection in many countries, sets 2 MB per file in most regions.
+- [New Zealand Immigration](https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/applying-online/uploading-documents-and-photos/file-formats-for-uploading-documents-and-photos) asks for documents under 5 MB.
+- Some portals in Asia and the Middle East set limits as low as 500 KB.
+
+When you scan a document at high resolution or in color, each page can run 1 MB or more. A three-page identity document easily exceeds a 2 MB cap.
+
+## When compression helps, and when it doesn't
+
+The [Compress PDF tool](/compress-pdf) reduces file size by rasterizing each page to a JPEG image. That's the right technique when your pages are already images, which is exactly what happens when you scan paper documents. A scanned birth certificate, a photographed passport data page, a signed declaration form: all of these are image-based PDFs, and compression cuts their size by 65 to 80% at medium quality.
+
+But if your PDF is a computer-generated document, like a form filled in digitally or a letter created in Word, compression makes it larger. A 23.5 KB text document grew to 1.4 MB after rasterization in our own testing. For those documents, you don't need to compress anything; they're already small and can be submitted as-is.
+
+The quick check: open your PDF and try to select some text with your cursor. If the text highlights, it's a vector document and is already compact. If nothing selects, it's a scan, and compression will help.
+
+## How to compress a scanned passport document
+
+1. Open the [Compress PDF tool](/compress-pdf) in your browser. No account or software install needed.
+2. Drop in or click to upload your scanned document PDF.
+3. Select **Medium** compression to start.
+4. Download the result and check two things: the file size (compare it to your portal's limit) and whether the text is still clearly readable, especially document numbers and signatures.
+5. If the file is still over the limit, go back to your original file and run it at **High** compression.
+
+One thing not to do: run the already-compressed output through compression a second time. Feeding a compressed JPEG-rasterized PDF back in again inflates the file rather than shrinking it further. A 315.3 KB file grew to 598.9 KB after a second pass at the same level in testing. Always start from your original scan for each attempt.
+
+## What to do when compression is not enough
+
+If your file is still too large after compressing the original at High, the document has more pages than the portal expects, or it contains very high-resolution images. Try these steps in order.
+
+**Delete pages the portal hasn't asked for.** Passport portals typically want the data page of your passport (the photo page) rather than the full booklet with every visa stamp and entry page. Use the [Delete Pages tool](/delete-pages) to strip out the pages you don't need, then compress the shorter document from scratch.
+
+**Split combined documents.** If you bundled several supporting documents into one PDF, split them apart and upload each as a separate file. Use the [Split PDF tool](/split-pdf) to divide by page range. Most portals allow multiple uploads in the same session.
+
+**Scan at lower resolution in the future.** For new scans, 200 to 300 DPI in grayscale is enough for government portals. Scanning at 600 DPI in color creates files many times larger without improving what a case officer can read. A 300 DPI grayscale scan of a standard A4 page typically runs 100 to 200 KB.
+
+**Try grayscale instead of color.** Color scans can run three times the size of grayscale scans for the same content. If the portal doesn't require a color copy and the document is text-only, rescan in black and white.
+
+## A note on passport photo uploads
+
+Many online passport portals handle photos separately from supporting documents, and often require a different file format for each. The [US State Department's online renewal program](https://travel.state.gov/content/travel/en/passports/need-passport/online-form-ds-82.html) requires photos as JPEG, PNG, HEIC, or HEIF, not PDF. If your passport photo is on your phone or camera, upload it directly as JPEG.
+
+If you exported a photo to PDF for some reason, use the [PDF to JPG tool](/pdf-to-jpg) to convert it back to JPEG before uploading. The portal will accept it without any compression step.
+
+For supporting documents like a scanned birth certificate, citizenship certificate, or name change document, the compression steps above apply.
+
+## Before you click submit
+
+Run through this list before uploading:
+
+- Check the exact file size limit shown on the upload page (limits differ by portal and by document type)
+- Open the compressed file and zoom in on the document number, signature, and any photo to confirm they're still sharp
+- Confirm you're submitting the right pages (most portals want only the data/photo page of a passport, not the full booklet)
+- Keep the original uncompressed file until your application is accepted
+
+Document portals do reject submissions with files that appear blurry or unreadable, so the 60 seconds you spend checking the output is worth it.

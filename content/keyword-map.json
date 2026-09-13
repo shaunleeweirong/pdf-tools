@@ -2917,7 +2917,8 @@
       "targetQuery": "compress pdf for passport application free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-for-passport-application-free"
     }
   ]
 }
