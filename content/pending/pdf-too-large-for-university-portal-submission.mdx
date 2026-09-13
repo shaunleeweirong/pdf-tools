@@ -1,0 +1,92 @@
+---
+title: "PDF Too Large for University Portal? Here's the Fix"
+description: "Getting rejected by your uni's submission portal? Learn how to cut your PDF down to size, whether it's a scanned assignment or a Word export."
+date: "2026-09-13"
+keywords:
+  - "pdf too large for university portal submission"
+  - "reduce pdf size student portal"
+  - "compress pdf for university upload"
+  - "pdf file too large to submit"
+  - "how to reduce pdf size for submission"
+toolSlugs:
+  - "compress-pdf"
+  - "split-pdf"
+  - "delete-pages"
+faq:
+  - q: "What is the PDF size limit for university portals?"
+    a: "It varies by platform and institution. Turnitin accepts files up to 100 MB, though many universities set a lower cap of 20 MB or less. Canvas defaults to 500 MB, Blackboard to 250 MB, and Moodle limits are set per institution, sometimes as tight as 5 MB."
+  - q: "Why does compressing my PDF make it bigger?"
+    a: "Browser-based compressors that work by rasterizing pages (converting to images) will make text-only PDFs much larger. A 23.5 KB text report grew to 1.4 MB in our tests. If your PDF is a Word export or essay, use Split PDF or Delete Pages instead."
+  - q: "Will compressing a PDF twice make it smaller?"
+    a: "No. Compressing an already-compressed file at the same quality level increases size. In our tests, a file at 315.3 KB grew to 598.9 KB after a second pass. Start from the original and choose a stronger setting if needed."
+  - q: "My PDF is a scan from my phone. What's the best way to shrink it?"
+    a: "Use Compress PDF and choose High (smallest). A 913.4 KB six-page image scan came out at 175.6 KB at High in our tests, an 80.8% reduction, which is usually more than enough for portal uploads."
+  - q: "What if my PDF is still too large after compressing?"
+    a: "Split it into two smaller files with Split PDF, then upload each as a separate attachment if the portal allows it. Or remove pages you don't need with Delete Pages before trying again."
+---
+
+A PDF that's too large for your university's submission portal is one of the more stressful problems to hit late at night before a deadline. The good news is that the fix usually takes two minutes, once you know what kind of PDF you're dealing with.
+
+## Why the fix depends on what's in your PDF
+
+Not all oversized PDFs are the same, and the right approach depends on what's inside.
+
+**Image-based PDFs** contain pages that are essentially photographs. This is what you get when you scan a handwritten assignment with your phone, photograph transcript pages, or save slides as images. Your phone camera probably shoots at 12 MP or higher, and even a modest six-page scan can come in at 900 KB to 5 MB before any editing.
+
+**Text-based PDFs** contain real, selectable text and vector graphics. Saving a Word document, Google Doc, or any word-processed essay as a PDF produces this type. These files are usually already small: a 20-page essay with no images typically clocks in under 500 KB.
+
+**Mixed PDFs** have both: a thesis chapter with body text plus embedded figures and photographs, for example.
+
+The distinction matters because compressing an image-based PDF can shrink it dramatically, while compressing a text-based PDF will almost always make it bigger. Our [Compress PDF](/compress-pdf) tool works by rasterizing every page to a JPEG image before encoding. That process is excellent for scans and photo decks but punishing for text documents. In our testing, a 20-page text report grew from 23.5 KB to 1.4 MB after compression. If your essay is already 600 KB and you run it through a rasterizing compressor, you might end up with a 3 MB file.
+
+## How to shrink an image-heavy or scanned PDF
+
+If your PDF is full of scanned pages or photographs, use the [Compress PDF](/compress-pdf) tool:
+
+1. Open the tool. No account or sign-up required, and your file never leaves your browser.
+2. Drop your PDF in.
+3. Choose **Medium** for a good balance between size and quality, or **High (smallest)** if you need the smallest possible file.
+4. Download the result, check its size, then upload to your portal.
+
+In our tests, a 913.4 KB six-page image deck shrank to 315.3 KB at Medium (a 65.5% reduction) and to 175.6 KB at High (80.8%). Either setting will clear most university portal limits.
+
+One thing to avoid: do not run the output through compression a second time at the same quality level. A file we compressed to 315.3 KB at Medium grew to 598.9 KB when we ran it through again at Medium. If Medium is not enough, start fresh from your original file and choose High.
+
+## How to shrink a text PDF (Word exports, essays, reports)
+
+If your PDF was generated from a word processor, skip the compressor and try these instead.
+
+**Remove pages you don't need.** An appendix you accidentally left in, a cover sheet that wasn't required, or a bibliography that got duplicated can all add pages that bloat the file. Use [Delete Pages](/delete-pages) to strip them out before resubmitting.
+
+**Split the file.** If the portal allows two uploads, [Split PDF](/split-pdf) lets you divide your document at any page boundary. Upload the first half and the second half as separate files. Check your assignment instructions first, some portals only accept a single document.
+
+**Re-export with lower image resolution.** If your essay contains figures, charts, or photographs, those images may be embedded at 220 to 300 ppi. Go back to Word, open File > Options > Advanced, and set the default image resolution to 150 ppi. Then export to PDF again. This often cuts file size by 40 to 60% with no visible difference when reading on screen.
+
+## What portal size limits actually look like
+
+Every platform sets its own cap, and individual courses can override the defaults. The limits you're most likely to hit:
+
+- [Turnitin](https://help.turnitin.com/) accepts up to 100 MB, but the institution or course may lower that to 20 MB or less.
+- Canvas has a default limit of 500 MB, though many instructors reduce this to 50 MB or lower for specific assignments.
+- [Blackboard](https://help.anthology.com/blackboard/) defaults to 250 MB.
+- Moodle limits are set per course and can range from 2 MB to 50 MB depending on the institution.
+- University-specific admission and transcript portals often impose the tightest limits, sometimes 2 MB to 5 MB, because they process thousands of files and storage costs add up.
+
+The portal's upload form usually shows the limit. If it doesn't, your course guide or the university's IT helpdesk can tell you. It's worth checking before you start compressing, so you know exactly what you're aiming for.
+
+## Leave yourself a buffer
+
+Target 80% of the stated limit rather than 100%. File sizes can be counted differently: some systems treat 1 MB as 1,000 KB (decimal), others as 1,024 KB (binary). A file right at the limit sometimes triggers an error; one at 80% almost never does.
+
+If your portal says 5 MB, aim for 4 MB or less. If it says 20 MB, 16 MB is a comfortable target.
+
+## A step-by-step checklist
+
+1. Open your PDF and scroll through a few pages. Are the pages photographs or readable text?
+2. If the pages look like photos or scans: run the original through [Compress PDF](/compress-pdf) at High.
+3. If the pages are readable text from a word processor: remove unnecessary pages with [Delete Pages](/delete-pages) or split into parts with [Split PDF](/split-pdf).
+4. Check the output file size before uploading.
+5. If you're still over the limit: split the file and check whether the portal accepts two uploads.
+6. Upload with a few minutes to spare so you have time to try a different approach if the portal rejects it.
+
+That covers most scenarios students run into. The one case where none of these help is when the PDF itself is legitimately long and every page is required. In that case, check whether the portal accepts a zip file containing multiple smaller PDFs, or contact the course administrator about the limit.
