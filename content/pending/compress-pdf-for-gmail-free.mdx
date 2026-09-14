@@ -1,0 +1,80 @@
+---
+title: "Compress PDF for Gmail: What Actually Works"
+description: "Gmail caps attachments at 25 MB. Learn when compression helps, when it backfires on text PDFs, and how to send big files anyway."
+date: "2026-09-14"
+keywords:
+  - "compress pdf for gmail"
+  - "gmail pdf attachment size limit"
+  - "pdf too large for gmail"
+  - "reduce pdf size gmail"
+  - "gmail attachment too large"
+toolSlugs:
+  - "compress-pdf"
+  - "split-pdf"
+faq:
+  - q: "What is Gmail's PDF attachment size limit?"
+    a: "Gmail caps a whole message at 25 MB, covering everything in it including headers and body text. Because email encodes files as Base64, which inflates them by about a third, the practical ceiling for an actual PDF file is roughly 18 MB."
+  - q: "What happens when my PDF is too large for Gmail?"
+    a: "Gmail does not bounce the message. Instead, it offers to upload the file to your Google Drive automatically and insert a sharing link into the email. The recipient clicks that link to download, rather than getting a direct attachment."
+  - q: "Will compressing a PDF help it attach to Gmail?"
+    a: "Only if the PDF contains photos or scans. In testing, a 6-page image deck shrank from 913.4 KB to 175.6 KB at High compression. A 20-page text PDF grew from 23.5 KB to 1.4 MB under the same tool, because the compressor redraws every page as a JPEG."
+  - q: "Can I compress a PDF without uploading it to Google?"
+    a: "Yes. Our Compress PDF tool runs entirely in your browser. The file never leaves your device, which matters for payslips, contracts, medical records, or anything else you would rather not send to a third-party server."
+  - q: "What should I do if my PDF is still too large after compressing?"
+    a: "Split the PDF into smaller parts using the Split PDF tool and send each in a separate email. Or share the original through Google Drive, Dropbox, or WeTransfer instead of attaching it directly."
+---
+
+To compress a PDF for Gmail, open a free in-browser compress tool, drop your file in, pick a level, and download the result. That takes about 30 seconds. But there is one thing to check before you start, because compression will make some PDFs smaller and others much larger.
+
+## What Gmail's 25 MB limit actually means for your file
+
+[Gmail](https://support.google.com/mail/answer/6584) sets a 25 MB ceiling on each message, and that figure covers everything: headers, body text, images in the email body, and every attached file.
+
+The number that trips people up is what happens to the file size during transmission. Attachments are encoded as [Base64](https://en.wikipedia.org/wiki/Base64) before they travel through email servers. Base64 inflates the raw bytes by roughly one third. A 20 MB PDF becomes about 27 MB once encoded, and Gmail rejects the message even though 20 is under 25. If you want a PDF to attach cleanly without Gmail stepping in, aim for a compressed file under 18 MB.
+
+## The check that decides whether compression will help
+
+Open the PDF and try to click on a line of text. This tells you what is inside the file.
+
+- **The text highlights when you click on it.** The file stores text as actual font data, created in Word, Google Docs, InDesign, or a similar program. In-browser compression will make it bigger, not smaller. Skip to the "text PDF" section below.
+- **Nothing highlights, or clicking selects the whole page as a solid block.** The file is a scan or a set of photos. Compression will help, often a lot.
+
+The reason the distinction matters: in-browser PDF compression works by redrawing every page as a JPEG image. When the page is already a photo, re-encoding it at lower quality shrinks the file. When the page is text, you are replacing compact font data (which takes almost no space to store) with a photograph of that text. A page of text as a JPEG is far larger than the same text stored as characters.
+
+## How to compress a PDF for Gmail (step-by-step)
+
+1. Open the [Compress PDF tool](/compress-pdf). No sign-in needed.
+2. Drop your PDF onto the page or click the upload box to browse.
+3. Pick a compression level. Medium is the right default for most scanned documents. High compresses further but softens fine detail, which can matter for small text in a scanned contract or handwritten form.
+4. Click Compress and wait a few seconds.
+5. Download the result. Check the file size before you go back to Gmail.
+
+In testing, a 6-page image deck shrank from 913.4 KB to 315.3 KB at Medium and 175.6 KB at High. Both results attach cleanly to Gmail with room to spare.
+
+One thing to avoid: running the compressed file through the tool a second time. A second pass at the same level does not squeeze more out. In testing, feeding the Medium-compressed output back in at Medium made the file nearly twice as large (315.3 KB became 598.9 KB). If Medium is not small enough, start again from the original file and pick High.
+
+## What to do if your PDF is text-based and too large
+
+If the text highlights when you click it, compression is the wrong approach. A 20-page text report that measured 23.5 KB grew to 1.4 MB after going through in-browser compression in testing. The file went from comfortably fitting in an email to failing the limit by a wide margin.
+
+For text PDFs that are too large to attach to Gmail, the real causes are usually embedded fonts that inflate the file, high-resolution logos, or revision history baked into the document. A few practical approaches:
+
+**Split the file.** The [Split PDF tool](/split-pdf) lets you pull out specific page ranges and save them as separate files. Send each part in its own email with a note explaining the split. The parts together stay close to the original file size, but each piece fits the attachment limit on its own.
+
+**Re-export from the source.** If you still have the original Word or Google Docs file, open it and re-export or print to PDF. Many apps let you set image DPI during export. Dropping from 300 DPI to 150 DPI on embedded images often cuts a large document by half without any visible change to text quality.
+
+**Share via Google Drive.** Upload the PDF to Drive, set the sharing option to "Anyone with the link can view," and paste the link into your Gmail message. The recipient gets the full file at full quality without any size limit applying.
+
+## What Gmail does when you still hit the ceiling
+
+If you attach a file that is over the limit after your best efforts, Gmail does not reject it outright. When you try to send, Gmail pops up a prompt offering to upload the attachment to your Google Drive and replace it with a Drive link. You can accept that or go back and try to compress or split further.
+
+If you let Gmail upload it, the link goes into your message automatically. There is one thing to verify before sending: Gmail sometimes sets the newly uploaded file to "Restricted," meaning only people already in your Google contacts can open it. Open [Google Drive](https://drive.google.com) in a new tab, find the file, and confirm the sharing is set to "Anyone with the link" if you are sending to someone outside your organization.
+
+If the recipient does not have a Google account, a Drive link may be awkward for them. You can upload the file to [Dropbox](https://www.dropbox.com) or WeTransfer instead, then paste that link into your Gmail message.
+
+## Privacy: why to use an in-browser tool for sensitive PDFs
+
+If the PDF contains anything sensitive, payslips, contracts, medical records, legal documents, choose a tool that does not upload your file to a server. The [Compress PDF tool](/compress-pdf) on this site runs entirely in your browser using JavaScript. You can confirm it yourself by opening your browser's developer tools, going to the Network tab, and watching what happens when you compress a file. Nothing goes out.
+
+This is a meaningful difference from tools that upload your file to a remote server for processing. For a routine invoice, it probably does not matter. For anything involving personal or financial information, it does.

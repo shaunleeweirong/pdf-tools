@@ -2924,6 +2924,71 @@
       "priority": 2,
       "status": "pending",
       "slug": "compress-pdf-for-passport-application-free"
+    },
+    {
+      "id": "blog-compress-gmail",
+      "surface": "blog",
+      "targetQuery": "compress pdf for gmail free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "pending",
+      "slug": "compress-pdf-for-gmail-free"
+    },
+    {
+      "id": "blog-compress-50kb",
+      "surface": "blog",
+      "targetQuery": "compress pdf to 50kb free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-protect-pdf-mac",
+      "surface": "blog",
+      "targetQuery": "how to password protect pdf on mac free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-insert-pdf-into-word",
+      "surface": "blog",
+      "targetQuery": "how to insert pdf into word document free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-batch-print-pdf",
+      "surface": "blog",
+      "targetQuery": "how to batch print pdf files free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-tools-nurses",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for nurses no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-view-pdf-without-downloading",
+      "surface": "blog",
+      "targetQuery": "how to view pdf online without downloading free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-blurry-word-export",
+      "surface": "blog",
+      "targetQuery": "why is pdf blurry after converting from word free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
     }
   ]
 }
