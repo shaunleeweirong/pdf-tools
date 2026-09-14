@@ -2940,7 +2940,8 @@
       "targetQuery": "compress pdf to 50kb free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "compress-pdf-to-50kb-free"
     },
     {
       "id": "blog-protect-pdf-mac",
