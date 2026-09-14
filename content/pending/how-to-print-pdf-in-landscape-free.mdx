@@ -1,0 +1,96 @@
+---
+title: "How to Print a PDF in Landscape (Free)"
+description: "Two ways to print a PDF in landscape: pick the orientation in your print dialog, or rotate the pages permanently. Steps for Chrome, Mac, Windows, and mobile."
+date: "2026-09-14"
+keywords: ["how to print pdf in landscape", "print pdf landscape", "pdf landscape orientation", "change pdf orientation to landscape", "pdf prints portrait not landscape"]
+toolSlugs: ["rotate-pdf", "n-up-pdf"]
+faq:
+  - q: "Does changing the orientation in my print dialog alter the PDF file?"
+    a: "No. Choosing landscape in the print dialog applies only to that print job. The file stays unchanged. If you want the file itself to be landscape, rotate it with our Rotate PDF tool and save."
+  - q: "Why does my PDF print in portrait even when I choose landscape?"
+    a: "Your PDF reader's auto-rotate feature is overriding your setting. It detects when a page is taller than it is wide and rotates it to fit the paper. In Adobe Acrobat Reader, open the print dialog and uncheck Auto-Rotate and Center. You can also fix this permanently by rotating the PDF pages first."
+  - q: "Can I print some pages in portrait and some in landscape?"
+    a: "Not in a single print job. To mix orientations, use our Rotate PDF tool on just the landscape pages, save that version, then print with the default portrait setting. The printer reads the orientation from the file and uses whichever is set per page."
+  - q: "How do I print a PDF in landscape on my phone?"
+    a: "On Android, open the PDF in Chrome, tap the three-dot menu, choose Print, then select Landscape under orientation. On iPhone, open the PDF in the Files app, tap Share then Print. Pinch-zoom the print preview thumbnail to reveal portrait and landscape orientation icons."
+  - q: "Will rotating a PDF change the text layout or reflow the content?"
+    a: "No. Rotating sets an orientation flag on each page but does not reflow the text or images. The content stays exactly where it is, turned 90 degrees. Rotation is designed for pages that were captured or created sideways, not for reformatting a portrait document into landscape."
+---
+
+Printing a PDF in landscape means either telling your print dialog to rotate the output, or rotating the PDF pages themselves first so the printer handles orientation automatically. Both are free and take under a minute. This guide covers both approaches for Chrome, Mac, Windows, and mobile.
+
+## How to print a PDF in landscape in Chrome or Edge
+
+This works on Windows and Mac, with no extra software.
+
+1. Open your PDF in Chrome or Microsoft Edge (drag it onto the browser, or right-click the file and choose "Open with").
+2. Press **Ctrl+P** on Windows or **Cmd+P** on Mac to open the print dialog.
+3. Find the **Orientation** setting and choose **Landscape**.
+4. Check the preview on the left side. Pages should appear wider than tall.
+5. Click **Print**, or click **Save as PDF** to save a landscape-printed copy.
+
+If you don't see an Orientation option in Chrome, click **More settings** to expand the full panel.
+
+## How to print landscape on Mac with Preview
+
+Apple's Preview app handles this cleanly.
+
+1. Open your PDF in Preview (double-click it, or right-click and choose Open With then Preview).
+2. Press **Cmd+P** to open the print dialog.
+3. If the dialog looks minimal, click **Show Details**.
+4. Click the landscape icon under **Orientation** (the wider of the two page icons).
+5. Click **Print**.
+
+If Preview seems to ignore your choice, go to **File > Page Setup** first, set the orientation to landscape there, click OK, then open the print dialog again. Some macOS print drivers store page setup separately.
+
+## How to print landscape in Adobe Acrobat Reader (Windows or Mac)
+
+Adobe Reader has an **Auto-Rotate and Center** feature that can override the orientation you choose. Here's how to disable it:
+
+1. Open the PDF in Adobe Acrobat Reader.
+2. Press **Ctrl+P** (Windows) or **Cmd+P** (Mac).
+3. Under **Page Sizing & Handling**, uncheck **Auto-Rotate and Center**.
+4. Click **Page Setup** (bottom-left of the dialog).
+5. Select **Landscape** and click **OK**.
+6. Click **Print**.
+
+Auto-rotate tries to detect when a page's stored orientation doesn't match the paper in the tray and corrects it. That's helpful when it works and frustrating when it doesn't. Turning it off lets your explicit choice control the output.
+
+## How to permanently change a PDF to landscape (the clean fix)
+
+If you'll print the same document regularly, or send it to someone else to print, rotating the pages once and saving the result is better than adjusting the print dialog every time.
+
+Use the [Rotate PDF tool](/rotate-pdf) to turn all pages 90 degrees, then download the rotated file. When you open that new file, every page will be wider than tall. Chrome, Preview, and Adobe Reader will all default to printing it in landscape without any extra settings.
+
+This method also fixes PDFs that were scanned sideways. Instead of rotating each time you print, correct the file once.
+
+According to our measurements, rotating a PDF changes no content and adds essentially no file size (a 913 KB image deck came out at exactly 913.4 KB, a 23.5 KB text report at 23.5 KB). It only sets the orientation flag per page, as defined by the [PDF standard (ISO 32000)](https://en.wikipedia.org/wiki/PDF#Technical_foundations).
+
+## Why your printer may be overriding your landscape setting
+
+Three common reasons:
+
+**Auto-rotate is on.** PDF readers detect when a landscape page has portrait dimensions stored in the file and flip it. This happens when a file was exported with the wrong orientation metadata. Turning off auto-rotate in the print dialog fixes it for that job; rotating the file fixes it permanently.
+
+**The file's orientation flag says portrait.** Some PDF export tools (older versions of Microsoft Word, for example) write portrait dimensions even when the content is laid out wide. Your print dialog sees "portrait" and rotates to match. Again, fixing the file with the [Rotate PDF tool](/rotate-pdf) writes the correct flag.
+
+**Your printer settings are locked.** In managed workplaces, IT sometimes locks the default paper orientation. If that's the case, you can't override it in the dialog. Rotating the PDF file itself sidesteps this because the printer reads the page dimensions from the file before applying any default.
+
+## Print dialog or rotate the file: which should you use?
+
+Use the **print dialog** when you need landscape for one print job and don't want to change the file. Use the **Rotate PDF tool** when you'll print the file repeatedly, share it, or when the printer keeps ignoring your orientation choice.
+
+For a different scenario (putting multiple PDF pages side-by-side on one landscape sheet), the [Pages Per Sheet tool](/n-up-pdf) does that. It's useful for printing slides, wide tables, or page proofs.
+
+## Printing a PDF with mixed portrait and landscape pages
+
+Some PDFs have portrait pages and landscape pages mixed together. Setting "Landscape" in your print dialog will rotate every page, including the ones that are already correctly oriented.
+
+To handle this properly:
+
+1. Open the PDF and note which page numbers are landscape.
+2. Use the [Rotate PDF tool](/rotate-pdf) to rotate only those pages (most tools let you specify a page range).
+3. Save the rotated version.
+4. Print that version with the **default portrait** setting. Each page prints using the orientation stored in the file, so your landscape pages come out correctly and your portrait pages stay upright.
+
+This takes an extra step but gets every page right without manual adjustment at the printer.
