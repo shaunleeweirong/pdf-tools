@@ -2958,7 +2958,8 @@
       "targetQuery": "how to insert pdf into word document free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-insert-pdf-into-word-document-free"
     },
     {
       "id": "blog-batch-print-pdf",
