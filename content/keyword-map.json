@@ -2975,7 +2975,8 @@
       "targetQuery": "best free pdf tools for nurses no sign up",
       "intent": "commercial",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "best-free-pdf-tools-for-nurses-no-sign-up"
     },
     {
       "id": "blog-view-pdf-without-downloading",
