@@ -2949,7 +2949,8 @@
       "targetQuery": "how to password protect pdf on mac free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-password-protect-pdf-on-mac-free"
     },
     {
       "id": "blog-insert-pdf-into-word",
