@@ -2486,7 +2486,8 @@
       "targetQuery": "how to convert bmp to pdf free online",
       "intent": "transactional",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-bmp-to-pdf-free-online"
     },
     {
       "id": "blog-convert-svg-to-pdf",
