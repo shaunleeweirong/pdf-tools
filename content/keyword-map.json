@@ -2996,6 +2996,71 @@
       "intent": "informational",
       "priority": 3,
       "status": "idea"
+    },
+    {
+      "id": "blog-online-pdf-safety",
+      "surface": "blog",
+      "targetQuery": "is it safe to use free online pdf tools",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "pending",
+      "slug": "are-online-pdf-tools-safe"
+    },
+    {
+      "id": "blog-print-from-iphone",
+      "surface": "blog",
+      "targetQuery": "how to print a pdf from iphone free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-print-from-android",
+      "surface": "blog",
+      "targetQuery": "how to print a pdf from android free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-merge-in-chrome",
+      "surface": "blog",
+      "targetQuery": "how to merge pdf in google chrome free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-engineers",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for engineers no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-protect-pdf-windows",
+      "surface": "blog",
+      "targetQuery": "how to password protect a pdf on windows 10 free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-accessibility-check",
+      "surface": "blog",
+      "targetQuery": "how to check if a pdf is accessible free online",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-for-ats",
+      "surface": "blog",
+      "targetQuery": "compress pdf for job application ats portal free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
