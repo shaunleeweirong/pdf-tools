@@ -2252,7 +2252,8 @@
       "targetQuery": "how to convert pdf to csv free online",
       "intent": "transactional",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-convert-pdf-to-csv-free-online"
     },
     {
       "id": "blog-number-pages-roman-numerals",
