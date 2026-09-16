@@ -3068,6 +3068,71 @@
       "priority": 2,
       "status": "pending",
       "slug": "compress-pdf-for-job-application-ats-portal-free"
+    },
+    {
+      "id": "blog-ai-summarize-pdf",
+      "surface": "blog",
+      "targetQuery": "how to summarize a pdf with ai free online",
+      "intent": "informational",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-summarize-a-pdf-with-ai-free"
+    },
+    {
+      "id": "blog-chatgpt-read-pdf",
+      "surface": "blog",
+      "targetQuery": "how to use chatgpt to read a pdf free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-airtable-pdf-too-large",
+      "surface": "blog",
+      "targetQuery": "pdf file too large for airtable upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-flatten-before-signing",
+      "surface": "blog",
+      "targetQuery": "should i flatten pdf before or after signing",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-offline-pdf-editor",
+      "surface": "blog",
+      "targetQuery": "best free offline pdf editor no internet required",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-protect-pdf-google-drive",
+      "surface": "blog",
+      "targetQuery": "how to password protect pdf in google drive free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-size-for-ai",
+      "surface": "blog",
+      "targetQuery": "how to reduce pdf size for ai tools free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-chatgpt-pdf-limit",
+      "surface": "blog",
+      "targetQuery": "what is the maximum pdf size chatgpt can read",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
