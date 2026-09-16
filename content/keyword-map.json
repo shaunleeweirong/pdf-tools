@@ -2995,7 +2995,8 @@
       "targetQuery": "why is pdf blurry after converting from word free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "why-is-pdf-blurry-after-converting-from-word-free"
     },
     {
       "id": "blog-online-pdf-safety",
