@@ -1,0 +1,80 @@
+---
+title: "PDF Too Large for Airtable? How to Fix It"
+description: "If a PDF file is too large for Airtable upload, the fix depends on what's in the file. Compress scans, split text PDFs, or paste a cloud link instead."
+date: "2026-09-17"
+keywords: ["pdf file too large for airtable upload", "airtable pdf attachment size", "compress pdf for airtable", "airtable file size limit", "pdf too big for airtable"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is Airtable's file size limit for PDF attachments?"
+    a: "Airtable doesn't enforce a strict per-file cap in the UI, but each base has a storage allowance that varies by plan. The free plan gives each base 1 GB; paid plans raise that significantly. When your base approaches that limit, uploads start failing."
+  - q: "Will compressing a PDF help it fit in Airtable?"
+    a: "Only if the PDF contains scanned pages or photographs. Compression converts pages to JPEG images, which cuts size dramatically for image-heavy files. For typed documents, invoices, or digital contracts, the same process makes the file much larger, not smaller."
+  - q: "How do I reduce the size of a scanned PDF for Airtable?"
+    a: "Open the Compress PDF tool, upload the file, choose Medium or High, and download the result. For a typical image-heavy PDF, Medium compression cuts the file to about one-third of its original size. The whole process runs in your browser."
+  - q: "My PDF is a typed report and it's too large for Airtable. What do I do?"
+    a: "Don't compress it. A rasterizing compressor converts vector text to images and can make a text PDF 60 times larger. Instead, split it into smaller parts with the Split PDF tool, or upload the file to Google Drive and paste a link into an Airtable URL field."
+  - q: "How do I check my Airtable base storage?"
+    a: "Open the base, click the base name at the top, and look for the storage usage indicator. It shows what fraction of your plan's per-base allowance has been used."
+---
+
+If a PDF file is too large for Airtable upload, there are two possible causes: your base has hit its attachment storage limit, or a third-party form sitting in front of Airtable has its own per-file cap. The right fix also depends on what's in the PDF, because a common fix for scanned files will make typed documents much larger.
+
+## Why Airtable rejects large PDFs
+
+Airtable stores attachments per-base, with a storage quota that depends on your [plan](https://airtable.com/pricing). The free plan gives each base 1 GB; paid plans raise that to 20 GB or more. When you get close to that limit, new uploads fail or show a warning before going through.
+
+The second scenario is third-party forms. Tools like Fillout, JotForm, and MiniExtensions build Airtable-connected intake forms with their own per-upload limits, often anywhere from 10 MB to 25 MB per file. When that's the case, Airtable itself isn't the problem; the form is blocking the upload before it even reaches your base.
+
+A quick way to tell which applies: try uploading the PDF by opening an Airtable record directly and attaching the file from the record's attachment field. If that works but the form doesn't, the form's per-file cap is the issue. If both fail, the base storage limit is likely the cause.
+
+## Does the PDF contain images or text?
+
+The answer determines everything about how to fix the problem.
+
+**Scanned and image-heavy PDFs** are made of rasterized image data. Each page is essentially a photograph, whether it's a scanned paper document, a photo deck, or a design mockup. These files can be compressed significantly by re-encoding the images at a lower quality setting.
+
+**Text-based PDFs** store their content as [vector outlines](https://en.wikipedia.org/wiki/Vector_graphics), which are very compact. Typed reports, invoices, digital contracts, and forms filled in on a computer are all text PDFs. Running one through an image compressor forces it to rasterize: the compressor takes a photograph of each page and replaces the compact vector text with a JPEG. A 20-page text report that starts at 23.5 KB can grow to over 1.4 MB after compression at Medium quality, about 60 times larger. Never compress a text PDF expecting it to get smaller.
+
+If you're not sure which type you have, check how the PDF was created. Scanned with a phone or desktop scanner? It's image-based. Exported from Word, Google Docs, or similar? It's text-based.
+
+## How to compress an image-heavy PDF
+
+For scanned documents and photo-heavy PDFs, the [Compress PDF tool](/compress-pdf) reduces file size without any uploading to a server. Your file stays in the browser the whole time.
+
+Steps:
+
+1. Open the [Compress PDF tool](/compress-pdf).
+2. Drop your file onto the page or click to select it.
+3. Choose a compression level. Medium is a good starting point. In our own measurements, Medium compression took a 913.4 KB image deck down to 315.3 KB, a 65.5% reduction. High cut the same file to 175.6 KB, an 80.8% reduction.
+4. Download the result.
+5. Upload the smaller file to Airtable.
+
+There's one thing to avoid: compressing the same PDF twice. Re-encoding an already-compressed JPEG image at the same quality level adds data instead of removing it. In testing, a Medium-compressed file grew by 90% when put through Medium compression a second time. If one pass at Medium is not small enough, start fresh from the original and select High.
+
+## How to reduce a text-based PDF
+
+For typed documents, the path to a smaller file is different.
+
+**Split it into sections.** The [Split PDF tool](/split-pdf) lets you define a page range and save it as a new file. A 40-page report can become four separate 10-page files, each roughly one-quarter the original size. Name them clearly (`report-part-1.pdf`, `report-part-2.pdf`) and attach each one to the Airtable record. This keeps everything in one record without hitting a file size limit.
+
+**Link instead of attach.** Upload the PDF to Google Drive, Dropbox, or any cloud storage that generates a shareable link. Paste that link into an Airtable URL field. The file never touches your Airtable storage quota, which is especially helpful if you're close to your base's allowance.
+
+**Strip unnecessary weight.** PDFs exported from older versions of Microsoft Word sometimes embed entire font packages and carry tracked-changes history. Those can add several megabytes to an otherwise compact file. The free command-line tool [Ghostscript](https://www.ghostscript.com/) can linearize and clean a PDF without rasterizing it, which often brings a bloated text PDF down considerably. It's more technical than a browser tool but preserves the text as vector data.
+
+## Checking and managing your base storage
+
+To see how much space your base has used, open the base and click on the base name in the top header. Airtable displays a storage meter there. If you're approaching your limit, the most direct fix is to upgrade your plan for more per-base storage.
+
+Deleting old attachments helps but doesn't free space immediately. Deleted files stay in the base's revision history for a period before the space is reclaimed. A recent mass delete won't show up as freed space right away.
+
+If you work regularly with large scanned files, one option is to set up Airtable to store only a compressed version of each PDF. Compress before uploading, not after; the original stays on your computer and you push a smaller copy to Airtable. That keeps the base from filling up too quickly without losing your original files.
+
+## Choosing the right approach
+
+| What's inside the PDF | Recommended fix |
+|---|---|
+| Scanned pages or photographs | Compress at Medium or High, then upload |
+| Typed document, invoice, contract | Split into sections, or upload to cloud and link |
+| Mix of images and text | Split first, then compress the image-heavy parts |
+
+If compression makes your file noticeably larger, that's confirmation it was a text PDF. Stop, delete the compressed version, go back to the original, and use the split or link approach instead.

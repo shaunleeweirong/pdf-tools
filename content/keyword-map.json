@@ -3093,7 +3093,8 @@
       "targetQuery": "pdf file too large for airtable upload",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-too-large-for-airtable-upload"
     },
     {
       "id": "blog-flatten-before-signing",
