@@ -1,0 +1,78 @@
+---
+title: "ChatGPT PDF Size Limit: What It Actually Is"
+description: "ChatGPT's hard PDF limit is 512 MB, but most uploads hit a lower ceiling. Here's what really limits uploads and what to do about it."
+date: "2026-09-17"
+keywords: ["maximum pdf size chatgpt", "chatgpt pdf limit", "chatgpt pdf file size", "upload pdf to chatgpt", "chatgpt pdf too large"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is the maximum PDF size ChatGPT can read?"
+    a: "ChatGPT accepts PDFs up to 512 MB per file. In practice, the 2 million token cap on text content is what most users hit first. For reliable uploads, keep files under 10 MB."
+  - q: "Why does ChatGPT reject my PDF even though it is under 512 MB?"
+    a: "The most likely cause is the 2 million token cap for text documents. A dense academic paper or long contract can exceed this even at a modest file size. ChatGPT may also silently truncate without warning. Split the document into smaller sections to work around this."
+  - q: "Does compressing a PDF help get it into ChatGPT?"
+    a: "Only if the PDF is image-heavy, like a scanned document or a photo deck. For text-only PDFs, most browser-based compressors rasterize pages into images and actually make the file larger. Splitting into sections is a better approach for text-heavy files."
+  - q: "How does ChatGPT's PDF limit compare to Claude and Gemini?"
+    a: "ChatGPT accepts up to 512 MB. Claude allows up to 500 MB in its web interface but caps API requests at 32 MB. Gemini accepts up to 100 MB per file with 10 files per prompt."
+  - q: "Do free and paid ChatGPT users have different PDF limits?"
+    a: "Yes. Free users can upload roughly 3 files per day. Plus subscribers get up to 80 file uploads every three hours, with a maximum of 10 files per message."
+---
+
+The maximum pdf size ChatGPT can read is 512 MB per file, but that hard ceiling almost never matters in practice. A separate 2 million token cap on text content is what stops most uploads, and the practical sweet spot for smooth performance is much closer to 10 MB. Here's what each constraint actually means.
+
+## What is the hard PDF file size limit for ChatGPT?
+
+ChatGPT will reject any file over 512 MB outright. It won't upload a partial version or give you a workaround. For reference, a 200-page scanned document typically runs 20 to 80 MB, so the 512 MB ceiling is a rare problem in ordinary use.
+
+The number that actually matters day-to-day is 10 MB. Files under that threshold upload quickly and consistently across different network conditions. Above 30 to 40 MB, you start running into the second constraint: token limits.
+
+## The 2 million token cap is often the real issue
+
+Text files, including PDFs, hit a separate limit of 2 million tokens per file. This applies even if the file is well under 512 MB.
+
+A "token" is roughly 3 to 4 characters of English text. Two million tokens translates to around 1.5 million words, which sounds generous. In practice, a dense legal contract, a textbook chapter, or a technical report can push close to this limit faster than you'd expect.
+
+What makes the token cap especially frustrating is that ChatGPT doesn't always warn you when it's been hit. The file uploads successfully, the model reads the portion that fits, and then it answers as if it read everything. If your question is about page 80 of a 100-page document, there's a real chance the model never got that far.
+
+## How your ChatGPT plan affects upload limits
+
+Free users are limited to roughly 3 file uploads per day. That's workable for occasional use, but not for anything involving regular document review.
+
+ChatGPT Plus subscribers get considerably more room: up to 80 file uploads every three hours, with a maximum of 10 files per message. The web interface supports up to 20 files per message as of early 2026. The token cap still applies per file regardless of plan.
+
+## How Claude and Gemini compare
+
+If you're choosing an AI tool partly based on how well it handles large documents, here's a quick comparison:
+
+| AI tool | Max file size | Notable limits |
+|---|---|---|
+| ChatGPT | 512 MB | 2M token cap; Plus: 80 uploads per 3 hrs |
+| Claude | 500 MB (web), 32 MB (API) | Up to 100 pages for visual analysis |
+| Gemini | 100 MB | 10 files per prompt |
+
+Claude's [file upload help page](https://support.claude.com/en/articles/8241126-upload-files-to-claude) details the 32 MB cap for API requests and a 100-page ceiling for visual analysis, which matters if you're uploading scanned pages rather than text-based documents. Gemini's 100 MB limit is the lowest of the three but still handles most real-world files.
+
+## Why scanned PDFs are the ones that actually hit size limits
+
+A text-only PDF is small. A 50-page Word document exported to PDF usually runs 500 KB to 2 MB, depending on fonts and embedded images. You can upload dozens of those before size becomes a concern.
+
+Scanned documents are a different story. A single page scanned at 300 DPI produces a JPEG that, after PDF wrapping, runs roughly 200 to 500 KB per page. A 40-page contract scanned at that resolution can easily reach 20 MB. A longer document, a lease agreement, a medical record, a tax filing, can push into the 50 to 100 MB range. That's when the file size limit starts to matter.
+
+Text-heavy PDFs rarely hit the size limit. They hit the token limit instead, often without any obvious error message.
+
+## What to do when your PDF is too large for ChatGPT
+
+The right fix depends on what kind of PDF you have.
+
+**For scanned or image-heavy PDFs:** A compressor like our [Compress PDF tool](/compress-pdf) can make a real difference. In testing, a 6-page image-heavy document at 913.4 KB compressed down to 175.6 KB at the highest setting, a reduction of over 80%. That kind of cut gets most scanned documents well under the 10 MB threshold.
+
+One important caveat: the compressor rasterizes each page to JPEG. For scans and photos that's fine, because the content is already an image. For text-only PDFs, rasterizing is counterproductive. In the same testing, a 20-page text report grew from 23.5 KB to 1.4 MB after compression, because converting vector text into a JPEG image inflates the file rather than shrinking it. Don't compress a contract, an invoice, or any text-heavy document. It'll come out bigger than it went in.
+
+**For text-heavy PDFs that are too long:** Splitting is a better approach than compressing. The [Split PDF tool](/split-pdf) lets you extract a specific page range, so you can upload a chapter, ask your questions, then upload the next section. Each part gets its own 2 million token allowance, which sidesteps the cap entirely.
+
+**For very large reports or textbooks:** Consider what you actually need. Uploading the summary and the relevant section usually gives better results than uploading 300 pages and hoping the model finds the right paragraph. AI tools are better at close reading than at scanning an entire book.
+
+## How ChatGPT reads the content inside a PDF
+
+ChatGPT extracts text from [PDF files](https://en.wikipedia.org/wiki/PDF) rather than reading them as images page by page (unless the model's vision mode is active). For a standard text PDF, extraction is accurate and preserves most content. For a scanned page, quality depends on how clean the scan was. A sharp 300 DPI scan reads well. A faded photocopy or skewed page produces errors.
+
+Multi-column layouts, tables, and footnotes can lose their structure in extraction. If a table comes through garbled, exporting that section as a CSV or pasting the data as plain text before uploading gives the model much more to work with. The same applies to spreadsheets saved as PDFs: they often come out as scrambled text, so an original CSV or Excel export is a cleaner input.

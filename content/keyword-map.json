@@ -3134,7 +3134,8 @@
       "targetQuery": "what is the maximum pdf size chatgpt can read",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "what-is-the-maximum-pdf-size-chatgpt-can-read"
     }
   ]
 }
