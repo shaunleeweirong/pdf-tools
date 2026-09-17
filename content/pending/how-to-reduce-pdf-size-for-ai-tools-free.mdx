@@ -1,0 +1,100 @@
+---
+title: "Reduce PDF Size for AI Tools (ChatGPT, Claude)"
+description: "PDF too large for ChatGPT or Claude? Compress image-heavy files or split by pages before uploading so the AI can actually read your document."
+date: "2026-09-17"
+keywords:
+  - how to reduce pdf size for ai tools
+  - pdf too large for chatgpt
+  - pdf too large for claude
+  - compress pdf for ai
+  - chatgpt pdf file size limit
+  - claude pdf upload limit
+toolSlugs:
+  - compress-pdf
+  - split-pdf
+  - extract-pages
+faq:
+  - q: "What is the PDF file size limit for Claude?"
+    a: "Claude.ai accepts PDFs up to about 30 MB per file, with a maximum of 1,000 pages per upload. Visual analysis of charts and embedded images applies only to the first 100 pages; from page 101 onward, Claude reads plain text only."
+  - q: "What is the PDF file size limit for ChatGPT?"
+    a: "ChatGPT sets a hard file size ceiling of 512 MB, but a separate 2-million-token cap on text content means a large PDF can still be rejected even if it's well under that size limit. Free users can upload around 3 files per day; ChatGPT Plus subscribers get 80 uploads per 3-hour period."
+  - q: "Does compressing a PDF help for AI uploads?"
+    a: "Yes, but only for PDFs made up of scanned pages or images. Compressing a text-only PDF makes it much larger, not smaller, because the compressor rasterizes each page into a JPEG. A 23.5 KB text report grew to 1.4 MB after compression in our measurements."
+  - q: "What if my PDF has too many pages for an AI tool?"
+    a: "Use a split tool or an extract-pages tool to pull out only the pages you actually need, then upload the smaller file. There's no point feeding a 300-page manual to an AI when you only need pages 60 to 90."
+  - q: "Can I upload a password-protected PDF to ChatGPT or Claude?"
+    a: "No. AI tools cannot read encrypted PDFs. Remove the password first, then upload the resulting file to the AI tool."
+  - q: "Should I compress a PDF twice to make it even smaller?"
+    a: "No. A second compression pass makes the file larger. Running a Medium-compressed file through Medium compression again grew it from 315.3 KB to 598.9 KB in our measurements. If one pass at Medium isn't small enough, start from the original and switch to High."
+---
+
+If your PDF is too large to upload to ChatGPT or Claude, you need to reduce pdf size for ai tools before sending it. The right fix depends on what is in the file. Compressing works well for image-heavy and scanned PDFs; splitting or extracting pages fixes the problem when the page count is the real issue; and text-only PDFs often don't need anything done at all.
+
+## What are the PDF size limits for major AI tools?
+
+[Claude.ai](https://support.anthropic.com/en/articles/8241126-what-kinds-of-documents-can-i-upload-to-claude-ai) accepts PDFs up to roughly 30 MB per file and 1,000 pages per upload. You can attach up to 20 files in one conversation. One catch: visual analysis of charts, diagrams, and embedded images only applies to the first 100 pages. From page 101 onward, Claude reads plain text only, so a chart on page 150 won't be seen.
+
+ChatGPT has a hard file size ceiling of [512 MB per file](https://fast.io/resources/chatgpt-file-upload-limit/), but there's a second, often-overlooked cap: 2 million tokens of text content per file. A dense, 10-page legal brief might be only 300 KB but still fail if the token count is high. Free users are capped at roughly 3 file uploads per day. ChatGPT Plus subscribers get 80 uploads per 3-hour window.
+
+In practice, the Claude limit causes more friction for everyday users because 30 MB isn't that large for a scanned document or a slide deck with full-page images.
+
+## Why does an AI tool reject my PDF?
+
+Most rejections come down to one of three causes:
+
+1. **File size over the limit.** A scan-heavy report or a presentation with full-page photos can reach 30 MB quickly.
+2. **Too many pages.** A file can be perfectly sized but still hit the page cap.
+3. **Encryption.** AI tools cannot open password-protected PDFs at all.
+
+A less obvious fourth cause: the file is mostly text but contains a huge amount of it. ChatGPT's 2-million-token cap catches PDFs that look small in megabytes but contain hundreds of dense pages.
+
+## How to compress a PDF for AI uploads
+
+If your PDF is made up of scanned pages, photographs, or a slide deck with full-page images, compression is usually the fastest fix. The [Compress PDF tool](/compress-pdf) runs entirely in your browser, so nothing is sent to a server.
+
+In our measurements, an image-heavy PDF of 913.4 KB came down to 315.3 KB at Medium compression (a 65.5% reduction) and to 175.6 KB at High compression (an 80.8% reduction). Either result is well within Claude's 30 MB cap. These numbers come from a six-page PDF where every page was a distinct full-bleed image.
+
+To compress:
+
+1. Open the [Compress PDF tool](/compress-pdf).
+2. Drop in your file.
+3. Pick Medium for most uploads. If the result is still too large, start from the original and pick High.
+4. Download the output and upload it to your AI tool.
+
+## When compression makes things worse
+
+Do not compress a PDF that is primarily text. The compressor rasterizes every page to a JPEG, which turns vector text glyphs (stored as tiny mathematical shapes) into pixels. In our measurements, a 20-page text report went from 23.5 KB to 1.4 MB after Medium compression. That's a 60x size increase, which will take a file that was fine and make it fail.
+
+If you are not sure what your PDF contains, open it and scroll through a few pages. If you can select and copy text, it's a text-based PDF. If pages look like photographs and text cannot be selected, it's an image-based or scanned file, and compression will help.
+
+Text PDFs that are too large for an AI tool are usually oversized because of something else: embedded fonts, revision history baked into the file, or a large logo on every page. For those, the options are to paste the text directly into the chat instead of uploading, or to use a tool that removes embedded resources without rasterizing the pages.
+
+## How to split a PDF with too many pages
+
+When the page count is the problem, splitting is quicker than trying to compress your way down to fewer pages.
+
+The [Split PDF tool](/split-pdf) lets you choose a page range and download only those pages as a new file. If you need the AI to answer a specific question, pull out just the relevant section. A 300-page manual becomes a 40-page chapter. A 500-page research report becomes the 15-page methodology section you actually need.
+
+The [Extract Pages tool](/extract-pages) works the same way but lets you pick individual pages in any order instead of a contiguous range. Use it when the information you need is scattered across the document.
+
+After splitting, the new file is often small enough to upload with no further steps needed.
+
+## A quick guide to picking the right fix
+
+| What's in the PDF | Best fix |
+|---|---|
+| Scanned pages, photos, image-heavy slides | Compress PDF |
+| Too many pages, file size is fine | Split or extract pages |
+| Text-only, already under the size limit | No action needed |
+| Text-only, over the limit | Paste the relevant text into chat instead |
+| Password-protected | Remove the password first, then upload |
+
+## What about compressing twice?
+
+It won't help. Running a compressed file through the compressor again produces a larger file, not a smaller one. In our measurements, passing a Medium-compressed file through Medium compression a second time grew it from 315.3 KB to 598.9 KB, nearly double. The compressor re-renders already-rasterized JPEG pages, and re-encoding a JPEG that has been through lossy compression adds data rather than removing it.
+
+If Medium compression leaves the file too large, go back to the original and choose High. Don't chain passes.
+
+## Privacy note
+
+All three tools mentioned here (compress, split, extract pages) run directly in your browser. Your PDF isn't uploaded to any server, which matters when the document contains sensitive information. The same privacy reason that makes people wary of uploading confidential PDFs to a cloud compressor applies here: the browser-based approach means the file stays on your device from start to finish. For context on how [PDF/A](https://en.wikipedia.org/wiki/PDF/A) and standard PDF formats handle embedded content differently, Wikipedia's overview is a reasonable starting point.
