@@ -3084,7 +3084,8 @@
       "targetQuery": "how to use chatgpt to read a pdf free",
       "intent": "informational",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-use-chatgpt-to-read-a-pdf-free"
     },
     {
       "id": "blog-airtable-pdf-too-large",
