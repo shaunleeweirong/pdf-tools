@@ -3101,7 +3101,8 @@
       "targetQuery": "should i flatten pdf before or after signing",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "should-i-flatten-pdf-before-or-after-signing"
     },
     {
       "id": "blog-offline-pdf-editor",
