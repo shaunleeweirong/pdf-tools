@@ -1,0 +1,88 @@
+---
+title: "Reduce PDF Size for ChatGPT Uploads (Free)"
+description: "ChatGPT accepts files up to 512 MB, but image-heavy PDFs can still cause problems. Learn when to compress vs. split your PDF before uploading."
+date: "2026-09-18"
+keywords: ["how to reduce pdf size for chatgpt upload free", "chatgpt pdf size limit", "compress pdf for chatgpt", "pdf too large for chatgpt", "split pdf for chatgpt"]
+toolSlugs: ["compress-pdf", "split-pdf"]
+faq:
+  - q: "What is the maximum PDF size I can upload to ChatGPT?"
+    a: "ChatGPT accepts files up to 512 MB per file. The tighter practical ceiling is 2 million tokens of text. A short, image-heavy PDF can hit the size limit before the token limit; a long text document can hit the token limit while still under 10 MB."
+  - q: "Does compressing a PDF help with ChatGPT uploads?"
+    a: "Only if the PDF is image-heavy. The compressor rasterizes each page to a JPEG, which shrinks scans and photo decks dramatically but makes text-only PDFs larger. For text documents that are too long, split the PDF instead."
+  - q: "Will compressing a PDF change how ChatGPT reads it?"
+    a: "If the PDF was already image-heavy, no. ChatGPT reads the same content either way. If you compress a text-only PDF (which makes it bigger, not smaller), ChatGPT receives a larger file with the same words."
+  - q: "How many PDFs can I upload to ChatGPT at once?"
+    a: "Free accounts can upload 3 files per day. ChatGPT Plus allows up to 10 files per message and roughly 80 uploads per 3-hour rolling window."
+  - q: "What should I do if my PDF is large because of text, not images?"
+    a: "Compression won't help. Use the Split PDF tool to divide the document into sections of 100 to 150 pages each, then upload them in order, telling ChatGPT to wait until all parts arrive before responding."
+---
+
+To reduce PDF size for a ChatGPT upload, you first need to know why the file is large. ChatGPT accepts files up to 512 MB, but image-heavy PDFs and text-heavy PDFs need completely different fixes.
+
+## What is ChatGPT's PDF size limit?
+
+According to [OpenAI's file uploads documentation](https://help.openai.com/en/articles/8555545-file-uploads-faq), the hard limit is 512 MB per file. That ceiling matters when a PDF contains high-resolution images, scans, or full-page photographs.
+
+A second limit applies to all text and document files: a cap of 2 million tokens. If your PDF is a 300-page text report, it can be well under 512 MB and still get truncated because the word count exceeds what the model will process. In that case, shrinking the file's byte count does nothing useful.
+
+So the first question to ask is: why is this PDF large?
+
+## When compression actually helps: image-heavy PDFs
+
+If your PDF is large because it contains scans, photographs, or full-page images, compressing it is the right approach.
+
+The [Compress PDF tool](/compress-pdf) rasterizes each page to a JPEG and re-embeds it at a lower quality setting. In our own testing on the actual tool, a 913.4 KB, 6-page image deck shrank to 175.6 KB at the High setting (a reduction of 80.8%) and to 315.3 KB at Medium (65.5%). Those are real results on real files.
+
+The trade-off is image clarity. High compression shrinks more but softens fine details. Medium is a better starting point if your PDF contains charts or diagrams you need ChatGPT to read accurately.
+
+### How to compress a PDF for ChatGPT
+
+1. Open the [Compress PDF tool](/compress-pdf) in your browser. No sign-up needed, and your file never leaves your device.
+2. Drop your PDF on the page.
+3. Pick **Medium** to start.
+4. If the result is still too large for what you need, go back to your original file and run **High** instead.
+5. Download the compressed PDF, then upload it to ChatGPT.
+
+One rule to follow: never compress the same PDF twice. In our measurements, running a Medium-compressed file through Medium compression again made it 90% bigger (315.3 KB became 598.9 KB). Re-encoding a JPEG that has already been compressed adds bytes rather than removing them. If Medium is not enough, start fresh from the original at High.
+
+## When compression makes things worse: text-heavy PDFs
+
+This is the part that catches most people. If your PDF is a report, contract, essay, or any document that is mostly typed text, compressing it will make it bigger, not smaller.
+
+The compressor converts every page to a JPEG image. Text stored as PDF vector glyphs is inherently compact. In our testing, a 20-page text-only report was 23.5 KB. After compression at Medium, it grew to 1.4 MB, roughly 60 times larger. Compressing it would make the ChatGPT upload problem worse.
+
+For text PDFs, the real problem is not the file size but the length. The 2 million token limit caps how much text ChatGPT can process from a single file. No compression reduces a token count; you have to give it less content at a time.
+
+## Splitting a text PDF for ChatGPT
+
+If a text document hits ChatGPT's token ceiling, the fix is to [split the PDF](/split-pdf) into smaller sections and upload them as a batch.
+
+Here's how to do it:
+
+1. Open the [Split PDF tool](/split-pdf).
+2. Split by page range. Aim for sections of 100 to 150 pages each, depending on how text-dense the pages are.
+3. Upload part 1 to ChatGPT with a note at the start: "This is part 1 of [n]. Please wait until I upload all parts before you respond."
+4. Upload each subsequent part in the same conversation, with the same note.
+5. After uploading the final part, ask your question.
+
+Splitting keeps ChatGPT's context coherent across the document without pushing any single file past the token ceiling.
+
+## When a PDF is large for both reasons
+
+Some PDFs are both long and image-heavy: a scanned textbook, a photo-illustrated manual, a multi-chapter report packed with charts. For these, both tools together make sense.
+
+Start by compressing the whole file at Medium to shrink the images. Then split the compressed result into sections. Compressing first reduces each part's byte size; splitting keeps each part within the token limit.
+
+The same rule applies: compress from the original, not from a file you have already compressed. And consider whether every section needs to go in. ChatGPT doesn't need a table of contents or a legal appendix to answer most questions about the main body.
+
+## How to tell which type of PDF you have
+
+If you're unsure whether your PDF is image-heavy or text-heavy, try to select a few lines of text in your PDF reader. If the text highlights normally, it's stored as searchable vectors and compression will hurt. If the cursor can't select anything, the pages are scanned images and compression will help.
+
+File size relative to page count is another clue. A 50-page text report should be well under 1 MB. If a 50-page document is 15 MB or more, images are driving the size and compression is the right tool.
+
+## Privacy when preparing PDFs for ChatGPT
+
+The [Compress PDF](/compress-pdf) and [Split PDF](/split-pdf) tools run entirely in your browser. Your file never touches a server. That matters when the PDF contains personal information, financial records, or anything you'd rather not share with a third party.
+
+ChatGPT itself is a different matter. When you upload a file, it goes to OpenAI's servers and is processed in the cloud. If your document is sensitive, review [OpenAI's privacy and data policies](https://openai.com/policies/privacy-policy) before uploading, or upload only the pages relevant to your question. Splitting is useful here too: share a 10-page excerpt rather than a 200-page document when only the excerpt is needed.
