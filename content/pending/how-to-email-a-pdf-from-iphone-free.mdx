@@ -1,0 +1,106 @@
+---
+title: "How to Email a PDF from iPhone Free"
+description: "Send a PDF from iPhone in seconds using the built-in Files app. Plus what to do when the attachment is too large and how to shrink it without a paid app."
+date: "2026-09-18"
+keywords: ["how to email a pdf from iphone free", "send pdf from iphone", "iphone email pdf attachment", "attach pdf to email iphone", "email pdf iphone gmail"]
+toolSlugs: ["compress-pdf", "merge-pdf"]
+faq:
+  - q: "How do I attach a PDF to an email on iPhone?"
+    a: "Open the Files app, long-press the PDF, tap Share, and choose Mail or your preferred email app. The file attaches automatically."
+  - q: "What is the email attachment size limit on iPhone?"
+    a: "Gmail and most major services cap attachments at 25 MB per message. Because email encodes attachments in Base64, which adds about 33% to the transmitted size, a 19 MB PDF can trip a 25 MB limit. Staying under 15 MB is the safe margin."
+  - q: "What is Mail Drop on iPhone?"
+    a: "Mail Drop is Apple's built-in workaround for large attachments. When a file is too big to send directly through Apple Mail, the app asks if you want to use Mail Drop, which uploads the file to iCloud and puts a download link in the email instead."
+  - q: "How do I make a PDF smaller on iPhone before emailing?"
+    a: "If your PDF contains scanned pages or photos, open the Compress PDF tool in Safari, upload the file, pick a quality level, and download the result. Text-based PDFs won't benefit; compression rasterizes pages to JPEG and makes text documents larger, not smaller."
+  - q: "Can I email a PDF from Gmail on iPhone?"
+    a: "Yes. Open Gmail, start a new email, tap the paperclip icon, select Browse Document Sources, and pick your PDF from Files or iCloud Drive."
+---
+
+Emailing a PDF from iPhone is free and takes about ten seconds when the file is a reasonable size. The fastest route is through the built-in Files app: find your PDF, tap Share, and choose your email app. No extra tools needed.
+
+Things get more complicated when the attachment is large. [Gmail](https://support.google.com/mail/answer/6584) and most email providers cap attachments at 25 MB, but Base64 encoding adds roughly 33% to the transmitted size, so the practical safe ceiling is closer to 18 MB. If your PDF is above that, you'll need to either shrink it or send a cloud link instead. This guide covers all of it.
+
+## How to email a PDF from the Files app
+
+This works for any PDF already on your device, in iCloud Drive, or synced from a cloud service.
+
+1. Open the **Files** app on your iPhone.
+2. Find the PDF you want to send.
+3. Long-press the file to bring up the context menu.
+4. Tap **Share**.
+5. Choose **Mail** (or Gmail, Outlook, or whichever email app you use).
+6. The PDF attaches automatically. Add your recipient and hit Send.
+
+If you're already viewing the PDF in a document app or the Books app, look for a Share icon in the toolbar. The same options appear there.
+
+## How to email a PDF through Gmail on iPhone
+
+Gmail's attachment flow is a bit different because you start from the compose screen.
+
+1. Open **Gmail** and tap the **Compose** button (the pencil icon at the bottom right).
+2. Fill in the recipient's address.
+3. Tap the **paperclip** icon in the top toolbar.
+4. Tap **Browse Document Sources** to open the Files picker.
+5. Locate your PDF and tap it. Gmail attaches it right away.
+6. Send when ready.
+
+To forward a PDF that someone sent you in Gmail: open the email, tap the three-dot menu in the top right, and select **Forward**. Gmail re-attaches the original file.
+
+## What counts as "too large" for an email on iPhone
+
+The limit depends on your email service (and the recipient's). Here are the common ones:
+
+| Email service | Attachment limit |
+|---|---|
+| Gmail | 25 MB per message |
+| Outlook.com | 20 MB per message |
+| iCloud Mail | 20 MB per message |
+| Yahoo Mail | 25 MB per message |
+
+The number that trips people up is this: these limits apply to the Base64-encoded size of the message, not the raw file size. [Base64 encoding](https://en.wikipedia.org/wiki/Base64) expands data by about 33%, so a 19 MB PDF transmits as roughly 25 MB and hits Gmail's ceiling even though the file looks fine on your phone. Staying under 15 MB gives you a comfortable margin.
+
+## How to compress a PDF on iPhone before sending
+
+If your PDF is mostly scans or photos, a free browser-based compressor can bring it down. No app install required.
+
+1. Open **Safari** on your iPhone.
+2. Go to the [Compress PDF tool](/compress-pdf).
+3. Tap **Choose file** and pick your PDF.
+4. Pick a quality level. **Medium** works for most files. Try **High** if you need the absolute smallest output.
+5. Tap **Compress**, then download the result.
+6. The compressed file lands in your Downloads folder in Files. From there, share it to your email app.
+
+The tool runs entirely in your browser. Your file is never sent to a server.
+
+## When compression won't help
+
+This part is worth understanding before you spend time on it.
+
+Browser-based compressors convert each page to a [JPEG image](https://en.wikipedia.org/wiki/JPEG) before re-saving the PDF. That works well for image-heavy files. A 6-page image deck we measured went from 913.4 KB down to 315.3 KB at Medium quality, a 65.5% reduction.
+
+Text PDFs are the opposite. A 20-page text-only report grew from 23.5 KB to 1.4 MB under the same tool. Text stored as vector glyphs is tiny; text captured as a photograph of those glyphs is not. If your PDF is a contract, invoice, form, or word-processed document, the compressor won't help and will make things worse.
+
+Mixed documents are usually the same story. A 35 KB document with body text and a small image per page grew to 171.2 KB.
+
+One more thing: don't run compression twice. Re-encoding an already-compressed file tends to increase the size rather than reduce it.
+
+## Using Mail Drop for very large PDFs
+
+If your PDF is too large even after compression, Apple's Mail Drop is an easy built-in option.
+
+Mail Drop works only through the Apple Mail app with an iCloud account. When you attach a file that's too large to send directly, Mail prompts you to use Mail Drop. Tap **Use Mail Drop** and Apple uploads the file to iCloud, then swaps the attachment for a download link in the message body. The recipient clicks the link. The link stays active for 30 days.
+
+The limitation: Mail Drop isn't available in the Gmail or Outlook iPhone apps. For those, share a Google Drive or iCloud Drive link instead. Open the Files app, long-press the PDF, tap **Share**, and you'll see sharing options that generate a link rather than attaching the file.
+
+## Sending multiple PDFs at once from iPhone
+
+If you need to send several PDFs together:
+
+**Check the combined size first.** In Files, long-press each file and tap **Info** to see the individual sizes. Add them up before attaching anything.
+
+**Merge them into one if it helps.** Running your files through a [Merge PDF tool](/merge-pdf) combines them into a single attachment. Merging doesn't inflate the output beyond what the individual parts already add up to, so you won't make the size problem worse. One attachment is also easier for the recipient to save.
+
+**Zip them instead.** The Files app can bundle multiple files into a zip. Long-press the first file, tap **Select**, select the others, then tap **Compress** at the bottom of the screen. One zip keeps things tidy.
+
+For most everyday sends (a signed document, a scanned receipt, a one-page form) the Files app method takes about ten seconds and costs nothing. Open Files, tap Share on the PDF, choose your email app, and you're done.
