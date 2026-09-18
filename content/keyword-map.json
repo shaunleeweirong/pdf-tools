@@ -3140,6 +3140,71 @@
       "priority": 2,
       "status": "pending",
       "slug": "what-is-the-maximum-pdf-size-chatgpt-can-read"
+    },
+    {
+      "id": "blog-pdf-vs-docx-resume",
+      "surface": "blog",
+      "targetQuery": "pdf vs docx for resume which format to send",
+      "intent": "informational",
+      "priority": 1,
+      "status": "pending",
+      "slug": "pdf-vs-docx-for-resume"
+    },
+    {
+      "id": "blog-email-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "how to email a pdf from iphone free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-chrome-pdf-extensions",
+      "surface": "blog",
+      "targetQuery": "best free chrome extensions for pdf no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-reduce-pdf-chatgpt",
+      "surface": "blog",
+      "targetQuery": "how to reduce pdf size for chatgpt upload free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-altered-check",
+      "surface": "blog",
+      "targetQuery": "how to tell if a pdf has been edited or altered free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-add-digital-signature-pdf",
+      "surface": "blog",
+      "targetQuery": "how to add a digital signature to pdf free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-print-pdf-google-drive",
+      "surface": "blog",
+      "targetQuery": "how to print pdf from google drive free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-send-pdf-text-iphone",
+      "surface": "blog",
+      "targetQuery": "how to send pdf via text message on iphone free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
