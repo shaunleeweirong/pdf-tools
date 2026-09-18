@@ -3111,7 +3111,8 @@
       "targetQuery": "best free offline pdf editor no internet required",
       "intent": "commercial",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "best-free-offline-pdf-editor-no-internet"
     },
     {
       "id": "blog-protect-pdf-google-drive",
