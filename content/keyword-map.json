@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
     {
@@ -3212,6 +3212,71 @@
       "priority": 2,
       "status": "pending",
       "slug": "how-to-send-pdf-via-text-message-on-iphone-free"
+    },
+    {
+      "id": "blog-edit-pdf-chromebook",
+      "surface": "blog",
+      "targetQuery": "how to edit pdf on chromebook free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-edit-pdf-on-chromebook-free"
+    },
+    {
+      "id": "blog-flatten-pdf-chromebook",
+      "surface": "blog",
+      "targetQuery": "how to flatten a pdf on chromebook free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-to-10mb",
+      "surface": "blog",
+      "targetQuery": "compress pdf to under 10mb free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-sign-pdf-linux",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf on linux free",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-watermark-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "how to add watermark to pdf on iphone free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-watermark-pdf-android",
+      "surface": "blog",
+      "targetQuery": "how to add watermark to pdf on android free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-greenhouse",
+      "surface": "blog",
+      "targetQuery": "compress pdf for greenhouse application portal free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-crop-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "how to crop pdf pages on iphone free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
