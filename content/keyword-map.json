@@ -3182,7 +3182,8 @@
       "targetQuery": "how to tell if a pdf has been edited or altered free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-tell-if-a-pdf-has-been-edited-or-altered-free"
     },
     {
       "id": "blog-add-digital-signature-pdf",
