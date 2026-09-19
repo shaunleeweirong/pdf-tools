@@ -3060,6 +3060,217 @@
       "targetQuery": "compress pdf for job application ats portal free",
       "intent": "transactional",
       "priority": 2,
+      "status": "pending",
+      "slug": "compress-pdf-for-job-application-ats-portal-free"
+    },
+    {
+      "id": "blog-ai-summarize-pdf",
+      "surface": "blog",
+      "targetQuery": "how to summarize a pdf with ai free online",
+      "intent": "informational",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-summarize-a-pdf-with-ai-free"
+    },
+    {
+      "id": "blog-chatgpt-read-pdf",
+      "surface": "blog",
+      "targetQuery": "how to use chatgpt to read a pdf free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-use-chatgpt-to-read-a-pdf-free"
+    },
+    {
+      "id": "blog-airtable-pdf-too-large",
+      "surface": "blog",
+      "targetQuery": "pdf file too large for airtable upload",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "pdf-too-large-for-airtable-upload"
+    },
+    {
+      "id": "blog-flatten-before-signing",
+      "surface": "blog",
+      "targetQuery": "should i flatten pdf before or after signing",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "should-i-flatten-pdf-before-or-after-signing"
+    },
+    {
+      "id": "blog-offline-pdf-editor",
+      "surface": "blog",
+      "targetQuery": "best free offline pdf editor no internet required",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "pending",
+      "slug": "best-free-offline-pdf-editor-no-internet"
+    },
+    {
+      "id": "blog-protect-pdf-google-drive",
+      "surface": "blog",
+      "targetQuery": "how to password protect pdf in google drive free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-password-protect-pdf-in-google-drive-free"
+    },
+    {
+      "id": "blog-pdf-size-for-ai",
+      "surface": "blog",
+      "targetQuery": "how to reduce pdf size for ai tools free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-reduce-pdf-size-for-ai-tools-free"
+    },
+    {
+      "id": "blog-chatgpt-pdf-limit",
+      "surface": "blog",
+      "targetQuery": "what is the maximum pdf size chatgpt can read",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "what-is-the-maximum-pdf-size-chatgpt-can-read"
+    },
+    {
+      "id": "blog-pdf-vs-docx-resume",
+      "surface": "blog",
+      "targetQuery": "pdf vs docx for resume which format to send",
+      "intent": "informational",
+      "priority": 1,
+      "status": "pending",
+      "slug": "pdf-vs-docx-for-resume"
+    },
+    {
+      "id": "blog-email-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "how to email a pdf from iphone free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-email-a-pdf-from-iphone-free"
+    },
+    {
+      "id": "blog-chrome-pdf-extensions",
+      "surface": "blog",
+      "targetQuery": "best free chrome extensions for pdf no sign up",
+      "intent": "commercial",
+      "priority": 2,
+      "status": "pending",
+      "slug": "best-free-chrome-extensions-for-pdf-no-sign-up"
+    },
+    {
+      "id": "blog-reduce-pdf-chatgpt",
+      "surface": "blog",
+      "targetQuery": "how to reduce pdf size for chatgpt upload free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-reduce-pdf-size-for-chatgpt-upload-free"
+    },
+    {
+      "id": "blog-pdf-altered-check",
+      "surface": "blog",
+      "targetQuery": "how to tell if a pdf has been edited or altered free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-tell-if-a-pdf-has-been-edited-or-altered-free"
+    },
+    {
+      "id": "blog-add-digital-signature-pdf",
+      "surface": "blog",
+      "targetQuery": "how to add a digital signature to pdf free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-add-a-digital-signature-to-pdf-free-online"
+    },
+    {
+      "id": "blog-print-pdf-google-drive",
+      "surface": "blog",
+      "targetQuery": "how to print pdf from google drive free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-print-pdf-from-google-drive-free"
+    },
+    {
+      "id": "blog-send-pdf-text-iphone",
+      "surface": "blog",
+      "targetQuery": "how to send pdf via text message on iphone free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "how-to-send-pdf-via-text-message-on-iphone-free"
+    },
+    {
+      "id": "blog-edit-pdf-chromebook",
+      "surface": "blog",
+      "targetQuery": "how to edit pdf on chromebook free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-edit-pdf-on-chromebook-free"
+    },
+    {
+      "id": "blog-flatten-pdf-chromebook",
+      "surface": "blog",
+      "targetQuery": "how to flatten a pdf on chromebook free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-to-10mb",
+      "surface": "blog",
+      "targetQuery": "compress pdf to under 10mb free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "pending",
+      "slug": "compress-pdf-to-under-10mb-free"
+    },
+    {
+      "id": "blog-sign-pdf-linux",
+      "surface": "blog",
+      "targetQuery": "how to sign a pdf on linux free",
+      "intent": "transactional",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-watermark-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "how to add watermark to pdf on iphone free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-watermark-pdf-android",
+      "surface": "blog",
+      "targetQuery": "how to add watermark to pdf on android free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-greenhouse",
+      "surface": "blog",
+      "targetQuery": "compress pdf for greenhouse application portal free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-crop-pdf-iphone",
+      "surface": "blog",
+      "targetQuery": "how to crop pdf pages on iphone free",
+      "intent": "informational",
+      "priority": 2,
       "status": "idea"
     }
   ]

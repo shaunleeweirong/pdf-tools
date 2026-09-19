@@ -1,0 +1,87 @@
+---
+title: "Compress PDF to Under 10 MB Free"
+description: "Reduce a PDF to under 10 MB in your browser, no sign-up. Works for image-heavy files. Includes what to try when compression won't shrink it."
+date: "2026-09-19"
+keywords:
+  - "compress pdf to under 10mb"
+  - "compress pdf to 10mb free"
+  - "reduce pdf size under 10mb"
+  - "pdf too large 10mb"
+  - "shrink pdf under 10mb free"
+toolSlugs:
+  - "compress-pdf"
+  - "split-pdf"
+faq:
+  - q: "Will compressing my PDF always get it under 10 MB?"
+    a: "Only if the PDF is image-heavy, like a scan or a photo deck. Our compressor rasterizes each page to JPEG, which shrinks images dramatically but makes text-only PDFs larger. A 23.5 KB text report grew to 1.4 MB in our own measurements. Check whether you can select text in the file before you compress."
+  - q: "Which compression level should I use?"
+    a: "Start with Medium. If the result is still over 10 MB, go back to the original file and try High. Do not compress the same file twice at the same level; we measured a 315.3 KB file grow to 598.9 KB after a second Medium pass."
+  - q: "Why does a 10 MB limit exist?"
+    a: "Email servers and enterprise platforms often set their own limits well below the consumer-app default. Corporate Outlook configurations commonly cap attachments at 10 MB regardless of Microsoft's higher default, and many form portals use 10 MB as a practical ceiling for storage and processing."
+  - q: "My PDF is text and is over 10 MB. What can I do?"
+    a: "Don't compress it. Our tool will make it bigger. Try splitting the document to send only the relevant pages, re-exporting from the source app with a smaller-size setting, or sharing a cloud link instead of attaching the file."
+  - q: "Does compression affect quality for images?"
+    a: "High compression gives the smallest file but lowers image resolution noticeably. Medium is usually a good balance for sharing; Low makes the smallest reduction. For sensitive documents like IDs, preview the compressed file before submitting."
+---
+
+To compress a PDF to under 10 MB, open the free [Compress PDF tool](/compress-pdf), drop in your file, pick a compression level, and download the result. This works well for scans, photo decks, and image-heavy files. If your PDF is a typed report or contract, read the check below first. Compression will make it larger.
+
+## Why do so many places enforce a 10 MB limit?
+
+The 10 MB ceiling shows up in a few specific contexts. Corporate email servers frequently cap inbound and outbound attachments at 10 MB, even though Gmail and Outlook.com both allow up to [25 MB for personal accounts](https://support.google.com/mail/answer/6584). IT administrators set their own rules, and 10 MB is a common default for enterprise inboxes.
+
+Beyond email, many portals use 10 MB as their cutoff. Court e-filing systems, insurance claim forms, HR portals, and mortgage application platforms often cite exactly this number. It's large enough to cover a typical multi-page scan but small enough to keep processing time and storage costs predictable.
+
+## Check first: image scan or text document?
+
+Before you compress anything, click your cursor on a line of text in the PDF.
+
+**If the text highlights**, the PDF is a typed document. Text is stored as compact font data inside the file, so a 20-page report might only be 100 KB to begin with. Compressing it with an in-browser tool won't help. The tool rasterizes each page to JPEG, turning vector text into a photograph of text, which is much larger. In our measurements, a 20-page text report sitting at 23.5 KB came out at 1,400.8 KB after one Medium pass, roughly 60 times bigger.
+
+**If nothing highlights**, you have a scan or image-based PDF. Compression is the right approach.
+
+## How to compress an image-heavy PDF to under 10 MB
+
+1. Open the [Compress PDF tool](/compress-pdf).
+2. Drop your file onto the page or click to browse.
+3. Choose a compression level. For a file well over 10 MB, start with **High**. For a file close to the limit, try **Medium** first to preserve more image quality.
+4. Click **Compress PDF** and download the result.
+5. Check the file size. If it's still over 10 MB, go back to the **original** file and compress again at a stronger level.
+
+The tool runs entirely in your browser. Your file never goes to a server, which matters when the document contains sensitive information like payslips, medical records, or signed contracts.
+
+Here are real measured results on a 6-page image PDF (913.4 KB):
+
+| Level | Before | After | Reduction |
+|---|---|---|---|
+| High (smallest) | 913.4 KB | 175.6 KB | −80.8% |
+| Medium | 913.4 KB | 315.3 KB | −65.5% |
+| Low (best quality) | 913.4 KB | 703.5 KB | −23.0% |
+
+Based on these ratios, High compression can typically get an image-heavy PDF under 10 MB as long as it starts at roughly 50 MB or less. Even a 30 MB photo-heavy file should fall comfortably under the limit at High.
+
+## Do not compress the same file twice
+
+Re-running a compressed file through the same tool at the same level makes it bigger. After one Medium pass, our test image PDF was 315.3 KB. A second Medium pass returned 598.9 KB, nearly double.
+
+The reason: the already-rasterized page gets re-rendered and re-encoded. Encoding a JPEG that has already been compressed adds data instead of removing it. If one pass leaves the file above 10 MB, open the **original** and compress once at High. That is always more effective than chaining two passes.
+
+## What to do when the PDF is a text document
+
+Compression won't fix a large text PDF. A few approaches that do work:
+
+**Re-export from the source application.** If you created the PDF from Word, use File, Save As, PDF, and look for an optimization option. In Google Docs, go to File, Download, PDF Document. Both apps export at a smaller default size than a print-quality PDF.
+
+**Extract only the pages you need.** If the full document is 40 pages and the recipient only needs pages 5 to 12, use the [Split PDF tool](/split-pdf) to pull out that range and send that file. Eight pages of text will almost always sit well under 10 MB.
+
+**Check for embedded images.** A text document ballooning to 10 MB often has one large image or logo embedded at full resolution. Open the file in a viewer, scroll for any graphics, and see whether the source document can be edited to use a lower-resolution version.
+
+**Zip it instead.** A ZIP archive applies lossless compression and can shave 10 to 30% off a text PDF. Most email clients allow ZIP attachments even when they block oversized PDFs. The recipient unzips and gets the original file intact.
+
+**Share a link instead of an attachment.** Upload the file to Google Drive, OneDrive, or Dropbox and paste a view-only link into the email. Most platforms that reject a 12 MB attachment will accept a link without complaint.
+
+## A note on scanned documents with text
+
+Scanned documents are image files, even if they contain text. If your scan is over 10 MB, compression will help. Running the file at High should bring most multi-page scans well under the limit.
+
+One thing to keep in mind: if the scan was saved at a very high resolution (600 DPI or above), even the compressed output may still look sharp at normal viewing sizes. [PDF page rasterization](https://en.wikipedia.org/wiki/Rasterisation) at lower DPI settings is often acceptable for sharing, though not for archiving or printing at large scale. If you're scanning something new and know it needs to stay under 10 MB, scan at 150 to 200 DPI rather than 300 or 600. That choice at capture time saves you compression steps later.
