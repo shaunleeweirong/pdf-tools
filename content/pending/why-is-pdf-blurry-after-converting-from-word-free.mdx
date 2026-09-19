@@ -1,0 +1,99 @@
+---
+title: "Why Your PDF Looks Blurry After Converting from Word"
+description: "Word downsamples images before export, and Print to PDF adds another pass. Here's how to fix blurry PDFs from Word in two free settings changes."
+date: "2026-09-16"
+keywords:
+  - "why is pdf blurry after converting from word"
+  - "word to pdf blurry images"
+  - "word to pdf image quality"
+  - "pdf blurry text word"
+  - "fix blurry pdf from word"
+toolSlugs:
+  - "compress-pdf"
+  - "merge-pdf"
+faq:
+  - q: "Why do images look blurry in my Word-to-PDF?"
+    a: "Word downsamples images to 220 ppi by default when saving the .docx file, then applies a second compression pass during PDF export. The result is often noticeably softer than your original photo or logo."
+  - q: "Is Save As PDF better quality than Print to PDF?"
+    a: "Yes. Save As PDF (File > Save As > PDF) exports the document directly and preserves vector text and embedded fonts. Print to PDF routes content through a printer driver, which can rasterize parts of the layout and make text look blurry."
+  - q: "How do I stop Word from compressing images when I export to PDF?"
+    a: "Go to File > Options > Advanced > Image Size and Quality, then check 'Do not compress images in file.' For the export step, choose File > Save As > PDF and set quality to Standard rather than Minimum size."
+  - q: "Will running the PDF through a compressor make it sharper?"
+    a: "No. A PDF compressor rasterizes pages to JPEG, which turns vector text into a photograph of text. Only use a PDF compressor on scanned documents or photo-heavy files, not on text documents exported from Word."
+  - q: "What image resolution should I use in my Word document for a sharp PDF?"
+    a: "220 ppi is the minimum for a clear screen-only PDF. Use at least 300 ppi for anything you plan to print. Anything below 150 ppi will look soft or pixelated in the converted PDF."
+---
+
+If your PDF looks blurry after converting from Word, the cause is almost always image compression happening in two places before the file ever reaches you. Here's what's going on and how to stop it.
+
+## Why Word Makes Images Blurry in PDFs
+
+Word applies two separate compression steps when you save to PDF.
+
+The first happens inside the .docx file itself. By default, Word targets [220 ppi (pixels per inch)](https://support.microsoft.com/en-us/office/reduce-the-file-size-of-a-picture-in-microsoft-office-8db7211c-d958-457c-babd-194109eb9535) for every image you insert. Even if you placed a high-resolution photo at 600 ppi, Word quietly downsamples it to 220 ppi when you save the document. Most people never notice this step until they see it in the PDF.
+
+The second pass happens during export. If you pick "Minimum size" in the PDF export options, Word compresses images again. By the time the PDF is created, a crisp original photo can look quite soft.
+
+Text and vector graphics usually survive the conversion fine. The blurriness you see is almost always in photographs, screenshots, charts, and logos, not in body text or headings. If body text looks blurry rather than images, that's a different issue related to how you exported the file (see the next section).
+
+## Save As PDF vs Print to PDF
+
+Using "Print to PDF" tends to produce softer results than "File > Save As > PDF."
+
+The reason: printing routes your document through a virtual printer driver. Depending on the driver, it can rasterize parts of the layout, including vector text and embedded fonts, and turn them into low-resolution images. That's why body text sometimes looks blurry in Print-to-PDF output even when your document has no photos.
+
+"Save As PDF" keeps Word in control of the export. It preserves vector text and embeds fonts properly, so characters stay sharp at any zoom level. If you're currently using Print to PDF, switch to File > Save As and pick "PDF" from the format list. On most Windows machines this is under File > Save a Copy > PDF or Browse > change the file type dropdown to PDF.
+
+## How to Fix Blurry Images in Word Before Export
+
+This fix takes about two minutes and works on Windows and Mac.
+
+**On Windows:**
+
+1. Open the Word document with the blurry images.
+2. Go to **File > Options > Advanced**.
+3. Scroll down to **Image Size and Quality**.
+4. Check **Do not compress images in file**.
+5. Remove any images already in the document and re-insert them from their original high-resolution source files, because Word has already downsampled the copies that are there.
+
+**On Mac:**
+
+1. Go to **Word > Preferences > Edit**.
+2. Tick **Do not compress images in file**.
+3. Change the default resolution to **High fidelity** if the option is available.
+4. Re-insert any images that were already in the document.
+
+After making this change, new images you insert keep their original resolution.
+
+## Choosing the Right Export Quality
+
+When you go to File > Save As > PDF, click **Options** to see the quality presets:
+
+- **Standard (publishing online and printing)**: keeps images sharp, produces a larger file. Use this for anything shared by email, uploaded to a portal, or printed. [Gmail allows attachments up to 25 MB](https://support.google.com/mail/answer/6584), and most Word documents with good-quality images come in well under that.
+- **Minimum size (publishing online)**: compresses images heavily to reduce file size. Acceptable for quick internal sharing when sharpness doesn't matter.
+
+Pick Standard for anything where image quality is noticeable. If the resulting file is too large, deal with the file size separately rather than sacrificing quality.
+
+## Should You Compress the PDF Afterward?
+
+Only if your document is image-heavy or contains scanned pages.
+
+A [Compress PDF tool](/compress-pdf) works by rasterizing each page to a JPEG image. For a PDF full of photos or scans, this can cut file size significantly. For a text-heavy Word document, it does the opposite: a 23.5 KB text report grows to around 1.4 MB after compression, and every character turns from a crisp vector glyph into a fuzzy photo of a glyph.
+
+So the rule is straightforward: if the PDF came from a Word document with mostly text, tables, or vector charts, do not run it through a compressor. Fix the quality in Word's export settings instead. If the PDF has photos on most pages and the file is too large to send, a compressor can help.
+
+If you need to combine multiple Word-sourced PDFs before sending, the [Merge PDF tool](/merge-pdf) doesn't add bulk: a combined file comes in at roughly the sum of its parts, so merging won't push you over an email limit.
+
+## My PDF Looks Sharp on Screen but Blurry When Printed
+
+This is a resolution problem rather than a compression problem.
+
+Screen rendering uses 72 to 96 ppi, which means even a 150 ppi image looks fine on a monitor. Printing needs at least 300 ppi for clean, sharp output. An image that looks good on your screen can still be too low-resolution to hold up on paper.
+
+The only fix is to go back to the original image, ensure it's at least 300 ppi, and re-insert it in Word before exporting again. You can't recover resolution that was never there, so if you don't have the high-res original, the printed output will stay soft.
+
+## Does This Happen on New Versions of Word Too?
+
+Yes. The 220 ppi default is part of Microsoft's file-size management and hasn't changed across recent versions including Word 365 and the current Mac release. Turning off image compression has to be done manually, and the setting only applies to the document currently open. Open a new document and it reverts to the compressed default.
+
+If you regularly produce Word files with embedded photos, get in the habit of turning off compression before you start each document. It's a quick settings check that saves you the re-insertion step later.

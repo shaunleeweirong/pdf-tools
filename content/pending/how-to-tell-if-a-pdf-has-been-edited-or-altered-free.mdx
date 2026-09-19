@@ -1,0 +1,105 @@
+---
+title: "How to Tell if a PDF Has Been Edited or Altered"
+description: "Check a PDF's metadata for modification dates, compare it against the original, or look for a broken digital signature. Here's how to do it free."
+date: "2026-09-19"
+keywords: ["how to tell if a pdf has been edited", "how to check if pdf was altered", "pdf tampered", "pdf metadata modification date", "detect pdf changes free"]
+toolSlugs: ["edit-metadata", "compare-pdf", "protect-pdf"]
+faq:
+  - q: "Can you tell just by looking at a PDF whether it has been edited?"
+    a: "Not reliably. Careful edits blend into the document visually. You need to check the metadata, compare the file against a known original, or verify a digital signature."
+  - q: "Is a different modification date proof that a PDF was tampered with?"
+    a: "No, it's a clue, not proof. Any saved change updates the modification date, including adding a signature or filling a form. More importantly, the metadata itself can be rewritten by anyone with a PDF editor."
+  - q: "What is the most reliable free way to check for edits?"
+    a: "If you have the original file, a direct comparison is the most reliable approach. If not, check the metadata for anomalies such as an unfamiliar creating application, then look for a digital signature whose validity status you can verify."
+  - q: "How do digital signatures make tampering detectable?"
+    a: "A digital signature stores a cryptographic hash of the document at signing time. Any post-signing change produces a different hash, and a PDF reader such as Adobe Acrobat Reader reports the signature as invalid."
+  - q: "Can the Edit Metadata tool help me check a PDF?"
+    a: "Yes. It shows the raw metadata fields including creation date, modification date, author, and creating application, which are the same fields a forensic reviewer would inspect first."
+---
+
+Telling whether a **PDF has been edited or altered** comes down to three checks: reading the metadata, comparing the file against a trusted original, and verifying any digital signature. You can do all three for free, in a browser, without installing anything.
+
+## What PDF metadata tells you
+
+Every PDF stores a set of fields that describe how and when it was made. The useful ones for detecting edits are:
+
+- **Creation date**: when the file was first exported
+- **Modification date**: the last time any software wrote to the file
+- **Author**: the name stored in the application that created it
+- **Creating application**: for example, "Microsoft Word", "Adobe Acrobat", or "Preview"
+
+To read these in any PDF reader, press **Ctrl+D** on Windows or **Cmd+D** on macOS (or go to File > Properties). If the modification date is later than the creation date, something touched the file after it was first made.
+
+Our free [Edit Metadata tool](/edit-metadata) reads these same fields right in your browser. Upload the file and you'll see exactly what it reports about itself, with no sign-up required.
+
+That said, this is a clue, not proof. Anyone with a PDF editor can change the metadata. A sophisticated forgery can set the creation date to match the modification date, or simply clear both. A clean metadata check lowers suspicion; it does not rule out editing.
+
+## The creating-application field is often the real giveaway
+
+The software name is the most overlooked field. A bank statement that shows "Author: Adobe Acrobat Pro DC" in its metadata was not exported directly by the bank's system. Someone opened it in Acrobat and resaved it.
+
+Watch for mismatches like these:
+
+| Document type | What the metadata should say | Suspicious |
+|---|---|---|
+| Bank statement | Bank's internal reporting tool | Any PDF editor or Word |
+| Official payslip | HR or payroll platform | "Adobe Acrobat", "Word", "Preview" |
+| Legal certificate | Court or government software | Any consumer tool |
+| Original ID scan | Scanning app (e.g. NAPS2, your scanner) | An image editor |
+
+A third-party editor appearing in that field means the file was opened and resaved. That's not automatically fraud, but it's a reason to ask where the original came from.
+
+## How to compare two PDF versions
+
+If you have the original file, a direct comparison beats any metadata analysis.
+
+1. Open both PDFs side by side and read them carefully. For short documents this takes a few minutes.
+2. For longer files, use a comparison tool. Our [Compare PDF tool](/compare-pdf) highlights visual differences between the first pages of two uploaded files. Any changed text, image, or layout shows up immediately as highlighted pixels.
+
+For multi-page or text-level comparison, [Diffchecker's PDF diff](https://www.diffchecker.com/pdf-diff/) goes deeper and is free for occasional use. Adobe Acrobat Pro's compare feature is the most thorough but requires a paid subscription.
+
+The key step is sourcing a clean original. Download a fresh copy of a bank statement from your own online banking, or ask the issuer to resend the file directly. Comparing two versions when one of them might also be altered doesn't tell you much.
+
+## Digital signatures: the only built-in tamper-evidence
+
+Metadata and visual comparison are detective work after the fact. [Digital signatures](https://en.wikipedia.org/wiki/Digital_signature) are the only mechanism that makes editing detectable by design.
+
+When a PDF is digitally signed, the signing software computes a cryptographic hash of the document and stores it alongside the signer's certificate inside the file. Any change after signing, even a single byte, produces a different hash. When you open the file in a PDF reader such as the free [Adobe Acrobat Reader](https://get.adobe.com/reader/), it recomputes the hash and compares it to the stored value. If they differ, the reader shows a prominent warning: "Signature is invalid" or "Document has been modified since it was signed."
+
+No hash mismatch, no silent forgery. That's the guarantee. Metadata can be rewritten by anyone; a valid cryptographic signature cannot be faked without the signer's private key.
+
+Practical check: open the PDF in Acrobat Reader and look at the left-hand Signatures panel. A green checkmark means the signature is intact. A yellow warning or red cross means the file changed after signing.
+
+## How to protect your own PDFs so edits become obvious
+
+If you're the sender and want changes to be detectable:
+
+1. **Apply a digital signature before sending.** Once signed, any modification breaks the signature and the reader will say so.
+2. **Encrypt with a password.** Our [Protect PDF tool](/protect-pdf) adds AES-256 encryption in your browser. The file never leaves your machine, and the encrypted file can't be opened, let alone edited, without the password.
+3. **Share a file hash alongside the document.** On macOS or Linux, run `shasum -a 256 yourfile.pdf` to get a 64-character fingerprint. If the hash the recipient computes matches yours, the file is identical. A single changed byte produces a completely different hash.
+
+## What you can and cannot determine without specialist software
+
+To set realistic expectations:
+
+**You can check for free:**
+- A modification date that's later than the creation date (weak signal, easy)
+- A creating-application name that doesn't match the document's supposed source (weak-to-medium signal, free)
+- Visual differences if you have a trusted original (strong signal, free)
+- A broken digital signature in any free PDF reader (strong signal, free)
+
+**You cannot determine without specialist tools:**
+- Whether a PDF with no digital signature and plausible metadata was altered
+- Exactly what was changed, only that the file hash changed
+- Whether a printed-and-rescanned document was doctored (scanning creates a new file with fresh metadata)
+
+For a legal dispute or formal fraud investigation, a certified forensic document examiner can perform pixel-level analysis on embedded images and inspect the raw PDF object graph for signs of incremental updates or overwritten objects. For everyday checks, the methods above cover most situations.
+
+## Step-by-step checklist
+
+1. Open the PDF and press **Ctrl+D** / **Cmd+D**. Note the creation date, modification date, and creating application.
+2. Use the [Edit Metadata tool](/edit-metadata) to read the same fields in your browser if you want a second look.
+3. Check whether the creating application makes sense for the document's claimed source.
+4. If you have the original, run both files through the [Compare PDF tool](/compare-pdf) and look for highlighted differences.
+5. Open the Signatures panel in Acrobat Reader. Check whether a valid signature is present and intact.
+6. If the document is financial or legal and something looks off, don't rely on free tools alone. Contact the issuing organization directly and request a verified re-issue.

@@ -1,0 +1,112 @@
+---
+title: "Should You Flatten a PDF Before or After Signing?"
+description: "Sign first, then flatten for submission. But flatten before you merge. Here's the correct order for every common scenario, and why the wrong sequence loses data."
+date: "2026-09-17"
+keywords:
+  - "should i flatten pdf before or after signing"
+  - "flatten pdf before signing"
+  - "flatten pdf after signing"
+  - "when to flatten a pdf form"
+  - "flatten before merging pdf"
+toolSlugs:
+  - "flatten-pdf"
+  - "merge-pdf"
+faq:
+  - q: "Does flattening a PDF remove the signature?"
+    a: "Flattening converts a signature to static image content on the page. The signature looks the same on screen but any cryptographic verification data is gone. Sign first and confirm all parties are done before you flatten."
+  - q: "Can I edit a PDF after flattening it?"
+    a: "No. Flattening permanently bakes all form fields, annotations, and layers into the page. There is no undo, so keep a copy of the original if you may need to make corrections later."
+  - q: "Do I need to flatten before merging PDFs?"
+    a: "Yes, if your PDF contains filled form fields. Merging strips the interactive form structure from the output. Flatten the form first so the values are baked into the page before you merge."
+  - q: "What happens if I merge a filled form without flattening first?"
+    a: "The form fields are removed from the merged output. Whether the typed values remain visible afterward is not guaranteed. To be certain the data survives, flatten before merging."
+  - q: "Do courts require flattened PDFs?"
+    a: "Many do. Several U.S. federal district courts explicitly require flattened PDFs for e-filing, including documents signed with tools like DocuSign. Check the filing instructions for the specific court or portal."
+---
+
+For most people, the correct sequence is: **fill the form, sign it, then flatten it before you send it**. The one exception is merging, where you flatten before you combine rather than after. Getting the order wrong can cost you the signature, the field data, or both.
+
+## What does flattening a PDF actually do?
+
+A PDF stores interactive content as separate layers sitting on top of the page. Form fields, text annotations, signature widgets, and checkboxes all live in this layer. [Flattening](https://www.adobe.com/au/acrobat/roc/blog/how-to-flatten-a-pdf.html) merges those layers into the page content itself, converting everything to static ink. The document looks identical, but there are no more interactive elements. You cannot click into a text field, check a box, or verify a cryptographic signature once the file has been flattened.
+
+Think of it like writing on a printout and scanning it back in. The content is on the page now, and no program can reach back into it to extract the original structure. That permanence is exactly what submission systems, courts, and archive workflows depend on.
+
+## The right order for signing: sign first, then flatten
+
+If you are signing a form yourself or collecting a signature from someone else, sign first. Here is why.
+
+A digital signature in a PDF is a cryptographic record created at the moment of signing. It ties the signer's identity to the document content at that exact state. If you flatten the document first, the signature field disappears and no cryptographic record is ever made. If you flatten after signing but while verification is still needed, you wipe the verification data.
+
+Even for simpler e-signatures (a drawn signature image, or a typed name) the same principle applies. The signing step adds the signature as an annotation or form field. Flattening after captures it permanently. Flattening before means there is nothing to sign into.
+
+[Adobe's documentation on digital signatures and flattening](https://community.adobe.com/questions-9/digital-signatures-and-flattening-1253904) notes that Acrobat will not let you flatten a document that already carries a certified digital signature, because the signature field is locked once signed. For platform-based e-signatures from tools like DocuSign, the process is different: the signature is embedded in the document when you download the completed copy, and you then flatten that copy before uploading to a court filing system or other portal.
+
+The sequence for filling and signing a PDF:
+
+1. Open the form.
+2. Fill in all the fields.
+3. Add your signature.
+4. Check with the other party that they are done (if a co-signer is needed).
+5. Flatten the document using our [Flatten PDF tool](/flatten-pdf).
+6. Send or upload the flattened copy.
+
+Keep the pre-flattened version. If you discover an error, you will need to start over from the original editable copy.
+
+## Flatten before merging, not after
+
+Here is where people most often run into problems. When you merge two PDFs, the interactive form layer is stripped from the output. This happens because copying pages between PDF documents does not carry across the form field structure (the AcroForm dictionary) that underlies the fields.
+
+We tested this with our [Merge PDF](/merge-pdf) tool: a PDF with one filled text field showed zero form fields in the merged result. The page count was correct, but the field structure was gone. Whether the typed value remains visible afterward as static content is not something we have confirmed across all cases, so the safe assumption is that the data is at risk.
+
+The fix is straightforward: flatten every filled form before you merge. Once the values are baked into the page, they travel through the merge safely. So for this scenario the order is:
+
+1. Fill out the form.
+2. Add any signatures.
+3. Flatten the filled form.
+4. Merge it with the other documents.
+
+Note that when merging a document that you want to sign after combining, you would flatten the already-signed output as the final step, not beforehand. The general rule still holds: sign before flattening, flatten before submitting.
+
+If you need more detail on the merging side of this, the post on [whether you need to flatten before merging](/blog/do-i-need-to-flatten-pdf-before-merging) covers form field conflicts and identical field names in more depth.
+
+## Court filings and official submission portals
+
+Courts and government portals frequently require flattened PDFs, and their systems can reject or corrupt forms that still carry live interactive fields. [The U.S. District Court for the District of Arizona](https://www.azd.uscourts.gov/news/notice-re-flattening-pdf-fillable-forms) published an explicit notice: fillable PDF forms must be flattened before e-filing, and documents signed via DocuSign must be flattened before upload to the CM/ECF system. Other federal courts have similar requirements.
+
+The reasoning is practical. E-filing systems process documents automatically, and a live form field can behave differently depending on the PDF viewer rendering it. A flattened document is just pages of static content, which processes consistently.
+
+If you are submitting to any of the following, check the instructions and flatten if in doubt:
+
+- Federal or state court e-filing systems
+- USCIS immigration forms
+- Scholarship or grant application portals
+- Insurance claim upload systems
+- Mortgage and real estate document platforms
+
+If the instructions say "flatten the document" or "print to PDF before uploading," those mean the same thing. Our [Flatten PDF tool](/flatten-pdf) handles this without any software installation.
+
+## When you should not flatten
+
+Not every PDF should be flattened. Avoid it in these situations:
+
+**Another person still needs to sign.** If a co-signer or reviewer needs to add their signature using a proper signature field, flattening before they sign removes the field they would use. Send the unflatted version to them and flatten the final completed copy.
+
+**You are not done filling in the form.** Flattening is permanent. If you flatten mid-way through filling out a multi-page form, you cannot go back to fix anything. Finish all fields first.
+
+**The recipient needs fillable fields.** If you are sending a template for someone else to complete, they need the interactive version. Sending a flattened copy means they have to type over a flat image, which most tools cannot do cleanly.
+
+**You might need to reissue.** Job application forms, grant proposals, and legal documents sometimes need corrections after submission is rejected. Keep the editable original in a folder somewhere safe and work from that if you need a revised version.
+
+## How to flatten a PDF (quick steps)
+
+The fastest way to flatten without installing anything:
+
+1. Open the [Flatten PDF tool](/flatten-pdf).
+2. Drop in your PDF. The tool runs in your browser; the file does not leave your device.
+3. Download the flattened copy.
+4. Open the downloaded file and confirm you cannot click into any text boxes. If the fields are still clickable, the flatten did not apply, and you should try again with the original file.
+
+If you are heading to a merge next, take the flattened output straight to [Merge PDF](/merge-pdf). If you are submitting to a court or portal, upload the flattened copy directly.
+
+One final note: some PDF tools flatten as part of their print-to-PDF workflow. If you go to File, Print and choose a PDF printer (like Microsoft Print to PDF on Windows, or the PDF export in macOS), the output is usually already flattened. That is a valid approach if you do not need precise control over the output, though a dedicated flatten tool gives you a cleaner result with less chance of resampling images.

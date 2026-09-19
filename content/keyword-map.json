@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13",
+  "updated": "2026-09-19",
   "note": "Topic backlog for the content engine. Statuses: idea -> researching -> briefed -> drafting -> pending -> published; plus changes-requested (with feedback) and rejected. content-research fills briefs; content-draft advances to pending; the Content Studio dashboard approves (-> published) / rejects / requests changes. One unique targetQuery per topic (dedup against published).",
   "topics": [
     {
@@ -2995,7 +2995,8 @@
       "targetQuery": "why is pdf blurry after converting from word free",
       "intent": "informational",
       "priority": 3,
-      "status": "idea"
+      "status": "pending",
+      "slug": "why-is-pdf-blurry-after-converting-from-word-free"
     },
     {
       "id": "blog-online-pdf-safety",
@@ -3012,7 +3013,8 @@
       "targetQuery": "how to print a pdf from iphone free",
       "intent": "informational",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-print-a-pdf-from-iphone-free"
     },
     {
       "id": "blog-print-from-android",
@@ -3020,7 +3022,8 @@
       "targetQuery": "how to print a pdf from android free",
       "intent": "informational",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-print-a-pdf-from-android-free"
     },
     {
       "id": "blog-merge-in-chrome",
@@ -3028,7 +3031,8 @@
       "targetQuery": "how to merge pdf in google chrome free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-merge-pdf-in-google-chrome-free"
     },
     {
       "id": "blog-best-pdf-engineers",
@@ -3036,7 +3040,8 @@
       "targetQuery": "best free pdf tools for engineers no sign up",
       "intent": "commercial",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "best-free-pdf-tools-for-engineers-no-sign-up"
     },
     {
       "id": "blog-protect-pdf-windows",
@@ -3044,7 +3049,8 @@
       "targetQuery": "how to password protect a pdf on windows 10 free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-password-protect-a-pdf-on-windows-10-free"
     },
     {
       "id": "blog-pdf-accessibility-check",
