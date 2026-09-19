@@ -3209,7 +3209,8 @@
       "targetQuery": "how to send pdf via text message on iphone free",
       "intent": "transactional",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-send-pdf-via-text-message-on-iphone-free"
     }
   ]
 }
