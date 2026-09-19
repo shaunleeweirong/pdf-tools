@@ -3228,7 +3228,8 @@
       "targetQuery": "how to flatten a pdf on chromebook free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-flatten-a-pdf-on-chromebook-free"
     },
     {
       "id": "blog-compress-to-10mb",
