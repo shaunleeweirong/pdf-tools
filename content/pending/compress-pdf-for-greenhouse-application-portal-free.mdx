@@ -1,0 +1,74 @@
+---
+title: "Compress PDF for Greenhouse Applications Free"
+description: "Greenhouse can't parse resumes over 2.5 MB. Learn when to compress, when not to, and how to get your PDF through the portal every time."
+date: "2026-09-20"
+keywords: ["compress pdf for greenhouse", "greenhouse application pdf too large", "greenhouse pdf size limit", "compress resume pdf free", "greenhouse ats file size"]
+toolSlugs: ["compress-pdf", "delete-pages", "split-pdf"]
+faq:
+  - q: "What is Greenhouse's file size limit for resumes?"
+    a: "Greenhouse can't parse resumes or CVs larger than 2.5 MB. Candidates can upload files up to 50 MB, but the resume parser fails above 2.5 MB, so the recruiter sees an empty profile rather than your qualifications."
+  - q: "Does compressing a PDF make it look worse?"
+    a: "It can, depending on what's in the file. Our tool rasterizes every page to JPEG, which works well for image-heavy or scanned PDFs but makes text-only PDFs larger, not smaller. Check what type your PDF is before compressing."
+  - q: "What if my resume is text-based but still too large for Greenhouse?"
+    a: "The problem is almost always an embedded headshot, high-res logo, or blank pages. Remove or resize the image in your source document, delete blank pages with the Delete Pages tool, or split a combined portfolio into separate files."
+  - q: "Will compressing twice get the file smaller?"
+    a: "No. Running a second pass at the same level makes the file bigger, not smaller. If Medium didn't get you under 2.5 MB, go back to the original and try High. Never chain passes."
+  - q: "Can I upload a Word doc to Greenhouse instead of a PDF?"
+    a: "Yes, Greenhouse accepts .doc and .docx files, which are often smaller than PDFs with the same content. If your text resume is still in Word, upload it directly rather than converting to PDF first."
+---
+
+Compressing a PDF for Greenhouse is straightforward if your document is image-heavy or scanned. The portal's file size limit for resume parsing is 2.5 MB, and exceeding it means recruiters see a blank profile rather than your qualifications. Here's how to fix it.
+
+## Why Greenhouse rejects PDFs over 2.5 MB
+
+Greenhouse, an [applicant tracking system](https://en.wikipedia.org/wiki/Applicant_tracking_system) used by thousands of hiring teams, runs candidates' uploaded files through an automated resume parser. According to [Greenhouse's official support documentation](https://support.greenhouse.io/hc/en-us/articles/360052218132), the parser can't handle resumes larger than 2.5 MB. Candidates can technically upload up to 50 MB, so the portal won't reject your file outright. The problem is quieter than that: the file arrives, the recruiter opens the candidate profile, and the skills and experience sections are empty.
+
+Most well-made text resumes sit well below this threshold, typically 50 to 300 KB. If your PDF is over 2.5 MB, something specific is inflating it.
+
+## What makes a resume PDF so large
+
+Before you do anything, it helps to know what's driving the size. The most common causes:
+
+- **An embedded headshot or high-resolution logo.** A single 3 to 4 MB photo embedded on page one will push the whole file past the limit, even if the rest of the document is minimal text.
+- **Scanned pages.** If you printed, signed, then scanned your resume, each page is now a photograph. A four-page document scanned at 300 DPI can reach 5 to 10 MB with no compression at all.
+- **Font bloat.** Some design tools (particularly older versions of InDesign or Illustrator) embed every glyph from every font used, even for fonts that appear just once in a footnote. The PDF carries kilobytes of font data per page.
+
+Knowing which applies to you tells you the right fix.
+
+## When compression helps and when it doesn't
+
+Our [Compress PDF tool](/compress-pdf) rasterizes every page to JPEG. That's the right move for scanned documents and image-heavy files, and exactly the wrong move for text-only resumes.
+
+Real numbers from our own testing: a 913.4 KB image deck compressed to 315.3 KB at Medium quality, a 65.5% reduction. The same tool turned a 20-page text report from 23.5 KB into 1.4 MB. Text stored as vector glyphs is tiny. Text stored as a photograph of itself is not.
+
+**Compress if your PDF is** scanned, has photos or graphics across most pages, or is a portfolio of screenshots and design work.
+
+**Don't compress if your PDF is** a text resume or cover letter made in Word, Google Docs, Canva, or any tool where the text is real text (not a scan of text). Compression will make it larger.
+
+## How to tell which type you have
+
+Open the PDF and zoom in to 300% on a paragraph of body text. If the letters stay sharp and clean at any zoom level, it's a text-based PDF. If they look blocky or fuzzy at high zoom, the pages are rasterized (scanned or saved as images).
+
+## Compressing a scanned or image-heavy resume
+
+1. Open the [Compress PDF tool](/compress-pdf). Your file is processed entirely in your browser and never uploaded to a server.
+2. Drop in your PDF.
+3. Select **Medium** quality first. For a typical scanned resume, Medium brings the file to roughly a third of its original size.
+4. Download the result and check that body text and your contact details are still clearly legible.
+5. If Medium didn't get you under 2.5 MB, go back to the original file and try **High** quality. Starting from the already-compressed file won't help: a second pass at Medium nearly doubles the size of an already-rasterized document, and a second pass at High only claws back about 5% while hurting readability. Always start from the original.
+
+## Fixing a text resume that's too large
+
+If zooming in shows crisp text, the document is text-based and compression won't help. Here's what will.
+
+**Remove or resize the headshot.** Open the source file in Word or Google Docs, select the image, and reduce its resolution or swap it for a version that's 150 KB or smaller before you export to PDF. If the role doesn't require a photo, removing it entirely is the fastest fix.
+
+**Delete blank or extra pages.** Use the [Delete Pages tool](/delete-pages) to strip out any blank pages, filler sheets, or back matter that ended up in the final export.
+
+**Split a combined document.** If you merged your resume, cover letter, and portfolio into one PDF, consider splitting them out with the [Split PDF tool](/split-pdf) and uploading each piece separately. Most Greenhouse job applications let you attach multiple files.
+
+**Re-export with lower image quality.** If your text resume contains a company logo or headshot that you can't remove, open the source file and reduce the image quality setting when exporting to PDF. In Word, this is under Options when saving as PDF.
+
+## Other platforms with similar limits
+
+Greenhouse isn't unusual here. Most ATS platforms set parsing limits somewhere between 2 and 10 MB. [Indeed](https://support.indeed.com/hc/en-us) and Workday both parse resumes under 5 MB for most configurations. If you're applying broadly, keeping your resume PDF under 1 MB gives you room across all of them without thinking about each portal's specific limit.
