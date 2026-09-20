@@ -1,0 +1,85 @@
+---
+title: "How to Crop PDF Pages on iPhone Free"
+description: "Crop PDF pages on your iPhone for free using the built-in Markup tool or a no-download browser tool. Works on any iPhone without sign-up."
+date: "2026-09-20"
+keywords: ["how to crop pdf pages on iphone free", "crop pdf iphone", "trim pdf margins iphone", "crop pdf ios free", "crop pdf without app iphone"]
+toolSlugs: ["crop-pdf"]
+faq:
+  - q: "Does iPhone have a built-in PDF cropper?"
+    a: "Yes, on iOS 16 and later. Open the PDF, tap the share icon and choose Markup, go to the page you want, tap the crop button, drag the blue handles, then tap Crop. Tap Done to save."
+  - q: "Can I crop a PDF on iPhone without downloading an app?"
+    a: "Yes. Open the Crop PDF tool in Safari, upload your PDF, set the margins you want to trim, and download the result. No app, no account needed."
+  - q: "Does cropping a PDF reduce file size?"
+    a: "Usually not much. Cropping sets a new visible page area in the file rather than deleting content, so the underlying data stays. File size changes are minimal. Use a compression tool for image-heavy PDFs if you need a smaller file."
+  - q: "What is the difference between cropping and splitting a PDF?"
+    a: "Cropping trims the visible margins on each page. Splitting breaks one PDF into multiple files by page range. They are unrelated operations."
+  - q: "Can I crop just one page of a PDF on iPhone?"
+    a: "Yes, with the built-in Markup tool, which crops one page at a time. Browser-based tools typically apply the same margins to every page in one pass, which is faster when you want uniform margins throughout."
+---
+
+You can crop PDF pages on your iPhone for free without buying any app. There are two paths: Apple's built-in PDF editing in newer iOS, and a browser-based tool that runs in Safari on any iPhone.
+
+## Use iPhone's built-in Markup to crop a PDF
+
+[Apple added PDF page editing to iPhone in iOS 16](https://support.apple.com/guide/iphone/add-delete-rotate-move-or-crop-pdf-pages-iphbf4977cff/ios), and page cropping is part of it. If you're on iOS 16 or later (check under Settings > General > About), you don't need to download anything.
+
+1. Open the PDF. Tap it in Files or in Mail. If editing tools don't appear right away, tap the share icon and choose **Markup**.
+2. Scroll to the page you want to crop.
+3. Tap the **Crop** button (it looks like two overlapping corner brackets). Blue handles appear at the edges of the page.
+4. Drag the handles inward to the area you want to keep. Content outside your selection will be hidden.
+5. Tap **Crop** to confirm. The button appears inside the selected region or at the top right of the screen.
+6. Tap **Done** and save. iOS will ask whether to replace the original or save a copy. Saving a copy first is a safe habit until you've confirmed the result looks right.
+
+Repeat for each page you want to crop. The built-in tool goes one page at a time.
+
+One thing to be aware of: the Markup cropper sets a new visible page area rather than permanently removing the content outside it. Most PDF viewers will respect this and show only the cropped region. A small number of apps will reveal the original full-page data. If you're cropping to remove something sensitive, a dedicated tool that hard-writes the new page dimensions is the safer choice.
+
+## Use a browser-based cropper in Safari
+
+If you're on iOS 15 or earlier, or you want to crop every page to the same margins in one pass, a web-based tool is faster.
+
+1. Open Safari and go to the [Crop PDF tool](/crop-pdf).
+2. Tap **Choose file** and pick your PDF from Files, iCloud Drive, or Photos.
+3. Adjust the crop margins. You can drag the handles or type exact values for each edge: top, right, bottom, left.
+4. Tap **Crop**. Processing happens entirely in your browser. Your PDF doesn't leave your device.
+5. Tap **Download** to save the cropped file.
+
+No account, no server upload. The file stays local from start to finish.
+
+## What cropping does inside a PDF
+
+[A PDF stores several "page box" types](https://en.wikipedia.org/wiki/PDF) in its structure: the media box (the full physical page), the crop box (what viewers display by default), the trim box (the intended printed area), and others. When you crop a PDF, most tools write a new crop box value. PDF viewers display the crop box by default, so the result looks correct in nearly every reader.
+
+Because cropping only updates a page box definition rather than re-rendering anything, it's a lightweight edit. It doesn't change fonts, re-compress embedded images, or rebuild the page structure. File size changes are minimal as a result.
+
+If you need to reduce file size, that's a separate job. The [Compress PDF tool](/compress-pdf) works by rasterizing each page to JPEG, which cuts file size well on scanned documents and photo-heavy PDFs. Don't use it on text-only PDFs though: rasterizing converts vector text into an image, and that image is much larger. A 20-page text report that starts at 23 KB can reach 1.4 MB after compression.
+
+## Common reasons to crop a PDF on iPhone
+
+**Scanned documents with dark borders.** Flatbed scanners often leave a black or grey border around the page. Cropping removes it before you share the file.
+
+**Reading on a small screen.** Textbook scans and research papers often have large white margins. Cropping to the text block makes the content fill your phone screen, which is much easier to read.
+
+**Removing headers or footers.** Some PDFs carry large header or footer bands that aren't needed when you're sharing a specific excerpt. Cropping trims them without touching the main content.
+
+**Consistent pages before merging.** If you're combining PDFs from different sources that have different margins, cropping each file to a common trim first produces a cleaner final document when you [merge them](/merge-pdf).
+
+## Which tool to use for each job
+
+| Goal | Best tool |
+|---|---|
+| Remove white margins or borders | [Crop PDF](/crop-pdf) |
+| Keep only selected pages | [Extract Pages](/extract-pages) |
+| Break into separate files | [Split PDF](/split-pdf) |
+| Shrink a scan or image-heavy PDF | [Compress PDF](/compress-pdf) |
+| Combine multiple files into one | [Merge PDF](/merge-pdf) |
+
+## Practical tips
+
+**Zoom in while adjusting handles.** Precise drags are tricky on a small screen. Pinch to zoom in on the page first, then drag the crop boundary where you want it.
+
+**Save a copy before you start.** Cropping changes the file structure and isn't always reversible without the original. Keep the original until you've confirmed the cropped version looks right.
+
+**Same crop across all pages.** If you scanned a stack of documents at the same settings, they'll all have the same border widths. The browser tool applies the same margins to every page in one pass, which is much faster than going page by page in Markup.
+
+**Check in a second viewer.** After downloading the cropped PDF, open it in another app, such as the built-in Files viewer, to confirm the page boundaries look correct before you send it.
