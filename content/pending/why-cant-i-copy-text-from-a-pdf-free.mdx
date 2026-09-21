@@ -1,0 +1,81 @@
+---
+title: "Why Can't I Copy Text From a PDF?"
+description: "Three reasons PDF text won't copy and how to fix each one: scanned files, copy restrictions, and encrypted PDFs explained."
+date: "2026-09-21"
+keywords: ["why can't i copy text from a pdf", "pdf copy text not working", "pdf copy restricted", "can't copy paste from pdf", "pdf text greyed out"]
+toolSlugs: ["unlock-pdf", "pdf-to-jpg"]
+faq:
+  - q: "Why does my PDF let me highlight text but not copy it?"
+    a: "This usually means the PDF has copy restrictions set by its creator. The document is open, but permissions block copying. If you know the owner password, removing those restrictions with a PDF tool clears the block."
+  - q: "Can I copy text from a scanned PDF?"
+    a: "Not directly. Scanned PDFs store each page as an image, so there are no characters to select. You need OCR (optical character recognition) software to extract the text first."
+  - q: "How do I tell if my PDF is scanned or has copy restrictions?"
+    a: "Try clicking on the page: if you can't place a cursor at all, the PDF is image-based. If you can highlight but copying produces nothing or garbled characters, it's most likely a permissions issue."
+  - q: "Does removing a PDF password also remove copy restrictions?"
+    a: "Sometimes. PDFs that open freely but restrict actions use an owner password to lock permissions. Removing that password clears the restrictions. Fully encrypted PDFs need the correct password entered first before anything else works."
+  - q: "What should I do if text copies as garbled symbols?"
+    a: "Garbled output usually points to a broken or custom font encoding in the PDF. Try printing the file to a new PDF using your OS's Print to PDF feature. That re-renders the page and often produces cleaner text."
+---
+
+## Why PDF text copying fails
+
+If you can't copy text from a PDF, the problem is almost always one of three things: the PDF stores pages as images instead of text, copy permissions are restricted by the file's creator, or the file is encrypted and requires a password. Each cause looks similar on the surface but needs a different fix.
+
+## The most common cause: the PDF is an image file
+
+When someone scans a paper document and saves it as a PDF, what ends up in the file is a photograph of the page, not the text itself. The [PDF format](https://en.wikipedia.org/wiki/PDF) supports two ways to store page content: as actual text characters with position data, or as raster images. Scanned PDFs use the second method.
+
+You can open the file, scroll, zoom, and print it, but there's nothing to select because the viewer doesn't see characters. It sees pixels that look like letters.
+
+How to tell: click anywhere on the page. If you can't place a text cursor or drag to highlight words, the PDF is image-based. In most PDF readers, the cursor stays as an arrow or a hand rather than switching to the text selection tool.
+
+The fix is OCR (optical character recognition), which reads the image and produces selectable, copyable text. A few free options: open the PDF in Google Drive, right-click it, and choose "Open with Google Docs." Google will run OCR automatically. Adobe Acrobat also does this if you have access to it. Neither option sends files to a third party unnecessarily if privacy matters to you.
+
+Our tools don't currently perform OCR, so I'll be direct: if your PDF is scanned, you'll need a different tool for this step.
+
+## The second cause: copy permissions are restricted
+
+Some PDFs are set to allow reading but block copying, printing, or editing. Creators apply these restrictions using permission flags defined by the [ISO 32000 PDF specification](https://pdfa.org/resource/pdf-specification-index/). The document doesn't require a password to open, but the reader is supposed to honour the restrictions.
+
+You'll notice this when:
+- You can drag to highlight text
+- Ctrl+C or right-click > Copy does nothing, or produces nothing when you paste
+- The copy option is greyed out in your reader
+- Your reader's Document Properties or Security tab says "Content Copying: Not Allowed"
+
+If you know the owner password, our [Unlock PDF tool](/unlock-pdf) can remove it. The process runs entirely in your browser, so your file doesn't leave your device. Once the password is removed and restrictions are cleared, copying works normally.
+
+If you don't know the password, you'll need to ask whoever sent the file. The PDF specification includes no recovery path for owner passwords, so there's no workaround to offer here.
+
+## The third cause: the entire file is encrypted
+
+A fully encrypted PDF won't open without a user password. This is different from permission restrictions. With full encryption, the file content itself is scrambled using [AES-256](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) or an older cipher, and nothing is readable until you supply the correct key.
+
+Once you enter the correct password and open the file, copying should work normally unless the creator also layered permission restrictions on top. If you get the file open and copying still fails, check Document Properties for permission flags.
+
+If you've received a PDF you can't open and you don't have the password, there is no practical way to access it. That's the point of encryption. You'll need to contact the sender.
+
+## Less common causes: garbled characters and path-based text
+
+**Garbled output.** If copying produces symbols like ☐✓■ or a string of random characters, the PDF was probably exported from design or layout software using a custom or subsetted font that lacks proper Unicode mapping tables. The viewer can render the text on screen but can't translate the glyphs back to readable characters.
+
+The usual workaround: print the file to a new PDF using your operating system's built-in Print to PDF feature. This re-renders every page through a different code path and often produces a version with clean, copyable text. It's not guaranteed, but it works often enough to try first.
+
+**Text converted to vector paths.** Some PDFs, especially those created in Illustrator or InDesign with the "Outline Text" option, convert characters into shapes. The shapes look like letters but are just paths. There is no text layer to copy. If you have access to the original source file, the fix is to re-export without outlining. Otherwise, the only option is OCR, which will treat it as an image.
+
+## A quick diagnostic for each case
+
+1. Click on the page. If nothing selects, it's an image PDF.
+2. If you can select text but copying produces nothing, check your reader's security panel. "Content Copying: Not Allowed" confirms a permissions issue.
+3. If text copies but pastes as symbols, it's a font encoding problem.
+4. If the file won't open at all, it's fully encrypted and needs the password.
+
+## What to do based on your situation
+
+- **Image/scanned PDF:** use Google Drive (open with Docs) or any OCR tool to extract the text first.
+- **Permissions restricted:** try [Unlock PDF](/unlock-pdf) with the owner password to strip the restrictions.
+- **Encrypted PDF:** enter the correct password, then try copying. If copying still fails after opening, run the file through [Unlock PDF](/unlock-pdf) to remove the layered permission flags.
+- **Garbled characters:** print to PDF from your current reader and try again.
+- **Text converted to paths:** re-export from the source file without outlining, or run OCR on the PDF.
+
+If you need the pages as images to work with in another application, our [PDF to JPG tool](/pdf-to-jpg) converts each page to a separate image file. That won't give you selectable text, but it's useful if the goal is to embed a page somewhere rather than extract content from it.
