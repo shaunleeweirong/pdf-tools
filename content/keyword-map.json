@@ -3300,7 +3300,8 @@
       "targetQuery": "digital signature vs electronic signature pdf difference",
       "intent": "informational",
       "priority": 1,
-      "status": "idea"
+      "status": "pending",
+      "slug": "digital-signature-vs-electronic-signature-pdf"
     },
     {
       "id": "blog-add-multiple-sigs",

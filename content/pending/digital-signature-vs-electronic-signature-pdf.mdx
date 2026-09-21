@@ -1,0 +1,98 @@
+---
+title: "Digital Signature vs Electronic Signature in a PDF"
+description: "The terms get mixed up constantly. Here's what each one actually means, which is legally valid, and when a drawn signature is enough."
+date: "2026-09-21"
+keywords: ["digital signature vs electronic signature pdf", "electronic signature pdf", "digital signature pdf", "e-signature vs digital signature", "how to sign a pdf free"]
+toolSlugs: ["sign-pdf", "flatten-pdf", "protect-pdf"]
+faq:
+  - q: "Is an electronic signature on a PDF legally binding?"
+    a: "Yes, for most purposes. The US ESIGN Act (2000) gives electronic signatures the same legal weight as handwritten signatures for most commercial contracts. The EU's eIDAS Regulation covers the same ground for European transactions."
+  - q: "What is the difference between a digital signature and an electronic signature?"
+    a: "An electronic signature is any electronic mark showing intent to sign: a drawn signature, a typed name, or a checkbox. A digital signature is a specific kind that uses PKI cryptography to verify who signed and detect any changes to the document afterward."
+  - q: "When do I need a digital signature instead of an electronic signature?"
+    a: "For most contracts, NDAs, and routine documents, an electronic signature is enough. Cryptographic digital signatures are typically required for regulated industries, certain EU transactions requiring Qualified Electronic Signatures (QES), or documents where tamper-evidence must be independently provable."
+  - q: "Is a drawn PDF signature legally valid in court?"
+    a: "In most cases, yes. Courts in the US and EU regularly uphold drawn electronic signatures. What matters is intent to sign and an audit trail, not whether you used cryptography."
+  - q: "Does a digital signature stop someone from editing a PDF?"
+    a: "No, but it detects changes. If anyone edits the file after signing, the cryptographic hash no longer matches and PDF viewers flag the signature as invalid."
+---
+
+The difference between a digital signature and an electronic signature in a PDF comes down to one thing: cryptography. An electronic signature shows intent. A digital signature adds a mathematical proof of who signed and whether the document has changed since. Both are legally valid in most countries. The question is which one your situation actually requires.
+
+## What is an electronic signature in a PDF?
+
+An electronic signature is any electronic mark that shows you agree to or accept a document. That includes drawing your signature with a mouse or touchscreen, typing your name, checking an "I agree" box, or inserting a scanned image of your handwritten signature.
+
+When you use the [Sign PDF tool](/sign-pdf), you draw your signature and it gets placed directly on the page. That's an electronic signature. It looks like a real signature, it communicates intent, and it's treated as legally binding in most countries.
+
+The [US ESIGN Act](https://www.ftc.gov/tips-advice/business-center/guidance/electronic-signatures-global-and-national-commerce-act), signed in 2000, gives electronic signatures the same legal standing as handwritten ones for most commercial transactions. The EU's [eIDAS Regulation](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation), in effect since 2016, does the same across EU member states. So for a lease, an NDA, a freelance contract, or an internal approval form, a drawn electronic signature is almost always sufficient.
+
+What an electronic signature doesn't do on its own: it doesn't prove the file hasn't been altered after you signed it.
+
+## What is a digital signature in a PDF?
+
+A digital signature is a specific type of electronic signature that uses [public key infrastructure (PKI)](https://csrc.nist.gov/glossary/term/public_key_infrastructure) cryptography. Here is what happens when you apply one:
+
+1. The signing software creates a unique mathematical fingerprint (called a hash) of the entire document at the moment of signing.
+2. That hash is encrypted using your private key, which is tied to a certificate issued by a trusted Certificate Authority.
+3. The encrypted hash and your certificate get embedded into the PDF file.
+
+When someone opens the signed PDF later, their viewer decrypts the hash using your public key and checks it against the current document. If they match, the signature is valid. If anything in the file was changed after signing, even a single character, the hashes don't match and the signature appears as invalid or tampered.
+
+This tamper-detection capability is what distinguishes a cryptographic digital signature from a drawn one. PDF viewers like Adobe Acrobat Reader show a dedicated "Signatures" panel for PKI-signed documents, listing the signer's name, the Certificate Authority, and the document's integrity status.
+
+## Are both legally binding?
+
+Yes, for most transactions. The ESIGN Act and its equivalents in most countries focus on intent to sign, not the technology behind the signature. A drawn mark and a PKI certificate both satisfy the legal definition of an electronic signature.
+
+The EU's eIDAS regulation is more specific. It defines three tiers:
+
+- **Simple Electronic Signature (SES)**: any electronic sign of intent, such as a drawn or typed signature. Valid for most routine contracts.
+- **Advanced Electronic Signature (AES)**: linked to the signer and capable of detecting changes. Requires stronger identity verification.
+- **Qualified Electronic Signature (QES)**: created with a certified signing device, using a certificate from a qualified trust provider. QES carries the highest legal weight in the EU and is treated as equivalent to a handwritten signature in court.
+
+For most people signing everyday documents, a Simple Electronic Signature (a drawn or typed mark) is enough. QES comes up for notarized documents, certain cross-border EU filings, or regulated sectors in specific countries.
+
+## When does a drawn signature fall short?
+
+A drawn electronic signature is the right choice for:
+
+- Freelance contracts and service agreements
+- NDAs and confidentiality agreements
+- Employment offer letters
+- Lease agreements in most jurisdictions
+- Internal approvals and sign-offs
+- Online purchase agreements
+
+You are more likely to need a cryptographic digital signature when:
+
+- You are submitting regulated filings (financial reports, healthcare records, certain government forms)
+- A transaction crosses EU borders and the counterparty requires AES or QES by law or policy
+- You need independently verifiable proof the document has not been modified, for instance in a legal dispute or external audit
+- Your industry's compliance framework mandates it (some financial and healthcare regulations do)
+
+One practical note: when someone says "I need a digital signature," they often just mean they want you to sign electronically. Ask whether they need a PKI certificate embedded in the file or whether a drawn signature on the document is what they're after. The two are very different technically, and the distinction matters.
+
+## How to sign a PDF electronically (step by step)
+
+This takes about 30 seconds. No software to install, no sign-up required.
+
+1. Open the [Sign PDF tool](/sign-pdf).
+2. Drop your PDF onto the page or click "Select PDF." Your file stays in your browser and is never sent to a server.
+3. In the signature panel, draw your signature with your mouse, trackpad, or touchscreen.
+4. Position the signature where you want it on the page.
+5. Click "Download" to save the signed file.
+
+The result is a PDF with your signature visible on the page, ready to email, print, or upload to a form.
+
+**Tip for signed forms before merging**: if you've filled out a form and want to merge it with a cover letter or other documents, flatten the form first using the [Flatten PDF tool](/flatten-pdf). Merging a filled form directly strips the interactive fields, so values you entered can disappear. Flattening bakes the field content into the page before you combine files.
+
+**Adding a password**: if you want to protect a signed PDF from being opened without a password, use the [Protect PDF tool](/protect-pdf) after signing. Password encryption adds about 1 KB of overhead, which has no practical effect on email size limits.
+
+## What if the person asking for your signature needs identity verification?
+
+A drawn electronic signature doesn't include cryptographic identity verification on its own. If the counterparty requires verified identity (a bank, a government agency, or a service like DocuSign or Adobe Sign), they add that layer on their end, typically through email confirmation, SMS codes, or a formal digital certificate flow.
+
+If you specifically need a PKI digital certificate embedded in a PDF, you'll need dedicated software such as Adobe Acrobat Pro or a qualified trust service provider. That is outside what a browser-based drawing tool does, and any tool that claims otherwise should be examined carefully.
+
+For the vast majority of people signing leases, contracts, consent forms, and work agreements, a free drawn electronic signature is exactly what is needed. It is legally binding, takes under a minute, and your file never leaves your device.
