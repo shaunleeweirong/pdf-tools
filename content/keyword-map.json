@@ -3284,6 +3284,71 @@
       "priority": 2,
       "status": "pending",
       "slug": "how-to-crop-pdf-pages-on-iphone-free"
+    },
+    {
+      "id": "blog-word-excel-to-pdf",
+      "surface": "blog",
+      "targetQuery": "how to combine word and excel files into one pdf free",
+      "intent": "transactional",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-combine-word-and-excel-into-one-pdf-free"
+    },
+    {
+      "id": "blog-digital-vs-electronic-sig",
+      "surface": "blog",
+      "targetQuery": "digital signature vs electronic signature pdf difference",
+      "intent": "informational",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-add-multiple-sigs",
+      "surface": "blog",
+      "targetQuery": "how to add multiple signatures to a pdf free online",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-optimize-pdf-web",
+      "surface": "blog",
+      "targetQuery": "how to optimize pdf for website loading free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-cant-copy-pdf-text",
+      "surface": "blog",
+      "targetQuery": "why can't i copy text from a pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-vs-jpeg-printing",
+      "surface": "blog",
+      "targetQuery": "pdf vs jpeg which is better for printing",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-restart-pdf-page-numbers",
+      "surface": "blog",
+      "targetQuery": "how to restart page numbers in a pdf free online",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
+    },
+    {
+      "id": "blog-lighter-darker-scanned-pdf",
+      "surface": "blog",
+      "targetQuery": "how to make a scanned pdf lighter or darker free",
+      "intent": "informational",
+      "priority": 3,
+      "status": "idea"
     }
   ]
 }
