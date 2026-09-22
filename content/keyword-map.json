@@ -3336,7 +3336,8 @@
       "targetQuery": "pdf vs jpeg which is better for printing",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "pdf-vs-jpeg-which-is-better-for-printing"
     },
     {
       "id": "blog-restart-pdf-page-numbers",
