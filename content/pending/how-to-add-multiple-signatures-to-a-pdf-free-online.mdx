@@ -1,0 +1,110 @@
+---
+title: "How to Add Multiple Signatures to a PDF Free"
+description: "Sign a PDF in two places, collect signatures from multiple people, or sign across all pages, using free tools with no account needed."
+date: "2026-09-22"
+keywords: ["how to add multiple signatures to a pdf free online", "multiple signatures pdf", "sign pdf multiple places free", "two signatures one pdf", "collect signatures pdf free"]
+toolSlugs: ["sign-pdf", "flatten-pdf", "split-pdf", "merge-pdf"]
+faq:
+  - q: "Can I sign a PDF in two different spots for free?"
+    a: "Yes. Sign the PDF, download it, flatten it to lock the first signature, then upload again and add the second signature in a new location."
+  - q: "Can two people sign the same PDF for free?"
+    a: "Yes. Person A signs and downloads, then sends the file to Person B, who uploads and signs in turn. No account is needed for either step."
+  - q: "Does adding a second signature remove the first one?"
+    a: "Not if you flatten the first signature before adding the second. Flattening bakes the signature into the page as a static image so it cannot be replaced or moved."
+  - q: "Do I need to flatten between signatures?"
+    a: "You should. Flattening converts the signature annotation to permanent page content. Without it, some tools will treat the first signature as a live form field and may overwrite it."
+  - q: "Can I sign every page of a PDF for free?"
+    a: "Yes, using a split-sign-flatten-merge workflow: split the PDF into individual pages, sign and flatten each one, then merge them back together."
+  - q: "Will signatures survive if I merge PDFs afterward?"
+    a: "Only if you flatten first. Merging strips interactive form fields, including signature annotations. Flatten each signed page before merging and the signatures stay visible."
+---
+
+Adding multiple signatures to a PDF free online comes down to one core technique: sign once, flatten to lock it in place, then sign again.
+
+## Two scenarios that feel the same but work differently
+
+When people search for "multiple signatures on a PDF," they usually mean one of two things:
+
+- **One person signing in several places** on the same document (initials on each page, or a full signature in two spots on a contract).
+- **Multiple people each signing the same document** (two tenants on a lease, or a manager and employee on a review form).
+
+Both are doable for free. The workflow is a little different for each.
+
+## One person signing in multiple places
+
+The [Sign PDF tool](/sign-pdf) places your signature on the first page of a document. To sign a second time in a different spot, use this sequence:
+
+1. Upload your PDF to [Sign PDF](/sign-pdf), place your signature, and download.
+2. Upload the downloaded file to [Flatten PDF](/flatten-pdf) and download the flattened version. This bakes your signature into the page as a static image. It can't be moved or replaced after this step.
+3. Upload the flattened file back to [Sign PDF](/sign-pdf) and place your second signature.
+4. Download the result.
+
+The flatten step is the key. Without it, the first signature stays as an editable annotation layer. Some tools treat that layer as a form field, which means a later step might clear or overwrite it. Flattening removes that risk.
+
+## Two or more people signing the same PDF
+
+Collecting signatures from two people is simpler than most assume:
+
+1. Person A goes to [Sign PDF](/sign-pdf), uploads the PDF, signs, and downloads.
+2. Person A sends the downloaded file to Person B.
+3. Person B uploads it to [Sign PDF](/sign-pdf), signs in their own spot, and downloads.
+4. The final file has both signatures visible.
+
+If Person B's signature needs to be locked before a third person signs, Person B should run the file through [Flatten PDF](/flatten-pdf) before passing it along.
+
+No account is needed at any step. Each person's file is processed in their own browser during the signing step, so neither party's document passes through a server.
+
+## Signing across multiple pages
+
+The sign tool works on the first page. For a document where you need a signature or initials on every page, you'll split the PDF first.
+
+Here is the full workflow:
+
+1. Go to [Split PDF](/split-pdf) and extract your document into individual pages.
+2. For each page that needs a signature: upload it to [Sign PDF](/sign-pdf), sign, download.
+3. Upload each signed page to [Flatten PDF](/flatten-pdf) and download the flattened version.
+4. Upload all the flattened pages to [Merge PDF](/merge-pdf) in the correct order and download the merged file.
+
+The flatten-before-merge step matters for a specific reason: merging PDFs strips interactive form fields from the output. That includes signature annotations. Flattening first converts the signature to ordinary page content, so it survives the merge intact.
+
+If you only need to sign two or three pages, this workflow is manageable in a few minutes. For a 50-page document where every page needs a signature, a tool with built-in multi-page placement will save time.
+
+## What about signature fields already in the form?
+
+Some PDFs have empty signature fields built in, boxes with a "Sign here" label or a pen icon. These are [AcroForm fields](https://en.wikipedia.org/wiki/PDF#Interactive_elements), a standard part of the PDF format.
+
+For our tools, the cleanest approach is to flatten the form first with [Flatten PDF](/flatten-pdf), which turns the empty field into a static area, and then sign on top using [Sign PDF](/sign-pdf). This removes any form-field behavior that could cause confusion when placing your signature.
+
+## Drawn signatures vs. digital certificates
+
+It helps to know the difference, especially if a document is legally sensitive.
+
+A drawn signature placed by a browser tool is an electronic signature, a visible mark that shows intent. It works for most everyday agreements: leases, permission slips, internal approvals, contractor agreements.
+
+A [digital signature](https://en.wikipedia.org/wiki/Digital_signature) is a different thing entirely: a cryptographic signature using a certificate to prove who signed and that the document has not been changed since. When multiple certificate-based signatures are applied in sequence, each one creates a record of the document's exact state at signing. Modifying the document after the first signature can break the certificate chain for that signer, even if the visible mark remains on the page.
+
+For most people, drawn signatures are fine. If you need legally binding e-signatures with a certificate chain and audit trail (certain financial contracts, healthcare forms, or government documents), a dedicated service handles that infrastructure.
+
+## Uploading a signature image instead of drawing one
+
+When you open [Sign PDF](/sign-pdf), you can upload an image of your signature rather than drawing one. A PNG with a transparent background looks cleanest. Scan your handwritten signature, remove the background in any free image editor, and upload it. The result looks indistinguishable from a drawn signature placed by hand.
+
+The same flatten-between-passes approach applies: upload image signature, download, flatten, upload again for the second signature spot.
+
+## A note on scan-based PDFs
+
+If your PDF is a scanned document (photos of paper pages), the pages are already raster images. You can sign it with [Sign PDF](/sign-pdf) without any extra steps. After you flatten the result, your signature becomes part of the image layer on each page.
+
+One practical tip: make sure the scan is oriented correctly before signing. A tilted page will produce a tilted signature. Run it through [Rotate PDF](/rotate-pdf) first if the page is sideways or upside down, then sign the corrected version.
+
+## Quick reference: which workflow for your situation
+
+| What you need | Workflow |
+|---|---|
+| Sign in two places (same page) | Sign, flatten, sign again |
+| Two people sign the same PDF | Person A signs, sends file, Person B signs |
+| Sign multiple pages | Split, sign each page, flatten each, merge |
+| PDF already has signature fields | Flatten the form first, then sign |
+| Signature from an image file | Upload PNG with transparent background via the sign tool |
+
+The [Sign PDF](/sign-pdf) and [Flatten PDF](/flatten-pdf) tools are free, work in your browser, and need no account. For most multiple-signature situations, two or three passes through these tools is all it takes.
