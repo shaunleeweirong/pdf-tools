@@ -3356,6 +3356,71 @@
       "intent": "informational",
       "priority": 3,
       "status": "idea"
+    },
+    {
+      "id": "blog-open-without-adobe",
+      "surface": "blog",
+      "targetQuery": "how to open pdf without adobe reader free",
+      "intent": "informational",
+      "priority": 1,
+      "status": "pending",
+      "slug": "how-to-open-pdf-without-adobe-reader-free"
+    },
+    {
+      "id": "blog-pdf-not-opening-chrome",
+      "surface": "blog",
+      "targetQuery": "pdf not opening in chrome how to fix",
+      "intent": "informational",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-best-pdf-tools-mac",
+      "surface": "blog",
+      "targetQuery": "best free pdf tools for mac no sign up",
+      "intent": "commercial",
+      "priority": 1,
+      "status": "idea"
+    },
+    {
+      "id": "blog-change-pdf-orientation",
+      "surface": "blog",
+      "targetQuery": "how to change pdf orientation from portrait to landscape free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-pdf-too-large-workday",
+      "surface": "blog",
+      "targetQuery": "pdf file too large for workday upload free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-share-pdf-without-email",
+      "surface": "blog",
+      "targetQuery": "how to share a pdf file without email free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-compress-after-scanning",
+      "surface": "blog",
+      "targetQuery": "how to compress a pdf after scanning free",
+      "intent": "transactional",
+      "priority": 2,
+      "status": "idea"
+    },
+    {
+      "id": "blog-combine-google-docs-pdf",
+      "surface": "blog",
+      "targetQuery": "how to combine google docs into one pdf free",
+      "intent": "informational",
+      "priority": 2,
+      "status": "idea"
     }
   ]
 }
