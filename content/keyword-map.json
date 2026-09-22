@@ -3318,7 +3318,8 @@
       "targetQuery": "how to optimize pdf for website loading free",
       "intent": "informational",
       "priority": 2,
-      "status": "idea"
+      "status": "pending",
+      "slug": "how-to-optimize-pdf-for-website-loading-free"
     },
     {
       "id": "blog-cant-copy-pdf-text",
